@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Umrechnen üben</title>
+<style>
+  :root {
+    --blau: #2d6cdf;
+    --gruen: #29b765;
+    --rot: #e3463f;
+    --gelb: #f7b32b;
+    --hell: #f0f4ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(160deg, #eaf1ff 0%, #f6f9ff 100%);
+    color: #1f2937;
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 18px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 10px 0 4px;
+    color: var(--blau);
+  }
+  .untertitel {
+    text-align: center;
+    color: #6b7280;
+    margin: 0 0 18px;
+    font-size: 0.95em;
+  }
+  .karte {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(45,108,223,0.12);
+  }
+  .modus {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .modus button {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--blau);
+    background: #fff;
+    color: var(--blau);
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .modus button.aktiv {
+    background: var(--blau);
+    color: #fff;
+  }
+  .aufgabe {
+    text-align: center;
+    font-size: 1.7em;
+    margin: 18px 0;
+    line-height: 1.5;
+  }
+  .aufgabe b { color: var(--blau); }
+  .zielEinheit { color: var(--gruen); }
+  .eingabe {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  input[type=number] {
+    font-size: 1.4em;
+    padding: 10px 14px;
+    width: 160px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    text-align: right;
+  }
+  input[type=number]:focus {
+    outline: none;
+    border-color: var(--blau);
+  }
+  .einheitLabel {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--gruen);
+  }
+  .pruefen {
+    margin-top: 18px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--gruen);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .pruefen:active { transform: scale(0.99); }
+  .feedback {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 1.2em;
+    min-height: 1.4em;
+    font-weight: bold;
+  }
+  .richtig { color: var(--gruen); }
+  .falsch { color: var(--rot); }
+  .weiter {
+    margin-top: 12px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: var(--blau);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+  }
+  .punkte {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+    font-size: 1em;
+    color: #374151;
+  }
+  .punkte b { font-size: 1.3em; }
+  .punkte .ok b { color: var(--gruen); }
+  .punkte .nok b { color: var(--rot); }
+  .tipp {
+    margin-top: 14px;
+    background: var(--hell);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 0.9em;
+    color: #475569;
+    text-align: center;
+  }
+  .sterne { font-size: 1.6em; letter-spacing: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🔢 Umrechnen üben</h1>
+  <p class="untertitel">Längen und Gewichte umrechnen</p>
+
+  <div class="karte">
+    <div class="modus">
+      <button id="btnLaenge" class="aktiv" onclick="setModus('laenge')">📏 Länge</button>
+      <button id="btnGewicht" onclick="setModus('gewicht')">⚖️ Gewicht</button>
+      <button id="btnMix" onclick="setModus('mix')">🎲 Gemischt</button>
+    </div>
+
+    <div class="aufgabe" id="aufgabe">…</div>
+
+    <div class="eingabe">
+      <input type="number" id="antwort" inputmode="decimal" placeholder="?" step="any"
+             onkeydown="if(event.key==='Enter') pruefen()">
+      <span class="einheitLabel" id="zielLabel">—</span>
+    </div>
+
+    <button class="pruefen" onclick="pruefen()">Prüfen ✓</button>
+    <button class="weiter" id="weiterBtn" onclick="neueAufgabe()">Nächste Aufgabe →</button>
+
+    <div class="feedback" id="feedback"></div>
+
+    <div class="punkte">
+      <div class="ok">Richtig<br><b id="punkteOk">0</b></div>
+      <div class="nok">Falsch<br><b id="punkteNok">0</b></div>
+      <div>Serie<br><b id="serie">0</b> <span class="sterne" id="sterne"></span></div>
+    </div>
+  </div>
+
+  <div class="tipp">
+    💡 Tipp: km → m → dm → cm → mm: jede Stufe ist mal 10. &nbsp;|&nbsp;
+    t → kg → g → mg: jede Stufe ist mal 1000.
+  </div>
+</div>
+
+<script>
+// Faktoren in Basiseinheit:
+// Länge -> in Millimeter, Gewicht -> in Milligramm
+const laengen = [
+  { name: "Kilometer", kurz: "km", faktor: 1000000 },
+  { name: "Meter",     kurz: "m",  faktor: 1000 },
+  { name: "Dezimeter", kurz: "dm", faktor: 100 },
+  { name: "Zentimeter",kurz: "cm", faktor: 10 },
+  { name: "Millimeter",kurz: "mm", faktor: 1 }
+];
+const gewichte = [
+  { name: "Tonne",      kurz: "t",  faktor: 1000000000 },
+  { name: "Kilogramm",  kurz: "kg", faktor: 1000000 },
+  { name: "Gramm",      kurz: "g",  faktor: 1000 },
+  { name: "Milligramm", kurz: "mg", faktor: 1 }
+];
+
+let modus = "laenge";
+let aktuelle = null;
+let ok = 0, nok = 0, serie = 0;
+
+function setModus(m) {
+  modus = m;
+  document.getElementById("btnLaenge").classList.toggle("aktiv", m === "laenge");
+  document.getElementById("btnGewicht").classList.toggle("aktiv", m === "gewicht");
+  document.getElementById("btnMix").classList.toggle("aktiv", m === "mix");
+  neueAufgabe();
+}
+
+function zufall(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function waehleTabelle() {
+  if (modus === "laenge") return laengen;
+  if (modus === "gewicht") return gewichte;
+  return Math.random() < 0.5 ? laengen : gewichte;
+}
+
+function neueAufgabe() {
+  const tab = waehleTabelle();
+  // Von- und Ziel-Einheit wählen (verschieden)
+  let vonIdx = Math.floor(Math.random() * tab.length);
+  let zielIdx = Math.floor(Math.random() * tab.length);
+  while (zielIdx === vonIdx) zielIdx = Math.floor(Math.random() * tab.length);
+
+  const von = tab[vonIdx];
+  const ziel = tab[zielIdx];
+
+  // Schöne Zahl wählen, damit Ergebnis nicht zu krumm wird
+  let zahl;
+  if (von.faktor >= ziel.faktor) {
+    // Umrechnung in kleinere Einheit -> Ergebnis wird größer, einfache ganze Zahlen
+    zahl = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 50, 100][Math.floor(Math.random()*14)];
+  } else {
+    // Umrechnung in größere Einheit -> nimm Vielfache, damit es aufgeht
+    const stufe = ziel.faktor / von.faktor; // z.B. 1000
+    const mult = [1, 2, 3, 5, 10][Math.floor(Math.random()*5)];
+    zahl = stufe * mult;
+  }
+
+  const ergebnis = zahl * von.faktor / ziel.faktor;
+
+  aktuelle = { von, ziel, zahl, ergebnis };
+
+  document.getElementById("aufgabe").innerHTML =
+    `<b>${zahl} ${von.kurz}</b> = ? <span class="zielEinheit">${ziel.kurz}</span><br>` +
+    `<span style="font-size:0.6em;color:#94a3b8">(${zahl} ${von.name} in ${ziel.name})</span>`;
+  document.getElementById("zielLabel").textContent = ziel.kurz;
+
+  const inp = document.getElementById("antwort");
+  inp.value = "";
+  inp.disabled = false;
+  inp.focus();
+  document.getElementById("feedback").textContent = "";
+  document.querySelector(".pruefen").style.display = "block";
+  document.getElementById("weiterBtn").style.display = "none";
+}
+
+function pruefen() {
+  if (!aktuelle) return;
+  const inp = document.getElementById("antwort");
+  const wert = parseFloat(inp.value.replace(",", "."));
+  const fb = document.getElementById("feedback");
+
+  if (isNaN(wert)) {
+    fb.textContent = "Bitte gib eine Zahl ein 🙂";
+    fb.className = "feedback falsch";
+    return;
+  }
+
+  // kleine Toleranz für Rundung
+  const richtig = Math.abs(wert - aktuelle.ergebnis) < 1e-6;
+
+  if (richtig) {
+    ok++; serie++;
+    let jubel = ["Super! 🎉", "Richtig! 🌟", "Perfekt! 👏", "Klasse! 🚀", "Genau! ✅"];
+    fb.textContent = jubel[Math.floor(Math.random()*jubel.length)];
+    fb.className = "feedback richtig";
+  } else {
+    nok++; serie = 0;
+    fb.innerHTML = `Fast! Richtig wäre <b>${formatZahl(aktuelle.ergebnis)} ${aktuelle.ziel.kurz}</b> ❌`;
+    fb.className = "feedback falsch";
+  }
+
+  inp.disabled = true;
+  document.querySelector(".pruefen").style.display = "none";
+  document.getElementById("weiterBtn").style.display = "block";
+  document.getElementById("weiterBtn").focus();
+  aktualisierePunkte();
+}
+
+function formatZahl(n) {
+  return n.toLocaleString("de-DE", { maximumFractionDigits: 6 });
+}
+
+function aktualisierePunkte() {
+  document.getElementById("punkteOk").textContent = ok;
+  document.getElementById("punkteNok").textContent = nok;
+  document.getElementById("serie").textContent = serie;
+  let s = "";
+  const sterne = Math.min(serie, 5);
+  for (let i = 0; i < sterne; i++) s += "⭐";
+  document.getElementById("sterne").textContent = s;
+}
+
+// Start
+neueAufgabe();
+</script>
+</body>
+</html>
