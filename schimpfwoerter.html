@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Französische Schimpfwörter</title>
+<style>
+  :root {
+    --blau: #2d6cdf;
+    --gruen: #29b765;
+    --rot: #e3463f;
+    --gelb: #f7b32b;
+    --lila: #7c4dff;
+    --hell: #f0f4ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(160deg, #eaf1ff 0%, #f6f9ff 100%);
+    color: #1f2937;
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 18px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 10px 0 4px;
+    color: var(--blau);
+  }
+  .untertitel {
+    text-align: center;
+    color: #6b7280;
+    margin: 0 0 18px;
+    font-size: 0.95em;
+  }
+  .karte {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(45,108,223,0.12);
+    margin-bottom: 16px;
+  }
+  .warnung {
+    background: #fff7e6;
+    border: 2px solid var(--gelb);
+    border-radius: 14px;
+    padding: 12px 16px;
+    font-size: 0.9em;
+    color: #7a5b12;
+    margin-bottom: 16px;
+  }
+  .modus {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .modus button {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--blau);
+    background: #fff;
+    color: var(--blau);
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .modus button.aktiv {
+    background: var(--blau);
+    color: #fff;
+  }
+  .stufen {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .stufen button {
+    padding: 7px 12px;
+    border: 2px solid #cbd5e1;
+    background: #fff;
+    color: #475569;
+    border-radius: 999px;
+    font-size: 0.88em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .stufen button.aktiv {
+    border-color: var(--lila);
+    background: var(--lila);
+    color: #fff;
+  }
+  input[type=search] {
+    width: 100%;
+    font-size: 1em;
+    padding: 11px 14px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+  input[type=search]:focus { outline: none; border-color: var(--blau); }
+
+  .eintrag {
+    border-top: 1px solid #e5e7eb;
+    padding: 12px 2px;
+  }
+  .eintrag:first-of-type { border-top: none; }
+  .kopf {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .fr {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--blau);
+  }
+  .lautung {
+    color: #94a3b8;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  .de { margin-top: 3px; font-size: 1.05em; }
+  .zusatz {
+    margin-top: 3px;
+    font-size: 0.85em;
+    color: #64748b;
+  }
+  .badge {
+    font-size: 0.72em;
+    font-weight: bold;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .s1 { background: #dcfce7; color: #15803d; }
+  .s2 { background: #dbeafe; color: #1d4ed8; }
+  .s3 { background: #ffedd5; color: #c2410c; }
+  .s4 { background: #fee2e2; color: #b91c1c; }
+
+  .leer { text-align: center; color: #94a3b8; padding: 20px 0; }
+  .anzahl { text-align: center; color: #6b7280; font-size: 0.85em; margin-top: 12px; }
+
+  .frage {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--blau);
+    margin: 10px 0 4px;
+  }
+  .frageLautung { text-align: center; color: #94a3b8; font-style: italic; margin-bottom: 18px; }
+  .optionen { display: flex; flex-direction: column; gap: 10px; }
+  .optionen button {
+    padding: 13px;
+    border: 2px solid #cbd5e1;
+    background: #fff;
+    border-radius: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: left;
+    color: #1f2937;
+  }
+  .optionen button:hover:not(:disabled) { border-color: var(--blau); }
+  .optionen button.richtigOpt { border-color: var(--gruen); background: #eafaf0; font-weight: bold; }
+  .optionen button.falschOpt { border-color: var(--rot); background: #fdecec; }
+  .optionen button:disabled { cursor: default; }
+  .feedback {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 1.15em;
+    min-height: 1.4em;
+    font-weight: bold;
+  }
+  .richtig { color: var(--gruen); }
+  .falsch { color: var(--rot); }
+  .weiter {
+    margin-top: 12px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: var(--blau);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+  }
+  .punkte {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+    font-size: 1em;
+    color: #374151;
+    text-align: center;
+  }
+  .punkte b { font-size: 1.3em; }
+  .punkte .ok b { color: var(--gruen); }
+  .punkte .nok b { color: var(--rot); }
+  .sterne { font-size: 1.4em; letter-spacing: 3px; }
+  .tipp {
+    background: var(--hell);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 0.9em;
+    color: #475569;
+    line-height: 1.6;
+  }
+  .tipp h2 { font-size: 1.05em; color: var(--blau); margin: 0 0 8px; }
+  .tipp code {
+    background: #fff;
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: bold;
+    color: var(--lila);
+  }
+  .versteckt { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🇫🇷 Französische Schimpfwörter</h1>
+  <p class="untertitel">Verstehen, einordnen – und wissen, wann man besser schweigt</p>
+
+  <div class="warnung">
+    ⚠️ <b>Zum Verstehen, nicht zum Nachmachen.</b> Vieles hier ist vulgär und in Frankreich
+    deutlich schärfer, als die deutsche Übersetzung vermuten lässt. Die Stufen
+    😇 → ☠️ zeigen, wie derb ein Ausdruck wirklich ist.
+  </div>
+
+  <div class="karte">
+    <div class="modus">
+      <button id="btnListe" class="aktiv" onclick="setModus('liste')">📖 Liste</button>
+      <button id="btnQuiz" onclick="setModus('quiz')">🎯 Quiz</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="stufen" id="stufenFilter">
+      <button class="aktiv" onclick="setStufe(0, this)">Alle</button>
+      <button onclick="setStufe(1, this)">😇 Harmlos</button>
+      <button onclick="setStufe(2, this)">😬 Umgangssprache</button>
+      <button onclick="setStufe(3, this)">🤬 Derb</button>
+      <button onclick="setStufe(4, this)">☠️ Sehr derb</button>
+    </div>
+
+    <!-- Listenansicht -->
+    <div id="listeBereich">
+      <input type="search" id="suche" placeholder="Suchen (französisch oder deutsch) …"
+             oninput="zeichneListe()">
+      <div id="liste"></div>
+      <div class="anzahl" id="anzahl"></div>
+    </div>
+
+    <!-- Quizansicht -->
+    <div id="quizBereich" class="versteckt">
+      <div class="frage" id="frage">…</div>
+      <div class="frageLautung" id="frageLautung"></div>
+      <div class="optionen" id="optionen"></div>
+      <div class="feedback" id="feedback"></div>
+      <button class="weiter" id="weiterBtn" onclick="neueFrage()">Nächste Frage →</button>
+      <div class="punkte">
+        <div class="ok">Richtig<br><b id="punkteOk">0</b></div>
+        <div class="nok">Falsch<br><b id="punkteNok">0</b></div>
+        <div>Serie<br><b id="serie">0</b> <span class="sterne" id="sterne"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tipp">
+    <h2>💡 Baukasten für Fortgeschrittene</h2>
+    <b><code>espèce de …</code></b> – der Standard-Verstärker vor jeder Beleidigung:
+    <i>espèce d'idiot !</i> („du Vollidiot!").<br>
+    <b><code>… de merde</code></b> – angehängt macht alles schlecht:
+    <i>cette voiture de merde</i> („diese Scheißkarre").<br>
+    <b><code>putain</code></b> – dient meist gar nicht als Beleidigung, sondern als
+    Ausrufezeichen: <i>putain, c'est beau !</i> („Wahnsinn, ist das schön!").<br>
+    <b><code>Verlan</code></b> – Silbendreher der Jugendsprache:
+    <i>lourd → relou</i>, <i>louche → chelou</i>, <i>femme → meuf</i>.<br>
+    <b><code>Québec</code></b> – in Kanada flucht man kirchlich statt sexuell:
+    <i>tabarnak, câlisse, ostie, criss</i> – aus Tabernakel, Kelch, Hostie, Christus.
+    Klingt für deutsche Ohren harmlos, ist es dort keineswegs.
+  </div>
+</div>
+
+<script>
+// stufe: 1 = harmlos, 2 = umgangssprachlich, 3 = derb, 4 = sehr derb
+const woerter = [
+  // ---------- Stufe 1: harmlos, überall sagbar ----------
+  { fr: "Zut !", de: "Mist!", lautung: "züt", stufe: 1, info: "Der Klassiker für den Alltag – auch vor Kindern okay." },
+  { fr: "Mince !", de: "Mist! / Oh nein!", lautung: "mängß", stufe: 1, info: "Wörtlich „dünn“. Harmloser Ersatz für merde." },
+  { fr: "Flûte !", de: "Verflixt!", lautung: "flüt", stufe: 1, info: "Wörtlich „Flöte“. Leicht altmodisch, sehr brav." },
+  { fr: "Punaise !", de: "Mensch! / Meine Güte!", lautung: "pü-nääs", stufe: 1, info: "Wörtlich „Wanze“. Tarnwort für putain." },
+  { fr: "Purée !", de: "Mann!", lautung: "pü-ree", stufe: 1, info: "Wörtlich „Püree“ – ebenfalls Tarnwort für putain." },
+  { fr: "La vache !", de: "Meine Güte! / Wahnsinn!", lautung: "la wasch", stufe: 1, info: "Wörtlich „die Kuh“. Staunen oder Schreck." },
+  { fr: "Bon sang !", de: "Verflixt nochmal!", lautung: "bong ßang", stufe: 1, info: "Wörtlich „gutes Blut“. Ärger ohne Vulgarität." },
+  { fr: "Nom d'un chien !", de: "Zum Kuckuck!", lautung: "nong düng schiäng", stufe: 1, info: "Wörtlich „Name eines Hundes“." },
+  { fr: "Oh là là !", de: "Oje! / Nanu!", lautung: "o la la", stufe: 1, info: "Kein Flirt-Ausruf, sondern meist Skepsis oder Schreck." },
+  { fr: "J'en ai marre", de: "Ich hab die Nase voll", lautung: "schang ä mar", stufe: 1, info: "Der höfliche Weg, genervt zu sein." },
+  { fr: "C'est nul", de: "Das ist mies / blöd", lautung: "ßä nül", stufe: 1, info: "Universelles Urteil über Filme, Wetter, Montage." },
+  { fr: "Idiot / idiote", de: "Idiot / Idiotin", lautung: "i-djo / i-djott", stufe: 1, info: "Wie im Deutschen – je nach Ton scherzhaft." },
+  { fr: "Imbécile", de: "Dummkopf", lautung: "äng-be-ßil", stufe: 1, info: "Klingt fast schon literarisch." },
+  { fr: "Crétin / crétine", de: "Trottel", lautung: "kre-täng", stufe: 1, info: "Etwas schärfer als idiot, aber salonfähig." },
+  { fr: "Andouille", de: "Dummerchen", lautung: "ang-duj", stufe: 1, info: "Wörtlich eine Wurstsorte. Liebevoll gemeint." },
+  { fr: "Nigaud", de: "Einfaltspinsel", lautung: "ni-go", stufe: 1, info: "Altmodisch und harmlos." },
+  { fr: "Casse-pieds", de: "Nervensäge", lautung: "kaß-pje", stufe: 1, info: "Wörtlich „Fußbrecher“." },
+  { fr: "Rabat-joie", de: "Spielverderber", lautung: "ra-ba-schwa", stufe: 1, info: "Wörtlich „Freudendämpfer“." },
+  { fr: "Empoté", de: "Tollpatsch", lautung: "ang-po-te", stufe: 1, info: "Für alle, denen alles aus der Hand fällt." },
+
+  // ---------- Stufe 2: Umgangssprache unter Freunden ----------
+  { fr: "Merde !", de: "Scheiße!", lautung: "märd", stufe: 2, info: "Auch Glückwunsch vor Prüfungen und Auftritten – wie „toi toi toi“." },
+  { fr: "Putain !", de: "Verdammt!", lautung: "pü-täng", stufe: 2, info: "Wörtlich „Hure“, praktisch aber nur ein Ausruf. Häufigstes Fluchwort Frankreichs – trotzdem vulgär." },
+  { fr: "Bordel !", de: "Sauerei! / Chaos!", lautung: "bor-däl", stufe: 2, info: "Wörtlich „Bordell“. Auch: quel bordel ! – was für ein Saustall!" },
+  { fr: "C'est chiant", de: "Das nervt total", lautung: "ßä schiang", stufe: 2, info: "Von chier (scheißen) – derber, als es wirkt." },
+  { fr: "Ça me saoule", de: "Das kotzt mich an", lautung: "ßa mö ßul", stufe: 2, info: "Wörtlich „das betrinkt mich“. Jugendsprache." },
+  { fr: "Ras-le-bol", de: "Die Schnauze voll", lautung: "ra-lö-bol", stufe: 2, info: "Wörtlich „Schüssel randvoll“. Auch als Substantiv im Nachrichtendeutsch." },
+  { fr: "Ta gueule !", de: "Halt's Maul!", lautung: "ta göll", stufe: 2, info: "Wörtlich „deine Schnauze“. Klar beleidigend." },
+  { fr: "Casse-toi !", de: "Hau ab!", lautung: "kaß-twa", stufe: 2, info: "Berühmt geworden durch einen Präsidenten auf einer Landwirtschaftsmesse." },
+  { fr: "Dégage !", de: "Verschwinde!", lautung: "de-gasch", stufe: 2, info: "Kurz, laut, unmissverständlich." },
+  { fr: "Con / conne", de: "Blödmann / blöde Kuh", lautung: "kong / konn", stufe: 2, info: "Ursprünglich vulgär (weibl. Geschlechtsteil), heute Alltagswort – aber nie bei Fremden." },
+  { fr: "C'est con", de: "Das ist blöd / schade", lautung: "ßä kong", stufe: 2, info: "Über Sachen gesagt völlig harmlos, über Menschen nicht." },
+  { fr: "Débile", de: "Schwachsinnig", lautung: "de-bil", stufe: 2, info: "Für Ideen, Regeln und Serienfinale." },
+  { fr: "Abruti / abrutie", de: "Volltrottel", lautung: "a-brü-ti", stufe: 2, info: "Deutlich schärfer als idiot." },
+  { fr: "Bouffon", de: "Depp / Clown", lautung: "bu-fong", stufe: 2, info: "Wörtlich „Hofnarr“. Schulhof-Klassiker." },
+  { fr: "Naze", de: "Loser / mies", lautung: "naas", stufe: 2, info: "Geht auf Personen und Dinge: ce film est naze." },
+  { fr: "Blaireau", de: "Depp", lautung: "blä-ro", stufe: 2, info: "Wörtlich „Dachs“ (oder Rasierpinsel)." },
+  { fr: "Tocard", de: "Nichtsnutz", lautung: "to-kar", stufe: 2, info: "Kommt aus dem Pferderennsport: der aussichtslose Gaul." },
+  { fr: "Relou", de: "Voll nervig", lautung: "rö-lu", stufe: 2, info: "Verlan von lourd („schwer“)." },
+  { fr: "Chelou", de: "Komisch / suspekt", lautung: "schö-lu", stufe: 2, info: "Verlan von louche. Keine Beleidigung, aber Jugendslang." },
+  { fr: "Balance", de: "Petze / Verräter", lautung: "ba-langß", stufe: 2, info: "Wörtlich „Waage“. Wer andere verpfeift." },
+  { fr: "Foutre le bordel", de: "Chaos veranstalten", lautung: "futr lö bor-däl", stufe: 2, info: "foutre ist das Allzweck-Vulgärverb schlechthin." },
+
+  // ---------- Stufe 3: derb, echte Beleidigung ----------
+  { fr: "Connard / connasse", de: "Arschloch / blöde Kuh", lautung: "ko-nar / ko-naß", stufe: 3, info: "Steigerung von con – im Straßenverkehr täglich zu hören." },
+  { fr: "Salaud", de: "Mistkerl / Dreckskerl", lautung: "ßa-lo", stufe: 3, info: "Von sale („schmutzig“). Zielt auf den Charakter." },
+  { fr: "Salope", de: "Miststück / Schlampe", lautung: "ßa-lopp", stufe: 3, info: "Weibliche Form, aber massiv frauenfeindlich aufgeladen – kein Gegenstück zu salaud." },
+  { fr: "Enfoiré / enfoirée", de: "Mistkerl", lautung: "ang-fwa-re", stufe: 3, info: "Unter Freunden auch fast zärtlich – bei Fremden gefährlich." },
+  { fr: "Ordure", de: "Dreckskerl", lautung: "or-dür", stufe: 3, info: "Wörtlich „Müll“." },
+  { fr: "Trou du cul", de: "Arschloch", lautung: "tru dü kü", stufe: 3, info: "Wörtlich genau das. Oft abgekürzt: TDC." },
+  { fr: "Tête de nœud", de: "Vollidiot", lautung: "tät dö nö", stufe: 3, info: "Wörtlich „Knotenkopf“ – nœud ist hier vulgär gemeint." },
+  { fr: "Casse-couilles", de: "Nervensäge (vulgär)", lautung: "kaß-kuj", stufe: 3, info: "Wörtlich „Eierbrecher“. Sehr derb, sehr gebräuchlich." },
+  { fr: "Va te faire voir !", de: "Verpiss dich!", lautung: "wa tö fär wwar", stufe: 3, info: "Wörtlich „geh dich anschauen lassen“ – die abgemilderte Variante." },
+  { fr: "Fait chier !", de: "Kotzt mich an!", lautung: "fä schie", stufe: 3, info: "Kurzform von ça fait chier." },
+  { fr: "Je m'en fous", de: "Ist mir scheißegal", lautung: "schö mang fu", stufe: 3, info: "Höflicher: ça m'est égal." },
+  { fr: "J'en ai rien à foutre", de: "Es ist mir völlig scheißegal", lautung: "schang ä rjäng a futr", stufe: 3, info: "Deutliche Steigerung von je m'en fous." },
+  { fr: "Putain de merde !", de: "Verdammte Scheiße!", lautung: "pü-täng dö märd", stufe: 3, info: "Die Standard-Kombination, wenn eines nicht reicht." },
+  { fr: "Bâtard", de: "Bastard", lautung: "ba-tar", stufe: 3, info: "Trifft die Familie mit – wird entsprechend ernst genommen." },
+  { fr: "Pétasse", de: "Tussi (abwertend)", lautung: "pe-taß", stufe: 3, info: "Stark abwertend gegenüber Frauen." },
+
+  // ---------- Stufe 4: sehr derb, besser nie benutzen ----------
+  { fr: "Va te faire foutre !", de: "Fick dich!", lautung: "wa tö fär futr", stufe: 4, info: "Endstation Gespräch. Nur zum Erkennen." },
+  { fr: "Ferme ta gueule !", de: "Halt endlich dein Maul!", lautung: "färm ta göll", stufe: 4, info: "Die aggressive Vollform von ta gueule." },
+  { fr: "Fils de pute", de: "Hurensohn", lautung: "fiß dö püt", stufe: 4, info: "Eine der schwersten Beleidigungen – kann handfest eskalieren." },
+  { fr: "Nique ta mère", de: "(extrem beleidigend, Mutterbezug)", lautung: "nik ta mär", stufe: 4, info: "Absolute Tabuzone. Kennen ja, sagen nein." },
+  { fr: "Enculé", de: "Arschloch (vulgär)", lautung: "ang-kü-le", stufe: 4, info: "Homophober Ursprung – auch deshalb strikt vermeiden." },
+  { fr: "Putain de bordel de merde !", de: "Verdammte Scheiße nochmal!", lautung: "pü-täng dö bor-däl dö märd", stufe: 4, info: "Die klassische Fluchkette, wenn wirklich alles schiefgeht." }
+];
+
+const stufenNamen = { 1: "😇 Harmlos", 2: "😬 Umgangssprache", 3: "🤬 Derb", 4: "☠️ Sehr derb" };
+
+let modus = "liste";
+let stufe = 0;      // 0 = alle
+let aktuelle = null;
+let ok = 0, nok = 0, serie = 0;
+
+function setModus(m) {
+  modus = m;
+  document.getElementById("btnListe").classList.toggle("aktiv", m === "liste");
+  document.getElementById("btnQuiz").classList.toggle("aktiv", m === "quiz");
+  document.getElementById("listeBereich").classList.toggle("versteckt", m !== "liste");
+  document.getElementById("quizBereich").classList.toggle("versteckt", m !== "quiz");
+  if (m === "quiz") neueFrage(); else zeichneListe();
+}
+
+function setStufe(s, btn) {
+  stufe = s;
+  document.querySelectorAll("#stufenFilter button").forEach(b => b.classList.remove("aktiv"));
+  btn.classList.add("aktiv");
+  if (modus === "quiz") neueFrage(); else zeichneListe();
+}
+
+function gefiltert() {
+  return stufe === 0 ? woerter : woerter.filter(w => w.stufe === stufe);
+}
+
+function zeichneListe() {
+  const suche = document.getElementById("suche").value.trim().toLowerCase();
+  const treffer = gefiltert().filter(w =>
+    !suche ||
+    w.fr.toLowerCase().includes(suche) ||
+    w.de.toLowerCase().includes(suche) ||
+    w.info.toLowerCase().includes(suche)
+  );
+
+  const liste = document.getElementById("liste");
+  if (treffer.length === 0) {
+    liste.innerHTML = '<div class="leer">Nichts gefunden – tant pis ! 🤷</div>';
+    document.getElementById("anzahl").textContent = "";
+    return;
+  }
+
+  liste.innerHTML = treffer.map(w => `
+    <div class="eintrag">
+      <div class="kopf">
+        <span class="fr">${w.fr}</span>
+        <span class="lautung">[${w.lautung}]</span>
+        <span class="badge s${w.stufe}">${stufenNamen[w.stufe]}</span>
+      </div>
+      <div class="de">${w.de}</div>
+      <div class="zusatz">${w.info}</div>
+    </div>
+  `).join("");
+
+  document.getElementById("anzahl").textContent =
+    `${treffer.length} von ${woerter.length} Ausdrücken`;
+}
+
+function zufall(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function neueFrage() {
+  const pool = gefiltert();
+  aktuelle = zufall(pool);
+
+  // drei falsche Antworten aus dem gesamten Wortschatz ziehen
+  const falsche = [];
+  const rest = woerter.filter(w => w.de !== aktuelle.de);
+  while (falsche.length < 3 && falsche.length < rest.length) {
+    const kandidat = zufall(rest);
+    if (!falsche.includes(kandidat)) falsche.push(kandidat);
+  }
+
+  const optionen = [aktuelle, ...falsche];
+  for (let i = optionen.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [optionen[i], optionen[j]] = [optionen[j], optionen[i]];
+  }
+
+  document.getElementById("frage").textContent = aktuelle.fr;
+  document.getElementById("frageLautung").textContent = `[${aktuelle.lautung}]`;
+
+  const box = document.getElementById("optionen");
+  box.innerHTML = "";
+  optionen.forEach(o => {
+    const b = document.createElement("button");
+    b.textContent = o.de;
+    b.onclick = () => antworten(o, b);
+    box.appendChild(b);
+  });
+
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("feedback").className = "feedback";
+  document.getElementById("weiterBtn").style.display = "none";
+}
+
+function antworten(gewaehlt, btn) {
+  const fb = document.getElementById("feedback");
+  const buttons = document.querySelectorAll("#optionen button");
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (b.textContent === aktuelle.de) b.classList.add("richtigOpt");
+  });
+
+  if (gewaehlt.de === aktuelle.de) {
+    ok++; serie++;
+    fb.textContent = zufall(["Bravo ! 🎉", "Exact ! 🌟", "Parfait ! 👏", "Génial ! 🚀", "Richtig! ✅"]);
+    fb.className = "feedback richtig";
+  } else {
+    nok++; serie = 0;
+    btn.classList.add("falschOpt");
+    fb.innerHTML = `Nicht ganz – <b>${aktuelle.fr}</b> heißt „${aktuelle.de}“ ❌`;
+    fb.className = "feedback falsch";
+  }
+
+  document.getElementById("weiterBtn").style.display = "block";
+  document.getElementById("weiterBtn").focus();
+  aktualisierePunkte();
+}
+
+function aktualisierePunkte() {
+  document.getElementById("punkteOk").textContent = ok;
+  document.getElementById("punkteNok").textContent = nok;
+  document.getElementById("serie").textContent = serie;
+  let s = "";
+  for (let i = 0; i < Math.min(serie, 5); i++) s += "⭐";
+  document.getElementById("sterne").textContent = s;
+}
+
+// Start
+zeichneListe();
+</script>
+</body>
+</html>
