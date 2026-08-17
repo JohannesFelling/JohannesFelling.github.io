@@ -113,8 +113,15 @@
   .s2 { background: #fff2df; color: #98650f; }
   .s3 { background: #fde6e5; color: #a92c26; }
   .fr { font-size: 1.1em; font-weight: bold; color: var(--blau); }
-  .lautschrift { color: #94a3b8; font-size: 0.85em; margin-left: 6px; }
-  .de { display: block; margin-top: 2px; }
+  .ipa {
+    font-family: "Charis SIL", "Doulos SIL", "Gentium Plus", "Segoe UI", serif;
+    color: #7c3aed;
+    font-size: 0.95em;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+  .lesehilfe { display: block; margin-top: 2px; color: #94a3b8; font-size: 0.85em; }
+  .de { display: block; margin-top: 4px; }
   .hinweis { display: block; margin-top: 4px; font-size: 0.85em; color: #64748b; }
   h2 {
     font-size: 1.15em;
@@ -128,13 +135,29 @@
     border-radius: 6px;
     font-size: 0.95em;
   }
+  table.laute {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92em;
+  }
+  table.laute td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eef2f7;
+    vertical-align: top;
+  }
+  table.laute td:first-child {
+    font-family: "Charis SIL", "Doulos SIL", "Gentium Plus", "Segoe UI", serif;
+    color: #7c3aed;
+    font-weight: bold;
+    width: 3em;
+  }
   .leer { text-align: center; color: #94a3b8; padding: 20px 0; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>🇫🇷 Französische Schimpfwörter</h1>
-  <p class="untertitel">Mit deutscher Bedeutung, Aussprache und Härtegrad</p>
+  <p class="untertitel">Mit deutscher Bedeutung, IPA-Lautschrift und Härtegrad</p>
 
   <div class="warnung">
     ⚠️ <b>Achtung:</b> Diese Liste ist zum Verstehen gedacht, nicht zum Benutzen.
@@ -156,15 +179,31 @@
   </div>
 
   <div class="karte">
+    <h2>🔊 Lautschrift-Spickzettel</h2>
+    <table class="laute">
+      <tr><td>y</td><td>gerundetes „ü“ wie in <i>über</i> – <i>p<b>u</b>tain</i></td></tr>
+      <tr><td>ø / œ</td><td>„ö“ geschlossen / offen – <i>b<b>ou</b>seux</i>, <i>gu<b>eu</b>le</i></td></tr>
+      <tr><td>ə</td><td>kurzes Murmel-e, fällt umgangssprachlich oft ganz weg</td></tr>
+      <tr><td>ɛ̃</td><td>nasales „ä“ – <i>put<b>ain</b>, cré<b>tin</b></i></td></tr>
+      <tr><td>ɑ̃</td><td>nasales „a“ – <i><b>an</b>douille, <b>en</b>foiré</i></td></tr>
+      <tr><td>ɔ̃</td><td>nasales „o“ – <i>c<b>on</b>, bouff<b>on</b></i></td></tr>
+      <tr><td>ʁ</td><td>Zäpfchen-R, ähnlich dem deutschen „r“ in <i>Rat</i></td></tr>
+      <tr><td>ʃ / ʒ</td><td>„sch“ / stimmhaftes „sch“ wie in <i>Journal</i></td></tr>
+      <tr><td>j</td><td>„j“ wie in <i>ja</i> – <i>andouil<b>l</b>e</i> [ɑ̃duj]</td></tr>
+      <tr><td>‿</td><td>Bindung (liaison): der Konsonant wird mitgesprochen</td></tr>
+    </table>
+  </div>
+
+  <div class="karte">
     <h2>🧩 Baukasten: eigene Beleidigungen bauen</h2>
     <p>
-      <code>espèce de …</code> – „so ein …“, verstärkt jedes Substantiv:
+      <code>espèce de …</code> [ɛspɛs də] – „so ein …“, verstärkt jedes Substantiv:
       <i>espèce d’idiot !</i> = „so ein Idiot!“<br>
-      <code>gros / grosse …</code> – „fett“ als Verstärker: <i>gros naze</i>.<br>
-      <code>putain de …</code> – entspricht dem deutschen „verdammte(r) …“:
+      <code>gros / grosse …</code> [ɡʁo / ɡʁos] – „fett“ als Verstärker: <i>gros naze</i>.<br>
+      <code>putain de …</code> [pytɛ̃ də] – entspricht dem deutschen „verdammte(r) …“:
       <i>putain de bagnole</i> = „verdammte Karre“.<br>
-      <code>… de mes deux</code> – nachgestellt, sehr abwertend: <i>un chef de mes deux</i>.<br>
-      <code>de merde</code> – nachgestellt: <i>une journée de merde</i> = „ein Scheißtag“.
+      <code>… de mes deux</code> [də me dø] – nachgestellt, sehr abwertend: <i>un chef de mes deux</i>.<br>
+      <code>… de merde</code> [də mɛʁd] – nachgestellt: <i>une journée de merde</i> = „ein Scheißtag“.
     </p>
   </div>
 
@@ -173,9 +212,9 @@
     <p>
       In Kanada flucht man mit Kirchenvokabular statt mit Sex und Fäkalien –
       die sogenannten <i>sacres</i>. Sie klingen harmlos, sind vor Ort aber echte Kraftausdrücke:
-      <b>tabarnak</b> (Tabernakel), <b>câlisse</b> (Kelch), <b>ostie</b> (Hostie),
-      <b>ciboire</b>, <b>crisse</b> (Christus). Beliebt ist das Aneinanderreihen:
-      <i>ostie de câlisse de tabarnak !</i>
+      <b>tabarnak</b> [tabaʁnak] (Tabernakel), <b>câlisse</b> [kɑlɪs] (Kelch),
+      <b>ostie</b> [ɔsti] (Hostie), <b>ciboire</b> [sibwaʁ], <b>crisse</b> [kʁɪs] (Christus).
+      Beliebt ist das Aneinanderreihen: <i>ostie de câlisse de tabarnak !</i>
     </p>
   </div>
 
@@ -194,84 +233,85 @@
 
 <script>
 // stufe: 1 = harmlos, 2 = mittel, 3 = derb/vulgär
+// ipa  = IPA-Lautschrift, lese = grobe deutsche Lesehilfe
 const woerter = [
   // ---------- Stufe 1: harmlos ----------
-  { fr: "Zut !", aus: "[süt]", de: "Mist! Verflixt!", stufe: 1, hinweis: "Der Klassiker, absolut kindertauglich." },
-  { fr: "Mince !", aus: "[mänß]", de: "Mist! Menno!", stufe: 1, hinweis: "Wörtlich „dünn“ – entschärfte Variante von merde." },
-  { fr: "Flûte !", aus: "[flüt]", de: "Verflixt!", stufe: 1, hinweis: "Etwas altmodisch, sehr brav." },
-  { fr: "Punaise !", aus: "[pü-nähs]", de: "Mensch! Mist!", stufe: 1, hinweis: "Wörtlich „Reißzwecke/Wanze“, Ersatzwort für putain." },
-  { fr: "Purée !", aus: "[pü-ree]", de: "Mensch!", stufe: 1, hinweis: "Wörtlich „Püree“, ebenfalls Ersatz für putain." },
-  { fr: "Crotte !", aus: "[krott]", de: "Mist! Kacke!", stufe: 1, hinweis: "Wörtlich „Köttel“ – Kindersprache." },
-  { fr: "Idiot / idiote", aus: "[i-djo / i-djott]", de: "Idiot / Idiotin", stufe: 1, hinweis: "" },
-  { fr: "Imbécile", aus: "[äm-be-ßil]", de: "Trottel, Dummkopf", stufe: 1, hinweis: "" },
-  { fr: "Crétin", aus: "[kre-täng]", de: "Blödmann", stufe: 1, hinweis: "Beliebt: crétin des Alpes – „Alpen-Trottel“." },
-  { fr: "Nigaud", aus: "[ni-goh]", de: "Einfaltspinsel", stufe: 1, hinweis: "Fast liebevoll." },
-  { fr: "Andouille", aus: "[ang-duj]", de: "Dummkopf", stufe: 1, hinweis: "Wörtlich eine Wurstsorte." },
-  { fr: "Cornichon", aus: "[kor-ni-schong]", de: "Dummerchen", stufe: 1, hinweis: "Wörtlich „Gewürzgurke“." },
-  { fr: "Patate", aus: "[pa-tatt]", de: "Dummerchen", stufe: 1, hinweis: "Wörtlich „Kartoffel“." },
-  { fr: "Ballot", aus: "[ba-loh]", de: "Trottel", stufe: 1, hinweis: "" },
-  { fr: "Empoté", aus: "[ang-po-teh]", de: "Tollpatsch", stufe: 1, hinweis: "" },
-  { fr: "Tête de linotte", aus: "[tätt de li-nott]", de: "Schussel", stufe: 1, hinweis: "Wörtlich „Hänflingskopf“ – vergesslich." },
-  { fr: "Bête comme ses pieds", aus: "[bätt komm ße pje]", de: "dumm wie Bohnenstroh", stufe: 1, hinweis: "Wörtlich „dumm wie seine Füße“." },
-  { fr: "Casse-pieds", aus: "[kass-pje]", de: "Nervensäge", stufe: 1, hinweis: "Wörtlich „Fußbrecher“." },
-  { fr: "Rabat-joie", aus: "[ra-ba-schoa]", de: "Spielverderber", stufe: 1, hinweis: "" },
-  { fr: "Râleur / râleuse", aus: "[ra-lör]", de: "Meckerkopf", stufe: 1, hinweis: "Nationalsport laut Selbstbeschreibung." },
-  { fr: "Frimeur", aus: "[fri-mör]", de: "Angeber", stufe: 1, hinweis: "" },
-  { fr: "Radin", aus: "[ra-däng]", de: "Geizhals", stufe: 1, hinweis: "" },
-  { fr: "Pique-assiette", aus: "[pik-a-ßjett]", de: "Schmarotzer", stufe: 1, hinweis: "Wörtlich „Teller-Anpicker“." },
-  { fr: "Lèche-bottes", aus: "[läsch-bott]", de: "Speichellecker", stufe: 1, hinweis: "Wörtlich „Stiefellecker“." },
-  { fr: "Bouffon", aus: "[bu-fong]", de: "Clown, Hampelmann", stufe: 1, hinweis: "Unter Jugendlichen sehr verbreitet." },
-  { fr: "Nul / nulle", aus: "[nül]", de: "Niete, mies", stufe: 1, hinweis: "T’es nul ! = „Du bist eine Niete!“" },
-  { fr: "Naze", aus: "[nass]", de: "Vollpfosten; auch: kaputt", stufe: 1, hinweis: "Umgangssprachlich, jugendlich." },
-  { fr: "Gros malin", aus: "[groh ma-läng]", de: "Schlaumeier", stufe: 1, hinweis: "Immer ironisch gemeint." },
+  { fr: "Zut !", ipa: "[zyt]", lese: "süt", de: "Mist! Verflixt!", stufe: 1, hinweis: "Der Klassiker, absolut kindertauglich." },
+  { fr: "Mince !", ipa: "[mɛ̃s]", lese: "mäss (nasal)", de: "Mist! Menno!", stufe: 1, hinweis: "Wörtlich „dünn“ – entschärfte Variante von merde." },
+  { fr: "Flûte !", ipa: "[flyt]", lese: "flüt", de: "Verflixt!", stufe: 1, hinweis: "Etwas altmodisch, sehr brav." },
+  { fr: "Punaise !", ipa: "[pynɛz]", lese: "pü-näs", de: "Mensch! Mist!", stufe: 1, hinweis: "Wörtlich „Reißzwecke/Wanze“, Ersatzwort für putain." },
+  { fr: "Purée !", ipa: "[pyʁe]", lese: "pü-reh", de: "Mensch!", stufe: 1, hinweis: "Wörtlich „Püree“, ebenfalls Ersatz für putain." },
+  { fr: "Crotte !", ipa: "[kʁɔt]", lese: "krott", de: "Mist! Kacke!", stufe: 1, hinweis: "Wörtlich „Köttel“ – Kindersprache." },
+  { fr: "Idiot / idiote", ipa: "[idjo / idjɔt]", lese: "i-djo / i-djott", de: "Idiot / Idiotin", stufe: 1, hinweis: "" },
+  { fr: "Imbécile", ipa: "[ɛ̃besil]", lese: "äm-be-ßil", de: "Trottel, Dummkopf", stufe: 1, hinweis: "" },
+  { fr: "Crétin", ipa: "[kʁetɛ̃]", lese: "kre-täng", de: "Blödmann", stufe: 1, hinweis: "Beliebt: crétin des Alpes – „Alpen-Trottel“." },
+  { fr: "Nigaud", ipa: "[niɡo]", lese: "ni-goh", de: "Einfaltspinsel", stufe: 1, hinweis: "Fast liebevoll." },
+  { fr: "Andouille", ipa: "[ɑ̃duj]", lese: "ang-duj", de: "Dummkopf", stufe: 1, hinweis: "Wörtlich eine Wurstsorte." },
+  { fr: "Cornichon", ipa: "[kɔʁniʃɔ̃]", lese: "kor-ni-schong", de: "Dummerchen", stufe: 1, hinweis: "Wörtlich „Gewürzgurke“." },
+  { fr: "Patate", ipa: "[patat]", lese: "pa-tatt", de: "Dummerchen", stufe: 1, hinweis: "Wörtlich „Kartoffel“." },
+  { fr: "Ballot", ipa: "[balo]", lese: "ba-loh", de: "Trottel", stufe: 1, hinweis: "" },
+  { fr: "Empoté", ipa: "[ɑ̃pɔte]", lese: "ang-po-teh", de: "Tollpatsch", stufe: 1, hinweis: "" },
+  { fr: "Tête de linotte", ipa: "[tɛt də linɔt]", lese: "tätt de li-nott", de: "Schussel", stufe: 1, hinweis: "Wörtlich „Hänflingskopf“ – vergesslich." },
+  { fr: "Bête comme ses pieds", ipa: "[bɛt kɔm se pje]", lese: "bätt komm ße pjeh", de: "dumm wie Bohnenstroh", stufe: 1, hinweis: "Wörtlich „dumm wie seine Füße“." },
+  { fr: "Casse-pieds", ipa: "[kɑspje]", lese: "kass-pjeh", de: "Nervensäge", stufe: 1, hinweis: "Wörtlich „Fußbrecher“." },
+  { fr: "Rabat-joie", ipa: "[ʁabaʒwa]", lese: "ra-ba-schoa", de: "Spielverderber", stufe: 1, hinweis: "" },
+  { fr: "Râleur / râleuse", ipa: "[ʁɑlœʁ / ʁɑløz]", lese: "ra-lör / ra-lös", de: "Meckerkopf", stufe: 1, hinweis: "Nationalsport laut Selbstbeschreibung." },
+  { fr: "Frimeur", ipa: "[fʁimœʁ]", lese: "fri-mör", de: "Angeber", stufe: 1, hinweis: "" },
+  { fr: "Radin", ipa: "[ʁadɛ̃]", lese: "ra-däng", de: "Geizhals", stufe: 1, hinweis: "" },
+  { fr: "Pique-assiette", ipa: "[pikasjɛt]", lese: "pik-a-ßjett", de: "Schmarotzer", stufe: 1, hinweis: "Wörtlich „Teller-Anpicker“." },
+  { fr: "Lèche-bottes", ipa: "[lɛʃbɔt]", lese: "läsch-bott", de: "Speichellecker", stufe: 1, hinweis: "Wörtlich „Stiefellecker“." },
+  { fr: "Bouffon", ipa: "[bufɔ̃]", lese: "bu-fong", de: "Clown, Hampelmann", stufe: 1, hinweis: "Unter Jugendlichen sehr verbreitet." },
+  { fr: "Nul / nulle", ipa: "[nyl]", lese: "nül", de: "Niete, mies", stufe: 1, hinweis: "T’es nul ! = „Du bist eine Niete!“" },
+  { fr: "Naze", ipa: "[nɑz]", lese: "nass", de: "Vollpfosten; auch: kaputt", stufe: 1, hinweis: "Umgangssprachlich, jugendlich." },
+  { fr: "Gros malin", ipa: "[ɡʁo malɛ̃]", lese: "groh ma-läng", de: "Schlaumeier", stufe: 1, hinweis: "Immer ironisch gemeint." },
 
   // ---------- Stufe 2: mittel ----------
-  { fr: "Merde !", aus: "[märd]", de: "Scheiße!", stufe: 2, hinweis: "Allzweckfluch. Vor einer Prüfung heißt merde ! aber „Toi, toi, toi!“." },
-  { fr: "Putain !", aus: "[pü-täng]", de: "Verdammt! Scheiße!", stufe: 2, hinweis: "Wörtlich „Hure“, wird aber fast nur als Ausruf verwendet." },
-  { fr: "Bordel !", aus: "[bor-däl]", de: "Sauerei! Chaos!", stufe: 2, hinweis: "Wörtlich „Bordell“. Auch: quel bordel ! = „was für ein Saustall!“" },
-  { fr: "Con / conne", aus: "[kong / konn]", de: "Blödmann, Idiot(in)", stufe: 2, hinweis: "Ursprünglich vulgär; im Süden oft nur Füllwort." },
-  { fr: "Connard / connasse", aus: "[ko-nar / ko-nass]", de: "Arschloch / blöde Kuh", stufe: 2, hinweis: "Deutlich schärfer als con." },
-  { fr: "Abruti", aus: "[a-brü-ti]", de: "Vollidiot", stufe: 2, hinweis: "" },
-  { fr: "Débile", aus: "[de-bil]", de: "Schwachkopf; schwachsinnig", stufe: 2, hinweis: "Auch für Sachen: c’est débile = „das ist schwachsinnig“." },
-  { fr: "Taré", aus: "[ta-reh]", de: "Bekloppter, Irrer", stufe: 2, hinweis: "" },
-  { fr: "Cinglé / dingue", aus: "[ßäng-gleh / däng]", de: "Verrückter, Spinner", stufe: 2, hinweis: "dingue kann auch positiv „irre gut“ heißen." },
-  { fr: "Salaud / salopard", aus: "[ßa-loh / ßa-lo-par]", de: "Mistkerl, Dreckskerl", stufe: 2, hinweis: "" },
-  { fr: "Salope", aus: "[ßa-lopp]", de: "Schlampe", stufe: 2, hinweis: "Stark frauenfeindlich – gilt als sehr verletzend." },
-  { fr: "Enfoiré", aus: "[ang-foa-reh]", de: "Mistkerl, Dreckschwein", stufe: 2, hinweis: "" },
-  { fr: "Ordure", aus: "[or-dür]", de: "Dreckskerl", stufe: 2, hinweis: "Wörtlich „Müll, Abfall“." },
-  { fr: "Pourri", aus: "[pu-ri]", de: "verdorbenes Subjekt, korrupt", stufe: 2, hinweis: "Wörtlich „verfault“." },
-  { fr: "Blaireau", aus: "[blä-roh]", de: "Depp, Vollpfosten", stufe: 2, hinweis: "Wörtlich „Dachs“ bzw. „Rasierpinsel“." },
-  { fr: "Beauf", aus: "[bof]", de: "Prolet, Spießer", stufe: 2, hinweis: "Kurz für beau-frère, „Schwager“ – ein ganzer Sozialtyp." },
-  { fr: "Bouseux", aus: "[bu-sö]", de: "Bauerntrampel", stufe: 2, hinweis: "" },
-  { fr: "Emmerdeur", aus: "[ang-mär-dör]", de: "Nervensäge (derb)", stufe: 2, hinweis: "Von merde abgeleitet." },
-  { fr: "Branleur", aus: "[brang-lör]", de: "Faulenzer, Nichtsnutz", stufe: 2, hinweis: "Wörtlich derb („Wichser“), heute meist „Faulpelz“." },
-  { fr: "Mytho", aus: "[mi-toh]", de: "Lügner, Aufschneider", stufe: 2, hinweis: "Kurz für mythomane." },
-  { fr: "Balance", aus: "[ba-langß]", de: "Verräter, Petze", stufe: 2, hinweis: "Wörtlich „Waage“." },
-  { fr: "Ta gueule !", aus: "[ta göll]", de: "Halt die Fresse!", stufe: 2, hinweis: "gueule = Maul eines Tieres. Sehr unhöflich." },
-  { fr: "Casse-toi !", aus: "[kass-toa]", de: "Hau ab!", stufe: 2, hinweis: "Durch Sarkozys „Casse-toi, pauv’ con !“ berühmt geworden." },
-  { fr: "Dégage !", aus: "[de-gasch]", de: "Verschwinde!", stufe: 2, hinweis: "" },
-  { fr: "Fous le camp !", aus: "[fu le kang]", de: "Verpiss dich!", stufe: 2, hinweis: "" },
-  { fr: "Ça me fait chier", aus: "[ßa me fä schjeh]", de: "Das nervt mich tierisch", stufe: 2, hinweis: "Wörtlich deutlich derber." },
-  { fr: "J’en ai marre / ras-le-bol", aus: "[schang e mar]", de: "Ich hab die Schnauze voll", stufe: 2, hinweis: "Noch salonfähig." },
-  { fr: "Pauvre type", aus: "[powr tipp]", de: "armer Wicht, Vollpfosten", stufe: 2, hinweis: "" },
-  { fr: "Sale type", aus: "[ßal tipp]", de: "mieser Typ", stufe: 2, hinweis: "sale („dreckig“) verstärkt fast alles." },
+  { fr: "Merde !", ipa: "[mɛʁd]", lese: "märd", de: "Scheiße!", stufe: 2, hinweis: "Allzweckfluch. Vor einer Prüfung heißt merde ! aber „Toi, toi, toi!“." },
+  { fr: "Putain !", ipa: "[pytɛ̃]", lese: "pü-täng", de: "Verdammt! Scheiße!", stufe: 2, hinweis: "Wörtlich „Hure“, wird aber fast nur als Ausruf verwendet." },
+  { fr: "Bordel !", ipa: "[bɔʁdɛl]", lese: "bor-däl", de: "Sauerei! Chaos!", stufe: 2, hinweis: "Wörtlich „Bordell“. Auch: quel bordel ! = „was für ein Saustall!“" },
+  { fr: "Con / conne", ipa: "[kɔ̃ / kɔn]", lese: "kong / konn", de: "Blödmann, Idiot(in)", stufe: 2, hinweis: "Ursprünglich vulgär; im Süden oft nur Füllwort." },
+  { fr: "Connard / connasse", ipa: "[kɔnaʁ / kɔnas]", lese: "ko-nar / ko-nass", de: "Arschloch / blöde Kuh", stufe: 2, hinweis: "Deutlich schärfer als con." },
+  { fr: "Abruti", ipa: "[abʁyti]", lese: "a-brü-ti", de: "Vollidiot", stufe: 2, hinweis: "" },
+  { fr: "Débile", ipa: "[debil]", lese: "de-bil", de: "Schwachkopf; schwachsinnig", stufe: 2, hinweis: "Auch für Sachen: c’est débile = „das ist schwachsinnig“." },
+  { fr: "Taré", ipa: "[taʁe]", lese: "ta-reh", de: "Bekloppter, Irrer", stufe: 2, hinweis: "" },
+  { fr: "Cinglé / dingue", ipa: "[sɛ̃ɡle / dɛ̃ɡ]", lese: "ßäng-gleh / däng", de: "Verrückter, Spinner", stufe: 2, hinweis: "dingue kann auch positiv „irre gut“ heißen." },
+  { fr: "Salaud / salopard", ipa: "[salo / salɔpaʁ]", lese: "ßa-loh / ßa-lo-par", de: "Mistkerl, Dreckskerl", stufe: 2, hinweis: "" },
+  { fr: "Salope", ipa: "[salɔp]", lese: "ßa-lopp", de: "Schlampe", stufe: 2, hinweis: "Stark frauenfeindlich – gilt als sehr verletzend." },
+  { fr: "Enfoiré", ipa: "[ɑ̃fwaʁe]", lese: "ang-foa-reh", de: "Mistkerl, Dreckschwein", stufe: 2, hinweis: "" },
+  { fr: "Ordure", ipa: "[ɔʁdyʁ]", lese: "or-dür", de: "Dreckskerl", stufe: 2, hinweis: "Wörtlich „Müll, Abfall“." },
+  { fr: "Pourri", ipa: "[puʁi]", lese: "pu-ri", de: "verdorbenes Subjekt, korrupt", stufe: 2, hinweis: "Wörtlich „verfault“." },
+  { fr: "Blaireau", ipa: "[blɛʁo]", lese: "blä-roh", de: "Depp, Vollpfosten", stufe: 2, hinweis: "Wörtlich „Dachs“ bzw. „Rasierpinsel“." },
+  { fr: "Beauf", ipa: "[bof]", lese: "bof", de: "Prolet, Spießer", stufe: 2, hinweis: "Kurz für beau-frère, „Schwager“ – ein ganzer Sozialtyp." },
+  { fr: "Bouseux", ipa: "[buzø]", lese: "bu-sö", de: "Bauerntrampel", stufe: 2, hinweis: "" },
+  { fr: "Emmerdeur", ipa: "[ɑ̃mɛʁdœʁ]", lese: "ang-mär-dör", de: "Nervensäge (derb)", stufe: 2, hinweis: "Von merde abgeleitet." },
+  { fr: "Branleur", ipa: "[bʁɑ̃lœʁ]", lese: "brang-lör", de: "Faulenzer, Nichtsnutz", stufe: 2, hinweis: "Wörtlich derb („Wichser“), heute meist „Faulpelz“." },
+  { fr: "Mytho", ipa: "[mito]", lese: "mi-toh", de: "Lügner, Aufschneider", stufe: 2, hinweis: "Kurz für mythomane." },
+  { fr: "Balance", ipa: "[balɑ̃s]", lese: "ba-langß", de: "Verräter, Petze", stufe: 2, hinweis: "Wörtlich „Waage“." },
+  { fr: "Ta gueule !", ipa: "[ta ɡœl]", lese: "ta göll", de: "Halt die Fresse!", stufe: 2, hinweis: "gueule = Maul eines Tieres. Sehr unhöflich." },
+  { fr: "Casse-toi !", ipa: "[kɑs twa]", lese: "kass toa", de: "Hau ab!", stufe: 2, hinweis: "Durch Sarkozys „Casse-toi, pauv’ con !“ berühmt geworden." },
+  { fr: "Dégage !", ipa: "[deɡaʒ]", lese: "de-gasch", de: "Verschwinde!", stufe: 2, hinweis: "" },
+  { fr: "Fous le camp !", ipa: "[fu l(ə) kɑ̃]", lese: "fu le kang", de: "Verpiss dich!", stufe: 2, hinweis: "" },
+  { fr: "Ça me fait chier", ipa: "[sa mə fɛ ʃje]", lese: "ßa me fä schjeh", de: "Das nervt mich tierisch", stufe: 2, hinweis: "Wörtlich deutlich derber." },
+  { fr: "J’en ai marre", ipa: "[ʒɑ̃ n‿e maʁ]", lese: "schang ne mar", de: "Ich hab die Schnauze voll", stufe: 2, hinweis: "Noch salonfähig; ebenso ras-le-bol [ʁɑ lə bɔl]." },
+  { fr: "Pauvre type", ipa: "[povʁ tip]", lese: "powr tipp", de: "armer Wicht, Vollpfosten", stufe: 2, hinweis: "" },
+  { fr: "Sale type", ipa: "[sal tip]", lese: "ßal tipp", de: "mieser Typ", stufe: 2, hinweis: "sale („dreckig“) verstärkt fast alles." },
 
   // ---------- Stufe 3: derb / vulgär ----------
-  { fr: "Va te faire foutre !", aus: "[wa te fär futr]", de: "Fick dich! Verpiss dich!", stufe: 3, hinweis: "Kurzform: va te faire !" },
-  { fr: "Va chier !", aus: "[wa schjeh]", de: "Verpiss dich!", stufe: 3, hinweis: "Wörtlich „geh scheißen“." },
-  { fr: "Trou du cul", aus: "[tru dü kü]", de: "Arschloch", stufe: 3, hinweis: "Wörtlich „Arschloch“; kurz: trouduc." },
-  { fr: "Enculé", aus: "[ang-kü-leh]", de: "Wichser, Arschloch", stufe: 3, hinweis: "Sehr grob und homophob konnotiert." },
-  { fr: "Fils de pute", aus: "[fiss de püt]", de: "Hurensohn", stufe: 3, hinweis: "Eine der schwersten Beleidigungen." },
-  { fr: "Nique ta mère", aus: "[nik ta mär]", de: "Fick deine Mutter", stufe: 3, hinweis: "Extrem beleidigend, führt zuverlässig zur Eskalation." },
-  { fr: "Pétasse", aus: "[pe-tass]", de: "Zicke, Schlampe", stufe: 3, hinweis: "Stark abwertend gegenüber Frauen." },
-  { fr: "Grosse merde", aus: "[gross märd]", de: "Riesenarschloch", stufe: 3, hinweis: "" },
-  { fr: "Chiotte / merdier", aus: "[schjott / mär-djeh]", de: "Scheißladen, Saustall", stufe: 3, hinweis: "Für Orte und Zustände." },
-  { fr: "Putain de merde !", aus: "[pü-täng de märd]", de: "Verdammte Scheiße!", stufe: 3, hinweis: "Steigerungsform des Allzweckfluchs." },
-  { fr: "Bordel de merde !", aus: "[bor-däl de märd]", de: "Verdammte Scheiße!", stufe: 3, hinweis: "" },
-  { fr: "Espèce de connard !", aus: "[eß-päß de ko-nar]", de: "Du verdammtes Arschloch!", stufe: 3, hinweis: "espèce de verstärkt jede Beleidigung." },
-  { fr: "Ferme ta gueule !", aus: "[färm ta göll]", de: "Halt dein verdammtes Maul!", stufe: 3, hinweis: "Schärfer als ta gueule." },
-  { fr: "Je t’emmerde", aus: "[sche tang-märd]", de: "Du kannst mich mal", stufe: 3, hinweis: "" },
-  { fr: "Rien à foutre", aus: "[rjäng a futr]", de: "Scheißegal", stufe: 3, hinweis: "j’en ai rien à foutre = „das ist mir völlig scheißegal“." }
+  { fr: "Va te faire foutre !", ipa: "[va tə fɛʁ futʁ]", lese: "wa te fär futr", de: "Fick dich! Verpiss dich!", stufe: 3, hinweis: "Kurzform: va te faire !" },
+  { fr: "Va chier !", ipa: "[va ʃje]", lese: "wa schjeh", de: "Verpiss dich!", stufe: 3, hinweis: "Wörtlich „geh scheißen“." },
+  { fr: "Trou du cul", ipa: "[tʁu dy ky]", lese: "tru dü kü", de: "Arschloch", stufe: 3, hinweis: "Wörtlich „Arschloch“; kurz: trouduc." },
+  { fr: "Enculé", ipa: "[ɑ̃kyle]", lese: "ang-kü-leh", de: "Wichser, Arschloch", stufe: 3, hinweis: "Sehr grob und homophob konnotiert." },
+  { fr: "Fils de pute", ipa: "[fis də pyt]", lese: "fiss de püt", de: "Hurensohn", stufe: 3, hinweis: "Eine der schwersten Beleidigungen." },
+  { fr: "Nique ta mère", ipa: "[nik ta mɛʁ]", lese: "nik ta mär", de: "Fick deine Mutter", stufe: 3, hinweis: "Extrem beleidigend, führt zuverlässig zur Eskalation." },
+  { fr: "Pétasse", ipa: "[petas]", lese: "pe-tass", de: "Zicke, Schlampe", stufe: 3, hinweis: "Stark abwertend gegenüber Frauen." },
+  { fr: "Grosse merde", ipa: "[ɡʁos mɛʁd]", lese: "gross märd", de: "Riesenarschloch", stufe: 3, hinweis: "" },
+  { fr: "Chiotte / merdier", ipa: "[ʃjɔt / mɛʁdje]", lese: "schjott / mär-djeh", de: "Scheißladen, Saustall", stufe: 3, hinweis: "Für Orte und Zustände." },
+  { fr: "Putain de merde !", ipa: "[pytɛ̃ d(ə) mɛʁd]", lese: "pü-täng de märd", de: "Verdammte Scheiße!", stufe: 3, hinweis: "Steigerungsform des Allzweckfluchs." },
+  { fr: "Bordel de merde !", ipa: "[bɔʁdɛl də mɛʁd]", lese: "bor-däl de märd", de: "Verdammte Scheiße!", stufe: 3, hinweis: "" },
+  { fr: "Espèce de connard !", ipa: "[ɛspɛs də kɔnaʁ]", lese: "eß-päß de ko-nar", de: "Du verdammtes Arschloch!", stufe: 3, hinweis: "espèce de verstärkt jede Beleidigung." },
+  { fr: "Ferme ta gueule !", ipa: "[fɛʁm ta ɡœl]", lese: "färm ta göll", de: "Halt dein verdammtes Maul!", stufe: 3, hinweis: "Schärfer als ta gueule." },
+  { fr: "Je t’emmerde", ipa: "[ʒə tɑ̃mɛʁd]", lese: "sche tang-märd", de: "Du kannst mich mal", stufe: 3, hinweis: "" },
+  { fr: "Rien à foutre", ipa: "[ʁjɛ̃ n‿a futʁ]", lese: "rjäng na futr", de: "Scheißegal", stufe: 3, hinweis: "j’en ai rien à foutre = „das ist mir völlig scheißegal“." }
 ];
 
 let filter = 0;
@@ -290,7 +330,7 @@ function rendern() {
   const gefiltert = woerter.filter(w => {
     if (filter !== 0 && w.stufe !== filter) return false;
     if (!q) return true;
-    return (w.fr + " " + w.de + " " + w.hinweis).toLowerCase().includes(q);
+    return (w.fr + " " + w.de + " " + w.ipa + " " + w.lese + " " + w.hinweis).toLowerCase().includes(q);
   });
 
   liste.innerHTML = gefiltert.length
@@ -299,7 +339,8 @@ function rendern() {
           <span class="stufe s${w.stufe}">${labels[w.stufe]}</span>
           <span>
             <span class="fr">${escapeHtml(w.fr)}</span>
-            <span class="lautschrift">${escapeHtml(w.aus)}</span>
+            <span class="ipa">${escapeHtml(w.ipa)}</span>
+            <span class="lesehilfe">≈ ${escapeHtml(w.lese)}</span>
             <span class="de">${escapeHtml(w.de)}</span>
             ${w.hinweis ? `<span class="hinweis">${escapeHtml(w.hinweis)}</span>` : ""}
           </span>
