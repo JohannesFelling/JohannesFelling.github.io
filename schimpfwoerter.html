@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Französische Schimpfwörter</title>
+<style>
+  :root {
+    --blau: #2d6cdf;
+    --gruen: #29b765;
+    --rot: #e3463f;
+    --gelb: #f7b32b;
+    --hell: #f0f4ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(160deg, #eaf1ff 0%, #f6f9ff 100%);
+    color: #1f2937;
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 18px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 10px 0 4px;
+    color: var(--blau);
+  }
+  .untertitel {
+    text-align: center;
+    color: #6b7280;
+    margin: 0 0 18px;
+    font-size: 0.95em;
+  }
+  .karte {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(45,108,223,0.12);
+    margin-bottom: 18px;
+  }
+  .warnung {
+    background: #fff6e5;
+    border-left: 5px solid var(--gelb);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.9em;
+    color: #6b5320;
+    margin-bottom: 18px;
+  }
+  .modus {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .modus button {
+    flex: 1 1 120px;
+    padding: 10px;
+    border: 2px solid var(--blau);
+    background: #fff;
+    color: var(--blau);
+    border-radius: 12px;
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .modus button.aktiv {
+    background: var(--blau);
+    color: #fff;
+  }
+  input[type=search] {
+    width: 100%;
+    font-size: 1.05em;
+    padding: 10px 14px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+  }
+  input[type=search]:focus {
+    outline: none;
+    border-color: var(--blau);
+  }
+  .treffer {
+    margin: 12px 0 0;
+    font-size: 0.85em;
+    color: #6b7280;
+    text-align: right;
+  }
+  ul.liste { list-style: none; margin: 0; padding: 0; }
+  ul.liste li {
+    border-top: 1px solid #e5e7eb;
+    padding: 12px 2px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  ul.liste li:first-child { border-top: none; }
+  .stufe {
+    flex: 0 0 auto;
+    font-size: 0.72em;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 999px;
+    margin-top: 3px;
+    white-space: nowrap;
+  }
+  .s1 { background: #e3f7ec; color: #1c7a46; }
+  .s2 { background: #fff2df; color: #98650f; }
+  .s3 { background: #fde6e5; color: #a92c26; }
+  .fr { font-size: 1.1em; font-weight: bold; color: var(--blau); }
+  .lautschrift { color: #94a3b8; font-size: 0.85em; margin-left: 6px; }
+  .de { display: block; margin-top: 2px; }
+  .hinweis { display: block; margin-top: 4px; font-size: 0.85em; color: #64748b; }
+  h2 {
+    font-size: 1.15em;
+    color: var(--blau);
+    margin: 0 0 10px;
+  }
+  .karte p { line-height: 1.55; }
+  .karte code {
+    background: var(--hell);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.95em;
+  }
+  .leer { text-align: center; color: #94a3b8; padding: 20px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🇫🇷 Französische Schimpfwörter</h1>
+  <p class="untertitel">Mit deutscher Bedeutung, Aussprache und Härtegrad</p>
+
+  <div class="warnung">
+    ⚠️ <b>Achtung:</b> Diese Liste ist zum Verstehen gedacht, nicht zum Benutzen.
+    Vieles davon ist im Französischen deutlich derber, als die deutsche Übersetzung vermuten lässt –
+    besonders Stufe 3. Gegenüber Fremden, Vorgesetzten oder der Polizei kann eine Beleidigung
+    in Frankreich (<i>injure publique</i>) sogar ein Bußgeld nach sich ziehen.
+  </div>
+
+  <div class="karte">
+    <div class="modus">
+      <button class="aktiv" data-stufe="0">Alle</button>
+      <button data-stufe="1">😇 Harmlos</button>
+      <button data-stufe="2">😐 Mittel</button>
+      <button data-stufe="3">🤬 Derb</button>
+    </div>
+    <input type="search" id="suche" placeholder="Suchen … (z. B. „Idiot“ oder „con“)">
+    <p class="treffer" id="treffer"></p>
+    <ul class="liste" id="liste"></ul>
+  </div>
+
+  <div class="karte">
+    <h2>🧩 Baukasten: eigene Beleidigungen bauen</h2>
+    <p>
+      <code>espèce de …</code> – „so ein …“, verstärkt jedes Substantiv:
+      <i>espèce d’idiot !</i> = „so ein Idiot!“<br>
+      <code>gros / grosse …</code> – „fett“ als Verstärker: <i>gros naze</i>.<br>
+      <code>putain de …</code> – entspricht dem deutschen „verdammte(r) …“:
+      <i>putain de bagnole</i> = „verdammte Karre“.<br>
+      <code>… de mes deux</code> – nachgestellt, sehr abwertend: <i>un chef de mes deux</i>.<br>
+      <code>de merde</code> – nachgestellt: <i>une journée de merde</i> = „ein Scheißtag“.
+    </p>
+  </div>
+
+  <div class="karte">
+    <h2>🍁 Bonus: Flüche aus Québec</h2>
+    <p>
+      In Kanada flucht man mit Kirchenvokabular statt mit Sex und Fäkalien –
+      die sogenannten <i>sacres</i>. Sie klingen harmlos, sind vor Ort aber echte Kraftausdrücke:
+      <b>tabarnak</b> (Tabernakel), <b>câlisse</b> (Kelch), <b>ostie</b> (Hostie),
+      <b>ciboire</b>, <b>crisse</b> (Christus). Beliebt ist das Aneinanderreihen:
+      <i>ostie de câlisse de tabarnak !</i>
+    </p>
+  </div>
+
+  <div class="karte">
+    <h2>💡 Gut zu wissen</h2>
+    <p>
+      <b>putain</b> und <b>merde</b> sind die Allzweck-Flüche und werden meist ohne Adressat
+      benutzt („Mist!“). <b>con</b> ist im Süden Frankreichs fast ein Füllwort
+      (<i>putain con !</i>), im Norden dagegen eine echte Beleidigung.<br>
+      Wer nicht wirklich fluchen will, nimmt die entschärften Varianten
+      <b>punaise</b>, <b>purée</b> oder <b>mince</b> – das französische Gegenstück zu
+      „Mist“ statt „Scheiße“.
+    </p>
+  </div>
+</div>
+
+<script>
+// stufe: 1 = harmlos, 2 = mittel, 3 = derb/vulgär
+const woerter = [
+  // ---------- Stufe 1: harmlos ----------
+  { fr: "Zut !", aus: "[süt]", de: "Mist! Verflixt!", stufe: 1, hinweis: "Der Klassiker, absolut kindertauglich." },
+  { fr: "Mince !", aus: "[mänß]", de: "Mist! Menno!", stufe: 1, hinweis: "Wörtlich „dünn“ – entschärfte Variante von merde." },
+  { fr: "Flûte !", aus: "[flüt]", de: "Verflixt!", stufe: 1, hinweis: "Etwas altmodisch, sehr brav." },
+  { fr: "Punaise !", aus: "[pü-nähs]", de: "Mensch! Mist!", stufe: 1, hinweis: "Wörtlich „Reißzwecke/Wanze“, Ersatzwort für putain." },
+  { fr: "Purée !", aus: "[pü-ree]", de: "Mensch!", stufe: 1, hinweis: "Wörtlich „Püree“, ebenfalls Ersatz für putain." },
+  { fr: "Crotte !", aus: "[krott]", de: "Mist! Kacke!", stufe: 1, hinweis: "Wörtlich „Köttel“ – Kindersprache." },
+  { fr: "Idiot / idiote", aus: "[i-djo / i-djott]", de: "Idiot / Idiotin", stufe: 1, hinweis: "" },
+  { fr: "Imbécile", aus: "[äm-be-ßil]", de: "Trottel, Dummkopf", stufe: 1, hinweis: "" },
+  { fr: "Crétin", aus: "[kre-täng]", de: "Blödmann", stufe: 1, hinweis: "Beliebt: crétin des Alpes – „Alpen-Trottel“." },
+  { fr: "Nigaud", aus: "[ni-goh]", de: "Einfaltspinsel", stufe: 1, hinweis: "Fast liebevoll." },
+  { fr: "Andouille", aus: "[ang-duj]", de: "Dummkopf", stufe: 1, hinweis: "Wörtlich eine Wurstsorte." },
+  { fr: "Cornichon", aus: "[kor-ni-schong]", de: "Dummerchen", stufe: 1, hinweis: "Wörtlich „Gewürzgurke“." },
+  { fr: "Patate", aus: "[pa-tatt]", de: "Dummerchen", stufe: 1, hinweis: "Wörtlich „Kartoffel“." },
+  { fr: "Ballot", aus: "[ba-loh]", de: "Trottel", stufe: 1, hinweis: "" },
+  { fr: "Empoté", aus: "[ang-po-teh]", de: "Tollpatsch", stufe: 1, hinweis: "" },
+  { fr: "Tête de linotte", aus: "[tätt de li-nott]", de: "Schussel", stufe: 1, hinweis: "Wörtlich „Hänflingskopf“ – vergesslich." },
+  { fr: "Bête comme ses pieds", aus: "[bätt komm ße pje]", de: "dumm wie Bohnenstroh", stufe: 1, hinweis: "Wörtlich „dumm wie seine Füße“." },
+  { fr: "Casse-pieds", aus: "[kass-pje]", de: "Nervensäge", stufe: 1, hinweis: "Wörtlich „Fußbrecher“." },
+  { fr: "Rabat-joie", aus: "[ra-ba-schoa]", de: "Spielverderber", stufe: 1, hinweis: "" },
+  { fr: "Râleur / râleuse", aus: "[ra-lör]", de: "Meckerkopf", stufe: 1, hinweis: "Nationalsport laut Selbstbeschreibung." },
+  { fr: "Frimeur", aus: "[fri-mör]", de: "Angeber", stufe: 1, hinweis: "" },
+  { fr: "Radin", aus: "[ra-däng]", de: "Geizhals", stufe: 1, hinweis: "" },
+  { fr: "Pique-assiette", aus: "[pik-a-ßjett]", de: "Schmarotzer", stufe: 1, hinweis: "Wörtlich „Teller-Anpicker“." },
+  { fr: "Lèche-bottes", aus: "[läsch-bott]", de: "Speichellecker", stufe: 1, hinweis: "Wörtlich „Stiefellecker“." },
+  { fr: "Bouffon", aus: "[bu-fong]", de: "Clown, Hampelmann", stufe: 1, hinweis: "Unter Jugendlichen sehr verbreitet." },
+  { fr: "Nul / nulle", aus: "[nül]", de: "Niete, mies", stufe: 1, hinweis: "T’es nul ! = „Du bist eine Niete!“" },
+  { fr: "Naze", aus: "[nass]", de: "Vollpfosten; auch: kaputt", stufe: 1, hinweis: "Umgangssprachlich, jugendlich." },
+  { fr: "Gros malin", aus: "[groh ma-läng]", de: "Schlaumeier", stufe: 1, hinweis: "Immer ironisch gemeint." },
+
+  // ---------- Stufe 2: mittel ----------
+  { fr: "Merde !", aus: "[märd]", de: "Scheiße!", stufe: 2, hinweis: "Allzweckfluch. Vor einer Prüfung heißt merde ! aber „Toi, toi, toi!“." },
+  { fr: "Putain !", aus: "[pü-täng]", de: "Verdammt! Scheiße!", stufe: 2, hinweis: "Wörtlich „Hure“, wird aber fast nur als Ausruf verwendet." },
+  { fr: "Bordel !", aus: "[bor-däl]", de: "Sauerei! Chaos!", stufe: 2, hinweis: "Wörtlich „Bordell“. Auch: quel bordel ! = „was für ein Saustall!“" },
+  { fr: "Con / conne", aus: "[kong / konn]", de: "Blödmann, Idiot(in)", stufe: 2, hinweis: "Ursprünglich vulgär; im Süden oft nur Füllwort." },
+  { fr: "Connard / connasse", aus: "[ko-nar / ko-nass]", de: "Arschloch / blöde Kuh", stufe: 2, hinweis: "Deutlich schärfer als con." },
+  { fr: "Abruti", aus: "[a-brü-ti]", de: "Vollidiot", stufe: 2, hinweis: "" },
+  { fr: "Débile", aus: "[de-bil]", de: "Schwachkopf; schwachsinnig", stufe: 2, hinweis: "Auch für Sachen: c’est débile = „das ist schwachsinnig“." },
+  { fr: "Taré", aus: "[ta-reh]", de: "Bekloppter, Irrer", stufe: 2, hinweis: "" },
+  { fr: "Cinglé / dingue", aus: "[ßäng-gleh / däng]", de: "Verrückter, Spinner", stufe: 2, hinweis: "dingue kann auch positiv „irre gut“ heißen." },
+  { fr: "Salaud / salopard", aus: "[ßa-loh / ßa-lo-par]", de: "Mistkerl, Dreckskerl", stufe: 2, hinweis: "" },
+  { fr: "Salope", aus: "[ßa-lopp]", de: "Schlampe", stufe: 2, hinweis: "Stark frauenfeindlich – gilt als sehr verletzend." },
+  { fr: "Enfoiré", aus: "[ang-foa-reh]", de: "Mistkerl, Dreckschwein", stufe: 2, hinweis: "" },
+  { fr: "Ordure", aus: "[or-dür]", de: "Dreckskerl", stufe: 2, hinweis: "Wörtlich „Müll, Abfall“." },
+  { fr: "Pourri", aus: "[pu-ri]", de: "verdorbenes Subjekt, korrupt", stufe: 2, hinweis: "Wörtlich „verfault“." },
+  { fr: "Blaireau", aus: "[blä-roh]", de: "Depp, Vollpfosten", stufe: 2, hinweis: "Wörtlich „Dachs“ bzw. „Rasierpinsel“." },
+  { fr: "Beauf", aus: "[bof]", de: "Prolet, Spießer", stufe: 2, hinweis: "Kurz für beau-frère, „Schwager“ – ein ganzer Sozialtyp." },
+  { fr: "Bouseux", aus: "[bu-sö]", de: "Bauerntrampel", stufe: 2, hinweis: "" },
+  { fr: "Emmerdeur", aus: "[ang-mär-dör]", de: "Nervensäge (derb)", stufe: 2, hinweis: "Von merde abgeleitet." },
+  { fr: "Branleur", aus: "[brang-lör]", de: "Faulenzer, Nichtsnutz", stufe: 2, hinweis: "Wörtlich derb („Wichser“), heute meist „Faulpelz“." },
+  { fr: "Mytho", aus: "[mi-toh]", de: "Lügner, Aufschneider", stufe: 2, hinweis: "Kurz für mythomane." },
+  { fr: "Balance", aus: "[ba-langß]", de: "Verräter, Petze", stufe: 2, hinweis: "Wörtlich „Waage“." },
+  { fr: "Ta gueule !", aus: "[ta göll]", de: "Halt die Fresse!", stufe: 2, hinweis: "gueule = Maul eines Tieres. Sehr unhöflich." },
+  { fr: "Casse-toi !", aus: "[kass-toa]", de: "Hau ab!", stufe: 2, hinweis: "Durch Sarkozys „Casse-toi, pauv’ con !“ berühmt geworden." },
+  { fr: "Dégage !", aus: "[de-gasch]", de: "Verschwinde!", stufe: 2, hinweis: "" },
+  { fr: "Fous le camp !", aus: "[fu le kang]", de: "Verpiss dich!", stufe: 2, hinweis: "" },
+  { fr: "Ça me fait chier", aus: "[ßa me fä schjeh]", de: "Das nervt mich tierisch", stufe: 2, hinweis: "Wörtlich deutlich derber." },
+  { fr: "J’en ai marre / ras-le-bol", aus: "[schang e mar]", de: "Ich hab die Schnauze voll", stufe: 2, hinweis: "Noch salonfähig." },
+  { fr: "Pauvre type", aus: "[powr tipp]", de: "armer Wicht, Vollpfosten", stufe: 2, hinweis: "" },
+  { fr: "Sale type", aus: "[ßal tipp]", de: "mieser Typ", stufe: 2, hinweis: "sale („dreckig“) verstärkt fast alles." },
+
+  // ---------- Stufe 3: derb / vulgär ----------
+  { fr: "Va te faire foutre !", aus: "[wa te fär futr]", de: "Fick dich! Verpiss dich!", stufe: 3, hinweis: "Kurzform: va te faire !" },
+  { fr: "Va chier !", aus: "[wa schjeh]", de: "Verpiss dich!", stufe: 3, hinweis: "Wörtlich „geh scheißen“." },
+  { fr: "Trou du cul", aus: "[tru dü kü]", de: "Arschloch", stufe: 3, hinweis: "Wörtlich „Arschloch“; kurz: trouduc." },
+  { fr: "Enculé", aus: "[ang-kü-leh]", de: "Wichser, Arschloch", stufe: 3, hinweis: "Sehr grob und homophob konnotiert." },
+  { fr: "Fils de pute", aus: "[fiss de püt]", de: "Hurensohn", stufe: 3, hinweis: "Eine der schwersten Beleidigungen." },
+  { fr: "Nique ta mère", aus: "[nik ta mär]", de: "Fick deine Mutter", stufe: 3, hinweis: "Extrem beleidigend, führt zuverlässig zur Eskalation." },
+  { fr: "Pétasse", aus: "[pe-tass]", de: "Zicke, Schlampe", stufe: 3, hinweis: "Stark abwertend gegenüber Frauen." },
+  { fr: "Grosse merde", aus: "[gross märd]", de: "Riesenarschloch", stufe: 3, hinweis: "" },
+  { fr: "Chiotte / merdier", aus: "[schjott / mär-djeh]", de: "Scheißladen, Saustall", stufe: 3, hinweis: "Für Orte und Zustände." },
+  { fr: "Putain de merde !", aus: "[pü-täng de märd]", de: "Verdammte Scheiße!", stufe: 3, hinweis: "Steigerungsform des Allzweckfluchs." },
+  { fr: "Bordel de merde !", aus: "[bor-däl de märd]", de: "Verdammte Scheiße!", stufe: 3, hinweis: "" },
+  { fr: "Espèce de connard !", aus: "[eß-päß de ko-nar]", de: "Du verdammtes Arschloch!", stufe: 3, hinweis: "espèce de verstärkt jede Beleidigung." },
+  { fr: "Ferme ta gueule !", aus: "[färm ta göll]", de: "Halt dein verdammtes Maul!", stufe: 3, hinweis: "Schärfer als ta gueule." },
+  { fr: "Je t’emmerde", aus: "[sche tang-märd]", de: "Du kannst mich mal", stufe: 3, hinweis: "" },
+  { fr: "Rien à foutre", aus: "[rjäng a futr]", de: "Scheißegal", stufe: 3, hinweis: "j’en ai rien à foutre = „das ist mir völlig scheißegal“." }
+];
+
+let filter = 0;
+let suchtext = "";
+
+const liste = document.getElementById("liste");
+const treffer = document.getElementById("treffer");
+const labels = { 1: "😇 harmlos", 2: "😐 mittel", 3: "🤬 derb" };
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function rendern() {
+  const q = suchtext.trim().toLowerCase();
+  const gefiltert = woerter.filter(w => {
+    if (filter !== 0 && w.stufe !== filter) return false;
+    if (!q) return true;
+    return (w.fr + " " + w.de + " " + w.hinweis).toLowerCase().includes(q);
+  });
+
+  liste.innerHTML = gefiltert.length
+    ? gefiltert.map(w => `
+        <li>
+          <span class="stufe s${w.stufe}">${labels[w.stufe]}</span>
+          <span>
+            <span class="fr">${escapeHtml(w.fr)}</span>
+            <span class="lautschrift">${escapeHtml(w.aus)}</span>
+            <span class="de">${escapeHtml(w.de)}</span>
+            ${w.hinweis ? `<span class="hinweis">${escapeHtml(w.hinweis)}</span>` : ""}
+          </span>
+        </li>`).join("")
+    : `<li class="leer">Nichts gefunden 🤷</li>`;
+
+  treffer.textContent = gefiltert.length + " von " + woerter.length + " Einträgen";
+}
+
+document.querySelectorAll(".modus button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".modus button").forEach(b => b.classList.remove("aktiv"));
+    btn.classList.add("aktiv");
+    filter = parseInt(btn.dataset.stufe, 10);
+    rendern();
+  });
+});
+
+document.getElementById("suche").addEventListener("input", e => {
+  suchtext = e.target.value;
+  rendern();
+});
+
+rendern();
+</script>
+</body>
+</html>
