@@ -31,12 +31,85 @@ let person = null, fach = null, daten = null, runde = null, zurueckZiel = null;
 
 // ---------- Speicher ----------
 function key(p, f) { return `lernhelden:${p}:${f}`; }
-function laden(p, f) {
+function lokalLaden(p, f) {
   let s = null;
   try { s = JSON.parse(localStorage.getItem(key(p, f))); } catch (e) {}
-  return Object.assign({ sterne: 0, runden: 0, perfekt: 0, offen: [], gesehen: {} }, s || {});
+  return s;
 }
-function speichern(p, f, s) { try { localStorage.setItem(key(p, f), JSON.stringify(s)); } catch (e) {} }
+function laden(p, f) {
+  const s = (wolke && wolke.kind === p) ? wolke.stand[f] : lokalLaden(p, f);
+  return Object.assign({ sterne: 0, runden: 0, perfekt: 0, offen: [], gesehen: {} }, JSON.parse(JSON.stringify(s || {})));
+}
+function speichern(p, f, s) {
+  try { localStorage.setItem(key(p, f), JSON.stringify(s)); } catch (e) {}
+  if (wolke && wolke.kind === p) { wolke.stand[f] = s; wolkeSichern(); }
+}
+
+// ---------- Online-Speicher (Firebase), nur wenn firebase-config.js ausgefüllt ist ----------
+const CFG = window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey ? window.FIREBASE_CONFIG : null;
+const MAIL_DOMAIN = "johannesfelling.at";
+let wolke = null, fb = null, sichernTimer = null;
+async function fbLaden() {
+  if (fb) return fb;
+  const v = "10.12.2", base = `https://www.gstatic.com/firebasejs/${v}/`;
+  const [app, auth, fs] = await Promise.all([import(base + "firebase-app.js"), import(base + "firebase-auth.js"), import(base + "firebase-firestore.js")]);
+  const a = app.initializeApp(CFG);
+  fb = { auth: auth.getAuth(a), db: fs.getFirestore(a), A: auth, F: fs };
+  return fb;
+}
+function wolkeSichern() {
+  clearTimeout(sichernTimer);
+  sichernTimer = setTimeout(async () => {
+    try {
+      await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() });
+      sterneTop.title = "Gespeichert";
+    } catch (e) { console.error(e); sterneTop.title = "Speichern fehlgeschlagen – wird beim nächsten Mal nachgeholt"; }
+  }, 400);
+}
+async function wolkeVerbinden(user) {
+  const kind = user.email.split("@")[0].toLowerCase();
+  const p = PERSONEN.find(x => x.id === kind);
+  if (!p) { await fb.A.signOut(fb.auth); throw new Error("unbekannt"); }
+  const snap = await fb.F.getDoc(fb.F.doc(fb.db, "fortschritt", user.uid));
+  let stand = snap.exists() ? (snap.data().stand || {}) : null;
+  if (!stand) { // erstes Mal: Fortschritt von diesem Gerät übernehmen
+    stand = {};
+    for (const f of FAECHER) { const l = lokalLaden(kind, f.id); if (l) stand[f.id] = l; }
+  }
+  wolke = { uid: user.uid, kind, stand };
+  if (!snap.exists()) wolkeSichern();
+  person = p;
+}
+async function abmelden() {
+  if (!confirm("Wirklich abmelden?")) return;
+  clearTimeout(sichernTimer);
+  if (wolke) await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() }).catch(() => {});
+  await fb.A.signOut(fb.auth);
+  wolke = null; person = null;
+  startseite();
+}
+function anmeldeSeite(p) {
+  setzeKopf("Anmelden", startseite);
+  const pw = el("input", { class: "eingabe", type: "password", autocomplete: "current-password", placeholder: "Passwort" });
+  const fehler = el("div");
+  const los = el("button", { class: "knopf", onclick: async () => {
+    if (!pw.value) return;
+    los.disabled = true; los.textContent = "Einen Moment …"; fehler.replaceChildren();
+    try {
+      const c = await fb.A.signInWithEmailAndPassword(fb.auth, `${p.id}@${MAIL_DOMAIN}`, pw.value);
+      await wolkeVerbinden(c.user);
+      faecherSeite();
+    } catch (e) {
+      console.error(e);
+      const falsch = /invalid-credential|wrong-password|user-not-found|invalid-login/.test(e.code || "");
+      fehler.replaceChildren(el("div", { class: "feedback nein pop" }, falsch ? "Das Passwort stimmt nicht. Probier es nochmal!" : (e.code === "auth/too-many-requests" ? "Zu viele Versuche. Warte kurz und probier es dann nochmal." : "Anmelden hat nicht geklappt. Ist das Internet an?")));
+      los.disabled = false; los.textContent = "Anmelden";
+    }
+  } }, "Anmelden");
+  pw.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); los.click(); } });
+  zeige(el("div", { class: "karte ergebnis" }, el("div", { class: "big" }, p.emo), el("h2", {}, `Hallo ${p.name}!`), el("p", {}, "Gib dein Passwort ein."), pw, los, fehler));
+  setTimeout(() => pw.focus(), 50);
+}
 function sterneGesamt(p) { return FAECHER.reduce((n, f) => n + laden(p, f.id).sterne, 0); }
 
 // ---------- Hilfen ----------
@@ -68,19 +141,20 @@ zurueck.addEventListener("click", () => zurueckZiel && zurueckZiel());
 
 // ---------- Bildschirme ----------
 function startseite() {
+  if (CFG && wolke) { faecherSeite(); return; }
   person = null; fach = null;
   setzeKopf("Lern-Helden", null);
   zeige(
     el("h2", {}, "Wer lernt heute?"),
     el("div", { class: "raster" }, ...PERSONEN.map((p, i) =>
-      el("button", { class: `gross person c${i ? 1 : 0}`, onclick: () => { person = p; faecherSeite(); } },
-        el("span", { class: "emo" }, p.emo), `Lernen ${p.name}`, el("small", {}, `⭐ ${sterneGesamt(p.id)} Sterne`))))
+      el("button", { class: `gross person c${i ? 1 : 0}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
+        el("span", { class: "emo" }, p.emo), `Lernen ${p.name}`, CFG ? el("small", {}, "🔒 mit Passwort") : el("small", {}, `⭐ ${sterneGesamt(p.id)} Sterne`))))
   );
 }
 
 function faecherSeite() {
   fach = null;
-  setzeKopf(`Hallo ${person.name}!`, startseite);
+  setzeKopf(`Hallo ${person.name}!`, CFG ? null : startseite);
   zeige(
     el("h2", {}, "Welches Fach?"),
     el("div", { class: "raster" }, ...FAECHER.map((f, i) => {
@@ -88,7 +162,8 @@ function faecherSeite() {
       return el("button", { class: `gross c${i}`, onclick: () => fachLaden(f) },
         el("span", { class: "emo" }, f.emo), f.name,
         el("small", {}, `⭐ ${s.sterne} · ${s.runden} Runden`));
-    }))
+    })),
+    CFG ? el("button", { class: "reset", onclick: abmelden }, `Abmelden (${person.name})`) : null
   );
 }
 
@@ -227,4 +302,18 @@ function ergebnis() {
   );
 }
 
-startseite();
+async function starten() {
+  if (!CFG) { startseite(); return; }
+  zeige(el("p", { class: "hinweis" }, "Lade …"));
+  try {
+    await fbLaden();
+    const user = await new Promise(res => { const u = fb.A.onAuthStateChanged(fb.auth, x => { u(); res(x); }); });
+    if (user) { try { await wolkeVerbinden(user); } catch (e) { console.error(e); } }
+  } catch (e) {
+    console.error(e);
+    zeige(el("div", { class: "karte" }, el("p", {}, "Die App braucht Internet zum Anmelden. Bitte später nochmal probieren. 📶")), el("button", { class: "knopf", onclick: () => location.reload() }, "Nochmal versuchen"));
+    return;
+  }
+  startseite();
+}
+starten();
