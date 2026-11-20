@@ -200,6 +200,7 @@ function startseite() {
     el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
         el("small", {}, p.slogan), el("span", { class: "start-name" }, p.name),
+        (() => { const t = kommend(p.id)[0]; return t ? el("span", { class: "start-termin" }, `Nächster Test: ${t.titel} · ${wannText(tageBis(t.datum))}`) : null; })(),
         el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : `${sterneGesamt(p.id)} Sterne`)))),
     el("button", { class: "gast-link", onclick: gastWahl }, ic("auge"), "Testkonto – nur anschauen, nichts wird gespeichert")
   );
