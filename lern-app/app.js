@@ -272,7 +272,10 @@ function startseite() {
         el("small", {}, p.slogan), el("span", { class: "start-name" }, p.name),
         (() => { const t = kommend(p.id)[0]; return t ? el("span", { class: "start-termin" }, `Nächster Test: ${t.titel} · ${wannText(tageBis(t.datum))}`) : null; })(),
         el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : punkte(p.id, sterneGesamt(p.id)))))),
-    el("button", { class: "gast-link", onclick: gastWahl }, ic("auge"), "Testkonto – nur anschauen, nichts wird gespeichert")
+    el("button", { class: "eltern-karte", onclick: gastWahl },
+      el("span", { class: "eltern-bild" }, (() => { const b = el("img", { src: "papa.jpg", alt: "" }); b.onerror = () => b.replaceWith(el("span", { class: "eltern-init" }, "P")); return b; })()),
+      el("span", { class: "eltern-text" }, el("small", {}, "Papa"), el("b", {}, "Eltern-Bereich"), el("span", {}, "Statistik · Eingang · Testkonto")),
+      el("span", { class: "eltern-pfeil" }, "›"))
   );
 }
 function gastWahl() {
