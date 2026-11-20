@@ -1,8 +1,36 @@
 {
  "hinweis": "Aus Valentins Terminliste (Screenshot vom 20.11.2026). fach = App-Fach oder null.",
  "termine": [
-  { "datum": "2026-11-27", "fach": "geografie", "titel": "Geografie-Test", "art": "Test", "zeit": "08:55" },
-  { "datum": "2027-01-13", "fach": "physik", "titel": "Physik-Test", "art": "Test", "zeit": "10:00" }
+  {
+   "datum": "2026-11-27",
+   "fach": "geografie",
+   "titel": "Geografie-Test",
+   "art": "Test",
+   "zeit": "08:55"
+  },
+  {
+   "datum": "2027-01-13",
+   "fach": "physik",
+   "titel": "Physik-Test",
+   "art": "Test",
+   "zeit": "10:00"
+  }
  ],
- "frei": []
+ "frei": [
+  {
+   "von": "2026-12-07",
+   "bis": "2026-12-08",
+   "titel": "schulfrei / Maria Empfängnis"
+  },
+  {
+   "von": "2026-12-24",
+   "bis": "2027-01-06",
+   "titel": "Weihnachtsferien"
+  },
+  {
+   "von": "2027-01-30",
+   "bis": "2027-02-07",
+   "titel": "Semesterferien"
+  }
+ ]
 }
