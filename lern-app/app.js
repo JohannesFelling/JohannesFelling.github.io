@@ -157,6 +157,47 @@ function stimmt(eingabe, antworten) {
   const n = norm(eingabe), z = zahl(eingabe);
   return antworten.some(a => norm(a) === n || (z !== null && zahl(a) !== null && Math.abs(zahl(a) - z) < 1e-9));
 }
+// ---------- Mündlich antworten (Spracherkennung) ----------
+const FACH_SPRACHE = { englisch: "en-GB", spanisch: "es-ES", franzoesisch: "fr-FR", italienisch: "it-IT" };
+function antwortSprache(q) {
+  if (q.sprache) return q.sprache;
+  const fs = FACH_SPRACHE[fach.id];
+  if (!fs) return "de-AT";
+  return /auf deutsch|ins deutsche|deutsche[ns]? (wort|bedeutung|übersetzung)/i.test(q.frage) ? "de-AT" : fs;
+}
+function muendlich() { return !!SR && profil(person.id).modus === "muendlich"; }
+function zuhoeren(lang, knopf, fertig, info) {
+  const r = new SR(); r.lang = lang; r.interimResults = false; r.maxAlternatives = 5;
+  let ergebnis = false;
+  knopf.classList.add("an");
+  r.onresult = e => { ergebnis = true; fertig([...e.results[0]].map(a => a.transcript.trim())); };
+  r.onerror = e => { if (info) info.replaceChildren(el("div", { class: "feedback neutral" }, e.error === "not-allowed" ? "Bitte erlaube das Mikrofon (Schloss-Symbol neben der Adresse)." : "Nichts verstanden – tippe aufs Mikrofon und sag es nochmal.")); };
+  r.onend = () => { knopf.classList.remove("an"); };
+  try { r.start(); } catch (e) { knopf.classList.remove("an"); }
+  return r;
+}
+const ZAHLWORT = { a: 0, b: 1, c: 2, d: 3, e: 4, eins: 0, erste: 0, erstens: 0, zwei: 1, zweite: 1, drei: 2, dritte: 2, vier: 3, vierte: 3, "1": 0, "2": 1, "3": 2, "4": 3, one: 0, two: 1, three: 2, four: 3, uno: 0, dos: 1, tres: 2, cuatro: 3 };
+function optionFinden(alts, opts) {
+  for (const a of alts) {
+    const n = norm(a).replace(/[,]/g, "");
+    let i = opts.findIndex(o => norm(o).replace(/[,]/g, "") === n);
+    if (i >= 0) return i;
+    const m = n.match(/^(?:antwort |nummer |buchstabe |letter |option )?([a-e]|eins|erste|erstens|zwei|zweite|drei|dritte|vier|vierte|[1-4]|one|two|three|four|uno|dos|tres|cuatro)$/);
+    if (m && ZAHLWORT[m[1]] < opts.length) return ZAHLWORT[m[1]];
+    const treffer = opts.map((o, k) => [k, norm(o)]).filter(([k, o]) => o.length > 2 && (n.includes(o) || (n.length > 3 && o.includes(n))));
+    if (treffer.length === 1) return treffer[0][0];
+  }
+  return -1;
+}
+function modusWahl() {
+  if (!SR) return el("p", { class: "klein mitte" }, "Mündlich antworten geht in diesem Browser nicht (am besten Chrome verwenden).");
+  const pr = profil(person.id), m = pr.modus === "muendlich" ? "muendlich" : "schrift";
+  const setze = w => { const p2 = profil(person.id); p2.modus = w; speichern(person.id, PROFIL, p2); fachSeite(); };
+  return el("div", { class: "modus-wahl" }, el("span", { class: "label" }, "Antworten"),
+    el("button", { class: m === "schrift" ? "an" : "", onclick: () => setze("schrift") }, "✍️ Schreiben"),
+    el("button", { class: m === "muendlich" ? "an" : "", onclick: () => setze("muendlich") }, ic("mikro"), "Sprechen"));
+}
+
 function thema(p) { document.body.className = p ? `thema-${p.thema}` : ""; }
 function setzeKopf(t, ziel) {
   titel.textContent = t;
@@ -363,6 +404,7 @@ function fachSeite() {
       el("p", { class: "klein" }, `${s.sterne} Sterne · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
+    modusWahl(),
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
     FOTO[fach.id] ? el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("kamera"), el("div", {}, el("div", { class: "fach-name" }, `Foto hochladen: ${FOTO[fach.id].titel}`), el("small", {}, FOTO[fach.id].kurz))) : null,
     (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
@@ -431,12 +473,37 @@ function frageZeigen() {
       auswerten(ok, o);
     } }, o));
     teil = el("div", { class: "optionen" }, ...knoepfe);
+    if (muendlich()) {
+      knoepfe.forEach((k, i) => k.dataset.b = "ABCDE"[i]);
+      teil.classList.add("buchstaben");
+      const info = el("div");
+      const mik = el("button", { class: "mikro klein-mikro", onclick: () => { if (!fertig) zuhoeren(antwortSprache(q), mik, alts => {
+        const i = optionFinden(alts, opts);
+        if (i >= 0) knoepfe[i].click();
+        else info.replaceChildren(el("div", { class: "feedback neutral" }, `Verstanden: „${alts[0]}“ – das passt zu keiner Antwort. Sag den Buchstaben (A, B, C …) oder tippe.`));
+      }, info); } }, ic("mikro"));
+      teil = el("div", {}, teil, el("p", { class: "klein mitte" }, "Sag die Antwort oder den Buchstaben."), mik, info);
+      setTimeout(() => { if (!fertig) mik.click(); }, 400);
+    }
   } else {
     const inp = el("input", { class: "eingabe", type: "text", autocomplete: "off", autocapitalize: "off", spellcheck: "false", placeholder: "Antwort eintippen …", inputmode: q.zahl ? "decimal" : "text" });
     const pruefen = el("button", { class: "knopf", onclick: () => { if (!inp.value.trim()) return; inp.disabled = true; pruefen.hidden = true; auswerten(stimmt(inp.value, q.antwort), inp.value); } }, test ? "Antwort abgeben" : "Prüfen ✔");
     inp.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); if (!fertig) pruefen.click(); } });
-    teil = el("div", {}, inp, pruefen);
-    setTimeout(() => inp.focus(), 50);
+    if (muendlich()) {
+      const info = el("div");
+      const mik = el("button", { class: "mikro klein-mikro", onclick: () => { if (!fertig) zuhoeren(antwortSprache(q), mik, alts => {
+        const gut = alts.find(a => stimmt(a, q.antwort));
+        inp.value = gut || alts[0]; info.replaceChildren();
+        if (gut) pruefen.click();
+        else info.replaceChildren(el("div", { class: "feedback neutral" }, "Stimmt das so? Dann „Prüfen“ – sonst nochmal sprechen oder ausbessern."));
+      }, info); } }, ic("mikro"));
+      inp.placeholder = "Antwort sprechen (oder tippen) …";
+      teil = el("div", {}, mik, info, inp, pruefen);
+      setTimeout(() => { if (!fertig) mik.click(); }, 400);
+    } else {
+      teil = el("div", {}, inp, pruefen);
+      setTimeout(() => inp.focus(), 50);
+    }
   }
   zeige(
     gastBanner(),

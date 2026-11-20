@@ -211,3 +211,12 @@ body.thema-sport{
 .fehler-zeile b{color:var(--ok)}
 .fehler-art{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:800}
 .aufsatz-text{white-space:pre-wrap;line-height:1.6}
+
+.modus-wahl{display:flex;align-items:center;gap:8px;margin:4px 0 10px}
+.modus-wahl .label{margin-right:4px}
+.modus-wahl button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;border-radius:10px;border:1px solid var(--linie);background:var(--panel2);color:var(--text);font-family:inherit;font-weight:700;cursor:pointer}
+.modus-wahl button svg{width:18px;height:18px}
+.modus-wahl button.an{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent);color:var(--akzent)}
+.mikro.klein-mikro{width:76px;height:76px;margin:12px auto}
+.optionen.buchstaben .opt::before{content:attr(data-b);display:inline-block;width:1.6em;color:var(--akzent);font-weight:800}
+[hidden]{display:none!important}
