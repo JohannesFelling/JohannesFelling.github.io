@@ -201,3 +201,10 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 @media (prefers-reduced-motion:reduce){
   .thema-held .knopf::after,.thema-sport .knopf::after,.plakat-sport svg.plakat-motiv{animation:none}
 }
+
+/* Marke VALIAS PRO */
+.marke{display:inline-flex;align-items:flex-start;justify-content:center;font-family:"Anton",sans-serif;font-size:4.2rem;line-height:1;letter-spacing:2px;margin:6px 0 10px;filter:drop-shadow(0 6px 18px #000)}
+.marke-v{background:linear-gradient(180deg,#fff6d8 0%,#ffd676 38%,#b9821f 62%,#ffe39a 82%,#9a6a14 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.marke-e{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-style:italic;font-size:1.06em;line-height:.95;background:linear-gradient(180deg,#ffffff 0%,#e8edf5 40%,#8d99b0 52%,#f2f5fa 68%,#b3bdcd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.marke-pro{font-family:"Inter",sans-serif;font-weight:800;font-size:.8rem;letter-spacing:3px;margin:8px 0 0 8px;padding:3px 7px;border-radius:4px;color:#06070b;background:linear-gradient(90deg,#ffd676,#e8edf5)}
+.start-kopf .label{letter-spacing:4px}

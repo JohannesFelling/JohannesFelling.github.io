@@ -1,4 +1,4 @@
-// Lern-Helden – Lern-App für Valentin und Elias.
+// VALIAS PRO – Lern-App für Valentin und Elias.
 // Ohne firebase-config.js: Fortschritt nur im Browser. Mit Firebase: Anmeldung + Online-Spielstand.
 const PERSONEN = [
   { id: "valentin", name: "Valentin", emo: "🦸‍♂️", thema: "held", slogan: "Hero Training Program",
@@ -263,9 +263,9 @@ async function abmelden() {
 function startseite() {
   if (CFG && wolke && !gast) { faecherSeite(); return; }
   person = null; fach = null; gast = false; thema(null);
-  setzeKopf("Lern-Helden", null);
+  setzeKopf("VALIAS PRO", null);
   zeige(
-    el("div", { class: "start-kopf" }, el("div", { class: "label" }, "Lern-Helden"), el("h2", {}, "Wer ist dran?")),
+    el("div", { class: "start-kopf" }, el("div", { class: "marke" }, el("span", { class: "marke-v" }, "VALI"), el("span", { class: "marke-e" }, "AS"), el("span", { class: "marke-pro" }, "PRO")), el("div", { class: "label" }, "Vali & Elias · Wer ist dran?")),
     el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
         window.KUNST ? KUNST.plakat(p.thema) : null,
@@ -590,7 +590,7 @@ function gutscheinZeigen(g) {
   const [d1, d2, d3] = g.datum.split("-");
   zeige(
     el("div", { class: `gutschein pop ${gast ? "ungueltig" : ""}` },
-      el("div", { class: "gs-kopf" }, "Gutschein · Lern-Helden"),
+      el("div", { class: "gs-kopf" }, "Gutschein · VALIAS PRO"),
       el("div", { class: "gs-was" }, g.was),
       el("div", { class: "gs-fuer" }, `für ${person.name}`),
       el("div", { class: "gs-grund" }, g.grund),

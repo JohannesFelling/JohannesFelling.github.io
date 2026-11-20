@@ -1,4 +1,4 @@
-// Lern-Helden – detaillierte Symbole und Plakat-Grafiken (eigene Zeichnungen, keine Logos).
+// VALIAS PRO – detaillierte Symbole und Plakat-Grafiken (eigene Zeichnungen, keine Logos).
 (function () {
   let n = 0;
   const svgEl = (html, cls) => { const w = document.createElement("span"); w.innerHTML = html; const s = w.firstChild; if (cls) s.setAttribute("class", cls); return s; };
