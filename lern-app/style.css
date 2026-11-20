@@ -220,3 +220,8 @@ input.eingabe:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
 .stoff.beispiel{background:transparent!important;border:1px solid #ffffff2e;color:#ffffff70;box-shadow:none}
 .geschenk-kopf b{white-space:normal;max-width:55%}
 .geschenk-was{min-width:0}
+.loesch summary{cursor:pointer;list-style:none;display:flex;align-items:center}
+.loesch summary::after{content:"›";margin-left:auto;font-size:1.4rem;transition:transform .2s}
+.loesch[open] summary::after{transform:rotate(90deg)}
+.loesch select.eingabe{margin-top:8px;font-size:1rem}
+.knopf.gefahr{background:linear-gradient(180deg,#ff5a5f,#b3121c);color:#fff;box-shadow:0 6px 20px #ff3b3044}

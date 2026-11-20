@@ -232,7 +232,22 @@ async function fbLaden() {
   fb = { auth: auth.getAuth(inst), db: fs.getFirestore(inst), A: auth, F: fs };
   return fb;
 }
-const wolkeDoc = () => fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() });
+// Hat Papa inzwischen zurückgesetzt? Dann den Server-Stand übernehmen statt ihn zu überschreiben.
+async function wolkeAbgleich() {
+  if (!wolke || gast) return false;
+  const snap = await fb.F.getDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid));
+  const server = snap.exists() ? (snap.data().stand || {}) : null;
+  if (server && (server._reset || 0) !== (wolke.stand._reset || 0)) {
+    wolke.stand = server;
+    try { Object.keys(localStorage).filter(k => k.includes(wolke.kind)).forEach(k => localStorage.removeItem(k)); } catch (e) {}
+    return true;
+  }
+  return false;
+}
+const wolkeDoc = async () => {
+  if (await wolkeAbgleich().catch(() => false)) return;
+  return fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() });
+};
 function wolkeSichern() {
   clearTimeout(sichernTimer);
   sichernTimer = setTimeout(() => wolkeDoc().catch(e => console.error(e)), 400);
@@ -408,6 +423,7 @@ function stoffPlatz(pid, fid) {
 }
 function faecherSeite() {
   fach = null; thema(person);
+  if (wolke && !gast) wolkeAbgleich().then(neu => { if (neu && !fach) faecherSeite(); }).catch(() => {});
   setzeKopf(person.name, CFG && !gast ? null : startseite);
   zeige(
     gastBanner(),
@@ -1018,12 +1034,30 @@ function eingangKarte() {
   })();
   return box;
 }
+async function elternAllesReset(p, st, lokal) {
+  if (!confirm(`Wirklich ALLES von ${p.name} löschen?\n\nPunkte, Runden, Ränge, Serie, Gutscheine, Tests und Lernzeit in allen Fächern. Das lässt sich nicht rückgängig machen.`)) return;
+  if (!confirm(`Sicher? ${p.name} beginnt dann wieder bei 0.`)) return;
+  if (lokal) { try { [...faecherVon(p.id).map(f => f.id), PROFIL].forEach(f => localStorage.removeItem(key(p.id, f))); } catch (e) {} elternStart(); return; }
+  if (!st._uid) { alert(`${p.name} hat noch keinen gespeicherten Fortschritt.`); return; }
+  try { await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", st._uid), { stand: { _reset: Date.now() }, kind: p.id, zeit: fb.F.serverTimestamp() }); alert(`Erledigt: ${p.name} startet wieder bei 0.`); elternLaden(); }
+  catch (e) { console.error(e); alert("Löschen hat nicht geklappt: Firebase erlaubt dem Papa-Konto das Ändern noch nicht. Bitte die Speicherregel aus dem Chat eintragen."); }
+}
+function loeschKarte(p, st, lokal) {
+  const wahl = el("select", { class: "eingabe" }, el("option", { value: "" }, "Fach wählen …"), ...faecherVon(p.id).map(f => el("option", { value: f.id }, f.name)));
+  return el("details", { class: "karte loesch" },
+    el("summary", {}, el("span", { class: "label" }, "Fortschritt löschen"), el("span", { class: "klein" }, ` · ${p.name}`)),
+    el("p", { class: "klein" }, "Ein einzelnes Fach zurücksetzen (Punkte, Runden und offene Fragen in diesem Fach):"),
+    wahl,
+    el("button", { class: "knopf zweit", onclick: () => { const f = faecherVon(p.id).find(x => x.id === wahl.value); if (f) elternReset(p, f, st, lokal); else alert("Bitte zuerst ein Fach wählen."); } }, "Dieses Fach zurücksetzen"),
+    el("p", { class: "klein", style: "margin-top:16px" }, "Oder komplett neu anfangen – alles in allen Fächern, auch Gutscheine und Lernzeit:"),
+    el("button", { class: "knopf gefahr", onclick: () => elternAllesReset(p, st, lokal) }, `Alles von ${p.name} löschen`));
+}
 async function elternReset(p, f, st, lokal) {
   if (!confirm(`Übungs-Fortschritt in ${f.name} für ${p.name} wirklich löschen? (Punkte, Runden und offene Fragen in diesem Fach. Gutscheine, Tests und Lernzeit bleiben.)`)) return;
   if (lokal) { try { localStorage.setItem(key(p.id, f.id), "{}"); } catch (e) {} elternStart(); return; }
   if (!st._uid) { alert(`${p.name} hat noch keinen gespeicherten Fortschritt.`); return; }
   const stand = Object.fromEntries(Object.entries(st).filter(([k]) => !k.startsWith("_") || k === PROFIL));
-  stand[f.id] = {};
+  stand[f.id] = {}; stand._reset = Date.now();
   try { await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", st._uid), { stand, kind: p.id, zeit: fb.F.serverTimestamp() }); elternLaden(); }
   catch (e) { console.error(e); alert("Zurücksetzen hat nicht geklappt. Wahrscheinlich fehlt in Firebase noch die neue Regel, die dem Papa-Konto das Ändern erlaubt."); }
 }
@@ -1036,6 +1070,7 @@ function kindStatistik(p, st, dateien, lokal) {
   const fachName = id => (FAECHER.find(f => f.id === id) || { name: id }).name;
   const kt = kommend(p.id).slice(0, 5);
   return el("div", { class: "pop" },
+    loeschKarte(p, st, lokal),
     kt.length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Nächste Tests & Schularbeiten"),
       ...kt.map(t => el("div", { class: `zeile ${tageBis(t.datum) <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
     el("div", { class: "karte" }, el("div", { class: "label" }, "Lernzeit"),
