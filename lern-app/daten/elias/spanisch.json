@@ -167,7 +167,22 @@
    ],
    "beispiel": "ser: soy, eres, es, somos, sois, son\nestar: estoy, estás, está, estamos, estáis, están",
    "merke": "Wie du BIST → ser. Wo und wie es dir GEHT → estar.",
-   "video": "ser estar Unterschied Spanisch einfach erklärt"
+   "video": "ser estar Unterschied Spanisch einfach erklärt",
+   "problem": "Im Spanischen gibt es zwei Wörter für „sein“: ser und estar. Welches du brauchst, hängt davon ab, WAS du ausdrücken willst – und das ist am Anfang ungewohnt.",
+   "text": [
+    "ser verwendest du für Dinge, die zu jemandem gehören oder sich kaum ändern: Herkunft (Soy de Austria), Nationalität (Messi es argentino), Beruf (Es profesor), Eigenschaften und Aussehen (Es alto), Uhrzeit und Datum (Son las tres).",
+    "estar verwendest du für Zustände und Orte: wie es jemandem geht (Estoy cansado, ¿Cómo estás?), wo sich etwas befindet (Madrid está en España) und vorübergehende Zustände (La sopa está caliente).",
+    "Formen von ser: soy, eres, es, somos, sois, son.",
+    "Formen von estar: estoy, estás, está, estamos, estáis, están."
+   ],
+   "fehler": [
+    "Soy cansado – richtig ist Estoy cansado (Zustand).",
+    "Estoy de Austria – richtig ist Soy de Austria (Herkunft).",
+    "¿Cómo eres? fragt nach dem Charakter, ¿Cómo estás? danach, wie es dir geht."
+   ],
+   "stichworte": [
+    "\\b(soy|eres|es|estás|estoy|está)\\b"
+   ]
   }
  ]
 }

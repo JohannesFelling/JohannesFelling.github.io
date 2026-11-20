@@ -1174,8 +1174,10 @@
    "titel": "should / shouldn't",
    "kurz": "Ratschläge geben",
    "text": [
-    "Mit should gibst du einen Rat: Du solltest … – mit shouldn't sagst du: Du solltest nicht …",
-    "should bleibt IMMER gleich – auch bei he/she/it kein -s. Danach kommt die Grundform des Verbs, ohne „to“."
+    "should ist ein sogenanntes Hilfsverb (modal verb). Es sagt nicht selbst, was passiert, sondern hilft dem eigentlichen Verb: should GO, should EAT, should TAKE.",
+    "Das Besondere: should verändert sich NIE. Es heißt I should, you should, he should, she should, it should, we should, they should. Kein -s bei he/she/it, so wie bei can oder must.",
+    "Nach should kommt immer die Grundform des Verbs, also das Verb so, wie es im Wörterbuch steht, ohne „to“ und ohne -s.",
+    "Die Verneinung ist should not, kurz shouldn't. Damit rätst du jemandem, etwas NICHT zu tun. Eine Frage bildest du, indem should nach vorne kommt: Should I take an umbrella?"
    ],
    "schritte": [
     "Wer? (I, you, he …)",
@@ -1185,14 +1187,26 @@
    ],
    "beispiel": "Hulk is tired.\n→ He should go to bed.\n→ He shouldn't watch TV so late.\n\n✗ He shoulds go   ✗ He should to go   ✓ He should go",
    "merke": "should + Grundform. Kein -s, kein to.",
-   "video": "should shouldn't english grammar einfach erklärt"
+   "video": "should shouldn't english grammar einfach erklärt",
+   "problem": "Du willst jemandem einen Rat geben: „Du solltest …“ oder „Du solltest lieber nicht …“. Auf Deutsch ändert sich „sollen“ je nach Person (ich soll, er soll, du sollst). Auf Englisch ist das anders – und genau da passieren die meisten Fehler.",
+   "fehler": [
+    "He shoulds go … – falsch, should bekommt nie ein -s.",
+    "You should to eat … – falsch, nach should kommt kein „to“.",
+    "She should goes … – falsch, das Verb nach should bleibt in der Grundform.",
+    "Do I should …? – falsch, die Frage heißt einfach Should I …?"
+   ],
+   "stichworte": [
+    "\\bshould"
+   ]
   },
   {
    "titel": "a oder an?",
    "kurz": "Der unbestimmte Artikel",
    "text": [
-    "Es kommt auf den KLANG am Wortanfang an, nicht auf den Buchstaben.",
-    "an vor einem Vokal-Laut (a, e, i, o, u gesprochen), a vor einem Konsonanten-Laut."
+    "„an“ steht vor einem Vokal-Laut: an apple, an egg, an island, an orange, an umbrella. Der Grund: „a apple“ ist schwer zu sprechen, „an apple“ fließt besser.",
+    "„a“ steht vor einem Konsonanten-Laut: a dog, a ghost, a pumpkin, a bat.",
+    "Achtung bei den Ausnahmen: Bei hour und honest ist das h stumm. Man hört also zuerst einen Vokal → an hour, an honest man.",
+    "Umgekehrt: uniform, university, useful beginnen mit u, klingen aber wie „ju“ (ein Konsonanten-Laut) → a uniform, a useful tip. Auch „one“ klingt wie „wan“ → a one-way ticket."
    ],
    "schritte": [
     "Sprich das Wort laut aus.",
@@ -1201,13 +1215,28 @@
    ],
    "beispiel": "an apple, an ostrich, an old house, an hour (h ist stumm!)\na ghost, a pumpkin, a dog, a uniform (klingt wie „ju“)",
    "merke": "Das Ohr entscheidet, nicht das Auge.",
-   "video": "a or an english grammar erklärt"
+   "video": "a or an english grammar erklärt",
+   "problem": "Vor einem Nomen steht im Englischen oft „a“ oder „an“ (= ein/eine). Viele lernen „an vor a, e, i, o, u“ – das stimmt aber nur meistens. Entscheidend ist, wie das Wort KLINGT, nicht wie es geschrieben wird.",
+   "fehler": [
+    "a apple – richtig ist an apple.",
+    "an uniform – richtig ist a uniform (klingt wie „ju“).",
+    "a hour – richtig ist an hour (h ist stumm).",
+    "Ein Adjektiv davor zählt mit: an old house, aber a big house."
+   ],
+   "stichworte": [
+    "(^|\\| )an( \\||$)"
+   ]
   },
   {
    "titel": "Komparativ – vergleichen mit than",
    "kurz": "bigger than, more dangerous than",
    "text": [
-    "Wenn du ZWEI Dinge vergleichst, nimmst du den Komparativ + than."
+    "Kurze Adjektive (meist eine Silbe) bekommen -er: fast → faster, tall → taller, small → smaller.",
+    "Endet das Adjektiv auf -y, wird daraus -ier: heavy → heavier, funny → funnier, easy → easier.",
+    "Steht am Ende ein kurzer Vokal und dann ein Konsonant, wird der Konsonant verdoppelt: big → bigger, hot → hotter, thin → thinner.",
+    "Lange Adjektive (zwei und mehr Silben, die nicht auf -y enden) bekommen „more“ davor: more dangerous, more intelligent, more beautiful.",
+    "Ein paar Wörter sind unregelmäßig und müssen gelernt werden: good → better, bad → worse, far → further.",
+    "Danach kommt „than“ (= als): Hulk is stronger THAN Spider-Man."
    ],
    "schritte": [
     "Kurzes Adjektiv → -er: fast → faster, tall → taller",
@@ -1218,14 +1247,25 @@
    ],
    "beispiel": "Hulk is stronger than Ant-Man.\nThor is faster than Hulk.\nA snake is more dangerous than a spider.",
    "merke": "Komparativ + than (nicht then!).",
-   "video": "comparative adjectives english erklärt deutsch"
+   "video": "comparative adjectives english erklärt deutsch",
+   "problem": "Du vergleichst ZWEI Dinge oder Personen: Wer ist größer, schneller, gefährlicher? Dafür verändert sich das Adjektiv. Ob man -er anhängt oder „more“ davor schreibt, hängt von der Länge des Wortes ab.",
+   "fehler": [
+    "more faster – doppelt gemoppelt, entweder -er oder more, nie beides.",
+    "gooder – richtig ist better.",
+    "then statt than – then heißt „dann“, than heißt „als“.",
+    "biger – bei big wird das g verdoppelt: bigger."
+   ],
+   "stichworte": [
+    "\\bthan\\b"
+   ]
   },
   {
    "titel": "as … as – gleich viel",
    "kurz": "as big as, not as fast as",
    "text": [
-    "Wenn zwei Dinge GLEICH sind, nimmst du as + Grundform + as.",
-    "Verneint (not as … as) heißt es: weniger … als."
+    "Die Formel lautet: as + Adjektiv in der GRUNDFORM + as. Also as strong as, as fast as, as good as.",
+    "Verneint (not as … as) bedeutet es: nicht so … wie, also weniger. Ant-Man isn't as tall as Hulk = Ant-Man ist nicht so groß wie Hulk.",
+    "Zwischen den beiden „as“ steht NIE die -er-Form und nie „more“. Das ist der häufigste Fehler bei Tests."
    ],
    "schritte": [
     "as",
@@ -1234,13 +1274,30 @@
    ],
    "beispiel": "Hulk is as strong as Thor.\nAnt-Man isn't as tall as Hulk.\n\n✗ as stronger as   ✗ as better as   ✓ as strong as / as good as",
    "merke": "Zwischen as und as steht NIE ein Komparativ. Das ist der häufigste Fehler!",
-   "video": "as as comparison english grammar"
+   "video": "as as comparison english grammar",
+   "problem": "Manchmal sind zwei Dinge GLEICH stark, schnell oder groß. Dann vergleichst du nicht mit -er und than, sondern mit as … as (= genauso … wie).",
+   "fehler": [
+    "as stronger as – richtig ist as strong as.",
+    "as better as – richtig ist as good as.",
+    "stronger as – entweder stronger THAN oder as strong AS.",
+    "as … like – das zweite Wort ist auch „as“, nicht „like“."
+   ],
+   "stichworte": [
+    "\\bas \\w+ as\\b",
+    "gleich (schnell|groß|gut|stark)",
+    "nicht so \\w+ wie"
+   ]
   },
   {
    "titel": "Superlativ – der/die/das Beste",
    "kurz": "the fastest, the most dangerous",
    "text": [
-    "Wenn etwas an der Spitze ist (von dreien oder mehr), nimmst du den Superlativ mit the."
+    "Kurze Adjektive: the + -est: the fastest, the tallest, the smallest.",
+    "Auf -y: the + -iest: the heaviest, the funniest.",
+    "Kurzer Vokal + Konsonant: verdoppeln: the biggest, the hottest.",
+    "Lange Adjektive: the most …: the most dangerous, the most venomous, the most famous.",
+    "Unregelmäßig: good → the best, bad → the worst.",
+    "Das „the“ gehört immer dazu, denn es gibt nur EINEN, der am meisten von etwas hat."
    ],
    "schritte": [
     "Kurz → the …-est: the fastest, the tallest",
@@ -1250,7 +1307,18 @@
    ],
    "beispiel": "The cheetah is the fastest animal on land.\nHulk is the strongest.\nThe taipan is the most venomous snake.",
    "merke": "Komparativ = zwei vergleichen (+ than). Superlativ = der/die/das -ste (+ the).",
-   "video": "superlative adjectives english erklärt"
+   "video": "superlative adjectives english erklärt",
+   "problem": "Wenn etwas an der Spitze steht – der Schnellste, die Größte, das Gefährlichste von allen – brauchst du den Superlativ. Er funktioniert ähnlich wie der Komparativ, aber mit „the“ davor.",
+   "fehler": [
+    "the most fastest – entweder -est oder most, nie beides.",
+    "the goodest – richtig ist the best.",
+    "Hulk is strongest – „the“ fehlt: Hulk is THE strongest.",
+    "Komparativ und Superlativ verwechseln: zwei vergleichen = -er, alle vergleichen = the -est."
+   ],
+   "stichworte": [
+    "\\bthe ___\\b",
+    "\\bthe (most|best|worst|\\w+est)\\b"
+   ]
   }
  ],
  "sprechen": [

@@ -73,5 +73,29 @@
    "erklaerung": "",
    "id": "ku005"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Perspektive und Farbkontraste",
+   "kurz": "Räumlich zeichnen, wirkungsvoll gestalten",
+   "problem": "Wie bringt man Tiefe auf ein flaches Blatt Papier? Und wie lenkt man mit Farben den Blick? Dafür gibt es klare Regeln.",
+   "text": [
+    "Zentralperspektive: Alle Linien, die in die Tiefe führen, laufen in einem Fluchtpunkt auf dem Horizont zusammen. Je weiter weg, desto kleiner wird etwas.",
+    "Bei der Zweifluchtpunktperspektive gibt es zwei Fluchtpunkte, z. B. für eine Hausecke.",
+    "Komplementärkontrast: Gegenüberliegende Farben im Farbkreis (Blau–Orange, Rot–Grün, Gelb–Violett) verstärken sich gegenseitig.",
+    "Hell-Dunkel-Kontrast und Kalt-Warm-Kontrast erzeugen Spannung und Tiefe.",
+    "Der Goldene Schnitt (ca. 1 : 1,618) wird als besonders harmonisch empfunden.",
+    "Kunstrichtungen: Gustav Klimt und die Wiener Secession (Jugendstil), Andy Warhol (Pop Art)."
+   ],
+   "fehler": [
+    "Fluchtpunkt nicht auf die Horizontlinie setzen.",
+    "Komplementärfarbe zu Blau ist Orange, nicht Grün."
+   ],
+   "merke": "Tiefe = Linien zum Fluchtpunkt.",
+   "video": "Zentralperspektive Fluchtpunkt zeichnen erklärt",
+   "stichworte": [
+    "fluchtpunkt|farbe|klimt|pop art|schnitt"
+   ]
+  }
  ]
 }

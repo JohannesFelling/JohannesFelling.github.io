@@ -115,5 +115,30 @@
    "erklaerung": "",
    "id": "bi008"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Die Zelle",
+   "kurz": "Bausteine des Lebens",
+   "problem": "Alle Lebewesen bestehen aus Zellen. Für die Schularbeit musst du die Teile einer Zelle kennen, wissen, was sie tun, und Pflanzen- von Tierzellen unterscheiden.",
+   "text": [
+    "Jede Zelle ist von einer Zellmembran umgeben, die bestimmt, was hinein- und hinausdarf. Innen ist das Zytoplasma.",
+    "Der Zellkern enthält die Erbinformation (DNA) und steuert die Zelle.",
+    "Mitochondrien sind die Kraftwerke: Sie gewinnen durch die Zellatmung Energie aus Glucose.",
+    "Ribosomen stellen Proteine her.",
+    "Nur Pflanzenzellen haben zusätzlich eine feste Zellwand, Chloroplasten (für die Fotosynthese) und eine große Vakuole.",
+    "Fotosynthese: Kohlenstoffdioxid + Wasser + Licht → Glucose + Sauerstoff. Pflanzen sind darum Produzenten, Tiere Konsumenten, Pilze und Bakterien im Boden Destruenten.",
+    "Prokaryoten (z. B. Bakterien) haben keinen Zellkern, Eukaryoten (Pflanzen, Tiere, Pilze) schon."
+   ],
+   "fehler": [
+    "Zellwand und Zellmembran verwechseln – jede Zelle hat eine Membran, nur Pflanzen eine Wand.",
+    "Mitochondrien gibt es auch in Pflanzenzellen."
+   ],
+   "merke": "Pflanzenzelle = Tierzelle + Zellwand + Chloroplasten + Vakuole.",
+   "video": "Pflanzenzelle Tierzelle Unterschied erklärt",
+   "stichworte": [
+    "zell|mitochond|dna|prokaryot|fotosynthese|ökosystem|produzent|mikroskop"
+   ]
+  }
  ]
 }

@@ -128,7 +128,46 @@
     "Umrechnen: m/s · 3,6 = km/h"
    ],
    "beispiel": "s = 100 m, t = 12,5 s\nv = 100 / 12,5 = 8 m/s = 28,8 km/h",
-   "video": "Geschwindigkeit berechnen Physik erklärt"
+   "video": "Geschwindigkeit berechnen Physik erklärt",
+   "problem": "Wie schnell ist etwas? Geschwindigkeit sagt, welchen Weg ein Körper in einer bestimmten Zeit zurücklegt. Schwierig sind meist die Einheiten (km/h oder m/s).",
+   "text": [
+    "Die Formel: Geschwindigkeit v = Weg s geteilt durch Zeit t.",
+    "Umgestellt: s = v · t (Weg) und t = s / v (Zeit). Ein Dreieck hilft beim Merken: s oben, v und t unten.",
+    "Einheiten: Weg in m und Zeit in s ergibt m/s. Weg in km und Zeit in h ergibt km/h.",
+    "Umrechnen: m/s · 3,6 = km/h, und km/h : 3,6 = m/s. Denn 1 m/s sind 3600 m pro Stunde = 3,6 km/h.",
+    "Beispiel: 36 km/h : 3,6 = 10 m/s."
+   ],
+   "fehler": [
+    "s · t statt s / t rechnen.",
+    "Einheiten mischen: km mit Sekunden.",
+    "Bei der Umrechnung mal statt durch 3,6 (oder umgekehrt) – Kontrolle: km/h ist immer die größere Zahl."
+   ],
+   "stichworte": [
+    "geschwindigkeit|km/h|m/s|v = s"
+   ]
+  },
+  {
+   "titel": "Kraft und Newton'sche Axiome",
+   "kurz": "F = m · a",
+   "problem": "Warum bewegt sich etwas, warum bleibt es stehen? Isaac Newton hat das in drei Grundgesetzen beschrieben, die heute noch gelten.",
+   "text": [
+    "1. Trägheitsprinzip: Ein Körper bleibt in Ruhe oder bewegt sich gleichförmig geradeaus, solange keine Kraft auf ihn wirkt. Darum fliegst du im Bus nach vorne, wenn er bremst.",
+    "2. Aktionsprinzip: Kraft = Masse · Beschleunigung, F = m · a. Einheit Newton (N): 1 N = 1 kg · m/s².",
+    "3. Wechselwirkungsprinzip (actio = reactio): Übt A eine Kraft auf B aus, übt B eine gleich große, entgegengesetzte Kraft auf A aus.",
+    "Gewichtskraft: Auf der Erde zieht die Schwerkraft mit ca. 9,81 N pro kg. Ein 50-kg-Mensch wiegt also etwa 490 N.",
+    "Dichte ρ = m / V: 200 g auf 50 cm³ sind 4 g/cm³. Was eine kleinere Dichte als Wasser (1 g/cm³) hat, schwimmt.",
+    "Energie misst man in Joule (J), Leistung in Watt (W)."
+   ],
+   "fehler": [
+    "Masse (kg) und Gewichtskraft (N) verwechseln.",
+    "Einheiten nicht umrechnen (g in kg).",
+    "Glauben, für gleichförmige Bewegung brauche man ständig Kraft (Trägheit!)."
+   ],
+   "merke": "F = m · a, Gewicht ≈ 9,81 N pro kg.",
+   "video": "Newtonsche Gesetze einfach erklärt",
+   "stichworte": [
+    "newton|kraft|trägheit|joule|gewicht|dichte|beschleunig"
+   ]
   }
  ]
 }

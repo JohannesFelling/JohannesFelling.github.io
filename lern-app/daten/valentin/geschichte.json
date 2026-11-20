@@ -152,7 +152,22 @@
     "Römer: Gründung 753 v. Chr., Weltreich bis 476 n. Chr."
    ],
    "merke": "v. Chr. zählt rückwärts: 753 v. Chr. ist früher als 500 v. Chr.",
-   "video": "Zeitleiste Urgeschichte Antike einfach erklärt"
+   "video": "Zeitleiste Urgeschichte Antike einfach erklärt",
+   "problem": "Geschichte ordnet Ereignisse in der Zeit. Schwierig ist vor allem die Zählung „vor Christus“: Da wird rückwärts gezählt, je größer die Zahl, desto länger ist es her.",
+   "text": [
+    "Das Jahr 0 gibt es nicht: Auf 1 v. Chr. folgt direkt 1 n. Chr.",
+    "Urgeschichte: die Zeit ohne Schrift. In der Altsteinzeit lebten die Menschen als Jäger und Sammler. In der Jungsteinzeit wurden sie sesshaft, betrieben Ackerbau und Viehzucht. Ötzi lebte vor etwa 5300 Jahren.",
+    "Mit der Schrift beginnen die Hochkulturen, z. B. Ägypten am Nil ab ca. 3000 v. Chr. mit Pharaonen, Pyramiden und Hieroglyphen.",
+    "Die Griechen erfanden in Athen die Demokratie und in Olympia die Olympischen Spiele.",
+    "Rom wurde der Sage nach 753 v. Chr. gegründet und wurde zum Weltreich. Auf dem Gebiet von Wien lag das Lager Vindobona. 476 n. Chr. endete das Weströmische Reich."
+   ],
+   "fehler": [
+    "500 v. Chr. ist SPÄTER als 753 v. Chr. (rückwärts zählen!).",
+    "Urgeschichte und Antike vermischen – Urgeschichte = ohne Schrift."
+   ],
+   "stichworte": [
+    "v\\. chr|urgeschichte|ägypt|griech|röm|rom"
+   ]
   }
  ]
 }

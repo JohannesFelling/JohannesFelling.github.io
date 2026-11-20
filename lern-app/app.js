@@ -3,10 +3,12 @@
 const PERSONEN = [
   { id: "valentin", name: "Valentin", emo: "🦸‍♂️", thema: "held", slogan: "Hero Training Program",
     lob: ["Brilliant.", "Mission accomplished.", "Splendid!", "Avengers-Niveau.", "Spidey-Sinn stimmt.", "Thor wäre stolz.", "Stark wie Stark."],
-    raenge: ["Rookie", "Held", "Superheld", "Avenger", "Legende"] },
+    raenge: ["Rookie", "Held", "Superheld", "Avenger", "Legende", "Gott des Donners"],
+    punkt: { eins: "Hammer", viele: "Hämmer", zeichen: "🔨", icon: "hammer" } },
   { id: "elias", name: "Elias", emo: "⚽", thema: "sport", slogan: "Matchday Academy",
     lob: ["TOOOR!", "Back of the net!", "Weltklasse-Pass.", "Hattrick-reif.", "Was für ein Volley!", "Man of the Match.", "Top-Corner."],
-    raenge: ["Nachwuchs", "Stammspieler", "Kapitän", "Nationalspieler", "Weltstar"] },
+    raenge: ["Nachwuchs", "Stammspieler", "Kapitän", "Nationalspieler", "Weltstar", "GOAT"],
+    punkt: { eins: "Ball", viele: "Bälle", zeichen: "⚽", icon: "ball" } },
 ];
 const FAECHER = [
   { id: "deutsch", name: "Deutsch" }, { id: "englisch", name: "Englisch" }, { id: "spanisch", name: "Spanisch" },
@@ -38,6 +40,8 @@ const ICONS = {
   musik: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
   kunst: '<path d="M12 22a10 10 0 1 1 10-10c0 3-2 4-4 4h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="16.5" cy="10.5" r="1"/>',
   technik: '<path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8z"/>',
+  hammer: '<path d="M4 4h16v8H4z"/><path d="M4 8h16"/><path d="M11 12h2v8.5a1 1 0 0 1-2 0z"/><path d="M10 15l4 2"/>',
+  ball: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.2 2.3-1.2 3.7h-4l-1.2-3.7z"/><path d="M12 7.5V3.2M15.2 9.8l4-1.5M14 13.5l2.5 3.6M10 13.5l-2.5 3.6M8.8 9.8l-4-1.5"/>',
   flamme: '<path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-4 5-4 7-1-1-2-2-2-4-2 2-3 5-3 9 0 4 3 7 7 7z"/>',
   test: '<path d="M9 3h6l1 2h3v16H5V5h3z"/><path d="M9 13l2 2 4-4"/>',
   schloss: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
@@ -51,11 +55,14 @@ const ICONS = {
 };
 const ic = (n) => { const w = document.createElement("span"); w.innerHTML = `<svg class="ic" viewBox="0 0 24 24">${ICONS[n] || ""}</svg>`; return w.firstChild; };
 const RUNDE = 10;
+const PUNKT_STD = { eins: "Stern", viele: "Sterne", zeichen: "⭐", icon: "stern" };
+const pk = pid => (PERSONEN.find(p => p.id === pid) || {}).punkt || PUNKT_STD;
+const punkte = (pid, n) => `${n} ${n === 1 ? pk(pid).eins : pk(pid).viele}`;
 const PROFIL = "_profil";
 let BELOHNUNG = {
-  stufen: [{ sterne: 100, belohnung: "🍫 Süßigkeit" }, { sterne: 250, belohnung: "🥤 Softdrink" }, { sterne: 500, belohnung: "🍦 Eis" }, { sterne: 1000, belohnung: "🎁 Überraschung nach Wahl" }],
-  serie: { tage: 7, belohnung: "🍫 Süßigkeit" },
-  test: { belohnung: "🥤 Softdrink" },
+  stufen: [{sterne: 100, belohnung: "🍫 Süßigkeit nach Wahl (bis 2 €)"}, {sterne: 250, belohnung: "🥤 Softdrink nach Wahl (bis 1,50 €)"}, {sterne: 1000, belohnung: "🍝 Lieblingsessen"}, {sterne: 2000, belohnung: "🎬 Kinoabend – du suchst den Film aus"}, {sterne: 5000, belohnung: "🎁 Überraschung (Papa wählt)"}],
+  serie: { tage: 7, belohnung: "🍫 Süßigkeit nach Wahl (bis 2 €)" },
+  test: { belohnung: "🥤 Softdrink nach Wahl (bis 1,50 €)" },
 };
 
 const app = document.getElementById("app");
@@ -131,7 +138,7 @@ function belohnungenPruefen(extra) {
   }
   const st = sterneGesamt(person.id);
   for (const s of BELOHNUNG.stufen) {
-    if (st >= s.sterne && !pr.stufen.includes(s.sterne)) { pr.stufen.push(s.sterne); neu.push(gutscheinGeben(pr, s.belohnung, `${s.sterne} Sterne gesammelt ⭐`)); }
+    if (st >= s.sterne && !pr.stufen.includes(s.sterne)) { pr.stufen.push(s.sterne); neu.push(gutscheinGeben(pr, s.belohnung, `${punkte(person.id, s.sterne)} gesammelt ${pk(person.id).zeichen}`)); }
   }
   if (extra) extra(pr, neu);
   speichern(person.id, PROFIL, pr);
@@ -204,7 +211,7 @@ function setzeKopf(t, ziel) {
   zurueckZiel = ziel; zurueck.hidden = !ziel;
   if (person) {
     const n = serie(profil(person.id));
-    sterneTop.textContent = `${n ? `🔥 ${n}  ·  ` : ""}★ ${sterneGesamt(person.id)}`;
+    sterneTop.replaceChildren(...(n ? [`🔥 ${n}  ·  `] : []), ic(pk(person.id).icon), ` ${sterneGesamt(person.id)}`);
   } else sterneTop.textContent = "";
 }
 zurueck.addEventListener("click", () => zurueckZiel && zurueckZiel());
@@ -260,7 +267,7 @@ function startseite() {
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
         el("small", {}, p.slogan), el("span", { class: "start-name" }, p.name),
         (() => { const t = kommend(p.id)[0]; return t ? el("span", { class: "start-termin" }, `Nächster Test: ${t.titel} · ${wannText(tageBis(t.datum))}`) : null; })(),
-        el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : `${sterneGesamt(p.id)} Sterne`)))),
+        el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : punkte(p.id, sterneGesamt(p.id)))))),
     el("button", { class: "gast-link", onclick: gastWahl }, ic("auge"), "Testkonto – nur anschauen, nichts wird gespeichert")
   );
 }
@@ -301,6 +308,27 @@ function anmeldeSeite(p) {
   setTimeout(() => pw.focus(), 50);
 }
 
+// „Nächstes Geschenk“: was fehlt noch bis zum nächsten Gutschein?
+function geschenkWege() {
+  const st = sterneGesamt(person.id), pr = profil(person.id), n = serie(pr);
+  const heuteGeuebt = pr.tage.includes(heute());
+  const stufe = BELOHNUNG.stufen.find(s => s.sterne > st);
+  const vorher = stufe ? [0, ...BELOHNUNG.stufen.map(s => s.sterne)].filter(x => x < stufe.sterne).pop() : 0;
+  const T = BELOHNUNG.serie.tage, inSerie = n % T, bisSerie = T - inSerie;
+  const wege = [];
+  if (stufe) wege.push({ icon: "stern", was: stufe.belohnung, fehlt: `Noch ${punkte(person.id, stufe.sterne - st)}`, info: `Ziel: ${punkte(person.id, stufe.sterne)} · 1 ${pk(person.id).eins} pro richtige Antwort, +3 für eine fehlerfreie Runde`, anteil: (st - vorher) / (stufe.sterne - vorher), rest: (stufe.sterne - st) / 8 });
+  wege.push({ icon: "flamme", was: BELOHNUNG.serie.belohnung, fehlt: `Noch ${bisSerie} ${bisSerie === 1 ? "Tag" : "Tage"} üben`, info: `${T} Tage hintereinander mindestens eine Runde · ${heuteGeuebt ? "heute schon erledigt ✓" : "heute noch offen!"}`, anteil: inSerie / T, rest: bisSerie });
+  wege.push({ icon: "test", was: BELOHNUNG.test.belohnung, fehlt: "Einen Kapiteltest fehlerfrei", info: "Jeder Kapiteltest, der zum ersten Mal ganz ohne Fehler bestanden wird", anteil: null, rest: 99 });
+  return wege;
+}
+function geschenkBlock(kompakt) {
+  const wege = geschenkWege(), bester = wege.filter(w => w.anteil !== null).sort((a, b) => a.rest - b.rest)[0];
+  const zeile = w => el("div", { class: `geschenk-zeile ${w === bester ? "nah" : ""}` },
+    el("div", { class: "geschenk-kopf" }, el("span", { class: "geschenk-was" }, w.was), el("b", {}, w.fehlt)),
+    w.anteil !== null ? el("div", { class: "akku" }, el("div", { class: "akku-fuellung", style: `width:${Math.max(3, Math.round(w.anteil * 100))}%` }), el("span", { class: "akku-text" }, `${Math.round(w.anteil * 100)} % aufgeladen`)) : null,
+    kompakt ? null : el("div", { class: "klein" }, w.info));
+  return el("div", { class: "geschenke" }, el("div", { class: "label" }, "🎁 Nächstes Geschenk"), ...(kompakt ? [zeile(bester)] : wege.map(zeile)));
+}
 function statusKarte() {
   const st = sterneGesamt(person.id), pr = profil(person.id), r = rang(person, st), n = serie(pr);
   const anteil = r.naechste ? (st - r.ab) / (r.naechste - r.ab) : 1;
@@ -310,12 +338,10 @@ function statusKarte() {
   return el("div", { class: "karte status" },
     el("div", { class: "status-kopf" },
       el("div", {}, el("div", { class: "label" }, "Rang"), el("div", { class: "rang" }, r.name)),
-      el("div", { class: "status-sterne" }, el("div", { class: "label" }, "Sterne"), el("div", { class: "wert" }, String(st)))),
+      el("div", { class: "status-sterne" }, el("div", { class: "label" }, pk(person.id).viele), el("div", { class: "wert" }, ic(pk(person.id).icon), String(st)))),
     el("div", { class: "fortschritt" }, el("div", { style: `width:${Math.round(anteil * 100)}%` })),
-    el("div", { class: "klein" }, r.naechste ? `Noch ${r.naechste - st} Sterne bis ${r.naechsterName} · Belohnung: ${stufe.belohnung}` : "Höchster Rang erreicht."),
-    el("div", { class: "serie" }, ic("flamme"),
-      el("div", {}, el("b", {}, n ? `${n} ${n === 1 ? "Tag" : "Tage"} in Folge` : "Starte deine Serie"),
-        el("span", { class: "klein" }, heuteGeuebt ? `Heute erledigt · noch ${bisSerie} ${bisSerie === 1 ? "Tag" : "Tage"} bis ${BELOHNUNG.serie.belohnung}` : `Heute noch eine Runde · ${BELOHNUNG.serie.tage} Tage = ${BELOHNUNG.serie.belohnung}`))),
+    el("div", { class: "klein" }, r.naechste ? `Noch ${punkte(person.id, r.naechste - st)} bis zum Rang ${r.naechsterName}` : "Höchster Rang erreicht."),
+    geschenkBlock(),
     el("button", { class: "knopf zweit", onclick: gutscheinListe }, ic("ticket"), `Gutscheine (${pr.gutscheine.length})`));
 }
 
@@ -369,7 +395,7 @@ function faecherSeite() {
       const t = naechsterTerminFuer(person.id, f.id);
       return el("button", { class: `fach ${t ? "markiert" : ""}`, onclick: () => fachLaden(f) },
         t ? el("span", { class: "termin-badge" }, `${t.art === "Schularbeit" ? "SA" : "Test"} ${wannText(tageBis(t.datum))}`) : el("span", { class: "nr" }, String(i + 1).padStart(2, "0")), ic(f.id),
-        el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, `${s.sterne} Sterne · ${s.runden} Runden`)));
+        el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, `${punkte(person.id, s.sterne)} · ${s.runden} Runden`)));
     })),
     (CFG || gast) ? el("button", { class: "reset", onclick: abmelden }, gast ? "Testkonto beenden" : `Abmelden (${person.name})`) : null
   );
@@ -401,7 +427,7 @@ function fachSeite() {
       el("div", { class: "label" }, fach.name),
       el("h2", {}, daten.titel || fach.name),
       daten.untertitel ? el("p", { class: "klein" }, daten.untertitel) : null,
-      el("p", { class: "klein" }, `${s.sterne} Sterne · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
+      el("p", { class: "klein" }, `${punkte(person.id, s.sterne)} · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     modusWahl(),
@@ -419,7 +445,6 @@ function fachSeite() {
           el("span", {}, t.titel, el("small", {}, info.bestanden ? "Bestanden – Gutschein erhalten" : info.versuche ? `Bester Versuch: ${info.beste} von ${t.fragen.length}` : `${t.fragen.length} Fragen`)),
           ic(info.bestanden ? "haken" : frei ? "test" : "schloss"));
       })) : null,
-    el("button", { class: "reset", onclick: () => { if (confirm(`Übungs-Fortschritt in ${fach.name} für ${person.name} löschen? (Gutscheine bleiben)`)) { speichern(person.id, fach.id, {}); fachSeite(); } } }, "Übungs-Fortschritt zurücksetzen")
   );
 }
 
@@ -460,6 +485,8 @@ function frageZeigen() {
       el("b", {}, ok ? `${zufall(person.lob)} +1` : "Knapp daneben."),
       !ok ? el("div", {}, "Richtig ist: ", el("b", {}, [].concat(q.antwort)[0])) : null,
       q.erklaerung ? el("div", {}, "💡 ", q.erklaerung) : null));
+    const w = !test && wissenFuer(q);
+    if (w) feedback.append(el("details", { class: "erklaer-mehr" }, el("summary", {}, `📖 Ausführlich erklärt: ${w.titel}`), el("div", { class: "wissen-text" }, vorleseKnopf(w), ...wissenInhalt(w))));
     weiter.hidden = false; setTimeout(() => weiter.focus(), 0);
   }
 
@@ -529,7 +556,7 @@ function ergebnis() {
     pr.tests[k] = info;
   });
   const anteil = runde.richtig / n, held = person.thema === "held";
-  const text = perfekt ? (test ? "Fehlerfrei bestanden." : held ? "Mission erfüllt. +3 Bonus-Sterne." : "Zu null gewonnen. +3 Bonus-Sterne.")
+  const text = perfekt ? (test ? "Fehlerfrei bestanden." : held ? "Mission erfüllt. +3 Bonus-Hämmer." : "Zu null gewonnen. +3 Bonus-Bälle.")
     : anteil >= .7 ? (held ? "Starke Mission." : "Starkes Spiel.") : anteil >= .4 ? "Solide. Mit Training wird's noch besser." : "Dranbleiben – jede Runde macht dich stärker.";
   setzeKopf(fach.name, fachSeite);
   zeige(
@@ -539,6 +566,7 @@ function ergebnis() {
       el("h2", {}, `${runde.richtig} / ${n} richtig`),
       el("p", {}, text),
       test && !perfekt ? el("p", { class: "klein" }, "Für den Gutschein muss alles richtig sein. Übe die Fehler und probier den Test nochmal.") : null),
+    gast ? null : el("div", { class: "karte" }, geschenkBlock(true)),
     ...neu.map(g => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(g) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), g.was, el("small", {}, "Antippen zum Anzeigen")))),
     runde.falsch.length ? el("div", { class: "karte" }, el("div", { class: "label" }, test ? "Noch falsch" : "Kommt später nochmal"),
       el("ul", {}, ...runde.falsch.map(({ q }) => el("li", {}, q.frage, " → ", el("b", {}, [].concat(q.antwort)[0]))))) : null,
@@ -569,13 +597,13 @@ function gutscheinListe() {
   zeige(
     gastBanner(),
     el("h2", {}, "Gutscheine"),
-    pr.gutscheine.length ? null : el("p", { class: "hinweis" }, "Noch keine Gutscheine. Sammle Sterne, übe jeden Tag oder schaffe einen Test fehlerfrei!"),
+    pr.gutscheine.length ? null : el("p", { class: "hinweis" }, `Noch keine Gutscheine. Sammle ${pk(person.id).viele}, übe jeden Tag oder schaffe einen Test fehlerfrei!`),
     ...pr.gutscheine.slice().reverse().map(g => el("button", { class: "test-knopf", onclick: () => gutscheinZeigen(g) }, el("span", {}, g.was, el("small", {}, `${g.grund} · ${g.code}`)), ic("ticket"))),
     el("div", { class: "karte" }, el("div", { class: "label" }, "So bekommst du Gutscheine"),
       el("ul", {},
         el("li", {}, `Kapiteltest fehlerfrei → ${BELOHNUNG.test.belohnung}`),
         el("li", {}, `${BELOHNUNG.serie.tage} Tage hintereinander üben → ${BELOHNUNG.serie.belohnung}`),
-        ...BELOHNUNG.stufen.map(s => el("li", {}, `${s.sterne} Sterne → ${s.belohnung}`)))));
+        ...BELOHNUNG.stufen.map(s => el("li", {}, `${punkte(person.id, s.sterne)} → ${s.belohnung}`)))));
 }
 
 // ---------- Wissen ----------
@@ -587,31 +615,61 @@ function wissenListe() {
 function wissenZeigen(i) {
   const w = daten.wissen[i];
   { const pr = profil(person.id); if (!pr.gelesen[`${fach.id}/${w.titel}`]) { pr.gelesen[`${fach.id}/${w.titel}`] = heute(); protokoll(pr, { f: fach.id, art: "Wissen", titel: w.titel }); speichern(person.id, PROFIL, pr); } }
-  setzeKopf("Wissen", wissenListe);
+  setzeKopf("Wissen", () => { try { speechSynthesis.cancel(); } catch (e) {} wissenListe(); });
   const yt = w.video ? `https://www.youtube.com/results?search_query=${encodeURIComponent(w.video)}` : null;
   zeige(
     el("div", { class: "karte wissen-text pop" },
       el("div", { class: "label" }, fach.name), el("h2", {}, w.titel),
-      ...(w.text || []).map(t => el("p", {}, t)),
-      ...(w.schritte || []).map((t, n) => el("div", { class: "schritt" }, el("b", {}, `Schritt ${n + 1}: `), t)),
-      w.beispiel ? el("div", {}, el("div", { class: "label" }, "Beispiel"), el("div", { class: "beispiel" }, w.beispiel)) : null,
-      w.merke ? el("div", { class: "feedback ok" }, el("b", {}, "Merke: "), w.merke) : null,
-      yt ? el("a", { class: "link-knopf", href: yt, target: "_blank", rel: "noopener" }, ic("play"), "Erklärvideos auf YouTube ansehen") : null),
+      vorleseKnopf(w),
+      ...wissenInhalt(w),
+      yt ? el("a", { class: "link-knopf", href: yt, target: "_blank", rel: "noopener" }, ic("play"), "Zusätzlich: Erklärvideos auf YouTube") : null),
     i + 1 < daten.wissen.length ? el("button", { class: "knopf zweit", onclick: () => wissenZeigen(i + 1) }, `Weiter: ${daten.wissen[i + 1].titel}`) : null,
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), "Jetzt üben"));
 }
 
 // ---------- Sprechen (Englisch, Vorlesen + Mikrofon) ----------
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-function vorlesen(text) {
+function vorlesen(text, lang = "en-GB", fertig) {
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-GB"; u.rate = 0.9;
-    const v = speechSynthesis.getVoices().find(v => /en-GB/i.test(v.lang)) || speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+    u.lang = lang; u.rate = lang.startsWith("de") ? 1 : 0.9;
+    const stimmen = speechSynthesis.getVoices(), haupt = lang.slice(0, 2);
+    const v = stimmen.find(v => v.lang.replace("_", "-").toLowerCase() === lang.toLowerCase()) || stimmen.find(v => v.lang.toLowerCase().startsWith(haupt));
     if (v) u.voice = v;
+    if (fertig) { u.onend = fertig; u.onerror = fertig; }
     speechSynthesis.speak(u);
-  } catch (e) {}
+  } catch (e) { if (fertig) fertig(); }
+}
+// Erklärtext als Bausteine (für Wissen-Seite und „Ausführlich erklärt“ im Quiz)
+function wissenInhalt(w) {
+  return [
+    w.problem ? el("div", { class: "problem" }, el("div", { class: "label" }, "Worum geht's?"), el("p", {}, w.problem)) : null,
+    ...(w.text || []).map(t => el("p", {}, t)),
+    (w.schritte || []).length ? el("div", { class: "label" }, "So gehst du vor") : null,
+    ...(w.schritte || []).map((t, n) => el("div", { class: "schritt" }, el("b", {}, `Schritt ${n + 1}: `), t)),
+    w.beispiel ? el("div", {}, el("div", { class: "label" }, "Beispiel"), el("div", { class: "beispiel" }, w.beispiel)) : null,
+    (w.fehler || []).length ? el("div", { class: "typfehler" }, el("div", { class: "label" }, "Typische Fehler"), el("ul", {}, ...w.fehler.map(f => el("li", {}, f)))) : null,
+    w.merke ? el("div", { class: "feedback ok" }, el("b", {}, "Merke: "), w.merke) : null];
+}
+function wissenVorlesetext(w) {
+  return [w.titel, w.problem, ...(w.text || []), ...(w.schritte || []).map((t, n) => `Schritt ${n + 1}: ${t}`),
+    w.beispiel ? "Beispiel: " + w.beispiel.replace(/→/g, ", also ").replace(/[✗]/g, " falsch: ").replace(/[✓]/g, " richtig: ") : "",
+    (w.fehler || []).length ? "Typische Fehler: " + w.fehler.join(" ") : "", w.merke ? "Merke: " + w.merke : ""].filter(Boolean).join(". ").replace(/\.\./g, ".");
+}
+function vorleseKnopf(w) {
+  if (!window.speechSynthesis) return null;
+  let an = false;
+  const k = el("button", { class: "knopf zweit vorlesen", onclick: () => {
+    if (an) { speechSynthesis.cancel(); an = false; k.lastChild.textContent = "Erklärung vorlesen"; return; }
+    an = true; k.lastChild.textContent = "Vorlesen stoppen";
+    vorlesen(wissenVorlesetext(w), "de-AT", () => { an = false; k.lastChild.textContent = "Erklärung vorlesen"; });
+  } }, "🔊 ", el("span", {}, "Erklärung vorlesen"));
+  return k;
+}
+function wissenFuer(q) {
+  const hay = [q.frage, ...[].concat(q.antwort), ...(q.optionen || [])].join(" | ").toLowerCase();
+  return (daten.wissen || []).find(w => (w.stichworte || []).some(s => { try { return new RegExp(s, "i").test(hay); } catch (e) { return false; } }));
 }
 // ---------- Aufsatzkorrektur (Foto → Firestore → Korrektur kommt zurück) ----------
 function bildVerkleinern(datei, max = 1500, q = 0.72) {
@@ -700,7 +758,7 @@ function sprechListe() {
     ...daten.sprechen.map((g, i) => el("button", { class: "test-knopf", onclick: () => gespraech(g) }, el("span", {}, g.titel, el("small", {}, g.kurz || `${g.schritte.length} Fragen`)), ic("mikro"))));
 }
 function gespraech(g) {
-  let i = 0, punkte = 0;
+  let i = 0, pkt = 0;
   const verlauf = el("div");
   const bereich = el("div");
   setzeKopf("Sprechen", sprechListe);
@@ -708,13 +766,13 @@ function gespraech(g) {
   const pruefe = (text, sch) => { const t = norm(text).replace(/[,.!?']/g, " "); return sch.erwartet.some(alt => alt.every(w => new RegExp(`\\b${norm(w).replace(/[,.!?']/g, " ")}\\b`).test(t))); };
   function schritt() {
     if (i >= g.schritte.length) {
-      const s = laden(person.id, fach.id); s.sterne += punkte; speichern(person.id, fach.id, s);
+      const s = laden(person.id, fach.id); s.sterne += pkt; speichern(person.id, fach.id, s);
       const neu = belohnungenPruefen(pr => {
-        protokoll(pr, { f: fach.id, art: "Sprechen", titel: g.titel, erg: `${punkte}/${g.schritte.length}` });
-        pr.gespraeche[`${fach.id}/${g.titel}`] = { d: heute(), erg: punkte, von: g.schritte.length };
+        protokoll(pr, { f: fach.id, art: "Sprechen", titel: g.titel, erg: `${pkt}/${g.schritte.length}` });
+        pr.gespraeche[`${fach.id}/${g.titel}`] = { d: heute(), erg: pkt, von: g.schritte.length };
       });
       setzeKopf("Sprechen", sprechListe);
-      bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, `Gespräch geschafft! +${punkte} Sterne`)),
+      bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, `Gespräch geschafft! +${punkte(person.id, pkt)}`)),
         ...neu.map(gs => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(gs) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), gs.was))),
         el("button", { class: "knopf", onclick: () => gespraech(g) }, "Nochmal"), el("button", { class: "knopf zweit", onclick: sprechListe }, "Andere Gespräche"));
       return;
@@ -726,7 +784,7 @@ function gespraech(g) {
     const info = el("div");
     const fertig = (ok, text) => {
       if (text) verlauf.append(el("div", { class: "sprechblase ich pop" }, text));
-      if (ok) { punkte++; info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, zufall(person.lob)), sch.lob ? ` ${sch.lob}` : "")); }
+      if (ok) { pkt++; info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, zufall(person.lob)), sch.lob ? ` ${sch.lob}` : "")); }
       else info.replaceChildren(el("div", { class: "feedback nein pop" }, el("b", {}, "Fast! "), "So könntest du sagen: ", el("b", {}, sch.tipp)));
       if (ok || versuche >= 2) { i++; knoepfe.replaceChildren(el("button", { class: "knopf", onclick: schritt }, "Weiter")); }
     };
@@ -784,7 +842,7 @@ async function elternLaden() {
   try {
     const snap = await fb.F.getDocs(fb.F.collection(fb.db, "fortschritt"));
     const alle = {};
-    snap.forEach(d => { const x = d.data(); if (x.kind) alle[x.kind] = Object.assign({}, x.stand, { _zeit: x.zeit && x.zeit.toDate ? x.zeit.toDate() : null }); });
+    snap.forEach(d => { const x = d.data(); if (x.kind) alle[x.kind] = Object.assign({}, x.stand, { _zeit: x.zeit && x.zeit.toDate ? x.zeit.toDate() : null, _uid: d.id }); });
     elternSeite(alle, false);
   } catch (e) {
     console.error(e);
@@ -802,7 +860,7 @@ async function elternSeite(alle, lokal) {
   const tab = el("div");
   const zeigeKind = p => {
     [...reiter.children].forEach(b => b.classList.toggle("aktiv", b.dataset.k === p.id));
-    tab.replaceChildren(kindStatistik(p, alle[p.id] || {}, dateien));
+    tab.replaceChildren(kindStatistik(p, alle[p.id] || {}, dateien, lokal));
   };
   const reiter = el("div", { class: "reiter" }, ...PERSONEN.map(p => el("button", { "data-k": p.id, onclick: () => zeigeKind(p) }, p.name)));
   zeige(
@@ -815,14 +873,23 @@ async function elternSeite(alle, lokal) {
       const letzt = pr.log.length ? pr.log[pr.log.length - 1] : null;
       return el("div", { class: "karte kpi" }, el("div", { class: "label" }, p.name),
         el("div", { class: "kpi-wert" }, dauer(ges)), el("div", { class: "klein" }, "Lernzeit gesamt"),
-        el("div", { class: "klein" }, `${sterne} Sterne · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
+        el("div", { class: "klein" }, `${punkte(p.id, sterne)} · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
         el("div", { class: "klein" }, letzt ? `Zuletzt aktiv: ${datumDE(letzt.d)} ${letzt.t}` : "Noch nicht aktiv"));
     })),
     reiter, tab,
     lokal ? null : el("button", { class: "reset", onclick: elternAbmelden }, "Eltern-Bereich abmelden"));
   zeigeKind(PERSONEN[0]);
 }
-function kindStatistik(p, st, dateien) {
+async function elternReset(p, f, st, lokal) {
+  if (!confirm(`Übungs-Fortschritt in ${f.name} für ${p.name} wirklich löschen? (${pk(p.id).viele}, Runden und offene Fragen in diesem Fach. Gutscheine, Tests und Lernzeit bleiben.)`)) return;
+  if (lokal) { try { localStorage.setItem(key(p.id, f.id), "{}"); } catch (e) {} elternStart(); return; }
+  if (!st._uid) { alert(`${p.name} hat noch keinen gespeicherten Fortschritt.`); return; }
+  const stand = Object.fromEntries(Object.entries(st).filter(([k]) => !k.startsWith("_") || k === PROFIL));
+  stand[f.id] = {};
+  try { await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", st._uid), { stand, kind: p.id, zeit: fb.F.serverTimestamp() }); elternLaden(); }
+  catch (e) { console.error(e); alert("Zurücksetzen hat nicht geklappt. Wahrscheinlich fehlt in Firebase noch die neue Regel, die dem Papa-Konto das Ändern erlaubt."); }
+}
+function kindStatistik(p, st, dateien, lokal) {
   const pr = Object.assign(PROFIL_LEER(), st[PROFIL] || {});
   const tage = []; for (let i = 13; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); tage.push(heute(d)); }
   const max = Math.max(600, ...tage.map(t => (pr.zeit[t] || {}).ges || 0));
@@ -851,8 +918,9 @@ function kindStatistik(p, st, dateien) {
       return el("div", { class: "karte" },
         el("div", { class: "status-kopf" }, el("div", { class: "fach-name" }, f.name), el("div", { class: "klein" }, dauer(fachZeit(f.id)))),
         el("div", { class: "fortschritt" }, el("div", { style: `width:${d.fragen.length ? Math.round(geuebt / d.fragen.length * 100) : 0}%` })),
-        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · ${s.sterne} Sterne · ${s.offen.length} Fragen offen` + (d.platzhalter ? " · (Platzhalter-Fragen)" : "")),
-        ...zeilen);
+        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · ${punkte(p.id, s.sterne)} · ${s.offen.length} Fragen offen` + (d.platzhalter ? " · (Platzhalter-Fragen)" : "")),
+        ...zeilen,
+        (s.runden || s.sterne || s.offen.length || geuebt) ? el("button", { class: "reset", onclick: () => elternReset(p, f, st, lokal) }, `${f.name} für ${p.name} zurücksetzen`) : null);
     }),
     el("div", { class: "karte" }, el("div", { class: "label" }, `Gutscheine (${pr.gutscheine.length})`),
       pr.gutscheine.length ? null : el("p", { class: "klein" }, "Noch keine."),

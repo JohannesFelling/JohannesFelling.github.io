@@ -21,6 +21,9 @@ def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=Non
         for t in tests:
             for i, q in enumerate(t["fragen"]): q["id"] = f"{t['id']}-{i+1:02d}"
         d["tests"] = tests
+    from wissen_texte import ERGAENZUNG, NEU
+    wissen = json.loads(json.dumps(wissen or [])) + json.loads(json.dumps(NEU.get((person, fach), [])))
+    for w in wissen: w.update(ERGAENZUNG.get(w["titel"], {}))
     if wissen: d["wissen"] = wissen
     if sprechen: d["sprechen"] = sprechen
     os.makedirs(f"daten/{person}", exist_ok=True)

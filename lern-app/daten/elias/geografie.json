@@ -105,11 +105,46 @@
    "titel": "Österreichs Bundesländer",
    "kurz": "9 Länder, 9 Hauptstädte",
    "text": [
-    "Österreich hat 9 Bundesländer."
+    "Von Westen nach Osten: Ganz im Westen liegt Vorarlberg (Bregenz am Bodensee), dann Tirol (Innsbruck), dann Salzburg (Salzburg).",
+    "Im Süden liegen Kärnten (Klagenfurt am Wörthersee) und die Steiermark (Graz, zweitgrößte Stadt Österreichs).",
+    "Im Norden liegen Oberösterreich (Linz an der Donau) und Niederösterreich (St. Pölten), das flächenmäßig größte Bundesland.",
+    "Wien ist Bundeshauptstadt UND eigenes Bundesland, mitten in Niederösterreich.",
+    "Ganz im Osten liegt das Burgenland (Eisenstadt) mit dem Neusiedler See."
    ],
    "beispiel": "Wien – Wien\nNiederösterreich – St. Pölten\nOberösterreich – Linz\nSalzburg – Salzburg\nTirol – Innsbruck\nVorarlberg – Bregenz\nKärnten – Klagenfurt\nSteiermark – Graz\nBurgenland – Eisenstadt",
    "merke": "Merksatz für die Reihenfolge von West nach Ost: Vorarlberg, Tirol, Salzburg, Kärnten, Steiermark, Oberösterreich, Niederösterreich, Wien, Burgenland.",
-   "video": "Bundesländer Österreich Hauptstädte erklärt"
+   "video": "Bundesländer Österreich Hauptstädte erklärt",
+   "problem": "Österreich ist ein Bundesstaat aus 9 Bundesländern, jedes mit eigener Landeshauptstadt und eigener Landesregierung. Gefragt wird oft: Welche Hauptstadt gehört zu welchem Land und wo liegt es auf der Karte?",
+   "fehler": [
+    "Niederösterreich hat nicht Wien als Hauptstadt, sondern St. Pölten.",
+    "Klagenfurt (Kärnten) und Graz (Steiermark) vertauschen.",
+    "Linz liegt in Oberösterreich, nicht in Niederösterreich."
+   ],
+   "stichworte": [
+    "bundesland|hauptstadt|landeshauptstadt"
+   ]
+  },
+  {
+   "titel": "Wirtschaftssektoren und BIP",
+   "kurz": "Wie eine Volkswirtschaft aufgebaut ist",
+   "problem": "Wovon lebt ein Land? Um Volkswirtschaften zu vergleichen, teilt man die Arbeit in Sektoren ein und misst die Wirtschaftsleistung.",
+   "text": [
+    "Primärer Sektor: Gewinnung von Rohstoffen – Landwirtschaft, Forstwirtschaft, Fischerei, Bergbau.",
+    "Sekundärer Sektor: Verarbeitung – Industrie, Handwerk, Bau, Energie.",
+    "Tertiärer Sektor: Dienstleistungen – Handel, Banken, Tourismus, Bildung, Gesundheit. In Österreich arbeiten hier rund 70 % der Menschen.",
+    "Das Bruttoinlandsprodukt (BIP) ist der Wert aller Waren und Dienstleistungen, die in einem Land in einem Jahr hergestellt werden.",
+    "Eine Bevölkerungspyramide zeigt Alter und Geschlecht der Bevölkerung: breite Basis = viele junge Menschen, schmale Basis = alternde Gesellschaft.",
+    "Urbanisierung bedeutet Verstädterung: Immer mehr Menschen ziehen in Städte."
+   ],
+   "fehler": [
+    "Bank zum sekundären Sektor zählen – sie ist eine Dienstleistung (tertiär).",
+    "BIP mit Einwohnerzahl verwechseln."
+   ],
+   "merke": "Primär = Rohstoffe, sekundär = Verarbeitung, tertiär = Dienstleistung.",
+   "video": "Wirtschaftssektoren primär sekundär tertiär erklärt",
+   "stichworte": [
+    "sektor|bip|pyramide|urbanisierung|klimazone|erdbeben"
+   ]
   }
  ]
 }

@@ -117,14 +117,26 @@
    "titel": "das oder dass?",
    "kurz": "Der Ersatz-Trick",
    "text": [
-    "„das“ ist Artikel oder Pronomen, „dass“ verbindet Sätze."
+    "„das“ (mit einem s) ist entweder ein Artikel (das Buch), ein Hinweiswort (Das stimmt!) oder ein Relativpronomen, das sich auf ein Nomen davor bezieht (das Buch, das ich lese).",
+    "„dass“ (mit zwei s) ist ein Bindewort (Konjunktion). Es verbindet einen Hauptsatz mit einem Nebensatz und bezieht sich auf kein bestimmtes Wort: Ich hoffe, dass du kommst.",
+    "Der Ersatztrick: Kannst du „dieses“, „jenes“ oder „welches“ einsetzen, ohne dass der Satz kaputt geht? Dann schreibst du „das“. Geht es nicht, dann „dass“.",
+    "Vor „dass“ steht fast immer ein Komma, weil ein Nebensatz beginnt. Auch vor dem Relativpronomen „das“ steht ein Komma."
    ],
    "schritte": [
     "Kannst du „dieses“, „jenes“ oder „welches“ einsetzen? → das",
     "Geht das nicht? → dass"
    ],
    "beispiel": "Das Buch, das ich lese …  (welches ✓) → das\nIch hoffe, dass du kommst. (welches ✗) → dass",
-   "video": "das dass Unterschied einfach erklärt"
+   "video": "das dass Unterschied einfach erklärt",
+   "problem": "„das“ und „dass“ klingen gleich, haben aber ganz verschiedene Aufgaben. Das ist einer der häufigsten Fehler in Aufsätzen und Schularbeiten.",
+   "fehler": [
+    "„Ich glaube, das er kommt.“ – „welches er kommt“ geht nicht → dass.",
+    "„Das Haus, dass ich sehe.“ – „welches ich sehe“ geht → das.",
+    "Komma vor „dass“ vergessen."
+   ],
+   "stichworte": [
+    "\\bdass\\b"
+   ]
   },
   {
    "titel": "Stilmittel erkennen",
@@ -137,7 +149,47 @@
     "Anapher: gleicher Satzanfang wird wiederholt"
    ],
    "merke": "Bei der Analyse immer: Stilmittel nennen + Beispiel zitieren + Wirkung erklären.",
-   "video": "Stilmittel Deutsch Oberstufe erklärt"
+   "video": "Stilmittel Deutsch Oberstufe erklärt",
+   "problem": "In Gedichten, Reden und Werbung wird Sprache absichtlich „gestaltet“. Bei einer Textanalyse sollst du diese Stilmittel nicht nur erkennen, sondern auch erklären, was sie bewirken.",
+   "text": [
+    "Vergleich: Zwei Dinge werden mit „wie“ oder „als“ verbunden: stark wie ein Bär.",
+    "Metapher: ein Bild OHNE „wie“: Er ist ein Bär. Das Leben ist eine Reise.",
+    "Personifikation: Dinge oder Tiere handeln wie Menschen: Die Sonne lacht. Der Wind flüstert.",
+    "Alliteration: Mehrere Wörter beginnen mit demselben Laut: Milch macht müde Männer munter.",
+    "Anapher: Mehrere Sätze oder Verse beginnen gleich: Wir wollen … Wir wollen … Wir wollen …",
+    "Rhetorische Frage: Eine Frage, auf die keine Antwort erwartet wird: Wer will das schon?",
+    "Bei der Analyse gilt immer der Dreischritt: Stilmittel nennen, Textstelle zitieren, Wirkung erklären (z. B. „wirkt eindringlich“, „macht anschaulich“)."
+   ],
+   "fehler": [
+    "Vergleich und Metapher verwechseln – achte auf das „wie“.",
+    "Nur das Stilmittel nennen, ohne die Wirkung zu erklären.",
+    "Ohne Zitat arbeiten – immer die Stelle angeben."
+   ],
+   "stichworte": [
+    "stilmittel|metapher|vergleich|personifikation"
+   ]
+  },
+  {
+   "titel": "Indirekte Rede und Komma",
+   "kurz": "Konjunktiv I, Komma bei dass",
+   "problem": "In Inhaltsangaben, Berichten und Erörterungen gibst du wieder, was andere gesagt haben. Dafür verwendet man die indirekte Rede mit Konjunktiv I. Und: Bei Nebensätzen fehlen oft Kommas.",
+   "text": [
+    "Direkte Rede: Er sagte: „Ich bin krank.“ Indirekte Rede: Er sagte, er sei krank.",
+    "Konjunktiv I bildest du vom Wortstamm + e: er komme, sie habe, er sei, sie wisse.",
+    "Ist der Konjunktiv I gleich wie die normale Form (sie haben → sie haben), nimmst du den Konjunktiv II (sie hätten) oder „würde“.",
+    "Inhaltsangaben schreibt man im Präsens, ohne direkte Rede und ohne eigene Meinung.",
+    "Komma: Vor Nebensätzen mit dass, weil, obwohl, wenn, als, der/die/das (Relativsatz) steht immer ein Komma."
+   ],
+   "fehler": [
+    "Er sagte, er ist krank – richtig ist: er sei krank.",
+    "Inhaltsangabe im Präteritum schreiben.",
+    "Komma vor „dass“ vergessen."
+   ],
+   "merke": "Wiedergabe = Konjunktiv I. Nebensatz = Komma.",
+   "video": "indirekte Rede Konjunktiv I erklärt",
+   "stichworte": [
+    "konjunktiv|komma|präsens|inhaltsangabe|erörterung|kommentar"
+   ]
   }
  ]
 }

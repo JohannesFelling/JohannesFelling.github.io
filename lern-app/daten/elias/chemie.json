@@ -127,5 +127,30 @@
    "erklaerung": "",
    "id": "ch009"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Atombau und Periodensystem",
+   "kurz": "Protonen, Neutronen, Elektronen",
+   "problem": "Alles besteht aus Atomen. Wie ist ein Atom aufgebaut, und was verrät das Periodensystem über ein Element?",
+   "text": [
+    "Ein Atom hat einen winzigen Kern aus Protonen (positiv) und Neutronen (neutral). Um den Kern bewegen sich in der Hülle die Elektronen (negativ).",
+    "Die Ordnungszahl im Periodensystem ist die Anzahl der Protonen. Sie bestimmt, um welches Element es sich handelt. Im neutralen Atom ist die Zahl der Elektronen gleich groß.",
+    "Elementsymbole: H Wasserstoff, O Sauerstoff, C Kohlenstoff, N Stickstoff, Na Natrium, Cl Chlor, Fe Eisen.",
+    "Moleküle bestehen aus mehreren Atomen: H₂O ist Wasser (2 Wasserstoff, 1 Sauerstoff), CO₂ Kohlenstoffdioxid.",
+    "Reinstoffe bestehen aus nur einer Stoffart, Gemische aus mehreren. Trennen: Filtrieren (fest aus flüssig), Eindampfen (gelöstes Salz), Destillieren (zwei Flüssigkeiten).",
+    "pH-Wert: unter 7 sauer, 7 neutral, über 7 basisch."
+   ],
+   "fehler": [
+    "Na ist Natrium, nicht Stickstoff (das ist N).",
+    "Ordnungszahl mit Masse verwechseln.",
+    "Salzwasser lässt sich nicht filtrieren – das Salz ist gelöst."
+   ],
+   "merke": "Ordnungszahl = Protonen = Elektronen (im neutralen Atom).",
+   "video": "Atombau Periodensystem einfach erklärt",
+   "stichworte": [
+    "atom|elektron|proton|ordnungszahl|zeichen|h₂o|reinstoff|salz|ph"
+   ]
+  }
  ]
 }

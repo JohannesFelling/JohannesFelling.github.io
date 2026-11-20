@@ -142,7 +142,90 @@
    ],
    "beispiel": "P(0|1), Q(2|5)\nk = (5−1)/(2−0) = 2\nd = 1\nf(x) = 2x + 1",
    "merke": "k > 0: steigend, k < 0: fallend.",
-   "video": "lineare Funktion k und d bestimmen"
+   "video": "lineare Funktion k und d bestimmen",
+   "problem": "Eine lineare Funktion ist im Koordinatensystem eine gerade Linie. Mit nur zwei Zahlen, k und d, ist sie komplett beschrieben. Typische Aufgaben: k und d ablesen, aus zwei Punkten die Gleichung finden, Funktionswerte berechnen.",
+   "text": [
+    "d ist der Startwert: Dort schneidet die Gerade die y-Achse (bei x = 0). Bei f(x) = 2x + 1 ist das der Punkt (0|1).",
+    "k ist die Steigung: Gehst du 1 nach rechts, gehst du k nach oben (oder bei negativem k nach unten).",
+    "k aus zwei Punkten: k = (y2 − y1) / (x2 − x1), also „Höhenunterschied durch Seitenunterschied“ (Steigungsdreieck).",
+    "Wenn du k hast, setzt du einen Punkt ein und rechnest d aus: y = k · x + d → d = y − k · x.",
+    "Funktionswert: Für f(4) setzt du 4 für x ein: f(4) = 3 · 4 − 2 = 10."
+   ],
+   "fehler": [
+    "k und d vertauschen.",
+    "Bei der Steigung die Reihenfolge mischen: oben y2 − y1, unten aber x1 − x2.",
+    "Vorzeichen bei negativem k vergessen.",
+    "f(4) mit f · 4 verwechseln – f(4) heißt: x = 4 einsetzen."
+   ],
+   "stichworte": [
+    "f\\(x\\)",
+    "steigung",
+    "\\bk\\b.*\\bd\\b"
+   ]
+  },
+  {
+   "titel": "Gleichungen lösen (Oberstufe)",
+   "kurz": "Äquivalenzumformungen",
+   "problem": "Eine Gleichung lösen heißt, die Zahl für x zu finden, die die Gleichung wahr macht. In der Oberstufe kommen Klammern und mehrere Schritte dazu.",
+   "text": [
+    "Erlaubt ist jede Umformung, die du auf BEIDEN Seiten gleich machst: addieren, subtrahieren, multiplizieren, dividieren (nicht durch 0).",
+    "Reihenfolge: 1. Klammern auflösen, 2. zusammenfassen, 3. alle x auf eine Seite, alle Zahlen auf die andere, 4. durch die Zahl vor x dividieren.",
+    "Beispiel: 2(x + 4) = 18 → 2x + 8 = 18 → 2x = 10 → x = 5.",
+    "Gleichungssystem mit zwei Gleichungen: Addiere oder subtrahiere die Gleichungen so, dass eine Variable wegfällt. x + y = 10 und x − y = 4 addiert ergibt 2x = 14, also x = 7.",
+    "Probe: Lösung in die Ausgangsgleichung einsetzen."
+   ],
+   "fehler": [
+    "Bei 2(x + 4) nur das x mit 2 multiplizieren.",
+    "Vorzeichen beim Seitenwechsel vergessen.",
+    "Keine Probe machen."
+   ],
+   "merke": "Was du links tust, tust du auch rechts.",
+   "video": "Gleichungen lösen Klammern Äquivalenzumformung",
+   "stichworte": [
+    "löse|x\\s*=|gleichungssystem"
+   ]
+  },
+  {
+   "titel": "Potenzregeln",
+   "kurz": "Rechnen mit Hochzahlen",
+   "problem": "Potenzen sind abgekürzte Multiplikationen: 2⁴ = 2 · 2 · 2 · 2. Für das Rechnen damit gibt es Regeln, die man oft verwechselt.",
+   "text": [
+    "Gleiche Basis multiplizieren: Hochzahlen addieren. 2³ · 2⁴ = 2⁷.",
+    "Gleiche Basis dividieren: Hochzahlen subtrahieren. 5⁶ : 5² = 5⁴.",
+    "Potenz einer Potenz: Hochzahlen multiplizieren. (a²)³ = a⁶.",
+    "Jede Zahl hoch 0 ist 1, negative Hochzahl heißt Kehrwert: 2⁻³ = 1/8.",
+    "Binomische Formel: (a + b)² = a² + 2ab + b², NICHT a² + b²."
+   ],
+   "fehler": [
+    "2³ · 2⁴ = 2¹² – falsch, Hochzahlen werden addiert, nicht multipliziert.",
+    "(a + b)² = a² + b² – das Mittelglied 2ab fehlt.",
+    "Bei verschiedenen Basen die Regeln anwenden (2³ · 3⁴ geht nicht so)."
+   ],
+   "merke": "Mal → Hochzahlen plus. Potenz von Potenz → Hochzahlen mal.",
+   "video": "Potenzregeln einfach erklärt",
+   "stichworte": [
+    "potenz|exponent|\\^|²|³|⁴"
+   ]
+  },
+  {
+   "titel": "Prozentrechnung",
+   "kurz": "Erhöhen, verringern, Prozentsatz",
+   "problem": "Prozentaufgaben tauchen in Mathe, Wirtschaft und im Alltag auf. Der Schlüssel ist, den Grundwert, den Prozentsatz und den Prozentwert sauber zu unterscheiden.",
+   "text": [
+    "Grundwert G = das Ganze (100 %), Prozentsatz p % = der Anteil, Prozentwert W = der Anteil in Euro, Stück usw.",
+    "W = G · p / 100. Umgekehrt: p = W / G · 100 und G = W · 100 / p.",
+    "Erhöhen um p %: G · (1 + p/100). 80 € um 15 % erhöht = 80 · 1,15 = 92 €.",
+    "Verringern um p %: G · (1 − p/100). 20 % Rabatt = · 0,8."
+   ],
+   "fehler": [
+    "Nach einer Erhöhung um 10 % und Senkung um 10 % ist man NICHT wieder beim Anfangswert.",
+    "Durch p statt durch 100 teilen."
+   ],
+   "merke": "Erhöhen: mal (1 + p/100). Verringern: mal (1 − p/100).",
+   "video": "Prozentrechnung Grundwert Prozentwert erklärt",
+   "stichworte": [
+    "%|prozent"
+   ]
   }
  ]
 }

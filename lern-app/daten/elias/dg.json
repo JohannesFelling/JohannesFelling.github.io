@@ -87,5 +87,29 @@
    "erklaerung": "",
    "id": "dg006"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Grund- und Aufriss",
+   "kurz": "Ansichten von Körpern",
+   "problem": "In Darstellender Geometrie zeichnest du dreidimensionale Körper auf Papier. Dafür schaut man von verschiedenen Seiten genau senkrecht auf den Körper.",
+   "text": [
+    "Bei der Normalprojektion treffen die Projektionsstrahlen rechtwinklig auf die Bildebene. So bleiben Längen, die parallel zur Bildebene liegen, unverzerrt.",
+    "Der Grundriss ist die Ansicht von oben, der Aufriss die Ansicht von vorne, der Kreuzriss die Ansicht von der Seite.",
+    "Grund- und Aufriss werden untereinander gezeichnet und mit senkrechten Ordnungslinien verbunden: Ein Punkt hat in beiden Rissen dieselbe x-Koordinate.",
+    "Wichtige Körper: Würfel (8 Ecken, 12 Kanten, 6 Flächen), Quader, Prisma, Pyramide, Zylinder, Kegel (Kreis als Grundfläche und eine Spitze), Kugel.",
+    "Verdeckte Kanten werden strichliert gezeichnet."
+   ],
+   "fehler": [
+    "Grundriss und Aufriss vertauschen.",
+    "Ordnungslinien schräg zeichnen.",
+    "Verdeckte Kanten voll statt strichliert zeichnen."
+   ],
+   "merke": "Grundriss = von oben, Aufriss = von vorne.",
+   "video": "Grundriss Aufriss Darstellende Geometrie erklärt",
+   "stichworte": [
+    "riss|kanten|ecken|projektion|kegel|würfel"
+   ]
+  }
  ]
 }

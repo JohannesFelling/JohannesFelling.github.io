@@ -209,14 +209,26 @@
    "titel": "das oder dass?",
    "kurz": "Der Ersatz-Trick",
    "text": [
-    "„das“ ist Artikel oder Pronomen, „dass“ verbindet Sätze."
+    "„das“ (mit einem s) ist entweder ein Artikel (das Buch), ein Hinweiswort (Das stimmt!) oder ein Relativpronomen, das sich auf ein Nomen davor bezieht (das Buch, das ich lese).",
+    "„dass“ (mit zwei s) ist ein Bindewort (Konjunktion). Es verbindet einen Hauptsatz mit einem Nebensatz und bezieht sich auf kein bestimmtes Wort: Ich hoffe, dass du kommst.",
+    "Der Ersatztrick: Kannst du „dieses“, „jenes“ oder „welches“ einsetzen, ohne dass der Satz kaputt geht? Dann schreibst du „das“. Geht es nicht, dann „dass“.",
+    "Vor „dass“ steht fast immer ein Komma, weil ein Nebensatz beginnt. Auch vor dem Relativpronomen „das“ steht ein Komma."
    ],
    "schritte": [
     "Kannst du „dieses“, „jenes“ oder „welches“ einsetzen? → das",
     "Geht das nicht? → dass"
    ],
    "beispiel": "Das Buch, das ich lese …  (welches ✓) → das\nIch hoffe, dass du kommst. (welches ✗) → dass",
-   "video": "das dass Unterschied einfach erklärt"
+   "video": "das dass Unterschied einfach erklärt",
+   "problem": "„das“ und „dass“ klingen gleich, haben aber ganz verschiedene Aufgaben. Das ist einer der häufigsten Fehler in Aufsätzen und Schularbeiten.",
+   "fehler": [
+    "„Ich glaube, das er kommt.“ – „welches er kommt“ geht nicht → dass.",
+    "„Das Haus, dass ich sehe.“ – „welches ich sehe“ geht → das.",
+    "Komma vor „dass“ vergessen."
+   ],
+   "stichworte": [
+    "\\bdass\\b"
+   ]
   }
  ]
 }

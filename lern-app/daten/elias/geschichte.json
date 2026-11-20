@@ -101,5 +101,29 @@
    "erklaerung": "",
    "id": "gs007"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Quellen und Epochen",
+   "kurz": "Wie wir Vergangenheit erforschen",
+   "problem": "Woher wissen wir überhaupt, was vor 2000 Jahren passiert ist? Und wie teilt man die riesige Zeitspanne der Geschichte ein?",
+   "text": [
+    "Quellen sind alles, woraus wir etwas über die Vergangenheit erfahren: Texte, Bilder, Bauwerke, Werkzeuge, Münzen.",
+    "Primärquellen stammen aus der Zeit selbst (z. B. ein Brief aus dem Mittelalter). Sekundärquellen wurden später darüber geschrieben (z. B. ein Schulbuch).",
+    "Quellenkritik: Wer hat das wann und warum geschrieben? Wollte der Autor etwas Bestimmtes erreichen?",
+    "Epochen: Urgeschichte (bis ca. 3000 v. Chr.), Antike (bis 476 n. Chr., Ende des Weströmischen Reiches), Mittelalter (bis ca. 1500), Neuzeit.",
+    "Die Neolithische Revolution war der Übergang vom Jagen und Sammeln zu Ackerbau, Viehzucht und Sesshaftigkeit.",
+    "Im Jahr 800 wurde Karl der Große in Rom zum Kaiser gekrönt."
+   ],
+   "fehler": [
+    "Ein Schulbuch für eine Primärquelle halten.",
+    "Jahre v. Chr. falsch ordnen (rückwärts zählen)."
+   ],
+   "merke": "Primär = aus der Zeit. Sekundär = später darüber.",
+   "video": "Primärquelle Sekundärquelle einfach erklärt",
+   "stichworte": [
+    "quelle|epoche|revolution|kaiser|reich|demokratie|pyramide"
+   ]
+  }
  ]
 }

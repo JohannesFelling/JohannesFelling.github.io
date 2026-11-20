@@ -101,5 +101,28 @@
    "erklaerung": "",
    "id": "ku007"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Farbenlehre",
+   "kurz": "Grundfarben, Mischfarben, Komplementärfarben",
+   "problem": "Mit nur drei Farben kann man fast alle anderen mischen. Aber welche passen zusammen, welche bilden den stärksten Kontrast, und warum wirken manche Farben warm?",
+   "text": [
+    "Die drei Grundfarben (Primärfarben) beim Malen sind Gelb, Rot (Magenta) und Blau (Cyan). Sie lassen sich nicht aus anderen mischen.",
+    "Mischt man zwei Grundfarben, entstehen die Sekundärfarben: Gelb + Blau = Grün, Rot + Gelb = Orange, Rot + Blau = Violett.",
+    "Im Farbkreis stehen sich die Komplementärfarben gegenüber: Rot – Grün, Blau – Orange, Gelb – Violett. Nebeneinander leuchten sie besonders stark.",
+    "Warme Farben (Rot, Orange, Gelb) erinnern an Feuer und Sonne, kalte Farben (Blau, Türkis) an Wasser und Eis.",
+    "Berühmte Bilder: die Mona Lisa von Leonardo da Vinci, „Der Kuss“ vom Wiener Maler Gustav Klimt."
+   ],
+   "fehler": [
+    "Komplementärfarbe zu Rot ist Grün, nicht Blau.",
+    "Beim Licht (Bildschirm) sind die Grundfarben Rot, Grün, Blau – beim Malen nicht."
+   ],
+   "merke": "Gegenüber im Farbkreis = Komplementär = stärkster Kontrast.",
+   "video": "Farbenlehre Grundfarben Komplementärfarben erklärt",
+   "stichworte": [
+    "farbe|maler|malte|mona lisa|kuss"
+   ]
+  }
  ]
 }

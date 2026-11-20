@@ -237,7 +237,24 @@
     "Säugetiere: Fell, Junge trinken Milch."
    ],
    "merke": "Delfin und Wal sind Säugetiere, keine Fische!",
-   "video": "Wirbeltiere Klassen einfach erklärt"
+   "video": "Wirbeltiere Klassen einfach erklärt",
+   "problem": "Alle Tiere mit Wirbelsäule teilt man in 5 Klassen ein. Die Frage ist: An welchen Merkmalen erkennt man, wohin ein Tier gehört? Manche Tiere führen in die Irre, z. B. der Wal.",
+   "text": [
+    "Entscheidend sind Atmung, Haut, Fortpflanzung und Körpertemperatur.",
+    "Fische atmen mit Kiemen, haben Schuppen und sind wechselwarm (ihre Temperatur passt sich der Umgebung an).",
+    "Amphibien (Lurche) wie Frosch und Salamander leben als Larve (Kaulquappe) im Wasser mit Kiemen, später mit Lunge auch an Land. Ihre Haut ist feucht und nackt.",
+    "Reptilien (Kriechtiere) wie Eidechse, Schlange, Krokodil haben trockene Schuppenhaut, atmen mit Lungen und legen Eier mit fester Schale an Land.",
+    "Vögel haben Federn und Schnabel, sind gleichwarm und legen Eier.",
+    "Säugetiere haben (meist) Fell, sind gleichwarm, bringen lebende Junge zur Welt und säugen sie mit Milch. Auch Wal, Delfin und Fledermaus sind Säugetiere."
+   ],
+   "fehler": [
+    "Wal und Delfin sind keine Fische, sondern Säugetiere (Lunge, Milch).",
+    "Fledermaus ist kein Vogel, sondern ein Säugetier.",
+    "Schlangen sind Reptilien, keine Amphibien."
+   ],
+   "stichworte": [
+    "säugetier|reptil|amphib|wirbeltier|fisch|vogel"
+   ]
   }
  ]
 }

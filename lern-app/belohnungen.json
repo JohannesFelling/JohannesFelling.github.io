@@ -1,10 +1,31 @@
 {
   "stufen": [
-    { "sterne": 100, "belohnung": "🍫 Süßigkeit" },
-    { "sterne": 250, "belohnung": "🥤 Softdrink" },
-    { "sterne": 500, "belohnung": "🍦 Eis" },
-    { "sterne": 1000, "belohnung": "🎁 Überraschung nach Wahl" }
+    {
+      "sterne": 100,
+      "belohnung": "🍫 Süßigkeit nach Wahl (bis 2 €)"
+    },
+    {
+      "sterne": 250,
+      "belohnung": "🥤 Softdrink nach Wahl (bis 1,50 €)"
+    },
+    {
+      "sterne": 500,
+      "belohnung": "🍝 Lieblingsessen"
+    },
+    {
+      "sterne": 1500,
+      "belohnung": "🎬 Kinoabend – du suchst den Film aus"
+    },
+    {
+      "sterne": 5000,
+      "belohnung": "🎁 Überraschung (Papa wählt)"
+    }
   ],
-  "serie": { "tage": 7, "belohnung": "🍫 Süßigkeit" },
-  "test": { "belohnung": "🥤 Softdrink" }
+  "serie": {
+    "tage": 7,
+    "belohnung": "🍫 Süßigkeit nach Wahl (bis 2 €)"
+  },
+  "test": {
+    "belohnung": "🥤 Softdrink nach Wahl (bis 1,50 €)"
+  }
 }

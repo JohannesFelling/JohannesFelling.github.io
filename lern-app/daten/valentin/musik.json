@@ -115,5 +115,28 @@
    "erklaerung": "",
    "id": "mu008"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Noten lesen",
+   "kurz": "Notensystem, Notenwerte, Lautstärke",
+   "problem": "Noten sind die Schrift der Musik. Sie sagen, welcher Ton gespielt wird (Tonhöhe) und wie lange (Notenwert).",
+   "text": [
+    "Ein Notensystem hat 5 Linien. Je höher die Note steht, desto höher der Ton. Am Anfang steht der Notenschlüssel; der Violinschlüssel ist für hohe Töne, der Bassschlüssel für tiefe.",
+    "Notenwerte: Eine ganze Note dauert 4 Schläge, eine halbe 2, eine Viertelnote 1, eine Achtelnote einen halben Schlag. In eine ganze Note passen also 4 Viertel oder 8 Achtel.",
+    "Die Lautstärke steht auf Italienisch in den Noten: piano (p) = leise, forte (f) = laut, crescendo = lauter werdend, decrescendo = leiser werdend.",
+    "Instrumentengruppen: Streichinstrumente (Geige, Cello), Holzblasinstrumente (Flöte, Klarinette), Blechblasinstrumente (Trompete, Posaune), Schlaginstrumente (Trommel), Tasteninstrumente (Klavier).",
+    "Wolfgang Amadeus Mozart wurde 1756 in Salzburg geboren."
+   ],
+   "fehler": [
+    "piano heißt in den Noten nicht „Klavier spielen“, sondern leise.",
+    "Querflöte ist ein Holzblasinstrument, obwohl sie aus Metall ist (der Ton entsteht wie bei Holzflöten)."
+   ],
+   "merke": "Ganze = 4, Halbe = 2, Viertel = 1 Schlag.",
+   "video": "Noten lesen lernen einfach erklärt",
+   "stichworte": [
+    "note|linien|schlüssel|forte|piano|instrument|komponist"
+   ]
+  }
  ]
 }

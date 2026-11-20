@@ -136,14 +136,26 @@
    "titel": "Binärzahlen",
    "kurz": "Nur 0 und 1",
    "text": [
-    "Jede Stelle hat einen doppelt so großen Wert wie die rechts davon: 1, 2, 4, 8, 16 …"
+    "Im Zehnersystem hat jede Stelle den zehnfachen Wert der Stelle rechts davon: Einer, Zehner, Hunderter.",
+    "Im Binärsystem ist jede Stelle doppelt so viel wert: von rechts 1, 2, 4, 8, 16, 32, 64, 128.",
+    "Binär → dezimal: Schreib die Stellenwerte unter die Ziffern und addiere alle Werte, wo eine 1 steht. 1010 = 8 + 2 = 10.",
+    "Dezimal → binär: Suche den größten Stellenwert, der hineinpasst, schreib 1, zieh ihn ab und mach mit dem Rest weiter. 5 = 4 + 1 → 101.",
+    "8 Bit (8 Stellen) sind ein Byte. Damit kann man 256 verschiedene Werte (0 bis 255) darstellen."
    ],
    "schritte": [
     "Stellenwerte unter die Ziffern schreiben",
     "Wo eine 1 steht, den Wert addieren"
    ],
    "beispiel": "1 0 1 1\n8 4 2 1\n= 8 + 2 + 1 = 11",
-   "video": "Binärsystem umrechnen einfach erklärt"
+   "video": "Binärsystem umrechnen einfach erklärt",
+   "problem": "Computer kennen nur zwei Zustände: Strom an oder aus, also 1 oder 0. Damit trotzdem jede Zahl dargestellt werden kann, verwendet man das Zweiersystem (Binärsystem).",
+   "fehler": [
+    "Von links statt von rechts mit 1 zu zählen beginnen.",
+    "Stellen mit 0 vergessen: 5 ist 101, nicht 11."
+   ],
+   "stichworte": [
+    "binär|bit|byte"
+   ]
   }
  ]
 }

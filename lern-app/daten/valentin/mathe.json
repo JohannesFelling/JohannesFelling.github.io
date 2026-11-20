@@ -337,7 +337,11 @@
    "titel": "Brüche kürzen und erweitern",
    "kurz": "Gleich viel, andere Zahlen",
    "text": [
-    "Kürzen: Zähler und Nenner durch dieselbe Zahl teilen. Erweitern: beide mit derselben Zahl malnehmen. Der Wert bleibt gleich."
+    "Ein Bruch hat oben den Zähler (wie viele Teile du hast) und unten den Nenner (in wie viele Teile das Ganze geteilt ist).",
+    "Kürzen: Du teilst Zähler UND Nenner durch dieselbe Zahl. Stell dir eine Pizza vor: 4 von 8 Stücken sind genauso viel wie 1 von 2 großen Hälften.",
+    "Am schnellsten kürzt du mit dem größten gemeinsamen Teiler (ggT). Bei 12/18 ist das 6 → 2/3. Wenn du den ggT nicht siehst, kürze in mehreren kleinen Schritten (erst durch 2, dann durch 3).",
+    "Erweitern: Du multiplizierst Zähler und Nenner mit derselben Zahl. 1/4 mit 3 erweitert ist 3/12. Der Wert bleibt gleich, nur die Stücke werden kleiner und es sind mehr.",
+    "Vollständig gekürzt ist ein Bruch, wenn Zähler und Nenner keinen gemeinsamen Teiler außer 1 mehr haben."
    ],
    "schritte": [
     "Suche eine Zahl, durch die Zähler UND Nenner teilbar sind.",
@@ -346,13 +350,29 @@
    ],
    "beispiel": "12/18  → beide durch 6 →  2/3\n 1/4  → beide mal 3   →  3/12",
    "merke": "Was du oben machst, musst du auch unten machen.",
-   "video": "Brüche kürzen und erweitern einfach erklärt"
+   "video": "Brüche kürzen und erweitern einfach erklärt",
+   "problem": "Derselbe Anteil kann ganz verschieden aussehen: 1/2, 2/4 und 50/100 sind gleich viel. Beim Kürzen machst du einen Bruch „einfacher“, beim Erweitern bringst du ihn auf einen anderen Nenner – z. B. damit du ihn mit einem anderen Bruch addieren kannst.",
+   "fehler": [
+    "Nur oben oder nur unten teilen – dann ändert sich der Wert!",
+    "Durch eine Zahl kürzen, durch die nicht beide teilbar sind (z. B. 9/12 durch 2).",
+    "Zu früh aufhören: 8/12 → 4/6 ist noch nicht fertig, richtig ist 2/3.",
+    "Beim Erweitern Zahlen addieren statt multiplizieren."
+   ],
+   "stichworte": [
+    "kürz",
+    "erweiter",
+    "ggT"
+   ]
   },
   {
    "titel": "Brüche addieren",
    "kurz": "Erst gleicher Nenner, dann addieren",
    "text": [
-    "Brüche kann man nur addieren, wenn sie denselben Nenner haben."
+    "Gleiche Nenner: Einfach die Zähler addieren, der Nenner bleibt. 2/7 + 3/7 = 5/7.",
+    "Verschiedene Nenner: Zuerst einen gemeinsamen Nenner suchen. Am besten das kleinste gemeinsame Vielfache (kgV). Bei 2 und 4 ist das 4, bei 3 und 4 ist es 12.",
+    "Dann jeden Bruch so erweitern, dass er diesen Nenner hat. Danach Zähler addieren.",
+    "Subtrahieren funktioniert genauso, nur mit minus.",
+    "Zum Schluss kürzen, wenn es geht, und unechte Brüche (Zähler größer als Nenner) eventuell als gemischte Zahl schreiben: 7/4 = 1 3/4."
    ],
    "schritte": [
     "Gemeinsamen Nenner finden (kgV der Nenner).",
@@ -362,7 +382,19 @@
    ],
    "beispiel": "1/2 + 1/4\n= 2/4 + 1/4\n= 3/4",
    "merke": "Nenner werden nie addiert!",
-   "video": "Brüche addieren mit verschiedenen Nennern erklärt"
+   "video": "Brüche addieren mit verschiedenen Nennern erklärt",
+   "problem": "1/2 + 1/4 ist NICHT 2/6. Brüche kann man nur zusammenzählen, wenn die Stücke gleich groß sind, also wenn die Nenner gleich sind. Sonst würdest du Halbe und Viertel zusammenwerfen wie Äpfel und Birnen.",
+   "fehler": [
+    "Nenner addieren: 1/2 + 1/4 = 2/6 ist falsch.",
+    "Nur den Nenner erweitern, den Zähler vergessen.",
+    "Am Ende das Kürzen vergessen.",
+    "Als Dezimalzahl: 1/2 = 0,5 und 1/4 = 0,25 → zusammen 0,75 (gute Probe!)."
+   ],
+   "stichworte": [
+    "\\d/\\d+ \\+ \\d/\\d+",
+    "\\d/\\d+ − \\d/\\d+",
+    "gemeinsame[nr]? nenner|kgv"
+   ]
   },
   {
    "titel": "Dezimalzahlen addieren und subtrahieren",
@@ -375,13 +407,35 @@
    ],
    "beispiel": "  3,50\n+ 2,75\n------\n  6,25",
    "merke": "Komma unter Komma.",
-   "video": "Dezimalzahlen schriftlich addieren subtrahieren"
+   "video": "Dezimalzahlen schriftlich addieren subtrahieren",
+   "problem": "Bei Dezimalzahlen (Kommazahlen) passieren Fehler fast immer, weil die Stellen nicht richtig untereinander stehen. Zehntel müssen zu Zehnteln, Hundertstel zu Hundertsteln.",
+   "text": [
+    "Die Ziffern nach dem Komma sind Zehntel, Hundertstel, Tausendstel. 3,5 heißt 3 Ganze und 5 Zehntel. 3,50 ist genau gleich viel – eine 0 am Ende ändert nichts.",
+    "Schreib die Zahlen so untereinander, dass Komma unter Komma steht. Fehlende Stellen füllst du mit 0 auf, damit beide Zahlen gleich viele Nachkommastellen haben.",
+    "Dann rechnest du von rechts nach links wie mit ganzen Zahlen, mit Übertrag.",
+    "Im Ergebnis steht das Komma genau an derselben Stelle.",
+    "Bei Subtraktion besonders wichtig: 7 − 2,6 → schreib 7,0 − 2,6 = 4,4."
+   ],
+   "fehler": [
+    "Rechtsbündig statt kommabündig schreiben: 2,4 + 3,85 wird dann falsch.",
+    "7 − 2,6 = 5,4 – die Zehntel wurden vergessen (richtig 4,4).",
+    "Komma im Ergebnis vergessen oder verschoben.",
+    "Überschlag hilft: 2,4 + 3,85 ist ungefähr 2 + 4 = 6."
+   ],
+   "stichworte": [
+    "\\d,\\d+ [+−-] \\d",
+    "\\d [+−-] \\d,\\d"
+   ]
   },
   {
    "titel": "Umfang und Flächeninhalt vom Rechteck",
    "kurz": "u = 2·(a+b),  A = a·b",
    "text": [
-    "Der Umfang ist der Weg einmal rundherum. Der Flächeninhalt ist, wie viel Fläche drinnen ist."
+    "Ein Rechteck hat zwei Seitenlängen: die Länge a und die Breite b. Gegenüberliegende Seiten sind gleich lang.",
+    "Umfang u: einmal rundherum gehen: a + b + a + b, kurz u = 2 · (a + b). Einheit: cm, m …",
+    "Flächeninhalt A: wie viele Einheitsquadrate (1 cm × 1 cm) passen hinein? Das sind a Reihen mit je b Quadraten, also A = a · b. Einheit: cm², m² …",
+    "Beim Quadrat sind alle Seiten gleich: u = 4 · a und A = a · a.",
+    "Wichtig: Beide Seiten müssen dieselbe Einheit haben. 2 m und 50 cm → zuerst 200 cm und 50 cm."
    ],
    "schritte": [
     "Länge a und Breite b ablesen (gleiche Einheit!).",
@@ -390,13 +444,29 @@
    ],
    "beispiel": "a = 6 cm, b = 4 cm\nu = 2·(6+4) = 20 cm\nA = 6·4 = 24 cm²",
    "merke": "Umfang in cm, Fläche in cm².",
-   "video": "Umfang und Flächeninhalt Rechteck erklärt"
+   "video": "Umfang und Flächeninhalt Rechteck erklärt",
+   "problem": "Umfang und Fläche werden oft verwechselt. Der Umfang ist der Zaun rund um den Garten (eine Länge). Der Flächeninhalt ist der Rasen drinnen (eine Fläche). Darum haben sie auch verschiedene Einheiten.",
+   "fehler": [
+    "Einheit vergessen oder cm statt cm² bei der Fläche.",
+    "u = a + b (nur halb herum gerechnet).",
+    "Verschiedene Einheiten mischen (m mit cm).",
+    "Fläche und Umfang verwechselt – frag dich: Zaun oder Rasen?"
+   ],
+   "stichworte": [
+    "rechteck",
+    "umfang",
+    "fläche"
+   ]
   },
   {
    "titel": "Einfache Gleichungen lösen",
    "kurz": "x allein auf eine Seite bringen",
    "text": [
-    "Eine Gleichung ist wie eine Waage: Was du links machst, musst du auch rechts machen."
+    "Stell dir eine Waage vor, die im Gleichgewicht ist. Wenn du auf einer Seite etwas wegnimmst, musst du auf der anderen Seite genau dasselbe wegnehmen, sonst kippt sie.",
+    "Ziel: x soll ganz allein auf einer Seite stehen.",
+    "Dafür machst du das Gegenteil von dem, was mit x passiert: Steht + 15 bei x, rechnest du auf beiden Seiten − 15. Steht 4 · x, teilst du beide Seiten durch 4.",
+    "Bei längeren Gleichungen wie 3x − 7 = 11 gehst du in zwei Schritten: zuerst + 7 (→ 3x = 18), dann : 3 (→ x = 6).",
+    "Mach am Ende immer die Probe: x in die ursprüngliche Gleichung einsetzen. Stimmt beides überein, ist es richtig."
    ],
    "schritte": [
     "Was passiert mit x? (+, −, ·, :)",
@@ -405,13 +475,29 @@
    ],
    "beispiel": "x + 15 = 42   | −15\n     x = 27\n\n4 · x = 36    | :4\n     x = 9",
    "merke": "Immer auf beiden Seiten dasselbe tun.",
-   "video": "Gleichungen lösen einfach erklärt Klasse 6"
+   "video": "Gleichungen lösen einfach erklärt Klasse 6",
+   "problem": "In einer Gleichung ist eine Zahl versteckt, das x. Du sollst herausfinden, welche Zahl x sein muss, damit links und rechts gleich viel herauskommt.",
+   "fehler": [
+    "Nur auf einer Seite rechnen.",
+    "Falsche Umkehrung: bei + 15 wird nicht + 15, sondern − 15 gerechnet.",
+    "Bei 2(x + 4) die Klammer falsch auflösen: richtig 2x + 8.",
+    "Die Probe weglassen – sie findet fast jeden Fehler."
+   ],
+   "stichworte": [
+    "\\bx\\s*=",
+    "löse",
+    "gleichung"
+   ]
   },
   {
    "titel": "Prozent",
    "kurz": "Hundertstel",
    "text": [
-    "Prozent heißt „von Hundert“. 25 % = 25/100 = 1/4."
+    "1 % ist ein Hundertstel. 25 % sind 25 Hundertstel, also ein Viertel.",
+    "Den Grundwert (das Ganze, z. B. 80 €) teilst du durch 100, dann hast du 1 %. Das mal die Prozentzahl ergibt den Prozentwert.",
+    "Merk dir die Abkürzungen: 50 % = die Hälfte, 25 % = ein Viertel, 10 % = durch 10, 1 % = durch 100, 20 % = ein Fünftel.",
+    "Preis erhöhen um 15 %: neuer Preis = alter Preis + 15 % davon. Oder schneller: alter Preis · 1,15.",
+    "Rabatt 20 %: du zahlst nur noch 80 %, also Preis · 0,8."
    ],
    "schritte": [
     "Grundwert durch 100 teilen (= 1 %).",
@@ -419,7 +505,17 @@
    ],
    "beispiel": "25 % von 80\n80 : 100 = 0,8\n0,8 · 25 = 20",
    "merke": "50 % = Hälfte, 25 % = Viertel, 10 % = durch 10.",
-   "video": "Prozentrechnung einfach erklärt"
+   "video": "Prozentrechnung einfach erklärt",
+   "problem": "Prozent begegnet dir überall: 20 % Rabatt, 50 % Akku, 10 % Trinkgeld. „Prozent“ heißt einfach „von hundert“. Die Frage ist immer: Wie viel ist ein bestimmter Anteil von einer Menge?",
+   "fehler": [
+    "Durch die Prozentzahl teilen statt durch 100.",
+    "Bei Erhöhung nur die 15 % ausrechnen und vergessen, sie dazuzuzählen.",
+    "Prozentpunkte und Prozent verwechseln (Oberstufe)."
+   ],
+   "stichworte": [
+    "%",
+    "prozent"
+   ]
   }
  ]
 }

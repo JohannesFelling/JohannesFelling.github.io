@@ -87,5 +87,28 @@
    "erklaerung": "",
    "id": "te006"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Werkzeuge und Werkstoffe",
+   "kurz": "Holz, Metall, sicher arbeiten",
+   "problem": "In Technik und Design baust du selbst Dinge. Dafür musst du wissen, welches Material sich wofür eignet, welches Werkzeug du brauchst und wie du sicher arbeitest.",
+   "text": [
+    "Holz ist ein nachwachsender Rohstoff. Man sägt es mit der Laubsäge (feine Formen) oder der Feinsäge (gerade Schnitte) und glättet es mit Schleifpapier, immer in Faserrichtung.",
+    "Metalle wie Kupfer und Aluminium leiten Strom und Wärme gut. Darum sind Kabel innen aus Kupfer und außen mit Kunststoff isoliert.",
+    "Kunststoff, Holz und Papier leiten Strom (fast) nicht. Sie heißen Isolatoren.",
+    "Sicherheit: Werkstück immer fest einspannen, lange Haare zusammenbinden, beim Bohren keine Handschuhe (sie können sich einwickeln), Schutzbrille tragen.",
+    "Ein Hebel spart Kraft: Je länger der Hebelarm, desto weniger Kraft brauchst du (z. B. Brechstange, Schere, Flaschenöffner)."
+   ],
+   "fehler": [
+    "Beim Bohren Handschuhe tragen – gefährlich!",
+    "Gegen die Faser schleifen – das gibt Kratzer."
+   ],
+   "merke": "Erst einspannen, dann sägen oder bohren.",
+   "video": "Werkstoffe Holz Metall Kunststoff Technik Unterricht",
+   "stichworte": [
+    "werkzeug|holz|säge|bohr|strom|schleif|hebel"
+   ]
+  }
  ]
 }

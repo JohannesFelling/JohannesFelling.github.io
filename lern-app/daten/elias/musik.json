@@ -101,5 +101,30 @@
    "erklaerung": "",
    "id": "mu007"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Intervalle und Dreiklänge",
+   "kurz": "Abstände zwischen Tönen",
+   "problem": "Musik klingt fröhlich oder traurig, je nachdem, welche Töne zusammenklingen. Dafür misst man die Abstände zwischen Tönen (Intervalle).",
+   "text": [
+    "Ein Halbton ist der kleinste Abstand, z. B. e–f oder h–c, auf dem Klavier von einer Taste zur direkt nächsten.",
+    "Wichtige Intervalle: kleine Terz = 3 Halbtöne (c–es), große Terz = 4 Halbtöne (c–e), Quinte = 7 Halbtöne (c–g).",
+    "Ein Dur-Dreiklang besteht aus Grundton, großer Terz und Quinte: C-Dur = c–e–g. Er klingt hell und fröhlich.",
+    "Ein Moll-Dreiklang hat eine kleine Terz: c-Moll = c–es–g. Er klingt eher traurig.",
+    "Vorzeichen: G-Dur hat 1 Kreuz (fis), D-Dur 2 Kreuze, F-Dur 1 b (b).",
+    "Epochen: Barock (Bach, Vivaldi), Klassik (Mozart, Haydn, Beethoven), Romantik (Schubert).",
+    "Taktarten: 3/4-Takt wie beim Walzer, 4/4-Takt in Pop und Rock."
+   ],
+   "fehler": [
+    "Halbtöne falsch zählen: vom Startton aus zählen, nicht den Startton mitzählen.",
+    "Dur und Moll vertauschen."
+   ],
+   "merke": "Dur = große Terz unten, Moll = kleine Terz unten.",
+   "video": "Intervalle Dreiklänge Dur Moll erklärt",
+   "stichworte": [
+    "intervall|dreiklang|terz|vorzeichen|epoche|crescendo|takt"
+   ]
+  }
  ]
 }

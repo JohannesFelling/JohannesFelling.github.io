@@ -145,7 +145,12 @@
    "titel": "Aggregatzustände",
    "kurz": "fest, flüssig, gasförmig",
    "text": [
-    "Im Teilchenmodell bewegen sich die Teilchen umso schneller, je wärmer es ist."
+    "Alle Stoffe bestehen aus winzigen Teilchen, die sich ständig bewegen. Je wärmer, desto schneller.",
+    "Fest: Die Teilchen sitzen dicht und geordnet und schwingen nur an ihrem Platz. Der Körper hat eine feste Form.",
+    "Flüssig: Die Teilchen sind noch nah beieinander, können sich aber aneinander vorbeischieben. Flüssigkeiten passen sich der Form des Gefäßes an.",
+    "Gasförmig: Die Teilchen fliegen frei und weit auseinander durch den Raum. Gase füllen jeden Raum aus.",
+    "Übergänge: Schmelzen (fest → flüssig), Erstarren (flüssig → fest), Verdampfen (flüssig → gasförmig), Kondensieren (gasförmig → flüssig). Wasser schmilzt bei 0 °C und siedet bei 100 °C.",
+    "Beim Erwärmen dehnen sich die meisten Stoffe aus, weil die Teilchen mehr Platz brauchen."
    ],
    "schritte": [
     "fest: Teilchen dicht, schwingen am Platz",
@@ -153,7 +158,15 @@
     "gasförmig: Teilchen fliegen frei herum"
    ],
    "beispiel": "fest → flüssig: Schmelzen\nflüssig → fest: Erstarren\nflüssig → gasförmig: Verdampfen\ngasförmig → flüssig: Kondensieren",
-   "video": "Aggregatzustände Teilchenmodell erklärt"
+   "video": "Aggregatzustände Teilchenmodell erklärt",
+   "problem": "Wasser kann Eis, flüssig oder Dampf sein. Wie ist das möglich, wenn es doch immer derselbe Stoff ist? Die Antwort liefert das Teilchenmodell.",
+   "fehler": [
+    "Kondensieren und Verdampfen vertauschen.",
+    "Glauben, die Teilchen selbst würden größer – sie bewegen sich nur stärker und brauchen mehr Platz."
+   ],
+   "stichworte": [
+    "aggregat|schmelz|verdampf|erstarr|kondens|teilchen|gefriert"
+   ]
   }
  ]
 }

@@ -115,5 +115,29 @@
    "erklaerung": "",
    "id": "dg008"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Sicher im Internet",
+   "kurz": "Passwörter, Phishing, Fake News",
+   "problem": "Im Internet bist du nicht nur Zuschauer, sondern hinterlässt Spuren. Die wichtigsten Fragen: Wie schütze ich meine Konten, was gebe ich preis, und wie erkenne ich Betrug und falsche Nachrichten?",
+   "text": [
+    "Ein gutes Passwort ist lang (mindestens 12 Zeichen), hat Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen und enthält keinen Namen und kein Geburtsdatum. Ein Trick: mehrere Wörter verbinden, z. B. T!ger-Blau-42-Wolke. Für jedes Konto ein eigenes Passwort.",
+    "Phishing: Betrüger schicken Nachrichten, die aussehen wie von der Bank, einem Spiel oder einem Freund, und wollen dein Passwort. Niemals Passwörter über einen Link eingeben, der per Nachricht kommt.",
+    "Persönliche Daten wie Adresse, Telefonnummer, Schule oder Fotos von dir zu Hause gehören nicht öffentlich ins Netz.",
+    "Fake News erkennst du oft an reißerischen Überschriften, fehlenden Quellen und daran, dass keine seriöse Seite darüber berichtet.",
+    "Hardware ist alles, was man anfassen kann (Bildschirm, Tastatur). Software sind Programme und Apps."
+   ],
+   "fehler": [
+    "Überall dasselbe Passwort verwenden.",
+    "Auf „Du hast gewonnen!“-Nachrichten klicken.",
+    "Glauben, was oft geteilt wird, muss stimmen."
+   ],
+   "merke": "Erst denken, dann klicken. Im Zweifel einen Erwachsenen fragen.",
+   "video": "sicheres Passwort Phishing erklärt Kinder",
+   "stichworte": [
+    "passwort|phishing|fake|posten|cyber|hardware|software|suchanfrage"
+   ]
+  }
  ]
 }
