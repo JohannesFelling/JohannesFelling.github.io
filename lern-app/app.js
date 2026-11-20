@@ -434,8 +434,10 @@ function fachSeite() {
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     modusWahl(),
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
-    FOTO[fach.id] ? el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("kamera"), el("div", {}, el("div", { class: "fach-name" }, `Foto hochladen: ${FOTO[fach.id].titel}`), el("small", {}, FOTO[fach.id].kurz))) : null,
-    el("button", { class: "fach klein-fach material-knopf", onclick: materialSeite }, ic("plus"), el("div", {}, el("div", { class: "fach-name" }, "Neues Material hochladen"), el("small", {}, "Buch, Heft oder Arbeitsblatt fotografieren – daraus werden Übungen"))),
+    el("div", { class: "label hochladen-label" }, "Hochladen"),
+    el("div", { class: "raster zwei hochladen" },
+      el("button", { class: "fach klein-fach material-knopf", onclick: materialSeite }, ic("plus"), el("div", {}, el("div", { class: "fach-name" }, "Lernmaterial"), el("small", {}, "Buch- oder Heftseiten → daraus werden Übungen, Erklärungen und ein Test"))),
+      el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("kamera"), el("div", {}, el("div", { class: "fach-name" }, "Aufgabe zur Korrektur"), el("small", {}, fotoText().kurz)))),
     (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
       (daten.wissen || []).length ? el("button", { class: "fach klein-fach", onclick: wissenListe }, ic("wissen"), el("div", {}, el("div", { class: "fach-name" }, "Wissen"), el("small", {}, `${daten.wissen.length} Erklärungen + Videos`))) : null,
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
@@ -677,7 +679,7 @@ function wissenFuer(q) {
 // ---------- Aufsatzkorrektur (Foto → Firestore → Korrektur kommt zurück) ----------
 // ---------- Unterrichtsmaterial hochladen (mehrere Fotos → Firestore „material“ → stündlich zu Übungen verarbeitet) ----------
 async function materialSeite() {
-  setzeKopf("Material", fachSeite);
+  setzeKopf("Lernmaterial", fachSeite);
   if (gast || !wolke || !fb) {
     zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Material hochladen"), el("p", {}, gast ? "Im Testkonto nicht verfügbar – dafür muss ein Kind angemeldet sein." : "Dafür musst du angemeldet sein.")));
     return;
@@ -721,8 +723,8 @@ async function materialSeite() {
     } catch (e) { console.error(e); info.replaceChildren(el("div", { class: "feedback nein" }, "Hochladen hat nicht geklappt. Ist das Internet an?")); senden.disabled = false; }
   });
   zeige(
-    el("div", { class: "karte" }, el("div", { class: "label" }, `${fach.name} · Material`), el("h2", {}, "Neues Material hochladen"),
-      el("p", { class: "klein" }, "Fotografiere die Seiten aus Buch, Heft oder Arbeitsblatt – gerade von oben, bei gutem Licht. Du kannst viele Fotos auf einmal hochladen (bis 20)."),
+    el("div", { class: "karte" }, el("div", { class: "label" }, `${fach.name} · Material`), el("h2", {}, "Lernmaterial hochladen"),
+      el("p", { class: "klein" }, "Hier kommt LERNSTOFF hin: Seiten aus Buch, Heft-Mitschrift oder Arbeitsblatt (deine eigenen Lösungen bitte unter „Aufgabe zur Korrektur“). Fotografiere gerade von oben, bei gutem Licht. Du kannst viele Fotos auf einmal hochladen (bis 20)."),
       kapitel,
       el("div", { class: "raster zwei" },
         el("button", { class: "knopf zweit", onclick: () => kamera.click() }, ic("kamera"), "Foto machen"),
@@ -753,8 +755,9 @@ const FOTO = {
   mathe: { titel: "Rechnung kontrollieren", kurz: "Rechnungen fotografieren, Lösungen prüfen lassen", ding: "Rechnung", platz: "Aufgabe (z. B. „Buch S. 45, Nr. 3–6“)", tipps: "Tipps zum Rechnen", besser: "Richtiger Rechenweg" },
 };
 const fotoFach = a => a.fach || "deutsch";
+const fotoText = (f = fach.id) => FOTO[f] || { titel: "Aufgabe korrigieren", kurz: "Hausübung oder Lösung fotografieren, Korrektur kommt in die App", ding: "Aufgabe", platz: "Aufgabe (z. B. „Buch S. 30, Nr. 2“)", tipps: "Tipps für das nächste Mal", besser: "Richtige Lösung" };
 async function aufsatzListe() {
-  const T = FOTO[fach.id] || FOTO.deutsch;
+  const T = fotoText();
   setzeKopf(T.ding, fachSeite);
   if (gast || !wolke || !fb) {
     zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Foto-Korrektur"), el("h2", {}, T.titel),
@@ -786,8 +789,8 @@ async function aufsatzListe() {
     } catch (e) { console.error(e); info.replaceChildren(el("div", { class: "feedback nein" }, "Hochladen hat nicht geklappt. Ist das Internet an?")); senden.disabled = false; }
   });
   zeige(
-    el("div", { class: "karte" }, el("div", { class: "label" }, "Foto-Korrektur"), el("h2", {}, T.titel),
-      el("p", { class: "klein" }, "Fotografiere gerade von oben, bei gutem Licht. Mehrere Seiten: jede Seite einzeln abgeben."),
+    el("div", { class: "karte" }, el("div", { class: "label" }, `${fach.name} · Aufgabe zur Korrektur`), el("h2", {}, T.titel),
+      el("p", { class: "klein" }, "Hier lädst du DEINE Lösung hoch (Aufsatz, Hausübung, Rechnung). Lernstoff aus dem Buch gehört zu „Lernmaterial“. Fotografiere gerade von oben, bei gutem Licht. Mehrere Seiten: jede Seite einzeln abgeben."),
       aufgabe, senden, datei, info),
     el("div", { class: "label" }, "Meine Abgaben"),
     liste.length ? null : el("p", { class: "hinweis" }, "Noch nichts abgegeben."),
@@ -796,7 +799,7 @@ async function aufsatzListe() {
       ic(a.status === "korrigiert" ? "haken" : "schloss"))));
 }
 function aufsatzZeigen(a) {
-  const k = a.korrektur || {}, T = FOTO[fotoFach(a)] || FOTO.deutsch;
+  const k = a.korrektur || {}, T = fotoText(fotoFach(a));
   setzeKopf("Korrektur", aufsatzListe);
   const farbe = { Rechenfehler: "#ff4d5e", Rechenweg: "#ffb703", Einheit: "#8b8bff", Vokabel: "#2ee59d", Rechtschreibung: "#ff4d5e", Grammatik: "#ffb703", Zeichensetzung: "#8b8bff", Ausdruck: "#2ee59d", Inhalt: "#9a9aae" };
   zeige(

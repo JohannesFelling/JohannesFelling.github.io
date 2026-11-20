@@ -251,3 +251,5 @@ body.thema-sport{
 .foto-klein span{position:absolute;left:4px;bottom:4px;background:#000c;color:#fff;font-size:.75rem;font-weight:800;padding:1px 6px;border-radius:6px}
 .foto-weg{position:absolute;top:4px;right:4px;width:24px;height:24px;border-radius:50%;border:none;background:#000c;color:#fff;cursor:pointer;font-size:.8rem;line-height:1}
 .raster.zwei .knopf{margin:0}
+.hochladen-label{margin-top:14px}.hochladen .fach-name{font-size:1.05rem}
+.hochladen .aufsatz-knopf{flex-direction:column;align-items:stretch;justify-content:space-between;gap:10px;margin-bottom:0;min-height:118px}.hochladen .aufsatz-knopf .ic,.hochladen .material-knopf .ic{font-size:1.7rem;color:var(--akzent)}.hochladen{margin-bottom:12px}
