@@ -944,9 +944,36 @@ async function elternSeite(alle, lokal) {
         el("div", { class: "klein" }, punkte(p.id, sterne), ` · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
         el("div", { class: "klein" }, letzt ? `Zuletzt aktiv: ${datumDE(letzt.d)} ${letzt.t}` : "Noch nicht aktiv"));
     })),
+    lokal ? null : eingangKarte(),
     reiter, tab,
     lokal ? null : el("button", { class: "reset", onclick: elternAbmelden }, "Eltern-Bereich abmelden"));
   zeigeKind(PERSONEN[0]);
+}
+// Eingang: was die Kinder hochgeladen haben und noch auf den Korrektur-Lauf wartet
+const KORREKTUR_TEXT = "Jetzt korrigieren";
+function eingangKarte() {
+  const box = el("div", { class: "karte eingang" }, el("div", { class: "label" }, "Eingang"), el("p", { class: "klein" }, "Lade …"));
+  (async () => {
+    const holen = async (col, status) => { const r = []; const snap = await fb.F.getDocs(fb.F.query(fb.F.collection(fb.db, col), fb.F.where("status", "==", status))); snap.forEach(d => r.push(Object.assign({ id: d.id }, d.data()))); return r; };
+    let abg, mat;
+    try { [abg, mat] = await Promise.all([holen("aufsaetze", "offen"), holen("material", "neu")]); }
+    catch (e) { console.error(e); box.replaceChildren(el("div", { class: "label" }, "Eingang"), el("p", { class: "klein" }, "Die Liste der Uploads kann noch nicht gelesen werden – in Firebase fehlt dafür noch eine Leseregel fürs Papa-Konto.")); return; }
+    const pakete = Object.values(mat.reduce((m, x) => { (m[x.paket] = m[x.paket] || { ...x, n: 0 }).n++; return m; }, {}));
+    const name = id => (PERSONEN.find(p => p.id === id) || { name: id || "?" }).name;
+    const fname = id => (FAECHER.find(f => f.id === id) || { name: id || "Deutsch" }).name;
+    const n = abg.length + pakete.length, dt = d => (d || "").replace(/^(\d{4})-(\d\d)-(\d\d)/, "$3.$2.");
+    if (!n) { box.replaceChildren(el("div", { class: "label" }, "Eingang"), el("p", { class: "klein" }, "✓ Nichts offen. Alles, was die Burschen hochgeladen haben, ist schon verarbeitet.")); return; }
+    const kopieren = async () => { try { await navigator.clipboard.writeText(KORREKTUR_TEXT); } catch (e) {} window.open("https://claude.ai/", "_blank", "noopener"); };
+    box.classList.add("neu");
+    box.replaceChildren(
+      el("div", { class: "eingang-kopf" }, el("div", { class: "label" }, "Eingang"), el("span", { class: "eingang-zahl" }, String(n))),
+      el("h2", {}, n === 1 ? "1 neuer Upload wartet" : `${n} neue Uploads warten`),
+      ...abg.map(a => el("div", { class: "zeile" }, el("span", {}, `📝 ${name(a.kind)} · ${fname(a.fach)}${a.aufgabe ? ` · ${a.aufgabe}` : ""}`), el("b", {}, dt(a.datum)))),
+      ...pakete.map(m => el("div", { class: "zeile" }, el("span", {}, `📚 ${name(m.kind)} · ${fname(m.fach)} · ${m.kapitel || "Lernmaterial"} (${m.n} Fotos)`), el("b", {}, dt(m.datum)))),
+      el("p", { class: "klein" }, "Der automatische Lauf holt das spätestens zur nächsten vollen Stunde (jeweils um :12). Sofort geht's mit dem Knopf: er öffnet Claude, dort einfach „Jetzt korrigieren“ ins Projekt schreiben (der Text ist schon kopiert)."),
+      el("button", { class: "knopf", onclick: kopieren }, ic("play"), "Jetzt korrigieren"));
+  })();
+  return box;
 }
 async function elternReset(p, f, st, lokal) {
   if (!confirm(`Übungs-Fortschritt in ${f.name} für ${p.name} wirklich löschen? (Punkte, Runden und offene Fragen in diesem Fach. Gutscheine, Tests und Lernzeit bleiben.)`)) return;

@@ -207,3 +207,7 @@ input.eingabe:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
 .raster.zwei .knopf{margin:0}
 .hochladen-label{margin-top:14px}.hochladen .fach-name{font-size:1.05rem}
 .hochladen .aufsatz-knopf{flex-direction:column;align-items:stretch;justify-content:space-between;gap:10px;margin-bottom:0;min-height:118px}.hochladen .aufsatz-knopf .ic,.hochladen .material-knopf .ic{font-size:1.7rem;color:var(--akzent)}.hochladen{margin-bottom:12px}
+
+.eingang.neu{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent),0 10px 40px var(--glow)}
+.eingang-kopf{display:flex;justify-content:space-between;align-items:center}
+.eingang-zahl{min-width:28px;height:28px;padding:0 8px;border-radius:99px;background:#ff3b30;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 0 0 0 #ff3b3088;animation:puls 1.6s infinite}
