@@ -324,18 +324,18 @@ function geschenkWege() {
   const vorher = stufe ? [0, ...BELOHNUNG.stufen.map(s => s.sterne)].filter(x => x < stufe.sterne).pop() : 0;
   const T = BELOHNUNG.serie.tage, inSerie = n % T, bisSerie = T - inSerie;
   const wege = [];
-  if (stufe) wege.push({ icon: "stern", was: stufe.belohnung, fehlt: ["Noch ", punkte(person.id, stufe.sterne - st)], info: ["Ziel: ", punkte(person.id, stufe.sterne), " · +1 pro richtige Antwort, +3 für eine fehlerfreie Runde"], anteil: (st - vorher) / (stufe.sterne - vorher), rest: (stufe.sterne - st) / 8 });
-  wege.push({ icon: "flamme", was: BELOHNUNG.serie.belohnung, fehlt: `Noch ${bisSerie} ${bisSerie === 1 ? "Tag" : "Tage"} üben`, info: `${T} Tage hintereinander mindestens eine Runde · ${heuteGeuebt ? "heute schon erledigt ✓" : "heute noch offen!"}`, anteil: inSerie / T, rest: bisSerie });
-  wege.push({ icon: "test", was: BELOHNUNG.test.belohnung, fehlt: "Einen Kapiteltest fehlerfrei", info: "Jeder Kapiteltest, der zum ersten Mal ganz ohne Fehler bestanden wird", anteil: null, rest: 99 });
+  if (stufe) wege.push({ icon: "stern", was: stufe.belohnung, geheim: "Überraschung", fehlt: ["Noch ", punkte(person.id, stufe.sterne - st)], info: ["Ziel: ", punkte(person.id, stufe.sterne), " · +1 pro richtige Antwort, +3 für eine fehlerfreie Runde"], anteil: (st - vorher) / (stufe.sterne - vorher), rest: (stufe.sterne - st) / 8 });
+  wege.push({ icon: "flamme", was: BELOHNUNG.serie.belohnung, geheim: "Serien-Überraschung", fehlt: `Noch ${bisSerie} ${bisSerie === 1 ? "Tag" : "Tage"} üben`, info: `${T} Tage hintereinander mindestens eine Runde · ${heuteGeuebt ? "heute schon erledigt ✓" : "heute noch offen!"}`, anteil: inSerie / T, rest: bisSerie });
+  wege.push({ icon: "test", was: BELOHNUNG.test.belohnung, geheim: "Test-Überraschung", fehlt: "Einen Kapiteltest fehlerfrei", info: "Jeder Kapiteltest, der zum ersten Mal ganz ohne Fehler bestanden wird", anteil: null, rest: 99 });
   return wege;
 }
 function geschenkBlock(kompakt) {
   const wege = geschenkWege(), bester = wege.filter(w => w.anteil !== null).sort((a, b) => a.rest - b.rest)[0];
   const zeile = w => el("div", { class: `geschenk-zeile ${w === bester ? "nah" : ""}` },
-    el("div", { class: "geschenk-kopf" }, el("span", { class: "geschenk-was" }, w.was), el("b", {}, w.fehlt)),
+    el("div", { class: "geschenk-kopf" }, el("span", { class: "geschenk-was" }, el("span", { class: "geheim" }, "?"), w.geheim), el("b", {}, w.fehlt)),
     w.anteil !== null ? el("div", { class: "akku" }, el("div", { class: "akku-fuellung", style: `width:${Math.max(3, Math.round(w.anteil * 100))}%` }), el("span", { class: "akku-text" }, `${Math.round(w.anteil * 100)} % aufgeladen`)) : null,
     kompakt ? null : el("div", { class: "klein" }, w.info));
-  return el("div", { class: "geschenke" }, el("div", { class: "label" }, "🎁 Nächstes Geschenk"), ...(kompakt ? [zeile(bester)] : wege.map(zeile)));
+  return el("div", { class: "geschenke" }, el("div", { class: "label" }, "🎁 Nächste Überraschung"), ...(kompakt ? [zeile(bester)] : wege.map(zeile)));
 }
 function statusKarte() {
   const st = sterneGesamt(person.id), pr = profil(person.id), r = rang(person, st), n = serie(pr);
@@ -602,8 +602,31 @@ function ergebnis() {
     el("button", { class: "knopf zweit", onclick: fachSeite }, "Zurück zum Fach"),
     el("button", { class: "knopf zweit", onclick: faecherSeite }, "Anderes Fach")
   );
+  ueberraschung(neu);
 }
 
+// Überraschung: Geschenk öffnet sich mit Animation und zeigt den Gutschein
+function ueberraschung(neu) {
+  if (!neu || !neu.length) return;
+  const g = neu[0], rest = neu.slice(1);
+  const held = person.thema === "held";
+  const konfetti = el("div", { class: "konfetti" }, ...Array.from({ length: 36 }, (_, i) => el("i", { style: `--x:${Math.round(Math.random() * 100)}%;--d:${(Math.random() * .8).toFixed(2)}s;--r:${Math.round(Math.random() * 720 - 360)}deg;--f:${["#ffd676", "#ffffff", held ? "#ff3b30" : "#8fd0ff", "#2ee59d"][i % 4]}` })));
+  const fertig = () => { o.remove(); if (rest.length) ueberraschung(rest); };
+  const o = el("div", { class: `ueber ${held ? "ueber-held" : "ueber-sport"}`, onclick: e => { if (e.target === o) fertig(); } },
+    el("div", { class: "ueber-strahlen" }),
+    konfetti,
+    el("div", { class: "ueber-buehne" },
+      el("div", { class: "ueber-titel" }, "Überraschung!"),
+      el("div", { class: "box" }, el("div", { class: "box-deckel" }), el("div", { class: "box-koerper" }), el("div", { class: "box-licht" })),
+      el("div", { class: "ueber-gs" },
+        el("div", { class: "gs-kopf" }, "Gutschein · VALIAS PRO"),
+        el("div", { class: "gs-was" }, g.was),
+        el("div", { class: "gs-grund" }, g.grund)),
+      el("button", { class: "knopf", onclick: () => { o.remove(); gutscheinZeigen(g); } }, ic("ticket"), "Gutschein ansehen"),
+      el("button", { class: "knopf zweit", onclick: fertig }, rest.length ? "Nächste Überraschung" : "Weiter")));
+  document.body.append(o);
+  try { navigator.vibrate && navigator.vibrate([60, 80, 160]); } catch (e) {}
+}
 function gutscheinZeigen(g) {
   setzeKopf("Gutschein", gutscheinListe);
   const [d1, d2, d3] = g.datum.split("-");
@@ -862,6 +885,7 @@ function gespraech(g) {
       bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, "Gespräch geschafft! +", punkte(person.id, pkt))),
         ...neu.map(gs => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(gs) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), gs.was))),
         el("button", { class: "knopf", onclick: () => gespraech(g) }, "Nochmal"), el("button", { class: "knopf zweit", onclick: sprechListe }, "Andere Gespräche"));
+      ueberraschung(neu);
       return;
     }
     const sch = g.schritte[i];
