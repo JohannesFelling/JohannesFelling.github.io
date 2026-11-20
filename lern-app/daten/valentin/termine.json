@@ -1,0 +1,8 @@
+{
+ "hinweis": "Aus Valentins Terminliste (Screenshot vom 20.11.2026). fach = App-Fach oder null.",
+ "termine": [
+  { "datum": "2026-11-27", "fach": "geografie", "titel": "Geografie-Test", "art": "Test", "zeit": "08:55" },
+  { "datum": "2027-01-13", "fach": "physik", "titel": "Physik-Test", "art": "Test", "zeit": "10:00" }
+ ],
+ "frei": []
+}

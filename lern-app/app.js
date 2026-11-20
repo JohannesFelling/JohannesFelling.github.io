@@ -365,11 +365,11 @@ function termineKarte() {
   return el("div", { class: `karte termin-karte ${tage <= 3 ? "dringend" : ""}` },
     el("div", { class: "label" }, "Als Nächstes"),
     el("div", { class: "termin-haupt" },
-      el("div", {}, el("div", { class: "termin-titel" }, n.titel), el("div", { class: "klein" }, `${datumLang(n.datum)}${n.dauer ? ` · ${n.dauer} min` : ""}`)),
+      el("div", {}, el("div", { class: "termin-titel" }, n.titel), el("div", { class: "klein" }, `${datumLang(n.datum)}${n.zeit ? `, ${n.zeit} Uhr` : ""}${n.dauer ? ` · ${n.dauer} min` : ""}`)),
       el("div", { class: "termin-countdown" }, el("div", { class: "wert" }, tage === 0 ? "!" : String(tage)), el("div", { class: "klein" }, tage === 0 ? "heute" : tage === 1 ? "Tag" : "Tage"))),
     f ? el("button", { class: "knopf", onclick: () => fachLaden(f) }, ic("play"), `Jetzt ${f.name} lernen`) : el("p", { class: "klein" }, "Dieses Fach ist (noch) nicht in der App – lern mit deinen Unterlagen."),
     bald.length ? el("div", { class: "termin-liste" }, el("div", { class: "label" }, "In den nächsten 2 Wochen"),
-      ...bald.map(t => el("div", { class: "zeile" }, el("span", {}, `${datumLang(t.datum)} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
+      ...bald.map(t => el("div", { class: "zeile" }, el("span", {}, `${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
     el("button", { class: "reset", onclick: termineSeite }, "Alle Termine"));
 }
 function termineSeite() {
@@ -378,7 +378,7 @@ function termineSeite() {
   const alle = (T.termine || []).slice().sort((a, b) => a.datum.localeCompare(b.datum));
   zeige(el("div", { class: "label" }, person.name), el("h2", {}, "Tests & Schularbeiten"),
     el("div", { class: "karte" }, ...alle.map(t => { const n = tageBis(t.datum);
-      return el("div", { class: `zeile ${n < 0 ? "vorbei" : n <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)} · ${t.titel}${t.dauer ? ` (${t.dauer} min)` : ""}`), el("b", {}, n < 0 ? "vorbei" : wannText(n))); })),
+      return el("div", { class: `zeile ${n < 0 ? "vorbei" : n <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} · ${t.titel}${t.dauer ? ` (${t.dauer} min)` : ""}`), el("b", {}, n < 0 ? "vorbei" : wannText(n))); })),
     (T.frei || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Frei"), ...T.frei.map(f => el("div", { class: "zeile" }, el("span", {}, f.titel), el("b", {}, `${datumLang(f.von)} – ${datumLang(f.bis)}`)))) : null);
 }
 
@@ -428,7 +428,7 @@ function fachSeite() {
       el("h2", {}, daten.titel || fach.name),
       daten.untertitel ? el("p", { class: "klein" }, daten.untertitel) : null,
       el("p", { class: "klein" }, `${punkte(person.id, s.sterne)} · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
-    (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)} – ${wannText(tageBis(t.datum))}`) : null; })(),
+    (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     modusWahl(),
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
@@ -899,7 +899,7 @@ function kindStatistik(p, st, dateien, lokal) {
   const kt = kommend(p.id).slice(0, 5);
   return el("div", { class: "pop" },
     kt.length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Nächste Tests & Schularbeiten"),
-      ...kt.map(t => el("div", { class: `zeile ${tageBis(t.datum) <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
+      ...kt.map(t => el("div", { class: `zeile ${tageBis(t.datum) <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
     el("div", { class: "karte" }, el("div", { class: "label" }, "Lernzeit"),
       el("div", { class: "kpi-reihe" },
         el("div", {}, el("div", { class: "kpi-wert" }, dauer((pr.zeit[heute()] || {}).ges)), el("div", { class: "klein" }, "heute")),
