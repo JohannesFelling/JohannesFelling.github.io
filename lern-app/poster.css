@@ -210,7 +210,7 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 .start-kopf .label{letter-spacing:4px}
 
 /* Startseite: Kinder-Plakate nebeneinander */
-.start-raster{grid-template-columns:1fr 1fr;gap:12px}
+.start-raster{grid-template-columns:1fr 1fr;gap:16px 22px}
 .start-karte{min-height:330px;padding:14px 12px 14px}
 .start-name{font-size:clamp(1.9rem,8.5vw,3.4rem)}
 .start-karte small{letter-spacing:2.5px;font-size:.58rem;gap:6px}
