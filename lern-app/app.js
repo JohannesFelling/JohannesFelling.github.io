@@ -4,11 +4,11 @@ const PERSONEN = [
   { id: "valentin", name: "Valentin", emo: "🦸‍♂️", thema: "held", slogan: "Hero Training Program",
     lob: ["Brilliant.", "Mission accomplished.", "Splendid!", "Avengers-Niveau.", "Spidey-Sinn stimmt.", "Thor wäre stolz.", "Stark wie Stark."],
     raenge: ["Rookie", "Held", "Superheld", "Avenger", "Legende", "Gott des Donners"],
-    punkt: { eins: "Hammer", viele: "Hämmer", zeichen: "🔨", icon: "hammer" } },
+    punkt: { zeichen: "⚡", icon: "hammer" } },
   { id: "elias", name: "Elias", emo: "⚽", thema: "sport", slogan: "Matchday Academy",
     lob: ["TOOOR!", "Back of the net!", "Weltklasse-Pass.", "Hattrick-reif.", "Was für ein Volley!", "Man of the Match.", "Top-Corner."],
     raenge: ["Nachwuchs", "Stammspieler", "Kapitän", "Nationalspieler", "Weltstar", "GOAT"],
-    punkt: { eins: "Ball", viele: "Bälle", zeichen: "⚽", icon: "ball" } },
+    punkt: { zeichen: "⚽", icon: "ball" } },
 ];
 const FAECHER = [
   { id: "deutsch", name: "Deutsch" }, { id: "englisch", name: "Englisch" }, { id: "spanisch", name: "Spanisch" },
@@ -40,8 +40,8 @@ const ICONS = {
   musik: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
   kunst: '<path d="M12 22a10 10 0 1 1 10-10c0 3-2 4-4 4h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="16.5" cy="10.5" r="1"/>',
   technik: '<path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8z"/>',
-  hammer: '<path d="M4 4h16v8H4z"/><path d="M4 8h16"/><path d="M11 12h2v8.5a1 1 0 0 1-2 0z"/><path d="M10 15l4 2"/>',
-  ball: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.2 2.3-1.2 3.7h-4l-1.2-3.7z"/><path d="M12 7.5V3.2M15.2 9.8l4-1.5M14 13.5l2.5 3.6M10 13.5l-2.5 3.6M8.8 9.8l-4-1.5"/>',
+  hammer: '<path d="M3.5 4.5L5 3h14l1.5 1.5v6L19 12H5l-1.5-1.5z"/><path d="M6.5 5.5h11v4h-11z" fill="currentColor" stroke="none"/><path d="M10.5 12h3v7h-3z"/><path d="M10.5 14l3 1.5M10.5 16.5l3 1.5"/><path d="M10 19h4v1.5h-4z"/><path d="M12 20.5c-2 0-3 1-3 2M12 20.5c2 0 3 1 3 2"/>',
+  ball: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.2 2.3-1.2 3.7h-4l-1.2-3.7z" fill="currentColor"/><path d="M12 7.5V3.2M15.2 9.8l4-1.5M14 13.5l2.5 3.6M10 13.5l-2.5 3.6M8.8 9.8l-4-1.5"/>',
   flamme: '<path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-4 5-4 7-1-1-2-2-2-4-2 2-3 5-3 9 0 4 3 7 7 7z"/>',
   test: '<path d="M9 3h6l1 2h3v16H5V5h3z"/><path d="M9 13l2 2 4-4"/>',
   schloss: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
@@ -55,9 +55,10 @@ const ICONS = {
 };
 const ic = (n) => { const w = document.createElement("span"); w.innerHTML = `<svg class="ic" viewBox="0 0 24 24">${ICONS[n] || ""}</svg>`; return w.firstChild; };
 const RUNDE = 10;
-const PUNKT_STD = { eins: "Stern", viele: "Sterne", zeichen: "⭐", icon: "stern" };
+const PUNKT_STD = { zeichen: "⭐", icon: "stern" };
 const pk = pid => (PERSONEN.find(p => p.id === pid) || {}).punkt || PUNKT_STD;
-const punkte = (pid, n) => `${n} ${n === 1 ? pk(pid).eins : pk(pid).viele}`;
+const punkte = (pid, n) => el("span", { class: "pkt" }, String(n), ic(pk(pid).icon));
+const pktIc = pid => el("span", { class: "pkt" }, ic(pk(pid).icon));
 const PROFIL = "_profil";
 let BELOHNUNG = {
   stufen: [{sterne: 100, belohnung: "🍫 Süßigkeit nach Wahl (bis 2 €)"}, {sterne: 250, belohnung: "🥤 Softdrink nach Wahl (bis 1,50 €)"}, {sterne: 1000, belohnung: "🍝 Lieblingsessen"}, {sterne: 2000, belohnung: "🎬 Kinoabend – du suchst den Film aus"}, {sterne: 5000, belohnung: "🎁 Überraschung (Papa wählt)"}],
@@ -138,7 +139,7 @@ function belohnungenPruefen(extra) {
   }
   const st = sterneGesamt(person.id);
   for (const s of BELOHNUNG.stufen) {
-    if (st >= s.sterne && !pr.stufen.includes(s.sterne)) { pr.stufen.push(s.sterne); neu.push(gutscheinGeben(pr, s.belohnung, `${punkte(person.id, s.sterne)} gesammelt ${pk(person.id).zeichen}`)); }
+    if (st >= s.sterne && !pr.stufen.includes(s.sterne)) { pr.stufen.push(s.sterne); neu.push(gutscheinGeben(pr, s.belohnung, `Stufe ${s.sterne} erreicht ${pk(person.id).zeichen}`)); }
   }
   if (extra) extra(pr, neu);
   speichern(person.id, PROFIL, pr);
@@ -152,7 +153,7 @@ const el = (tag, attrs = {}, ...kids) => {
     if (v == null || v === false) continue;
     if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
   }
-  for (const k of kids) if (k != null && k !== false) e.append(k.nodeType ? k : document.createTextNode(k));
+  for (const k of kids.flat(Infinity)) if (k != null && k !== false) e.append(k.nodeType ? k : document.createTextNode(k));
   return e;
 };
 const mischen = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -316,7 +317,7 @@ function geschenkWege() {
   const vorher = stufe ? [0, ...BELOHNUNG.stufen.map(s => s.sterne)].filter(x => x < stufe.sterne).pop() : 0;
   const T = BELOHNUNG.serie.tage, inSerie = n % T, bisSerie = T - inSerie;
   const wege = [];
-  if (stufe) wege.push({ icon: "stern", was: stufe.belohnung, fehlt: `Noch ${punkte(person.id, stufe.sterne - st)}`, info: `Ziel: ${punkte(person.id, stufe.sterne)} · 1 ${pk(person.id).eins} pro richtige Antwort, +3 für eine fehlerfreie Runde`, anteil: (st - vorher) / (stufe.sterne - vorher), rest: (stufe.sterne - st) / 8 });
+  if (stufe) wege.push({ icon: "stern", was: stufe.belohnung, fehlt: ["Noch ", punkte(person.id, stufe.sterne - st)], info: ["Ziel: ", punkte(person.id, stufe.sterne), " · +1 pro richtige Antwort, +3 für eine fehlerfreie Runde"], anteil: (st - vorher) / (stufe.sterne - vorher), rest: (stufe.sterne - st) / 8 });
   wege.push({ icon: "flamme", was: BELOHNUNG.serie.belohnung, fehlt: `Noch ${bisSerie} ${bisSerie === 1 ? "Tag" : "Tage"} üben`, info: `${T} Tage hintereinander mindestens eine Runde · ${heuteGeuebt ? "heute schon erledigt ✓" : "heute noch offen!"}`, anteil: inSerie / T, rest: bisSerie });
   wege.push({ icon: "test", was: BELOHNUNG.test.belohnung, fehlt: "Einen Kapiteltest fehlerfrei", info: "Jeder Kapiteltest, der zum ersten Mal ganz ohne Fehler bestanden wird", anteil: null, rest: 99 });
   return wege;
@@ -338,9 +339,9 @@ function statusKarte() {
   return el("div", { class: "karte status" },
     el("div", { class: "status-kopf" },
       el("div", {}, el("div", { class: "label" }, "Rang"), el("div", { class: "rang" }, r.name)),
-      el("div", { class: "status-sterne" }, el("div", { class: "label" }, pk(person.id).viele), el("div", { class: "wert" }, ic(pk(person.id).icon), String(st)))),
+      el("div", { class: "status-sterne" }, el("div", { class: "label" }, "Gesammelt"), el("div", { class: "wert" }, ic(pk(person.id).icon), String(st)))),
     el("div", { class: "fortschritt" }, el("div", { style: `width:${Math.round(anteil * 100)}%` })),
-    el("div", { class: "klein" }, r.naechste ? `Noch ${punkte(person.id, r.naechste - st)} bis zum Rang ${r.naechsterName}` : "Höchster Rang erreicht."),
+    el("div", { class: "klein" }, r.naechste ? ["Noch ", punkte(person.id, r.naechste - st), ` bis zum Rang ${r.naechsterName}`] : "Höchster Rang erreicht."),
     geschenkBlock(),
     el("button", { class: "knopf zweit", onclick: gutscheinListe }, ic("ticket"), `Gutscheine (${pr.gutscheine.length})`));
 }
@@ -395,7 +396,7 @@ function faecherSeite() {
       const t = naechsterTerminFuer(person.id, f.id);
       return el("button", { class: `fach ${t ? "markiert" : ""}`, onclick: () => fachLaden(f) },
         t ? el("span", { class: "termin-badge" }, `${t.art === "Schularbeit" ? "SA" : "Test"} ${wannText(tageBis(t.datum))}`) : el("span", { class: "nr" }, String(i + 1).padStart(2, "0")), ic(f.id),
-        el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, `${punkte(person.id, s.sterne)} · ${s.runden} Runden`)));
+        el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, punkte(person.id, s.sterne), ` · ${s.runden} Runden`)));
     })),
     (CFG || gast) ? el("button", { class: "reset", onclick: abmelden }, gast ? "Testkonto beenden" : `Abmelden (${person.name})`) : null
   );
@@ -427,7 +428,7 @@ function fachSeite() {
       el("div", { class: "label" }, fach.name),
       el("h2", {}, daten.titel || fach.name),
       daten.untertitel ? el("p", { class: "klein" }, daten.untertitel) : null,
-      el("p", { class: "klein" }, `${punkte(person.id, s.sterne)} · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
+      el("p", { class: "klein" }, punkte(person.id, s.sterne), ` · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     modusWahl(),
@@ -482,7 +483,7 @@ function frageZeigen() {
     setzeKopf(test ? "📝 Test" : fach.name, zurueckZiel);
     if (test) feedback.replaceChildren(el("div", { class: "feedback neutral pop" }, "Antwort gespeichert."));
     else feedback.replaceChildren(el("div", { class: `feedback pop ${ok ? "ok" : "nein"}` },
-      el("b", {}, ok ? `${zufall(person.lob)} +1` : "Knapp daneben."),
+      el("b", {}, ok ? [`${zufall(person.lob)} +`, punkte(person.id, 1)] : "Knapp daneben."),
       !ok ? el("div", {}, "Richtig ist: ", el("b", {}, [].concat(q.antwort)[0])) : null,
       q.erklaerung ? el("div", {}, "💡 ", q.erklaerung) : null));
     const w = !test && wissenFuer(q);
@@ -556,7 +557,7 @@ function ergebnis() {
     pr.tests[k] = info;
   });
   const anteil = runde.richtig / n, held = person.thema === "held";
-  const text = perfekt ? (test ? "Fehlerfrei bestanden." : held ? "Mission erfüllt. +3 Bonus-Hämmer." : "Zu null gewonnen. +3 Bonus-Bälle.")
+  const text = perfekt ? (test ? "Fehlerfrei bestanden." : [held ? "Mission erfüllt. +" : "Zu null gewonnen. +", punkte(person.id, 3), " Bonus."])
     : anteil >= .7 ? (held ? "Starke Mission." : "Starkes Spiel.") : anteil >= .4 ? "Solide. Mit Training wird's noch besser." : "Dranbleiben – jede Runde macht dich stärker.";
   setzeKopf(fach.name, fachSeite);
   zeige(
@@ -597,13 +598,13 @@ function gutscheinListe() {
   zeige(
     gastBanner(),
     el("h2", {}, "Gutscheine"),
-    pr.gutscheine.length ? null : el("p", { class: "hinweis" }, `Noch keine Gutscheine. Sammle ${pk(person.id).viele}, übe jeden Tag oder schaffe einen Test fehlerfrei!`),
+    pr.gutscheine.length ? null : el("p", { class: "hinweis" }, "Noch keine Gutscheine. Sammle ", pktIc(person.id), ", übe jeden Tag oder schaffe einen Test fehlerfrei!"),
     ...pr.gutscheine.slice().reverse().map(g => el("button", { class: "test-knopf", onclick: () => gutscheinZeigen(g) }, el("span", {}, g.was, el("small", {}, `${g.grund} · ${g.code}`)), ic("ticket"))),
     el("div", { class: "karte" }, el("div", { class: "label" }, "So bekommst du Gutscheine"),
       el("ul", {},
         el("li", {}, `Kapiteltest fehlerfrei → ${BELOHNUNG.test.belohnung}`),
         el("li", {}, `${BELOHNUNG.serie.tage} Tage hintereinander üben → ${BELOHNUNG.serie.belohnung}`),
-        ...BELOHNUNG.stufen.map(s => el("li", {}, `${punkte(person.id, s.sterne)} → ${s.belohnung}`)))));
+        ...BELOHNUNG.stufen.map(s => el("li", {}, punkte(person.id, s.sterne), ` → ${s.belohnung}`)))));
 }
 
 // ---------- Wissen ----------
@@ -772,7 +773,7 @@ function gespraech(g) {
         pr.gespraeche[`${fach.id}/${g.titel}`] = { d: heute(), erg: pkt, von: g.schritte.length };
       });
       setzeKopf("Sprechen", sprechListe);
-      bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, `Gespräch geschafft! +${punkte(person.id, pkt)}`)),
+      bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, "Gespräch geschafft! +", punkte(person.id, pkt))),
         ...neu.map(gs => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(gs) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), gs.was))),
         el("button", { class: "knopf", onclick: () => gespraech(g) }, "Nochmal"), el("button", { class: "knopf zweit", onclick: sprechListe }, "Andere Gespräche"));
       return;
@@ -873,7 +874,7 @@ async function elternSeite(alle, lokal) {
       const letzt = pr.log.length ? pr.log[pr.log.length - 1] : null;
       return el("div", { class: "karte kpi" }, el("div", { class: "label" }, p.name),
         el("div", { class: "kpi-wert" }, dauer(ges)), el("div", { class: "klein" }, "Lernzeit gesamt"),
-        el("div", { class: "klein" }, `${punkte(p.id, sterne)} · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
+        el("div", { class: "klein" }, punkte(p.id, sterne), ` · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
         el("div", { class: "klein" }, letzt ? `Zuletzt aktiv: ${datumDE(letzt.d)} ${letzt.t}` : "Noch nicht aktiv"));
     })),
     reiter, tab,
@@ -881,7 +882,7 @@ async function elternSeite(alle, lokal) {
   zeigeKind(PERSONEN[0]);
 }
 async function elternReset(p, f, st, lokal) {
-  if (!confirm(`Übungs-Fortschritt in ${f.name} für ${p.name} wirklich löschen? (${pk(p.id).viele}, Runden und offene Fragen in diesem Fach. Gutscheine, Tests und Lernzeit bleiben.)`)) return;
+  if (!confirm(`Übungs-Fortschritt in ${f.name} für ${p.name} wirklich löschen? (Punkte, Runden und offene Fragen in diesem Fach. Gutscheine, Tests und Lernzeit bleiben.)`)) return;
   if (lokal) { try { localStorage.setItem(key(p.id, f.id), "{}"); } catch (e) {} elternStart(); return; }
   if (!st._uid) { alert(`${p.name} hat noch keinen gespeicherten Fortschritt.`); return; }
   const stand = Object.fromEntries(Object.entries(st).filter(([k]) => !k.startsWith("_") || k === PROFIL));
@@ -918,7 +919,7 @@ function kindStatistik(p, st, dateien, lokal) {
       return el("div", { class: "karte" },
         el("div", { class: "status-kopf" }, el("div", { class: "fach-name" }, f.name), el("div", { class: "klein" }, dauer(fachZeit(f.id)))),
         el("div", { class: "fortschritt" }, el("div", { style: `width:${d.fragen.length ? Math.round(geuebt / d.fragen.length * 100) : 0}%` })),
-        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · ${punkte(p.id, s.sterne)} · ${s.offen.length} Fragen offen` + (d.platzhalter ? " · (Platzhalter-Fragen)" : "")),
+        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · `, punkte(p.id, s.sterne), ` · ${s.offen.length} Fragen offen` + (d.platzhalter ? " · (Platzhalter-Fragen)" : "")),
         ...zeilen,
         (s.runden || s.sterne || s.offen.length || geuebt) ? el("button", { class: "reset", onclick: () => elternReset(p, f, st, lokal) }, `${f.name} für ${p.name} zurücksetzen`) : null);
     }),
