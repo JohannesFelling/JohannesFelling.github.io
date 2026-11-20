@@ -57,7 +57,21 @@ function roh(p, f) {
 }
 const kopie = o => JSON.parse(JSON.stringify(o || {}));
 function laden(p, f) { return Object.assign({ sterne: 0, runden: 0, perfekt: 0, offen: [], gesehen: {} }, kopie(roh(p, f))); }
-function profil(p) { return Object.assign({ tage: [], gutscheine: [], stufen: [], serien: [], tests: {} }, kopie(roh(p, PROFIL))); }
+const PROFIL_LEER = () => ({ tage: [], gutscheine: [], stufen: [], serien: [], tests: {}, zeit: {}, log: [], gelesen: {}, gespraeche: {} });
+function profil(p) { return Object.assign(PROFIL_LEER(), kopie(roh(p, PROFIL))); }
+function uhrzeit() { const d = new Date(); return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`; }
+function protokoll(pr, e) { pr.log.push(Object.assign({ d: heute(), t: uhrzeit() }, e)); pr.log = pr.log.slice(-200); }
+// Lernzeit: alle 15 s, solange die App offen ist und in den letzten 2 Minuten etwas getippt wurde
+let letzteAktion = Date.now();
+["click", "keydown", "touchstart"].forEach(ev => addEventListener(ev, () => { letzteAktion = Date.now(); }, { passive: true }));
+setInterval(() => {
+  if (!person || gast || document.visibilityState !== "visible" || Date.now() - letzteAktion > 120000) return;
+  const pr = profil(person.id), z = pr.zeit[heute()] || (pr.zeit[heute()] = {});
+  z.ges = (z.ges || 0) + 15;
+  if (fach) z[fach.id] = (z[fach.id] || 0) + 15;
+  const tage = Object.keys(pr.zeit).sort(); while (tage.length > 120) delete pr.zeit[tage.shift()];
+  speichern(person.id, PROFIL, pr);
+}, 15000);
 function speichern(p, f, s) {
   if (gast) { gastStand[f] = kopie(s); return; }
   try { localStorage.setItem(key(p, f), JSON.stringify(s)); } catch (e) {}
@@ -156,6 +170,7 @@ function wolkeSichern() {
 }
 async function wolkeVerbinden(user) {
   const kind = user.email.split("@")[0].toLowerCase();
+  if (kind === "papa") throw new Error("papa");
   const p = PERSONEN.find(x => x.id === kind);
   if (!p) { await fb.A.signOut(fb.auth); throw new Error("unbekannt"); }
   const snap = await fb.F.getDoc(fb.F.doc(fb.db, "fortschritt", user.uid));
@@ -195,7 +210,10 @@ function gastWahl() {
   zeige(
     el("h2", { class: "mitte" }, "Testkonto"),
     el("p", { class: "hinweis mitte" }, "Alles funktioniert wie echt, aber nichts wird gespeichert. Tests sind sofort freigeschaltet."),
-    el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
+    el("button", { class: "knopf", onclick: elternStart }, ic("auge"), "Eltern-Statistik"),
+    el("p", { class: "klein mitte" }, "Lernzeit, Kapitel, Tests und Gutscheine von beiden Burschen."),
+    el("div", { class: "label", style: "margin-top:22px" }, "App ansehen als"),
+    el("div", { class: "start-raster", style: "margin-top:10px" }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { gast = true; gastStand = {}; person = p; faecherSeite(); } },
         el("small", {}, "Ansicht von"), el("span", { class: "start-name" }, p.name)))));
 }
@@ -376,6 +394,7 @@ function ergebnis() {
   if (!test) { s.runden++; if (perfekt) { s.perfekt++; s.sterne += 3; } }
   speichern(person.id, fach.id, s);
   const neu = belohnungenPruefen((pr, neu) => {
+    protokoll(pr, { f: fach.id, art: test ? "Test" : "Übungsrunde", titel: test ? test.titel : "", erg: `${runde.richtig}/${n}` });
     if (!test) return;
     const k = `${fach.id}/${test.id}`, info = pr.tests[k] || { versuche: 0, beste: 0, bestanden: false };
     info.versuche++; info.beste = Math.max(info.beste, runde.richtig);
@@ -440,6 +459,7 @@ function wissenListe() {
 }
 function wissenZeigen(i) {
   const w = daten.wissen[i];
+  { const pr = profil(person.id); if (!pr.gelesen[`${fach.id}/${w.titel}`]) { pr.gelesen[`${fach.id}/${w.titel}`] = heute(); protokoll(pr, { f: fach.id, art: "Wissen", titel: w.titel }); speichern(person.id, PROFIL, pr); } }
   setzeKopf("Wissen", wissenListe);
   const yt = w.video ? `https://www.youtube.com/results?search_query=${encodeURIComponent(w.video)}` : null;
   zeige(
@@ -482,7 +502,10 @@ function gespraech(g) {
   function schritt() {
     if (i >= g.schritte.length) {
       const s = laden(person.id, fach.id); s.sterne += punkte; speichern(person.id, fach.id, s);
-      const neu = belohnungenPruefen();
+      const neu = belohnungenPruefen(pr => {
+        protokoll(pr, { f: fach.id, art: "Sprechen", titel: g.titel, erg: `${punkte}/${g.schritte.length}` });
+        pr.gespraeche[`${fach.id}/${g.titel}`] = { d: heute(), erg: punkte, von: g.schritte.length };
+      });
       setzeKopf("Sprechen", sprechListe);
       bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, `Gespräch geschafft! +${punkte} Sterne`)),
         ...neu.map(gs => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(gs) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), gs.was))),
@@ -520,6 +543,113 @@ function gespraech(g) {
     bereich.replaceChildren(info, knoepfe);
   }
   schritt();
+}
+
+// ---------- Eltern-Statistik ----------
+const PAPA = `papa@${MAIL_DOMAIN}`;
+function dauer(sek) {
+  sek = Math.round(sek || 0); if (sek < 60) return sek ? "< 1 min" : "–";
+  const m = Math.round(sek / 60), h = Math.floor(m / 60);
+  return h ? `${h} h ${String(m % 60).padStart(2, "0")} min` : `${m} min`;
+}
+const datumDE = d => { const [y, m, t] = d.split("-"); return `${t}.${m}.`; };
+async function elternStart() {
+  thema(null); person = null; gast = false;
+  if (!CFG) { elternSeite(Object.fromEntries(PERSONEN.map(p => [p.id, Object.fromEntries([...FAECHER.map(f => f.id), PROFIL].map(f => [f, lokalLaden(p.id, f)]))])), true); return; }
+  setzeKopf("Eltern", gastWahl);
+  zeige(el("p", { class: "hinweis mitte" }, "Lade …"));
+  try { await fbLaden(); } catch (e) { zeige(el("div", { class: "karte" }, "Keine Internetverbindung.")); return; }
+  if (fb.auth.currentUser && fb.auth.currentUser.email === PAPA) { elternLaden(); return; }
+  const pw = el("input", { class: "eingabe", type: "password", autocomplete: "current-password", placeholder: "Eltern-Passwort" });
+  const fehler = el("div");
+  const los = el("button", { class: "knopf", onclick: async () => {
+    if (!pw.value) return; los.disabled = true; fehler.replaceChildren();
+    try { await fb.A.signInWithEmailAndPassword(fb.auth, PAPA, pw.value); wolke = null; elternLaden(); }
+    catch (e) { console.error(e); fehler.replaceChildren(el("div", { class: "feedback nein" }, /invalid|wrong|not-found/.test(e.code || "") ? "Passwort stimmt nicht (oder das Papa-Konto ist in Firebase noch nicht angelegt)." : "Anmelden hat nicht geklappt.")); los.disabled = false; }
+  } }, "Anmelden");
+  pw.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); los.click(); } });
+  zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Eltern-Bereich"), el("h2", {}, "Statistik"), el("p", { class: "klein" }, "Nur für Papa. Melde dich mit dem Eltern-Passwort an."), pw, los, fehler));
+  setTimeout(() => pw.focus(), 50);
+}
+async function elternLaden() {
+  setzeKopf("Eltern", gastWahl);
+  zeige(el("p", { class: "hinweis mitte" }, "Lade Statistik …"));
+  try {
+    const snap = await fb.F.getDocs(fb.F.collection(fb.db, "fortschritt"));
+    const alle = {};
+    snap.forEach(d => { const x = d.data(); if (x.kind) alle[x.kind] = Object.assign({}, x.stand, { _zeit: x.zeit && x.zeit.toDate ? x.zeit.toDate() : null }); });
+    elternSeite(alle, false);
+  } catch (e) {
+    console.error(e);
+    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Kein Zugriff"), el("p", {}, "Die Speicherregeln in Firebase erlauben dem Papa-Konto noch nicht, die Daten zu lesen. Bitte die neuen Regeln aus der Anleitung einfügen.")),
+      el("button", { class: "knopf zweit", onclick: elternAbmelden }, "Abmelden"));
+  }
+}
+async function elternAbmelden() { if (fb) await fb.A.signOut(fb.auth); gastWahl(); }
+async function elternSeite(alle, lokal) {
+  setzeKopf("Eltern", gastWahl);
+  const dateien = {};
+  await Promise.all(PERSONEN.flatMap(p => FAECHER.map(async f => {
+    try { const r = await fetch(`daten/${p.id}/${f.id}.json?v=${Date.now()}`); if (r.ok) dateien[`${p.id}/${f.id}`] = await r.json(); } catch (e) {}
+  })));
+  const tab = el("div");
+  const zeigeKind = p => {
+    [...reiter.children].forEach(b => b.classList.toggle("aktiv", b.dataset.k === p.id));
+    tab.replaceChildren(kindStatistik(p, alle[p.id] || {}, dateien));
+  };
+  const reiter = el("div", { class: "reiter" }, ...PERSONEN.map(p => el("button", { "data-k": p.id, onclick: () => zeigeKind(p) }, p.name)));
+  zeige(
+    el("div", { class: "label" }, lokal ? "Eltern-Statistik · nur dieses Gerät" : "Eltern-Statistik · alle Geräte"),
+    el("h2", {}, "Übersicht"),
+    el("div", { class: "raster zwei" }, ...PERSONEN.map(p => {
+      const st = alle[p.id] || {}, pr = Object.assign(PROFIL_LEER(), st[PROFIL] || {});
+      const sterne = FAECHER.reduce((n, f) => n + ((st[f.id] || {}).sterne || 0), 0);
+      const ges = Object.values(pr.zeit).reduce((n, z) => n + (z.ges || 0), 0);
+      const letzt = pr.log.length ? pr.log[pr.log.length - 1] : null;
+      return el("div", { class: "karte kpi" }, el("div", { class: "label" }, p.name),
+        el("div", { class: "kpi-wert" }, dauer(ges)), el("div", { class: "klein" }, "Lernzeit gesamt"),
+        el("div", { class: "klein" }, `${sterne} Sterne · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
+        el("div", { class: "klein" }, letzt ? `Zuletzt aktiv: ${datumDE(letzt.d)} ${letzt.t}` : "Noch nicht aktiv"));
+    })),
+    reiter, tab,
+    lokal ? null : el("button", { class: "reset", onclick: elternAbmelden }, "Eltern-Bereich abmelden"));
+  zeigeKind(PERSONEN[0]);
+}
+function kindStatistik(p, st, dateien) {
+  const pr = Object.assign(PROFIL_LEER(), st[PROFIL] || {});
+  const tage = []; for (let i = 13; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); tage.push(heute(d)); }
+  const max = Math.max(600, ...tage.map(t => (pr.zeit[t] || {}).ges || 0));
+  const sum = ts => ts.reduce((n, t) => n + ((pr.zeit[t] || {}).ges || 0), 0);
+  const fachZeit = f => Object.values(pr.zeit).reduce((n, z) => n + (z[f] || 0), 0);
+  const fachName = id => (FAECHER.find(f => f.id === id) || { name: id }).name;
+  return el("div", { class: "pop" },
+    el("div", { class: "karte" }, el("div", { class: "label" }, "Lernzeit"),
+      el("div", { class: "kpi-reihe" },
+        el("div", {}, el("div", { class: "kpi-wert" }, dauer((pr.zeit[heute()] || {}).ges)), el("div", { class: "klein" }, "heute")),
+        el("div", {}, el("div", { class: "kpi-wert" }, dauer(sum(tage.slice(-7)))), el("div", { class: "klein" }, "letzte 7 Tage")),
+        el("div", {}, el("div", { class: "kpi-wert" }, dauer(Object.values(pr.zeit).reduce((n, z) => n + (z.ges || 0), 0))), el("div", { class: "klein" }, "gesamt"))),
+      el("div", { class: "balken" }, ...tage.map(t => { const v = (pr.zeit[t] || {}).ges || 0;
+        return el("div", { class: "balken-tag", title: `${datumDE(t)}: ${dauer(v)}` }, el("div", { class: "balken-wert", style: `height:${Math.round(v / max * 100)}%` }), el("span", {}, datumDE(t).slice(0, 2))); })),
+      el("div", { class: "klein" }, "Letzte 14 Tage (Minuten pro Tag). Gezählt wird nur, wenn die App offen ist und aktiv geübt wird.")),
+    ...FAECHER.map(f => {
+      const d = dateien[`${p.id}/${f.id}`] || { fragen: [] }, s = Object.assign({ sterne: 0, runden: 0, offen: [], gesehen: {} }, st[f.id] || {});
+      const geuebt = d.fragen.filter(q => s.gesehen[q.id]).length;
+      const zeilen = [];
+      (d.tests || []).forEach(t => { const i = pr.tests[`${f.id}/${t.id}`]; zeilen.push(el("div", { class: "zeile" }, el("span", {}, "Test · ", t.titel), el("b", { class: i && i.bestanden ? "gut" : "" }, i ? (i.bestanden ? "✓ bestanden" : `${i.versuche}× · bestes ${i.beste}/${t.fragen.length}`) : "–"))); });
+      (d.wissen || []).forEach(w => { const g = pr.gelesen[`${f.id}/${w.titel}`]; zeilen.push(el("div", { class: "zeile" }, el("span", {}, "Wissen · ", w.titel), el("b", { class: g ? "gut" : "" }, g ? `gelesen ${datumDE(g)}` : "–"))); });
+      (d.sprechen || []).forEach(g => { const x = pr.gespraeche[`${f.id}/${g.titel}`]; zeilen.push(el("div", { class: "zeile" }, el("span", {}, "Sprechen · ", g.titel), el("b", { class: x ? "gut" : "" }, x ? `${x.erg}/${x.von} · ${datumDE(x.d)}` : "–"))); });
+      return el("div", { class: "karte" },
+        el("div", { class: "status-kopf" }, el("div", { class: "fach-name" }, f.name), el("div", { class: "klein" }, dauer(fachZeit(f.id)))),
+        el("div", { class: "fortschritt" }, el("div", { style: `width:${d.fragen.length ? Math.round(geuebt / d.fragen.length * 100) : 0}%` })),
+        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · ${s.sterne} Sterne · ${s.offen.length} Fragen offen` + (d.platzhalter ? " · (Platzhalter-Fragen)" : "")),
+        ...zeilen);
+    }),
+    el("div", { class: "karte" }, el("div", { class: "label" }, `Gutscheine (${pr.gutscheine.length})`),
+      pr.gutscheine.length ? null : el("p", { class: "klein" }, "Noch keine."),
+      ...pr.gutscheine.slice().reverse().map(g => el("div", { class: "zeile" }, el("span", {}, `${g.was} · ${g.grund}`), el("b", { class: "code" }, `${datumDE(g.datum)} ${g.code}`)))),
+    el("div", { class: "karte" }, el("div", { class: "label" }, "Verlauf (zuletzt)"),
+      pr.log.length ? null : el("p", { class: "klein" }, "Noch keine Aktivitäten."),
+      ...pr.log.slice(-40).reverse().map(e => el("div", { class: "zeile" }, el("span", {}, `${datumDE(e.d)} ${e.t} · ${fachName(e.f)} · ${e.art}${e.titel ? " · " + e.titel : ""}`), el("b", {}, e.erg || "")))));
 }
 
 async function starten() {
