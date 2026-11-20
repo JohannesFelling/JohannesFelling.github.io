@@ -1,149 +1,562 @@
 {
  "titel": "Physik",
- "untertitel": "",
- "platzhalter": true,
+ "untertitel": "Test 24.11. – Größen, Einheiten, Methode",
+ "platzhalter": false,
  "fragen": [
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Wie berechnet man die Geschwindigkeit?",
-   "optionen": [
-    "v = s / t",
-    "v = s · t",
-    "v = t / s",
-    "v = m · a"
-   ],
-   "antwort": "v = s / t",
-   "erklaerung": "",
-   "id": "ph001"
-  },
-  {
    "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Ein Radfahrer fährt 30 km in 2 h. Geschwindigkeit in km/h?",
-   "antwort": [
-    "15"
-   ],
-   "erklaerung": "",
-   "zahl": true,
-   "id": "ph002"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Wie viele m/s sind 36 km/h?",
-   "antwort": [
-    "10"
-   ],
-   "erklaerung": "km/h : 3,6 = m/s",
-   "zahl": true,
-   "id": "ph003"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Was besagt das Trägheitsprinzip (1. Newton’sches Axiom)?",
-   "optionen": [
-    "Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine Kraft wirkt",
-    "Kraft = Masse · Beschleunigung",
-    "Actio = Reactio",
-    "Energie geht nie verloren"
-   ],
-   "antwort": "Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine Kraft wirkt",
-   "erklaerung": "",
-   "id": "ph004"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "F = m · a ist …",
-   "optionen": [
-    "das 2. Newton’sche Axiom",
-    "das Ohm’sche Gesetz",
-    "die Dichteformel",
-    "das Hebelgesetz"
-   ],
-   "antwort": "das 2. Newton’sche Axiom",
-   "erklaerung": "",
-   "id": "ph005"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Welche Kraft (N) braucht man, um 2 kg mit 3 m/s² zu beschleunigen?",
-   "antwort": [
-    "6"
-   ],
-   "erklaerung": "",
-   "zahl": true,
-   "id": "ph006"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Welche SI-Einheit hat die Energie?",
-   "optionen": [
-    "Joule",
-    "Watt",
-    "Newton",
-    "Pascal"
-   ],
-   "antwort": "Joule",
-   "erklaerung": "",
-   "id": "ph007"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Gewichtskraft auf der Erde: ca. … pro kg",
-   "optionen": [
-    "9,81 N",
-    "1 N",
-    "100 N",
-    "0,5 N"
-   ],
-   "antwort": "9,81 N",
-   "erklaerung": "",
-   "id": "ph008"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Dichte ρ = m/V. Ein Körper hat 200 g und 50 cm³. ρ in g/cm³?",
+   "art": "Umformen",
+   "frage": "Löse nach x auf: 3·x = 12. x =",
    "antwort": [
     "4"
    ],
-   "erklaerung": "",
+   "erklaerung": "Beide Seiten durch 3 teilen: x = 12 : 3 = 4.",
    "zahl": true,
-   "id": "ph009"
+   "id": "elias-mwoyv74l-01"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Die Formel lautet v = s / t. Wie lautet sie nach s umgeformt?",
+   "optionen": [
+    "s = v · t",
+    "s = v / t",
+    "s = t / v",
+    "s = v + t"
+   ],
+   "antwort": "s = v · t",
+   "erklaerung": "Beide Seiten mit t malnehmen – das t auf der rechten Seite fällt weg.",
+   "id": "elias-mwoyv74l-02"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Die Formel lautet v = s / t. Wie lautet sie nach t umgeformt?",
+   "optionen": [
+    "t = s / v",
+    "t = v · s",
+    "t = v / s",
+    "t = s − v"
+   ],
+   "antwort": "t = s / v",
+   "erklaerung": "Erst mit t malnehmen (v·t = s), dann durch v teilen: t = s / v.",
+   "id": "elias-mwoyv74l-03"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Ball fliegt s = 30 m in t = 2 s. Wie groß ist v = s / t in m/s?",
+   "antwort": [
+    "15"
+   ],
+   "erklaerung": "Einsetzen: v = 30 m : 2 s = 15 m/s.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-04"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Spieler läuft mit v = 8 m/s für t = 5 s. Wie weit läuft er? s = v · t (in m)",
+   "antwort": [
+    "40"
+   ],
+   "erklaerung": "s = 8 m/s · 5 s = 40 m.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-05"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 2,5 t = ? kg",
+   "antwort": [
+    "2500"
+   ],
+   "erklaerung": "1 t = 1000 kg, also 2,5 · 1000 = 2500 kg.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-06"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 450 g = ? kg",
+   "antwort": [
+    "0,45",
+    "0.45"
+   ],
+   "erklaerung": "1 g = 0,001 kg, also 450 : 1000 = 0,45 kg.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-07"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 3 min = ? s",
+   "antwort": [
+    "180"
+   ],
+   "erklaerung": "1 min = 60 s, also 3 · 60 = 180 s.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-08"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 2 h = ? s",
+   "antwort": [
+    "7200"
+   ],
+   "erklaerung": "1 h = 60 min = 3600 s, also 2 · 3600 = 7200 s.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-09"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 4,2 km = ? m",
+   "antwort": [
+    "4200"
+   ],
+   "erklaerung": "1 km = 1000 m, also 4,2 · 1000 = 4200 m.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-10"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 35 cm = ? m",
+   "antwort": [
+    "0,35",
+    "0.35"
+   ],
+   "erklaerung": "1 cm = 0,01 m, also 35 : 100 = 0,35 m.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-11"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Grundeinheit der Masse?",
+   "optionen": [
+    "Kilogramm (kg)",
+    "Gramm (g)",
+    "Tonne (t)",
+    "Newton (N)"
+   ],
+   "antwort": "Kilogramm (kg)",
+   "erklaerung": "Die SI-Grundeinheit der Masse ist das Kilogramm – nicht das Gramm!",
+   "id": "elias-mwoyv74l-12"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Vorsilbe gehört zu 10³?",
+   "optionen": [
+    "Kilo (k)",
+    "Mega (M)",
+    "Milli (m)",
+    "Giga (G)"
+   ],
+   "antwort": "Kilo (k)",
+   "erklaerung": "Kilo = 10³ = 1000, z. B. 1 km = 1000 m.",
+   "id": "elias-mwoyv74l-13"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Vorsilbe gehört zu 10⁶?",
+   "optionen": [
+    "Mega (M)",
+    "Kilo (k)",
+    "Giga (G)",
+    "Mikro (µ)"
+   ],
+   "antwort": "Mega (M)",
+   "erklaerung": "Mega = 10⁶ = eine Million.",
+   "id": "elias-mwoyv74l-14"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Vorsilbe gehört zu 10¹²?",
+   "optionen": [
+    "Tera (T)",
+    "Giga (G)",
+    "Peta (P)",
+    "Pico (p)"
+   ],
+   "antwort": "Tera (T)",
+   "erklaerung": "Tera = 10¹² = eine Billion.",
+   "id": "elias-mwoyv74l-15"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Vorsilbe gehört zu 10⁻⁶?",
+   "optionen": [
+    "Mikro (µ)",
+    "Nano (n)",
+    "Milli (m)",
+    "Mega (M)"
+   ],
+   "antwort": "Mikro (µ)",
+   "erklaerung": "Mikro = 10⁻⁶ = ein Millionstel.",
+   "id": "elias-mwoyv74l-16"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Vorsilbe gehört zu 10⁻²?",
+   "optionen": [
+    "Zenti (c)",
+    "Dezi (d)",
+    "Milli (m)",
+    "Hekto (h)"
+   ],
+   "antwort": "Zenti (c)",
+   "erklaerung": "Zenti = 10⁻² = ein Hundertstel, z. B. 1 cm = 0,01 m.",
+   "id": "elias-mwoyv74l-17"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Zehnerpotenz",
+   "frage": "Ein Stadion hat 60 000 Plätze. Schreib die Zahl als 6 · 10^? – welche Hochzahl fehlt?",
+   "antwort": [
+    "4"
+   ],
+   "erklaerung": "60 000 = 6 · 10 000 = 6 · 10⁴.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-18"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Zehnerpotenz",
+   "frage": "Wie viel ist 3 · 10³ als normale Zahl?",
+   "antwort": [
+    "3000"
+   ],
+   "erklaerung": "10³ = 1000, also 3 · 1000 = 3000.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-19"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Zehnerpotenz",
+   "frage": "Wie viel ist 10² · 10³ als Zehnerpotenz? 10^?",
+   "antwort": [
+    "5"
+   ],
+   "erklaerung": "Beim Malnehmen werden die Hochzahlen addiert: 2 + 3 = 5.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-20"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie tippt man 2,5 · 10⁻³ richtig in den Taschenrechner?",
+   "optionen": [
+    "2.5 EXP −3 (bzw. ×10ˣ −3)",
+    "2.5 × 10 ^ 3 −",
+    "2.5 − 3 EXP",
+    "EXP 2.5 −3"
+   ],
+   "antwort": "2.5 EXP −3 (bzw. ×10ˣ −3)",
+   "erklaerung": "Zuerst die Zahl, dann die EXP- bzw. ×10ˣ-Taste, dann die Hochzahl (mit Minus-Vorzeichen-Taste).",
+   "id": "elias-mwoyv74l-21"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Schritte hat die wissenschaftliche Methode nach Galileo Galilei laut Teststoff?",
+   "optionen": [
+    "5",
+    "3",
+    "4",
+    "7"
+   ],
+   "antwort": "5",
+   "erklaerung": "Galilei arbeitete in 5 Schritten: Beobachten, Hypothese, Experiment planen, Experiment durchführen/messen, Auswerten/Schlussfolgern.",
+   "id": "elias-mwoyv74l-22"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist eine Hypothese?",
+   "optionen": [
+    "Eine Vermutung, die man mit einem Experiment überprüft",
+    "Ein bewiesenes Naturgesetz",
+    "Eine Messwerttabelle",
+    "Das Ergebnis eines Experiments"
+   ],
+   "antwort": "Eine Vermutung, die man mit einem Experiment überprüft",
+   "erklaerung": "Hypothese = begründete Vermutung. Erst das Experiment zeigt, ob sie stimmt.",
+   "id": "elias-mwoyv74l-23"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was kommt bei der wissenschaftlichen Methode ganz am Anfang?",
+   "optionen": [
+    "Eine Beobachtung bzw. Frage",
+    "Die Schlussfolgerung",
+    "Die Messwerttabelle",
+    "Der Mittelwert"
+   ],
+   "antwort": "Eine Beobachtung bzw. Frage",
+   "erklaerung": "Alles beginnt mit einer Beobachtung, aus der eine Frage entsteht.",
+   "id": "elias-mwoyv74l-24"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Mittelwert",
+   "frage": "Ein Ball wird dreimal fallen gelassen. Fallzeiten: 0,6 s, 0,8 s und 0,7 s. Wie groß ist der Mittelwert (in s)?",
+   "antwort": [
+    "0,7",
+    "0.7"
+   ],
+   "erklaerung": "Alle addieren: 0,6 + 0,8 + 0,7 = 2,1. Durch die Anzahl 3 teilen: 2,1 : 3 = 0,7 s.",
+   "zahl": true,
+   "id": "elias-mwoyv74l-25"
+  }
+ ],
+ "tests": [
+  {
+   "id": "elias-mwoyv74l",
+   "titel": "Test Größen, Einheiten und wissenschaftliche Methode",
+   "fragen": [
+    {
+     "typ": "eingabe",
+     "art": "Umformen",
+     "frage": "Löse nach x auf: 5·x = 35. x =",
+     "antwort": [
+      "7"
+     ],
+     "erklaerung": "35 : 5 = 7.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-01"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "v = s / t nach t umgeformt:",
+     "optionen": [
+      "t = s / v",
+      "t = v · s",
+      "t = v / s",
+      "t = s · v"
+     ],
+     "antwort": "t = s / v",
+     "erklaerung": "Mit t malnehmen, dann durch v teilen.",
+     "id": "elias-mwoyv74l-02"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Einsetzen",
+     "frage": "Ein Ball rollt s = 50 m in t = 10 s. v = s / t in m/s?",
+     "antwort": [
+      "5"
+     ],
+     "erklaerung": "50 : 10 = 5 m/s.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-03"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Umrechnen",
+     "frage": "1,5 t = ? kg",
+     "antwort": [
+      "1500"
+     ],
+     "erklaerung": "1,5 · 1000 = 1500 kg.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-04"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Umrechnen",
+     "frage": "1,5 h = ? s",
+     "antwort": [
+      "5400"
+     ],
+     "erklaerung": "1,5 · 3600 = 5400 s.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-05"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Umrechnen",
+     "frage": "250 cm = ? m",
+     "antwort": [
+      "2,5",
+      "2.5"
+     ],
+     "erklaerung": "250 : 100 = 2,5 m.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-06"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welche Vorsilbe gehört zu 10⁻⁹?",
+     "optionen": [
+      "Nano (n)",
+      "Mikro (µ)",
+      "Pico (p)",
+      "Giga (G)"
+     ],
+     "antwort": "Nano (n)",
+     "erklaerung": "Nano = 10⁻⁹.",
+     "id": "elias-mwoyv74l-07"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welche Vorsilbe gehört zu 10⁹?",
+     "optionen": [
+      "Giga (G)",
+      "Mega (M)",
+      "Tera (T)",
+      "Kilo (k)"
+     ],
+     "antwort": "Giga (G)",
+     "erklaerung": "Giga = 10⁹.",
+     "id": "elias-mwoyv74l-08"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Zehnerpotenz",
+     "frage": "10⁴ · 10³ = 10^?",
+     "antwort": [
+      "7"
+     ],
+     "erklaerung": "4 + 3 = 7.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-09"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Was ist der 2. Schritt der wissenschaftlichen Methode nach Galilei?",
+     "optionen": [
+      "Eine Hypothese aufstellen",
+      "Das Experiment durchführen",
+      "Den Mittelwert bilden",
+      "Die Schlussfolgerung ziehen"
+     ],
+     "antwort": "Eine Hypothese aufstellen",
+     "erklaerung": "Nach der Beobachtung kommt die Vermutung (Hypothese).",
+     "id": "elias-mwoyv74l-10"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Mittelwert",
+     "frage": "Messwerte: 2,0 s; 2,4 s; 2,2 s. Mittelwert in s?",
+     "antwort": [
+      "2,2",
+      "2.2"
+     ],
+     "erklaerung": "6,6 : 3 = 2,2 s.",
+     "zahl": true,
+     "id": "elias-mwoyv74l-11"
+    }
+   ]
   }
  ],
  "wissen": [
   {
-   "titel": "Bewegung: v = s / t",
-   "kurz": "Geschwindigkeit berechnen",
-   "schritte": [
-    "Weg s und Zeit t ablesen, Einheiten prüfen",
-    "v = s / t rechnen",
-    "Umrechnen: m/s · 3,6 = km/h"
-   ],
-   "beispiel": "s = 100 m, t = 12,5 s\nv = 100 / 12,5 = 8 m/s = 28,8 km/h",
-   "video": "Geschwindigkeit berechnen Physik erklärt",
-   "problem": "Wie schnell ist etwas? Geschwindigkeit sagt, welchen Weg ein Körper in einer bestimmten Zeit zurücklegt. Schwierig sind meist die Einheiten (km/h oder m/s).",
+   "titel": "Einheiten in Grundeinheiten umwandeln",
+   "kurz": "Masse → kg, Zeit → s, Länge → m",
+   "problem": "Bei Physik-Aufgaben musst du fast immer zuerst alle Größen in die Grundeinheit umrechnen, bevor du in eine Formel einsetzt.",
    "text": [
-    "Die Formel: Geschwindigkeit v = Weg s geteilt durch Zeit t.",
-    "Umgestellt: s = v · t (Weg) und t = s / v (Zeit). Ein Dreieck hilft beim Merken: s oben, v und t unten.",
-    "Einheiten: Weg in m und Zeit in s ergibt m/s. Weg in km und Zeit in h ergibt km/h.",
-    "Umrechnen: m/s · 3,6 = km/h, und km/h : 3,6 = m/s. Denn 1 m/s sind 3600 m pro Stunde = 3,6 km/h.",
-    "Beispiel: 36 km/h : 3,6 = 10 m/s."
+    "Masse (m): Grundeinheit Kilogramm. 1 t = 1000 kg, 1 g = 0,001 kg.",
+    "Zeit (t): Grundeinheit Sekunde. 1 min = 60 s, 1 h = 3600 s, 1 d = 86 400 s, 1 a (Jahr) ≈ 365 d.",
+    "Länge/Strecke (l, s, x): Grundeinheit Meter. 1 km = 1000 m, 1 cm = 0,01 m, 1 mm = 0,001 m."
    ],
+   "schritte": [
+    "Schau, welche Größe gefragt ist (Masse, Zeit, Länge).",
+    "Merk dir den Umrechnungsfaktor (z. B. 1000, 60, 3600).",
+    "Größere Einheit → kleinere: malnehmen. Kleinere → größere: dividieren."
+   ],
+   "beispiel": "2,5 h = 2,5 · 3600 s = 9000 s\n450 g = 450 : 1000 kg = 0,45 kg\n35 cm = 35 : 100 m = 0,35 m",
    "fehler": [
-    "s · t statt s / t rechnen.",
-    "Einheiten mischen: km mit Sekunden.",
-    "Bei der Umrechnung mal statt durch 3,6 (oder umgekehrt) – Kontrolle: km/h ist immer die größere Zahl."
+    "Gramm für die Grundeinheit halten – richtig ist Kilogramm.",
+    "Bei Stunden mit 60 statt 3600 malnehmen."
    ],
+   "merke": "Erst in kg, s und m umrechnen – dann einsetzen!",
+   "video": "Einheiten umrechnen Grundeinheit Physik",
    "stichworte": [
-    "geschwindigkeit|km/h|m/s|v = s"
+    "Grundeinheit",
+    "Umrechn",
+    "umwandeln",
+    " kg",
+    " min",
+    " km",
+    " cm",
+    " mm"
+   ]
+  },
+  {
+   "titel": "Zehnerpotenzen und Vorsilben",
+   "kurz": "Von Pico (10⁻¹²) bis Tera (10¹²)",
+   "problem": "Sehr große und sehr kleine Zahlen schreibt man mit Zehnerpotenzen oder Vorsilben, damit man nicht so viele Nullen braucht.",
+   "text": [
+    "Positive Hochzahl = so viele Nullen: 10³ = 1000. Negative Hochzahl = Bruchteil: 10⁻³ = 0,001.",
+    "Vorsilben: Tera T 10¹², Giga G 10⁹, Mega M 10⁶, Kilo k 10³, Hekto h 10², Dezi d 10⁻¹, Zenti c 10⁻², Milli m 10⁻³, Mikro µ 10⁻⁶, Nano n 10⁻⁹, Pico p 10⁻¹².",
+    "Rechenregeln: 10ᵃ · 10ᵇ = 10ᵃ⁺ᵇ und 10ᵃ : 10ᵇ = 10ᵃ⁻ᵇ.",
+    "Taschenrechner: Zahl eintippen, dann EXP (oder ×10ˣ), dann die Hochzahl – negative mit der (−)-Taste."
+   ],
+   "schritte": [
+    "Hochzahl bestimmen (Nullen zählen bzw. Kommastellen verschieben).",
+    "Passende Vorsilbe aus der Tabelle suchen.",
+    "Im Taschenrechner die EXP-Taste verwenden, nicht „× 10 ^“ tippen."
+   ],
+   "beispiel": "60 000 = 6 · 10⁴\n3 km = 3 · 10³ m\n10² · 10³ = 10⁵",
+   "fehler": [
+    "m (Milli, 10⁻³) mit M (Mega, 10⁶) verwechseln – Groß-/Kleinschreibung zählt!",
+    "Bei negativen Hochzahlen das Minus vergessen."
+   ],
+   "merke": "Ab Kilo aufwärts in 3er-Schritten: k, M, G, T. Abwärts: m, µ, n, p.",
+   "video": "Zehnerpotenzen Vorsilben Physik Kilo Mega Giga",
+   "stichworte": [
+    "Vorsilbe",
+    "Zehnerpotenz",
+    "10\\^",
+    "10[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]",
+    "EXP",
+    "Taschenrechner"
+   ]
+  },
+  {
+   "titel": "Formeln umformen, einsetzen und die wissenschaftliche Methode",
+   "kurz": "Umformen, Einsetzen, Galilei, Mittelwert",
+   "problem": "Im Test musst du Formeln nach der gesuchten Größe umformen, Werte einsetzen, Galileis 5 Schritte kennen und aus Messwerten den Mittelwert berechnen.",
+   "text": [
+    "Äquivalenzumformung: Was du auf einer Seite machst, machst du auch auf der anderen (plus/minus, mal/durch).",
+    "Bei v = s / t: nach s → s = v · t; nach t → t = s / v.",
+    "Galileis wissenschaftliche Methode in 5 Schritten: 1. Beobachten/Frage stellen, 2. Hypothese (Vermutung) aufstellen, 3. Experiment planen, 4. Experiment durchführen und messen, 5. Auswerten und Schlussfolgerung ziehen (Hypothese bestätigt oder verworfen).",
+    "Mittelwert: alle Messwerte addieren und durch die Anzahl der Messungen teilen. Messwerte trägt man in eine Tabelle ein (Nr., Messwert, Einheit)."
+   ],
+   "schritte": [
+    "Formel nach der gesuchten Größe umformen.",
+    "Gegebene Größen in Grundeinheiten umrechnen.",
+    "Einsetzen, ausrechnen, Einheit dazuschreiben."
+   ],
+   "beispiel": "s = 30 m, t = 2 s → v = 30 m : 2 s = 15 m/s\nMesswerte 0,6 s; 0,8 s; 0,7 s → Mittelwert = 2,1 s : 3 = 0,7 s",
+   "fehler": [
+    "Beim Umformen nur auf einer Seite rechnen.",
+    "Beim Mittelwert durch die falsche Anzahl teilen."
+   ],
+   "merke": "Beide Seiten gleich behandeln – und am Ende immer die Einheit dazuschreiben.",
+   "video": "Formeln umstellen Physik v=s/t einfach erklärt",
+   "stichworte": [
+    "Löse nach",
+    "umgeformt",
+    "Formel",
+    "v = s",
+    "Galile",
+    "Hypothese",
+    "Methode",
+    "Mittelwert",
+    "Messwert"
    ]
   },
   {
