@@ -46,6 +46,7 @@ const ICONS = {
   auge: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   play: '<path d="M7 4l13 8-13 8z"/>',
   wissen: '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>',
+  kamera: '<path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/>',
   mikro: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/>',
 };
 const ic = (n) => { const w = document.createElement("span"); w.innerHTML = `<svg class="ic" viewBox="0 0 24 24">${ICONS[n] || ""}</svg>`; return w.firstChild; };
@@ -363,7 +364,7 @@ function fachSeite() {
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
-    fach.id === "deutsch" ? el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("test"), el("div", {}, el("div", { class: "fach-name" }, "Aufsatz korrigieren"), el("small", {}, "Foto hochladen, Korrektur bekommen"))) : null,
+    FOTO[fach.id] ? el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("kamera"), el("div", {}, el("div", { class: "fach-name" }, `Foto hochladen: ${FOTO[fach.id].titel}`), el("small", {}, FOTO[fach.id].kurz))) : null,
     (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
       (daten.wissen || []).length ? el("button", { class: "fach klein-fach", onclick: wissenListe }, ic("wissen"), el("div", {}, el("div", { class: "fach-name" }, "Wissen"), el("small", {}, `${daten.wissen.length} Erklärungen + Videos`))) : null,
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
@@ -560,10 +561,17 @@ function bildVerkleinern(datei, max = 1500, q = 0.72) {
     img.onerror = fehler; img.src = URL.createObjectURL(datei);
   });
 }
+const FOTO = {
+  deutsch: { titel: "Aufsatz korrigieren", kurz: "Aufsatz fotografieren, Korrektur kommt in die App", ding: "Aufsatz", platz: "Aufgabenstellung (z. B. „Erlebniserzählung: Mein schönster Tag“)", tipps: "Tipps für den nächsten Aufsatz", besser: "Verbesserter Text" },
+  englisch: { titel: "Text korrigieren", kurz: "Englischen Text oder Hausübung fotografieren", ding: "Text", platz: "Aufgabe (z. B. „Write about your pet“ oder „Workbook S. 34“)", tipps: "Tipps für das nächste Mal", besser: "Verbesserter Text" },
+  mathe: { titel: "Rechnung kontrollieren", kurz: "Rechnungen fotografieren, Lösungen prüfen lassen", ding: "Rechnung", platz: "Aufgabe (z. B. „Buch S. 45, Nr. 3–6“)", tipps: "Tipps zum Rechnen", besser: "Richtiger Rechenweg" },
+};
+const fotoFach = a => a.fach || "deutsch";
 async function aufsatzListe() {
-  setzeKopf("Aufsatz", fachSeite);
+  const T = FOTO[fach.id] || FOTO.deutsch;
+  setzeKopf(T.ding, fachSeite);
   if (gast || !wolke || !fb) {
-    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Aufsatzkorrektur"), el("h2", {}, "Aufsatz korrigieren"),
+    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Foto-Korrektur"), el("h2", {}, T.titel),
       el("p", {}, gast ? "Im Testkonto nicht verfügbar – dafür muss ein Kind angemeldet sein." : "Dafür musst du angemeldet sein.")));
     return;
   }
@@ -573,10 +581,11 @@ async function aufsatzListe() {
     const q = fb.F.query(fb.F.collection(fb.db, "aufsaetze"), fb.F.where("uid", "==", wolke.uid));
     const snap = await fb.F.getDocs(q);
     snap.forEach(d => liste.push(Object.assign({ id: d.id }, d.data())));
+    liste = liste.filter(a => fotoFach(a) === fach.id);
     liste.sort((a, b) => (b.datum || "").localeCompare(a.datum || ""));
   } catch (e) { console.error(e); }
   const datei = el("input", { type: "file", accept: "image/*", capture: "environment", style: "display:none" });
-  const aufgabe = el("input", { class: "eingabe", placeholder: "Aufgabenstellung (z. B. „Erlebniserzählung: Mein schönster Tag“)", maxlength: "300" });
+  const aufgabe = el("input", { class: "eingabe", placeholder: T.platz, maxlength: "300" });
   const info = el("div");
   const senden = el("button", { class: "knopf", onclick: () => datei.click() }, ic("play"), "Foto aufnehmen / auswählen");
   datei.addEventListener("change", async () => {
@@ -584,36 +593,36 @@ async function aufsatzListe() {
     senden.disabled = true; info.replaceChildren(el("div", { class: "feedback neutral" }, "Foto wird hochgeladen …"));
     try {
       const bild = await bildVerkleinern(datei.files[0]);
-      await fb.F.addDoc(fb.F.collection(fb.db, "aufsaetze"), { uid: wolke.uid, kind: wolke.kind, aufgabe: aufgabe.value.trim(), bild, status: "offen", datum: `${heute()} ${uhrzeit()}`, erstellt: fb.F.serverTimestamp() });
-      const pr = profil(person.id); protokoll(pr, { f: "deutsch", art: "Aufsatz", titel: aufgabe.value.trim() || "Aufsatz hochgeladen" }); speichern(person.id, PROFIL, pr);
-      info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, "Abgegeben! "), "Die Korrektur kommt meistens innerhalb von 30 Minuten hier in die App."));
+      await fb.F.addDoc(fb.F.collection(fb.db, "aufsaetze"), { uid: wolke.uid, kind: wolke.kind, fach: fach.id, aufgabe: aufgabe.value.trim(), bild, status: "offen", datum: `${heute()} ${uhrzeit()}`, erstellt: fb.F.serverTimestamp() });
+      const pr = profil(person.id); protokoll(pr, { f: fach.id, art: "Foto", titel: aufgabe.value.trim() || `${T.ding} hochgeladen` }); speichern(person.id, PROFIL, pr);
+      info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, "Abgegeben! "), "Die Korrektur kommt meistens innerhalb einer Stunde hier in die App."));
       setTimeout(aufsatzListe, 2500);
     } catch (e) { console.error(e); info.replaceChildren(el("div", { class: "feedback nein" }, "Hochladen hat nicht geklappt. Ist das Internet an?")); senden.disabled = false; }
   });
   zeige(
-    el("div", { class: "karte" }, el("div", { class: "label" }, "Aufsatzkorrektur"), el("h2", {}, "Aufsatz abgeben"),
-      el("p", { class: "klein" }, "Fotografiere deinen Aufsatz gerade von oben, bei gutem Licht. Mehrere Seiten: jede Seite einzeln abgeben."),
+    el("div", { class: "karte" }, el("div", { class: "label" }, "Foto-Korrektur"), el("h2", {}, T.titel),
+      el("p", { class: "klein" }, "Fotografiere gerade von oben, bei gutem Licht. Mehrere Seiten: jede Seite einzeln abgeben."),
       aufgabe, senden, datei, info),
-    el("div", { class: "label" }, "Meine Aufsätze"),
-    liste.length ? null : el("p", { class: "hinweis" }, "Noch keine Aufsätze abgegeben."),
+    el("div", { class: "label" }, "Meine Abgaben"),
+    liste.length ? null : el("p", { class: "hinweis" }, "Noch nichts abgegeben."),
     ...liste.map(a => el("button", { class: `test-knopf ${a.status === "korrigiert" ? "ok" : ""}`, onclick: () => a.status === "korrigiert" ? aufsatzZeigen(a) : null },
-      el("span", {}, a.aufgabe || "Aufsatz", el("small", {}, `${a.datum || ""} · ${a.status === "korrigiert" ? `korrigiert · ${(a.korrektur.fehler || []).length} Fehler` : "wartet auf Korrektur …"}`)),
+      el("span", {}, a.aufgabe || T.ding, el("small", {}, `${a.datum || ""} · ${a.status === "korrigiert" ? `korrigiert · ${(a.korrektur.fehler || []).length} Fehler` : "wartet auf Korrektur …"}`)),
       ic(a.status === "korrigiert" ? "haken" : "schloss"))));
 }
 function aufsatzZeigen(a) {
-  const k = a.korrektur || {};
+  const k = a.korrektur || {}, T = FOTO[fotoFach(a)] || FOTO.deutsch;
   setzeKopf("Korrektur", aufsatzListe);
-  const farbe = { Rechtschreibung: "#ff4d5e", Grammatik: "#ffb703", Zeichensetzung: "#8b8bff", Ausdruck: "#2ee59d", Inhalt: "#9a9aae" };
+  const farbe = { Rechenfehler: "#ff4d5e", Rechenweg: "#ffb703", Einheit: "#8b8bff", Vokabel: "#2ee59d", Rechtschreibung: "#ff4d5e", Grammatik: "#ffb703", Zeichensetzung: "#8b8bff", Ausdruck: "#2ee59d", Inhalt: "#9a9aae" };
   zeige(
-    el("div", { class: "karte titelkarte" }, el("div", { class: "label" }, "Korrektur"), el("h2", {}, a.aufgabe || "Dein Aufsatz"),
+    el("div", { class: "karte titelkarte" }, el("div", { class: "label" }, "Korrektur"), el("h2", {}, a.aufgabe || `Dein ${T.ding}`),
       k.lob ? el("p", {}, "👍 ", k.lob) : null, k.einschaetzung ? el("p", { class: "klein" }, k.einschaetzung) : null),
     (k.fehler || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, `${k.fehler.length} Verbesserungen`),
       ...k.fehler.map(f => el("div", { class: "fehler-zeile" },
         el("span", { class: "fehler-art", style: `color:${farbe[f.art] || "#fff"}` }, f.art),
         el("div", {}, el("s", {}, f.original), " → ", el("b", {}, f.korrektur)),
         el("div", { class: "klein" }, f.erklaerung)))) : null,
-    k.korrigierter_text ? el("div", { class: "karte" }, el("div", { class: "label" }, "Verbesserter Text"), el("div", { class: "aufsatz-text" }, k.korrigierter_text)) : null,
-    (k.tipps || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Tipps für den nächsten Aufsatz"), el("ul", {}, ...k.tipps.map(t => el("li", {}, t)))) : null,
+    k.korrigierter_text ? el("div", { class: "karte" }, el("div", { class: "label" }, T.besser), el("div", { class: "aufsatz-text" }, k.korrigierter_text)) : null,
+    (k.tipps || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, T.tipps), el("ul", {}, ...k.tipps.map(t => el("li", {}, t)))) : null,
     k.originaltext ? el("div", { class: "karte" }, el("div", { class: "label" }, "Dein Text (abgeschrieben)"), el("div", { class: "aufsatz-text klein" }, k.originaltext)) : null);
 }
 

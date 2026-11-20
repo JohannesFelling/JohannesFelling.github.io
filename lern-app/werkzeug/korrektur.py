@@ -62,7 +62,7 @@ def holen(ordner):
         f = {k: von_fs(v) for k, v in d.get("fields", {}).items()}
         with open(os.path.join(ordner, f"{id_}.jpg"), "wb") as fh: fh.write(base64.b64decode(f.pop("bild", "")))
         with open(os.path.join(ordner, f"{id_}.json"), "w") as fh: json.dump(f, fh, ensure_ascii=False, indent=1)
-        print(f"{id_}\t{f.get('kind')}\t{f.get('datum')}\t{f.get('aufgabe') or '-'}")
+        print(f"{id_}\t{f.get('kind')}\t{f.get('fach') or 'deutsch'}\t{f.get('datum')}\t{f.get('aufgabe') or '-'}")
         n += 1
     print(f"{n} offene Aufsätze")
 
