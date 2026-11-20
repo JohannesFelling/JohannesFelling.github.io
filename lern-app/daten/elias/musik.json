@@ -1,0 +1,105 @@
+{
+ "titel": "Musik",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Intervall hat 3 Halbtöne (z. B. c–es)?",
+   "optionen": [
+    "kleine Terz",
+    "große Terz",
+    "Quarte",
+    "Sekunde"
+   ],
+   "antwort": "kleine Terz",
+   "erklaerung": "",
+   "id": "mu001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Aus welchen Tönen besteht der C-Dur-Dreiklang?",
+   "optionen": [
+    "c – e – g",
+    "c – es – g",
+    "c – f – a",
+    "c – d – e"
+   ],
+   "antwort": "c – e – g",
+   "erklaerung": "",
+   "id": "mu002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Vorzeichen hat G-Dur?",
+   "optionen": [
+    "1 Kreuz (fis)",
+    "1 b",
+    "keine",
+    "2 Kreuze"
+   ],
+   "antwort": "1 Kreuz (fis)",
+   "erklaerung": "",
+   "id": "mu003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welche Epoche gehört Mozart?",
+   "optionen": [
+    "Klassik",
+    "Barock",
+    "Romantik",
+    "Moderne"
+   ],
+   "antwort": "Klassik",
+   "erklaerung": "",
+   "id": "mu004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welche Epoche gehört Johann Sebastian Bach?",
+   "optionen": [
+    "Barock",
+    "Klassik",
+    "Romantik",
+    "Renaissance"
+   ],
+   "antwort": "Barock",
+   "erklaerung": "",
+   "id": "mu005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Crescendo“?",
+   "optionen": [
+    "lauter werdend",
+    "leiser werdend",
+    "schneller werdend",
+    "kurz gespielt"
+   ],
+   "antwort": "lauter werdend",
+   "erklaerung": "",
+   "id": "mu006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Takt hat 3 Viertel pro Takt?",
+   "optionen": [
+    "3/4-Takt (z. B. Walzer)",
+    "4/4-Takt",
+    "2/4-Takt",
+    "6/8-Takt"
+   ],
+   "antwort": "3/4-Takt (z. B. Walzer)",
+   "erklaerung": "",
+   "id": "mu007"
+  }
+ ]
+}

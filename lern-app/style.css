@@ -204,3 +204,10 @@ body.thema-sport{
 .termin-banner .ic{color:var(--akzent);font-size:1.3rem;flex:none}
 .start-termin{margin-top:6px;background:#000a;border:1px solid currentColor;color:#c6ff00;border-radius:8px;padding:4px 10px;font-size:.82rem;font-weight:800}.start-held .start-termin{color:#ffcf6b}
 .sterne-top:empty{display:none}
+/* Aufsatz */
+.aufsatz-knopf{width:100%;margin-bottom:12px;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;min-height:80px}
+.fehler-zeile{padding:10px 0;border-top:1px solid var(--linie)}
+.fehler-zeile s{color:var(--falsch);text-decoration-thickness:2px}
+.fehler-zeile b{color:var(--ok)}
+.fehler-art{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+.aufsatz-text{white-space:pre-wrap;line-height:1.6}

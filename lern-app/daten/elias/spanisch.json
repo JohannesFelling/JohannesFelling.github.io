@@ -1,0 +1,173 @@
+{
+ "titel": "Español",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Hallo“ auf Spanisch?",
+   "antwort": [
+    "hola"
+   ],
+   "erklaerung": "",
+   "id": "sp001"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Danke“ auf Spanisch?",
+   "antwort": [
+    "gracias"
+   ],
+   "erklaerung": "",
+   "id": "sp002"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Wie heißt du?“ auf Spanisch?",
+   "antwort": [
+    "¿cómo te llamas?",
+    "como te llamas",
+    "cómo te llamas"
+   ],
+   "erklaerung": "",
+   "id": "sp003"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Ich heiße Elias.“ auf Spanisch?",
+   "antwort": [
+    "me llamo elias",
+    "soy elias"
+   ],
+   "erklaerung": "",
+   "id": "sp004"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„die Schule“ auf Spanisch?",
+   "antwort": [
+    "la escuela",
+    "el colegio",
+    "el instituto"
+   ],
+   "erklaerung": "",
+   "id": "sp005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Yo ___ de Austria.",
+   "optionen": [
+    "soy",
+    "estoy",
+    "es",
+    "eres"
+   ],
+   "antwort": "soy",
+   "erklaerung": "ser für Herkunft: yo soy, tú eres, él es.",
+   "id": "sp006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "¿Cómo ___ (tú)? – Bien, gracias.",
+   "optionen": [
+    "estás",
+    "eres",
+    "está",
+    "soy"
+   ],
+   "antwort": "estás",
+   "erklaerung": "estar für Befinden.",
+   "id": "sp007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Artikel passt? ___ casa",
+   "optionen": [
+    "la",
+    "el",
+    "los",
+    "un"
+   ],
+   "antwort": "la",
+   "erklaerung": "Wörter auf -a sind meist weiblich: la casa.",
+   "id": "sp008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Artikel passt? ___ libro",
+   "optionen": [
+    "el",
+    "la",
+    "las",
+    "una"
+   ],
+   "antwort": "el",
+   "erklaerung": "",
+   "id": "sp009"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt die Zahl 15?",
+   "optionen": [
+    "quince",
+    "cinco",
+    "cincuenta",
+    "catorce"
+   ],
+   "antwort": "quince",
+   "erklaerung": "",
+   "id": "sp010"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Messi ___ argentino.",
+   "optionen": [
+    "es",
+    "está",
+    "soy",
+    "son"
+   ],
+   "antwort": "es",
+   "erklaerung": "",
+   "id": "sp011"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Nosotros ___ al fútbol. (jugar)",
+   "optionen": [
+    "jugamos",
+    "juegan",
+    "juego",
+    "jugáis"
+   ],
+   "antwort": "jugamos",
+   "erklaerung": "",
+   "id": "sp012"
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "ser oder estar?",
+   "kurz": "Beide heißen „sein“",
+   "schritte": [
+    "ser: Herkunft, Beruf, Eigenschaften, Uhrzeit (Soy de Austria. Es alto.)",
+    "estar: Befinden, Ort, vorübergehender Zustand (Estoy cansado. Madrid está en España.)"
+   ],
+   "beispiel": "ser: soy, eres, es, somos, sois, son\nestar: estoy, estás, está, estamos, estáis, están",
+   "merke": "Wie du BIST → ser. Wo und wie es dir GEHT → estar.",
+   "video": "ser estar Unterschied Spanisch einfach erklärt"
+  }
+ ]
+}

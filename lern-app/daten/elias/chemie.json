@@ -1,0 +1,131 @@
+{
+ "titel": "Chemie",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woraus besteht ein Atom?",
+   "optionen": [
+    "Kern aus Protonen und Neutronen, Hülle mit Elektronen",
+    "Nur aus Elektronen",
+    "Aus Molekülen",
+    "Aus Zellen"
+   ],
+   "antwort": "Kern aus Protonen und Neutronen, Hülle mit Elektronen",
+   "erklaerung": "",
+   "id": "ch001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Ladung hat ein Elektron?",
+   "optionen": [
+    "negativ",
+    "positiv",
+    "neutral"
+   ],
+   "antwort": "negativ",
+   "erklaerung": "",
+   "id": "ch002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was gibt die Ordnungszahl im Periodensystem an?",
+   "optionen": [
+    "Anzahl der Protonen",
+    "Anzahl der Neutronen",
+    "Masse",
+    "Anzahl der Moleküle"
+   ],
+   "antwort": "Anzahl der Protonen",
+   "erklaerung": "",
+   "id": "ch003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Chemisches Zeichen für Sauerstoff?",
+   "optionen": [
+    "O",
+    "S",
+    "Sa",
+    "Ox"
+   ],
+   "antwort": "O",
+   "erklaerung": "",
+   "id": "ch004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Chemisches Zeichen für Natrium?",
+   "optionen": [
+    "Na",
+    "N",
+    "So",
+    "Nt"
+   ],
+   "antwort": "Na",
+   "erklaerung": "",
+   "id": "ch005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "H₂O ist …",
+   "optionen": [
+    "Wasser",
+    "Wasserstoffperoxid",
+    "Salz",
+    "Sauerstoff"
+   ],
+   "antwort": "Wasser",
+   "erklaerung": "",
+   "id": "ch006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Reinstoff?",
+   "optionen": [
+    "Ein Stoff aus nur einer Stoffart",
+    "Ein Gemisch",
+    "Sauberes Wasser",
+    "Eine Lösung"
+   ],
+   "antwort": "Ein Stoff aus nur einer Stoffart",
+   "erklaerung": "",
+   "id": "ch007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie trennt man Salz aus Salzwasser?",
+   "optionen": [
+    "Eindampfen",
+    "Filtrieren",
+    "Sieben",
+    "Magnet"
+   ],
+   "antwort": "Eindampfen",
+   "erklaerung": "",
+   "id": "ch008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "pH-Wert 2 ist …",
+   "optionen": [
+    "sauer",
+    "neutral",
+    "basisch (alkalisch)"
+   ],
+   "antwort": "sauer",
+   "erklaerung": "",
+   "id": "ch009"
+  }
+ ]
+}

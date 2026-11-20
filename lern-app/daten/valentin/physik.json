@@ -1,0 +1,159 @@
+{
+ "titel": "Physik",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woraus bestehen alle Stoffe nach dem Teilchenmodell?",
+   "optionen": [
+    "aus winzigen Teilchen",
+    "aus Luft",
+    "aus Wasser",
+    "aus Energie"
+   ],
+   "antwort": "aus winzigen Teilchen",
+   "erklaerung": "",
+   "id": "ph001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Aggregatzustand hat eine feste Form?",
+   "optionen": [
+    "fest",
+    "flüssig",
+    "gasförmig"
+   ],
+   "antwort": "fest",
+   "erklaerung": "",
+   "id": "ph002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt der Übergang von flüssig zu gasförmig?",
+   "optionen": [
+    "Verdampfen",
+    "Schmelzen",
+    "Erstarren",
+    "Kondensieren"
+   ],
+   "antwort": "Verdampfen",
+   "erklaerung": "",
+   "id": "ph003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Bei wie viel Grad Celsius gefriert Wasser?",
+   "optionen": [
+    "0 °C",
+    "100 °C",
+    "−10 °C",
+    "4 °C"
+   ],
+   "antwort": "0 °C",
+   "erklaerung": "",
+   "id": "ph004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was passiert meistens mit Stoffen beim Erwärmen?",
+   "optionen": [
+    "Sie dehnen sich aus",
+    "Sie schrumpfen",
+    "Nichts",
+    "Sie werden schwerer"
+   ],
+   "antwort": "Sie dehnen sich aus",
+   "erklaerung": "",
+   "id": "ph005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welcher Einheit misst man die Masse?",
+   "optionen": [
+    "Kilogramm",
+    "Meter",
+    "Liter",
+    "Newton"
+   ],
+   "antwort": "Kilogramm",
+   "erklaerung": "",
+   "id": "ph006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welcher Einheit misst man eine Kraft?",
+   "optionen": [
+    "Newton",
+    "Kilogramm",
+    "Watt",
+    "Grad"
+   ],
+   "antwort": "Newton",
+   "erklaerung": "",
+   "id": "ph007"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Wie viele Milliliter sind 1 Liter?",
+   "antwort": [
+    "1000"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "ph008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum schwimmt Holz auf Wasser?",
+   "optionen": [
+    "Es hat eine kleinere Dichte als Wasser",
+    "Es ist leicht gebaut",
+    "Es ist hohl",
+    "Wegen der Farbe"
+   ],
+   "antwort": "Es hat eine kleinere Dichte als Wasser",
+   "erklaerung": "",
+   "id": "ph009"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was zeigt ein Thermometer an?",
+   "optionen": [
+    "Temperatur",
+    "Masse",
+    "Volumen",
+    "Kraft"
+   ],
+   "antwort": "Temperatur",
+   "erklaerung": "",
+   "id": "ph010"
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "Aggregatzustände",
+   "kurz": "fest, flüssig, gasförmig",
+   "text": [
+    "Im Teilchenmodell bewegen sich die Teilchen umso schneller, je wärmer es ist."
+   ],
+   "schritte": [
+    "fest: Teilchen dicht, schwingen am Platz",
+    "flüssig: Teilchen verschiebbar",
+    "gasförmig: Teilchen fliegen frei herum"
+   ],
+   "beispiel": "fest → flüssig: Schmelzen\nflüssig → fest: Erstarren\nflüssig → gasförmig: Verdampfen\ngasförmig → flüssig: Kondensieren",
+   "video": "Aggregatzustände Teilchenmodell erklärt"
+  }
+ ]
+}

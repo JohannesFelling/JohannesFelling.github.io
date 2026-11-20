@@ -1,0 +1,158 @@
+{
+ "titel": "Geschichte",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie nennt man die Zeit, bevor es Schrift gab?",
+   "optionen": [
+    "Urgeschichte",
+    "Mittelalter",
+    "Neuzeit",
+    "Antike"
+   ],
+   "antwort": "Urgeschichte",
+   "erklaerung": "",
+   "id": "gs001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt die berühmte Gletschermumie aus den Ötztaler Alpen?",
+   "optionen": [
+    "Ötzi",
+    "Tutanchamun",
+    "Lucy",
+    "Venus"
+   ],
+   "antwort": "Ötzi",
+   "erklaerung": "",
+   "id": "gs002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Figur wurde in Willendorf (Niederösterreich) gefunden?",
+   "optionen": [
+    "Venus von Willendorf",
+    "Der Denker",
+    "Die Mona Lisa",
+    "Der Diskuswerfer"
+   ],
+   "antwort": "Venus von Willendorf",
+   "erklaerung": "",
+   "id": "gs003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "An welchem Fluss entstand die Hochkultur Ägypten?",
+   "optionen": [
+    "Nil",
+    "Donau",
+    "Euphrat",
+    "Amazonas"
+   ],
+   "antwort": "Nil",
+   "erklaerung": "",
+   "id": "gs004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt die Schrift der alten Ägypter?",
+   "optionen": [
+    "Hieroglyphen",
+    "Keilschrift",
+    "Runen",
+    "Latein"
+   ],
+   "antwort": "Hieroglyphen",
+   "erklaerung": "",
+   "id": "gs005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer war der König im alten Ägypten?",
+   "optionen": [
+    "Pharao",
+    "Kaiser",
+    "Konsul",
+    "Sultan"
+   ],
+   "antwort": "Pharao",
+   "erklaerung": "",
+   "id": "gs006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welcher griechischen Stadt entstand die Demokratie?",
+   "optionen": [
+    "Athen",
+    "Sparta",
+    "Rom",
+    "Troja"
+   ],
+   "antwort": "Athen",
+   "erklaerung": "",
+   "id": "gs007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo fanden die ersten Olympischen Spiele statt?",
+   "optionen": [
+    "Olympia",
+    "Athen",
+    "Rom",
+    "Kreta"
+   ],
+   "antwort": "Olympia",
+   "erklaerung": "",
+   "id": "gs008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie hieß das römische Lager auf dem Gebiet des heutigen Wien?",
+   "optionen": [
+    "Vindobona",
+    "Carnuntum",
+    "Juvavum",
+    "Lentia"
+   ],
+   "antwort": "Vindobona",
+   "erklaerung": "",
+   "id": "gs009"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Gründungsjahr Roms laut Sage (… v. Chr.)? Nur die Zahl.",
+   "antwort": [
+    "753"
+   ],
+   "erklaerung": "„Sieben-fünf-drei, Rom schlüpft aus dem Ei.“",
+   "zahl": true,
+   "id": "gs010"
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "Zeitleiste",
+   "kurz": "Von der Urgeschichte zu den Römern",
+   "schritte": [
+    "Urgeschichte: Altsteinzeit, Jungsteinzeit (Sesshaftigkeit), Metallzeit",
+    "Hochkulturen: Ägypten (ab ca. 3000 v. Chr.)",
+    "Griechen: Athen, Demokratie, Olympische Spiele",
+    "Römer: Gründung 753 v. Chr., Weltreich bis 476 n. Chr."
+   ],
+   "merke": "v. Chr. zählt rückwärts: 753 v. Chr. ist früher als 500 v. Chr.",
+   "video": "Zeitleiste Urgeschichte Antike einfach erklärt"
+  }
+ ]
+}

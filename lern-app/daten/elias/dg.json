@@ -1,0 +1,91 @@
+{
+ "titel": "Darstellende Geometrie",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was zeigt der Grundriss?",
+   "optionen": [
+    "Die Ansicht von oben",
+    "Die Ansicht von vorne",
+    "Die Ansicht von links",
+    "Ein Schrägbild"
+   ],
+   "antwort": "Die Ansicht von oben",
+   "erklaerung": "",
+   "id": "dg001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was zeigt der Aufriss?",
+   "optionen": [
+    "Die Ansicht von vorne",
+    "Die Ansicht von oben",
+    "Die Ansicht von hinten",
+    "Den Querschnitt"
+   ],
+   "antwort": "Die Ansicht von vorne",
+   "erklaerung": "",
+   "id": "dg002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Kanten hat ein Würfel?",
+   "optionen": [
+    "12",
+    "8",
+    "6",
+    "24"
+   ],
+   "antwort": "12",
+   "erklaerung": "",
+   "id": "dg003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Ecken hat ein Würfel?",
+   "optionen": [
+    "8",
+    "6",
+    "12",
+    "4"
+   ],
+   "antwort": "8",
+   "erklaerung": "",
+   "id": "dg004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Körper hat genau eine Spitze und eine Kreis-Grundfläche?",
+   "optionen": [
+    "Kegel",
+    "Zylinder",
+    "Pyramide",
+    "Kugel"
+   ],
+   "antwort": "Kegel",
+   "erklaerung": "",
+   "id": "dg005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Bei der Normalprojektion treffen die Projektionsstrahlen …",
+   "optionen": [
+    "rechtwinklig auf die Bildebene",
+    "schräg auf die Bildebene",
+    "in einem Punkt zusammen",
+    "nie auf die Bildebene"
+   ],
+   "antwort": "rechtwinklig auf die Bildebene",
+   "erklaerung": "",
+   "id": "dg006"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "titel": "Technik und Design",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Werkzeug nimmst du zum Sägen von Holz?",
+   "optionen": [
+    "Laubsäge",
+    "Zange",
+    "Schraubenzieher",
+    "Pinsel"
+   ],
+   "antwort": "Laubsäge",
+   "erklaerung": "",
+   "id": "te001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Holz?",
+   "optionen": [
+    "Ein nachwachsender Rohstoff",
+    "Ein Metall",
+    "Ein Kunststoff",
+    "Ein Stein"
+   ],
+   "antwort": "Ein nachwachsender Rohstoff",
+   "erklaerung": "",
+   "id": "te002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Werkstoff leitet Strom gut?",
+   "optionen": [
+    "Kupfer",
+    "Holz",
+    "Papier",
+    "Kunststoff"
+   ],
+   "antwort": "Kupfer",
+   "erklaerung": "",
+   "id": "te003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wozu verwendet man Schleifpapier?",
+   "optionen": [
+    "Zum Glätten von Oberflächen",
+    "Zum Kleben",
+    "Zum Bohren",
+    "Zum Messen"
+   ],
+   "antwort": "Zum Glätten von Oberflächen",
+   "erklaerung": "",
+   "id": "te004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist beim Arbeiten mit der Bohrmaschine wichtig?",
+   "optionen": [
+    "Werkstück gut festspannen",
+    "Handschuhe beim Bohren tragen",
+    "Schnell arbeiten",
+    "Haare offen lassen"
+   ],
+   "antwort": "Werkstück gut festspannen",
+   "erklaerung": "",
+   "id": "te005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was macht ein Hebel?",
+   "optionen": [
+    "Er spart Kraft",
+    "Er macht Strom",
+    "Er misst Länge",
+    "Er klebt Teile"
+   ],
+   "antwort": "Er spart Kraft",
+   "erklaerung": "",
+   "id": "te006"
+  }
+ ]
+}

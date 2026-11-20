@@ -1,0 +1,105 @@
+{
+ "titel": "Kunst und Gestaltung",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche sind die drei Grundfarben (Malen)?",
+   "optionen": [
+    "Gelb, Rot (Magenta), Blau (Cyan)",
+    "Grün, Orange, Lila",
+    "Schwarz, Weiß, Grau",
+    "Rot, Grün, Braun"
+   ],
+   "antwort": "Gelb, Rot (Magenta), Blau (Cyan)",
+   "erklaerung": "",
+   "id": "ku001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was entsteht, wenn man Gelb und Blau mischt?",
+   "optionen": [
+    "Grün",
+    "Orange",
+    "Violett",
+    "Braun"
+   ],
+   "antwort": "Grün",
+   "erklaerung": "",
+   "id": "ku002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was entsteht aus Rot und Gelb?",
+   "optionen": [
+    "Orange",
+    "Grün",
+    "Violett",
+    "Rosa"
+   ],
+   "antwort": "Orange",
+   "erklaerung": "",
+   "id": "ku003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist eine Komplementärfarbe zu Rot?",
+   "optionen": [
+    "Grün",
+    "Orange",
+    "Gelb",
+    "Blau"
+   ],
+   "antwort": "Grün",
+   "erklaerung": "",
+   "id": "ku004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Farben wirken „warm“?",
+   "optionen": [
+    "Rot, Orange, Gelb",
+    "Blau, Türkis",
+    "Grau, Schwarz",
+    "Grün, Blau"
+   ],
+   "antwort": "Rot, Orange, Gelb",
+   "erklaerung": "",
+   "id": "ku005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer malte die Mona Lisa?",
+   "optionen": [
+    "Leonardo da Vinci",
+    "Pablo Picasso",
+    "Gustav Klimt",
+    "Vincent van Gogh"
+   ],
+   "antwort": "Leonardo da Vinci",
+   "erklaerung": "",
+   "id": "ku006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher österreichische Maler malte „Der Kuss“?",
+   "optionen": [
+    "Gustav Klimt",
+    "Egon Schiele",
+    "Friedensreich Hundertwasser",
+    "Claude Monet"
+   ],
+   "antwort": "Gustav Klimt",
+   "erklaerung": "",
+   "id": "ku007"
+  }
+ ]
+}

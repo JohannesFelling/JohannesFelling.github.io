@@ -1,0 +1,149 @@
+{
+ "titel": "Informatik",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Wie viel ist die Binärzahl 1010 im Dezimalsystem?",
+   "antwort": [
+    "10"
+   ],
+   "erklaerung": "8 + 0 + 2 + 0 = 10",
+   "zahl": true,
+   "id": "if001"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Schreib 5 als Binärzahl:",
+   "antwort": [
+    "101"
+   ],
+   "erklaerung": "4 + 1 = 101",
+   "id": "if002"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Wie viele Bit hat ein Byte?",
+   "antwort": [
+    "8"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "if003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die CPU?",
+   "optionen": [
+    "Der Prozessor, der rechnet",
+    "Der Arbeitsspeicher",
+    "Die Festplatte",
+    "Der Bildschirm"
+   ],
+   "antwort": "Der Prozessor, der rechnet",
+   "erklaerung": "",
+   "id": "if004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist RAM?",
+   "optionen": [
+    "Arbeitsspeicher (flüchtig)",
+    "Dauerhafter Speicher",
+    "Netzwerkkabel",
+    "Ein Programm"
+   ],
+   "antwort": "Arbeitsspeicher (flüchtig)",
+   "erklaerung": "",
+   "id": "if005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Algorithmus?",
+   "optionen": [
+    "Eine eindeutige Schritt-für-Schritt-Anleitung",
+    "Ein Computervirus",
+    "Ein Speicher",
+    "Eine Programmiersprache"
+   ],
+   "antwort": "Eine eindeutige Schritt-für-Schritt-Anleitung",
+   "erklaerung": "",
+   "id": "if006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wofür steht „www“?",
+   "optionen": [
+    "World Wide Web",
+    "World Wide Windows",
+    "Web Without Wires",
+    "Wide Web World"
+   ],
+   "antwort": "World Wide Web",
+   "erklaerung": "",
+   "id": "if007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was macht eine IP-Adresse?",
+   "optionen": [
+    "Identifiziert ein Gerät im Netzwerk",
+    "Speichert Passwörter",
+    "Schützt vor Viren",
+    "Macht Fotos kleiner"
+   ],
+   "antwort": "Identifiziert ein Gerät im Netzwerk",
+   "erklaerung": "",
+   "id": "if008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ergibt in Python: print(3 * 4)?",
+   "optionen": [
+    "12",
+    "34",
+    "7",
+    "3*4"
+   ],
+   "antwort": "12",
+   "erklaerung": "",
+   "id": "if009"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "1 Kilobyte sind wie viele Byte (Dezimal-Präfix)?",
+   "antwort": [
+    "1000"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "if010"
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "Binärzahlen",
+   "kurz": "Nur 0 und 1",
+   "text": [
+    "Jede Stelle hat einen doppelt so großen Wert wie die rechts davon: 1, 2, 4, 8, 16 …"
+   ],
+   "schritte": [
+    "Stellenwerte unter die Ziffern schreiben",
+    "Wo eine 1 steht, den Wert addieren"
+   ],
+   "beispiel": "1 0 1 1\n8 4 2 1\n= 8 + 2 + 1 = 11",
+   "video": "Binärsystem umrechnen einfach erklärt"
+  }
+ ]
+}

@@ -4,14 +4,14 @@
   { "datum": "2026-10-19", "fach": "mathe", "titel": "Probe-Mathe-Schularbeit", "art": "Probe" },
   { "datum": "2026-11-06", "fach": "mathe", "titel": "1. Mathe-Schularbeit", "art": "Schularbeit", "dauer": 100 },
   { "datum": "2026-11-13", "fach": "geografie", "titel": "Geo-Test", "art": "Test" },
-  { "datum": "2026-11-17", "fach": null, "titel": "1. Spanisch-Schularbeit", "art": "Schularbeit", "dauer": 50 },
-  { "datum": "2026-11-24", "fach": null, "titel": "Physik-Test", "art": "Test" },
+  { "datum": "2026-11-17", "fach": "spanisch", "titel": "1. Spanisch-Schularbeit", "art": "Schularbeit", "dauer": 50 },
+  { "datum": "2026-11-24", "fach": "physik", "titel": "Physik-Test", "art": "Test" },
   { "datum": "2026-11-26", "fach": "biologie", "titel": "Bio-Test", "art": "Test" },
   { "datum": "2026-12-04", "fach": "englisch", "titel": "1. Englisch-Schularbeit", "art": "Schularbeit", "dauer": 100 },
   { "datum": "2026-12-10", "fach": "deutsch", "titel": "1. Deutsch-Schularbeit", "art": "Schularbeit", "dauer": 100 },
-  { "datum": "2026-12-14", "fach": null, "titel": "Informatik-Test", "art": "Test" },
+  { "datum": "2026-12-14", "fach": "informatik", "titel": "Informatik-Test", "art": "Test" },
   { "datum": "2026-12-21", "fach": "mathe", "titel": "2. Mathe-Schularbeit", "art": "Schularbeit", "dauer": 100 },
-  { "datum": "2027-01-12", "fach": null, "titel": "2. Spanisch-Schularbeit", "art": "Schularbeit", "dauer": 50 }
+  { "datum": "2027-01-12", "fach": "spanisch", "titel": "2. Spanisch-Schularbeit", "art": "Schularbeit", "dauer": 50 }
  ],
  "frei": [
   { "von": "2026-12-07", "bis": "2026-12-08", "titel": "schulfrei / Maria Empfängnis" },

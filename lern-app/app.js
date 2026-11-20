@@ -9,18 +9,35 @@ const PERSONEN = [
     raenge: ["Nachwuchs", "Stammspieler", "Kapitän", "Nationalspieler", "Weltstar"] },
 ];
 const FAECHER = [
-  { id: "englisch", name: "Englisch", emo: "🇬🇧" },
-  { id: "mathe", name: "Mathe", emo: "🔢" },
-  { id: "biologie", name: "Biologie", emo: "🌿" },
-  { id: "deutsch", name: "Deutsch", emo: "📖" },
-  { id: "geografie", name: "Geografie", emo: "🌍" },
+  { id: "deutsch", name: "Deutsch" }, { id: "englisch", name: "Englisch" }, { id: "spanisch", name: "Spanisch" },
+  { id: "mathe", name: "Mathe" }, { id: "dg", name: "Darstellende Geometrie" },
+  { id: "biologie", name: "Biologie" }, { id: "physik", name: "Physik" }, { id: "chemie", name: "Chemie" },
+  { id: "geografie", name: "Geografie" }, { id: "geschichte", name: "Geschichte" },
+  { id: "informatik", name: "Informatik" }, { id: "digital", name: "Digitale Grundbildung" },
+  { id: "musik", name: "Musik" }, { id: "kunst", name: "Kunst" }, { id: "technik", name: "Technik & Design" },
 ];
+// Fächer pro Kind (österr. AHS-Lehrplan): Valentin 2. Klasse Gymnasium, Elias 5. Klasse Realgymnasium
+const FAECHER_VON = {
+  valentin: ["englisch", "mathe", "deutsch", "biologie", "geografie", "geschichte", "physik", "digital", "musik", "kunst", "technik"],
+  elias: ["englisch", "spanisch", "mathe", "deutsch", "biologie", "physik", "chemie", "geografie", "geschichte", "informatik", "dg", "musik", "kunst"],
+};
+const faecherVon = pid => (FAECHER_VON[pid] || []).map(id => FAECHER.find(f => f.id === id));
 const ICONS = {
   englisch: '<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"/><path d="M13 21l4-10 4 10M14.5 17h5"/>',
   mathe: '<rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/>',
   biologie: '<path d="M5 21c0-9 5-15 15-16-1 10-7 15-15 16z"/><path d="M5 21l8-8"/>',
   deutsch: '<path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2v-1.5z"/><path d="M8 7h8M8 11h6"/>',
   geografie: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  spanisch: '<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"/><path d="M13 21l4-10 4 10M14.5 17h5"/>',
+  dg: '<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/>',
+  physik: '<circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>',
+  chemie: '<path d="M9 2h6M10 2v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L14 8V2"/><path d="M7 15h10"/>',
+  geschichte: '<path d="M5 22h14M5 2h14M17 22v-4.2a2 2 0 0 0-.6-1.4L12 12l-4.4 4.4a2 2 0 0 0-.6 1.4V22M7 2v4.2a2 2 0 0 0 .6 1.4L12 12l4.4-4.4a2 2 0 0 0 .6-1.4V2"/>',
+  informatik: '<path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/>',
+  digital: '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+  musik: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+  kunst: '<path d="M12 22a10 10 0 1 1 10-10c0 3-2 4-4 4h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="16.5" cy="10.5" r="1"/>',
+  technik: '<path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8z"/>',
   flamme: '<path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-4 5-4 7-1-1-2-2-2-4-2 2-3 5-3 9 0 4 3 7 7 7z"/>',
   test: '<path d="M9 3h6l1 2h3v16H5V5h3z"/><path d="M9 13l2 2 4-4"/>',
   schloss: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
@@ -77,7 +94,7 @@ function speichern(p, f, s) {
   try { localStorage.setItem(key(p, f), JSON.stringify(s)); } catch (e) {}
   if (wolke && wolke.kind === p) { wolke.stand[f] = s; wolkeSichern(); }
 }
-const sterneGesamt = p => FAECHER.reduce((n, f) => n + laden(p, f.id).sterne, 0);
+const sterneGesamt = p => faecherVon(p).reduce((n, f) => n + laden(p, f.id).sterne, 0);
 
 // ---------- Belohnungen ----------
 function heute(d = new Date()) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
@@ -175,7 +192,7 @@ async function wolkeVerbinden(user) {
   if (!p) { await fb.A.signOut(fb.auth); throw new Error("unbekannt"); }
   const snap = await fb.F.getDoc(fb.F.doc(fb.db, "fortschritt", user.uid));
   let stand = snap.exists() ? (snap.data().stand || {}) : null;
-  if (!stand) { stand = {}; for (const f of [...FAECHER.map(f => f.id), PROFIL]) { const l = lokalLaden(kind, f); if (l) stand[f] = l; } }
+  if (!stand) { stand = {}; for (const f of [...faecherVon(kind).map(f => f.id), PROFIL]) { const l = lokalLaden(kind, f); if (l) stand[f] = l; } }
   wolke = { uid: user.uid, kind, stand };
   if (!snap.exists()) wolkeSichern();
   person = p;
@@ -305,7 +322,7 @@ function faecherSeite() {
     termineKarte(),
     statusKarte(),
     el("h2", {}, person.thema === "held" ? "Missionen" : "Trainingseinheiten"),
-    el("div", { class: "raster" }, ...FAECHER.map((f, i) => {
+    el("div", { class: "raster" }, ...faecherVon(person.id).map((f, i) => {
       const s = laden(person.id, f.id);
       const t = naechsterTerminFuer(person.id, f.id);
       return el("button", { class: `fach ${t ? "markiert" : ""}`, onclick: () => fachLaden(f) },
@@ -346,6 +363,7 @@ function fachSeite() {
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
+    fach.id === "deutsch" ? el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("test"), el("div", {}, el("div", { class: "fach-name" }, "Aufsatz korrigieren"), el("small", {}, "Foto hochladen, Korrektur bekommen"))) : null,
     (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
       (daten.wissen || []).length ? el("button", { class: "fach klein-fach", onclick: wissenListe }, ic("wissen"), el("div", {}, el("div", { class: "fach-name" }, "Wissen"), el("small", {}, `${daten.wissen.length} Erklärungen + Videos`))) : null,
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
@@ -527,6 +545,78 @@ function vorlesen(text) {
     speechSynthesis.speak(u);
   } catch (e) {}
 }
+// ---------- Aufsatzkorrektur (Foto → Firestore → Korrektur kommt zurück) ----------
+function bildVerkleinern(datei, max = 1500, q = 0.72) {
+  return new Promise((ok, fehler) => {
+    const img = new Image();
+    img.onload = () => {
+      const f = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement("canvas"); c.width = Math.round(img.width * f); c.height = Math.round(img.height * f);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      let d = c.toDataURL("image/jpeg", q);
+      if (d.length > 900000) d = c.toDataURL("image/jpeg", 0.5);
+      URL.revokeObjectURL(img.src); ok(d.split(",")[1]);
+    };
+    img.onerror = fehler; img.src = URL.createObjectURL(datei);
+  });
+}
+async function aufsatzListe() {
+  setzeKopf("Aufsatz", fachSeite);
+  if (gast || !wolke || !fb) {
+    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Aufsatzkorrektur"), el("h2", {}, "Aufsatz korrigieren"),
+      el("p", {}, gast ? "Im Testkonto nicht verfügbar – dafür muss ein Kind angemeldet sein." : "Dafür musst du angemeldet sein.")));
+    return;
+  }
+  zeige(el("p", { class: "hinweis mitte" }, "Lade …"));
+  let liste = [];
+  try {
+    const q = fb.F.query(fb.F.collection(fb.db, "aufsaetze"), fb.F.where("uid", "==", wolke.uid));
+    const snap = await fb.F.getDocs(q);
+    snap.forEach(d => liste.push(Object.assign({ id: d.id }, d.data())));
+    liste.sort((a, b) => (b.datum || "").localeCompare(a.datum || ""));
+  } catch (e) { console.error(e); }
+  const datei = el("input", { type: "file", accept: "image/*", capture: "environment", style: "display:none" });
+  const aufgabe = el("input", { class: "eingabe", placeholder: "Aufgabenstellung (z. B. „Erlebniserzählung: Mein schönster Tag“)", maxlength: "300" });
+  const info = el("div");
+  const senden = el("button", { class: "knopf", onclick: () => datei.click() }, ic("play"), "Foto aufnehmen / auswählen");
+  datei.addEventListener("change", async () => {
+    if (!datei.files[0]) return;
+    senden.disabled = true; info.replaceChildren(el("div", { class: "feedback neutral" }, "Foto wird hochgeladen …"));
+    try {
+      const bild = await bildVerkleinern(datei.files[0]);
+      await fb.F.addDoc(fb.F.collection(fb.db, "aufsaetze"), { uid: wolke.uid, kind: wolke.kind, aufgabe: aufgabe.value.trim(), bild, status: "offen", datum: `${heute()} ${uhrzeit()}`, erstellt: fb.F.serverTimestamp() });
+      const pr = profil(person.id); protokoll(pr, { f: "deutsch", art: "Aufsatz", titel: aufgabe.value.trim() || "Aufsatz hochgeladen" }); speichern(person.id, PROFIL, pr);
+      info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, "Abgegeben! "), "Die Korrektur kommt meistens innerhalb von 30 Minuten hier in die App."));
+      setTimeout(aufsatzListe, 2500);
+    } catch (e) { console.error(e); info.replaceChildren(el("div", { class: "feedback nein" }, "Hochladen hat nicht geklappt. Ist das Internet an?")); senden.disabled = false; }
+  });
+  zeige(
+    el("div", { class: "karte" }, el("div", { class: "label" }, "Aufsatzkorrektur"), el("h2", {}, "Aufsatz abgeben"),
+      el("p", { class: "klein" }, "Fotografiere deinen Aufsatz gerade von oben, bei gutem Licht. Mehrere Seiten: jede Seite einzeln abgeben."),
+      aufgabe, senden, datei, info),
+    el("div", { class: "label" }, "Meine Aufsätze"),
+    liste.length ? null : el("p", { class: "hinweis" }, "Noch keine Aufsätze abgegeben."),
+    ...liste.map(a => el("button", { class: `test-knopf ${a.status === "korrigiert" ? "ok" : ""}`, onclick: () => a.status === "korrigiert" ? aufsatzZeigen(a) : null },
+      el("span", {}, a.aufgabe || "Aufsatz", el("small", {}, `${a.datum || ""} · ${a.status === "korrigiert" ? `korrigiert · ${(a.korrektur.fehler || []).length} Fehler` : "wartet auf Korrektur …"}`)),
+      ic(a.status === "korrigiert" ? "haken" : "schloss"))));
+}
+function aufsatzZeigen(a) {
+  const k = a.korrektur || {};
+  setzeKopf("Korrektur", aufsatzListe);
+  const farbe = { Rechtschreibung: "#ff4d5e", Grammatik: "#ffb703", Zeichensetzung: "#8b8bff", Ausdruck: "#2ee59d", Inhalt: "#9a9aae" };
+  zeige(
+    el("div", { class: "karte titelkarte" }, el("div", { class: "label" }, "Korrektur"), el("h2", {}, a.aufgabe || "Dein Aufsatz"),
+      k.lob ? el("p", {}, "👍 ", k.lob) : null, k.einschaetzung ? el("p", { class: "klein" }, k.einschaetzung) : null),
+    (k.fehler || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, `${k.fehler.length} Verbesserungen`),
+      ...k.fehler.map(f => el("div", { class: "fehler-zeile" },
+        el("span", { class: "fehler-art", style: `color:${farbe[f.art] || "#fff"}` }, f.art),
+        el("div", {}, el("s", {}, f.original), " → ", el("b", {}, f.korrektur)),
+        el("div", { class: "klein" }, f.erklaerung)))) : null,
+    k.korrigierter_text ? el("div", { class: "karte" }, el("div", { class: "label" }, "Verbesserter Text"), el("div", { class: "aufsatz-text" }, k.korrigierter_text)) : null,
+    (k.tipps || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Tipps für den nächsten Aufsatz"), el("ul", {}, ...k.tipps.map(t => el("li", {}, t)))) : null,
+    k.originaltext ? el("div", { class: "karte" }, el("div", { class: "label" }, "Dein Text (abgeschrieben)"), el("div", { class: "aufsatz-text klein" }, k.originaltext)) : null);
+}
+
 function sprechListe() {
   setzeKopf("Sprechen", fachSeite);
   zeige(el("div", { class: "label" }, fach.name), el("h2", {}, "Sprechen"),
@@ -596,7 +686,7 @@ function dauer(sek) {
 const datumDE = d => { const [y, m, t] = d.split("-"); return `${t}.${m}.`; };
 async function elternStart() {
   thema(null); person = null; gast = false;
-  if (!CFG) { elternSeite(Object.fromEntries(PERSONEN.map(p => [p.id, Object.fromEntries([...FAECHER.map(f => f.id), PROFIL].map(f => [f, lokalLaden(p.id, f)]))])), true); return; }
+  if (!CFG) { elternSeite(Object.fromEntries(PERSONEN.map(p => [p.id, Object.fromEntries([...faecherVon(p.id).map(f => f.id), PROFIL].map(f => [f, lokalLaden(p.id, f)]))])), true); return; }
   setzeKopf("Eltern", gastWahl);
   zeige(el("p", { class: "hinweis mitte" }, "Lade …"));
   try { await fbLaden(); } catch (e) { zeige(el("div", { class: "karte" }, "Keine Internetverbindung.")); return; }
@@ -630,7 +720,7 @@ async function elternAbmelden() { if (fb) await fb.A.signOut(fb.auth); gastWahl(
 async function elternSeite(alle, lokal) {
   setzeKopf("Eltern", gastWahl);
   const dateien = {};
-  await Promise.all(PERSONEN.flatMap(p => FAECHER.map(async f => {
+  await Promise.all(PERSONEN.flatMap(p => faecherVon(p.id).map(async f => {
     try { const r = await fetch(`daten/${p.id}/${f.id}.json?v=${Date.now()}`); if (r.ok) dateien[`${p.id}/${f.id}`] = await r.json(); } catch (e) {}
   })));
   const tab = el("div");
@@ -644,7 +734,7 @@ async function elternSeite(alle, lokal) {
     el("h2", {}, "Übersicht"),
     el("div", { class: "raster zwei" }, ...PERSONEN.map(p => {
       const st = alle[p.id] || {}, pr = Object.assign(PROFIL_LEER(), st[PROFIL] || {});
-      const sterne = FAECHER.reduce((n, f) => n + ((st[f.id] || {}).sterne || 0), 0);
+      const sterne = faecherVon(p.id).reduce((n, f) => n + ((st[f.id] || {}).sterne || 0), 0);
       const ges = Object.values(pr.zeit).reduce((n, z) => n + (z.ges || 0), 0);
       const letzt = pr.log.length ? pr.log[pr.log.length - 1] : null;
       return el("div", { class: "karte kpi" }, el("div", { class: "label" }, p.name),
@@ -675,7 +765,7 @@ function kindStatistik(p, st, dateien) {
       el("div", { class: "balken" }, ...tage.map(t => { const v = (pr.zeit[t] || {}).ges || 0;
         return el("div", { class: "balken-tag", title: `${datumDE(t)}: ${dauer(v)}` }, el("div", { class: "balken-wert", style: `height:${Math.round(v / max * 100)}%` }), el("span", {}, datumDE(t).slice(0, 2))); })),
       el("div", { class: "klein" }, "Letzte 14 Tage (Minuten pro Tag). Gezählt wird nur, wenn die App offen ist und aktiv geübt wird.")),
-    ...FAECHER.map(f => {
+    ...faecherVon(p.id).map(f => {
       const d = dateien[`${p.id}/${f.id}`] || { fragen: [] }, s = Object.assign({ sterne: 0, runden: 0, offen: [], gesehen: {} }, st[f.id] || {});
       const geuebt = d.fragen.filter(q => s.gesehen[q.id]).length;
       const zeilen = [];

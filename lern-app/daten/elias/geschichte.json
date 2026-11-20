@@ -1,0 +1,105 @@
+{
+ "titel": "Geschichte",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wann endete das Weströmische Reich?",
+   "optionen": [
+    "476 n. Chr.",
+    "753 v. Chr.",
+    "1492",
+    "800 n. Chr."
+   ],
+   "antwort": "476 n. Chr.",
+   "erklaerung": "",
+   "id": "gs001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer wurde im Jahr 800 zum Kaiser gekrönt?",
+   "optionen": [
+    "Karl der Große",
+    "Julius Caesar",
+    "Maria Theresia",
+    "Napoleon"
+   ],
+   "antwort": "Karl der Große",
+   "erklaerung": "",
+   "id": "gs002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist eine Quelle in Geschichte?",
+   "optionen": [
+    "Alles, woraus wir etwas über die Vergangenheit erfahren",
+    "Ein Fluss",
+    "Nur ein Schulbuch",
+    "Eine Erfindung"
+   ],
+   "antwort": "Alles, woraus wir etwas über die Vergangenheit erfahren",
+   "erklaerung": "",
+   "id": "gs003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Staatsform hatte Athen im 5. Jh. v. Chr.?",
+   "optionen": [
+    "Demokratie",
+    "Monarchie",
+    "Diktatur",
+    "Theokratie"
+   ],
+   "antwort": "Demokratie",
+   "erklaerung": "",
+   "id": "gs004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was war die „Neolithische Revolution“?",
+   "optionen": [
+    "Übergang zu Ackerbau und Sesshaftigkeit",
+    "Ein Krieg",
+    "Die Französische Revolution",
+    "Erfindung des Buchdrucks"
+   ],
+   "antwort": "Übergang zu Ackerbau und Sesshaftigkeit",
+   "erklaerung": "",
+   "id": "gs005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Volk baute die Pyramiden von Gizeh?",
+   "optionen": [
+    "Ägypter",
+    "Römer",
+    "Griechen",
+    "Maya"
+   ],
+   "antwort": "Ägypter",
+   "erklaerung": "",
+   "id": "gs006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist der Unterschied Primärquelle / Sekundärquelle?",
+   "optionen": [
+    "Primär stammt aus der Zeit selbst, sekundär ist später darüber geschrieben",
+    "Es gibt keinen",
+    "Primär ist wichtiger",
+    "Sekundär ist älter"
+   ],
+   "antwort": "Primär stammt aus der Zeit selbst, sekundär ist später darüber geschrieben",
+   "erklaerung": "",
+   "id": "gs007"
+  }
+ ]
+}

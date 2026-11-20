@@ -4,22 +4,25 @@
  "platzhalter": true,
  "fragen": [
   {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Rechne: 7 · 8 =",
-   "antwort": [
-    "56"
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Zu welcher Zahlenmenge gehört √2?",
+   "optionen": [
+    "irrationale Zahlen",
+    "natürliche Zahlen",
+    "ganze Zahlen",
+    "rationale Zahlen"
    ],
+   "antwort": "irrationale Zahlen",
    "erklaerung": "",
-   "zahl": true,
    "id": "ma001"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Rechne: 144 : 12 =",
+   "frage": "Löse: 3x − 7 = 11. x =",
    "antwort": [
-    "12"
+    "6"
    ],
    "erklaerung": "",
    "zahl": true,
@@ -28,398 +31,118 @@
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Rechne: 3,5 + 2,75 =",
+   "frage": "Löse: 2(x + 4) = 18. x =",
    "antwort": [
-    "6,25"
+    "5"
    ],
-   "erklaerung": "Komma untereinander schreiben.",
+   "erklaerung": "",
    "zahl": true,
    "id": "ma003"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Rechne: 10 − 4,3 =",
+   "frage": "Berechne 2³ · 2⁴ als Potenz von 2. Exponent =",
    "antwort": [
-    "5,7"
+    "7"
    ],
-   "erklaerung": "",
+   "erklaerung": "Gleiche Basis: Exponenten addieren.",
    "zahl": true,
    "id": "ma004"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Rechne: 0,5 · 8 =",
+   "frage": "(a²)³ = a^? → Exponent =",
    "antwort": [
-    "4"
+    "6"
    ],
-   "erklaerung": "0,5 ist die Hälfte – die Hälfte von 8 ist 4.",
+   "erklaerung": "Potenz einer Potenz: Exponenten multiplizieren.",
    "zahl": true,
    "id": "ma005"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Wie viel ist 1/2 + 1/4? (als Dezimalzahl)",
+   "frage": "Steigung k der Geraden durch (0|1) und (2|5)?",
    "antwort": [
-    "0,75"
+    "2"
    ],
-   "erklaerung": "1/2 = 2/4, also 2/4 + 1/4 = 3/4 = 0,75.",
+   "erklaerung": "k = (5 − 1) / (2 − 0)",
    "zahl": true,
    "id": "ma006"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Welcher Bruch ist gleich groß wie 2/4?",
-   "optionen": [
-    "1/2",
-    "2/8",
-    "4/2",
-    "1/4"
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "f(x) = 3x − 2. f(4) =",
+   "antwort": [
+    "10"
    ],
-   "antwort": "1/2",
-   "erklaerung": "Kürzen: 2/4 = 1/2.",
+   "erklaerung": "",
+   "zahl": true,
    "id": "ma007"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welche Zahl ist durch 3 teilbar?",
+   "frage": "Was beschreibt der Parameter d in f(x) = kx + d?",
    "optionen": [
-    "123",
-    "124",
-    "125",
-    "130"
+    "Schnittpunkt mit der y-Achse",
+    "Steigung",
+    "Nullstelle",
+    "Krümmung"
    ],
-   "antwort": "123",
-   "erklaerung": "Ziffernsumme 1+2+3 = 6 ist durch 3 teilbar.",
+   "antwort": "Schnittpunkt mit der y-Achse",
+   "erklaerung": "",
    "id": "ma008"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Ein Rechteck ist 6 cm lang und 4 cm breit. Wie groß ist der Umfang in cm?",
+   "frage": "Gleichungssystem: x + y = 10, x − y = 4. x =",
    "antwort": [
-    "20"
+    "7"
    ],
-   "erklaerung": "u = 2 · (6 + 4) = 20 cm.",
+   "erklaerung": "",
    "zahl": true,
    "id": "ma009"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Ein Rechteck ist 6 cm lang und 4 cm breit. Wie groß ist der Flächeninhalt in cm²?",
+   "frage": "Ein Preis von 80 € wird um 15 % erhöht. Neuer Preis in €?",
    "antwort": [
-    "24"
+    "92"
    ],
-   "erklaerung": "A = 6 · 4 = 24 cm².",
+   "erklaerung": "",
    "zahl": true,
    "id": "ma010"
   },
   {
    "typ": "eingabe",
    "art": "Rechnen",
-   "frage": "Löse: x + 15 = 42. x =",
+   "frage": "(a + b)² für a = 3, b = 2 =",
    "antwort": [
-    "27"
+    "25"
    ],
-   "erklaerung": "42 − 15 = 27.",
+   "erklaerung": "",
    "zahl": true,
    "id": "ma011"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Löse: 4 · x = 36. x =",
-   "antwort": [
-    "9"
-   ],
-   "erklaerung": "36 : 4 = 9.",
-   "zahl": true,
-   "id": "ma012"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Wie viele Minuten haben 2,5 Stunden?",
-   "antwort": [
-    "150"
-   ],
-   "erklaerung": "2 h = 120 min, 0,5 h = 30 min.",
-   "zahl": true,
-   "id": "ma013"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Wie viele Gramm sind 1,2 kg?",
-   "antwort": [
-    "1200"
-   ],
-   "erklaerung": "1 kg = 1000 g.",
-   "zahl": true,
-   "id": "ma014"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Was ist der größte gemeinsame Teiler (ggT) von 12 und 18?",
-   "antwort": [
-    "6"
-   ],
-   "erklaerung": "",
-   "zahl": true,
-   "id": "ma015"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Was ist das kleinste gemeinsame Vielfache (kgV) von 4 und 6?",
-   "antwort": [
-    "12"
-   ],
-   "erklaerung": "",
-   "zahl": true,
-   "id": "ma016"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Wie groß ist ein rechter Winkel?",
-   "optionen": [
-    "90°",
-    "180°",
-    "45°",
-    "360°"
-   ],
-   "antwort": "90°",
-   "erklaerung": "",
-   "id": "ma017"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Runde 3,46 auf eine Dezimalstelle.",
-   "antwort": [
-    "3,5"
-   ],
-   "erklaerung": "Die 6 ist 5 oder mehr → aufrunden.",
-   "zahl": true,
-   "id": "ma018"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Rechne: 25 % von 80 =",
-   "antwort": [
-    "20"
-   ],
-   "erklaerung": "25 % = ein Viertel. 80 : 4 = 20.",
-   "zahl": true,
-   "id": "ma019"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Welche Zahl ist am größten?",
-   "optionen": [
-    "0,7",
-    "0,65",
-    "0,09",
-    "0,659"
-   ],
-   "antwort": "0,7",
-   "erklaerung": "0,7 = 0,700 – das ist größer als 0,659.",
-   "id": "ma020"
-  }
- ],
- "tests": [
-  {
-   "id": "kap1",
-   "titel": "Test Kapitel 1 – Brüche & Dezimalzahlen",
-   "fragen": [
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "Kürze 6/8 so weit wie möglich. Zähler =",
-     "antwort": [
-      "3"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-01"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "1/2 + 1/4 als Dezimalzahl =",
-     "antwort": [
-      "0,75"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-02"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "2,4 + 3,85 =",
-     "antwort": [
-      "6,25"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-03"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "7 − 2,6 =",
-     "antwort": [
-      "4,4"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-04"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "Rechteck 5 cm × 3 cm: Fläche in cm² =",
-     "antwort": [
-      "15"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-05"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "x + 9 = 20. x =",
-     "antwort": [
-      "11"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-06"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "10 % von 250 =",
-     "antwort": [
-      "25"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-07"
-    },
-    {
-     "typ": "eingabe",
-     "art": "Rechnen",
-     "frage": "ggT von 8 und 12 =",
-     "antwort": [
-      "4"
-     ],
-     "erklaerung": "",
-     "zahl": true,
-     "id": "kap1-08"
-    }
-   ]
   }
  ],
  "wissen": [
   {
-   "titel": "Brüche kürzen und erweitern",
-   "kurz": "Gleich viel, andere Zahlen",
-   "text": [
-    "Kürzen: Zähler und Nenner durch dieselbe Zahl teilen. Erweitern: beide mit derselben Zahl malnehmen. Der Wert bleibt gleich."
-   ],
+   "titel": "Lineare Funktion f(x) = kx + d",
+   "kurz": "Steigung und Achsenabschnitt",
    "schritte": [
-    "Suche eine Zahl, durch die Zähler UND Nenner teilbar sind.",
-    "Teile beide durch diese Zahl.",
-    "Geht es nochmal? Dann wiederholen, bis nichts mehr geht."
+    "d ablesen: wo schneidet die Gerade die y-Achse?",
+    "k = Δy / Δx aus zwei Punkten",
+    "Funktionsgleichung aufschreiben"
    ],
-   "beispiel": "12/18  → beide durch 6 →  2/3\n 1/4  → beide mal 3   →  3/12",
-   "merke": "Was du oben machst, musst du auch unten machen.",
-   "video": "Brüche kürzen und erweitern einfach erklärt"
-  },
-  {
-   "titel": "Brüche addieren",
-   "kurz": "Erst gleicher Nenner, dann addieren",
-   "text": [
-    "Brüche kann man nur addieren, wenn sie denselben Nenner haben."
-   ],
-   "schritte": [
-    "Gemeinsamen Nenner finden (kgV der Nenner).",
-    "Beide Brüche auf diesen Nenner erweitern.",
-    "Zähler addieren, Nenner bleibt gleich.",
-    "Ergebnis kürzen, wenn es geht."
-   ],
-   "beispiel": "1/2 + 1/4\n= 2/4 + 1/4\n= 3/4",
-   "merke": "Nenner werden nie addiert!",
-   "video": "Brüche addieren mit verschiedenen Nennern erklärt"
-  },
-  {
-   "titel": "Dezimalzahlen addieren und subtrahieren",
-   "kurz": "Komma unter Komma",
-   "schritte": [
-    "Schreibe die Zahlen so untereinander, dass Komma unter Komma steht.",
-    "Fehlende Stellen mit 0 auffüllen.",
-    "Rechnen wie bei ganzen Zahlen.",
-    "Komma im Ergebnis an dieselbe Stelle setzen."
-   ],
-   "beispiel": "  3,50\n+ 2,75\n------\n  6,25",
-   "merke": "Komma unter Komma.",
-   "video": "Dezimalzahlen schriftlich addieren subtrahieren"
-  },
-  {
-   "titel": "Umfang und Flächeninhalt vom Rechteck",
-   "kurz": "u = 2·(a+b),  A = a·b",
-   "text": [
-    "Der Umfang ist der Weg einmal rundherum. Der Flächeninhalt ist, wie viel Fläche drinnen ist."
-   ],
-   "schritte": [
-    "Länge a und Breite b ablesen (gleiche Einheit!).",
-    "Umfang: a + b + a + b = 2·(a + b).",
-    "Fläche: a · b, Einheit hoch 2 (cm²)."
-   ],
-   "beispiel": "a = 6 cm, b = 4 cm\nu = 2·(6+4) = 20 cm\nA = 6·4 = 24 cm²",
-   "merke": "Umfang in cm, Fläche in cm².",
-   "video": "Umfang und Flächeninhalt Rechteck erklärt"
-  },
-  {
-   "titel": "Einfache Gleichungen lösen",
-   "kurz": "x allein auf eine Seite bringen",
-   "text": [
-    "Eine Gleichung ist wie eine Waage: Was du links machst, musst du auch rechts machen."
-   ],
-   "schritte": [
-    "Was passiert mit x? (+, −, ·, :)",
-    "Mach das Gegenteil auf beiden Seiten.",
-    "Probe: x einsetzen und nachrechnen."
-   ],
-   "beispiel": "x + 15 = 42   | −15\n     x = 27\n\n4 · x = 36    | :4\n     x = 9",
-   "merke": "Immer auf beiden Seiten dasselbe tun.",
-   "video": "Gleichungen lösen einfach erklärt Klasse 6"
-  },
-  {
-   "titel": "Prozent",
-   "kurz": "Hundertstel",
-   "text": [
-    "Prozent heißt „von Hundert“. 25 % = 25/100 = 1/4."
-   ],
-   "schritte": [
-    "Grundwert durch 100 teilen (= 1 %).",
-    "Mit der Prozentzahl malnehmen."
-   ],
-   "beispiel": "25 % von 80\n80 : 100 = 0,8\n0,8 · 25 = 20",
-   "merke": "50 % = Hälfte, 25 % = Viertel, 10 % = durch 10.",
-   "video": "Prozentrechnung einfach erklärt"
+   "beispiel": "P(0|1), Q(2|5)\nk = (5−1)/(2−0) = 2\nd = 1\nf(x) = 2x + 1",
+   "merke": "k > 0: steigend, k < 0: fallend.",
+   "video": "lineare Funktion k und d bestimmen"
   }
  ]
 }

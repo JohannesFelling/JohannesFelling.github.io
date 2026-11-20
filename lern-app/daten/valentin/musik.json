@@ -1,0 +1,119 @@
+{
+ "titel": "Musik",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Linien hat ein Notensystem?",
+   "optionen": [
+    "5",
+    "4",
+    "6",
+    "3"
+   ],
+   "antwort": "5",
+   "erklaerung": "",
+   "id": "mu001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Viertelnoten passen in eine ganze Note?",
+   "optionen": [
+    "4",
+    "2",
+    "8",
+    "3"
+   ],
+   "antwort": "4",
+   "erklaerung": "",
+   "id": "mu002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Zu welcher Instrumentengruppe gehört die Geige?",
+   "optionen": [
+    "Streichinstrumente",
+    "Blechblasinstrumente",
+    "Schlaginstrumente",
+    "Holzblasinstrumente"
+   ],
+   "antwort": "Streichinstrumente",
+   "erklaerung": "",
+   "id": "mu003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Zu welcher Gruppe gehört die Trompete?",
+   "optionen": [
+    "Blechblasinstrumente",
+    "Streichinstrumente",
+    "Tasteninstrumente",
+    "Holzblasinstrumente"
+   ],
+   "antwort": "Blechblasinstrumente",
+   "erklaerung": "",
+   "id": "mu004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher berühmte Komponist wurde in Salzburg geboren?",
+   "optionen": [
+    "Wolfgang Amadeus Mozart",
+    "Ludwig van Beethoven",
+    "Johann Sebastian Bach",
+    "Antonio Vivaldi"
+   ],
+   "antwort": "Wolfgang Amadeus Mozart",
+   "erklaerung": "",
+   "id": "mu005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Schlüssel steht meistens am Anfang für hohe Töne?",
+   "optionen": [
+    "Violinschlüssel",
+    "Bassschlüssel",
+    "Hausschlüssel",
+    "Altschlüssel"
+   ],
+   "antwort": "Violinschlüssel",
+   "erklaerung": "",
+   "id": "mu006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „forte“?",
+   "optionen": [
+    "laut",
+    "leise",
+    "schnell",
+    "langsam"
+   ],
+   "antwort": "laut",
+   "erklaerung": "",
+   "id": "mu007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „piano“ in den Noten?",
+   "optionen": [
+    "leise",
+    "laut",
+    "Klavier spielen",
+    "schnell"
+   ],
+   "antwort": "leise",
+   "erklaerung": "",
+   "id": "mu008"
+  }
+ ]
+}

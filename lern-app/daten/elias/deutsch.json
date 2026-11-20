@@ -6,202 +6,110 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welches Wort ist ein Nomen?",
+   "frage": "Was ist eine Metapher?",
    "optionen": [
-    "Haus",
-    "laufen",
-    "schön",
-    "und"
+    "Ein bildlicher Ausdruck ohne „wie“ (z. B. „Das Leben ist eine Reise“)",
+    "Ein Vergleich mit „wie“",
+    "Eine Übertreibung",
+    "Eine Wiederholung"
    ],
-   "antwort": "Haus",
-   "erklaerung": "Nomen schreibt man groß.",
+   "antwort": "Ein bildlicher Ausdruck ohne „wie“ (z. B. „Das Leben ist eine Reise“)",
+   "erklaerung": "",
    "id": "de001"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welches Wort ist ein Verb?",
+   "frage": "„Er ist stark wie ein Bär.“ Welches Stilmittel?",
    "optionen": [
-    "springen",
-    "Tisch",
-    "blau",
-    "unter"
+    "Vergleich",
+    "Metapher",
+    "Alliteration",
+    "Personifikation"
    ],
-   "antwort": "springen",
+   "antwort": "Vergleich",
    "erklaerung": "",
    "id": "de002"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welches Wort ist ein Adjektiv?",
+   "frage": "„Die Sonne lacht.“ Welches Stilmittel?",
    "optionen": [
-    "lustig",
-    "Hund",
-    "essen",
-    "weil"
+    "Personifikation",
+    "Vergleich",
+    "Ironie",
+    "Anapher"
    ],
-   "antwort": "lustig",
+   "antwort": "Personifikation",
    "erklaerung": "",
    "id": "de003"
   },
   {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "Ich hoffe, ___ du morgen kommst. (das / dass)",
-   "antwort": [
-    "dass"
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Textsorte wägt Argumente ab und kommt zu einem Schluss?",
+   "optionen": [
+    "Erörterung",
+    "Bericht",
+    "Inhaltsangabe",
+    "Gedicht"
    ],
-   "erklaerung": "„dass“ leitet einen Nebensatz ein und lässt sich nicht durch „welches“ ersetzen.",
+   "antwort": "Erörterung",
+   "erklaerung": "",
    "id": "de004"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "___ Buch liegt auf dem Tisch. (Das / Dass)",
-   "antwort": [
-    "das"
-   ],
-   "erklaerung": "Artikel → „das“.",
-   "id": "de005"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "In welchem Fall steht „dem Hund“?",
+   "frage": "In welcher Zeit schreibt man eine Inhaltsangabe?",
    "optionen": [
-    "3. Fall (Dativ)",
-    "1. Fall (Nominativ)",
-    "2. Fall (Genitiv)",
-    "4. Fall (Akkusativ)"
+    "Präsens",
+    "Präteritum",
+    "Futur",
+    "Plusquamperfekt"
    ],
-   "antwort": "3. Fall (Dativ)",
-   "erklaerung": "Wem? → dem Hund.",
+   "antwort": "Präsens",
+   "erklaerung": "",
+   "id": "de005"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Er sagte, er ___ krank. (sein, Konjunktiv I)",
+   "antwort": [
+    "sei"
+   ],
+   "erklaerung": "Indirekte Rede: Konjunktiv I – er sei.",
    "id": "de006"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "In welchem Fall steht „den Ball“ in „Ich werfe den Ball“?",
+   "frage": "Wo fehlt das Komma? „Ich glaube dass er kommt.“",
    "optionen": [
-    "4. Fall (Akkusativ)",
-    "3. Fall (Dativ)",
-    "1. Fall (Nominativ)",
-    "2. Fall (Genitiv)"
+    "vor „dass“",
+    "nach „Ich“",
+    "nach „er“",
+    "kein Komma"
    ],
-   "antwort": "4. Fall (Akkusativ)",
-   "erklaerung": "Wen oder was? → den Ball.",
+   "antwort": "vor „dass“",
+   "erklaerung": "",
    "id": "de007"
   },
   {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "Setze ins Präteritum: ich gehe → ich ___",
-   "antwort": [
-    "ging"
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Kommentar (Textsorte)?",
+   "optionen": [
+    "Ein meinungsbetonter Zeitungstext",
+    "Ein neutraler Bericht",
+    "Eine Kurzgeschichte",
+    "Ein Lexikonartikel"
    ],
+   "antwort": "Ein meinungsbetonter Zeitungstext",
    "erklaerung": "",
    "id": "de008"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "Setze ins Perfekt: ich schwimme → ich bin ___",
-   "antwort": [
-    "geschwommen"
-   ],
-   "erklaerung": "",
-   "id": "de009"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "Mehrzahl von „die Maus“: die ___",
-   "antwort": [
-    "mäuse"
-   ],
-   "erklaerung": "",
-   "id": "de010"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Welches Wort ist richtig geschrieben?",
-   "optionen": [
-    "Fahrrad",
-    "Farrad",
-    "Fahrad",
-    "Varrad"
-   ],
-   "antwort": "Fahrrad",
-   "erklaerung": "",
-   "id": "de011"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Welches Wort ist richtig geschrieben?",
-   "optionen": [
-    "vielleicht",
-    "fieleicht",
-    "vieleicht",
-    "vielleich"
-   ],
-   "antwort": "vielleicht",
-   "erklaerung": "",
-   "id": "de012"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Was ist das Subjekt in: „Der kleine Kater schläft.“?",
-   "optionen": [
-    "Der kleine Kater",
-    "schläft",
-    "klein",
-    "Der"
-   ],
-   "antwort": "Der kleine Kater",
-   "erklaerung": "Wer oder was schläft? → der kleine Kater.",
-   "id": "de013"
-  },
-  {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "Steigere: gut – besser – am ___",
-   "antwort": [
-    "besten"
-   ],
-   "erklaerung": "",
-   "id": "de014"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Welches Satzzeichen fehlt? „Kommst du morgen mit“",
-   "optionen": [
-    "?",
-    "!",
-    ".",
-    ","
-   ],
-   "antwort": "?",
-   "erklaerung": "Es ist eine Frage.",
-   "id": "de015"
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Was ist ein Synonym für „schnell“?",
-   "optionen": [
-    "rasch",
-    "langsam",
-    "laut",
-    "müde"
-   ],
-   "antwort": "rasch",
-   "erklaerung": "Synonym = Wort mit gleicher Bedeutung.",
-   "id": "de016"
   }
  ],
  "wissen": [
@@ -217,6 +125,19 @@
    ],
    "beispiel": "Das Buch, das ich lese …  (welches ✓) → das\nIch hoffe, dass du kommst. (welches ✗) → dass",
    "video": "das dass Unterschied einfach erklärt"
+  },
+  {
+   "titel": "Stilmittel erkennen",
+   "kurz": "Metapher, Vergleich, Personifikation …",
+   "schritte": [
+    "Vergleich: mit „wie“ oder „als“",
+    "Metapher: Bild ohne „wie“",
+    "Personifikation: Dinge handeln wie Menschen",
+    "Alliteration: gleicher Anfangslaut (Milch macht müde Männer munter)",
+    "Anapher: gleicher Satzanfang wird wiederholt"
+   ],
+   "merke": "Bei der Analyse immer: Stilmittel nennen + Beispiel zitieren + Wirkung erklären.",
+   "video": "Stilmittel Deutsch Oberstufe erklärt"
   }
  ]
 }

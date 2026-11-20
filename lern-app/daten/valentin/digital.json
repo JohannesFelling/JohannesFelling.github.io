@@ -1,0 +1,119 @@
+{
+ "titel": "Digitale Grundbildung",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Passwort ist am sichersten?",
+   "optionen": [
+    "T!ger-Blau-42-Wolke",
+    "123456",
+    "passwort",
+    "valentin2014"
+   ],
+   "antwort": "T!ger-Blau-42-Wolke",
+   "erklaerung": "Lang, mit Zeichen und Zahlen, kein Name.",
+   "id": "dg001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was solltest du NICHT öffentlich posten?",
+   "optionen": [
+    "Deine Adresse",
+    "Ein Foto von einem Sonnenuntergang",
+    "Dein Lieblingsessen",
+    "Einen Witz"
+   ],
+   "antwort": "Deine Adresse",
+   "erklaerung": "",
+   "id": "dg002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Phishing?",
+   "optionen": [
+    "Betrüger wollen per Nachricht Passwörter stehlen",
+    "Ein Angelspiel",
+    "Ein Virenschutz",
+    "Eine Suchmaschine"
+   ],
+   "antwort": "Betrüger wollen per Nachricht Passwörter stehlen",
+   "erklaerung": "",
+   "id": "dg003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Hardware?",
+   "optionen": [
+    "Die Geräte, die man anfassen kann",
+    "Programme",
+    "Apps",
+    "Das Internet"
+   ],
+   "antwort": "Die Geräte, die man anfassen kann",
+   "erklaerung": "",
+   "id": "dg004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Software?",
+   "optionen": [
+    "Programme und Apps",
+    "Die Tastatur",
+    "Der Bildschirm",
+    "Das Kabel"
+   ],
+   "antwort": "Programme und Apps",
+   "erklaerung": "",
+   "id": "dg005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie erkennst du eher eine Fake News?",
+   "optionen": [
+    "Keine Quelle, reißerische Überschrift",
+    "Sie steht auf mehreren seriösen Seiten",
+    "Sie hat ein Datum",
+    "Sie ist kurz"
+   ],
+   "antwort": "Keine Quelle, reißerische Überschrift",
+   "erklaerung": "",
+   "id": "dg006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet Cybermobbing?",
+   "optionen": [
+    "Jemanden online absichtlich fertigmachen",
+    "Online-Spiele spielen",
+    "E-Mails schreiben",
+    "Fotos speichern"
+   ],
+   "antwort": "Jemanden online absichtlich fertigmachen",
+   "erklaerung": "",
+   "id": "dg007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was gehört in eine gute Suchanfrage?",
+   "optionen": [
+    "Wichtige Stichwörter",
+    "Ein ganzer Roman",
+    "Nur Emojis",
+    "Gar nichts"
+   ],
+   "antwort": "Wichtige Stichwörter",
+   "erklaerung": "",
+   "id": "dg008"
+  }
+ ]
+}

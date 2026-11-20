@@ -1,0 +1,77 @@
+{
+ "titel": "Bildnerische Erziehung",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Fluchtpunkt?",
+   "optionen": [
+    "Punkt, in dem parallele Linien in der Perspektive zusammenlaufen",
+    "Der hellste Punkt im Bild",
+    "Der Bildrand",
+    "Ein Farbfleck"
+   ],
+   "antwort": "Punkt, in dem parallele Linien in der Perspektive zusammenlaufen",
+   "erklaerung": "",
+   "id": "ku001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Komplementärfarbe zu Blau?",
+   "optionen": [
+    "Orange",
+    "Grün",
+    "Rot",
+    "Violett"
+   ],
+   "antwort": "Orange",
+   "erklaerung": "",
+   "id": "ku002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Kunstrichtung prägte Gustav Klimt?",
+   "optionen": [
+    "Jugendstil / Wiener Secession",
+    "Barock",
+    "Pop Art",
+    "Impressionismus"
+   ],
+   "antwort": "Jugendstil / Wiener Secession",
+   "erklaerung": "",
+   "id": "ku003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer gehört zur Pop Art?",
+   "optionen": [
+    "Andy Warhol",
+    "Rembrandt",
+    "Albrecht Dürer",
+    "Michelangelo"
+   ],
+   "antwort": "Andy Warhol",
+   "erklaerung": "",
+   "id": "ku004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Goldener Schnitt“?",
+   "optionen": [
+    "Ein als harmonisch empfundenes Teilungsverhältnis (ca. 1 : 1,618)",
+    "Ein Rahmen aus Gold",
+    "Ein Schnitt mit der Schere",
+    "Eine Farbe"
+   ],
+   "antwort": "Ein als harmonisch empfundenes Teilungsverhältnis (ca. 1 : 1,618)",
+   "erklaerung": "",
+   "id": "ku005"
+  }
+ ]
+}

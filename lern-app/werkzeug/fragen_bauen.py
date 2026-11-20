@@ -377,3 +377,195 @@ for p in ["valentin", "elias"]:
     schreiben(p, "deutsch", "Deutsch", deutsch, True, prefix="de", wissen=deutsch_wissen)
     schreiben(p, "geografie", "Geografie", geo, True, prefix="ge", wissen=geo_wissen)
 print("fertig")
+
+# =============== WEITERE FÄCHER (Platzhalter nach österr. AHS-Lehrplan) ===============
+def platz(person, fach, titel, fragen, prefix, wissen=None, untertitel=""):
+    schreiben(person, fach, titel, fragen, True, untertitel, prefix=prefix, wissen=wissen)
+
+# ---- Valentin, 2. Klasse Gymnasium (6. Schulstufe) ----
+platz("valentin", "geschichte", "Geschichte", [
+ A("Wie nennt man die Zeit, bevor es Schrift gab?", ["Urgeschichte", "Mittelalter", "Neuzeit", "Antike"], "Urgeschichte"),
+ A("Wie heißt die berühmte Gletschermumie aus den Ötztaler Alpen?", ["Ötzi", "Tutanchamun", "Lucy", "Venus"], "Ötzi"),
+ A("Welche Figur wurde in Willendorf (Niederösterreich) gefunden?", ["Venus von Willendorf", "Der Denker", "Die Mona Lisa", "Der Diskuswerfer"], "Venus von Willendorf"),
+ A("An welchem Fluss entstand die Hochkultur Ägypten?", ["Nil", "Donau", "Euphrat", "Amazonas"], "Nil"),
+ A("Wie heißt die Schrift der alten Ägypter?", ["Hieroglyphen", "Keilschrift", "Runen", "Latein"], "Hieroglyphen"),
+ A("Wer war der König im alten Ägypten?", ["Pharao", "Kaiser", "Konsul", "Sultan"], "Pharao"),
+ A("In welcher griechischen Stadt entstand die Demokratie?", ["Athen", "Sparta", "Rom", "Troja"], "Athen"),
+ A("Wo fanden die ersten Olympischen Spiele statt?", ["Olympia", "Athen", "Rom", "Kreta"], "Olympia"),
+ A("Wie hieß das römische Lager auf dem Gebiet des heutigen Wien?", ["Vindobona", "Carnuntum", "Juvavum", "Lentia"], "Vindobona"),
+ E("Gründungsjahr Roms laut Sage (… v. Chr.)? Nur die Zahl.", ["753"], "„Sieben-fünf-drei, Rom schlüpft aus dem Ei.“", "Eintippen", True),
+], "gs", [W("Zeitleiste", "Von der Urgeschichte zu den Römern", None, ["Urgeschichte: Altsteinzeit, Jungsteinzeit (Sesshaftigkeit), Metallzeit", "Hochkulturen: Ägypten (ab ca. 3000 v. Chr.)", "Griechen: Athen, Demokratie, Olympische Spiele", "Römer: Gründung 753 v. Chr., Weltreich bis 476 n. Chr."], None, "v. Chr. zählt rückwärts: 753 v. Chr. ist früher als 500 v. Chr.", "Zeitleiste Urgeschichte Antike einfach erklärt")])
+platz("valentin", "physik", "Physik", [
+ A("Woraus bestehen alle Stoffe nach dem Teilchenmodell?", ["aus winzigen Teilchen", "aus Luft", "aus Wasser", "aus Energie"], "aus winzigen Teilchen"),
+ A("Welcher Aggregatzustand hat eine feste Form?", ["fest", "flüssig", "gasförmig"], "fest"),
+ A("Wie heißt der Übergang von flüssig zu gasförmig?", ["Verdampfen", "Schmelzen", "Erstarren", "Kondensieren"], "Verdampfen"),
+ A("Bei wie viel Grad Celsius gefriert Wasser?", ["0 °C", "100 °C", "−10 °C", "4 °C"], "0 °C"),
+ A("Was passiert meistens mit Stoffen beim Erwärmen?", ["Sie dehnen sich aus", "Sie schrumpfen", "Nichts", "Sie werden schwerer"], "Sie dehnen sich aus"),
+ A("In welcher Einheit misst man die Masse?", ["Kilogramm", "Meter", "Liter", "Newton"], "Kilogramm"),
+ A("In welcher Einheit misst man eine Kraft?", ["Newton", "Kilogramm", "Watt", "Grad"], "Newton"),
+ M("Wie viele Milliliter sind 1 Liter?", "1000"),
+ A("Warum schwimmt Holz auf Wasser?", ["Es hat eine kleinere Dichte als Wasser", "Es ist leicht gebaut", "Es ist hohl", "Wegen der Farbe"], "Es hat eine kleinere Dichte als Wasser"),
+ A("Was zeigt ein Thermometer an?", ["Temperatur", "Masse", "Volumen", "Kraft"], "Temperatur"),
+], "ph", [W("Aggregatzustände", "fest, flüssig, gasförmig", ["Im Teilchenmodell bewegen sich die Teilchen umso schneller, je wärmer es ist."], ["fest: Teilchen dicht, schwingen am Platz", "flüssig: Teilchen verschiebbar", "gasförmig: Teilchen fliegen frei herum"], "fest → flüssig: Schmelzen\nflüssig → fest: Erstarren\nflüssig → gasförmig: Verdampfen\ngasförmig → flüssig: Kondensieren", None, "Aggregatzustände Teilchenmodell erklärt")])
+platz("valentin", "digital", "Digitale Grundbildung", [
+ A("Welches Passwort ist am sichersten?", ["T!ger-Blau-42-Wolke", "123456", "passwort", "valentin2014"], "T!ger-Blau-42-Wolke", "Lang, mit Zeichen und Zahlen, kein Name."),
+ A("Was solltest du NICHT öffentlich posten?", ["Deine Adresse", "Ein Foto von einem Sonnenuntergang", "Dein Lieblingsessen", "Einen Witz"], "Deine Adresse"),
+ A("Was ist Phishing?", ["Betrüger wollen per Nachricht Passwörter stehlen", "Ein Angelspiel", "Ein Virenschutz", "Eine Suchmaschine"], "Betrüger wollen per Nachricht Passwörter stehlen"),
+ A("Was ist Hardware?", ["Die Geräte, die man anfassen kann", "Programme", "Apps", "Das Internet"], "Die Geräte, die man anfassen kann"),
+ A("Was ist Software?", ["Programme und Apps", "Die Tastatur", "Der Bildschirm", "Das Kabel"], "Programme und Apps"),
+ A("Wie erkennst du eher eine Fake News?", ["Keine Quelle, reißerische Überschrift", "Sie steht auf mehreren seriösen Seiten", "Sie hat ein Datum", "Sie ist kurz"], "Keine Quelle, reißerische Überschrift"),
+ A("Was bedeutet Cybermobbing?", ["Jemanden online absichtlich fertigmachen", "Online-Spiele spielen", "E-Mails schreiben", "Fotos speichern"], "Jemanden online absichtlich fertigmachen"),
+ A("Was gehört in eine gute Suchanfrage?", ["Wichtige Stichwörter", "Ein ganzer Roman", "Nur Emojis", "Gar nichts"], "Wichtige Stichwörter"),
+], "dg")
+platz("valentin", "musik", "Musik", [
+ A("Wie viele Linien hat ein Notensystem?", ["5", "4", "6", "3"], "5"),
+ A("Wie viele Viertelnoten passen in eine ganze Note?", ["4", "2", "8", "3"], "4"),
+ A("Zu welcher Instrumentengruppe gehört die Geige?", ["Streichinstrumente", "Blechblasinstrumente", "Schlaginstrumente", "Holzblasinstrumente"], "Streichinstrumente"),
+ A("Zu welcher Gruppe gehört die Trompete?", ["Blechblasinstrumente", "Streichinstrumente", "Tasteninstrumente", "Holzblasinstrumente"], "Blechblasinstrumente"),
+ A("Welcher berühmte Komponist wurde in Salzburg geboren?", ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Antonio Vivaldi"], "Wolfgang Amadeus Mozart"),
+ A("Welcher Schlüssel steht meistens am Anfang für hohe Töne?", ["Violinschlüssel", "Bassschlüssel", "Hausschlüssel", "Altschlüssel"], "Violinschlüssel"),
+ A("Was bedeutet „forte“?", ["laut", "leise", "schnell", "langsam"], "laut"),
+ A("Was bedeutet „piano“ in den Noten?", ["leise", "laut", "Klavier spielen", "schnell"], "leise"),
+], "mu")
+platz("valentin", "kunst", "Kunst und Gestaltung", [
+ A("Welche sind die drei Grundfarben (Malen)?", ["Gelb, Rot (Magenta), Blau (Cyan)", "Grün, Orange, Lila", "Schwarz, Weiß, Grau", "Rot, Grün, Braun"], "Gelb, Rot (Magenta), Blau (Cyan)"),
+ A("Was entsteht, wenn man Gelb und Blau mischt?", ["Grün", "Orange", "Violett", "Braun"], "Grün"),
+ A("Was entsteht aus Rot und Gelb?", ["Orange", "Grün", "Violett", "Rosa"], "Orange"),
+ A("Was ist eine Komplementärfarbe zu Rot?", ["Grün", "Orange", "Gelb", "Blau"], "Grün"),
+ A("Welche Farben wirken „warm“?", ["Rot, Orange, Gelb", "Blau, Türkis", "Grau, Schwarz", "Grün, Blau"], "Rot, Orange, Gelb"),
+ A("Wer malte die Mona Lisa?", ["Leonardo da Vinci", "Pablo Picasso", "Gustav Klimt", "Vincent van Gogh"], "Leonardo da Vinci"),
+ A("Welcher österreichische Maler malte „Der Kuss“?", ["Gustav Klimt", "Egon Schiele", "Friedensreich Hundertwasser", "Claude Monet"], "Gustav Klimt"),
+], "ku")
+platz("valentin", "technik", "Technik und Design", [
+ A("Welches Werkzeug nimmst du zum Sägen von Holz?", ["Laubsäge", "Zange", "Schraubenzieher", "Pinsel"], "Laubsäge"),
+ A("Was ist Holz?", ["Ein nachwachsender Rohstoff", "Ein Metall", "Ein Kunststoff", "Ein Stein"], "Ein nachwachsender Rohstoff"),
+ A("Welcher Werkstoff leitet Strom gut?", ["Kupfer", "Holz", "Papier", "Kunststoff"], "Kupfer"),
+ A("Wozu verwendet man Schleifpapier?", ["Zum Glätten von Oberflächen", "Zum Kleben", "Zum Bohren", "Zum Messen"], "Zum Glätten von Oberflächen"),
+ A("Was ist beim Arbeiten mit der Bohrmaschine wichtig?", ["Werkstück gut festspannen", "Handschuhe beim Bohren tragen", "Schnell arbeiten", "Haare offen lassen"], "Werkstück gut festspannen"),
+ A("Was macht ein Hebel?", ["Er spart Kraft", "Er macht Strom", "Er misst Länge", "Er klebt Teile"], "Er spart Kraft"),
+], "te")
+
+# ---- Elias, 5. Klasse Realgymnasium (9. Schulstufe) ----
+platz("elias", "spanisch", "Español", [
+ UE("„Hallo“ auf Spanisch?", ["hola"]), UE("„Danke“ auf Spanisch?", ["gracias"]), UE("„Wie heißt du?“ auf Spanisch?", ["¿cómo te llamas?", "como te llamas", "cómo te llamas"]),
+ UE("„Ich heiße Elias.“ auf Spanisch?", ["me llamo elias", "soy elias"]), UE("„die Schule“ auf Spanisch?", ["la escuela", "el colegio", "el instituto"]),
+ A("Yo ___ de Austria.", ["soy", "estoy", "es", "eres"], "soy", "ser für Herkunft: yo soy, tú eres, él es."),
+ A("¿Cómo ___ (tú)? – Bien, gracias.", ["estás", "eres", "está", "soy"], "estás", "estar für Befinden."),
+ A("Welcher Artikel passt? ___ casa", ["la", "el", "los", "un"], "la", "Wörter auf -a sind meist weiblich: la casa."),
+ A("Welcher Artikel passt? ___ libro", ["el", "la", "las", "una"], "el"),
+ A("Wie heißt die Zahl 15?", ["quince", "cinco", "cincuenta", "catorce"], "quince"),
+ A("Messi ___ argentino.", ["es", "está", "soy", "son"], "es"),
+ A("Nosotros ___ al fútbol. (jugar)", ["jugamos", "juegan", "juego", "jugáis"], "jugamos"),
+], "sp", [W("ser oder estar?", "Beide heißen „sein“", None, ["ser: Herkunft, Beruf, Eigenschaften, Uhrzeit (Soy de Austria. Es alto.)", "estar: Befinden, Ort, vorübergehender Zustand (Estoy cansado. Madrid está en España.)"],
+  "ser: soy, eres, es, somos, sois, son\nestar: estoy, estás, está, estamos, estáis, están", "Wie du BIST → ser. Wo und wie es dir GEHT → estar.", "ser estar Unterschied Spanisch einfach erklärt")])
+platz("elias", "physik", "Physik", [
+ A("Wie berechnet man die Geschwindigkeit?", ["v = s / t", "v = s · t", "v = t / s", "v = m · a"], "v = s / t"),
+ M("Ein Radfahrer fährt 30 km in 2 h. Geschwindigkeit in km/h?", "15"),
+ M("Wie viele m/s sind 36 km/h?", "10", "km/h : 3,6 = m/s"),
+ A("Was besagt das Trägheitsprinzip (1. Newton’sches Axiom)?", ["Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine Kraft wirkt", "Kraft = Masse · Beschleunigung", "Actio = Reactio", "Energie geht nie verloren"], "Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine Kraft wirkt"),
+ A("F = m · a ist …", ["das 2. Newton’sche Axiom", "das Ohm’sche Gesetz", "die Dichteformel", "das Hebelgesetz"], "das 2. Newton’sche Axiom"),
+ M("Welche Kraft (N) braucht man, um 2 kg mit 3 m/s² zu beschleunigen?", "6"),
+ A("Welche SI-Einheit hat die Energie?", ["Joule", "Watt", "Newton", "Pascal"], "Joule"),
+ A("Gewichtskraft auf der Erde: ca. … pro kg", ["9,81 N", "1 N", "100 N", "0,5 N"], "9,81 N"),
+ M("Dichte ρ = m/V. Ein Körper hat 200 g und 50 cm³. ρ in g/cm³?", "4"),
+], "ph", [W("Bewegung: v = s / t", "Geschwindigkeit berechnen", None, ["Weg s und Zeit t ablesen, Einheiten prüfen", "v = s / t rechnen", "Umrechnen: m/s · 3,6 = km/h"], "s = 100 m, t = 12,5 s\nv = 100 / 12,5 = 8 m/s = 28,8 km/h", None, "Geschwindigkeit berechnen Physik erklärt")])
+platz("elias", "chemie", "Chemie", [
+ A("Woraus besteht ein Atom?", ["Kern aus Protonen und Neutronen, Hülle mit Elektronen", "Nur aus Elektronen", "Aus Molekülen", "Aus Zellen"], "Kern aus Protonen und Neutronen, Hülle mit Elektronen"),
+ A("Welche Ladung hat ein Elektron?", ["negativ", "positiv", "neutral"], "negativ"),
+ A("Was gibt die Ordnungszahl im Periodensystem an?", ["Anzahl der Protonen", "Anzahl der Neutronen", "Masse", "Anzahl der Moleküle"], "Anzahl der Protonen"),
+ A("Chemisches Zeichen für Sauerstoff?", ["O", "S", "Sa", "Ox"], "O"),
+ A("Chemisches Zeichen für Natrium?", ["Na", "N", "So", "Nt"], "Na"),
+ A("H₂O ist …", ["Wasser", "Wasserstoffperoxid", "Salz", "Sauerstoff"], "Wasser"),
+ A("Was ist ein Reinstoff?", ["Ein Stoff aus nur einer Stoffart", "Ein Gemisch", "Sauberes Wasser", "Eine Lösung"], "Ein Stoff aus nur einer Stoffart"),
+ A("Wie trennt man Salz aus Salzwasser?", ["Eindampfen", "Filtrieren", "Sieben", "Magnet"], "Eindampfen"),
+ A("pH-Wert 2 ist …", ["sauer", "neutral", "basisch (alkalisch)"], "sauer"),
+], "ch")
+platz("elias", "informatik", "Informatik", [
+ M("Wie viel ist die Binärzahl 1010 im Dezimalsystem?", "10", "8 + 0 + 2 + 0 = 10"),
+ E("Schreib 5 als Binärzahl:", ["101"], "4 + 1 = 101", "Eintippen"),
+ M("Wie viele Bit hat ein Byte?", "8"),
+ A("Was ist die CPU?", ["Der Prozessor, der rechnet", "Der Arbeitsspeicher", "Die Festplatte", "Der Bildschirm"], "Der Prozessor, der rechnet"),
+ A("Was ist RAM?", ["Arbeitsspeicher (flüchtig)", "Dauerhafter Speicher", "Netzwerkkabel", "Ein Programm"], "Arbeitsspeicher (flüchtig)"),
+ A("Was ist ein Algorithmus?", ["Eine eindeutige Schritt-für-Schritt-Anleitung", "Ein Computervirus", "Ein Speicher", "Eine Programmiersprache"], "Eine eindeutige Schritt-für-Schritt-Anleitung"),
+ A("Wofür steht „www“?", ["World Wide Web", "World Wide Windows", "Web Without Wires", "Wide Web World"], "World Wide Web"),
+ A("Was macht eine IP-Adresse?", ["Identifiziert ein Gerät im Netzwerk", "Speichert Passwörter", "Schützt vor Viren", "Macht Fotos kleiner"], "Identifiziert ein Gerät im Netzwerk"),
+ A("Was ergibt in Python: print(3 * 4)?", ["12", "34", "7", "3*4"], "12"),
+ M("1 Kilobyte sind wie viele Byte (Dezimal-Präfix)?", "1000"),
+], "if", [W("Binärzahlen", "Nur 0 und 1", ["Jede Stelle hat einen doppelt so großen Wert wie die rechts davon: 1, 2, 4, 8, 16 …"], ["Stellenwerte unter die Ziffern schreiben", "Wo eine 1 steht, den Wert addieren"], "1 0 1 1\n8 4 2 1\n= 8 + 2 + 1 = 11", None, "Binärsystem umrechnen einfach erklärt")])
+platz("elias", "geschichte", "Geschichte", [
+ A("Wann endete das Weströmische Reich?", ["476 n. Chr.", "753 v. Chr.", "1492", "800 n. Chr."], "476 n. Chr."),
+ A("Wer wurde im Jahr 800 zum Kaiser gekrönt?", ["Karl der Große", "Julius Caesar", "Maria Theresia", "Napoleon"], "Karl der Große"),
+ A("Was ist eine Quelle in Geschichte?", ["Alles, woraus wir etwas über die Vergangenheit erfahren", "Ein Fluss", "Nur ein Schulbuch", "Eine Erfindung"], "Alles, woraus wir etwas über die Vergangenheit erfahren"),
+ A("Welche Staatsform hatte Athen im 5. Jh. v. Chr.?", ["Demokratie", "Monarchie", "Diktatur", "Theokratie"], "Demokratie"),
+ A("Was war die „Neolithische Revolution“?", ["Übergang zu Ackerbau und Sesshaftigkeit", "Ein Krieg", "Die Französische Revolution", "Erfindung des Buchdrucks"], "Übergang zu Ackerbau und Sesshaftigkeit"),
+ A("Welches Volk baute die Pyramiden von Gizeh?", ["Ägypter", "Römer", "Griechen", "Maya"], "Ägypter"),
+ A("Was ist der Unterschied Primärquelle / Sekundärquelle?", ["Primär stammt aus der Zeit selbst, sekundär ist später darüber geschrieben", "Es gibt keinen", "Primär ist wichtiger", "Sekundär ist älter"], "Primär stammt aus der Zeit selbst, sekundär ist später darüber geschrieben"),
+], "gs")
+platz("elias", "dg", "Darstellende Geometrie", [
+ A("Was zeigt der Grundriss?", ["Die Ansicht von oben", "Die Ansicht von vorne", "Die Ansicht von links", "Ein Schrägbild"], "Die Ansicht von oben"),
+ A("Was zeigt der Aufriss?", ["Die Ansicht von vorne", "Die Ansicht von oben", "Die Ansicht von hinten", "Den Querschnitt"], "Die Ansicht von vorne"),
+ A("Wie viele Kanten hat ein Würfel?", ["12", "8", "6", "24"], "12"),
+ A("Wie viele Ecken hat ein Würfel?", ["8", "6", "12", "4"], "8"),
+ A("Welcher Körper hat genau eine Spitze und eine Kreis-Grundfläche?", ["Kegel", "Zylinder", "Pyramide", "Kugel"], "Kegel"),
+ A("Bei der Normalprojektion treffen die Projektionsstrahlen …", ["rechtwinklig auf die Bildebene", "schräg auf die Bildebene", "in einem Punkt zusammen", "nie auf die Bildebene"], "rechtwinklig auf die Bildebene"),
+], "dg")
+platz("elias", "musik", "Musik", [
+ A("Welches Intervall hat 3 Halbtöne (z. B. c–es)?", ["kleine Terz", "große Terz", "Quarte", "Sekunde"], "kleine Terz"),
+ A("Aus welchen Tönen besteht der C-Dur-Dreiklang?", ["c – e – g", "c – es – g", "c – f – a", "c – d – e"], "c – e – g"),
+ A("Wie viele Vorzeichen hat G-Dur?", ["1 Kreuz (fis)", "1 b", "keine", "2 Kreuze"], "1 Kreuz (fis)"),
+ A("In welche Epoche gehört Mozart?", ["Klassik", "Barock", "Romantik", "Moderne"], "Klassik"),
+ A("In welche Epoche gehört Johann Sebastian Bach?", ["Barock", "Klassik", "Romantik", "Renaissance"], "Barock"),
+ A("Was bedeutet „Crescendo“?", ["lauter werdend", "leiser werdend", "schneller werdend", "kurz gespielt"], "lauter werdend"),
+ A("Welcher Takt hat 3 Viertel pro Takt?", ["3/4-Takt (z. B. Walzer)", "4/4-Takt", "2/4-Takt", "6/8-Takt"], "3/4-Takt (z. B. Walzer)"),
+], "mu")
+platz("elias", "kunst", "Bildnerische Erziehung", [
+ A("Was ist ein Fluchtpunkt?", ["Punkt, in dem parallele Linien in der Perspektive zusammenlaufen", "Der hellste Punkt im Bild", "Der Bildrand", "Ein Farbfleck"], "Punkt, in dem parallele Linien in der Perspektive zusammenlaufen"),
+ A("Was ist die Komplementärfarbe zu Blau?", ["Orange", "Grün", "Rot", "Violett"], "Orange"),
+ A("Welche Kunstrichtung prägte Gustav Klimt?", ["Jugendstil / Wiener Secession", "Barock", "Pop Art", "Impressionismus"], "Jugendstil / Wiener Secession"),
+ A("Wer gehört zur Pop Art?", ["Andy Warhol", "Rembrandt", "Albrecht Dürer", "Michelangelo"], "Andy Warhol"),
+ A("Was bedeutet „Goldener Schnitt“?", ["Ein als harmonisch empfundenes Teilungsverhältnis (ca. 1 : 1,618)", "Ein Rahmen aus Gold", "Ein Schnitt mit der Schere", "Eine Farbe"], "Ein als harmonisch empfundenes Teilungsverhältnis (ca. 1 : 1,618)"),
+], "ku")
+
+# ---- Elias Oberstufen-Platzhalter für Mathe, Bio, Deutsch, Geo (ersetzen die Unterstufen-Fragen) ----
+platz("elias", "mathe", "Mathe", [
+ A("Zu welcher Zahlenmenge gehört √2?", ["irrationale Zahlen", "natürliche Zahlen", "ganze Zahlen", "rationale Zahlen"], "irrationale Zahlen"),
+ M("Löse: 3x − 7 = 11. x =", "6"), M("Löse: 2(x + 4) = 18. x =", "5"),
+ M("Berechne 2³ · 2⁴ als Potenz von 2. Exponent =", "7", "Gleiche Basis: Exponenten addieren."),
+ M("(a²)³ = a^? → Exponent =", "6", "Potenz einer Potenz: Exponenten multiplizieren."),
+ M("Steigung k der Geraden durch (0|1) und (2|5)?", "2", "k = (5 − 1) / (2 − 0)"),
+ M("f(x) = 3x − 2. f(4) =", "10"),
+ A("Was beschreibt der Parameter d in f(x) = kx + d?", ["Schnittpunkt mit der y-Achse", "Steigung", "Nullstelle", "Krümmung"], "Schnittpunkt mit der y-Achse"),
+ M("Gleichungssystem: x + y = 10, x − y = 4. x =", "7"),
+ M("Ein Preis von 80 € wird um 15 % erhöht. Neuer Preis in €?", "92"),
+ M("(a + b)² für a = 3, b = 2 =", "25"),
+], "ma", [W("Lineare Funktion f(x) = kx + d", "Steigung und Achsenabschnitt", None, ["d ablesen: wo schneidet die Gerade die y-Achse?", "k = Δy / Δx aus zwei Punkten", "Funktionsgleichung aufschreiben"], "P(0|1), Q(2|5)\nk = (5−1)/(2−0) = 2\nd = 1\nf(x) = 2x + 1", "k > 0: steigend, k < 0: fallend.", "lineare Funktion k und d bestimmen")])
+platz("elias", "biologie", "Biologie", [
+ A("Welches Zellorganell ist das „Kraftwerk“ der Zelle?", ["Mitochondrium", "Zellkern", "Ribosom", "Vakuole"], "Mitochondrium"),
+ A("Was haben Pflanzenzellen, Tierzellen aber nicht?", ["Zellwand und Chloroplasten", "Zellkern", "Zellmembran", "Mitochondrien"], "Zellwand und Chloroplasten"),
+ A("Wo liegt die Erbinformation (DNA) hauptsächlich?", ["im Zellkern", "in der Zellwand", "in der Vakuole", "im Zytoplasma"], "im Zellkern"),
+ A("Was sind Prokaryoten?", ["Lebewesen ohne Zellkern (z. B. Bakterien)", "Pflanzen", "Pilze", "Tiere mit Wirbelsäule"], "Lebewesen ohne Zellkern (z. B. Bakterien)"),
+ A("Welche Formel beschreibt die Fotosynthese grob?", ["CO₂ + H₂O + Licht → Glucose + O₂", "O₂ + Glucose → CO₂ + H₂O", "H₂O → H₂ + O₂", "CO₂ → C + O₂"], "CO₂ + H₂O + Licht → Glucose + O₂"),
+ A("Was ist ein Ökosystem?", ["Lebensraum + Lebensgemeinschaft", "Nur die Pflanzen", "Eine Zelle", "Ein Organ"], "Lebensraum + Lebensgemeinschaft"),
+ A("Wie heißen Lebewesen, die organische Stoffe selbst herstellen?", ["Produzenten", "Konsumenten", "Destruenten", "Parasiten"], "Produzenten"),
+ A("Was macht ein Lichtmikroskop sichtbar?", ["z. B. Zellen und Zellkern", "einzelne Atome", "Viren im Detail", "Elektronen"], "z. B. Zellen und Zellkern"),
+], "bi")
+platz("elias", "deutsch", "Deutsch", [
+ A("Was ist eine Metapher?", ["Ein bildlicher Ausdruck ohne „wie“ (z. B. „Das Leben ist eine Reise“)", "Ein Vergleich mit „wie“", "Eine Übertreibung", "Eine Wiederholung"], "Ein bildlicher Ausdruck ohne „wie“ (z. B. „Das Leben ist eine Reise“)"),
+ A("„Er ist stark wie ein Bär.“ Welches Stilmittel?", ["Vergleich", "Metapher", "Alliteration", "Personifikation"], "Vergleich"),
+ A("„Die Sonne lacht.“ Welches Stilmittel?", ["Personifikation", "Vergleich", "Ironie", "Anapher"], "Personifikation"),
+ A("Welche Textsorte wägt Argumente ab und kommt zu einem Schluss?", ["Erörterung", "Bericht", "Inhaltsangabe", "Gedicht"], "Erörterung"),
+ A("In welcher Zeit schreibt man eine Inhaltsangabe?", ["Präsens", "Präteritum", "Futur", "Plusquamperfekt"], "Präsens"),
+ L("Er sagte, er ___ krank. (sein, Konjunktiv I)", ["sei"], "Indirekte Rede: Konjunktiv I – er sei."),
+ A("Wo fehlt das Komma? „Ich glaube dass er kommt.“", ["vor „dass“", "nach „Ich“", "nach „er“", "kein Komma"], "vor „dass“"),
+ A("Was ist ein Kommentar (Textsorte)?", ["Ein meinungsbetonter Zeitungstext", "Ein neutraler Bericht", "Eine Kurzgeschichte", "Ein Lexikonartikel"], "Ein meinungsbetonter Zeitungstext"),
+], "de", deutsch_wissen + [W("Stilmittel erkennen", "Metapher, Vergleich, Personifikation …", None, ["Vergleich: mit „wie“ oder „als“", "Metapher: Bild ohne „wie“", "Personifikation: Dinge handeln wie Menschen", "Alliteration: gleicher Anfangslaut (Milch macht müde Männer munter)", "Anapher: gleicher Satzanfang wird wiederholt"], None, "Bei der Analyse immer: Stilmittel nennen + Beispiel zitieren + Wirkung erklären.", "Stilmittel Deutsch Oberstufe erklärt")])
+platz("elias", "geografie", "Geografie und wirtschaftliche Bildung", [
+ A("Was zeigt eine Bevölkerungspyramide?", ["Alters- und Geschlechtsaufbau einer Bevölkerung", "Höhe der Berge", "Wirtschaftsleistung", "Klimazonen"], "Alters- und Geschlechtsaufbau einer Bevölkerung"),
+ A("Zu welchem Wirtschaftssektor gehört die Landwirtschaft?", ["primärer Sektor", "sekundärer Sektor", "tertiärer Sektor"], "primärer Sektor"),
+ A("Zu welchem Sektor gehört eine Bank?", ["tertiärer Sektor (Dienstleistungen)", "primärer Sektor", "sekundärer Sektor"], "tertiärer Sektor (Dienstleistungen)"),
+ A("Was misst das BIP?", ["Wert aller Waren und Dienstleistungen eines Landes in einem Jahr", "Anzahl der Einwohner", "Fläche eines Landes", "Höhe der Steuern"], "Wert aller Waren und Dienstleistungen eines Landes in einem Jahr"),
+ A("Wodurch entstehen Erdbeben meistens?", ["Bewegung der Erdplatten", "Starken Regen", "Wind", "Mondphasen"], "Bewegung der Erdplatten"),
+ A("Welche Klimazone hat ganzjährig hohe Temperaturen und viel Regen?", ["Tropen", "Subtropen", "gemäßigte Zone", "Polarzone"], "Tropen"),
+ A("Was bedeutet Urbanisierung?", ["Verstädterung", "Abwanderung aufs Land", "Waldrodung", "Globalisierung"], "Verstädterung"),
+], "ge", geo_wissen)
+print("weitere Fächer fertig")
