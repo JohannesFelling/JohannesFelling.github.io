@@ -58,8 +58,9 @@ const ic = (n) => { const w = document.createElement("span"); w.innerHTML = `<sv
 const RUNDE = 10;
 const PUNKT_STD = { zeichen: "⭐", icon: "stern" };
 const pk = pid => (PERSONEN.find(p => p.id === pid) || {}).punkt || PUNKT_STD;
-const punkte = (pid, n) => el("span", { class: "pkt" }, String(n), ic(pk(pid).icon));
-const pktIc = pid => el("span", { class: "pkt" }, ic(pk(pid).icon));
+const pIcon = (pid, cls) => window.KUNST ? (pk(pid).icon === "hammer" ? KUNST.hammer(cls) : KUNST.ball(cls)) : ic(pk(pid).icon);
+const punkte = (pid, n) => el("span", { class: "pkt" }, String(n), pIcon(pid));
+const pktIc = pid => el("span", { class: "pkt" }, pIcon(pid));
 const PROFIL = "_profil";
 let BELOHNUNG = {
   stufen: [{sterne: 100, belohnung: "🍫 Süßigkeit nach Wahl (bis 2 €)"}, {sterne: 250, belohnung: "🥤 Softdrink nach Wahl (bis 1,50 €)"}, {sterne: 1000, belohnung: "🍝 Lieblingsessen"}, {sterne: 2000, belohnung: "🎬 Kinoabend – du suchst den Film aus"}, {sterne: 5000, belohnung: "🎁 Überraschung (Papa wählt)"}],
@@ -213,7 +214,7 @@ function setzeKopf(t, ziel) {
   zurueckZiel = ziel; zurueck.hidden = !ziel;
   if (person) {
     const n = serie(profil(person.id));
-    sterneTop.replaceChildren(...(n ? [`🔥 ${n}  ·  `] : []), ic(pk(person.id).icon), ` ${sterneGesamt(person.id)}`);
+    sterneTop.replaceChildren(...(n ? [`🔥 ${n}  ·  `] : []), pIcon(person.id), ` ${sterneGesamt(person.id)}`);
   } else sterneTop.textContent = "";
 }
 zurueck.addEventListener("click", () => zurueckZiel && zurueckZiel());
@@ -267,6 +268,7 @@ function startseite() {
     el("div", { class: "start-kopf" }, el("div", { class: "label" }, "Lern-Helden"), el("h2", {}, "Wer ist dran?")),
     el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
+        window.KUNST ? KUNST.plakat(p.thema) : null,
         el("small", {}, p.slogan), el("span", { class: "start-name" }, p.name),
         (() => { const t = kommend(p.id)[0]; return t ? el("span", { class: "start-termin" }, `Nächster Test: ${t.titel} · ${wannText(tageBis(t.datum))}`) : null; })(),
         el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : punkte(p.id, sterneGesamt(p.id)))))),
@@ -284,6 +286,7 @@ function gastWahl() {
     el("div", { class: "label", style: "margin-top:22px" }, "App ansehen als"),
     el("div", { class: "start-raster", style: "margin-top:10px" }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { gast = true; gastStand = {}; person = p; faecherSeite(); } },
+        window.KUNST ? KUNST.plakat(p.thema) : null,
         el("small", {}, "Ansicht von"), el("span", { class: "start-name" }, p.name)))));
 }
 function anmeldeSeite(p) {
@@ -338,9 +341,10 @@ function statusKarte() {
   const heuteGeuebt = pr.tage.includes(heute());
   const bisSerie = BELOHNUNG.serie.tage - (n % BELOHNUNG.serie.tage);
   return el("div", { class: "karte status" },
+    window.KUNST ? pIcon(person.id, "status-motiv") : null,
     el("div", { class: "status-kopf" },
       el("div", {}, el("div", { class: "label" }, "Rang"), el("div", { class: "rang" }, r.name)),
-      el("div", { class: "status-sterne" }, el("div", { class: "label" }, "Gesammelt"), el("div", { class: "wert" }, ic(pk(person.id).icon), String(st)))),
+      el("div", { class: "status-sterne" }, el("div", { class: "label" }, "Gesammelt"), el("div", { class: "wert" }, pIcon(person.id), String(st)))),
     el("div", { class: "fortschritt" }, el("div", { style: `width:${Math.round(anteil * 100)}%` })),
     el("div", { class: "klein" }, r.naechste ? ["Noch ", punkte(person.id, r.naechste - st), ` bis zum Rang ${r.naechsterName}`] : "Höchster Rang erreicht."),
     geschenkBlock(),

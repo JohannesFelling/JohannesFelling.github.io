@@ -77,17 +77,6 @@ input.eingabe:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
 .start-name{font-size:2.6rem;line-height:1;letter-spacing:3px;text-transform:uppercase}
 .start-karte small{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:800;opacity:.85}
 .start-karte .start-info{opacity:.7;letter-spacing:1px;text-transform:none;font-weight:600;font-size:.85rem}
-.start-held{background:radial-gradient(circle at 75% 30%,#ff2a2a55,transparent 45%),linear-gradient(160deg,#2a0508,#0d0d12 70%);border-color:#ff2a2a55}
-.start-held:hover{box-shadow:0 10px 40px #ff2a2a44}
-.start-held .start-name{font-family:"Rajdhani",sans-serif;font-weight:700;background:linear-gradient(180deg,#fff,#ffcf6b);-webkit-background-clip:text;background-clip:text;color:transparent}
-.start-held::before{content:"";position:absolute;right:26px;top:26px;width:92px;height:92px;border-radius:50%;border:2px solid #ffcf6b;box-shadow:0 0 30px #ff2a2a,inset 0 0 25px #ff2a2a;background:radial-gradient(circle,#fff 0 8%,#ff6b6b 18%,transparent 60%)}
-.start-held::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff05 0 1px,transparent 1px 4px)}
-.start-sport{background:radial-gradient(ellipse at 15% -10%,#ffffff40,transparent 40%),radial-gradient(ellipse at 85% -10%,#ffffff40,transparent 40%),linear-gradient(180deg,#0a1a10 0%,#0d3b1f 55%,#106b34 100%);border-color:#c6ff0055}
-.start-sport:hover{box-shadow:0 10px 40px #c6ff0033}
-.start-sport .start-name{font-family:"Bebas Neue",sans-serif;font-size:3.4rem;letter-spacing:4px;font-weight:400}
-.start-sport small{color:#c6ff00}
-.start-sport::before{content:"";position:absolute;left:-10%;right:-10%;bottom:-40px;height:130px;border:2px solid #ffffff30;border-radius:50%;transform:perspective(200px) rotateX(40deg)}
-.start-sport::after{content:"";position:absolute;left:50%;bottom:0;height:90px;border-left:2px solid #ffffff30}
 .gast-link{display:flex;align-items:center;justify-content:center;gap:8px;margin:22px auto 0;background:var(--panel);border:1px solid var(--linie);color:var(--leise);border-radius:99px;padding:10px 18px;font-family:inherit;font-size:.9rem;cursor:pointer}
 
 /* Status */
@@ -136,42 +125,7 @@ input.eingabe:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
 .sprechblase{background:var(--panel2);border:1px solid var(--akzent);border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:1.1rem;font-weight:600;margin:8px 30px 8px 0}
 .sprechblase.ich{border-radius:16px 16px 4px 16px;margin:8px 0 8px 30px;border-color:var(--linie);color:var(--leise)}
 
-/* ===== Valentin: Helden-HUD (Rot / Gold) ===== */
-body.thema-held{
-  --bg:#08080c; --panel:#121218; --panel2:#1a1a22; --linie:#ff3b3b26; --akzent:#ff3b3b; --akzent2:#a50f1a; --glow:#ff3b3b44; --gold:#ffcf6b;
-  --titel:"Rajdhani","Bebas Neue",system-ui,sans-serif;
-  background:radial-gradient(ellipse at 50% -20%,#5a0a1255,transparent 60%),#08080c;
-}
-.thema-held .top{border-bottom-color:#ff3b3b55}
-.thema-held .top h1{color:var(--gold)}
-.thema-held .rang{background:linear-gradient(180deg,#fff,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.thema-held .karte{position:relative;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));border-radius:4px}
-.thema-held .fach{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);border-radius:4px}
-.thema-held .knopf{clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);border-radius:0}
-.thema-held .knopf.zweit{clip-path:none;border-radius:8px;border-color:#ffcf6b55;color:var(--gold)}
-.thema-held .label{color:var(--gold)}
-.thema-held .titelkarte{background:linear-gradient(135deg,#2a0508,#121218 70%)}
-.thema-held .titelkarte h2{color:var(--gold)}
-
-/* ===== Elias: Flutlicht-Stadion (Neon-Lime / Violett) ===== */
-body.thema-sport{
-  --bg:#06120b; --panel:#0e1d14; --panel2:#13281b; --linie:#c6ff0022; --akzent:#c6ff00; --akzent2:#5fd400; --glow:#c6ff0033;
-  --titel:"Bebas Neue","Rajdhani",system-ui,sans-serif;
-  background:radial-gradient(ellipse at 10% -10%,#ffffff22,transparent 35%),radial-gradient(ellipse at 90% -10%,#ffffff22,transparent 35%),linear-gradient(180deg,#06120b,#0a2414 60%,#0d2f1a);
-  background-attachment:fixed;
-}
-.thema-sport h2,.thema-sport .top h1,.thema-sport .rang,.thema-sport .fach-name,.thema-sport .knopf{font-weight:400;letter-spacing:3px}
-.thema-sport .top h1{font-size:1.6rem}
-.thema-sport .sterne-top{background:#000;color:var(--akzent);font-family:ui-monospace,Menlo,monospace;border-color:#c6ff0044}
-.thema-sport .knopf{color:#06120b;font-size:1.5rem}
-.thema-sport .knopf.zweit{color:var(--text)}
-.thema-sport .fach{border-bottom:3px solid var(--akzent)}
-.thema-sport .rang{font-size:2.1rem;color:var(--akzent)}
 .status-kopf>div:first-child{min-width:0}.status-sterne{flex:none}
-.thema-sport .status-sterne .wert{font-family:ui-monospace,Menlo,monospace;color:var(--akzent);background:#000;padding:2px 10px;border-radius:6px;font-size:1.6rem}
-.thema-sport .label{color:var(--akzent)}
-.thema-sport .titelkarte{background:linear-gradient(135deg,#1b0a3d,#0e1d14 70%);border-color:#7b3fe455}
-.thema-sport .feedback.ok b:first-child{color:var(--akzent)}
 .raster.zwei{grid-template-columns:1fr 1fr;margin-bottom:16px}.klein-fach{min-height:96px}
 /* Eltern */
 .kpi-wert{font-family:var(--titel);font-weight:700;font-size:1.6rem;letter-spacing:1px}
@@ -202,7 +156,7 @@ body.thema-sport{
 .termin-badge{position:absolute;right:10px;top:10px;background:var(--akzent);color:#000;font-size:.68rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:99px}
 .termin-banner{display:flex;align-items:center;gap:10px;border:1px solid var(--akzent);background:var(--panel);color:var(--text);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-weight:700;font-size:.92rem}
 .termin-banner .ic{color:var(--akzent);font-size:1.3rem;flex:none}
-.start-termin{margin-top:6px;background:#000a;border:1px solid currentColor;color:#c6ff00;border-radius:8px;padding:4px 10px;font-size:.82rem;font-weight:800}.start-held .start-termin{color:#ffcf6b}
+.start-termin{margin-top:6px;background:#000a;border:1px solid currentColor;border-radius:8px;padding:4px 10px;font-size:.82rem;font-weight:800}
 .sterne-top:empty{display:none}
 /* Aufsatz */
 .aufsatz-knopf{width:100%;margin-bottom:12px;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;min-height:80px}

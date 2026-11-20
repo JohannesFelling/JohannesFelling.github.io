@@ -1,0 +1,203 @@
+/* Lern-Helden – Plakat-Design (wird nach style.css geladen).
+   Valentin (.thema-held): Kinoplakat – Schwarz, Rot, Gold, Metall, dramatisches Licht.
+   Elias (.thema-sport): Champions-Nacht – Tiefblau, Silber, Flutlicht, Sterne. Keine Logos. */
+
+:root{ --korn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* ---------- gemeinsame Bausteine ---------- */
+body{background:radial-gradient(ellipse 90% 50% at 50% -5%,#2a2d45,transparent 70%),#06070b;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:var(--korn);opacity:.05;mix-blend-mode:overlay}
+.top,main{position:relative;z-index:1}
+.top{z-index:5}
+
+svg.kunst-ic{width:1.2em;height:1.2em;vertical-align:-.25em;flex:none;filter:drop-shadow(0 1px 1px #0009)}
+.pkt svg.kunst-ic{width:1.25em;height:1.25em}
+.sterne-top svg.kunst-ic{width:20px;height:20px}
+.status-sterne .wert svg.kunst-ic{width:34px;height:34px}
+
+/* Statuskarte mit großem Motiv als Wasserzeichen */
+.karte.status{position:relative;overflow:hidden}
+.karte.status>*{position:relative}
+.karte.status>svg.status-motiv{position:absolute;right:-28px;top:-26px;width:190px;height:190px;opacity:.13;transform:rotate(-18deg);pointer-events:none;filter:none}
+
+/* ---------- Startseite: zwei Plakate ---------- */
+.start-kopf .label{letter-spacing:6px}
+.start-kopf h2{font-family:"Anton",var(--titel);font-weight:400;font-size:2.8rem;letter-spacing:3px;background:linear-gradient(180deg,#fff 30%,#a9afc2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.start-raster{grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.start-karte{min-height:420px;padding:24px 22px 22px;border-radius:6px;border:0;isolation:isolate;box-shadow:0 24px 60px #000c,0 0 0 1px #ffffff14}
+.start-karte:hover{transform:translateY(-4px)}
+.start-karte>.plakat{position:absolute;inset:0;z-index:-1;display:block}
+.start-karte::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 38%,#000000d9 82%);pointer-events:none}
+.plakat svg.plakat-licht{position:absolute;inset:0;width:100%;height:100%}
+.plakat svg.plakat-motiv{position:absolute;left:50%;top:8%;width:min(56%,190px);height:auto;aspect-ratio:1;transform:translateX(-50%)}
+.start-karte small{display:flex;align-items:center;gap:10px;letter-spacing:5px;font-size:.72rem}
+.start-karte small::before{content:"";width:22px;height:1px;background:currentColor}
+.start-name{font-size:3.6rem;line-height:.95;letter-spacing:2px}
+.start-karte .start-info{opacity:.8}
+
+/* Valentin-Plakat */
+.start-held{background:radial-gradient(ellipse 80% 55% at 50% 30%,#7a0b12,transparent 70%),linear-gradient(180deg,#1a0306,#060406 75%)}
+.start-held:hover{box-shadow:0 24px 60px #000c,0 0 0 1px #ffcf6b88,0 0 50px #ff2a2a44}
+.plakat-held svg.plakat-motiv{transform:translateX(-50%) rotate(-16deg);filter:drop-shadow(0 0 18px #ff3b2acc) drop-shadow(0 0 4px #ffe2a0)}
+.start-held .start-name{font-family:"Anton",sans-serif;font-weight:400;background:linear-gradient(180deg,#fff6d8 0%,#ffd676 35%,#b9821f 60%,#ffe39a 80%,#9a6a14 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #3a1a02) drop-shadow(0 8px 18px #000)}
+.start-held small{color:#ffcf6b}
+.start-held .start-termin{color:#ffcf6b}
+
+/* Elias-Plakat */
+.start-sport{background:radial-gradient(ellipse 90% 60% at 50% 55%,#1f47c9,transparent 70%),linear-gradient(180deg,#030a2b,#06124a 55%,#020617)}
+.start-sport:hover{box-shadow:0 24px 60px #000c,0 0 0 1px #cfe0ff99,0 0 50px #3a6bff55}
+.plakat-sport svg.plakat-motiv{top:12%;width:min(54%,180px);filter:drop-shadow(0 18px 22px #000a) drop-shadow(0 0 22px #7fb6ff88);animation:schweben 6s ease-in-out infinite}
+@keyframes schweben{0%,100%{transform:translateX(-50%) translateY(0) rotate(0)}50%{transform:translateX(-50%) translateY(-6px) rotate(8deg)}}
+.start-sport .start-name{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-style:italic;letter-spacing:4px;background:linear-gradient(180deg,#ffffff 0%,#e4e9f2 42%,#8b97ad 52%,#f4f7fb 70%,#aab5c7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 16px #000)}
+.start-sport small{color:#9fd3ff}
+.start-sport .start-termin{color:#9fd3ff}
+
+.gast-link{background:#ffffff0a;border-color:#ffffff1f}
+
+/* ================================================================
+   Valentin – Kinoplakat (Schwarz / Rot / Gold)
+   ================================================================ */
+body.thema-held{
+  --bg:#070508; --panel:#120a0d; --panel2:#1b0f13; --linie:#ffcf6b24; --text:#f6efe6; --leise:#b8a99c;
+  --akzent:#ff3b30; --akzent2:#9e0b14; --glow:#ff3b3055; --gold:#ffcf6b;
+  --titel:"Anton","Bebas Neue",system-ui,sans-serif;
+  --goldtext:linear-gradient(180deg,#fff6d8 0%,#ffd676 38%,#b9821f 62%,#ffe39a 82%,#9a6a14 100%);
+  --rahmen:linear-gradient(135deg,#ffe3a0,#8a5a12 28%,#3a0d10 50%,#c8902c 74%,#ffe9b5);
+  background:
+    radial-gradient(ellipse 70% 40% at 50% -6%,#ff3b2a55,transparent 70%),
+    conic-gradient(from 200deg at 50% -10%,transparent 0deg,#ff6a3d14 8deg,transparent 16deg,transparent 30deg,#ffcf6b10 36deg,transparent 44deg,transparent 60deg,#ff3b2a12 66deg,transparent 74deg),
+    radial-gradient(ellipse 60% 50% at 100% 100%,#5a070d55,transparent 70%),
+    linear-gradient(180deg,#140407,#070508 45%);
+  background-attachment:fixed;
+}
+.thema-held h2,.thema-held .rang,.thema-held .fach-name,.thema-held .knopf,.thema-held .top h1,.thema-held .termin-titel,.thema-held .kpi-wert,.thema-held .gs-was,.thema-held .reiter button{font-family:var(--titel);font-weight:400;letter-spacing:1.5px}
+.thema-held h2{background:var(--goldtext);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #2a1002) drop-shadow(0 6px 14px #000);font-size:2rem}
+.thema-held .top{background:linear-gradient(180deg,#0b0507f2,#0b0507d0);border-bottom:1px solid transparent;border-image:linear-gradient(90deg,transparent,#ffcf6b88,#ff3b30aa,#ffcf6b88,transparent) 1}
+.thema-held .top h1{font-size:1.4rem;background:var(--goldtext);-webkit-background-clip:text;background-clip:text;color:transparent}
+.thema-held .sterne-top{background:#000;border-color:#ffcf6b55;color:#ffe2a0}
+.thema-held .icon-btn{background:#1b0f13;border-color:#ffcf6b44;color:var(--gold)}
+.thema-held .label{color:var(--gold);letter-spacing:3.5px}
+
+.thema-held .karte{border:1px solid transparent;border-radius:6px;
+  background:linear-gradient(180deg,#1a0c10f2,#0d0709f5) padding-box,var(--rahmen) border-box;
+  box-shadow:0 18px 40px #000a,inset 0 1px 0 #ffffff12}
+.thema-held .titelkarte{background:radial-gradient(ellipse 80% 120% at 100% 0%,#7a0b1288,transparent 60%),linear-gradient(180deg,#1a0c10,#0d0709) padding-box,var(--rahmen) border-box}
+.thema-held .rang{font-size:2.3rem;background:var(--goldtext);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #2a1002)}
+.thema-held .status-sterne .wert{color:#fff3d4;font-size:2.2rem}
+.thema-held .karte.status>svg.status-motiv{opacity:.16}
+
+.thema-held .fach{border:1px solid transparent;border-radius:6px;
+  background:radial-gradient(ellipse 90% 70% at 85% 0%,#ff3b2a2e,transparent 65%),linear-gradient(170deg,#1c0e12,#0c0709) padding-box,linear-gradient(160deg,#ffcf6b66,#ffffff10 40%,#ff3b3044) border-box}
+.thema-held .fach:hover{box-shadow:0 0 0 1px #ffcf6b,0 10px 34px #ff3b2a44}
+.thema-held .fach .ic{color:var(--gold);filter:drop-shadow(0 0 8px #ff3b2a99)}
+.thema-held .fach .nr{font-family:var(--titel);color:#ffcf6b14}
+.thema-held .fach.markiert{box-shadow:0 0 0 1px var(--akzent),0 0 26px #ff3b3066}
+
+.thema-held .knopf{position:relative;overflow:hidden;border-radius:4px;color:#fff;font-size:1.35rem;
+  background:linear-gradient(180deg,#ff6a4d 0%,#e01a22 42%,#a10a14 58%,#6a050d 100%);
+  border:1px solid #ffcf6b99;text-shadow:0 2px 0 #4a0306;
+  box-shadow:0 10px 28px #ff1a1a44,inset 0 1px 0 #ffd0b8aa,inset 0 -2px 6px #0006}
+.thema-held .knopf::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,#fff5 50%,transparent);transform:skewX(-20deg);animation:glanz 4.5s ease-in-out infinite}
+.thema-held .knopf.zweit{background:linear-gradient(180deg,#1b0f13,#0d0709);border:1px solid #ffcf6b66;color:var(--gold);text-shadow:none;box-shadow:none;font-size:1.1rem}
+.thema-held .knopf.zweit::after,.thema-held .knopf:disabled::after{display:none}
+@keyframes glanz{0%,55%{left:-60%}85%,100%{left:130%}}
+
+.thema-held .fortschritt{background:#ffffff12;height:8px}
+.thema-held .fortschritt>div{background:linear-gradient(90deg,#9e0b14,#ff3b30 60%,#ffcf6b);box-shadow:0 0 14px #ff3b30aa}
+.thema-held .akku{border-color:#ffcf6b55;background:#000}
+.thema-held .akku-fuellung{background:linear-gradient(90deg,#9e0b14,#ff3b30,#ffcf6b,#ff3b30,#9e0b14);background-size:200% 100%}
+.thema-held .serie{background:#0007;border:1px solid #ffcf6b2a}
+.thema-held .opt{background:linear-gradient(180deg,#1b0f13,#120a0d);border-color:#ffcf6b2e}
+.thema-held .opt:hover:not(:disabled){border-color:var(--gold)}
+.thema-held input.eingabe{background:#0d0709;border-color:#ffcf6b40}
+.thema-held .schritt{border-left-color:var(--gold);background:#0008}
+.thema-held .schritt b{color:var(--gold)}
+.thema-held .termin-karte{box-shadow:0 0 0 1px #ff3b3066,0 18px 50px #ff1a1a33}
+.thema-held .termin-countdown{background:#000;border-color:#ffcf6b55}
+.thema-held .termin-countdown .wert{background:var(--goldtext);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:var(--titel);font-weight:400}
+.thema-held .termin-badge{background:linear-gradient(180deg,#ffe39a,#c8902c);color:#2a1002}
+.thema-held .mikro{border-color:var(--gold);background:radial-gradient(circle,#c0101c,#0000 70%),#120a0d}
+.thema-held .modus-wahl button.an{border-color:var(--gold);color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.thema-held .gast-banner{background:linear-gradient(180deg,#ffe39a,#c8902c);color:#2a1002}
+
+/* ================================================================
+   Elias – Champions-Nacht (Tiefblau / Silber / Flutlicht / Sterne)
+   ================================================================ */
+body.thema-sport{
+  --bg:#030a2b; --panel:#0a1850; --panel2:#0e1f62; --linie:#cfe0ff26; --text:#f3f6fc; --leise:#a9b6d6;
+  --akzent:#8fd0ff; --akzent2:#2f6bff; --glow:#4f8dff55; --ok:#4fe3b0;
+  --titel:"Barlow Condensed","Bebas Neue",system-ui,sans-serif;
+  --chrom:linear-gradient(180deg,#ffffff 0%,#e8edf5 40%,#8d99b0 52%,#f2f5fa 68%,#b3bdcd 100%);
+  --sterne:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cg fill='%23fff'%3E%3Cpath d='M30 22l1.6 6.4L38 30l-6.4 1.6L30 38l-1.6-6.4L22 30l6.4-1.6z' opacity='.5'/%3E%3Cpath d='M170 60l1 4 4 1-4 1-1 4-1-4-4-1 4-1z' opacity='.6'/%3E%3Cpath d='M110 150l1.3 5.2 5.2 1.3-5.2 1.3-1.3 5.2-1.3-5.2-5.2-1.3 5.2-1.3z' opacity='.35'/%3E%3Cpath d='M210 190l.8 3.2 3.2.8-3.2.8-.8 3.2-.8-3.2-3.2-.8 3.2-.8z' opacity='.5'/%3E%3Ccircle cx='80' cy='90' r='.9' opacity='.6'/%3E%3Ccircle cx='200' cy='120' r='.7' opacity='.5'/%3E%3Ccircle cx='40' cy='200' r='.8' opacity='.5'/%3E%3Ccircle cx='150' cy='20' r='.6' opacity='.6'/%3E%3C/g%3E%3C/svg%3E");
+  background:
+    linear-gradient(115deg,transparent 30%,#cfe3ff0d 38%,transparent 46%),
+    linear-gradient(245deg,transparent 30%,#cfe3ff0d 38%,transparent 46%),
+    radial-gradient(ellipse 30% 22% at 8% 0%,#ffffff3a,transparent 70%),
+    radial-gradient(ellipse 30% 22% at 92% 0%,#ffffff3a,transparent 70%),
+    radial-gradient(ellipse 90% 60% at 50% 110%,#1d46c9aa,transparent 70%),
+    linear-gradient(180deg,#020823,#061454 55%,#081c6e);
+  background-attachment:fixed;
+}
+body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:var(--sterne);opacity:.7}
+.thema-sport h2,.thema-sport .rang,.thema-sport .fach-name,.thema-sport .knopf,.thema-sport .top h1,.thema-sport .termin-titel,.thema-sport .kpi-wert,.thema-sport .gs-was,.thema-sport .reiter button{font-family:var(--titel);font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+.thema-sport h2{font-style:italic;font-size:2.1rem;background:var(--chrom);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 10px #000a)}
+.thema-sport .top{background:linear-gradient(180deg,#020823f2,#020823cc);border-bottom:1px solid transparent;border-image:linear-gradient(90deg,transparent,#cfe0ff99,transparent) 1}
+.thema-sport .top h1{font-size:1.5rem;font-style:italic;background:var(--chrom);-webkit-background-clip:text;background-clip:text;color:transparent}
+.thema-sport .sterne-top{background:#020823;border-color:#cfe0ff44;color:#fff}
+.thema-sport .icon-btn{background:#0a1850;border-color:#cfe0ff33;color:#fff}
+.thema-sport .label{color:var(--akzent);letter-spacing:4px}
+
+.thema-sport .karte{border:1px solid #cfe0ff2a;border-radius:14px;
+  background:linear-gradient(160deg,#10267acc,#071548e6 55%,#050f3ae6);
+  box-shadow:0 18px 44px #0009,inset 0 1px 0 #ffffff22;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.thema-sport .titelkarte{background:radial-gradient(ellipse 70% 90% at 100% 0%,#3a6bff55,transparent 60%),linear-gradient(160deg,#10267a,#050f3a);border-color:#cfe0ff40}
+.thema-sport .rang{font-size:2.4rem;font-style:italic;background:var(--chrom);-webkit-background-clip:text;background-clip:text;color:transparent}
+.thema-sport .status-sterne .wert{font-family:var(--titel);font-weight:800;font-size:2.3rem;color:#fff}
+.thema-sport .karte.status>svg.status-motiv{opacity:.12}
+
+.thema-sport .fach{border:1px solid #cfe0ff24;border-radius:12px;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,#5d8dff33,transparent 70%),linear-gradient(170deg,#0f2470,#071548);
+  box-shadow:inset 0 1px 0 #ffffff1c}
+.thema-sport .fach::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:linear-gradient(90deg,transparent,#e8eef8,transparent);opacity:.7}
+.thema-sport .fach:hover{border-color:#cfe0ff88;box-shadow:0 0 0 1px #cfe0ff66,0 10px 34px #2f6bff55}
+.thema-sport .fach .ic{color:#e8eef8;filter:drop-shadow(0 0 8px #6aa8ff)}
+.thema-sport .fach .nr{font-family:var(--titel);font-weight:800;font-style:italic;color:#ffffff10}
+.thema-sport .fach.markiert{box-shadow:0 0 0 1px var(--akzent),0 0 26px #4f8dff88}
+
+.thema-sport .knopf{position:relative;overflow:hidden;border-radius:99px;color:#061454;font-size:1.4rem;font-style:italic;
+  background:linear-gradient(180deg,#ffffff 0%,#e9eef6 42%,#aab5c8 56%,#dfe6f0 80%,#ffffff 100%);
+  border:1px solid #ffffff;text-shadow:0 1px 0 #ffffffaa;
+  box-shadow:0 10px 30px #2f6bff55,0 0 0 4px #ffffff14,inset 0 -2px 6px #5a68807a}
+.thema-sport .knopf::after{content:"";position:absolute;top:0;bottom:0;width:35%;left:-60%;background:linear-gradient(100deg,transparent,#ffffffcc 50%,transparent);transform:skewX(-20deg);animation:glanz 5s ease-in-out infinite}
+.thema-sport .knopf.zweit{background:#ffffff0a;border:1px solid #cfe0ff55;color:#fff;text-shadow:none;box-shadow:none;font-size:1.15rem}
+.thema-sport .knopf.zweit::after,.thema-sport .knopf:disabled::after{display:none}
+
+.thema-sport .fortschritt{background:#ffffff14;height:8px}
+.thema-sport .fortschritt>div{background:linear-gradient(90deg,#2f6bff,#8fd0ff 70%,#fff);box-shadow:0 0 14px #8fd0ffaa}
+.thema-sport .akku{border-color:#cfe0ff55;background:#020823}
+.thema-sport .akku-fuellung{background:linear-gradient(90deg,#2f6bff,#8fd0ff,#ffffff,#8fd0ff,#2f6bff);background-size:200% 100%}
+.thema-sport .serie{background:#02082366;border:1px solid #cfe0ff22}
+.thema-sport .opt{background:linear-gradient(180deg,#10267a,#0a1850);border-color:#cfe0ff2a}
+.thema-sport .opt:hover:not(:disabled){border-color:#fff}
+.thema-sport input.eingabe{background:#050f3a;border-color:#cfe0ff40}
+.thema-sport .schritt{border-left-color:#e8eef8;background:#02082366}
+.thema-sport .schritt b{color:var(--akzent)}
+.thema-sport .feedback.ok b:first-child{color:var(--ok)}
+.thema-sport .termin-karte{box-shadow:0 0 0 1px #8fd0ff66,0 18px 50px #2f6bff44}
+.thema-sport .termin-countdown{background:#020823;border-color:#cfe0ff44}
+.thema-sport .termin-countdown .wert{font-family:var(--titel);font-weight:800;font-style:italic;background:var(--chrom);-webkit-background-clip:text;background-clip:text;color:transparent}
+.thema-sport .termin-badge{background:var(--chrom);color:#061454}
+.thema-sport .mikro{border-color:#fff;background:radial-gradient(circle,#2f6bff,#0000 70%),#0a1850}
+.thema-sport .modus-wahl button{background:#0a1850}
+.thema-sport .modus-wahl button.an{border-color:#fff;color:#fff;box-shadow:0 0 0 1px #fff,0 0 16px #4f8dff88}
+.thema-sport .gast-banner{background:var(--chrom);color:#061454}
+
+/* kleine Bildschirme */
+@media (max-width:420px){
+  .start-karte{min-height:380px}
+  .start-name{font-size:3.1rem}
+  .thema-held h2,.thema-sport h2{font-size:1.75rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .thema-held .knopf::after,.thema-sport .knopf::after,.plakat-sport svg.plakat-motiv{animation:none}
+}
