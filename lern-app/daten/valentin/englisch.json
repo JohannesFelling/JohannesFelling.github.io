@@ -1,6 +1,6 @@
 {
  "titel": "Englisch-Helden",
- "untertitel": "Workbook Unit 3 (Halloween) & Unit 4 (What an animal!) – mit deinen Lieblingshelden",
+ "untertitel": "Workbook Unit 3 (Halloween) & Unit 4 (What an animal!)",
  "platzhalter": false,
  "thema": "helden",
  "fragen": [
@@ -893,6 +893,531 @@
    ],
    "erklaerung": "c-h-i-m-p-a-n-z-e-e.",
    "id": "ve077"
+  }
+ ],
+ "tests": [
+  {
+   "id": "unit3",
+   "titel": "Test Unit 3 – Halloween & should",
+   "fragen": [
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Kürbis",
+     "antwort": [
+      "pumpkin"
+     ],
+     "erklaerung": "",
+     "id": "unit3-01"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Friedhof",
+     "antwort": [
+      "graveyard"
+     ],
+     "erklaerung": "",
+     "id": "unit3-02"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Kostüm",
+     "antwort": [
+      "costume"
+     ],
+     "erklaerung": "",
+     "id": "unit3-03"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Süßigkeiten",
+     "antwort": [
+      "sweets"
+     ],
+     "erklaerung": "",
+     "id": "unit3-04"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Gespenst",
+     "antwort": [
+      "ghost"
+     ],
+     "erklaerung": "",
+     "id": "unit3-05"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "scary",
+     "antwort": [
+      "gruselig",
+      "unheimlich"
+     ],
+     "erklaerung": "",
+     "id": "unit3-06"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Treppe",
+     "antwort": [
+      "stairs"
+     ],
+     "erklaerung": "",
+     "id": "unit3-07"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Spider-Man has a headache. He ___ see a doctor.",
+     "optionen": [
+      "should",
+      "shouldn't",
+      "shoulds"
+     ],
+     "antwort": "should",
+     "erklaerung": "",
+     "id": "unit3-08"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Loki ___ eat ten bags of sweets.",
+     "optionen": [
+      "shouldn't",
+      "should",
+      "should to"
+     ],
+     "antwort": "shouldn't",
+     "erklaerung": "",
+     "id": "unit3-09"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Which sentence is correct?",
+     "optionen": [
+      "Thor should take an umbrella.",
+      "Thor should takes an umbrella.",
+      "Thor should to take an umbrella."
+     ],
+     "antwort": "Thor should take an umbrella.",
+     "erklaerung": "",
+     "id": "unit3-10"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Wanda sees ___ old castle.",
+     "optionen": [
+      "an",
+      "a"
+     ],
+     "antwort": "an",
+     "erklaerung": "",
+     "id": "unit3-11"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Hawkeye has ___ mask.",
+     "optionen": [
+      "a",
+      "an"
+     ],
+     "antwort": "a",
+     "erklaerung": "",
+     "id": "unit3-12"
+    }
+   ]
+  },
+  {
+   "id": "unit4",
+   "titel": "Test Unit 4 – Animals & Vergleiche",
+   "fragen": [
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Nashorn",
+     "antwort": [
+      "rhino"
+     ],
+     "erklaerung": "",
+     "id": "unit4-01"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Gepard",
+     "antwort": [
+      "cheetah"
+     ],
+     "erklaerung": "",
+     "id": "unit4-02"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Fledermaus",
+     "antwort": [
+      "bat"
+     ],
+     "erklaerung": "",
+     "id": "unit4-03"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "giftig (Schlange)",
+     "antwort": [
+      "venomous"
+     ],
+     "erklaerung": "",
+     "id": "unit4-04"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Säugetier",
+     "antwort": [
+      "mammal"
+     ],
+     "erklaerung": "",
+     "id": "unit4-05"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Hulk is ___ than Spider-Man. (heavy)",
+     "antwort": [
+      "heavier"
+     ],
+     "erklaerung": "",
+     "id": "unit4-06"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Black Panther is ___ than Hawkeye. (fast)",
+     "antwort": [
+      "faster"
+     ],
+     "erklaerung": "",
+     "id": "unit4-07"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Doctor Strange is ___ than Groot. (intelligent)",
+     "antwort": [
+      "more intelligent"
+     ],
+     "erklaerung": "",
+     "id": "unit4-08"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Captain America is ___ Bucky.",
+     "optionen": [
+      "as strong as",
+      "as stronger as",
+      "stronger as"
+     ],
+     "antwort": "as strong as",
+     "erklaerung": "",
+     "id": "unit4-09"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Hulk is the ___ Avenger. (strong)",
+     "antwort": [
+      "strongest"
+     ],
+     "erklaerung": "",
+     "id": "unit4-10"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Thanos is the ___ villain. (dangerous)",
+     "antwort": [
+      "most dangerous"
+     ],
+     "erklaerung": "",
+     "id": "unit4-11"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Iron Man's suit is ___ than his old one. (good)",
+     "optionen": [
+      "better",
+      "gooder",
+      "best"
+     ],
+     "antwort": "better",
+     "erklaerung": "",
+     "id": "unit4-12"
+    }
+   ]
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "should / shouldn't",
+   "kurz": "Ratschläge geben",
+   "text": [
+    "Mit should gibst du einen Rat: Du solltest … – mit shouldn't sagst du: Du solltest nicht …",
+    "should bleibt IMMER gleich – auch bei he/she/it kein -s. Danach kommt die Grundform des Verbs, ohne „to“."
+   ],
+   "schritte": [
+    "Wer? (I, you, he …)",
+    "should oder shouldn't",
+    "Verb in der Grundform (go, eat, see …)",
+    "Rest des Satzes"
+   ],
+   "beispiel": "Hulk is tired.\n→ He should go to bed.\n→ He shouldn't watch TV so late.\n\n✗ He shoulds go   ✗ He should to go   ✓ He should go",
+   "merke": "should + Grundform. Kein -s, kein to.",
+   "video": "should shouldn't english grammar einfach erklärt"
+  },
+  {
+   "titel": "a oder an?",
+   "kurz": "Der unbestimmte Artikel",
+   "text": [
+    "Es kommt auf den KLANG am Wortanfang an, nicht auf den Buchstaben.",
+    "an vor einem Vokal-Laut (a, e, i, o, u gesprochen), a vor einem Konsonanten-Laut."
+   ],
+   "schritte": [
+    "Sprich das Wort laut aus.",
+    "Klingt der Anfang wie a, e, i, o, u? → an",
+    "Sonst → a"
+   ],
+   "beispiel": "an apple, an ostrich, an old house, an hour (h ist stumm!)\na ghost, a pumpkin, a dog, a uniform (klingt wie „ju“)",
+   "merke": "Das Ohr entscheidet, nicht das Auge.",
+   "video": "a or an english grammar erklärt"
+  },
+  {
+   "titel": "Komparativ – vergleichen mit than",
+   "kurz": "bigger than, more dangerous than",
+   "text": [
+    "Wenn du ZWEI Dinge vergleichst, nimmst du den Komparativ + than."
+   ],
+   "schritte": [
+    "Kurzes Adjektiv → -er: fast → faster, tall → taller",
+    "Endet auf -y → -ier: heavy → heavier, funny → funnier",
+    "Ein Vokal + Konsonant am Ende → verdoppeln: big → bigger, hot → hotter",
+    "Lange Adjektive → more: more dangerous, more intelligent",
+    "Unregelmäßig: good → better, bad → worse"
+   ],
+   "beispiel": "Hulk is stronger than Ant-Man.\nThor is faster than Hulk.\nA snake is more dangerous than a spider.",
+   "merke": "Komparativ + than (nicht then!).",
+   "video": "comparative adjectives english erklärt deutsch"
+  },
+  {
+   "titel": "as … as – gleich viel",
+   "kurz": "as big as, not as fast as",
+   "text": [
+    "Wenn zwei Dinge GLEICH sind, nimmst du as + Grundform + as.",
+    "Verneint (not as … as) heißt es: weniger … als."
+   ],
+   "schritte": [
+    "as",
+    "Adjektiv in der GRUNDFORM (big, strong, good)",
+    "as"
+   ],
+   "beispiel": "Hulk is as strong as Thor.\nAnt-Man isn't as tall as Hulk.\n\n✗ as stronger as   ✗ as better as   ✓ as strong as / as good as",
+   "merke": "Zwischen as und as steht NIE ein Komparativ. Das ist der häufigste Fehler!",
+   "video": "as as comparison english grammar"
+  },
+  {
+   "titel": "Superlativ – der/die/das Beste",
+   "kurz": "the fastest, the most dangerous",
+   "text": [
+    "Wenn etwas an der Spitze ist (von dreien oder mehr), nimmst du den Superlativ mit the."
+   ],
+   "schritte": [
+    "Kurz → the …-est: the fastest, the tallest",
+    "-y → the …-iest: the heaviest, the funniest",
+    "Lang → the most …: the most dangerous, the most venomous",
+    "Unregelmäßig: good → the best, bad → the worst"
+   ],
+   "beispiel": "The cheetah is the fastest animal on land.\nHulk is the strongest.\nThe taipan is the most venomous snake.",
+   "merke": "Komparativ = zwei vergleichen (+ than). Superlativ = der/die/das -ste (+ the).",
+   "video": "superlative adjectives english erklärt"
+  }
+ ],
+ "sprechen": [
+  {
+   "titel": "Halloween mit Spider-Man",
+   "kurz": "Kostüme, Süßigkeiten, should",
+   "schritte": [
+    {
+     "sagt": "Hi, I'm Peter Parker! It's Halloween tonight. What costume do you want to wear?",
+     "erwartet": [
+      [
+       "costume"
+      ],
+      [
+       "i",
+       "want"
+      ],
+      [
+       "i'm"
+      ],
+      [
+       "i",
+       "wear"
+      ],
+      [
+       "i",
+       "will"
+      ]
+     ],
+     "tipp": "I want to wear a vampire costume."
+    },
+    {
+     "sagt": "Cool! I want to go trick or treating. What do we say at the door?",
+     "erwartet": [
+      [
+       "trick",
+       "or",
+       "treat"
+      ]
+     ],
+     "tipp": "Trick or treat!"
+    },
+    {
+     "sagt": "I'm scared of the old house at the end of the street. Should we go there?",
+     "erwartet": [
+      [
+       "should"
+      ],
+      [
+       "shouldn't"
+      ],
+      [
+       "no"
+      ],
+      [
+       "yes"
+      ]
+     ],
+     "tipp": "No, we shouldn't go there."
+    },
+    {
+     "sagt": "I ate too many sweets and I feel sick. What should I do?",
+     "erwartet": [
+      [
+       "should"
+      ]
+     ],
+     "tipp": "You should drink some water."
+    },
+    {
+     "sagt": "Thanks, mate! What's your favourite Halloween sweet?",
+     "erwartet": [
+      [
+       "my",
+       "favourite"
+      ],
+      [
+       "i",
+       "like"
+      ],
+      [
+       "chocolate"
+      ]
+     ],
+     "tipp": "My favourite sweet is chocolate."
+    }
+   ]
+  },
+  {
+   "titel": "Safari mit Black Panther",
+   "kurz": "Tiere vergleichen",
+   "schritte": [
+    {
+     "sagt": "Welcome to Africa! I'm T'Challa. Which animal is faster, a cheetah or a rhino?",
+     "erwartet": [
+      [
+       "cheetah",
+       "faster"
+      ],
+      [
+       "cheetah"
+      ]
+     ],
+     "tipp": "A cheetah is faster than a rhino."
+    },
+    {
+     "sagt": "Right! Is a rhino heavier than a giraffe?",
+     "erwartet": [
+      [
+       "heavier"
+      ],
+      [
+       "yes"
+      ],
+      [
+       "no"
+      ]
+     ],
+     "tipp": "Yes, a rhino is heavier than a giraffe."
+    },
+    {
+     "sagt": "What is the most dangerous animal you know?",
+     "erwartet": [
+      [
+       "most",
+       "dangerous"
+      ],
+      [
+       "dangerous"
+      ]
+     ],
+     "tipp": "The most dangerous animal is the taipan."
+    },
+    {
+     "sagt": "Is a baboon as big as a gorilla?",
+     "erwartet": [
+      [
+       "as",
+       "big",
+       "as"
+      ],
+      [
+       "not",
+       "as"
+      ],
+      [
+       "isn't"
+      ],
+      [
+       "no"
+      ]
+     ],
+     "tipp": "No, a baboon isn't as big as a gorilla."
+    },
+    {
+     "sagt": "Great! What's your favourite animal, and why?",
+     "erwartet": [
+      [
+       "because"
+      ],
+      [
+       "favourite"
+      ]
+     ],
+     "tipp": "My favourite animal is the cheetah because it's fast."
+    }
+   ]
   }
  ]
 }

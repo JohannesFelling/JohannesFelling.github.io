@@ -10,11 +10,19 @@ def UE(frage, antwort, erkl=""): return E(frage, antwort, erkl, "Übersetzen")
 def L(frage, antwort, erkl=""): return E(frage, antwort, erkl, "Lücke füllen")
 def M(frage, antwort, erkl=""): return E(frage, antwort, erkl, "Rechnen", True)
 
-def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=None, prefix=None):
+def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=None, prefix=None, tests=None, wissen=None, sprechen=None):
+    fragen = json.loads(json.dumps(fragen))
     for i, q in enumerate(fragen): q["id"] = f"{prefix or fach[:2]}{i+1:03d}"
     d = {"titel": titel, "untertitel": untertitel, "platzhalter": platzhalter}
     if thema: d["thema"] = thema
     d["fragen"] = fragen
+    if tests:
+        tests = json.loads(json.dumps(tests))
+        for t in tests:
+            for i, q in enumerate(t["fragen"]): q["id"] = f"{t['id']}-{i+1:02d}"
+        d["tests"] = tests
+    if wissen: d["wissen"] = wissen
+    if sprechen: d["sprechen"] = sprechen
     os.makedirs(f"daten/{person}", exist_ok=True)
     with open(f"daten/{person}/{fach}.json", "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, indent=1)
@@ -107,8 +115,6 @@ val_en = [
  E("Buchstabiere „Giraffe“ auf Englisch:", "giraffe", "g-i-r-a-f-f-e (zwei f!).", "Buchstabieren"),
  E("Buchstabiere „Schimpanse“ auf Englisch:", "chimpanzee", "c-h-i-m-p-a-n-z-e-e.", "Buchstabieren"),
 ]
-schreiben("valentin", "englisch", "Englisch-Helden", val_en, False,
-          "Workbook Unit 3 (Halloween) & Unit 4 (What an animal!) – mit deinen Lieblingshelden", "helden", "ve")
 
 # ================= PLATZHALTER (bis echtes Lernmaterial da ist) =================
 mathe = [
@@ -184,26 +190,190 @@ geo = [
  A("Was ist die Hauptstadt von Deutschland?", ["Berlin", "München", "Hamburg", "Frankfurt"], "Berlin"),
  A("Welches Bundesland liegt ganz im Westen Österreichs?", ["Vorarlberg", "Burgenland", "Kärnten", "Salzburg"], "Vorarlberg"),
 ]
-eng_allg = [
- UE("„Kürbis“ auf Englisch?", "pumpkin"), UE("„Süßigkeiten“ auf Englisch?", "sweets"), UE("„Kostüm“ auf Englisch?", "costume"),
- UE("„gefährlich“ auf Englisch?", "dangerous"), UE("„schnell“ auf Englisch?", "fast"), UE("„Wüste“ auf Englisch?", "desert"),
- UE("„strong“ auf Deutsch?", "stark"), UE("„scary“ auf Deutsch?", ["gruselig", "unheimlich"]),
- A("You look tired. You ___ go to bed.", ["should", "shouldn't", "should to"], "should", "should + Grundform."),
- A("It's cold. You ___ go out without a jacket.", ["shouldn't", "should"], "shouldn't"),
- A("I saw ___ elephant at the zoo.", ["an", "a"], "an", "an vor Vokal-Laut."),
- A("She has ___ dog.", ["a", "an"], "a"),
- L("An elephant is ___ than a mouse. (big)", "bigger"), L("A cheetah is ___ than a horse. (fast)", "faster"),
- L("This film is ___ than that one. (interesting)", "more interesting"),
- A("Tom is ___ Ben. (gleich groß)", ["as tall as", "as taller as", "taller as"], "as tall as", "as + Grundform + as."),
- L("The blue whale is the ___ animal in the world. (big)", "biggest"),
- A("My bike is ___ than yours. (good)", ["better", "gooder", "best"], "better"),
- A("Yesterday I ___ to school by bus.", ["went", "go", "goed", "going"], "went", "go → went (unregelmäßig)."),
- A("___ you like pizza?", ["Do", "Does", "Are", "Is"], "Do"),
+
+def W(titel, kurz, text=None, schritte=None, beispiel=None, merke=None, video=None):
+    d = {"titel": titel, "kurz": kurz}
+    for k, v in [("text", text), ("schritte", schritte), ("beispiel", beispiel), ("merke", merke), ("video", video)]:
+        if v: d[k] = v
+    return d
+def G(titel, kurz, schritte): return {"titel": titel, "kurz": kurz, "schritte": [dict(sagt=a, erwartet=b, tipp=c) for a, b, c in schritte]}
+
+# ---------- Englisch-Grammatik-Wissen (aus Valentins Workbook) ----------
+def englisch_wissen(held):
+    a, b, c = ("Hulk", "Ant-Man", "Thor") if held else ("Haaland", "Saka", "Salah")
+    return [
+     W("should / shouldn't", "Ratschläge geben", [
+        "Mit should gibst du einen Rat: Du solltest … – mit shouldn't sagst du: Du solltest nicht …",
+        "should bleibt IMMER gleich – auch bei he/she/it kein -s. Danach kommt die Grundform des Verbs, ohne „to“."],
+       ["Wer? (I, you, he …)", "should oder shouldn't", "Verb in der Grundform (go, eat, see …)", "Rest des Satzes"],
+       f"{a} is tired.\n→ He should go to bed.\n→ He shouldn't watch TV so late.\n\n✗ He shoulds go   ✗ He should to go   ✓ He should go",
+       "should + Grundform. Kein -s, kein to.", "should shouldn't english grammar einfach erklärt"),
+     W("a oder an?", "Der unbestimmte Artikel", [
+        "Es kommt auf den KLANG am Wortanfang an, nicht auf den Buchstaben.",
+        "an vor einem Vokal-Laut (a, e, i, o, u gesprochen), a vor einem Konsonanten-Laut."],
+       ["Sprich das Wort laut aus.", "Klingt der Anfang wie a, e, i, o, u? → an", "Sonst → a"],
+       "an apple, an ostrich, an old house, an hour (h ist stumm!)\na ghost, a pumpkin, a dog, a uniform (klingt wie „ju“)",
+       "Das Ohr entscheidet, nicht das Auge.", "a or an english grammar erklärt"),
+     W("Komparativ – vergleichen mit than", "bigger than, more dangerous than", [
+        "Wenn du ZWEI Dinge vergleichst, nimmst du den Komparativ + than."],
+       ["Kurzes Adjektiv → -er: fast → faster, tall → taller", "Endet auf -y → -ier: heavy → heavier, funny → funnier",
+        "Ein Vokal + Konsonant am Ende → verdoppeln: big → bigger, hot → hotter", "Lange Adjektive → more: more dangerous, more intelligent",
+        "Unregelmäßig: good → better, bad → worse"],
+       f"{a} is stronger than {b}.\n{c} is faster than {a}.\nA snake is more dangerous than a spider.",
+       "Komparativ + than (nicht then!).", "comparative adjectives english erklärt deutsch"),
+     W("as … as – gleich viel", "as big as, not as fast as", [
+        "Wenn zwei Dinge GLEICH sind, nimmst du as + Grundform + as.",
+        "Verneint (not as … as) heißt es: weniger … als."],
+       ["as", "Adjektiv in der GRUNDFORM (big, strong, good)", "as"],
+       f"{a} is as strong as {c}.\n{b} isn't as tall as {a}.\n\n✗ as stronger as   ✗ as better as   ✓ as strong as / as good as",
+       "Zwischen as und as steht NIE ein Komparativ. Das ist der häufigste Fehler!", "as as comparison english grammar"),
+     W("Superlativ – der/die/das Beste", "the fastest, the most dangerous", [
+        "Wenn etwas an der Spitze ist (von dreien oder mehr), nimmst du den Superlativ mit the."],
+       ["Kurz → the …-est: the fastest, the tallest", "-y → the …-iest: the heaviest, the funniest",
+        "Lang → the most …: the most dangerous, the most venomous", "Unregelmäßig: good → the best, bad → the worst"],
+       f"The cheetah is the fastest animal on land.\n{a} is the strongest.\nThe taipan is the most venomous snake.",
+       "Komparativ = zwei vergleichen (+ than). Superlativ = der/die/das -ste (+ the).", "superlative adjectives english erklärt"),
+    ]
+
+# ---------- Valentin Englisch: Tests + Sprechen ----------
+val_tests = [
+ {"id": "unit3", "titel": "Test Unit 3 – Halloween & should", "fragen": [
+   UE("Kürbis", "pumpkin"), UE("Friedhof", "graveyard"), UE("Kostüm", "costume"), UE("Süßigkeiten", "sweets"), UE("Gespenst", "ghost"),
+   UE("scary", ["gruselig", "unheimlich"]), UE("Treppe", "stairs"),
+   A("Spider-Man has a headache. He ___ see a doctor.", ["should", "shouldn't", "shoulds"], "should"),
+   A("Loki ___ eat ten bags of sweets.", ["shouldn't", "should", "should to"], "shouldn't"),
+   A("Which sentence is correct?", ["Thor should take an umbrella.", "Thor should takes an umbrella.", "Thor should to take an umbrella."], "Thor should take an umbrella."),
+   A("Wanda sees ___ old castle.", ["an", "a"], "an"), A("Hawkeye has ___ mask.", ["a", "an"], "a"),
+ ]},
+ {"id": "unit4", "titel": "Test Unit 4 – Animals & Vergleiche", "fragen": [
+   UE("Nashorn", "rhino"), UE("Gepard", "cheetah"), UE("Fledermaus", "bat"), UE("giftig (Schlange)", "venomous"), UE("Säugetier", "mammal"),
+   L("Hulk is ___ than Spider-Man. (heavy)", "heavier"), L("Black Panther is ___ than Hawkeye. (fast)", "faster"),
+   L("Doctor Strange is ___ than Groot. (intelligent)", "more intelligent"),
+   A("Captain America is ___ Bucky.", ["as strong as", "as stronger as", "stronger as"], "as strong as"),
+   L("Hulk is the ___ Avenger. (strong)", "strongest"), L("Thanos is the ___ villain. (dangerous)", "most dangerous"),
+   A("Iron Man's suit is ___ than his old one. (good)", ["better", "gooder", "best"], "better"),
+ ]},
 ]
+val_sprechen = [
+ G("Halloween mit Spider-Man", "Kostüme, Süßigkeiten, should", [
+  ("Hi, I'm Peter Parker! It's Halloween tonight. What costume do you want to wear?", [["costume"], ["i", "want"], ["i'm"], ["i", "wear"], ["i", "will"]], "I want to wear a vampire costume."),
+  ("Cool! I want to go trick or treating. What do we say at the door?", [["trick", "or", "treat"]], "Trick or treat!"),
+  ("I'm scared of the old house at the end of the street. Should we go there?", [["should"], ["shouldn't"], ["no"], ["yes"]], "No, we shouldn't go there."),
+  ("I ate too many sweets and I feel sick. What should I do?", [["should"]], "You should drink some water."),
+  ("Thanks, mate! What's your favourite Halloween sweet?", [["my", "favourite"], ["i", "like"], ["chocolate"]], "My favourite sweet is chocolate."),
+ ]),
+ G("Safari mit Black Panther", "Tiere vergleichen", [
+  ("Welcome to Africa! I'm T'Challa. Which animal is faster, a cheetah or a rhino?", [["cheetah", "faster"], ["cheetah"]], "A cheetah is faster than a rhino."),
+  ("Right! Is a rhino heavier than a giraffe?", [["heavier"], ["yes"], ["no"]], "Yes, a rhino is heavier than a giraffe."),
+  ("What is the most dangerous animal you know?", [["most", "dangerous"], ["dangerous"]], "The most dangerous animal is the taipan."),
+  ("Is a baboon as big as a gorilla?", [["as", "big", "as"], ["not", "as"], ["isn't"], ["no"]], "No, a baboon isn't as big as a gorilla."),
+  ("Great! What's your favourite animal, and why?", [["because"], ["favourite"]], "My favourite animal is the cheetah because it's fast."),
+ ]),
+]
+schreiben("valentin", "englisch", "Englisch-Helden", val_en, False,
+          "Workbook Unit 3 (Halloween) & Unit 4 (What an animal!)", "helden", "ve",
+          tests=val_tests, wissen=englisch_wissen(True), sprechen=val_sprechen)
+
+# ---------- Elias Englisch: Fußball / Premier League (Platzhalter) ----------
+eli_en = [
+ UE("„Tor“ (das Tor, in das der Ball geht) auf Englisch?", ["goal"], "goal = Tor. „He scored a goal.“"),
+ UE("„Schiedsrichter“ auf Englisch?", ["referee", "ref"], "referee = Schiedsrichter."),
+ UE("„Mannschaft“ auf Englisch?", ["team", "side"], "team = Mannschaft."),
+ UE("„Spieler“ auf Englisch?", ["player"], "player = Spieler."),
+ UE("„Torwart“ auf Englisch?", ["goalkeeper", "keeper", "goalie"], "goalkeeper = Torwart."),
+ UE("„Elfmeter“ auf Englisch?", ["penalty"], "penalty = Elfmeter."),
+ UE("„Stadion“ auf Englisch?", ["stadium"], "stadium = Stadion."),
+ UE("„Fans / Zuschauer“ auf Englisch?", ["fans", "supporters", "crowd"], "fans, supporters, crowd."),
+ UE("„to score“ – was heißt das?", ["treffen", "ein tor schießen", "tor schießen", "scoren"], "to score = ein Tor schießen."),
+ UE("„to win“ – was heißt das?", ["gewinnen"], "win – won – won."),
+ UE("„to lose“ – was heißt das?", ["verlieren"], "lose – lost – lost."),
+ UE("„draw“ – was heißt das beim Fußball?", ["unentschieden", "remis"], "It was a draw = Es war unentschieden."),
+ UE("„Verletzung“ auf Englisch? (Bukayo Saka has an ___.)", ["injury"], "injury = Verletzung."),
+ UE("„stark“ auf Englisch?", ["strong"]), UE("„schnell“ auf Englisch?", ["fast", "quick"]),
+ A("Erling Haaland is tired after the match. He ___ go to bed early.", ["should", "shouldn't", "shoulds"], "should", "should + Grundform."),
+ A("It's raining at Anfield. The fans ___ forget their jackets.", ["shouldn't", "should"], "shouldn't"),
+ A("Which sentence is correct?", ["Saka should practise his penalties.", "Saka shoulds practise his penalties.", "Saka should to practise his penalties."], "Saka should practise his penalties.", "should + Grundform, kein -s, kein to."),
+ A("Salah scores ___ amazing goal.", ["an", "a"], "an", "amazing beginnt mit Vokal-Laut → an."),
+ A("Rice is ___ great midfielder.", ["a", "an"], "a"),
+ A("The referee shows ___ yellow card.", ["a", "an"], "a"),
+ L("Haaland is ___ than Foden. (tall)", "taller", "tall → taller."),
+ L("Salah is ___ than the goalkeeper. (fast)", "faster"),
+ L("Van Dijk is ___ than Ødegaard. (big)", "bigger", "big → bigger (g verdoppeln)."),
+ L("This match is ___ than the last one. (exciting)", "more exciting", "Lang → more exciting."),
+ A("Arsenal played ___ than Chelsea. (good)", ["better", "gooder", "best"], "better", "good → better → the best."),
+ A("Saka is ___ Martinelli. (gleich schnell)", ["as fast as", "as faster as", "faster as"], "as fast as", "as + Grundform + as."),
+ A("Foden isn't ___ Haaland. (nicht so groß wie)", ["as tall as", "as taller as", "taller as"], "as tall as"),
+ L("Haaland is the ___ striker in the league. (strong)", "strongest"),
+ L("Wembley is the ___ stadium in England. (big)", "biggest"),
+ L("That was the ___ goal of the season! (beautiful)", "most beautiful"),
+ A("Yesterday Liverpool ___ 3–1.", ["won", "win", "winned", "wins"], "won", "win → won (unregelmäßig)."),
+ A("___ you play football every week?", ["Do", "Does", "Are"], "Do"),
+ A("Which word means „Abseits“?", ["offside", "outside", "sideline", "offline"], "offside"),
+]
+eli_tests = [{"id": "kap1", "titel": "Test Kapitel 1 – Football English", "fragen": [
+   UE("Tor (das man schießt)", "goal"), UE("Schiedsrichter", ["referee", "ref"]), UE("Torwart", ["goalkeeper", "keeper"]), UE("Elfmeter", "penalty"),
+   A("Haaland ___ rest after the match.", ["should", "shoulds", "should to"], "should"),
+   A("Salah scores ___ easy goal.", ["an", "a"], "an"),
+   L("Saka is ___ than the defender. (fast)", "faster"), L("Haaland is ___ than Foden. (big)", "bigger"),
+   A("Rice is ___ Ødegaard. (gleich gut)", ["as good as", "as better as", "better as"], "as good as"),
+   L("Wembley is the ___ stadium. (famous)", "most famous"),
+ ]}]
+eli_sprechen = [
+ G("Interview nach dem Spiel", "Wie ein Profi antworten", [
+  ("Hi, I'm a reporter from Sky Sports. Congratulations! Did your team win today?", [["win"], ["won"], ["yes"], ["no"], ["lost"], ["draw"]], "Yes, we won the match."),
+  ("Brilliant! How many goals did you score?", [["goal"], ["one"], ["two"], ["three"], ["scored"]], "I scored two goals."),
+  ("Who is the best player in your team?", [["best"]], "The best player in my team is Max."),
+  ("Is your team faster than the other team?", [["faster"], ["yes"], ["no"]], "Yes, we are faster than the other team."),
+  ("What should young players do to get better?", [["should"]], "They should train every day."),
+ ]),
+ G("Mein Lieblingsverein", "Über Fußball reden", [
+  ("Hi! Which football team do you support?", [["support"], ["my", "favourite"], ["i", "like"], ["team"]], "I support Arsenal."),
+  ("Nice! Who is your favourite player?", [["favourite", "player"], ["my", "favourite"], ["i", "like"]], "My favourite player is Bukayo Saka."),
+  ("Why do you like him?", [["because"]], "Because he is very fast and skilful."),
+  ("Is he as fast as Mohamed Salah?", [["as", "fast", "as"], ["faster"], ["not", "as"], ["yes"], ["no"]], "Yes, he is as fast as Salah."),
+ ]),
+]
+schreiben("elias", "englisch", "Football English", eli_en, True, "Englisch mit Premier League & Fußball", "sport", "en",
+          tests=eli_tests, wissen=englisch_wissen(False), sprechen=eli_sprechen)
+
+# ---------- Mathe-Wissen + Test (Platzhalter, beide) ----------
+mathe_wissen = [
+ W("Brüche kürzen und erweitern", "Gleich viel, andere Zahlen", ["Kürzen: Zähler und Nenner durch dieselbe Zahl teilen. Erweitern: beide mit derselben Zahl malnehmen. Der Wert bleibt gleich."],
+   ["Suche eine Zahl, durch die Zähler UND Nenner teilbar sind.", "Teile beide durch diese Zahl.", "Geht es nochmal? Dann wiederholen, bis nichts mehr geht."],
+   "12/18  → beide durch 6 →  2/3\n 1/4  → beide mal 3   →  3/12", "Was du oben machst, musst du auch unten machen.", "Brüche kürzen und erweitern einfach erklärt"),
+ W("Brüche addieren", "Erst gleicher Nenner, dann addieren", ["Brüche kann man nur addieren, wenn sie denselben Nenner haben."],
+   ["Gemeinsamen Nenner finden (kgV der Nenner).", "Beide Brüche auf diesen Nenner erweitern.", "Zähler addieren, Nenner bleibt gleich.", "Ergebnis kürzen, wenn es geht."],
+   "1/2 + 1/4\n= 2/4 + 1/4\n= 3/4", "Nenner werden nie addiert!", "Brüche addieren mit verschiedenen Nennern erklärt"),
+ W("Dezimalzahlen addieren und subtrahieren", "Komma unter Komma", None,
+   ["Schreibe die Zahlen so untereinander, dass Komma unter Komma steht.", "Fehlende Stellen mit 0 auffüllen.", "Rechnen wie bei ganzen Zahlen.", "Komma im Ergebnis an dieselbe Stelle setzen."],
+   "  3,50\n+ 2,75\n------\n  6,25", "Komma unter Komma.", "Dezimalzahlen schriftlich addieren subtrahieren"),
+ W("Umfang und Flächeninhalt vom Rechteck", "u = 2·(a+b),  A = a·b", ["Der Umfang ist der Weg einmal rundherum. Der Flächeninhalt ist, wie viel Fläche drinnen ist."],
+   ["Länge a und Breite b ablesen (gleiche Einheit!).", "Umfang: a + b + a + b = 2·(a + b).", "Fläche: a · b, Einheit hoch 2 (cm²)."],
+   "a = 6 cm, b = 4 cm\nu = 2·(6+4) = 20 cm\nA = 6·4 = 24 cm²", "Umfang in cm, Fläche in cm².", "Umfang und Flächeninhalt Rechteck erklärt"),
+ W("Einfache Gleichungen lösen", "x allein auf eine Seite bringen", ["Eine Gleichung ist wie eine Waage: Was du links machst, musst du auch rechts machen."],
+   ["Was passiert mit x? (+, −, ·, :)", "Mach das Gegenteil auf beiden Seiten.", "Probe: x einsetzen und nachrechnen."],
+   "x + 15 = 42   | −15\n     x = 27\n\n4 · x = 36    | :4\n     x = 9", "Immer auf beiden Seiten dasselbe tun.", "Gleichungen lösen einfach erklärt Klasse 6"),
+ W("Prozent", "Hundertstel", ["Prozent heißt „von Hundert“. 25 % = 25/100 = 1/4."],
+   ["Grundwert durch 100 teilen (= 1 %).", "Mit der Prozentzahl malnehmen."],
+   "25 % von 80\n80 : 100 = 0,8\n0,8 · 25 = 20", "50 % = Hälfte, 25 % = Viertel, 10 % = durch 10.", "Prozentrechnung einfach erklärt"),
+]
+mathe_tests = [{"id": "kap1", "titel": "Test Kapitel 1 – Brüche & Dezimalzahlen", "fragen": [
+  M("Kürze 6/8 so weit wie möglich. Zähler =", "3"), M("1/2 + 1/4 als Dezimalzahl =", "0,75"), M("2,4 + 3,85 =", "6,25"),
+  M("7 − 2,6 =", "4,4"), M("Rechteck 5 cm × 3 cm: Fläche in cm² =", "15"), M("x + 9 = 20. x =", "11"),
+  M("10 % von 250 =", "25"), M("ggT von 8 und 12 =", "4"),
+]}]
+geo_wissen = [W("Österreichs Bundesländer", "9 Länder, 9 Hauptstädte", ["Österreich hat 9 Bundesländer."], None,
+  "Wien – Wien\nNiederösterreich – St. Pölten\nOberösterreich – Linz\nSalzburg – Salzburg\nTirol – Innsbruck\nVorarlberg – Bregenz\nKärnten – Klagenfurt\nSteiermark – Graz\nBurgenland – Eisenstadt",
+  "Merksatz für die Reihenfolge von West nach Ost: Vorarlberg, Tirol, Salzburg, Kärnten, Steiermark, Oberösterreich, Niederösterreich, Wien, Burgenland.", "Bundesländer Österreich Hauptstädte erklärt")]
+bio_wissen = [W("Die 5 Wirbeltierklassen", "Fische, Amphibien, Reptilien, Vögel, Säugetiere", None,
+  ["Fische: Kiemen, Schuppen, leben im Wasser.", "Amphibien: z. B. Frosch – Larve im Wasser, später Lunge.", "Reptilien: trockene Schuppenhaut, Eier an Land.", "Vögel: Federn, Schnabel, legen Eier.", "Säugetiere: Fell, Junge trinken Milch."],
+  None, "Delfin und Wal sind Säugetiere, keine Fische!", "Wirbeltiere Klassen einfach erklärt")]
+deutsch_wissen = [W("das oder dass?", "Der Ersatz-Trick", ["„das“ ist Artikel oder Pronomen, „dass“ verbindet Sätze."],
+  ["Kannst du „dieses“, „jenes“ oder „welches“ einsetzen? → das", "Geht das nicht? → dass"],
+  "Das Buch, das ich lese …  (welches ✓) → das\nIch hoffe, dass du kommst. (welches ✗) → dass", None, "das dass Unterschied einfach erklärt")]
 for p in ["valentin", "elias"]:
-    schreiben(p, "mathe", "Mathe", mathe, True, prefix="ma")
-    schreiben(p, "biologie", "Biologie", bio, True, prefix="bi")
-    schreiben(p, "deutsch", "Deutsch", deutsch, True, prefix="de")
-    schreiben(p, "geografie", "Geografie", geo, True, prefix="ge")
-schreiben("elias", "englisch", "Englisch", eng_allg, True, prefix="en")
+    schreiben(p, "mathe", "Mathe", mathe, True, prefix="ma", tests=mathe_tests, wissen=mathe_wissen)
+    schreiben(p, "biologie", "Biologie", bio, True, prefix="bi", wissen=bio_wissen)
+    schreiben(p, "deutsch", "Deutsch", deutsch, True, prefix="de", wissen=deutsch_wissen)
+    schreiben(p, "geografie", "Geografie", geo, True, prefix="ge", wissen=geo_wissen)
 print("fertig")

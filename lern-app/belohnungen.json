@@ -1,0 +1,10 @@
+{
+  "stufen": [
+    { "sterne": 100, "belohnung": "🍫 Süßigkeit" },
+    { "sterne": 250, "belohnung": "🥤 Softdrink" },
+    { "sterne": 500, "belohnung": "🍦 Eis" },
+    { "sterne": 1000, "belohnung": "🎁 Überraschung nach Wahl" }
+  ],
+  "serie": { "tage": 7, "belohnung": "🍫 Süßigkeit" },
+  "test": { "belohnung": "🥤 Softdrink" }
+}

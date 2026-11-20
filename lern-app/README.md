@@ -1,8 +1,12 @@
 # Lern-Helden
 
-Lern-App für Valentin und Elias. Läuft direkt im Browser, ohne Anmeldung.
+Lern-App für Valentin (Helden-Design) und Elias (Fußball-Design). Adresse: https://johannesfelling.github.io/lern-app/
 
-- Fragen liegen in `daten/<kind>/<fach>.json` (Fächer: englisch, mathe, biologie, deutsch, geografie).
-- Fragetypen: `auswahl` (Multiple Choice, `optionen` + `antwort`) und `eingabe` (Antwort eintippen, `antwort` ist eine Liste erlaubter Antworten; Groß/Kleinschreibung egal; bei Zahlen ist Komma oder Punkt egal).
-- `"platzhalter": true` zeigt den Hinweis „Übungsfragen zum Ausprobieren“.
-- Fortschritt wird im Browser gespeichert (pro Gerät, pro Kind und Fach).
+- Fragen, Tests, Wissen und Sprech-Übungen: `daten/<kind>/<fach>.json`, erzeugt von `werkzeug/fragen_bauen.py`.
+  - `fragen`: Übungsfragen (`auswahl` oder `eingabe`)
+  - `tests`: Kapiteltests – fehlerfrei = Gutschein
+  - `wissen`: Erklärungen mit Schritten, Beispiel, Merksatz, YouTube-Suchbegriff (`video`)
+  - `sprechen`: Gespräche (App spricht vor, Kind antwortet; `erwartet` = Listen von Schlüsselwörtern)
+- Belohnungen (Sterne-Stufen, Tage-Serie, Testgutschein): `belohnungen.json`
+- Anmeldung + Online-Spielstand: Firebase (`firebase-config.js`). Konten: `valentin@johannesfelling.at`, `elias@johannesfelling.at`.
+- Testkonto auf der Startseite: alles ansehen, nichts wird gespeichert.

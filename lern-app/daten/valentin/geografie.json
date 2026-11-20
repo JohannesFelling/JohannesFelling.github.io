@@ -221,5 +221,17 @@
    "erklaerung": "",
    "id": "ge016"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Österreichs Bundesländer",
+   "kurz": "9 Länder, 9 Hauptstädte",
+   "text": [
+    "Österreich hat 9 Bundesländer."
+   ],
+   "beispiel": "Wien – Wien\nNiederösterreich – St. Pölten\nOberösterreich – Linz\nSalzburg – Salzburg\nTirol – Innsbruck\nVorarlberg – Bregenz\nKärnten – Klagenfurt\nSteiermark – Graz\nBurgenland – Eisenstadt",
+   "merke": "Merksatz für die Reihenfolge von West nach Ost: Vorarlberg, Tirol, Salzburg, Kärnten, Steiermark, Oberösterreich, Niederösterreich, Wien, Burgenland.",
+   "video": "Bundesländer Österreich Hauptstädte erklärt"
+  }
  ]
 }

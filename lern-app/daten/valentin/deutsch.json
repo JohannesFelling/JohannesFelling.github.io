@@ -203,5 +203,20 @@
    "erklaerung": "Synonym = Wort mit gleicher Bedeutung.",
    "id": "de016"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "das oder dass?",
+   "kurz": "Der Ersatz-Trick",
+   "text": [
+    "„das“ ist Artikel oder Pronomen, „dass“ verbindet Sätze."
+   ],
+   "schritte": [
+    "Kannst du „dieses“, „jenes“ oder „welches“ einsetzen? → das",
+    "Geht das nicht? → dass"
+   ],
+   "beispiel": "Das Buch, das ich lese …  (welches ✓) → das\nIch hoffe, dass du kommst. (welches ✗) → dass",
+   "video": "das dass Unterschied einfach erklärt"
+  }
  ]
 }

@@ -1,52 +1,175 @@
+/* Lern-Helden – dunkles Design. Basis + zwei Themen: .thema-held (Valentin) und .thema-sport (Elias) */
 :root{
-  --bg:#f3f0ff; --karte:#ffffff; --text:#1d1a3a; --leise:#6a6690;
-  --lila:#3b2ccf; --rot:#e63946; --gelb:#ffc93c; --gruen:#2a9d8f; --blau:#3a86ff; --orange:#ff7f11; --pink:#d63384;
-  --ok:#1f9d55; --falsch:#d62828;
+  --bg:#0a0a0f; --panel:#15151d; --panel2:#1c1c27; --linie:#ffffff1a; --text:#f2f2f5; --leise:#9a9aae;
+  --akzent:#8b8bff; --akzent2:#5b5bd6; --glow:#8b8bff55; --ok:#2ee59d; --falsch:#ff4d5e;
+  --titel:"Rajdhani","Bebas Neue",system-ui,sans-serif; --r:14px;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:19px;line-height:1.4;min-height:100vh}
-.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:12px 16px;background:linear-gradient(90deg,var(--lila),#7b2ff7);color:#fff;box-shadow:0 2px 8px #0003}
-.top h1{flex:1;margin:0;font-size:1.3rem;letter-spacing:.5px}
-.sterne-top{font-weight:700;white-space:nowrap}
-.icon-btn{background:#ffffff33;border:0;color:#fff;font-size:1.4rem;width:44px;height:44px;border-radius:12px;cursor:pointer}
-main{max-width:720px;margin:0 auto;padding:18px 16px 60px}
-h2{font-size:1.5rem;margin:.4em 0 .6em;text-align:center}
-.hinweis{color:var(--leise);text-align:center;font-size:.95rem}
-.raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-.gross{border:0;border-radius:20px;padding:22px 14px;font-size:1.25rem;font-weight:700;color:#fff;cursor:pointer;box-shadow:0 5px 0 #0003;transition:transform .08s;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:120px;justify-content:center}
-.gross:active{transform:translateY(3px);box-shadow:0 2px 0 #0003}
-.gross .emo{font-size:2.6rem}
-.gross small{font-weight:500;opacity:.9;font-size:.85rem}
-.person{min-height:170px;font-size:1.5rem}
-.c0{background:var(--rot)}.c1{background:var(--blau)}.c2{background:var(--gruen)}.c3{background:var(--orange)}.c4{background:var(--pink)}.c5{background:var(--lila)}
-.karte{background:var(--karte);border-radius:20px;padding:20px;box-shadow:0 4px 14px #3b2ccf1a;margin-bottom:16px}
-.fortschritt{height:12px;background:#e4defc;border-radius:99px;overflow:hidden;margin-bottom:14px}
-.fortschritt>div{height:100%;background:linear-gradient(90deg,var(--gelb),var(--orange));transition:width .3s}
-.frage-nr{color:var(--leise);font-size:.9rem;margin-bottom:6px;display:flex;justify-content:space-between}
-.frage{font-size:1.3rem;font-weight:650;margin:0 0 16px}
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:17px;line-height:1.45;min-height:100vh;-webkit-font-smoothing:antialiased}
+svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.15em}
+
+/* Kopfzeile */
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#0a0a0fcc;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--linie)}
+.top h1{flex:1;margin:0;font-family:var(--titel);font-weight:700;font-size:1.25rem;letter-spacing:3px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sterne-top{font-weight:800;font-size:.9rem;white-space:nowrap;padding:6px 10px;border:1px solid var(--linie);border-radius:99px;background:var(--panel)}
+.icon-btn{background:var(--panel);border:1px solid var(--linie);color:var(--text);font-size:1.2rem;width:40px;height:40px;border-radius:10px;cursor:pointer;flex:none}
+
+main{max-width:760px;margin:0 auto;padding:20px 16px 70px}
+h2{font-family:var(--titel);font-weight:700;font-size:1.7rem;letter-spacing:2px;text-transform:uppercase;margin:.6em 0 .7em}
+.label{font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--leise);font-weight:800}
+.hinweis{color:var(--leise);font-size:.95rem}
+.klein{font-size:.86rem;color:var(--leise)}
+.mitte{text-align:center}
+
+.karte{background:var(--panel);border:1px solid var(--linie);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.fortschritt{height:6px;background:#ffffff14;border-radius:99px;overflow:hidden;margin:12px 0 8px}
+.fortschritt>div{height:100%;background:linear-gradient(90deg,var(--akzent2),var(--akzent));box-shadow:0 0 12px var(--glow);transition:width .4s}
+
+/* Fächer */
+.raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.fach{position:relative;overflow:hidden;text-align:left;border:1px solid var(--linie);background:linear-gradient(160deg,var(--panel2),var(--panel));color:var(--text);border-radius:var(--r);padding:16px;cursor:pointer;min-height:118px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;font-family:inherit;transition:border-color .15s,transform .1s,box-shadow .15s}
+.fach:hover{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent),0 8px 30px var(--glow)}
+.fach:active{transform:scale(.98)}
+.fach .ic{font-size:1.7rem;color:var(--akzent)}
+.fach-name{font-family:var(--titel);font-size:1.35rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.fach small{color:var(--leise);font-size:.8rem}
+.fach .nr{position:absolute;right:12px;top:6px;font-family:var(--titel);font-size:2.6rem;font-weight:700;color:#ffffff0d}
+
+/* Knöpfe */
+.knopf{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:12px;border:0;border-radius:12px;padding:16px;font-size:1.05rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(90deg,var(--akzent2),var(--akzent));color:#fff;cursor:pointer;font-family:var(--titel);font-size:1.25rem;box-shadow:0 6px 24px var(--glow)}
+.knopf:active{transform:scale(.99)}
+.knopf.zweit{background:transparent;color:var(--text);border:1px solid var(--linie);box-shadow:none;font-size:1.05rem}
+.knopf:disabled{opacity:.5}
+.reset{background:none;border:0;color:var(--leise);cursor:pointer;font-size:.85rem;display:block;margin:26px auto 0;font-family:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* Fragen */
+.frage-nr{display:flex;justify-content:space-between;gap:8px}
+.frage{font-size:1.35rem;font-weight:800;margin:10px 0 18px;line-height:1.35}
 .optionen{display:grid;gap:10px}
-.opt{border:3px solid #d9d2ff;background:#faf9ff;border-radius:14px;padding:14px;font-size:1.15rem;text-align:left;cursor:pointer;color:var(--text)}
-.opt:hover{border-color:var(--lila)}
-.opt.richtig{background:#d8f5e3;border-color:var(--ok)}
-.opt.falsch{background:#fde0e0;border-color:var(--falsch)}
+.opt{border:1px solid var(--linie);background:var(--panel2);border-radius:12px;padding:14px 16px;font-size:1.05rem;text-align:left;cursor:pointer;color:var(--text);font-family:inherit;font-weight:600;transition:border-color .15s}
+.opt:hover:not(:disabled){border-color:var(--akzent)}
+.opt.richtig{border-color:var(--ok);background:#2ee59d1f;box-shadow:0 0 0 1px var(--ok)}
+.opt.falsch{border-color:var(--falsch);background:#ff4d5e1f;box-shadow:0 0 0 1px var(--falsch)}
+.opt.gewaehlt{border-color:var(--akzent);background:#ffffff10;box-shadow:0 0 0 1px var(--akzent)}
 .opt:disabled{cursor:default}
-input.eingabe{width:100%;font-size:1.3rem;padding:14px;border:3px solid #d9d2ff;border-radius:14px;outline:none}
-input.eingabe:focus{border-color:var(--lila)}
-.knopf{display:block;width:100%;margin-top:14px;border:0;border-radius:14px;padding:16px;font-size:1.2rem;font-weight:700;background:var(--lila);color:#fff;cursor:pointer;box-shadow:0 4px 0 #0003}
-.knopf.zweit{background:#e4defc;color:var(--lila)}
-.feedback{margin-top:16px;padding:14px;border-radius:14px;font-size:1.05rem}
-.feedback.ok{background:#d8f5e3}
-.feedback.nein{background:#fde0e0}
-.feedback b{font-size:1.15rem}
-.ergebnis{text-align:center}
-.ergebnis .big{font-size:3.2rem;margin:.2em 0}
-.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
-.badge{background:#fff4cc;border:2px solid var(--gelb);border-radius:99px;padding:6px 12px;font-size:.95rem}
-.badge.aus{opacity:.35;filter:grayscale(1)}
-.platzhalter{background:#fff4cc;border-radius:12px;padding:8px 12px;font-size:.85rem;text-align:center;margin-bottom:12px}
-.held{background:linear-gradient(135deg,#e63946,#7b2ff7);color:#fff}
-.reset{background:none;border:0;color:var(--leise);text-decoration:underline;cursor:pointer;font-size:.9rem;display:block;margin:24px auto 0}
-.pop{animation:pop .35s}
-@keyframes pop{0%{transform:scale(.9)}60%{transform:scale(1.05)}100%{transform:scale(1)}}
-.held .badge{color:var(--text)}
+input.eingabe{width:100%;font-size:1.2rem;padding:15px 16px;border:1px solid var(--linie);border-radius:12px;outline:none;font-family:inherit;background:var(--panel2);color:var(--text)}
+input.eingabe:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
+.feedback{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:1rem;border:1px solid}
+.feedback.ok{background:#2ee59d14;border-color:#2ee59d66}
+.feedback.nein{background:#ff4d5e14;border-color:#ff4d5e66}
+.feedback.neutral{background:#ffffff0a;border-color:var(--linie)}
+.feedback b{font-size:1.1rem}
+.feedback.ok b:first-child{color:var(--ok)}
+.feedback.nein b:first-child{color:var(--falsch)}
+.platzhalter{border:1px dashed #ffd23f66;color:#ffd23f;border-radius:10px;padding:8px 12px;font-size:.82rem;text-align:center;margin-bottom:14px}
+.gast-banner{background:#ffd23f;color:#111;border-radius:10px;padding:8px 12px;font-size:.82rem;text-align:center;margin-bottom:14px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.pop{animation:pop .3s ease-out}
+@keyframes pop{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:none}}
+
+/* Start */
+.start-kopf{text-align:center;margin:10px 0 22px}
+.start-kopf h2{font-size:2.4rem;margin:.1em 0}
+.start-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.start-karte{position:relative;overflow:hidden;border:1px solid var(--linie);cursor:pointer;min-height:260px;border-radius:18px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:4px;padding:22px;text-align:left;font-family:inherit;transition:transform .15s,box-shadow .2s}
+.start-karte:hover{transform:translateY(-3px)}
+.start-karte>*{position:relative}
+.start-name{font-size:2.6rem;line-height:1;letter-spacing:3px;text-transform:uppercase}
+.start-karte small{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:800;opacity:.85}
+.start-karte .start-info{opacity:.7;letter-spacing:1px;text-transform:none;font-weight:600;font-size:.85rem}
+.start-held{background:radial-gradient(circle at 75% 30%,#ff2a2a55,transparent 45%),linear-gradient(160deg,#2a0508,#0d0d12 70%);border-color:#ff2a2a55}
+.start-held:hover{box-shadow:0 10px 40px #ff2a2a44}
+.start-held .start-name{font-family:"Rajdhani",sans-serif;font-weight:700;background:linear-gradient(180deg,#fff,#ffcf6b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.start-held::before{content:"";position:absolute;right:26px;top:26px;width:92px;height:92px;border-radius:50%;border:2px solid #ffcf6b;box-shadow:0 0 30px #ff2a2a,inset 0 0 25px #ff2a2a;background:radial-gradient(circle,#fff 0 8%,#ff6b6b 18%,transparent 60%)}
+.start-held::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff05 0 1px,transparent 1px 4px)}
+.start-sport{background:radial-gradient(ellipse at 15% -10%,#ffffff40,transparent 40%),radial-gradient(ellipse at 85% -10%,#ffffff40,transparent 40%),linear-gradient(180deg,#0a1a10 0%,#0d3b1f 55%,#106b34 100%);border-color:#c6ff0055}
+.start-sport:hover{box-shadow:0 10px 40px #c6ff0033}
+.start-sport .start-name{font-family:"Bebas Neue",sans-serif;font-size:3.4rem;letter-spacing:4px;font-weight:400}
+.start-sport small{color:#c6ff00}
+.start-sport::before{content:"";position:absolute;left:-10%;right:-10%;bottom:-40px;height:130px;border:2px solid #ffffff30;border-radius:50%;transform:perspective(200px) rotateX(40deg)}
+.start-sport::after{content:"";position:absolute;left:50%;bottom:0;height:90px;border-left:2px solid #ffffff30}
+.gast-link{display:flex;align-items:center;justify-content:center;gap:8px;margin:22px auto 0;background:var(--panel);border:1px solid var(--linie);color:var(--leise);border-radius:99px;padding:10px 18px;font-family:inherit;font-size:.9rem;cursor:pointer}
+
+/* Status */
+.status-kopf{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.rang{font-family:var(--titel);font-weight:700;font-size:2rem;letter-spacing:2px;text-transform:uppercase;line-height:1.1}
+.status-sterne{text-align:right}
+.status-sterne .wert{font-family:var(--titel);font-weight:700;font-size:2rem;line-height:1.1}
+.serie{display:flex;align-items:center;gap:12px;margin-top:14px;padding:12px 14px;background:var(--panel2);border-radius:12px}
+.serie .ic{font-size:1.8rem;color:#ff8a3d;flex:none}
+.serie b{display:block}
+
+/* Tests + Gutscheine */
+.test-knopf{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;margin-top:10px;border:1px solid var(--linie);background:var(--panel2);color:var(--text);border-radius:12px;padding:14px 16px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.test-knopf small{display:block;font-weight:500;color:var(--leise);font-size:.8rem;margin-top:2px}
+.test-knopf .ic{font-size:1.3rem;color:var(--akzent);flex:none}
+.test-knopf.ok .ic{color:var(--ok)}
+.test-knopf:disabled{opacity:.45;cursor:default}
+.test-knopf:hover:not(:disabled){border-color:var(--akzent)}
+.gutschein-neu{display:flex;align-items:center;gap:14px;width:100%;margin-bottom:14px;border:1px solid #ffcf6b88;background:linear-gradient(120deg,#2a2006,#16120a);color:#ffcf6b;border-radius:14px;padding:16px;font-size:1.05rem;cursor:pointer;font-family:inherit;text-align:left;box-shadow:0 0 30px #ffcf6b22}
+.gutschein-neu .ic{font-size:2rem;flex:none}
+.gutschein-neu small{display:block;color:#ffcf6baa}
+.gutschein{position:relative;overflow:hidden;margin:6px auto 18px;max-width:440px;border-radius:18px;padding:26px 24px;text-align:left;color:#ffe9b0;background:linear-gradient(135deg,#1a1408,#0b0b0b 55%,#2a1f08);border:1px solid #ffcf6b;box-shadow:0 0 0 6px #0b0b0b,0 0 0 7px #ffcf6b55,0 20px 50px #0008}
+.gutschein::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,#ffcf6b22 45%,transparent 60%)}
+.gs-kopf{font-family:"Bebas Neue","Rajdhani",sans-serif;font-size:1rem;letter-spacing:6px;color:#ffcf6b}
+.gs-was{font-family:var(--titel);font-size:2.3rem;font-weight:700;color:#fff;margin:8px 0 2px;letter-spacing:1px}
+.gs-fuer{font-size:1.05rem;font-weight:700}
+.gs-grund{margin:10px 0 18px;font-size:.92rem;color:#ffe9b0bb}
+.gs-fuss{display:flex;justify-content:space-between;align-items:center;font-weight:700;border-top:1px dashed #ffcf6b66;padding-top:12px;font-size:.9rem}
+.gs-code{font-family:ui-monospace,Menlo,monospace;letter-spacing:3px;color:#fff;font-size:1.1rem}
+.gs-stempel{position:absolute;top:42%;left:55%;transform:translate(-50%,-50%) rotate(-14deg);font-size:2.6rem;font-weight:900;color:#ff4d5ecc;border:4px solid #ff4d5ecc;padding:0 14px;border-radius:8px;letter-spacing:4px}
+
+/* Wissen */
+.wissen-text{font-size:1rem}
+.wissen-text p{margin:.5em 0}
+.schritt{background:var(--panel2);border-left:3px solid var(--akzent);border-radius:8px;padding:10px 14px;margin:8px 0}
+.schritt b{color:var(--akzent)}
+.beispiel{background:#000;border:1px solid var(--linie);border-radius:10px;padding:12px 14px;margin:10px 0;font-family:ui-monospace,Menlo,monospace;font-size:.95rem;white-space:pre-wrap;color:#e8e8ff}
+.video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;margin:12px 0;background:#000;border:1px solid var(--linie)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.link-knopf{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;padding:12px;border-radius:12px;border:1px solid var(--linie);color:var(--text);text-decoration:none;font-weight:700;background:var(--panel2)}
+
+/* Sprechen */
+.mikro{width:110px;height:110px;border-radius:50%;border:1px solid var(--akzent);background:radial-gradient(circle,var(--akzent2),#0000 70%),var(--panel2);color:#fff;font-size:2.6rem;cursor:pointer;display:flex;align-items:center;justify-content:center;margin:18px auto;box-shadow:0 0 30px var(--glow)}
+.mikro.an{border-color:var(--falsch);box-shadow:0 0 0 0 #ff4d5e88;animation:puls 1.2s infinite}
+@keyframes puls{0%{box-shadow:0 0 0 0 #ff4d5e88}100%{box-shadow:0 0 0 24px #ff4d5e00}}
+.sprechblase{background:var(--panel2);border:1px solid var(--akzent);border-radius:16px 16px 16px 4px;padding:12px 14px;font-size:1.1rem;font-weight:600;margin:8px 30px 8px 0}
+.sprechblase.ich{border-radius:16px 16px 4px 16px;margin:8px 0 8px 30px;border-color:var(--linie);color:var(--leise)}
+
+/* ===== Valentin: Helden-HUD (Rot / Gold) ===== */
+body.thema-held{
+  --bg:#08080c; --panel:#121218; --panel2:#1a1a22; --linie:#ff3b3b26; --akzent:#ff3b3b; --akzent2:#a50f1a; --glow:#ff3b3b44; --gold:#ffcf6b;
+  --titel:"Rajdhani","Bebas Neue",system-ui,sans-serif;
+  background:radial-gradient(ellipse at 50% -20%,#5a0a1255,transparent 60%),#08080c;
+}
+.thema-held .top{border-bottom-color:#ff3b3b55}
+.thema-held .top h1{color:var(--gold)}
+.thema-held .rang{background:linear-gradient(180deg,#fff,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.thema-held .karte{position:relative;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));border-radius:4px}
+.thema-held .fach{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);border-radius:4px}
+.thema-held .knopf{clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);border-radius:0}
+.thema-held .knopf.zweit{clip-path:none;border-radius:8px;border-color:#ffcf6b55;color:var(--gold)}
+.thema-held .label{color:var(--gold)}
+.thema-held .titelkarte{background:linear-gradient(135deg,#2a0508,#121218 70%)}
+.thema-held .titelkarte h2{color:var(--gold)}
+
+/* ===== Elias: Flutlicht-Stadion (Neon-Lime / Violett) ===== */
+body.thema-sport{
+  --bg:#06120b; --panel:#0e1d14; --panel2:#13281b; --linie:#c6ff0022; --akzent:#c6ff00; --akzent2:#5fd400; --glow:#c6ff0033;
+  --titel:"Bebas Neue","Rajdhani",system-ui,sans-serif;
+  background:radial-gradient(ellipse at 10% -10%,#ffffff22,transparent 35%),radial-gradient(ellipse at 90% -10%,#ffffff22,transparent 35%),linear-gradient(180deg,#06120b,#0a2414 60%,#0d2f1a);
+  background-attachment:fixed;
+}
+.thema-sport h2,.thema-sport .top h1,.thema-sport .rang,.thema-sport .fach-name,.thema-sport .knopf{font-weight:400;letter-spacing:3px}
+.thema-sport .top h1{font-size:1.6rem}
+.thema-sport .sterne-top{background:#000;color:var(--akzent);font-family:ui-monospace,Menlo,monospace;border-color:#c6ff0044}
+.thema-sport .knopf{color:#06120b;font-size:1.5rem}
+.thema-sport .knopf.zweit{color:var(--text)}
+.thema-sport .fach{border-bottom:3px solid var(--akzent)}
+.thema-sport .rang{font-size:2.1rem;color:var(--akzent)}
+.status-kopf>div:first-child{min-width:0}.status-sterne{flex:none}
+.thema-sport .status-sterne .wert{font-family:ui-monospace,Menlo,monospace;color:var(--akzent);background:#000;padding:2px 10px;border-radius:6px;font-size:1.6rem}
+.thema-sport .label{color:var(--akzent)}
+.thema-sport .titelkarte{background:linear-gradient(135deg,#1b0a3d,#0e1d14 70%);border-color:#7b3fe455}
+.thema-sport .feedback.ok b:first-child{color:var(--akzent)}
+.raster.zwei{grid-template-columns:1fr 1fr;margin-bottom:16px}.klein-fach{min-height:96px}

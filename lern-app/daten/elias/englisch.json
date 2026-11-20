@@ -1,164 +1,166 @@
 {
- "titel": "Englisch",
- "untertitel": "",
+ "titel": "Football English",
+ "untertitel": "Englisch mit Premier League & Fußball",
  "platzhalter": true,
+ "thema": "sport",
  "fragen": [
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„Kürbis“ auf Englisch?",
+   "frage": "„Tor“ (das Tor, in das der Ball geht) auf Englisch?",
    "antwort": [
-    "pumpkin"
+    "goal"
    ],
-   "erklaerung": "",
+   "erklaerung": "goal = Tor. „He scored a goal.“",
    "id": "en001"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„Süßigkeiten“ auf Englisch?",
+   "frage": "„Schiedsrichter“ auf Englisch?",
    "antwort": [
-    "sweets"
+    "referee",
+    "ref"
    ],
-   "erklaerung": "",
+   "erklaerung": "referee = Schiedsrichter.",
    "id": "en002"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„Kostüm“ auf Englisch?",
+   "frage": "„Mannschaft“ auf Englisch?",
    "antwort": [
-    "costume"
+    "team",
+    "side"
    ],
-   "erklaerung": "",
+   "erklaerung": "team = Mannschaft.",
    "id": "en003"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„gefährlich“ auf Englisch?",
+   "frage": "„Spieler“ auf Englisch?",
    "antwort": [
-    "dangerous"
+    "player"
    ],
-   "erklaerung": "",
+   "erklaerung": "player = Spieler.",
    "id": "en004"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„schnell“ auf Englisch?",
+   "frage": "„Torwart“ auf Englisch?",
    "antwort": [
-    "fast"
+    "goalkeeper",
+    "keeper",
+    "goalie"
    ],
-   "erklaerung": "",
+   "erklaerung": "goalkeeper = Torwart.",
    "id": "en005"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„Wüste“ auf Englisch?",
+   "frage": "„Elfmeter“ auf Englisch?",
    "antwort": [
-    "desert"
+    "penalty"
    ],
-   "erklaerung": "",
+   "erklaerung": "penalty = Elfmeter.",
    "id": "en006"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„strong“ auf Deutsch?",
+   "frage": "„Stadion“ auf Englisch?",
    "antwort": [
-    "stark"
+    "stadium"
    ],
-   "erklaerung": "",
+   "erklaerung": "stadium = Stadion.",
    "id": "en007"
   },
   {
    "typ": "eingabe",
    "art": "Übersetzen",
-   "frage": "„scary“ auf Deutsch?",
+   "frage": "„Fans / Zuschauer“ auf Englisch?",
    "antwort": [
-    "gruselig",
-    "unheimlich"
+    "fans",
+    "supporters",
+    "crowd"
    ],
-   "erklaerung": "",
+   "erklaerung": "fans, supporters, crowd.",
    "id": "en008"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "You look tired. You ___ go to bed.",
-   "optionen": [
-    "should",
-    "shouldn't",
-    "should to"
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„to score“ – was heißt das?",
+   "antwort": [
+    "treffen",
+    "ein tor schießen",
+    "tor schießen",
+    "scoren"
    ],
-   "antwort": "should",
-   "erklaerung": "should + Grundform.",
+   "erklaerung": "to score = ein Tor schießen.",
    "id": "en009"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "It's cold. You ___ go out without a jacket.",
-   "optionen": [
-    "shouldn't",
-    "should"
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„to win“ – was heißt das?",
+   "antwort": [
+    "gewinnen"
    ],
-   "antwort": "shouldn't",
-   "erklaerung": "",
+   "erklaerung": "win – won – won.",
    "id": "en010"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "I saw ___ elephant at the zoo.",
-   "optionen": [
-    "an",
-    "a"
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„to lose“ – was heißt das?",
+   "antwort": [
+    "verlieren"
    ],
-   "antwort": "an",
-   "erklaerung": "an vor Vokal-Laut.",
+   "erklaerung": "lose – lost – lost.",
    "id": "en011"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "She has ___ dog.",
-   "optionen": [
-    "a",
-    "an"
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„draw“ – was heißt das beim Fußball?",
+   "antwort": [
+    "unentschieden",
+    "remis"
    ],
-   "antwort": "a",
-   "erklaerung": "",
+   "erklaerung": "It was a draw = Es war unentschieden.",
    "id": "en012"
   },
   {
    "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "An elephant is ___ than a mouse. (big)",
+   "art": "Übersetzen",
+   "frage": "„Verletzung“ auf Englisch? (Bukayo Saka has an ___.)",
    "antwort": [
-    "bigger"
+    "injury"
    ],
-   "erklaerung": "",
+   "erklaerung": "injury = Verletzung.",
    "id": "en013"
   },
   {
    "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "A cheetah is ___ than a horse. (fast)",
+   "art": "Übersetzen",
+   "frage": "„stark“ auf Englisch?",
    "antwort": [
-    "faster"
+    "strong"
    ],
    "erklaerung": "",
    "id": "en014"
   },
   {
    "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "This film is ___ than that one. (interesting)",
+   "art": "Übersetzen",
+   "frage": "„schnell“ auf Englisch?",
    "antwort": [
-    "more interesting"
+    "fast",
+    "quick"
    ],
    "erklaerung": "",
    "id": "en015"
@@ -166,66 +168,591 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Tom is ___ Ben. (gleich groß)",
+   "frage": "Erling Haaland is tired after the match. He ___ go to bed early.",
    "optionen": [
-    "as tall as",
-    "as taller as",
-    "taller as"
+    "should",
+    "shouldn't",
+    "shoulds"
    ],
-   "antwort": "as tall as",
-   "erklaerung": "as + Grundform + as.",
+   "antwort": "should",
+   "erklaerung": "should + Grundform.",
    "id": "en016"
   },
   {
-   "typ": "eingabe",
-   "art": "Lücke füllen",
-   "frage": "The blue whale is the ___ animal in the world. (big)",
-   "antwort": [
-    "biggest"
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "It's raining at Anfield. The fans ___ forget their jackets.",
+   "optionen": [
+    "shouldn't",
+    "should"
    ],
+   "antwort": "shouldn't",
    "erklaerung": "",
    "id": "en017"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "My bike is ___ than yours. (good)",
+   "frage": "Which sentence is correct?",
+   "optionen": [
+    "Saka should practise his penalties.",
+    "Saka shoulds practise his penalties.",
+    "Saka should to practise his penalties."
+   ],
+   "antwort": "Saka should practise his penalties.",
+   "erklaerung": "should + Grundform, kein -s, kein to.",
+   "id": "en018"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Salah scores ___ amazing goal.",
+   "optionen": [
+    "an",
+    "a"
+   ],
+   "antwort": "an",
+   "erklaerung": "amazing beginnt mit Vokal-Laut → an.",
+   "id": "en019"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Rice is ___ great midfielder.",
+   "optionen": [
+    "a",
+    "an"
+   ],
+   "antwort": "a",
+   "erklaerung": "",
+   "id": "en020"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "The referee shows ___ yellow card.",
+   "optionen": [
+    "a",
+    "an"
+   ],
+   "antwort": "a",
+   "erklaerung": "",
+   "id": "en021"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Haaland is ___ than Foden. (tall)",
+   "antwort": [
+    "taller"
+   ],
+   "erklaerung": "tall → taller.",
+   "id": "en022"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Salah is ___ than the goalkeeper. (fast)",
+   "antwort": [
+    "faster"
+   ],
+   "erklaerung": "",
+   "id": "en023"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Van Dijk is ___ than Ødegaard. (big)",
+   "antwort": [
+    "bigger"
+   ],
+   "erklaerung": "big → bigger (g verdoppeln).",
+   "id": "en024"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "This match is ___ than the last one. (exciting)",
+   "antwort": [
+    "more exciting"
+   ],
+   "erklaerung": "Lang → more exciting.",
+   "id": "en025"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Arsenal played ___ than Chelsea. (good)",
    "optionen": [
     "better",
     "gooder",
     "best"
    ],
    "antwort": "better",
-   "erklaerung": "",
-   "id": "en018"
+   "erklaerung": "good → better → the best.",
+   "id": "en026"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Yesterday I ___ to school by bus.",
+   "frage": "Saka is ___ Martinelli. (gleich schnell)",
    "optionen": [
-    "went",
-    "go",
-    "goed",
-    "going"
+    "as fast as",
+    "as faster as",
+    "faster as"
    ],
-   "antwort": "went",
-   "erklaerung": "go → went (unregelmäßig).",
-   "id": "en019"
+   "antwort": "as fast as",
+   "erklaerung": "as + Grundform + as.",
+   "id": "en027"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "___ you like pizza?",
+   "frage": "Foden isn't ___ Haaland. (nicht so groß wie)",
+   "optionen": [
+    "as tall as",
+    "as taller as",
+    "taller as"
+   ],
+   "antwort": "as tall as",
+   "erklaerung": "",
+   "id": "en028"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Haaland is the ___ striker in the league. (strong)",
+   "antwort": [
+    "strongest"
+   ],
+   "erklaerung": "",
+   "id": "en029"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Wembley is the ___ stadium in England. (big)",
+   "antwort": [
+    "biggest"
+   ],
+   "erklaerung": "",
+   "id": "en030"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "That was the ___ goal of the season! (beautiful)",
+   "antwort": [
+    "most beautiful"
+   ],
+   "erklaerung": "",
+   "id": "en031"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Yesterday Liverpool ___ 3–1.",
+   "optionen": [
+    "won",
+    "win",
+    "winned",
+    "wins"
+   ],
+   "antwort": "won",
+   "erklaerung": "win → won (unregelmäßig).",
+   "id": "en032"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "___ you play football every week?",
    "optionen": [
     "Do",
     "Does",
-    "Are",
-    "Is"
+    "Are"
    ],
    "antwort": "Do",
    "erklaerung": "",
-   "id": "en020"
+   "id": "en033"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Which word means „Abseits“?",
+   "optionen": [
+    "offside",
+    "outside",
+    "sideline",
+    "offline"
+   ],
+   "antwort": "offside",
+   "erklaerung": "",
+   "id": "en034"
+  }
+ ],
+ "tests": [
+  {
+   "id": "kap1",
+   "titel": "Test Kapitel 1 – Football English",
+   "fragen": [
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Tor (das man schießt)",
+     "antwort": [
+      "goal"
+     ],
+     "erklaerung": "",
+     "id": "kap1-01"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Schiedsrichter",
+     "antwort": [
+      "referee",
+      "ref"
+     ],
+     "erklaerung": "",
+     "id": "kap1-02"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Torwart",
+     "antwort": [
+      "goalkeeper",
+      "keeper"
+     ],
+     "erklaerung": "",
+     "id": "kap1-03"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Übersetzen",
+     "frage": "Elfmeter",
+     "antwort": [
+      "penalty"
+     ],
+     "erklaerung": "",
+     "id": "kap1-04"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Haaland ___ rest after the match.",
+     "optionen": [
+      "should",
+      "shoulds",
+      "should to"
+     ],
+     "antwort": "should",
+     "erklaerung": "",
+     "id": "kap1-05"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Salah scores ___ easy goal.",
+     "optionen": [
+      "an",
+      "a"
+     ],
+     "antwort": "an",
+     "erklaerung": "",
+     "id": "kap1-06"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Saka is ___ than the defender. (fast)",
+     "antwort": [
+      "faster"
+     ],
+     "erklaerung": "",
+     "id": "kap1-07"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Haaland is ___ than Foden. (big)",
+     "antwort": [
+      "bigger"
+     ],
+     "erklaerung": "",
+     "id": "kap1-08"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Rice is ___ Ødegaard. (gleich gut)",
+     "optionen": [
+      "as good as",
+      "as better as",
+      "better as"
+     ],
+     "antwort": "as good as",
+     "erklaerung": "",
+     "id": "kap1-09"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Lücke füllen",
+     "frage": "Wembley is the ___ stadium. (famous)",
+     "antwort": [
+      "most famous"
+     ],
+     "erklaerung": "",
+     "id": "kap1-10"
+    }
+   ]
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "should / shouldn't",
+   "kurz": "Ratschläge geben",
+   "text": [
+    "Mit should gibst du einen Rat: Du solltest … – mit shouldn't sagst du: Du solltest nicht …",
+    "should bleibt IMMER gleich – auch bei he/she/it kein -s. Danach kommt die Grundform des Verbs, ohne „to“."
+   ],
+   "schritte": [
+    "Wer? (I, you, he …)",
+    "should oder shouldn't",
+    "Verb in der Grundform (go, eat, see …)",
+    "Rest des Satzes"
+   ],
+   "beispiel": "Haaland is tired.\n→ He should go to bed.\n→ He shouldn't watch TV so late.\n\n✗ He shoulds go   ✗ He should to go   ✓ He should go",
+   "merke": "should + Grundform. Kein -s, kein to.",
+   "video": "should shouldn't english grammar einfach erklärt"
+  },
+  {
+   "titel": "a oder an?",
+   "kurz": "Der unbestimmte Artikel",
+   "text": [
+    "Es kommt auf den KLANG am Wortanfang an, nicht auf den Buchstaben.",
+    "an vor einem Vokal-Laut (a, e, i, o, u gesprochen), a vor einem Konsonanten-Laut."
+   ],
+   "schritte": [
+    "Sprich das Wort laut aus.",
+    "Klingt der Anfang wie a, e, i, o, u? → an",
+    "Sonst → a"
+   ],
+   "beispiel": "an apple, an ostrich, an old house, an hour (h ist stumm!)\na ghost, a pumpkin, a dog, a uniform (klingt wie „ju“)",
+   "merke": "Das Ohr entscheidet, nicht das Auge.",
+   "video": "a or an english grammar erklärt"
+  },
+  {
+   "titel": "Komparativ – vergleichen mit than",
+   "kurz": "bigger than, more dangerous than",
+   "text": [
+    "Wenn du ZWEI Dinge vergleichst, nimmst du den Komparativ + than."
+   ],
+   "schritte": [
+    "Kurzes Adjektiv → -er: fast → faster, tall → taller",
+    "Endet auf -y → -ier: heavy → heavier, funny → funnier",
+    "Ein Vokal + Konsonant am Ende → verdoppeln: big → bigger, hot → hotter",
+    "Lange Adjektive → more: more dangerous, more intelligent",
+    "Unregelmäßig: good → better, bad → worse"
+   ],
+   "beispiel": "Haaland is stronger than Saka.\nSalah is faster than Haaland.\nA snake is more dangerous than a spider.",
+   "merke": "Komparativ + than (nicht then!).",
+   "video": "comparative adjectives english erklärt deutsch"
+  },
+  {
+   "titel": "as … as – gleich viel",
+   "kurz": "as big as, not as fast as",
+   "text": [
+    "Wenn zwei Dinge GLEICH sind, nimmst du as + Grundform + as.",
+    "Verneint (not as … as) heißt es: weniger … als."
+   ],
+   "schritte": [
+    "as",
+    "Adjektiv in der GRUNDFORM (big, strong, good)",
+    "as"
+   ],
+   "beispiel": "Haaland is as strong as Salah.\nSaka isn't as tall as Haaland.\n\n✗ as stronger as   ✗ as better as   ✓ as strong as / as good as",
+   "merke": "Zwischen as und as steht NIE ein Komparativ. Das ist der häufigste Fehler!",
+   "video": "as as comparison english grammar"
+  },
+  {
+   "titel": "Superlativ – der/die/das Beste",
+   "kurz": "the fastest, the most dangerous",
+   "text": [
+    "Wenn etwas an der Spitze ist (von dreien oder mehr), nimmst du den Superlativ mit the."
+   ],
+   "schritte": [
+    "Kurz → the …-est: the fastest, the tallest",
+    "-y → the …-iest: the heaviest, the funniest",
+    "Lang → the most …: the most dangerous, the most venomous",
+    "Unregelmäßig: good → the best, bad → the worst"
+   ],
+   "beispiel": "The cheetah is the fastest animal on land.\nHaaland is the strongest.\nThe taipan is the most venomous snake.",
+   "merke": "Komparativ = zwei vergleichen (+ than). Superlativ = der/die/das -ste (+ the).",
+   "video": "superlative adjectives english erklärt"
+  }
+ ],
+ "sprechen": [
+  {
+   "titel": "Interview nach dem Spiel",
+   "kurz": "Wie ein Profi antworten",
+   "schritte": [
+    {
+     "sagt": "Hi, I'm a reporter from Sky Sports. Congratulations! Did your team win today?",
+     "erwartet": [
+      [
+       "win"
+      ],
+      [
+       "won"
+      ],
+      [
+       "yes"
+      ],
+      [
+       "no"
+      ],
+      [
+       "lost"
+      ],
+      [
+       "draw"
+      ]
+     ],
+     "tipp": "Yes, we won the match."
+    },
+    {
+     "sagt": "Brilliant! How many goals did you score?",
+     "erwartet": [
+      [
+       "goal"
+      ],
+      [
+       "one"
+      ],
+      [
+       "two"
+      ],
+      [
+       "three"
+      ],
+      [
+       "scored"
+      ]
+     ],
+     "tipp": "I scored two goals."
+    },
+    {
+     "sagt": "Who is the best player in your team?",
+     "erwartet": [
+      [
+       "best"
+      ]
+     ],
+     "tipp": "The best player in my team is Max."
+    },
+    {
+     "sagt": "Is your team faster than the other team?",
+     "erwartet": [
+      [
+       "faster"
+      ],
+      [
+       "yes"
+      ],
+      [
+       "no"
+      ]
+     ],
+     "tipp": "Yes, we are faster than the other team."
+    },
+    {
+     "sagt": "What should young players do to get better?",
+     "erwartet": [
+      [
+       "should"
+      ]
+     ],
+     "tipp": "They should train every day."
+    }
+   ]
+  },
+  {
+   "titel": "Mein Lieblingsverein",
+   "kurz": "Über Fußball reden",
+   "schritte": [
+    {
+     "sagt": "Hi! Which football team do you support?",
+     "erwartet": [
+      [
+       "support"
+      ],
+      [
+       "my",
+       "favourite"
+      ],
+      [
+       "i",
+       "like"
+      ],
+      [
+       "team"
+      ]
+     ],
+     "tipp": "I support Arsenal."
+    },
+    {
+     "sagt": "Nice! Who is your favourite player?",
+     "erwartet": [
+      [
+       "favourite",
+       "player"
+      ],
+      [
+       "my",
+       "favourite"
+      ],
+      [
+       "i",
+       "like"
+      ]
+     ],
+     "tipp": "My favourite player is Bukayo Saka."
+    },
+    {
+     "sagt": "Why do you like him?",
+     "erwartet": [
+      [
+       "because"
+      ]
+     ],
+     "tipp": "Because he is very fast and skilful."
+    },
+    {
+     "sagt": "Is he as fast as Mohamed Salah?",
+     "erwartet": [
+      [
+       "as",
+       "fast",
+       "as"
+      ],
+      [
+       "faster"
+      ],
+      [
+       "not",
+       "as"
+      ],
+      [
+       "yes"
+      ],
+      [
+       "no"
+      ]
+     ],
+     "tipp": "Yes, he is as fast as Salah."
+    }
+   ]
   }
  ]
 }

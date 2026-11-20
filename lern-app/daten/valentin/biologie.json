@@ -224,5 +224,20 @@
    "erklaerung": "",
    "id": "bi016"
   }
+ ],
+ "wissen": [
+  {
+   "titel": "Die 5 Wirbeltierklassen",
+   "kurz": "Fische, Amphibien, Reptilien, Vögel, Säugetiere",
+   "schritte": [
+    "Fische: Kiemen, Schuppen, leben im Wasser.",
+    "Amphibien: z. B. Frosch – Larve im Wasser, später Lunge.",
+    "Reptilien: trockene Schuppenhaut, Eier an Land.",
+    "Vögel: Federn, Schnabel, legen Eier.",
+    "Säugetiere: Fell, Junge trinken Milch."
+   ],
+   "merke": "Delfin und Wal sind Säugetiere, keine Fische!",
+   "video": "Wirbeltiere Klassen einfach erklärt"
+  }
  ]
 }

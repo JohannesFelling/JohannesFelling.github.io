@@ -235,5 +235,191 @@
    "erklaerung": "0,7 = 0,700 – das ist größer als 0,659.",
    "id": "ma020"
   }
+ ],
+ "tests": [
+  {
+   "id": "kap1",
+   "titel": "Test Kapitel 1 – Brüche & Dezimalzahlen",
+   "fragen": [
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "Kürze 6/8 so weit wie möglich. Zähler =",
+     "antwort": [
+      "3"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-01"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "1/2 + 1/4 als Dezimalzahl =",
+     "antwort": [
+      "0,75"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-02"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "2,4 + 3,85 =",
+     "antwort": [
+      "6,25"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-03"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "7 − 2,6 =",
+     "antwort": [
+      "4,4"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-04"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "Rechteck 5 cm × 3 cm: Fläche in cm² =",
+     "antwort": [
+      "15"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-05"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "x + 9 = 20. x =",
+     "antwort": [
+      "11"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-06"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "10 % von 250 =",
+     "antwort": [
+      "25"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-07"
+    },
+    {
+     "typ": "eingabe",
+     "art": "Rechnen",
+     "frage": "ggT von 8 und 12 =",
+     "antwort": [
+      "4"
+     ],
+     "erklaerung": "",
+     "zahl": true,
+     "id": "kap1-08"
+    }
+   ]
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "Brüche kürzen und erweitern",
+   "kurz": "Gleich viel, andere Zahlen",
+   "text": [
+    "Kürzen: Zähler und Nenner durch dieselbe Zahl teilen. Erweitern: beide mit derselben Zahl malnehmen. Der Wert bleibt gleich."
+   ],
+   "schritte": [
+    "Suche eine Zahl, durch die Zähler UND Nenner teilbar sind.",
+    "Teile beide durch diese Zahl.",
+    "Geht es nochmal? Dann wiederholen, bis nichts mehr geht."
+   ],
+   "beispiel": "12/18  → beide durch 6 →  2/3\n 1/4  → beide mal 3   →  3/12",
+   "merke": "Was du oben machst, musst du auch unten machen.",
+   "video": "Brüche kürzen und erweitern einfach erklärt"
+  },
+  {
+   "titel": "Brüche addieren",
+   "kurz": "Erst gleicher Nenner, dann addieren",
+   "text": [
+    "Brüche kann man nur addieren, wenn sie denselben Nenner haben."
+   ],
+   "schritte": [
+    "Gemeinsamen Nenner finden (kgV der Nenner).",
+    "Beide Brüche auf diesen Nenner erweitern.",
+    "Zähler addieren, Nenner bleibt gleich.",
+    "Ergebnis kürzen, wenn es geht."
+   ],
+   "beispiel": "1/2 + 1/4\n= 2/4 + 1/4\n= 3/4",
+   "merke": "Nenner werden nie addiert!",
+   "video": "Brüche addieren mit verschiedenen Nennern erklärt"
+  },
+  {
+   "titel": "Dezimalzahlen addieren und subtrahieren",
+   "kurz": "Komma unter Komma",
+   "schritte": [
+    "Schreibe die Zahlen so untereinander, dass Komma unter Komma steht.",
+    "Fehlende Stellen mit 0 auffüllen.",
+    "Rechnen wie bei ganzen Zahlen.",
+    "Komma im Ergebnis an dieselbe Stelle setzen."
+   ],
+   "beispiel": "  3,50\n+ 2,75\n------\n  6,25",
+   "merke": "Komma unter Komma.",
+   "video": "Dezimalzahlen schriftlich addieren subtrahieren"
+  },
+  {
+   "titel": "Umfang und Flächeninhalt vom Rechteck",
+   "kurz": "u = 2·(a+b),  A = a·b",
+   "text": [
+    "Der Umfang ist der Weg einmal rundherum. Der Flächeninhalt ist, wie viel Fläche drinnen ist."
+   ],
+   "schritte": [
+    "Länge a und Breite b ablesen (gleiche Einheit!).",
+    "Umfang: a + b + a + b = 2·(a + b).",
+    "Fläche: a · b, Einheit hoch 2 (cm²)."
+   ],
+   "beispiel": "a = 6 cm, b = 4 cm\nu = 2·(6+4) = 20 cm\nA = 6·4 = 24 cm²",
+   "merke": "Umfang in cm, Fläche in cm².",
+   "video": "Umfang und Flächeninhalt Rechteck erklärt"
+  },
+  {
+   "titel": "Einfache Gleichungen lösen",
+   "kurz": "x allein auf eine Seite bringen",
+   "text": [
+    "Eine Gleichung ist wie eine Waage: Was du links machst, musst du auch rechts machen."
+   ],
+   "schritte": [
+    "Was passiert mit x? (+, −, ·, :)",
+    "Mach das Gegenteil auf beiden Seiten.",
+    "Probe: x einsetzen und nachrechnen."
+   ],
+   "beispiel": "x + 15 = 42   | −15\n     x = 27\n\n4 · x = 36    | :4\n     x = 9",
+   "merke": "Immer auf beiden Seiten dasselbe tun.",
+   "video": "Gleichungen lösen einfach erklärt Klasse 6"
+  },
+  {
+   "titel": "Prozent",
+   "kurz": "Hundertstel",
+   "text": [
+    "Prozent heißt „von Hundert“. 25 % = 25/100 = 1/4."
+   ],
+   "schritte": [
+    "Grundwert durch 100 teilen (= 1 %).",
+    "Mit der Prozentzahl malnehmen."
+   ],
+   "beispiel": "25 % von 80\n80 : 100 = 0,8\n0,8 · 25 = 20",
+   "merke": "50 % = Hälfte, 25 % = Viertel, 10 % = durch 10.",
+   "video": "Prozentrechnung einfach erklärt"
+  }
  ]
 }

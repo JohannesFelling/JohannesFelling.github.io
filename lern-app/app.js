@@ -1,7 +1,12 @@
-// Lern-Helden – einfache Lern-App ohne Server. Fortschritt bleibt im Browser (localStorage).
+// Lern-Helden – Lern-App für Valentin und Elias.
+// Ohne firebase-config.js: Fortschritt nur im Browser. Mit Firebase: Anmeldung + Online-Spielstand.
 const PERSONEN = [
-  { id: "valentin", name: "Valentin", emo: "🦸‍♂️" },
-  { id: "elias", name: "Elias", emo: "🚀" },
+  { id: "valentin", name: "Valentin", emo: "🦸‍♂️", thema: "held", slogan: "Hero Training Program",
+    lob: ["Brilliant.", "Mission accomplished.", "Splendid!", "Avengers-Niveau.", "Spidey-Sinn stimmt.", "Thor wäre stolz.", "Stark wie Stark."],
+    raenge: ["Rookie", "Held", "Superheld", "Avenger", "Legende"] },
+  { id: "elias", name: "Elias", emo: "⚽", thema: "sport", slogan: "Matchday Academy",
+    lob: ["TOOOR!", "Back of the net!", "Weltklasse-Pass.", "Hattrick-reif.", "Was für ein Volley!", "Man of the Match.", "Top-Corner."],
+    raenge: ["Nachwuchs", "Stammspieler", "Kapitän", "Nationalspieler", "Weltstar"] },
 ];
 const FAECHER = [
   { id: "englisch", name: "Englisch", emo: "🇬🇧" },
@@ -10,61 +15,144 @@ const FAECHER = [
   { id: "deutsch", name: "Deutsch", emo: "📖" },
   { id: "geografie", name: "Geografie", emo: "🌍" },
 ];
+const ICONS = {
+  englisch: '<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"/><path d="M13 21l4-10 4 10M14.5 17h5"/>',
+  mathe: '<rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/>',
+  biologie: '<path d="M5 21c0-9 5-15 15-16-1 10-7 15-15 16z"/><path d="M5 21l8-8"/>',
+  deutsch: '<path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2v-1.5z"/><path d="M8 7h8M8 11h6"/>',
+  geografie: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  flamme: '<path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-4 5-4 7-1-1-2-2-2-4-2 2-3 5-3 9 0 4 3 7 7 7z"/>',
+  test: '<path d="M9 3h6l1 2h3v16H5V5h3z"/><path d="M9 13l2 2 4-4"/>',
+  schloss: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+  haken: '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',
+  ticket: '<path d="M3 8a2 2 0 0 0 0 4v0a2 2 0 0 0 0 4v2h18v-2a2 2 0 0 1 0-4 2 2 0 0 1 0-4V6H3z"/><path d="M14 6v12" stroke-dasharray="2 2"/>',
+  auge: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  play: '<path d="M7 4l13 8-13 8z"/>',
+  wissen: '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>',
+  mikro: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/>',
+};
+const ic = (n) => { const w = document.createElement("span"); w.innerHTML = `<svg class="ic" viewBox="0 0 24 24">${ICONS[n] || ""}</svg>`; return w.firstChild; };
 const RUNDE = 10;
-const LOB = ["Super!", "Richtig!", "Klasse!", "Spitze!", "Genau!", "Stark!"];
-const HELDEN_LOB = ["Brilliant! 🦸", "Splendid! ⚡", "Jolly good! 🛡️", "Heldenhaft! 💥", "Avengers-reif! 🌟", "Spidey-Sinn stimmt! 🕷️"];
-const BADGES = [
-  { id: "erste", emo: "🎉", name: "Erste Runde", ok: s => s.runden >= 1 },
-  { id: "perfekt", emo: "💯", name: "Perfekte Runde", ok: s => s.perfekt >= 1 },
-  { id: "s25", emo: "⭐", name: "25 Sterne", ok: s => s.sterne >= 25 },
-  { id: "s100", emo: "🌟", name: "100 Sterne", ok: s => s.sterne >= 100 },
-  { id: "r5", emo: "🏅", name: "5 Runden", ok: s => s.runden >= 5 },
-  { id: "r20", emo: "🏆", name: "20 Runden", ok: s => s.runden >= 20 },
-];
+const PROFIL = "_profil";
+let BELOHNUNG = {
+  stufen: [{ sterne: 100, belohnung: "🍫 Süßigkeit" }, { sterne: 250, belohnung: "🥤 Softdrink" }, { sterne: 500, belohnung: "🍦 Eis" }, { sterne: 1000, belohnung: "🎁 Überraschung nach Wahl" }],
+  serie: { tage: 7, belohnung: "🍫 Süßigkeit" },
+  test: { belohnung: "🥤 Softdrink" },
+};
 
 const app = document.getElementById("app");
-const zeige = (...kids) => app.replaceChildren(...kids.filter(k => k != null));
+const zeige = (...kids) => { app.replaceChildren(...kids.filter(k => k != null)); window.scrollTo(0, 0); };
 const titel = document.getElementById("titel");
 const zurueck = document.getElementById("zurueck");
 const sterneTop = document.getElementById("sterne-top");
-let person = null, fach = null, daten = null, runde = null, zurueckZiel = null;
+let person = null, fach = null, daten = null, runde = null, zurueckZiel = null, gast = false, gastStand = {};
 
 // ---------- Speicher ----------
-function key(p, f) { return `lernhelden:${p}:${f}`; }
-function lokalLaden(p, f) {
-  let s = null;
-  try { s = JSON.parse(localStorage.getItem(key(p, f))); } catch (e) {}
-  return s;
+const key = (p, f) => `lernhelden:${p}:${f}`;
+function lokalLaden(p, f) { try { return JSON.parse(localStorage.getItem(key(p, f))); } catch (e) { return null; } }
+function roh(p, f) {
+  if (gast) return gastStand[f];
+  if (wolke && wolke.kind === p) return wolke.stand[f];
+  return lokalLaden(p, f);
 }
-function laden(p, f) {
-  const s = (wolke && wolke.kind === p) ? wolke.stand[f] : lokalLaden(p, f);
-  return Object.assign({ sterne: 0, runden: 0, perfekt: 0, offen: [], gesehen: {} }, JSON.parse(JSON.stringify(s || {})));
-}
+const kopie = o => JSON.parse(JSON.stringify(o || {}));
+function laden(p, f) { return Object.assign({ sterne: 0, runden: 0, perfekt: 0, offen: [], gesehen: {} }, kopie(roh(p, f))); }
+function profil(p) { return Object.assign({ tage: [], gutscheine: [], stufen: [], serien: [], tests: {} }, kopie(roh(p, PROFIL))); }
 function speichern(p, f, s) {
+  if (gast) { gastStand[f] = kopie(s); return; }
   try { localStorage.setItem(key(p, f), JSON.stringify(s)); } catch (e) {}
   if (wolke && wolke.kind === p) { wolke.stand[f] = s; wolkeSichern(); }
 }
+const sterneGesamt = p => FAECHER.reduce((n, f) => n + laden(p, f.id).sterne, 0);
 
-// ---------- Online-Speicher (Firebase), nur wenn firebase-config.js ausgefüllt ist ----------
+// ---------- Belohnungen ----------
+function heute(d = new Date()) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
+function serie(pr) {
+  const tage = new Set(pr.tage);
+  const d = new Date();
+  if (!tage.has(heute(d))) d.setDate(d.getDate() - 1);
+  let n = 0;
+  while (tage.has(heute(d))) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+function rang(p, sterne) {
+  const st = [0, ...BELOHNUNG.stufen.map(s => s.sterne)];
+  let i = 0; while (i + 1 < st.length && sterne >= st[i + 1]) i++;
+  const namen = p.raenge;
+  return { name: namen[Math.min(i, namen.length - 1)], ab: st[i], naechste: st[i + 1] ?? null, naechsterName: namen[Math.min(i + 1, namen.length - 1)] };
+}
+function code() { const z = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; let c = ""; for (let i = 0; i < 6; i++) c += z[Math.floor(Math.random() * z.length)]; return `${person.id[0].toUpperCase()}-${c}`; }
+function gutscheinGeben(pr, was, grund) {
+  const g = { code: code(), was, grund, datum: heute() };
+  pr.gutscheine.push(g);
+  return g;
+}
+// nach jeder Runde / jedem Test aufrufen; gibt neue Gutscheine zurück
+function belohnungenPruefen(extra) {
+  const pr = profil(person.id);
+  const neu = [];
+  if (!pr.tage.includes(heute())) {
+    pr.tage.push(heute());
+    pr.tage = pr.tage.slice(-60);
+    const n = serie(pr);
+    if (n > 0 && n % BELOHNUNG.serie.tage === 0) { pr.serien.push(heute()); neu.push(gutscheinGeben(pr, BELOHNUNG.serie.belohnung, `${n} Tage hintereinander geübt 🔥`)); }
+  }
+  const st = sterneGesamt(person.id);
+  for (const s of BELOHNUNG.stufen) {
+    if (st >= s.sterne && !pr.stufen.includes(s.sterne)) { pr.stufen.push(s.sterne); neu.push(gutscheinGeben(pr, s.belohnung, `${s.sterne} Sterne gesammelt ⭐`)); }
+  }
+  if (extra) extra(pr, neu);
+  speichern(person.id, PROFIL, pr);
+  return neu;
+}
+
+// ---------- Hilfen ----------
+const el = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const k of kids) if (k != null && k !== false) e.append(k.nodeType ? k : document.createTextNode(k));
+  return e;
+};
+const mischen = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const zufall = a => a[Math.floor(Math.random() * a.length)];
+const norm = t => String(t).toLowerCase().replace(/[’`´]/g, "'").replace(/[.!?;:]+$/g, "").replace(/\s+/g, " ").trim();
+function zahl(t) { const s = String(t).replace(/\s/g, "").replace(",", "."); return s !== "" && !isNaN(s) ? Number(s) : null; }
+function stimmt(eingabe, antworten) {
+  antworten = [].concat(antworten);
+  const n = norm(eingabe), z = zahl(eingabe);
+  return antworten.some(a => norm(a) === n || (z !== null && zahl(a) !== null && Math.abs(zahl(a) - z) < 1e-9));
+}
+function thema(p) { document.body.className = p ? `thema-${p.thema}` : ""; }
+function setzeKopf(t, ziel) {
+  titel.textContent = t;
+  zurueckZiel = ziel; zurueck.hidden = !ziel;
+  if (person) {
+    const n = serie(profil(person.id));
+    sterneTop.textContent = `${n ? `🔥 ${n}  ·  ` : ""}★ ${sterneGesamt(person.id)}`;
+  } else sterneTop.textContent = "";
+}
+zurueck.addEventListener("click", () => zurueckZiel && zurueckZiel());
+const gastBanner = () => gast ? el("div", { class: "gast-banner" }, "Testkonto – nichts wird gespeichert") : null;
+
+// ---------- Online-Speicher (Firebase) ----------
 const CFG = window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey ? window.FIREBASE_CONFIG : null;
 const MAIL_DOMAIN = "johannesfelling.at";
 let wolke = null, fb = null, sichernTimer = null;
 async function fbLaden() {
   if (fb) return fb;
   const v = "10.12.2", base = `https://www.gstatic.com/firebasejs/${v}/`;
-  const [app, auth, fs] = await Promise.all([import(base + "firebase-app.js"), import(base + "firebase-auth.js"), import(base + "firebase-firestore.js")]);
-  const a = app.initializeApp(CFG);
-  fb = { auth: auth.getAuth(a), db: fs.getFirestore(a), A: auth, F: fs };
+  const [a, auth, fs] = await Promise.all([import(base + "firebase-app.js"), import(base + "firebase-auth.js"), import(base + "firebase-firestore.js")]);
+  const inst = a.initializeApp(CFG);
+  fb = { auth: auth.getAuth(inst), db: fs.getFirestore(inst), A: auth, F: fs };
   return fb;
 }
+const wolkeDoc = () => fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() });
 function wolkeSichern() {
   clearTimeout(sichernTimer);
-  sichernTimer = setTimeout(async () => {
-    try {
-      await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() });
-      sterneTop.title = "Gespeichert";
-    } catch (e) { console.error(e); sterneTop.title = "Speichern fehlgeschlagen – wird beim nächsten Mal nachgeholt"; }
-  }, 400);
+  sichernTimer = setTimeout(() => wolkeDoc().catch(e => console.error(e)), 400);
 }
 async function wolkeVerbinden(user) {
   const kind = user.email.split("@")[0].toLowerCase();
@@ -72,23 +160,47 @@ async function wolkeVerbinden(user) {
   if (!p) { await fb.A.signOut(fb.auth); throw new Error("unbekannt"); }
   const snap = await fb.F.getDoc(fb.F.doc(fb.db, "fortschritt", user.uid));
   let stand = snap.exists() ? (snap.data().stand || {}) : null;
-  if (!stand) { // erstes Mal: Fortschritt von diesem Gerät übernehmen
-    stand = {};
-    for (const f of FAECHER) { const l = lokalLaden(kind, f.id); if (l) stand[f.id] = l; }
-  }
+  if (!stand) { stand = {}; for (const f of [...FAECHER.map(f => f.id), PROFIL]) { const l = lokalLaden(kind, f); if (l) stand[f] = l; } }
   wolke = { uid: user.uid, kind, stand };
   if (!snap.exists()) wolkeSichern();
   person = p;
 }
 async function abmelden() {
+  if (gast) { gast = false; gastStand = {}; person = null; startseite(); return; }
   if (!confirm("Wirklich abmelden?")) return;
   clearTimeout(sichernTimer);
-  if (wolke) await fb.F.setDoc(fb.F.doc(fb.db, "fortschritt", wolke.uid), { stand: wolke.stand, kind: wolke.kind, zeit: fb.F.serverTimestamp() }).catch(() => {});
-  await fb.A.signOut(fb.auth);
+  if (wolke) await wolkeDoc().catch(() => {});
+  if (fb) await fb.A.signOut(fb.auth);
   wolke = null; person = null;
   startseite();
 }
+
+// ---------- Bildschirme ----------
+function startseite() {
+  if (CFG && wolke && !gast) { faecherSeite(); return; }
+  person = null; fach = null; gast = false; thema(null);
+  setzeKopf("Lern-Helden", null);
+  zeige(
+    el("div", { class: "start-kopf" }, el("div", { class: "label" }, "Lern-Helden"), el("h2", {}, "Wer ist dran?")),
+    el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
+      el("button", { class: `start-karte start-${p.thema}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
+        el("small", {}, p.slogan), el("span", { class: "start-name" }, p.name),
+        el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : `${sterneGesamt(p.id)} Sterne`)))),
+    el("button", { class: "gast-link", onclick: gastWahl }, ic("auge"), "Testkonto – nur anschauen, nichts wird gespeichert")
+  );
+}
+function gastWahl() {
+  thema(null);
+  setzeKopf("Testkonto", startseite);
+  zeige(
+    el("h2", { class: "mitte" }, "Testkonto"),
+    el("p", { class: "hinweis mitte" }, "Alles funktioniert wie echt, aber nichts wird gespeichert. Tests sind sofort freigeschaltet."),
+    el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
+      el("button", { class: `start-karte start-${p.thema}`, onclick: () => { gast = true; gastStand = {}; person = p; faecherSeite(); } },
+        el("small", {}, "Ansicht von"), el("span", { class: "start-name" }, p.name)))));
+}
 function anmeldeSeite(p) {
+  thema(p);
   setzeKopf("Anmelden", startseite);
   const pw = el("input", { class: "eingabe", type: "password", autocomplete: "current-password", placeholder: "Passwort" });
   const fehler = el("div");
@@ -107,63 +219,42 @@ function anmeldeSeite(p) {
     }
   } }, "Anmelden");
   pw.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); los.click(); } });
-  zeige(el("div", { class: "karte ergebnis" }, el("div", { class: "big" }, p.emo), el("h2", {}, `Hallo ${p.name}!`), el("p", {}, "Gib dein Passwort ein."), pw, los, fehler));
+  zeige(el("div", { class: "karte" }, el("div", { class: "label" }, p.slogan), el("h2", {}, `Hi ${p.name}`), el("p", { class: "klein" }, "Gib dein Passwort ein."), pw, los, fehler));
   setTimeout(() => pw.focus(), 50);
 }
-function sterneGesamt(p) { return FAECHER.reduce((n, f) => n + laden(p, f.id).sterne, 0); }
 
-// ---------- Hilfen ----------
-const el = (tag, attrs = {}, ...kids) => {
-  const e = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
-  }
-  for (const k of kids) if (k != null) e.append(k.nodeType ? k : document.createTextNode(k));
-  return e;
-};
-const mischen = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-const zufall = a => a[Math.floor(Math.random() * a.length)];
-function norm(t) {
-  return String(t).toLowerCase().replace(/[’`´]/g, "'").replace(/[.!?;:]+$/g, "").replace(/\s+/g, " ").trim();
-}
-function zahl(t) { const s = String(t).replace(/\s/g, "").replace(",", "."); return s !== "" && !isNaN(s) ? Number(s) : null; }
-function stimmt(eingabe, antworten) {
-  antworten = [].concat(antworten);
-  const n = norm(eingabe), z = zahl(eingabe);
-  return antworten.some(a => norm(a) === n || (z !== null && zahl(a) !== null && Math.abs(zahl(a) - z) < 1e-9));
-}
-function setzeKopf(t, ziel) {
-  titel.textContent = t;
-  zurueckZiel = ziel; zurueck.hidden = !ziel;
-  sterneTop.textContent = person ? `⭐ ${sterneGesamt(person.id)}` : "";
-}
-zurueck.addEventListener("click", () => zurueckZiel && zurueckZiel());
-
-// ---------- Bildschirme ----------
-function startseite() {
-  if (CFG && wolke) { faecherSeite(); return; }
-  person = null; fach = null;
-  setzeKopf("Lern-Helden", null);
-  zeige(
-    el("h2", {}, "Wer lernt heute?"),
-    el("div", { class: "raster" }, ...PERSONEN.map((p, i) =>
-      el("button", { class: `gross person c${i ? 1 : 0}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
-        el("span", { class: "emo" }, p.emo), `Lernen ${p.name}`, CFG ? el("small", {}, "🔒 mit Passwort") : el("small", {}, `⭐ ${sterneGesamt(p.id)} Sterne`))))
-  );
+function statusKarte() {
+  const st = sterneGesamt(person.id), pr = profil(person.id), r = rang(person, st), n = serie(pr);
+  const anteil = r.naechste ? (st - r.ab) / (r.naechste - r.ab) : 1;
+  const stufe = BELOHNUNG.stufen.find(s => s.sterne === r.naechste);
+  const heuteGeuebt = pr.tage.includes(heute());
+  const bisSerie = BELOHNUNG.serie.tage - (n % BELOHNUNG.serie.tage);
+  return el("div", { class: "karte status" },
+    el("div", { class: "status-kopf" },
+      el("div", {}, el("div", { class: "label" }, "Rang"), el("div", { class: "rang" }, r.name)),
+      el("div", { class: "status-sterne" }, el("div", { class: "label" }, "Sterne"), el("div", { class: "wert" }, String(st)))),
+    el("div", { class: "fortschritt" }, el("div", { style: `width:${Math.round(anteil * 100)}%` })),
+    el("div", { class: "klein" }, r.naechste ? `Noch ${r.naechste - st} Sterne bis ${r.naechsterName} · Belohnung: ${stufe.belohnung}` : "Höchster Rang erreicht."),
+    el("div", { class: "serie" }, ic("flamme"),
+      el("div", {}, el("b", {}, n ? `${n} ${n === 1 ? "Tag" : "Tage"} in Folge` : "Starte deine Serie"),
+        el("span", { class: "klein" }, heuteGeuebt ? `Heute erledigt · noch ${bisSerie} ${bisSerie === 1 ? "Tag" : "Tage"} bis ${BELOHNUNG.serie.belohnung}` : `Heute noch eine Runde · ${BELOHNUNG.serie.tage} Tage = ${BELOHNUNG.serie.belohnung}`))),
+    el("button", { class: "knopf zweit", onclick: gutscheinListe }, ic("ticket"), `Gutscheine (${pr.gutscheine.length})`));
 }
 
 function faecherSeite() {
-  fach = null;
-  setzeKopf(`Hallo ${person.name}!`, CFG ? null : startseite);
+  fach = null; thema(person);
+  setzeKopf(person.name, CFG && !gast ? null : startseite);
   zeige(
-    el("h2", {}, "Welches Fach?"),
+    gastBanner(),
+    statusKarte(),
+    el("h2", {}, person.thema === "held" ? "Missionen" : "Trainingseinheiten"),
     el("div", { class: "raster" }, ...FAECHER.map((f, i) => {
       const s = laden(person.id, f.id);
-      return el("button", { class: `gross c${i}`, onclick: () => fachLaden(f) },
-        el("span", { class: "emo" }, f.emo), f.name,
-        el("small", {}, `⭐ ${s.sterne} · ${s.runden} Runden`));
+      return el("button", { class: "fach", onclick: () => fachLaden(f) },
+        el("span", { class: "nr" }, String(i + 1).padStart(2, "0")), ic(f.id),
+        el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, `${s.sterne} Sterne · ${s.runden} Runden`)));
     })),
-    CFG ? el("button", { class: "reset", onclick: abmelden }, `Abmelden (${person.name})`) : null
+    (CFG || gast) ? el("button", { class: "reset", onclick: abmelden }, gast ? "Testkonto beenden" : `Abmelden (${person.name})`) : null
   );
 }
 
@@ -183,21 +274,32 @@ async function fachLaden(f) {
 }
 
 function fachSeite() {
-  const s = laden(person.id, fach.id);
+  const s = laden(person.id, fach.id), pr = profil(person.id);
   setzeKopf(fach.name, faecherSeite);
-  const held = daten.thema === "helden";
+  const tests = daten.tests || [];
+  const frei = gast || s.runden > 0;
   zeige(
-    el("div", { class: `karte ergebnis ${held ? "held" : ""}` },
-      el("div", { class: "big" }, held ? "🦸‍♂️" : fach.emo),
+    gastBanner(),
+    el("div", { class: "karte titelkarte" },
+      el("div", { class: "label" }, fach.name),
       el("h2", {}, daten.titel || fach.name),
-      daten.untertitel ? el("p", {}, daten.untertitel) : null,
-      el("p", {}, `⭐ ${s.sterne} Sterne · ${s.runden} Runden · ${daten.fragen.length} Fragen`),
-      s.offen.length ? el("p", {}, `🔁 ${s.offen.length} Fragen zum Wiederholen`) : null),
+      daten.untertitel ? el("p", { class: "klein" }, daten.untertitel) : null,
+      el("p", { class: "klein" }, `${s.sterne} Sterne · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
-    el("button", { class: "knopf", onclick: rundeStarten }, `Los geht's! (${Math.min(RUNDE, daten.fragen.length)} Fragen)`),
-    el("div", { class: "karte" }, el("b", {}, "Abzeichen"),
-      el("div", { class: "badges" }, ...BADGES.map(b => el("span", { class: `badge ${b.ok(s) ? "" : "aus"}` }, `${b.emo} ${b.name}`)))),
-    el("button", { class: "reset", onclick: () => { if (confirm(`Fortschritt in ${fach.name} für ${person.name} löschen?`)) { speichern(person.id, fach.id, {}); fachSeite(); } } }, "Fortschritt zurücksetzen")
+    el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
+    (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
+      (daten.wissen || []).length ? el("button", { class: "fach klein-fach", onclick: wissenListe }, ic("wissen"), el("div", {}, el("div", { class: "fach-name" }, "Wissen"), el("small", {}, `${daten.wissen.length} Erklärungen + Videos`))) : null,
+      (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
+    tests.length ? el("div", { class: "karte" },
+      el("div", { class: "label" }, "Kapiteltests"),
+      el("p", { class: "klein" }, `Alles richtig = Gutschein: ${BELOHNUNG.test.belohnung}.` + (frei ? "" : " Erst eine Trainingsrunde spielen, dann ist der Test frei.")),
+      ...tests.map(t => {
+        const info = pr.tests[`${fach.id}/${t.id}`] || {};
+        return el("button", { class: `test-knopf ${info.bestanden ? "ok" : ""}`, disabled: frei ? null : "disabled", onclick: () => testStarten(t) },
+          el("span", {}, t.titel, el("small", {}, info.bestanden ? "Bestanden – Gutschein erhalten" : info.versuche ? `Bester Versuch: ${info.beste} von ${t.fragen.length}` : `${t.fragen.length} Fragen`)),
+          ic(info.bestanden ? "haken" : frei ? "test" : "schloss"));
+      })) : null,
+    el("button", { class: "reset", onclick: () => { if (confirm(`Übungs-Fortschritt in ${fach.name} für ${person.name} löschen? (Gutscheine bleiben)`)) { speichern(person.id, fach.id, {}); fachSeite(); } } }, "Übungs-Fortschritt zurücksetzen")
   );
 }
 
@@ -206,103 +308,222 @@ function rundeStarten() {
   const alle = daten.fragen;
   const nachId = Object.fromEntries(alle.map(q => [q.id, q]));
   const wdh = mischen(s.offen.filter(id => nachId[id])).slice(0, 4).map(id => nachId[id]);
-  const rest = mischen(alle.filter(q => !wdh.includes(q)))
-    .sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
-  const auswahl = mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]);
-  runde = { fragen: auswahl, i: 0, richtig: 0, falsch: [] };
+  const rest = mischen(alle.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
+  runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null };
+  frageZeigen();
+}
+function testStarten(t) {
+  if (!confirm(`${t.titel}\n\n${t.fragen.length} Fragen. Die Lösungen siehst du erst am Ende. Bereit?`)) return;
+  runde = { fragen: mischen(t.fragen), i: 0, richtig: 0, falsch: [], test: t };
   frageZeigen();
 }
 
 function frageZeigen() {
   const q = runde.fragen[runde.i];
-  const held = daten.thema === "helden";
-  setzeKopf(fach.name, () => { if (confirm("Runde abbrechen?")) fachSeite(); });
+  const test = !!runde.test;
+  setzeKopf(test ? "📝 Test" : fach.name, () => { if (confirm(test ? "Test abbrechen? Er zählt dann nicht." : "Runde abbrechen?")) fachSeite(); });
   const feedback = el("div");
-  const weiter = el("button", { class: "knopf", onclick: naechste }, runde.i + 1 < runde.fragen.length ? "Weiter →" : "Ergebnis anzeigen");
+  const weiter = el("button", { class: "knopf", onclick: naechste }, runde.i + 1 < runde.fragen.length ? "Weiter →" : (test ? "Test abgeben ✔" : "Ergebnis anzeigen"));
   weiter.hidden = true;
   let fertig = false;
 
   function auswerten(ok, gegeben) {
     if (fertig) return; fertig = true;
     const s = laden(person.id, fach.id);
-    s.gesehen[q.id] = (s.gesehen[q.id] || 0) + 1;
-    if (ok) {
-      runde.richtig++; s.sterne++;
-      s.offen = s.offen.filter(id => id !== q.id);
-    } else {
-      runde.falsch.push(q);
-      if (!s.offen.includes(q.id)) s.offen.push(q.id);
-    }
+    if (!test) s.gesehen[q.id] = (s.gesehen[q.id] || 0) + 1;
+    if (ok) { runde.richtig++; s.sterne++; s.offen = s.offen.filter(id => id !== q.id); }
+    else { runde.falsch.push({ q, gegeben }); if (!test && !s.offen.includes(q.id)) s.offen.push(q.id); }
     speichern(person.id, fach.id, s);
-    sterneTop.textContent = `⭐ ${sterneGesamt(person.id)}`;
-    const loesung = [].concat(q.antwort)[0];
-    feedback.replaceChildren(el("div", { class: `feedback pop ${ok ? "ok" : "nein"}` },
-      el("b", {}, ok ? `${zufall(held ? HELDEN_LOB : LOB)} +1 ⭐` : "Leider nicht ganz."),
-      !ok ? el("div", {}, "Richtig ist: ", el("b", {}, loesung)) : null,
+    setzeKopf(test ? "📝 Test" : fach.name, zurueckZiel);
+    if (test) feedback.replaceChildren(el("div", { class: "feedback neutral pop" }, "Antwort gespeichert."));
+    else feedback.replaceChildren(el("div", { class: `feedback pop ${ok ? "ok" : "nein"}` },
+      el("b", {}, ok ? `${zufall(person.lob)} +1` : "Knapp daneben."),
+      !ok ? el("div", {}, "Richtig ist: ", el("b", {}, [].concat(q.antwort)[0])) : null,
       q.erklaerung ? el("div", {}, "💡 ", q.erklaerung) : null));
     weiter.hidden = false; setTimeout(() => weiter.focus(), 0);
   }
 
-  let eingabeTeil;
+  let teil;
   if (q.typ === "auswahl") {
     const opts = mischen(q.optionen);
-    const knoepfe = opts.map(o => el("button", { class: "opt", onclick: () => {
+    const knoepfe = opts.map((o, i) => el("button", { class: "opt", onclick: () => {
       const ok = stimmt(o, q.antwort);
-      knoepfe.forEach(k => { k.disabled = true; if (stimmt(k.textContent, q.antwort)) k.classList.add("richtig"); });
-      if (!ok) btn(o).classList.add("falsch");
+      knoepfe.forEach(k => { k.disabled = true; if (!test && stimmt(k.textContent, q.antwort)) k.classList.add("richtig"); });
+      knoepfe[i].classList.add(test ? "gewaehlt" : (ok ? "richtig" : "falsch"));
       auswerten(ok, o);
     } }, o));
-    const btn = o => knoepfe[opts.indexOf(o)];
-    eingabeTeil = el("div", { class: "optionen" }, ...knoepfe);
+    teil = el("div", { class: "optionen" }, ...knoepfe);
   } else {
-    const inp = el("input", { class: "eingabe", type: "text", autocomplete: "off", autocapitalize: "off", spellcheck: "false", placeholder: q.platzhalter || "Antwort eintippen …", inputmode: q.zahl ? "decimal" : "text" });
-    const pruefen = el("button", { class: "knopf", onclick: () => { if (!inp.value.trim()) return; inp.disabled = true; pruefen.hidden = true; auswerten(stimmt(inp.value, q.antwort), inp.value); } }, "Prüfen ✔");
+    const inp = el("input", { class: "eingabe", type: "text", autocomplete: "off", autocapitalize: "off", spellcheck: "false", placeholder: "Antwort eintippen …", inputmode: q.zahl ? "decimal" : "text" });
+    const pruefen = el("button", { class: "knopf", onclick: () => { if (!inp.value.trim()) return; inp.disabled = true; pruefen.hidden = true; auswerten(stimmt(inp.value, q.antwort), inp.value); } }, test ? "Antwort abgeben" : "Prüfen ✔");
     inp.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); if (!fertig) pruefen.click(); } });
-    eingabeTeil = el("div", {}, inp, pruefen);
+    teil = el("div", {}, inp, pruefen);
     setTimeout(() => inp.focus(), 50);
   }
-
   zeige(
+    gastBanner(),
     el("div", { class: "fortschritt" }, el("div", { style: `width:${(runde.i / runde.fragen.length) * 100}%` })),
-    el("div", { class: "karte pop" },
-      el("div", { class: "frage-nr" }, el("span", {}, `Frage ${runde.i + 1} von ${runde.fragen.length}`), el("span", {}, q.art || "")),
-      el("p", { class: "frage" }, q.frage),
-      eingabeTeil, feedback, weiter)
-  );
+    el("div", { class: "karte pop frage-karte" },
+      el("div", { class: "frage-nr" }, el("span", { class: "label" }, `${test ? "Test" : "Frage"} ${runde.i + 1} / ${runde.fragen.length}`), el("span", { class: "label" }, q.art || "")),
+      el("p", { class: "frage" }, q.frage), teil, feedback, weiter));
 }
 
-function naechste() {
-  runde.i++;
-  if (runde.i < runde.fragen.length) frageZeigen(); else ergebnis();
-}
+function naechste() { runde.i++; if (runde.i < runde.fragen.length) frageZeigen(); else ergebnis(); }
 
 function ergebnis() {
+  const n = runde.fragen.length, perfekt = runde.richtig === n, test = runde.test;
   const s = laden(person.id, fach.id);
-  const vorher = BADGES.filter(b => b.ok(s)).map(b => b.id);
-  s.runden++;
-  const n = runde.fragen.length;
-  if (runde.richtig === n) { s.perfekt++; s.sterne += 3; }
+  if (!test) { s.runden++; if (perfekt) { s.perfekt++; s.sterne += 3; } }
   speichern(person.id, fach.id, s);
-  const neu = BADGES.filter(b => b.ok(s) && !vorher.includes(b.id));
-  const anteil = runde.richtig / n;
-  const held = daten.thema === "helden";
-  const text = anteil === 1 ? (held ? "Perfekt! Du bist ein echter Englisch-Superheld! 🦸‍♂️ +3 Bonus-Sterne" : "Perfekt! Alles richtig! +3 Bonus-Sterne")
-    : anteil >= .7 ? "Toll gemacht! 💪" : anteil >= .4 ? "Gut! Mit Üben wird's noch besser. 🙂" : "Dranbleiben – jede Runde macht dich stärker! 💪";
+  const neu = belohnungenPruefen((pr, neu) => {
+    if (!test) return;
+    const k = `${fach.id}/${test.id}`, info = pr.tests[k] || { versuche: 0, beste: 0, bestanden: false };
+    info.versuche++; info.beste = Math.max(info.beste, runde.richtig);
+    if (perfekt && !info.bestanden) { info.bestanden = true; neu.push(gutscheinGeben(pr, BELOHNUNG.test.belohnung, `${test.titel} fehlerfrei bestanden 📝`)); }
+    pr.tests[k] = info;
+  });
+  const anteil = runde.richtig / n, held = person.thema === "held";
+  const text = perfekt ? (test ? "Fehlerfrei bestanden." : held ? "Mission erfüllt. +3 Bonus-Sterne." : "Zu null gewonnen. +3 Bonus-Sterne.")
+    : anteil >= .7 ? (held ? "Starke Mission." : "Starkes Spiel.") : anteil >= .4 ? "Solide. Mit Training wird's noch besser." : "Dranbleiben – jede Runde macht dich stärker.";
   setzeKopf(fach.name, fachSeite);
   zeige(
-    el("div", { class: `karte ergebnis pop ${held ? "held" : ""}` },
-      el("div", { class: "big" }, anteil === 1 ? "🏆" : anteil >= .7 ? "🌟" : "⭐"),
-      el("h2", {}, `${runde.richtig} von ${n} richtig`),
+    gastBanner(),
+    el("div", { class: "karte pop titelkarte" },
+      el("div", { class: "label" }, test ? "Testergebnis" : (held ? "Missionsbericht" : "Spielbericht")),
+      el("h2", {}, `${runde.richtig} / ${n} richtig`),
       el("p", {}, text),
-      neu.length ? el("div", {}, el("p", {}, "Neues Abzeichen!"), el("div", { class: "badges" }, ...neu.map(b => el("span", { class: "badge" }, `${b.emo} ${b.name}`)))) : null),
-    runde.falsch.length ? el("div", { class: "karte" }, el("b", {}, "Diese Fragen kommen später nochmal:"),
-      el("ul", {}, ...runde.falsch.map(q => el("li", {}, q.frage, " → ", el("b", {}, [].concat(q.antwort)[0]))))) : null,
-    el("button", { class: "knopf", onclick: rundeStarten }, "Noch eine Runde 🔁"),
+      test && !perfekt ? el("p", { class: "klein" }, "Für den Gutschein muss alles richtig sein. Übe die Fehler und probier den Test nochmal.") : null),
+    ...neu.map(g => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(g) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), g.was, el("small", {}, "Antippen zum Anzeigen")))),
+    runde.falsch.length ? el("div", { class: "karte" }, el("div", { class: "label" }, test ? "Noch falsch" : "Kommt später nochmal"),
+      el("ul", {}, ...runde.falsch.map(({ q }) => el("li", {}, q.frage, " → ", el("b", {}, [].concat(q.antwort)[0]))))) : null,
+    el("button", { class: "knopf", onclick: rundeStarten }, "Nächste Runde"),
+    el("button", { class: "knopf zweit", onclick: fachSeite }, "Zurück zum Fach"),
     el("button", { class: "knopf zweit", onclick: faecherSeite }, "Anderes Fach")
   );
 }
 
+function gutscheinZeigen(g) {
+  setzeKopf("Gutschein", gutscheinListe);
+  const [d1, d2, d3] = g.datum.split("-");
+  zeige(
+    el("div", { class: `gutschein pop ${gast ? "ungueltig" : ""}` },
+      el("div", { class: "gs-kopf" }, "Gutschein · Lern-Helden"),
+      el("div", { class: "gs-was" }, g.was),
+      el("div", { class: "gs-fuer" }, `für ${person.name}`),
+      el("div", { class: "gs-grund" }, g.grund),
+      el("div", { class: "gs-fuss" }, el("span", {}, `${d3}.${d2}.${d1}`), el("span", { class: "gs-code" }, g.code)),
+      gast ? el("div", { class: "gs-stempel" }, "TEST") : null),
+    el("p", { class: "hinweis mitte" }, "Screenshot machen und an Papa schicken."),
+    el("button", { class: "knopf zweit", onclick: gutscheinListe }, "Alle Gutscheine"),
+    el("button", { class: "knopf zweit", onclick: faecherSeite }, "Zurück"));
+}
+function gutscheinListe() {
+  const pr = profil(person.id);
+  setzeKopf("Meine Gutscheine", faecherSeite);
+  zeige(
+    gastBanner(),
+    el("h2", {}, "Gutscheine"),
+    pr.gutscheine.length ? null : el("p", { class: "hinweis" }, "Noch keine Gutscheine. Sammle Sterne, übe jeden Tag oder schaffe einen Test fehlerfrei!"),
+    ...pr.gutscheine.slice().reverse().map(g => el("button", { class: "test-knopf", onclick: () => gutscheinZeigen(g) }, el("span", {}, g.was, el("small", {}, `${g.grund} · ${g.code}`)), ic("ticket"))),
+    el("div", { class: "karte" }, el("div", { class: "label" }, "So bekommst du Gutscheine"),
+      el("ul", {},
+        el("li", {}, `Kapiteltest fehlerfrei → ${BELOHNUNG.test.belohnung}`),
+        el("li", {}, `${BELOHNUNG.serie.tage} Tage hintereinander üben → ${BELOHNUNG.serie.belohnung}`),
+        ...BELOHNUNG.stufen.map(s => el("li", {}, `${s.sterne} Sterne → ${s.belohnung}`)))));
+}
+
+// ---------- Wissen ----------
+function wissenListe() {
+  setzeKopf("Wissen", fachSeite);
+  zeige(el("div", { class: "label" }, fach.name), el("h2", {}, "Wissen"),
+    ...daten.wissen.map((w, i) => el("button", { class: "test-knopf", onclick: () => wissenZeigen(i) }, el("span", {}, w.titel, el("small", {}, w.kurz || "")), ic("wissen"))));
+}
+function wissenZeigen(i) {
+  const w = daten.wissen[i];
+  setzeKopf("Wissen", wissenListe);
+  const yt = w.video ? `https://www.youtube.com/results?search_query=${encodeURIComponent(w.video)}` : null;
+  zeige(
+    el("div", { class: "karte wissen-text pop" },
+      el("div", { class: "label" }, fach.name), el("h2", {}, w.titel),
+      ...(w.text || []).map(t => el("p", {}, t)),
+      ...(w.schritte || []).map((t, n) => el("div", { class: "schritt" }, el("b", {}, `Schritt ${n + 1}: `), t)),
+      w.beispiel ? el("div", {}, el("div", { class: "label" }, "Beispiel"), el("div", { class: "beispiel" }, w.beispiel)) : null,
+      w.merke ? el("div", { class: "feedback ok" }, el("b", {}, "Merke: "), w.merke) : null,
+      yt ? el("a", { class: "link-knopf", href: yt, target: "_blank", rel: "noopener" }, ic("play"), "Erklärvideos auf YouTube ansehen") : null),
+    i + 1 < daten.wissen.length ? el("button", { class: "knopf zweit", onclick: () => wissenZeigen(i + 1) }, `Weiter: ${daten.wissen[i + 1].titel}`) : null,
+    el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), "Jetzt üben"));
+}
+
+// ---------- Sprechen (Englisch, Vorlesen + Mikrofon) ----------
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+function vorlesen(text) {
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-GB"; u.rate = 0.9;
+    const v = speechSynthesis.getVoices().find(v => /en-GB/i.test(v.lang)) || speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+    if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+function sprechListe() {
+  setzeKopf("Sprechen", fachSeite);
+  zeige(el("div", { class: "label" }, fach.name), el("h2", {}, "Sprechen"),
+    el("p", { class: "klein" }, SR ? "Die App spricht vor, du antwortest laut auf Englisch. Tipp: Kopfhörer oder ruhiger Raum." : "Dein Browser kann leider nicht zuhören (am besten Chrome verwenden). Du kannst die Antworten aber eintippen."),
+    ...daten.sprechen.map((g, i) => el("button", { class: "test-knopf", onclick: () => gespraech(g) }, el("span", {}, g.titel, el("small", {}, g.kurz || `${g.schritte.length} Fragen`)), ic("mikro"))));
+}
+function gespraech(g) {
+  let i = 0, punkte = 0;
+  const verlauf = el("div");
+  const bereich = el("div");
+  setzeKopf("Sprechen", sprechListe);
+  zeige(el("div", { class: "karte" }, el("div", { class: "label" }, g.titel), verlauf, bereich));
+  const pruefe = (text, sch) => { const t = norm(text).replace(/[,.!?']/g, " "); return sch.erwartet.some(alt => alt.every(w => new RegExp(`\\b${norm(w).replace(/[,.!?']/g, " ")}\\b`).test(t))); };
+  function schritt() {
+    if (i >= g.schritte.length) {
+      const s = laden(person.id, fach.id); s.sterne += punkte; speichern(person.id, fach.id, s);
+      const neu = belohnungenPruefen();
+      setzeKopf("Sprechen", sprechListe);
+      bereich.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, `Gespräch geschafft! +${punkte} Sterne`)),
+        ...neu.map(gs => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(gs) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), gs.was))),
+        el("button", { class: "knopf", onclick: () => gespraech(g) }, "Nochmal"), el("button", { class: "knopf zweit", onclick: sprechListe }, "Andere Gespräche"));
+      return;
+    }
+    const sch = g.schritte[i];
+    verlauf.append(el("div", { class: "sprechblase pop" }, sch.sagt));
+    vorlesen(sch.sagt);
+    let versuche = 0;
+    const info = el("div");
+    const fertig = (ok, text) => {
+      if (text) verlauf.append(el("div", { class: "sprechblase ich pop" }, text));
+      if (ok) { punkte++; info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, zufall(person.lob)), sch.lob ? ` ${sch.lob}` : "")); }
+      else info.replaceChildren(el("div", { class: "feedback nein pop" }, el("b", {}, "Fast! "), "So könntest du sagen: ", el("b", {}, sch.tipp)));
+      if (ok || versuche >= 2) { i++; knoepfe.replaceChildren(el("button", { class: "knopf", onclick: schritt }, "Weiter")); }
+    };
+    const knoepfe = el("div");
+    const eingabe = el("input", { class: "eingabe", placeholder: "oder hier eintippen …", autocomplete: "off" });
+    eingabe.addEventListener("keydown", e => { if (e.key === "Enter" && eingabe.value.trim()) { versuche++; const t = eingabe.value; eingabe.value = ""; fertig(pruefe(t, sch), t); } });
+    const mikro = el("button", { class: "mikro", onclick: () => {
+      if (!SR) return;
+      const r = new SR(); r.lang = "en-GB"; r.interimResults = false; r.maxAlternatives = 3;
+      mikro.classList.add("an");
+      r.onresult = e => { const alts = [...e.results[0]].map(a => a.transcript); versuche++; const ok = alts.some(a => pruefe(a, sch)); fertig(ok, alts[0]); };
+      r.onerror = e => info.replaceChildren(el("div", { class: "feedback neutral" }, e.error === "not-allowed" ? "Bitte erlaube das Mikrofon." : "Nichts gehört – tippe nochmal aufs Mikrofon."));
+      r.onend = () => mikro.classList.remove("an");
+      r.start();
+    } }, ic("mikro"));
+    knoepfe.replaceChildren(...[
+      SR ? mikro : null,
+      el("button", { class: "knopf zweit", onclick: () => vorlesen(sch.sagt) }, "Nochmal vorlesen"),
+      eingabe,
+      el("button", { class: "reset", onclick: () => { versuche = 9; fertig(false); } }, "Weiß ich nicht – zeig mir die Lösung")].filter(Boolean));
+    bereich.replaceChildren(info, knoepfe);
+  }
+  schritt();
+}
+
 async function starten() {
+  try { const r = await fetch(`belohnungen.json?v=${Date.now()}`); if (r.ok) BELOHNUNG = Object.assign(BELOHNUNG, await r.json()); } catch (e) {}
   if (!CFG) { startseite(); return; }
   zeige(el("p", { class: "hinweis" }, "Lade …"));
   try {
@@ -311,7 +532,9 @@ async function starten() {
     if (user) { try { await wolkeVerbinden(user); } catch (e) { console.error(e); } }
   } catch (e) {
     console.error(e);
-    zeige(el("div", { class: "karte" }, el("p", {}, "Die App braucht Internet zum Anmelden. Bitte später nochmal probieren. 📶")), el("button", { class: "knopf", onclick: () => location.reload() }, "Nochmal versuchen"));
+    zeige(el("div", { class: "karte" }, el("p", {}, "Die App braucht Internet zum Anmelden. Bitte später nochmal probieren. 📶")),
+      el("button", { class: "knopf", onclick: () => location.reload() }, "Nochmal versuchen"),
+      el("button", { class: "reset", onclick: gastWahl }, "👀 Testkonto (Papa)"));
     return;
   }
   startseite();
