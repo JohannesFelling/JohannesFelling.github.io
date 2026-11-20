@@ -3,6 +3,8 @@
 
   python3 korrektur.py holen <ordner>          → offene Aufsätze als <id>.jpg + <id>.json in <ordner>
   python3 korrektur.py zurueck <id> <datei>    → Korrektur (JSON) in die App schreiben, Status "korrigiert"
+  python3 korrektur.py material-holen <ordner> → neues Unterrichtsmaterial als <ordner>/<kind>/<fach>/<paket>/<nr>.jpg + paket.json
+  python3 korrektur.py material-fertig <paket>… → alle Fotos dieser Pakete auf Status "verarbeitet" setzen
 
 Anmeldung als korrektur@johannesfelling.at; Passwort aus der Umgebungsvariable LERNAPP_KORREKTUR_PASSWORT.
 Korrektur-JSON: {lesbar, originaltext, korrigierter_text, fehler:[{original,korrektur,art,erklaerung}], lob, tipps:[...], einschaetzung}
@@ -77,7 +79,44 @@ def zurueck(id_, datei):
     anfrage(f"{DOCS}/aufsaetze/{id_}?{maske}", {"fields": felder}, "PATCH", token)
     print(f"{id_}: Korrektur gespeichert")
 
+def material_alle(token, status):
+    q = {"structuredQuery": {"from": [{"collectionId": "material"}],
+         "where": {"fieldFilter": {"field": {"fieldPath": "status"}, "op": "EQUAL", "value": {"stringValue": status}}}}}
+    for zeile in anfrage(f"{DOCS}:runQuery", q, "POST", token):
+        d = zeile.get("document")
+        if d: yield d["name"].split("/")[-1], {k: von_fs(v) for k, v in d.get("fields", {}).items()}
+
+def material_holen(ordner):
+    token = anmelden()
+    pakete = {}
+    for id_, f in material_alle(token, "neu"):
+        bild = f.pop("bild", "")
+        p = pakete.setdefault(f["paket"], {"paket": f["paket"], "kind": f.get("kind"), "fach": f.get("fach"), "kapitel": f.get("kapitel", ""), "datum": f.get("datum"), "fotos": []})
+        pfad = os.path.join(ordner, f.get("kind", "?"), f.get("fach", "?"), f["paket"])
+        os.makedirs(pfad, exist_ok=True)
+        datei = os.path.join(pfad, f"{int(f.get('nr', 0)):02d}.jpg")
+        with open(datei, "wb") as fh: fh.write(base64.b64decode(bild))
+        p["fotos"].append({"id": id_, "nr": f.get("nr"), "datei": datei})
+    for p in pakete.values():
+        p["fotos"].sort(key=lambda x: x["nr"] or 0)
+        pfad = os.path.join(ordner, p["kind"], p["fach"], p["paket"])
+        with open(os.path.join(pfad, "paket.json"), "w") as fh: json.dump(p, fh, ensure_ascii=False, indent=1)
+        print(f"{p['paket']}\t{p['kind']}\t{p['fach']}\t{len(p['fotos'])} Fotos\t{p['kapitel'] or '-'}\t{pfad}")
+    print(f"{len(pakete)} neue Material-Pakete")
+
+def material_fertig(pakete):
+    token = anmelden()
+    felder = {"status": zu_fs("verarbeitet"), "bild": zu_fs(""), "verarbeitet_am": zu_fs(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))}
+    maske = "&".join(f"updateMask.fieldPaths={x}" for x in felder)
+    n = 0
+    for id_, f in material_alle(token, "neu"):
+        if f.get("paket") in pakete:
+            anfrage(f"{DOCS}/material/{id_}?{maske}", {"fields": felder}, "PATCH", token); n += 1
+    print(f"{n} Fotos als verarbeitet markiert")
+
 if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "holen": holen(sys.argv[2])
     elif len(sys.argv) >= 4 and sys.argv[1] == "zurueck": zurueck(sys.argv[2], sys.argv[3])
+    elif len(sys.argv) >= 3 and sys.argv[1] == "material-holen": material_holen(sys.argv[2])
+    elif len(sys.argv) >= 3 and sys.argv[1] == "material-fertig": material_fertig(set(sys.argv[2:]))
     else: print(__doc__)

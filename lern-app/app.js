@@ -50,6 +50,7 @@ const ICONS = {
   auge: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   play: '<path d="M7 4l13 8-13 8z"/>',
   wissen: '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
   kamera: '<path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/>',
   mikro: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/>',
 };
@@ -434,6 +435,7 @@ function fachSeite() {
     modusWahl(),
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
     FOTO[fach.id] ? el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("kamera"), el("div", {}, el("div", { class: "fach-name" }, `Foto hochladen: ${FOTO[fach.id].titel}`), el("small", {}, FOTO[fach.id].kurz))) : null,
+    el("button", { class: "fach klein-fach material-knopf", onclick: materialSeite }, ic("plus"), el("div", {}, el("div", { class: "fach-name" }, "Neues Material hochladen"), el("small", {}, "Buch, Heft oder Arbeitsblatt fotografieren – daraus werden Übungen"))),
     (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
       (daten.wissen || []).length ? el("button", { class: "fach klein-fach", onclick: wissenListe }, ic("wissen"), el("div", {}, el("div", { class: "fach-name" }, "Wissen"), el("small", {}, `${daten.wissen.length} Erklärungen + Videos`))) : null,
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
@@ -673,6 +675,64 @@ function wissenFuer(q) {
   return (daten.wissen || []).find(w => (w.stichworte || []).some(s => { try { return new RegExp(s, "i").test(hay); } catch (e) { return false; } }));
 }
 // ---------- Aufsatzkorrektur (Foto → Firestore → Korrektur kommt zurück) ----------
+// ---------- Unterrichtsmaterial hochladen (mehrere Fotos → Firestore „material“ → stündlich zu Übungen verarbeitet) ----------
+async function materialSeite() {
+  setzeKopf("Material", fachSeite);
+  if (gast || !wolke || !fb) {
+    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Material hochladen"), el("p", {}, gast ? "Im Testkonto nicht verfügbar – dafür muss ein Kind angemeldet sein." : "Dafür musst du angemeldet sein.")));
+    return;
+  }
+  zeige(el("p", { class: "hinweis mitte" }, "Lade …"));
+  let alte = [];
+  try {
+    const snap = await fb.F.getDocs(fb.F.query(fb.F.collection(fb.db, "material"), fb.F.where("uid", "==", wolke.uid)));
+    const pakete = {};
+    snap.forEach(d => { const x = d.data(); if (x.fach !== fach.id) return; const k = x.paket; (pakete[k] = pakete[k] || { kapitel: x.kapitel, datum: x.datum, n: 0, fertig: 0 }); pakete[k].n++; if (x.status === "verarbeitet") pakete[k].fertig++; });
+    alte = Object.values(pakete).sort((a, b) => (b.datum || "").localeCompare(a.datum || ""));
+  } catch (e) { console.error(e); }
+  const fotos = [];
+  const vorschau = el("div", { class: "foto-raster" });
+  const info = el("div");
+  const kapitel = el("input", { class: "eingabe", placeholder: "Kapitel / Thema (z. B. „Unit 5 – Food“ oder „Brüche“)", maxlength: "120" });
+  const kamera = el("input", { type: "file", accept: "image/*", capture: "environment", style: "display:none" });
+  const galerie = el("input", { type: "file", accept: "image/*", multiple: "multiple", style: "display:none" });
+  const senden = el("button", { class: "knopf", disabled: "disabled" }, ic("play"), "Hochladen");
+  const neuZeichnen = () => {
+    vorschau.replaceChildren(...fotos.map((f, i) => el("div", { class: "foto-klein" }, el("img", { src: f.url, alt: `Foto ${i + 1}` }), el("span", {}, String(i + 1)),
+      el("button", { class: "foto-weg", title: "Entfernen", onclick: () => { URL.revokeObjectURL(f.url); fotos.splice(i, 1); neuZeichnen(); } }, "✕"))));
+    senden.disabled = !fotos.length; senden.lastChild.textContent = fotos.length ? `${fotos.length} ${fotos.length === 1 ? "Foto" : "Fotos"} hochladen` : "Hochladen";
+  };
+  const dazu = inp => { for (const f of inp.files) if (fotos.length < 20) fotos.push({ datei: f, url: URL.createObjectURL(f) }); inp.value = ""; neuZeichnen(); };
+  kamera.addEventListener("change", () => dazu(kamera));
+  galerie.addEventListener("change", () => dazu(galerie));
+  senden.addEventListener("click", async () => {
+    if (!fotos.length) return;
+    senden.disabled = true;
+    const paket = `${wolke.kind}-${Date.now().toString(36)}`, datum = `${heute()} ${uhrzeit()}`, kap = kapitel.value.trim();
+    try {
+      for (let i = 0; i < fotos.length; i++) {
+        info.replaceChildren(el("div", { class: "feedback neutral" }, `Foto ${i + 1} von ${fotos.length} wird hochgeladen …`));
+        const bild = await bildVerkleinern(fotos[i].datei, 1800, 0.75);
+        await fb.F.addDoc(fb.F.collection(fb.db, "material"), { uid: wolke.uid, kind: wolke.kind, fach: fach.id, kapitel: kap, paket, nr: i + 1, von: fotos.length, bild, status: "neu", datum, erstellt: fb.F.serverTimestamp() });
+      }
+      const pr = profil(person.id); protokoll(pr, { f: fach.id, art: "Material", titel: `${kap || "ohne Titel"} (${fotos.length} Fotos)` }); speichern(person.id, PROFIL, pr);
+      info.replaceChildren(el("div", { class: "feedback ok pop" }, el("b", {}, "Danke! "), "Daraus werden in den nächsten Stunden neue Übungen, eine Erklärung und ein Kapiteltest."));
+      fotos.splice(0); setTimeout(materialSeite, 3000);
+    } catch (e) { console.error(e); info.replaceChildren(el("div", { class: "feedback nein" }, "Hochladen hat nicht geklappt. Ist das Internet an?")); senden.disabled = false; }
+  });
+  zeige(
+    el("div", { class: "karte" }, el("div", { class: "label" }, `${fach.name} · Material`), el("h2", {}, "Neues Material hochladen"),
+      el("p", { class: "klein" }, "Fotografiere die Seiten aus Buch, Heft oder Arbeitsblatt – gerade von oben, bei gutem Licht. Du kannst viele Fotos auf einmal hochladen (bis 20)."),
+      kapitel,
+      el("div", { class: "raster zwei" },
+        el("button", { class: "knopf zweit", onclick: () => kamera.click() }, ic("kamera"), "Foto machen"),
+        el("button", { class: "knopf zweit", onclick: () => galerie.click() }, ic("plus"), "Aus Galerie")),
+      vorschau, senden, kamera, galerie, info),
+    alte.length ? el("div", { class: "label" }, "Schon hochgeladen") : null,
+    ...alte.map(a => el("div", { class: `test-knopf ${a.fertig === a.n ? "ok" : ""}` },
+      el("span", {}, a.kapitel || "Material", el("small", {}, `${a.datum || ""} · ${a.n} ${a.n === 1 ? "Foto" : "Fotos"} · ${a.fertig === a.n ? "Übungen sind da ✓" : "wird verarbeitet …"}`)),
+      ic(a.fertig === a.n ? "haken" : "schloss"))));
+}
 function bildVerkleinern(datei, max = 1500, q = 0.72) {
   return new Promise((ok, fehler) => {
     const img = new Image();

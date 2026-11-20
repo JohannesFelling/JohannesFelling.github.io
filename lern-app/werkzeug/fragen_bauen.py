@@ -10,9 +10,32 @@ def UE(frage, antwort, erkl=""): return E(frage, antwort, erkl, "Übersetzen")
 def L(frage, antwort, erkl=""): return E(frage, antwort, erkl, "Lücke füllen")
 def M(frage, antwort, erkl=""): return E(frage, antwort, erkl, "Rechnen", True)
 
+MATERIAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "material")
+
+def material_laden(person, fach):
+    """Aus hochgeladenem Unterrichtsmaterial erzeugte Pakete: werkzeug/material/<kind>/<fach>/<paket>.json
+    {paket, kapitel, datum, fragen:[…], wissen:[…], test:{titel, fragen:[…]}} – Fragen im selben Format wie unten."""
+    import glob
+    pakete = []
+    for f in sorted(glob.glob(os.path.join(MATERIAL, person, fach, "*.json"))):
+        with open(f, encoding="utf-8") as fh: pakete.append(json.load(fh))
+    return pakete
+
 def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=None, prefix=None, tests=None, wissen=None, sprechen=None):
     fragen = json.loads(json.dumps(fragen))
     for i, q in enumerate(fragen): q["id"] = f"{prefix or fach[:2]}{i+1:03d}"
+    pakete = material_laden(person, fach)
+    if pakete:
+        if platzhalter:  # echtes Material ersetzt die Beispiel-Fragen
+            fragen, wissen, tests, platzhalter = [], [], [], False
+            untertitel = " · ".join(p.get("kapitel") or "" for p in pakete if p.get("kapitel"))[:120]
+        tests = list(tests or [])
+        wissen = list(wissen or [])
+        for p in pakete:
+            for i, q in enumerate(p.get("fragen", [])): fragen.append(dict(q, id=f"{p['paket']}-{i+1:02d}"))
+            wissen += p.get("wissen", [])
+            if p.get("test", {}).get("fragen"):
+                tests.append({"id": p["paket"], "titel": p["test"].get("titel") or f"Test {p.get('kapitel') or ''}".strip(), "fragen": p["test"]["fragen"]})
     d = {"titel": titel, "untertitel": untertitel, "platzhalter": platzhalter}
     if thema: d["thema"] = thema
     d["fragen"] = fragen
