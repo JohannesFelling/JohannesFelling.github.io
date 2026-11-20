@@ -259,17 +259,56 @@ function statusKarte() {
     el("button", { class: "knopf zweit", onclick: gutscheinListe }, ic("ticket"), `Gutscheine (${pr.gutscheine.length})`));
 }
 
+// ---------- Termine (Tests / Schularbeiten) ----------
+const TERMINE = {};
+async function termineLaden(pid) {
+  try { const r = await fetch(`daten/${pid}/termine.json?v=${Date.now()}`); TERMINE[pid] = r.ok ? await r.json() : { termine: [] }; }
+  catch (e) { TERMINE[pid] = TERMINE[pid] || { termine: [] }; }
+}
+const WT = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+function tageBis(datum) { const [y, m, d] = datum.split("-").map(Number); const a = new Date(); a.setHours(0, 0, 0, 0); return Math.round((new Date(y, m - 1, d) - a) / 86400000); }
+function datumLang(datum) { const [y, m, d] = datum.split("-").map(Number); return `${WT[new Date(y, m - 1, d).getDay()]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; }
+function wannText(n) { return n === 0 ? "HEUTE" : n === 1 ? "morgen" : `in ${n} Tagen`; }
+const kommend = pid => ((TERMINE[pid] || {}).termine || []).filter(t => tageBis(t.datum) >= 0).sort((a, b) => a.datum.localeCompare(b.datum));
+function naechsterTerminFuer(pid, fid) { return kommend(pid).find(t => t.fach === fid && tageBis(t.datum) <= 14); }
+function termineKarte() {
+  const k = kommend(person.id);
+  if (!k.length) return null;
+  const [n, ...rest] = k, tage = tageBis(n.datum), bald = rest.filter(t => tageBis(t.datum) <= 14);
+  const f = FAECHER.find(x => x.id === n.fach);
+  return el("div", { class: `karte termin-karte ${tage <= 3 ? "dringend" : ""}` },
+    el("div", { class: "label" }, "Als Nächstes"),
+    el("div", { class: "termin-haupt" },
+      el("div", {}, el("div", { class: "termin-titel" }, n.titel), el("div", { class: "klein" }, `${datumLang(n.datum)}${n.dauer ? ` · ${n.dauer} min` : ""}`)),
+      el("div", { class: "termin-countdown" }, el("div", { class: "wert" }, tage === 0 ? "!" : String(tage)), el("div", { class: "klein" }, tage === 0 ? "heute" : tage === 1 ? "Tag" : "Tage"))),
+    f ? el("button", { class: "knopf", onclick: () => fachLaden(f) }, ic("play"), `Jetzt ${f.name} lernen`) : el("p", { class: "klein" }, "Dieses Fach ist (noch) nicht in der App – lern mit deinen Unterlagen."),
+    bald.length ? el("div", { class: "termin-liste" }, el("div", { class: "label" }, "In den nächsten 2 Wochen"),
+      ...bald.map(t => el("div", { class: "zeile" }, el("span", {}, `${datumLang(t.datum)} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
+    el("button", { class: "reset", onclick: termineSeite }, "Alle Termine"));
+}
+function termineSeite() {
+  const T = TERMINE[person.id] || { termine: [] };
+  setzeKopf("Termine", faecherSeite);
+  const alle = (T.termine || []).slice().sort((a, b) => a.datum.localeCompare(b.datum));
+  zeige(el("div", { class: "label" }, person.name), el("h2", {}, "Tests & Schularbeiten"),
+    el("div", { class: "karte" }, ...alle.map(t => { const n = tageBis(t.datum);
+      return el("div", { class: `zeile ${n < 0 ? "vorbei" : n <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)} · ${t.titel}${t.dauer ? ` (${t.dauer} min)` : ""}`), el("b", {}, n < 0 ? "vorbei" : wannText(n))); })),
+    (T.frei || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Frei"), ...T.frei.map(f => el("div", { class: "zeile" }, el("span", {}, f.titel), el("b", {}, `${datumLang(f.von)} – ${datumLang(f.bis)}`)))) : null);
+}
+
 function faecherSeite() {
   fach = null; thema(person);
   setzeKopf(person.name, CFG && !gast ? null : startseite);
   zeige(
     gastBanner(),
+    termineKarte(),
     statusKarte(),
     el("h2", {}, person.thema === "held" ? "Missionen" : "Trainingseinheiten"),
     el("div", { class: "raster" }, ...FAECHER.map((f, i) => {
       const s = laden(person.id, f.id);
-      return el("button", { class: "fach", onclick: () => fachLaden(f) },
-        el("span", { class: "nr" }, String(i + 1).padStart(2, "0")), ic(f.id),
+      const t = naechsterTerminFuer(person.id, f.id);
+      return el("button", { class: `fach ${t ? "markiert" : ""}`, onclick: () => fachLaden(f) },
+        t ? el("span", { class: "termin-badge" }, `${t.art === "Schularbeit" ? "SA" : "Test"} ${wannText(tageBis(t.datum))}`) : el("span", { class: "nr" }, String(i + 1).padStart(2, "0")), ic(f.id),
         el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, `${s.sterne} Sterne · ${s.runden} Runden`)));
     })),
     (CFG || gast) ? el("button", { class: "reset", onclick: abmelden }, gast ? "Testkonto beenden" : `Abmelden (${person.name})`) : null
@@ -303,6 +342,7 @@ function fachSeite() {
       el("h2", {}, daten.titel || fach.name),
       daten.untertitel ? el("p", { class: "klein" }, daten.untertitel) : null,
       el("p", { class: "klein" }, `${s.sterne} Sterne · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
+    (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
     (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
@@ -622,7 +662,10 @@ function kindStatistik(p, st, dateien) {
   const sum = ts => ts.reduce((n, t) => n + ((pr.zeit[t] || {}).ges || 0), 0);
   const fachZeit = f => Object.values(pr.zeit).reduce((n, z) => n + (z[f] || 0), 0);
   const fachName = id => (FAECHER.find(f => f.id === id) || { name: id }).name;
+  const kt = kommend(p.id).slice(0, 5);
   return el("div", { class: "pop" },
+    kt.length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Nächste Tests & Schularbeiten"),
+      ...kt.map(t => el("div", { class: `zeile ${tageBis(t.datum) <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
     el("div", { class: "karte" }, el("div", { class: "label" }, "Lernzeit"),
       el("div", { class: "kpi-reihe" },
         el("div", {}, el("div", { class: "kpi-wert" }, dauer((pr.zeit[heute()] || {}).ges)), el("div", { class: "klein" }, "heute")),
@@ -653,6 +696,7 @@ function kindStatistik(p, st, dateien) {
 }
 
 async function starten() {
+  await Promise.all(PERSONEN.map(p => termineLaden(p.id)));
   try { const r = await fetch(`belohnungen.json?v=${Date.now()}`); if (r.ok) BELOHNUNG = Object.assign(BELOHNUNG, await r.json()); } catch (e) {}
   if (!CFG) { startseite(); return; }
   zeige(el("p", { class: "hinweis" }, "Lade …"));

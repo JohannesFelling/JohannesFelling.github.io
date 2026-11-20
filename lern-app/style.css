@@ -187,3 +187,18 @@ body.thema-sport{
 .reiter{display:flex;gap:8px;margin:6px 0 14px}
 .reiter button{flex:1;padding:12px;border-radius:10px;border:1px solid var(--linie);background:var(--panel);color:var(--leise);font-family:var(--titel);font-weight:700;font-size:1.1rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
 .reiter button.aktiv{color:var(--text);border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent)}
+/* Termine */
+.termin-karte{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent),0 10px 40px var(--glow)}
+.termin-karte.dringend .termin-countdown .wert{color:var(--falsch)}
+.termin-haupt{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px}
+.termin-titel{font-family:var(--titel);font-weight:700;font-size:1.6rem;letter-spacing:1px;line-height:1.15}
+.termin-countdown{text-align:center;flex:none;min-width:70px;padding:6px 10px;border:1px solid var(--linie);border-radius:12px;background:var(--panel2)}
+.termin-countdown .wert{font-family:var(--titel);font-weight:700;font-size:2.4rem;line-height:1;color:var(--akzent)}
+.termin-liste{margin-top:14px}
+.zeile.bald span{color:var(--text);font-weight:700}
+.zeile.bald b{color:var(--akzent)}
+.zeile.vorbei{opacity:.4}
+.fach.markiert{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent),0 0 24px var(--glow)}
+.termin-badge{position:absolute;right:10px;top:10px;background:var(--akzent);color:#000;font-size:.68rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:99px}
+.termin-banner{display:flex;align-items:center;gap:10px;border:1px solid var(--akzent);background:var(--panel);color:var(--text);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-weight:700;font-size:.92rem}
+.termin-banner .ic{color:var(--akzent);font-size:1.3rem;flex:none}
