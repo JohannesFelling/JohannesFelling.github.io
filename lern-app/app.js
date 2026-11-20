@@ -391,6 +391,21 @@ function termineSeite() {
     (T.frei || []).length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Frei"), ...T.frei.map(f => el("div", { class: "zeile" }, el("span", {}, f.titel), el("b", {}, `${datumLang(f.von)} – ${datumLang(f.bis)}`)))) : null);
 }
 
+// Markierung: echter Schulstoff oder nur Beispielfragen
+const STOFF = {};
+const stoffMarke = echt => echt === null ? null : el("span", { class: `stoff ${echt ? "echt" : "beispiel"}` }, echt ? "✓ Schulstoff" : "Beispiel");
+function stoffPlatz(pid, fid) {
+  const box = el("span", { class: "stoff-platz" });
+  const setzen = () => { const v = (STOFF[pid] || {})[fid]; if (v !== undefined) box.replaceChildren(stoffMarke(v)); };
+  if (STOFF[pid]) setzen();
+  else {
+    STOFF[pid + "_laden"] = STOFF[pid + "_laden"] || Promise.all(faecherVon(pid).map(async f => {
+      try { const r = await fetch(`daten/${pid}/${f.id}.json?v=${Date.now()}`); if (!r.ok) return [f.id, null]; const d = await r.json(); return [f.id, d.fragen && d.fragen.length ? !d.platzhalter : null]; } catch (e) { return [f.id, null]; }
+    })).then(l => { STOFF[pid] = Object.fromEntries(l); });
+    STOFF[pid + "_laden"].then(setzen);
+  }
+  return box;
+}
 function faecherSeite() {
   fach = null; thema(person);
   setzeKopf(person.name, CFG && !gast ? null : startseite);
@@ -404,7 +419,7 @@ function faecherSeite() {
       const t = naechsterTerminFuer(person.id, f.id);
       return el("button", { class: `fach ${t ? "markiert" : ""}`, onclick: () => fachLaden(f) },
         t ? el("span", { class: "termin-badge" }, `${t.art === "Schularbeit" ? "SA" : "Test"} ${wannText(tageBis(t.datum))}`) : el("span", { class: "nr" }, String(i + 1).padStart(2, "0")), ic(f.id),
-        el("div", {}, el("div", { class: "fach-name" }, f.name), el("small", {}, punkte(person.id, s.sterne), ` · ${s.runden} Runden`)));
+        el("div", {}, el("div", { class: "fach-name" }, f.name), stoffPlatz(person.id, f.id), el("small", {}, punkte(person.id, s.sterne), ` · ${s.runden} Runden`)));
     })),
     (CFG || gast) ? el("button", { class: "reset", onclick: abmelden }, gast ? "Testkonto beenden" : `Abmelden (${person.name})`) : null
   );
@@ -435,6 +450,7 @@ function fachSeite() {
     el("div", { class: "karte titelkarte" },
       el("div", { class: "label" }, fach.name),
       el("h2", {}, daten.titel || fach.name),
+      stoffMarke(!daten.platzhalter),
       daten.untertitel ? el("p", { class: "klein" }, daten.untertitel) : null,
       el("p", { class: "klein" }, punkte(person.id, s.sterne), ` · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} – ${wannText(tageBis(t.datum))}`) : null; })(),
@@ -1014,9 +1030,9 @@ function kindStatistik(p, st, dateien, lokal) {
       (d.wissen || []).forEach(w => { const g = pr.gelesen[`${f.id}/${w.titel}`]; zeilen.push(el("div", { class: "zeile" }, el("span", {}, "Wissen · ", w.titel), el("b", { class: g ? "gut" : "" }, g ? `gelesen ${datumDE(g)}` : "–"))); });
       (d.sprechen || []).forEach(g => { const x = pr.gespraeche[`${f.id}/${g.titel}`]; zeilen.push(el("div", { class: "zeile" }, el("span", {}, "Sprechen · ", g.titel), el("b", { class: x ? "gut" : "" }, x ? `${x.erg}/${x.von} · ${datumDE(x.d)}` : "–"))); });
       return el("div", { class: "karte" },
-        el("div", { class: "status-kopf" }, el("div", { class: "fach-name" }, f.name), el("div", { class: "klein" }, dauer(fachZeit(f.id)))),
+        el("div", { class: "status-kopf" }, el("div", {}, el("div", { class: "fach-name" }, f.name), stoffMarke(d.fragen.length ? !d.platzhalter : null)), el("div", { class: "klein" }, dauer(fachZeit(f.id)))),
         el("div", { class: "fortschritt" }, el("div", { style: `width:${d.fragen.length ? Math.round(geuebt / d.fragen.length * 100) : 0}%` })),
-        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · `, punkte(p.id, s.sterne), ` · ${s.offen.length} Fragen offen` + (d.platzhalter ? " · (Platzhalter-Fragen)" : "")),
+        el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · `, punkte(p.id, s.sterne), ` · ${s.offen.length} Fragen offen`),
         ...zeilen,
         (s.runden || s.sterne || s.offen.length || geuebt) ? el("button", { class: "reset", onclick: () => elternReset(p, f, st, lokal) }, `${f.name} für ${p.name} zurücksetzen`) : null);
     }),

@@ -232,3 +232,10 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 .eltern-text b{font-family:"Anton",sans-serif;font-weight:400;font-size:1.5rem;letter-spacing:1.5px;text-transform:uppercase;line-height:1.1;background:linear-gradient(90deg,#ffe39a,#ffffff 50%,#cfe0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .eltern-text span{font-size:.8rem;color:#a9afc2}
 .eltern-pfeil{font-size:2rem;color:#e8edf5;opacity:.7}
+
+/* klare Trennung der beiden Plakate */
+.start-raster{position:relative;gap:16px 30px}
+.start-raster::before{content:"";position:absolute;left:50%;top:-6px;bottom:-6px;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,transparent,#ffd676 18%,#ffffff 50%,#cfe0ff 82%,transparent);box-shadow:0 0 12px #ffffff88;border-radius:2px}
+.start-raster::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:12px;transform:translate(-50%,-50%) rotate(45deg);background:linear-gradient(135deg,#ffd676,#ffffff 50%,#cfe0ff);box-shadow:0 0 14px #fff}
+.start-karte.start-held{box-shadow:0 24px 60px #000c,0 0 0 2px #ffcf6b}
+.start-karte.start-sport{box-shadow:0 24px 60px #000c,0 0 0 2px #cfe0ff}

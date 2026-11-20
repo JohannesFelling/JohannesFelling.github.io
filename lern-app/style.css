@@ -211,3 +211,12 @@ input.eingabe:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
 .eingang.neu{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent),0 10px 40px var(--glow)}
 .eingang-kopf{display:flex;justify-content:space-between;align-items:center}
 .eingang-zahl{min-width:28px;height:28px;padding:0 8px;border-radius:99px;background:#ff3b30;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 0 0 0 #ff3b3088;animation:puls 1.6s infinite}
+.stoff-platz{display:block;min-height:22px;margin:4px 0 2px}
+.stoff{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap;font-family:"Inter",sans-serif;font-style:normal}
+.stoff.echt{background:#2ee59d;color:#032015;box-shadow:0 0 14px #2ee59d66}
+.stoff.beispiel{border:1px solid #ffffff2e;color:#ffffff80}
+.titelkarte .stoff{margin:-4px 0 8px}
+.stoff{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.stoff.beispiel{background:transparent!important;border:1px solid #ffffff2e;color:#ffffff70;box-shadow:none}
+.geschenk-kopf b{white-space:normal;max-width:55%}
+.geschenk-was{min-width:0}
