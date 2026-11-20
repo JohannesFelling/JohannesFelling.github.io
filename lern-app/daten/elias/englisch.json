@@ -1,0 +1,231 @@
+{
+ "titel": "Englisch",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Kürbis“ auf Englisch?",
+   "antwort": [
+    "pumpkin"
+   ],
+   "erklaerung": "",
+   "id": "en001"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Süßigkeiten“ auf Englisch?",
+   "antwort": [
+    "sweets"
+   ],
+   "erklaerung": "",
+   "id": "en002"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Kostüm“ auf Englisch?",
+   "antwort": [
+    "costume"
+   ],
+   "erklaerung": "",
+   "id": "en003"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„gefährlich“ auf Englisch?",
+   "antwort": [
+    "dangerous"
+   ],
+   "erklaerung": "",
+   "id": "en004"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„schnell“ auf Englisch?",
+   "antwort": [
+    "fast"
+   ],
+   "erklaerung": "",
+   "id": "en005"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Wüste“ auf Englisch?",
+   "antwort": [
+    "desert"
+   ],
+   "erklaerung": "",
+   "id": "en006"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„strong“ auf Deutsch?",
+   "antwort": [
+    "stark"
+   ],
+   "erklaerung": "",
+   "id": "en007"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„scary“ auf Deutsch?",
+   "antwort": [
+    "gruselig",
+    "unheimlich"
+   ],
+   "erklaerung": "",
+   "id": "en008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "You look tired. You ___ go to bed.",
+   "optionen": [
+    "should",
+    "shouldn't",
+    "should to"
+   ],
+   "antwort": "should",
+   "erklaerung": "should + Grundform.",
+   "id": "en009"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "It's cold. You ___ go out without a jacket.",
+   "optionen": [
+    "shouldn't",
+    "should"
+   ],
+   "antwort": "shouldn't",
+   "erklaerung": "",
+   "id": "en010"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "I saw ___ elephant at the zoo.",
+   "optionen": [
+    "an",
+    "a"
+   ],
+   "antwort": "an",
+   "erklaerung": "an vor Vokal-Laut.",
+   "id": "en011"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "She has ___ dog.",
+   "optionen": [
+    "a",
+    "an"
+   ],
+   "antwort": "a",
+   "erklaerung": "",
+   "id": "en012"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "An elephant is ___ than a mouse. (big)",
+   "antwort": [
+    "bigger"
+   ],
+   "erklaerung": "",
+   "id": "en013"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "A cheetah is ___ than a horse. (fast)",
+   "antwort": [
+    "faster"
+   ],
+   "erklaerung": "",
+   "id": "en014"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "This film is ___ than that one. (interesting)",
+   "antwort": [
+    "more interesting"
+   ],
+   "erklaerung": "",
+   "id": "en015"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Tom is ___ Ben. (gleich groß)",
+   "optionen": [
+    "as tall as",
+    "as taller as",
+    "taller as"
+   ],
+   "antwort": "as tall as",
+   "erklaerung": "as + Grundform + as.",
+   "id": "en016"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "The blue whale is the ___ animal in the world. (big)",
+   "antwort": [
+    "biggest"
+   ],
+   "erklaerung": "",
+   "id": "en017"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "My bike is ___ than yours. (good)",
+   "optionen": [
+    "better",
+    "gooder",
+    "best"
+   ],
+   "antwort": "better",
+   "erklaerung": "",
+   "id": "en018"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Yesterday I ___ to school by bus.",
+   "optionen": [
+    "went",
+    "go",
+    "goed",
+    "going"
+   ],
+   "antwort": "went",
+   "erklaerung": "go → went (unregelmäßig).",
+   "id": "en019"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "___ you like pizza?",
+   "optionen": [
+    "Do",
+    "Does",
+    "Are",
+    "Is"
+   ],
+   "antwort": "Do",
+   "erklaerung": "",
+   "id": "en020"
+  }
+ ]
+}

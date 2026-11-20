@@ -1,0 +1,898 @@
+{
+ "titel": "Englisch-Helden",
+ "untertitel": "Workbook Unit 3 (Halloween) & Unit 4 (What an animal!) – mit deinen Lieblingshelden",
+ "platzhalter": false,
+ "thema": "helden",
+ "fragen": [
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Spider-Man geht als Gespenst verkleidet zur Party. Was heißt „Kostüm“ auf Englisch?",
+   "antwort": [
+    "costume"
+   ],
+   "erklaerung": "costume – Achtung Schreibweise: c-o-s-t-u-m-e.",
+   "id": "ve001"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Hulk liebt „Süßigkeiten“. Wie heißt das auf Englisch?",
+   "antwort": [
+    "sweets"
+   ],
+   "erklaerung": "sweets = Süßigkeiten (immer mit -s am Ende).",
+   "id": "ve002"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Thor schnitzt einen „Kürbis“ mit seinem Hammer. Englisch?",
+   "antwort": [
+    "pumpkin"
+   ],
+   "erklaerung": "pumpkin = Kürbis.",
+   "id": "ve003"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Black Widow schleicht nachts über den „Friedhof“. Englisch?",
+   "antwort": [
+    "graveyard"
+   ],
+   "erklaerung": "graveyard = Friedhof (grave = Grab, yard = Hof).",
+   "id": "ve004"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Doctor Strange sieht ein „Gespenst“. Englisch?",
+   "antwort": [
+    "ghost"
+   ],
+   "erklaerung": "ghost – das h nicht vergessen: g-h-o-s-t.",
+   "id": "ve005"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Was ruft Groot an der Haustür zu Halloween? („Süßes oder Saures!“)",
+   "antwort": [
+    "trick or treat",
+    "trick or treat!"
+   ],
+   "erklaerung": "Trick or treat! = Süßes oder Saures!",
+   "id": "ve006"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Iron Man läuft die „Treppe“ hinauf. Englisch?",
+   "antwort": [
+    "stairs"
+   ],
+   "erklaerung": "stairs = Treppe.",
+   "id": "ve007"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„superheroine“ – was heißt das auf Deutsch?",
+   "antwort": [
+    "superheldin",
+    "die superheldin"
+   ],
+   "erklaerung": "superheroine = Superheldin, z. B. Captain Marvel.",
+   "id": "ve008"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„scary“ – was heißt das auf Deutsch?",
+   "antwort": [
+    "gruselig",
+    "unheimlich"
+   ],
+   "erklaerung": "scary = gruselig, unheimlich.",
+   "id": "ve009"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„to be proud of“ – was heißt das? (Captain America is proud of his team.)",
+   "antwort": [
+    "stolz sein auf",
+    "stolz sein",
+    "stolz"
+   ],
+   "erklaerung": "to be proud of = stolz sein auf.",
+   "id": "ve010"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„century“ – was heißt das auf Deutsch? (Captain America slept for more than half a century.)",
+   "antwort": [
+    "jahrhundert",
+    "das jahrhundert"
+   ],
+   "erklaerung": "century = Jahrhundert.",
+   "id": "ve011"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„knife“ heißt Messer. Wie heißt die Mehrzahl (Messer, viele)?",
+   "antwort": [
+    "knives"
+   ],
+   "erklaerung": "knife → knives (f wird zu v + -es).",
+   "id": "ve012"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Rocket fährt mit dem Rad und trägt einen „Fahrradhelm“. Englisch?",
+   "antwort": [
+    "cycle helmet"
+   ],
+   "erklaerung": "cycle helmet = Fahrradhelm.",
+   "id": "ve013"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„vet“ – was heißt das? (Rocket has to go to the vet.)",
+   "antwort": [
+    "tierarzt",
+    "tierärztin",
+    "der tierarzt",
+    "die tierärztin"
+   ],
+   "erklaerung": "vet = Tierarzt / Tierärztin.",
+   "id": "ve014"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„to scare“ bedeutet …",
+   "optionen": [
+    "Angst machen, erschrecken",
+    "teilen",
+    "verlieren",
+    "bellen"
+   ],
+   "antwort": "Angst machen, erschrecken",
+   "erklaerung": "to scare = erschrecken, Angst machen. scary = gruselig.",
+   "id": "ve015"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„to lose“ bedeutet …",
+   "optionen": [
+    "verlieren",
+    "lösen",
+    "behalten",
+    "verteilen"
+   ],
+   "antwort": "verlieren",
+   "erklaerung": "to lose = verlieren. Thanos didn't want to lose!",
+   "id": "ve016"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„to share out“ bedeutet …",
+   "optionen": [
+    "verteilen",
+    "abschneiden",
+    "wiegen",
+    "tragen"
+   ],
+   "antwort": "verteilen",
+   "erklaerung": "to share out = verteilen, z. B. sweets an Freunde.",
+   "id": "ve017"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Black Panther sieht in der Wüste ein „Nashorn“. Englisch?",
+   "antwort": [
+    "rhino"
+   ],
+   "erklaerung": "rhino = Nashorn.",
+   "id": "ve018"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Der schnellste Freund von Quicksilver ist der „Gepard“. Englisch?",
+   "antwort": [
+    "cheetah"
+   ],
+   "erklaerung": "cheetah = Gepard: c-h-e-e-t-a-h.",
+   "id": "ve019"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Nachts fliegt eine „Fledermaus“ an Doctor Stranges Fenster vorbei. Englisch?",
+   "antwort": [
+    "bat"
+   ],
+   "erklaerung": "bat = Fledermaus.",
+   "id": "ve020"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "Ant-Man ist klein, aber „stark“. Englisch?",
+   "antwort": [
+    "strong"
+   ],
+   "erklaerung": "strong = stark.",
+   "id": "ve021"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„venomous“ – was heißt das auf Deutsch? (Venom ist es sicher!)",
+   "antwort": [
+    "giftig"
+   ],
+   "erklaerung": "venomous = giftig – wie der Name Venom!",
+   "id": "ve022"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„powerful“ – was heißt das?",
+   "antwort": [
+    "mächtig",
+    "kräftig",
+    "mächtig, kräftig"
+   ],
+   "erklaerung": "powerful = mächtig, kräftig.",
+   "id": "ve023"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Wüste“ auf Englisch?",
+   "antwort": [
+    "desert"
+   ],
+   "erklaerung": "desert = Wüste (nicht verwechseln mit dessert = Nachspeise!).",
+   "id": "ve024"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„to protect“ – was heißt das? (The Avengers protect the Earth.)",
+   "antwort": [
+    "schützen",
+    "beschützen"
+   ],
+   "erklaerung": "to protect = (be)schützen.",
+   "id": "ve025"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„mammal“ – was heißt das?",
+   "antwort": [
+    "säugetier",
+    "das säugetier"
+   ],
+   "erklaerung": "mammal = Säugetier. Wale und Fledermäuse sind mammals.",
+   "id": "ve026"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„to weigh“ – was heißt das? (Hulk weighs 600 kilos.)",
+   "antwort": [
+    "wiegen"
+   ],
+   "erklaerung": "to weigh = wiegen.",
+   "id": "ve027"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„scientist“ – was heißt das? (Bruce Banner is a scientist.)",
+   "antwort": [
+    "wissenschaftler",
+    "wissenschaftlerin"
+   ],
+   "erklaerung": "scientist = Wissenschaftler/in.",
+   "id": "ve028"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„Geschwindigkeit“ auf Englisch?",
+   "antwort": [
+    "speed"
+   ],
+   "erklaerung": "speed = Geschwindigkeit.",
+   "id": "ve029"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„gefährlich“ auf Englisch? (Achtung Schreibweise!)",
+   "antwort": [
+    "dangerous"
+   ],
+   "erklaerung": "d-a-n-g-e-r-o-u-s.",
+   "id": "ve030"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„schwer“ (Gewicht) auf Englisch?",
+   "antwort": [
+    "heavy"
+   ],
+   "erklaerung": "heavy = schwer. heavy → heavier → the heaviest.",
+   "id": "ve031"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„intelligent“ auf Englisch?",
+   "antwort": [
+    "intelligent",
+    "smart",
+    "clever"
+   ],
+   "erklaerung": "intelligent, smart oder clever.",
+   "id": "ve032"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Übersetzen",
+   "frage": "„niemand“ auf Englisch? (... can lift Thor's hammer.)",
+   "antwort": [
+    "nobody"
+   ],
+   "erklaerung": "nobody = niemand.",
+   "id": "ve033"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Spider-Man is tired. → You ___ go to bed so late.",
+   "optionen": [
+    "shouldn't",
+    "should",
+    "shoulds"
+   ],
+   "antwort": "shouldn't",
+   "erklaerung": "Ein Rat, etwas NICHT zu tun → shouldn't.",
+   "id": "ve034"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "It's raining and Thor wants to go out. → He ___ take an umbrella.",
+   "optionen": [
+    "should",
+    "shouldn't",
+    "should to"
+   ],
+   "antwort": "should",
+   "erklaerung": "Guter Rat → should + Grundform (take). Kein „to“!",
+   "id": "ve035"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Hulk's leg hurts. → He ___ see a doctor.",
+   "optionen": [
+    "should",
+    "shouldn't",
+    "shoulds"
+   ],
+   "antwort": "should",
+   "erklaerung": "should bleibt immer gleich – auch bei he/she/it kein -s.",
+   "id": "ve036"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Groot is hungry. → He should ___ a banana.",
+   "optionen": [
+    "eat",
+    "eats",
+    "to eat",
+    "eating"
+   ],
+   "antwort": "eat",
+   "erklaerung": "Nach should kommt die Grundform: should eat.",
+   "id": "ve037"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "It's a very scary film. → Peter ___ watch it alone.",
+   "optionen": [
+    "shouldn't",
+    "should",
+    "should not to"
+   ],
+   "antwort": "shouldn't",
+   "erklaerung": "shouldn't + Grundform: shouldn't watch.",
+   "id": "ve038"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Tony's mum is angry. → He ___ say he's sorry.",
+   "optionen": [
+    "should",
+    "shouldn't"
+   ],
+   "antwort": "should",
+   "erklaerung": "Entschuldigen ist ein guter Rat → should.",
+   "id": "ve039"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Loki ate too many sweets and feels sick. → He ___ eat so many sweets.",
+   "optionen": [
+    "shouldn't",
+    "should"
+   ],
+   "antwort": "shouldn't",
+   "erklaerung": "shouldn't = sollte nicht.",
+   "id": "ve040"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Satz ist richtig?",
+   "optionen": [
+    "She should visit her grandma.",
+    "She shoulds visit her grandma.",
+    "She should to visit her grandma.",
+    "She should visits her grandma."
+   ],
+   "antwort": "She should visit her grandma.",
+   "erklaerung": "should + Grundform, ohne „to“, ohne -s.",
+   "id": "ve041"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Black Widow's cat is ill. → She should take it to the ___. (Tierarzt)",
+   "antwort": [
+    "vet"
+   ],
+   "erklaerung": "You should take it to the vet.",
+   "id": "ve042"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Captain Marvel sees ___ ostrich.",
+   "optionen": [
+    "an",
+    "a"
+   ],
+   "antwort": "an",
+   "erklaerung": "ostrich beginnt mit einem Vokal-Laut (o) → an.",
+   "id": "ve043"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Doctor Strange meets ___ ghost.",
+   "optionen": [
+    "a",
+    "an"
+   ],
+   "antwort": "a",
+   "erklaerung": "ghost beginnt mit einem Konsonanten-Laut (g) → a.",
+   "id": "ve044"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Hawkeye shoots ___ apple off the tree.",
+   "optionen": [
+    "an",
+    "a"
+   ],
+   "antwort": "an",
+   "erklaerung": "an vor Vokal-Laut: an apple.",
+   "id": "ve045"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Thor waits for ___ hour.",
+   "optionen": [
+    "an",
+    "a"
+   ],
+   "antwort": "an",
+   "erklaerung": "hour spricht man „auer“ – das h ist stumm → an hour.",
+   "id": "ve046"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Iron Man carries ___ pumpkin.",
+   "optionen": [
+    "a",
+    "an"
+   ],
+   "antwort": "a",
+   "erklaerung": "pumpkin beginnt mit p → a.",
+   "id": "ve047"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Black Panther sees ___ antelope.",
+   "optionen": [
+    "an",
+    "a"
+   ],
+   "antwort": "an",
+   "erklaerung": "antelope beginnt mit a → an.",
+   "id": "ve048"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Hulk is ___ than Ant-Man. (big)",
+   "antwort": [
+    "bigger"
+   ],
+   "erklaerung": "big → bigger (g verdoppeln).",
+   "id": "ve049"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Quicksilver is ___ than Captain America. (fast)",
+   "antwort": [
+    "faster"
+   ],
+   "erklaerung": "kurzes Adjektiv → -er: faster.",
+   "id": "ve050"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Thor's hammer is ___ than a pumpkin. (heavy)",
+   "antwort": [
+    "heavier"
+   ],
+   "erklaerung": "-y wird zu -ier: heavy → heavier.",
+   "id": "ve051"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Venom is ___ than Spider-Man. (scary)",
+   "antwort": [
+    "scarier"
+   ],
+   "erklaerung": "scary → scarier.",
+   "id": "ve052"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "A snake is ___ than a spider. (dangerous)",
+   "antwort": [
+    "more dangerous"
+   ],
+   "erklaerung": "Lange Adjektive: more + Adjektiv: more dangerous.",
+   "id": "ve053"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Tony Stark is ___ than Hulk in the lab. (intelligent)",
+   "antwort": [
+    "more intelligent"
+   ],
+   "erklaerung": "more intelligent.",
+   "id": "ve054"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Spider-Man's new suit is ___ than his old suit. (good)",
+   "optionen": [
+    "better",
+    "gooder",
+    "more good",
+    "best"
+   ],
+   "antwort": "better",
+   "erklaerung": "Unregelmäßig: good → better → the best.",
+   "id": "ve055"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Loki's joke was ___ than Thor's. (bad)",
+   "optionen": [
+    "worse",
+    "badder",
+    "worst",
+    "more bad"
+   ],
+   "antwort": "worse",
+   "erklaerung": "Unregelmäßig: bad → worse → the worst.",
+   "id": "ve056"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Captain America is ___ Bucky. (gleich stark)",
+   "optionen": [
+    "as strong as",
+    "as stronger as",
+    "stronger as",
+    "as strongest as"
+   ],
+   "antwort": "as strong as",
+   "erklaerung": "as + GRUNDFORM + as. Nie „as stronger as“!",
+   "id": "ve057"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Hawkeye's arrow is ___ Black Widow's. (gleich gut)",
+   "optionen": [
+    "as good as",
+    "as better as",
+    "as best as",
+    "gooder as"
+   ],
+   "antwort": "as good as",
+   "erklaerung": "as good as – kein Komparativ zwischen as und as!",
+   "id": "ve058"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ant-Man isn't ___ Hulk. (nicht so groß wie)",
+   "optionen": [
+    "as big as",
+    "as bigger as",
+    "bigger as",
+    "as biggest as"
+   ],
+   "antwort": "as big as",
+   "erklaerung": "not as big as = nicht so groß wie.",
+   "id": "ve059"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Thor is as ___ as Hulk. (strong)",
+   "antwort": [
+    "strong"
+   ],
+   "erklaerung": "as strong as – Grundform!",
+   "id": "ve060"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Groot's arm is as ___ as a tree. (long)",
+   "antwort": [
+    "long"
+   ],
+   "erklaerung": "as long as – nicht „as longer as“.",
+   "id": "ve061"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Hulk is the ___ Avenger. (strong)",
+   "antwort": [
+    "strongest"
+   ],
+   "erklaerung": "Superlativ: the + -est: the strongest.",
+   "id": "ve062"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Groot is the ___ hero. (tall)",
+   "antwort": [
+    "tallest"
+   ],
+   "erklaerung": "the tallest.",
+   "id": "ve063"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "The taipan is the ___ snake in the world. (venomous)",
+   "antwort": [
+    "most venomous"
+   ],
+   "erklaerung": "Lange Adjektive: the most …: the most venomous.",
+   "id": "ve064"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Lücke füllen",
+   "frage": "Rocket is the ___ Guardian. (funny)",
+   "antwort": [
+    "funniest"
+   ],
+   "erklaerung": "-y → -iest: the funniest.",
+   "id": "ve065"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "The cheetah is ___ animal on land.",
+   "optionen": [
+    "the fastest",
+    "the faster",
+    "the most fast",
+    "fastest than"
+   ],
+   "antwort": "the fastest",
+   "erklaerung": "Superlativ = der/die/das schnellste: the fastest.",
+   "id": "ve066"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Spider-Man is faster ___ Ant-Man.",
+   "optionen": [
+    "than",
+    "as",
+    "then",
+    "that"
+   ],
+   "antwort": "than",
+   "erklaerung": "Komparativ + than: faster than.",
+   "id": "ve067"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Form ist richtig? Thanos is the ___ villain.",
+   "optionen": [
+    "most dangerous",
+    "dangerousest",
+    "more dangerous",
+    "dangerouser"
+   ],
+   "antwort": "most dangerous",
+   "erklaerung": "the most dangerous.",
+   "id": "ve068"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Komparativ oder Superlativ? Groot is ___ than Rocket. (tall)",
+   "optionen": [
+    "taller",
+    "tallest",
+    "the tallest",
+    "more tall"
+   ],
+   "antwort": "taller",
+   "erklaerung": "Zwei werden verglichen + than → Komparativ: taller.",
+   "id": "ve069"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„The house on the hill“: Who opens the door?",
+   "optionen": [
+    "an old woman",
+    "a police officer",
+    "a ghost",
+    "Darren"
+   ],
+   "antwort": "an old woman",
+   "erklaerung": "Eine alte Frau öffnet und schließt die Tür wortlos.",
+   "id": "ve070"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„The house on the hill“: Why do Laura and Darren run to the gate?",
+   "optionen": [
+    "because of the barking dogs",
+    "because it's raining",
+    "because of a ghost",
+    "because they are hungry"
+   ],
+   "antwort": "because of the barking dogs",
+   "erklaerung": "Zwei Hunde jagen sie zum Tor.",
+   "id": "ve071"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„The house on the hill“: What does the police officer say?",
+   "optionen": [
+    "Nobody lives there.",
+    "The house is a shop.",
+    "Mrs Smith is on holiday.",
+    "The dogs are friendly."
+   ],
+   "antwort": "Nobody lives there.",
+   "erklaerung": "Die Besitzerin Mrs Smith ist letztes Jahr gestorben.",
+   "id": "ve072"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Tier ist ein „mammal“ (Säugetier)?",
+   "optionen": [
+    "whale",
+    "ostrich",
+    "crocodile",
+    "mosquito"
+   ],
+   "antwort": "whale",
+   "erklaerung": "Wale sind Säugetiere, auch wenn sie im Meer leben.",
+   "id": "ve073"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Tier ist ein „reptile“?",
+   "optionen": [
+    "crocodile",
+    "parrot",
+    "baboon",
+    "bat"
+   ],
+   "antwort": "crocodile",
+   "erklaerung": "Krokodile, Schlangen (snake, anaconda) sind reptiles.",
+   "id": "ve074"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Buchstabieren",
+   "frage": "Buchstabiere „gruselig“ auf Englisch:",
+   "antwort": [
+    "scary"
+   ],
+   "erklaerung": "s-c-a-r-y.",
+   "id": "ve075"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Buchstabieren",
+   "frage": "Buchstabiere „Giraffe“ auf Englisch:",
+   "antwort": [
+    "giraffe"
+   ],
+   "erklaerung": "g-i-r-a-f-f-e (zwei f!).",
+   "id": "ve076"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Buchstabieren",
+   "frage": "Buchstabiere „Schimpanse“ auf Englisch:",
+   "antwort": [
+    "chimpanzee"
+   ],
+   "erklaerung": "c-h-i-m-p-a-n-z-e-e.",
+   "id": "ve077"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "titel": "Biologie",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Tier ist ein Säugetier?",
+   "optionen": [
+    "Delfin",
+    "Hai",
+    "Pinguin",
+    "Frosch"
+   ],
+   "antwort": "Delfin",
+   "erklaerung": "Delfine säugen ihre Jungen und atmen Luft.",
+   "id": "bi001"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie atmen Fische?",
+   "optionen": [
+    "mit Kiemen",
+    "mit Lungen",
+    "durch die Haut",
+    "mit der Nase"
+   ],
+   "antwort": "mit Kiemen",
+   "erklaerung": "",
+   "id": "bi002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was brauchen Pflanzen für die Fotosynthese?",
+   "optionen": [
+    "Licht, Wasser und Kohlendioxid",
+    "nur Erde",
+    "Sauerstoff und Zucker",
+    "nur Wasser"
+   ],
+   "antwort": "Licht, Wasser und Kohlendioxid",
+   "erklaerung": "Daraus machen sie Zucker und Sauerstoff.",
+   "id": "bi003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Gas geben Pflanzen bei der Fotosynthese ab?",
+   "optionen": [
+    "Sauerstoff",
+    "Kohlendioxid",
+    "Stickstoff",
+    "Helium"
+   ],
+   "antwort": "Sauerstoff",
+   "erklaerung": "",
+   "id": "bi004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt der grüne Farbstoff in den Blättern?",
+   "optionen": [
+    "Chlorophyll",
+    "Hämoglobin",
+    "Melanin",
+    "Karotin"
+   ],
+   "antwort": "Chlorophyll",
+   "erklaerung": "",
+   "id": "bi005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Organ pumpt das Blut durch den Körper?",
+   "optionen": [
+    "Herz",
+    "Lunge",
+    "Leber",
+    "Magen"
+   ],
+   "antwort": "Herz",
+   "erklaerung": "",
+   "id": "bi006"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie viele Knochen hat ein erwachsener Mensch ungefähr? (Zahl)",
+   "antwort": [
+    "206"
+   ],
+   "erklaerung": "Rund 206 Knochen.",
+   "zahl": true,
+   "id": "bi007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Tiergruppe hat Federn?",
+   "optionen": [
+    "Vögel",
+    "Reptilien",
+    "Amphibien",
+    "Insekten"
+   ],
+   "antwort": "Vögel",
+   "erklaerung": "",
+   "id": "bi008"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Beine haben Insekten?",
+   "optionen": [
+    "6",
+    "8",
+    "4",
+    "10"
+   ],
+   "antwort": "6",
+   "erklaerung": "Spinnen haben 8 Beine – sie sind keine Insekten.",
+   "id": "bi009"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Amphibium?",
+   "optionen": [
+    "Frosch",
+    "Eidechse",
+    "Maus",
+    "Forelle"
+   ],
+   "antwort": "Frosch",
+   "erklaerung": "Amphibien leben an Land und im Wasser.",
+   "id": "bi010"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie nennt man Tiere, die nur Pflanzen fressen?",
+   "optionen": [
+    "Pflanzenfresser",
+    "Fleischfresser",
+    "Allesfresser",
+    "Aasfresser"
+   ],
+   "antwort": "Pflanzenfresser",
+   "erklaerung": "",
+   "id": "bi011"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was macht ein Igel im Winter?",
+   "optionen": [
+    "Winterschlaf",
+    "Er fliegt in den Süden",
+    "Er wechselt sein Fell",
+    "Nichts Besonderes"
+   ],
+   "antwort": "Winterschlaf",
+   "erklaerung": "",
+   "id": "bi012"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Teil der Pflanze nimmt Wasser aus dem Boden auf?",
+   "optionen": [
+    "Wurzel",
+    "Blüte",
+    "Blatt",
+    "Frucht"
+   ],
+   "antwort": "Wurzel",
+   "erklaerung": "",
+   "id": "bi013"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo wird die Nahrung im Körper zuerst zerkleinert?",
+   "optionen": [
+    "im Mund",
+    "im Magen",
+    "im Darm",
+    "in der Leber"
+   ],
+   "antwort": "im Mund",
+   "erklaerung": "Die Zähne zerkleinern, der Speichel beginnt die Verdauung.",
+   "id": "bi014"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Tier ist ein Nagetier?",
+   "optionen": [
+    "Eichhörnchen",
+    "Fuchs",
+    "Igel",
+    "Maulwurf"
+   ],
+   "antwort": "Eichhörnchen",
+   "erklaerung": "",
+   "id": "bi015"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie nennt man den Wechsel von der Kaulquappe zum Frosch?",
+   "optionen": [
+    "Metamorphose",
+    "Fotosynthese",
+    "Winterstarre",
+    "Häutung"
+   ],
+   "antwort": "Metamorphose",
+   "erklaerung": "",
+   "id": "bi016"
+  }
+ ]
+}

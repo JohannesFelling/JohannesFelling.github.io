@@ -1,0 +1,225 @@
+{
+ "titel": "Geografie",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Hauptstadt von Österreich?",
+   "optionen": [
+    "Wien",
+    "Graz",
+    "Salzburg",
+    "Linz"
+   ],
+   "antwort": "Wien",
+   "erklaerung": "",
+   "id": "ge001"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie viele Bundesländer hat Österreich? (Zahl)",
+   "antwort": [
+    "9"
+   ],
+   "erklaerung": "Wien, NÖ, OÖ, Salzburg, Tirol, Vorarlberg, Kärnten, Steiermark, Burgenland.",
+   "zahl": true,
+   "id": "ge002"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Hauptstadt von Tirol?",
+   "optionen": [
+    "Innsbruck",
+    "Bregenz",
+    "Klagenfurt",
+    "St. Pölten"
+   ],
+   "antwort": "Innsbruck",
+   "erklaerung": "",
+   "id": "ge003"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Hauptstadt von Niederösterreich?",
+   "optionen": [
+    "St. Pölten",
+    "Wien",
+    "Krems",
+    "Wiener Neustadt"
+   ],
+   "antwort": "St. Pölten",
+   "erklaerung": "",
+   "id": "ge004"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Hauptstadt der Steiermark?",
+   "optionen": [
+    "Graz",
+    "Leoben",
+    "Villach",
+    "Linz"
+   ],
+   "antwort": "Graz",
+   "erklaerung": "",
+   "id": "ge005"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt der höchste Berg Österreichs?",
+   "optionen": [
+    "Großglockner",
+    "Dachstein",
+    "Zugspitze",
+    "Schneeberg"
+   ],
+   "antwort": "Großglockner",
+   "erklaerung": "3.798 m hoch.",
+   "id": "ge006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher große Fluss fließt durch Wien?",
+   "optionen": [
+    "Donau",
+    "Inn",
+    "Rhein",
+    "Mur"
+   ],
+   "antwort": "Donau",
+   "erklaerung": "",
+   "id": "ge007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Land grenzt NICHT an Österreich?",
+   "optionen": [
+    "Frankreich",
+    "Deutschland",
+    "Ungarn",
+    "Slowenien"
+   ],
+   "antwort": "Frankreich",
+   "erklaerung": "",
+   "id": "ge008"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie viele Kontinente gibt es? (Zahl)",
+   "antwort": [
+    "7"
+   ],
+   "erklaerung": "Afrika, Antarktis, Asien, Australien, Europa, Nordamerika, Südamerika.",
+   "zahl": true,
+   "id": "ge009"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher ist der größte Ozean?",
+   "optionen": [
+    "Pazifik",
+    "Atlantik",
+    "Indischer Ozean",
+    "Nordpolarmeer"
+   ],
+   "antwort": "Pazifik",
+   "erklaerung": "",
+   "id": "ge010"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Auf welchem Kontinent liegt Ägypten?",
+   "optionen": [
+    "Afrika",
+    "Asien",
+    "Europa",
+    "Südamerika"
+   ],
+   "antwort": "Afrika",
+   "erklaerung": "",
+   "id": "ge011"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was zeigt der Maßstab auf einer Karte?",
+   "optionen": [
+    "wie stark verkleinert wurde",
+    "die Himmelsrichtung",
+    "die Höhe der Berge",
+    "das Wetter"
+   ],
+   "antwort": "wie stark verkleinert wurde",
+   "erklaerung": "",
+   "id": "ge012"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo geht die Sonne auf?",
+   "optionen": [
+    "im Osten",
+    "im Westen",
+    "im Norden",
+    "im Süden"
+   ],
+   "antwort": "im Osten",
+   "erklaerung": "",
+   "id": "ge013"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher See liegt zum Teil in Österreich und zum Teil in Ungarn?",
+   "optionen": [
+    "Neusiedler See",
+    "Bodensee",
+    "Wörthersee",
+    "Attersee"
+   ],
+   "antwort": "Neusiedler See",
+   "erklaerung": "",
+   "id": "ge014"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die Hauptstadt von Deutschland?",
+   "optionen": [
+    "Berlin",
+    "München",
+    "Hamburg",
+    "Frankfurt"
+   ],
+   "antwort": "Berlin",
+   "erklaerung": "",
+   "id": "ge015"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Bundesland liegt ganz im Westen Österreichs?",
+   "optionen": [
+    "Vorarlberg",
+    "Burgenland",
+    "Kärnten",
+    "Salzburg"
+   ],
+   "antwort": "Vorarlberg",
+   "erklaerung": "",
+   "id": "ge016"
+  }
+ ]
+}

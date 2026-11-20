@@ -1,0 +1,239 @@
+{
+ "titel": "Mathe",
+ "untertitel": "",
+ "platzhalter": true,
+ "fragen": [
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 7 · 8 =",
+   "antwort": [
+    "56"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "ma001"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 144 : 12 =",
+   "antwort": [
+    "12"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "ma002"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 3,5 + 2,75 =",
+   "antwort": [
+    "6,25"
+   ],
+   "erklaerung": "Komma untereinander schreiben.",
+   "zahl": true,
+   "id": "ma003"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10 − 4,3 =",
+   "antwort": [
+    "5,7"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "ma004"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 0,5 · 8 =",
+   "antwort": [
+    "4"
+   ],
+   "erklaerung": "0,5 ist die Hälfte – die Hälfte von 8 ist 4.",
+   "zahl": true,
+   "id": "ma005"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Wie viel ist 1/2 + 1/4? (als Dezimalzahl)",
+   "antwort": [
+    "0,75"
+   ],
+   "erklaerung": "1/2 = 2/4, also 2/4 + 1/4 = 3/4 = 0,75.",
+   "zahl": true,
+   "id": "ma006"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Bruch ist gleich groß wie 2/4?",
+   "optionen": [
+    "1/2",
+    "2/8",
+    "4/2",
+    "1/4"
+   ],
+   "antwort": "1/2",
+   "erklaerung": "Kürzen: 2/4 = 1/2.",
+   "id": "ma007"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Zahl ist durch 3 teilbar?",
+   "optionen": [
+    "123",
+    "124",
+    "125",
+    "130"
+   ],
+   "antwort": "123",
+   "erklaerung": "Ziffernsumme 1+2+3 = 6 ist durch 3 teilbar.",
+   "id": "ma008"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Ein Rechteck ist 6 cm lang und 4 cm breit. Wie groß ist der Umfang in cm?",
+   "antwort": [
+    "20"
+   ],
+   "erklaerung": "u = 2 · (6 + 4) = 20 cm.",
+   "zahl": true,
+   "id": "ma009"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Ein Rechteck ist 6 cm lang und 4 cm breit. Wie groß ist der Flächeninhalt in cm²?",
+   "antwort": [
+    "24"
+   ],
+   "erklaerung": "A = 6 · 4 = 24 cm².",
+   "zahl": true,
+   "id": "ma010"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Löse: x + 15 = 42. x =",
+   "antwort": [
+    "27"
+   ],
+   "erklaerung": "42 − 15 = 27.",
+   "zahl": true,
+   "id": "ma011"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Löse: 4 · x = 36. x =",
+   "antwort": [
+    "9"
+   ],
+   "erklaerung": "36 : 4 = 9.",
+   "zahl": true,
+   "id": "ma012"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Wie viele Minuten haben 2,5 Stunden?",
+   "antwort": [
+    "150"
+   ],
+   "erklaerung": "2 h = 120 min, 0,5 h = 30 min.",
+   "zahl": true,
+   "id": "ma013"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Wie viele Gramm sind 1,2 kg?",
+   "antwort": [
+    "1200"
+   ],
+   "erklaerung": "1 kg = 1000 g.",
+   "zahl": true,
+   "id": "ma014"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Was ist der größte gemeinsame Teiler (ggT) von 12 und 18?",
+   "antwort": [
+    "6"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "ma015"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Was ist das kleinste gemeinsame Vielfache (kgV) von 4 und 6?",
+   "antwort": [
+    "12"
+   ],
+   "erklaerung": "",
+   "zahl": true,
+   "id": "ma016"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie groß ist ein rechter Winkel?",
+   "optionen": [
+    "90°",
+    "180°",
+    "45°",
+    "360°"
+   ],
+   "antwort": "90°",
+   "erklaerung": "",
+   "id": "ma017"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Runde 3,46 auf eine Dezimalstelle.",
+   "antwort": [
+    "3,5"
+   ],
+   "erklaerung": "Die 6 ist 5 oder mehr → aufrunden.",
+   "zahl": true,
+   "id": "ma018"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 25 % von 80 =",
+   "antwort": [
+    "20"
+   ],
+   "erklaerung": "25 % = ein Viertel. 80 : 4 = 20.",
+   "zahl": true,
+   "id": "ma019"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Zahl ist am größten?",
+   "optionen": [
+    "0,7",
+    "0,65",
+    "0,09",
+    "0,659"
+   ],
+   "antwort": "0,7",
+   "erklaerung": "0,7 = 0,700 – das ist größer als 0,659.",
+   "id": "ma020"
+  }
+ ]
+}
