@@ -191,11 +191,13 @@ function antwortSprache(q) {
   return fs;
 }
 function muendlich() { return !!SR && profil(person.id).modus === "muendlich"; }
+let HOERT = null;
 function zuhoeren(lang, knopf, fertig, info) {
-  const r = new SR(); r.lang = lang; r.interimResults = false; r.maxAlternatives = 5;
+  try { if (HOERT) HOERT.abort(); } catch (e) {}
+  const r = new SR(); r.lang = lang; r.interimResults = false; r.maxAlternatives = 5; HOERT = r;
   let ergebnis = false;
   knopf.classList.add("an");
-  r.onresult = e => { ergebnis = true; fertig([...e.results[0]].map(a => a.transcript.trim())); };
+  r.onresult = e => { if (!document.body.contains(knopf)) return; ergebnis = true; fertig([...e.results[0]].map(a => a.transcript.trim())); };
   r.onerror = e => { if (info) info.replaceChildren(el("div", { class: "feedback neutral" }, e.error === "not-allowed" ? "Bitte erlaube das Mikrofon (Schloss-Symbol neben der Adresse)." : "Nichts verstanden – tippe aufs Mikrofon und sag es nochmal.")); };
   r.onend = () => { knopf.classList.remove("an"); };
   try { r.start(); } catch (e) { knopf.classList.remove("an"); }
@@ -214,11 +216,11 @@ function optionFinden(alts, opts) {
   }
   return -1;
 }
-function modusWahl() {
+function modusWahl(danach, klein) {
   if (!SR) return el("p", { class: "klein mitte" }, "Mündlich antworten geht in diesem Browser nicht (am besten Chrome verwenden).");
   const pr = profil(person.id), m = pr.modus === "muendlich" ? "muendlich" : "schrift";
-  const setze = w => { const p2 = profil(person.id); p2.modus = w; speichern(person.id, PROFIL, p2); fachSeite(); };
-  return el("div", { class: "modus-wahl" }, el("span", { class: "label" }, "Antworten"),
+  const setze = w => { const p2 = profil(person.id); p2.modus = w; speichern(person.id, PROFIL, p2); (danach || fachSeite)(); };
+  return el("div", { class: `modus-wahl${klein ? " klein-modus" : ""}` }, klein ? null : el("span", { class: "label" }, "Antworten"),
     el("button", { class: m === "schrift" ? "an" : "", onclick: () => setze("schrift") }, "✍️ Schreiben"),
     el("button", { class: m === "muendlich" ? "an" : "", onclick: () => setze("muendlich") }, ic("mikro"), "Sprechen"));
 }
@@ -674,6 +676,7 @@ function frageZeigen() {
     el("div", { class: "fortschritt" }, el("div", { style: `width:${(runde.i / runde.fragen.length) * 100}%` })),
     el("div", { class: "karte pop frage-karte" },
       el("div", { class: "frage-nr" }, el("span", { class: "label" }, `${test ? "Test" : "Frage"} ${runde.i + 1} / ${runde.fragen.length}`), el("span", { class: "label" }, q.art || "")),
+      SR && q.typ !== "karte" && !fertig ? modusWahl(() => { try { if (HOERT) HOERT.abort(); } catch (e) {} if (!fertig) frageZeigen(); }, true) : null,
       el("p", { class: "frage" }, q.frage), q.karte && q.typ !== "karte" ? kartePlatz(q.karte) : null, teil, feedback, weiter));
 }
 
