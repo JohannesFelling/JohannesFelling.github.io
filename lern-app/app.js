@@ -494,7 +494,7 @@ function fachSeite() {
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     modusWahl(),
-    el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
+    ...startKnoepfe(),
     ...(teststoffKarte(s) || []),
     el("div", { class: "label hochladen-label" }, "Hochladen"),
     el("div", { class: "raster zwei hochladen" },
@@ -517,6 +517,15 @@ function fachSeite() {
 }
 
 const schwerpunktAktiv = q => q.schwerpunkt && tageBis(q.schwerpunkt) >= 0 && tageBis(q.schwerpunkt) <= 21;
+// Mehrere Teststoffe offen (z. B. Wiederholung + großer Test): Kind wählt die Mission selbst
+const offeneTeststoffe = () => (daten.teststoff || []).filter(t => t.termin && tageBis(t.termin) >= 0 && daten.fragen.some(q => q.id.startsWith(t.id + "-")));
+function startKnoepfe() {
+  const ts = offeneTeststoffe(), held = person.thema === "held";
+  if (ts.length < 2) return [el("button", { class: "knopf", onclick: () => rundeStarten() }, ic("play"), held ? "Mission starten" : "Anpfiff")];
+  return [el("div", { class: "label" }, held ? "Welche Mission?" : "Welches Spiel?"),
+    ...ts.sort((a, b) => a.termin.localeCompare(b.termin)).map((t, i) => el("button", { class: `knopf ${i ? "zweit" : ""} missions-knopf`, onclick: () => rundeStarten(t.id) },
+      ic("play"), el("span", {}, t.titel, el("small", {}, ` · ${wannText(tageBis(t.termin))}`))))];
+}
 function teststoffKarte(s) {
   const ts = (daten.teststoff || []).filter(t => !t.termin || tageBis(t.termin) >= 0);
   if (!ts.length) return null;
@@ -537,9 +546,10 @@ function teststoffKarte(s) {
       t.quelle ? el("div", { class: "klein" }, `Quelle: ${t.quelle}`) : null);
   });
 }
-function rundeStarten() {
+function rundeStarten(nurTest) {
+  if (typeof nurTest !== "string") nurTest = null;
   const s = laden(person.id, fach.id);
-  const alle = daten.fragen;
+  const alle = nurTest ? daten.fragen.filter(q => q.id.startsWith(nurTest + "-")) : daten.fragen;
   const nachId = Object.fromEntries(alle.map(q => [q.id, q]));
   const wdh = mischen(s.offen.filter(id => nachId[id])).slice(0, 4).map(id => nachId[id]);
   // Vor einem Test: gezielt den abgegrenzten Teststoff üben
@@ -549,7 +559,7 @@ function rundeStarten() {
   if (fokus.length < 5) fokus = alle.filter(schwerpunktAktiv);
   const pool = fokus.length >= 5 ? fokus : alle;
   const rest = mischen(pool.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
-  runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null };
+  runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null, mission: nurTest };
   frageZeigen();
 }
 function testStarten(t) {
@@ -697,7 +707,7 @@ function ergebnis() {
     ...neu.map(g => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(g) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), g.was, el("small", {}, "Antippen zum Anzeigen")))),
     runde.falsch.length ? el("div", { class: "karte" }, el("div", { class: "label" }, test ? "Noch falsch" : "Kommt später nochmal"),
       el("ul", {}, ...runde.falsch.map(({ q }) => el("li", {}, q.frage, " → ", el("b", {}, [].concat(q.antwort)[0]))))) : null,
-    el("button", { class: "knopf", onclick: rundeStarten }, "Nächste Runde"),
+    el("button", { class: "knopf", onclick: () => rundeStarten(runde.mission) }, "Nächste Runde"),
     el("button", { class: "knopf zweit", onclick: fachSeite }, "Zurück zum Fach"),
     el("button", { class: "knopf zweit", onclick: faecherSeite }, "Anderes Fach")
   );

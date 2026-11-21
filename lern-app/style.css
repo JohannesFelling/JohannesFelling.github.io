@@ -282,3 +282,4 @@ textarea.offen-feld:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--
 .karte-zoom{position:absolute;right:8px;bottom:8px;border:1px solid var(--linie);background:var(--panel2);color:var(--text);border-radius:10px;padding:6px 10px;font:inherit;font-weight:700;cursor:pointer}
 .karte-info{margin:8px 0 4px;font-size:1rem}
 .karte-info small{display:block;color:var(--leise)}
+.missions-knopf small{font-weight:600;opacity:.8;font-size:.8em}
