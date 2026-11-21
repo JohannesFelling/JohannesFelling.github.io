@@ -1,0 +1,1402 @@
+{
+ "paket": "valentin-geo-energie",
+ "kapitel": "Energie & Ressourcen – Test 27.11.",
+ "datum": "2026-11-21 09:00",
+ "teststoff": {
+  "termin": "2026-11-27",
+  "titel": "Geografie-Test am 27.11.",
+  "quelle": "Teststoff GW + GEOprofi 2 S. 8–26",
+  "punkte": [
+   "Fachbegriffe nennen und erklären (unterstrichene Begriffe)",
+   "Abbildungen, Diagramme und Karten beschreiben (S. 9, 11, 15, 16, 17, 21, 24, 26)",
+   "Energieträger nennen, beschreiben, Vor- und Nachteile, Gefahren (S. 8–18)",
+   "Stromnetz, Blackout erklären, Auswirkungen (S. 16/17)",
+   "Erneuerbare und nicht erneuerbare Rohstoffe unterscheiden (S. 20–23)",
+   "Entsorgung: Abfall richtig trennen (S. 24/25)",
+   "Recycling erklären, Beispiele nennen (S. 26/27)"
+  ]
+ },
+ "fragen": [
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist eine Ölpest?",
+   "optionen": [
+    "Giftiges Erdöl gelangt ins Meer oder an die Küste und verschmutzt die Umwelt",
+    "Ein Schädling, der Ölpflanzen frisst",
+    "Eine Krankheit von Tankschiff-Matrosen",
+    "Ein zu hoher Ölpreis"
+   ],
+   "antwort": "Giftiges Erdöl gelangt ins Meer oder an die Küste und verschmutzt die Umwelt",
+   "erklaerung": "Ölpest: Erdöl läuft z. B. bei einem Tankerunfall aus – Tiere und Pflanzen sterben.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist eine Pipeline?",
+   "optionen": [
+    "Eine tausende Kilometer lange Rohrleitung für Erdöl oder Erdgas",
+    "Ein Tankschiff",
+    "Ein Stromkabel",
+    "Eine Ölbohrinsel"
+   ],
+   "antwort": "Eine tausende Kilometer lange Rohrleitung für Erdöl oder Erdgas",
+   "erklaerung": "Durch Pipelines werden Erdöl und Erdgas gepumpt.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In einer Raffinerie wird …",
+   "optionen": [
+    "Erdöl verarbeitet, z. B. zu Benzin, Diesel oder Kerosin",
+    "Strom aus Wind erzeugt",
+    "Müll verbrannt",
+    "Erdgas gefördert"
+   ],
+   "antwort": "Erdöl verarbeitet, z. B. zu Benzin, Diesel oder Kerosin",
+   "erklaerung": "Raffinerie = Fabrik, die Erdöl weiterverarbeitet. In Österreich gibt es nur eine: in Schwechat (NÖ).",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "In welchem Ort steht die einzige Raffinerie Österreichs?",
+   "antwort": [
+    "Schwechat"
+   ],
+   "erklaerung": "Die einzige Raffinerie Österreichs steht in Schwechat in Niederösterreich.",
+   "zahl": false,
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet LNG?",
+   "optionen": [
+    "Verflüssigtes Erdgas (Liquefied Natural Gas)",
+    "Lange Neue Gasleitung",
+    "Leichtes Natur-Gold",
+    "Ein Elektroauto-Typ"
+   ],
+   "antwort": "Verflüssigtes Erdgas (Liquefied Natural Gas)",
+   "erklaerung": "LNG = Erdgas, auf −162 °C abgekühlt, flüssig, Volumen 600-mal kleiner – so passt es auf Schiffe.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Auf wie viel Grad Celsius wird Erdgas für LNG abgekühlt? (Zahl mit Minus)",
+   "antwort": [
+    "-162",
+    "−162",
+    "minus 162"
+   ],
+   "erklaerung": "Bei −162 °C wird Erdgas flüssig.",
+   "zahl": true,
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Fracking?",
+   "optionen": [
+    "Wasser, Sand und Chemikalien werden unter hohem Druck ins Gestein gepumpt, um Gas oder Öl herauszuholen",
+    "Das Verflüssigen von Erdgas",
+    "Strom aus Ebbe und Flut",
+    "Das Trennen von Müll"
+   ],
+   "antwort": "Wasser, Sand und Chemikalien werden unter hohem Druck ins Gestein gepumpt, um Gas oder Öl herauszuholen",
+   "erklaerung": "Fracking (hydraulisches Frakturieren) erzeugt Risse im Gestein – Umweltbedenken: Wasser, Boden, Erdbeben.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was sind Konsumgüter?",
+   "optionen": [
+    "Alltägliche Dinge wie Lebensmittel, Kleidung oder Elektronik",
+    "Nur Luxusartikel",
+    "Rohstoffe aus dem Bergwerk",
+    "Müll"
+   ],
+   "antwort": "Alltägliche Dinge wie Lebensmittel, Kleidung oder Elektronik",
+   "erklaerung": "Konsumgüter dienen der Befriedigung von Wünschen und Bedürfnissen.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Mikroplastik?",
+   "optionen": [
+    "Kleine Kunststoffteile, nicht größer als ein halber Zentimeter",
+    "Sehr dünne Plastiksackerl",
+    "Plastik, das sich auflöst",
+    "Recyceltes Plastik"
+   ],
+   "antwort": "Kleine Kunststoffteile, nicht größer als ein halber Zentimeter",
+   "erklaerung": "Mikroplastik sammelt sich in Muscheln und Fischen – und über die Nahrungskette auch im Menschen.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet Upcycling?",
+   "optionen": [
+    "Aus alten Dingen etwas Neues und Wertvolleres machen, z. B. Rucksack aus LKW-Plane",
+    "Müll verbrennen",
+    "Rohstoffe neu abbauen",
+    "Etwas wegwerfen"
+   ],
+   "antwort": "Aus alten Dingen etwas Neues und Wertvolleres machen, z. B. Rucksack aus LKW-Plane",
+   "erklaerung": "Upcycling: scheinbar nutzlose Gegenstände bekommen ein neues Leben.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist die High-Tech-Industrie?",
+   "optionen": [
+    "Unternehmen, die mit modernen Technologien neue Produkte herstellen, z. B. Computer",
+    "Fabriken auf hohen Bergen",
+    "Kohlebergwerke",
+    "Bauernhöfe"
+   ],
+   "antwort": "Unternehmen, die mit modernen Technologien neue Produkte herstellen, z. B. Computer",
+   "erklaerung": "Dazu gehören z. B. Computertechnik und Anlagen für erneuerbare Energien.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet soziale Nachhaltigkeit?",
+   "optionen": [
+    "Maßnahmen, die die Lebensqualität der Menschen vor Ort verbessern",
+    "Möglichst viel Gewinn machen",
+    "Möglichst billig einkaufen",
+    "Müll trennen"
+   ],
+   "antwort": "Maßnahmen, die die Lebensqualität der Menschen vor Ort verbessern",
+   "erklaerung": "Sozial = es geht um die Menschen (z. B. keine Kinderarbeit, Schutzkleidung).",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet individuelle Nachhaltigkeit?",
+   "optionen": [
+    "Jede Person handelt selbst umweltfreundlich, z. B. nur kaufen, was man wirklich braucht",
+    "Nur der Staat muss etwas tun",
+    "Firmen verdienen mehr",
+    "Alles neu kaufen"
+   ],
+   "antwort": "Jede Person handelt selbst umweltfreundlich, z. B. nur kaufen, was man wirklich braucht",
+   "erklaerung": "Individuell = du selbst. Z. B. wenig Plastikverpackung, Dinge reparieren.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ökonomische Nachhaltigkeit bedeutet …",
+   "optionen": [
+    "Gewinn, Umweltbewusstsein und soziale Gerechtigkeit verbinden",
+    "Nur sparen",
+    "Nur Umweltschutz ohne Geld",
+    "Möglichst viel produzieren"
+   ],
+   "antwort": "Gewinn, Umweltbewusstsein und soziale Gerechtigkeit verbinden",
+   "erklaerung": "Beispiel aus dem Buch: Jeans-Verleih mit Recycling.",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher dieser Energieträger ist NICHT erneuerbar (fossil)?",
+   "optionen": [
+    "Erdgas",
+    "Windenergie",
+    "Solarenergie",
+    "Wasserkraft"
+   ],
+   "antwort": "Erdgas",
+   "erklaerung": "Fossil/nicht erneuerbar: Kohle, Erdöl, Erdgas, Uran.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher dieser Energieträger ist erneuerbar?",
+   "optionen": [
+    "Biomasse",
+    "Kohle",
+    "Uran",
+    "Erdöl"
+   ],
+   "antwort": "Biomasse",
+   "erklaerung": "Erneuerbar: Wasserkraft, Wind, Sonne, Geothermie, Biomasse.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist das Verbrennen von Kohle, Erdöl und Erdgas klimaschädlich?",
+   "optionen": [
+    "Dabei entsteht Kohlenstoffdioxid (CO₂)",
+    "Dabei entsteht radioaktiver Müll",
+    "Es braucht zu viel Wasser",
+    "Es ist zu laut"
+   ],
+   "antwort": "Dabei entsteht Kohlenstoffdioxid (CO₂)",
+   "erklaerung": "CO₂ ist ein klimaschädliches Gas.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wofür braucht man Uran?",
+   "optionen": [
+    "Für Atomkraftwerke – Strom durch Spaltung von Atomkernen",
+    "Für Solarzellen",
+    "Zum Heizen mit Holz",
+    "Für Windräder"
+   ],
+   "antwort": "Für Atomkraftwerke – Strom durch Spaltung von Atomkernen",
+   "erklaerung": "Uran ist nicht erneuerbar und wird im AKW gespalten.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Gefahr hat Atomkraft?",
+   "optionen": [
+    "Bei Unfällen tritt Radioaktivität aus und der Atommüll ist ungelöst",
+    "Sie stößt sehr viel CO₂ aus",
+    "Sie funktioniert nur bei Wind",
+    "Sie verschmutzt das Meer mit Öl"
+   ],
+   "antwort": "Bei Unfällen tritt Radioaktivität aus und der Atommüll ist ungelöst",
+   "erklaerung": "Große Unfälle: Tschernobyl 1986 und Fukushima 2011.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welchen Jahren gab es die großen AKW-Unfälle in Tschernobyl und Fukushima?",
+   "optionen": [
+    "1986 und 2011",
+    "1945 und 2001",
+    "1990 und 2020",
+    "1970 und 2000"
+   ],
+   "antwort": "1986 und 2011",
+   "erklaerung": "Tschernobyl (Ukraine) 1986, Fukushima (Japan) 2011.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Laufkraftwerk?",
+   "optionen": [
+    "Ein Fluss wird gestaut, das fließende Wasser treibt Turbinen an",
+    "Ein Stausee im Gebirge liefert Wasser über Rohre",
+    "Ebbe und Flut treiben Turbinen an",
+    "Ein Windrad"
+   ],
+   "antwort": "Ein Fluss wird gestaut, das fließende Wasser treibt Turbinen an",
+   "erklaerung": "Laufkraftwerk: Strom rund um die Uhr, je mehr Wasser der Fluss führt, desto mehr.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wann ist ein Speicherkraftwerk besonders wichtig?",
+   "optionen": [
+    "Zu Spitzenzeiten, z. B. in der Früh, wenn alle Strom brauchen",
+    "Nur in der Nacht",
+    "Nur im Winter bei Schnee",
+    "Nie – es ist veraltet"
+   ],
+   "antwort": "Zu Spitzenzeiten, z. B. in der Früh, wenn alle Strom brauchen",
+   "erklaerung": "Das Wasser im Stausee wird gespeichert und bei Bedarf schnell zu Strom.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie funktioniert ein Gezeitenkraftwerk?",
+   "optionen": [
+    "Es nutzt den Unterschied zwischen Ebbe und Flut",
+    "Es nutzt die Wärme der Erde",
+    "Es nutzt Sonnenlicht",
+    "Es verbrennt Holz"
+   ],
+   "antwort": "Es nutzt den Unterschied zwischen Ebbe und Flut",
+   "erklaerung": "Gibt es nur in Ländern am Meer (Staudammprinzip).",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Nachteil von Windrädern?",
+   "optionen": [
+    "Kein Wind = kein Strom; manche finden sie laut, störend und gefährlich für Vögel",
+    "Sie stoßen viel CO₂ aus",
+    "Sie brauchen Uran",
+    "Sie verschmutzen Flüsse"
+   ],
+   "antwort": "Kein Wind = kein Strom; manche finden sie laut, störend und gefährlich für Vögel",
+   "erklaerung": "Windräder gibt es in Österreich v. a. im Burgenland und in Niederösterreich.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woraus bestehen Solarzellen zum großen Teil?",
+   "optionen": [
+    "Silizium",
+    "Uran",
+    "Kohle",
+    "Kupfer"
+   ],
+   "antwort": "Silizium",
+   "erklaerung": "Solarzellen wandeln Sonnenlicht direkt in elektrischen Strom um.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Nachteil von Photovoltaik?",
+   "optionen": [
+    "Die Sonne scheint nicht 24 Stunden – der meiste Strom kommt mittags, wenn oft niemand zu Hause ist",
+    "Sie ist radioaktiv",
+    "Sie stößt Abgase aus",
+    "Sie braucht Erdöl"
+   ],
+   "antwort": "Die Sonne scheint nicht 24 Stunden – der meiste Strom kommt mittags, wenn oft niemand zu Hause ist",
+   "erklaerung": "Deshalb sind Stromspeicher (Lithium-Batterien) sinnvoll.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was nutzt Geothermie?",
+   "optionen": [
+    "Die Wärme des Erdbodens oder Grundwassers",
+    "Den Wind",
+    "Ebbe und Flut",
+    "Das Verbrennen von Müll"
+   ],
+   "antwort": "Die Wärme des Erdbodens oder Grundwassers",
+   "erklaerung": "Mit einer Wärmepumpe wird die Erdwärme zum Heizen genutzt.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Nachteil gilt für Biomasse (z. B. Holz, Gülle, Biomüll)?",
+   "optionen": [
+    "Beim Verbrennen wird auch CO₂ frei",
+    "Sie ist radioaktiv",
+    "Sie gibt es nur am Meer",
+    "Sie braucht Silizium"
+   ],
+   "antwort": "Beim Verbrennen wird auch CO₂ frei",
+   "erklaerung": "Biomasse ist erneuerbar, setzt aber CO₂ frei.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist Österreich bei Erdgas ein Problem entstanden?",
+   "optionen": [
+    "Österreich war abhängig von billigem Erdgas aus Russland",
+    "Österreich hat zu viel eigenes Gas",
+    "Erdgas ist radioaktiv",
+    "Erdgas gibt es nur in Österreich"
+   ],
+   "antwort": "Österreich war abhängig von billigem Erdgas aus Russland",
+   "erklaerung": "Internationale Konflikte machten die Versorgung schwieriger – deshalb sucht man andere Lieferländer (z. B. LNG aus Katar).",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum kann man nicht einfach viel mehr Wasserkraftwerke bauen?",
+   "optionen": [
+    "Sie sind ein großer Eingriff in die Natur (Fische, Landschaft) und gute Plätze sind schon genutzt",
+    "Wasser ist zu teuer",
+    "Sie stoßen zu viel CO₂ aus",
+    "Sie brauchen Uran"
+   ],
+   "antwort": "Sie sind ein großer Eingriff in die Natur (Fische, Landschaft) und gute Plätze sind schon genutzt",
+   "erklaerung": "Pro: sauberer Strom, Hochwasserschutz, lange Nutzung. Kontra: Fischbestand, Landschaftsbild, Eingriff in die Natur.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum soll man hinterfragen, aus welchen Ländern Erdöl gekauft wird?",
+   "optionen": [
+    "In manchen Lieferländern werden Menschenrechte nicht respektiert",
+    "Weil Öl dort schlechter ist",
+    "Weil es dort zu kalt ist",
+    "Weil es verboten ist"
+   ],
+   "antwort": "In manchen Lieferländern werden Menschenrechte nicht respektiert",
+   "erklaerung": "Wer dort kauft, unterstützt indirekt deren Regierungen.",
+   "stoff": 2
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Grafik zum Strommix 2019: Woher kommt in Österreich der meiste Strom?",
+   "optionen": [
+    "Aus Wasserkraft (Lauf- und Speicherkraftwerke)",
+    "Aus Kohle",
+    "Aus Atomkraft",
+    "Aus Erdöl"
+   ],
+   "antwort": "Aus Wasserkraft (Lauf- und Speicherkraftwerke)",
+   "erklaerung": "Laufkraftwerk 42 % + Speicherkraftwerk 16 % – Österreich ist Vorreiter bei erneuerbarem Strom.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Strommix Österreich: Wie viel Prozent liefern Laufkraftwerke?",
+   "antwort": [
+    "42",
+    "42 %",
+    "42%"
+   ],
+   "erklaerung": "Laufkraftwerk 42 %, Speicher 16 %, Wind-Sonne-Biomasse 23 %, Erdöl und Erdgas 19 %.",
+   "zahl": true,
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viel Prozent des Stroms kommt weltweit aus fossilen Energieträgern (Grafik S. 15)?",
+   "optionen": [
+    "79 %",
+    "35 %",
+    "13 %",
+    "5 %"
+   ],
+   "antwort": "79 %",
+   "erklaerung": "Weltweit 79 % fossil – Österreich ist mit viel Wasserkraft ein Vorreiter.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Atomkraft-Anteile zeigt die Grafik für Österreich?",
+   "optionen": [
+    "0 % – Österreich hat kein Atomkraftwerk am Netz",
+    "28 %",
+    "50 %",
+    "5 %"
+   ],
+   "antwort": "0 % – Österreich hat kein Atomkraftwerk am Netz",
+   "erklaerung": "Zwentendorf wurde gebaut, ging aber nie in Betrieb.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Energieformen sollen laut Grafik S. 15 bis 2030 am stärksten ausgebaut werden?",
+   "optionen": [
+    "Photovoltaik (+11 TWh) und Windenergie (+10 TWh)",
+    "Kohle und Erdöl",
+    "Nur Wasserkraft",
+    "Atomkraft"
+   ],
+   "antwort": "Photovoltaik (+11 TWh) und Windenergie (+10 TWh)",
+   "erklaerung": "Wasserkraft +5 TWh, Wind +10, Photovoltaik +11, Biomasse +1.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was zeigt die Karte des 380-kV-Rings (S. 16)?",
+   "optionen": [
+    "Die wichtigsten Hochspannungsleitungen Österreichs – der Ring ist noch nicht geschlossen",
+    "Alle Autobahnen",
+    "Alle Atomkraftwerke",
+    "Die Flüsse Österreichs"
+   ],
+   "antwort": "Die wichtigsten Hochspannungsleitungen Österreichs – der Ring ist noch nicht geschlossen",
+   "erklaerung": "An der Salzburgleitung wird gebaut.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Tabelle (S. 9): Welches Land hat die größten Erdölreserven?",
+   "optionen": [
+    "Venezuela",
+    "USA",
+    "Österreich",
+    "Japan"
+   ],
+   "antwort": "Venezuela",
+   "erklaerung": "Größte Förderung: USA; größte Reserven: Venezuela; größter Verbrauch: USA.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Tabelle (S. 9): Welches Land verbraucht am meisten Erdöl?",
+   "optionen": [
+    "USA",
+    "Indien",
+    "Brasilien",
+    "Kuwait"
+   ],
+   "antwort": "USA",
+   "erklaerung": "USA 18,7 Mio. Barrel pro Tag, China 15,4.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Grafik (S. 26): Wie viele Erden bräuchten wir, wenn alle so leben würden wie in Österreich?",
+   "optionen": [
+    "fast 4 (3,7)",
+    "1",
+    "0,7",
+    "8,7"
+   ],
+   "antwort": "fast 4 (3,7)",
+   "erklaerung": "Katar 8,7 – USA 4,9 – Russland 3,8 – Österreich 3,7 – Indien 0,7.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Grafik (S. 26): Bei welchem Material spart Recycling am meisten CO₂?",
+   "optionen": [
+    "Aluminium (11 kg neu, nur 0,4 kg recycelt)",
+    "Glas",
+    "Papier",
+    "Plastik"
+   ],
+   "antwort": "Aluminium (11 kg neu, nur 0,4 kg recycelt)",
+   "erklaerung": "Aluminium recyceln spart enorm viel Energie und CO₂.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Karte (S. 21): Wo wird am meisten Rohstahl hergestellt?",
+   "optionen": [
+    "China und Indien",
+    "Österreich und Schweiz",
+    "Chile und Peru",
+    "Bolivien und Argentinien"
+   ],
+   "antwort": "China und Indien",
+   "erklaerung": "China und Indien sind die bevölkerungsreichsten Staaten und produzieren am meisten Rohstahl.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wozu braucht man Hochspannungsleitungen (110, 220, 380 kV)?",
+   "optionen": [
+    "Um Strom ohne große Verluste über weite Strecken zu leiten",
+    "Um Gas zu transportieren",
+    "Um Strom zu speichern",
+    "Um Handys zu laden"
+   ],
+   "antwort": "Um Strom ohne große Verluste über weite Strecken zu leiten",
+   "erklaerung": "Kilo = tausend: 380 kV = 380 000 Volt.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wann ist die Stromversorgung stabil?",
+   "optionen": [
+    "Wenn Stromerzeugung und Verbrauch im Gleichgewicht sind",
+    "Wenn möglichst viel Strom erzeugt wird",
+    "Wenn niemand Strom braucht",
+    "Nur in der Nacht"
+   ],
+   "antwort": "Wenn Stromerzeugung und Verbrauch im Gleichgewicht sind",
+   "erklaerung": "Der Netzbetreiber (APG – Austrian Power Grid) sorgt für den Ausgleich.",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt der Betreiber des österreichischen Stromnetzes? (Abkürzung)",
+   "antwort": [
+    "APG"
+   ],
+   "erklaerung": "APG = Austrian Power Grid.",
+   "zahl": false,
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Umspannwerk?",
+   "optionen": [
+    "Ein Knotenpunkt im Stromnetz, wo die Spannung geändert wird",
+    "Ein Kraftwerk",
+    "Ein Stausee",
+    "Ein Strommast"
+   ],
+   "antwort": "Ein Knotenpunkt im Stromnetz, wo die Spannung geändert wird",
+   "erklaerung": "Transformatoren erhöhen oder senken die Stärke des Stroms.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ab wann spricht man von einem Blackout?",
+   "optionen": [
+    "Wenn der Strom länger in weiten Teilen des Landes ausfällt",
+    "Wenn zu Hause eine Glühbirne kaputt ist",
+    "Wenn der Akku leer ist",
+    "Bei einem kurzen Stromausfall im Haus"
+   ],
+   "antwort": "Wenn der Strom länger in weiten Teilen des Landes ausfällt",
+   "erklaerung": "Expertinnen und Experten meinen, die Wahrscheinlichkeit eines Blackouts steigt.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was kann einen Blackout auslösen?",
+   "optionen": [
+    "Naturkatastrophen, Cyberangriffe, Anschläge oder Störungen im Netz",
+    "Zu viel Sonnenschein",
+    "Ein voller Akku",
+    "Müll trennen"
+   ],
+   "antwort": "Naturkatastrophen, Cyberangriffe, Anschläge oder Störungen im Netz",
+   "erklaerung": "Fast wäre ganz Europa betroffen gewesen – wegen eines Vorfalls in einem Umspannwerk in Kroatien.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was funktioniert bei einem Blackout NICHT mehr?",
+   "optionen": [
+    "Licht, Kühlschrank, Ampeln, Kassen im Geschäft, Züge",
+    "Eine Taschenlampe mit Batterie",
+    "Ein Gaskocher",
+    "Ein Buch lesen bei Tageslicht"
+   ],
+   "antwort": "Licht, Kühlschrank, Ampeln, Kassen im Geschäft, Züge",
+   "erklaerung": "Haushalt, Verkehr, Einkauf und Schule sind alle betroffen.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was gehört zur Blackout-Vorsorge zu Hause?",
+   "optionen": [
+    "Vorräte an Wasser und haltbaren Lebensmitteln, Taschenlampe, Batterien, Radio",
+    "Möglichst viel Tiefkühlkost",
+    "Nur ein Handy",
+    "Nichts – Strom fällt nie aus"
+   ],
+   "antwort": "Vorräte an Wasser und haltbaren Lebensmitteln, Taschenlampe, Batterien, Radio",
+   "erklaerung": "„Campingurlaub in der eigenen Wohnung“ für etwa eine Woche planen.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum kommt auch Atomstrom nach Österreich, obwohl wir kein AKW haben?",
+   "optionen": [
+    "Die Stromnetze Europas sind verbunden – bei Bedarf wird Strom importiert",
+    "Österreich baut heimlich AKWs",
+    "Atomstrom kommt über Pipelines",
+    "Das stimmt nicht"
+   ],
+   "antwort": "Die Stromnetze Europas sind verbunden – bei Bedarf wird Strom importiert",
+   "erklaerung": "Deshalb ist es wichtig zu prüfen, woher der Strom des Energieversorgers stammt.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Rohstoff ist erneuerbar?",
+   "optionen": [
+    "Holz",
+    "Eisenerz",
+    "Kupfer",
+    "Erdöl"
+   ],
+   "antwort": "Holz",
+   "erklaerung": "Erneuerbare Rohstoffe wachsen nach: Holz, Baumwolle, Rapsöl, Leder.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Rohstoff ist NICHT erneuerbar?",
+   "optionen": [
+    "Kupfer",
+    "Baumwolle",
+    "Rapsöl",
+    "Leder"
+   ],
+   "antwort": "Kupfer",
+   "erklaerung": "Nicht erneuerbar: Metalle, Erze, Kohle, Erdöl – sie heißen auch Bodenschätze.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo wird in Österreich Eisenerz abgebaut?",
+   "optionen": [
+    "Am steirischen Erzberg",
+    "Am Großglockner",
+    "Am Neusiedler See",
+    "In Wien"
+   ],
+   "antwort": "Am steirischen Erzberg",
+   "erklaerung": "Der Erzberg ist eines der größten Eisenerzabbaugebiete Mitteleuropas.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wofür braucht man Lithium?",
+   "optionen": [
+    "Für Akkus und Batterien (Handy, Laptop, E-Auto)",
+    "Für Glasflaschen",
+    "Für Baumwolle",
+    "Für Holzmöbel"
+   ],
+   "antwort": "Für Akkus und Batterien (Handy, Laptop, E-Auto)",
+   "erklaerung": "Größte Vorkommen: Bolivien, Argentinien, Chile.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wofür braucht man Kupfer?",
+   "optionen": [
+    "Für Kabel und Leiterplatten – es leitet Strom gut",
+    "Für Akkus",
+    "Für Kleidung",
+    "Für Papier"
+   ],
+   "antwort": "Für Kabel und Leiterplatten – es leitet Strom gut",
+   "erklaerung": "Kupfer im Smartphone kommt z. B. aus Chile.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was stimmt über Seltene Erden?",
+   "optionen": [
+    "17 Metalle für Smartphones, Windräder und E-Autos – der Abbau ist gefährlich und schmutzig",
+    "Sie sind besonders selten auf der Erde",
+    "Sie wachsen nach",
+    "Man findet sie nur in Österreich"
+   ],
+   "antwort": "17 Metalle für Smartphones, Windräder und E-Autos – der Abbau ist gefährlich und schmutzig",
+   "erklaerung": "Etwa die Hälfte stammt aus China (Bayan-Obo-Mine). 2023 wurde in Schweden ein großes Vorkommen entdeckt.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Probleme gibt es beim Abbau von Lithium und Seltenen Erden?",
+   "optionen": [
+    "Kinderarbeit, hoher Wasserverbrauch und giftige Schadstoffe in Wasser, Boden und Luft",
+    "Gar keine",
+    "Es ist zu kalt",
+    "Die Metalle verschwinden"
+   ],
+   "antwort": "Kinderarbeit, hoher Wasserverbrauch und giftige Schadstoffe in Wasser, Boden und Luft",
+   "erklaerung": "Darum sind soziale und ökologische Nachhaltigkeit so wichtig.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woher kommt laut Abbildung das Aluminium im Smartphone?",
+   "optionen": [
+    "Bauxit aus Guinea",
+    "Lithium aus Australien",
+    "Zinn aus Indonesien",
+    "Kupfer aus Chile"
+   ],
+   "antwort": "Bauxit aus Guinea",
+   "erklaerung": "Smartphone: Seltene Erden & Gold aus China, Aluminium (Bauxit) aus Guinea, Kupfer aus Chile, Zinn aus Indonesien, Lithium aus Australien.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welche Tonne gehören Bananenschalen und Gemüsereste?",
+   "optionen": [
+    "Bioabfall (braun)",
+    "Restmüll (schwarz)",
+    "Altpapier (rot)",
+    "Gelbe Tonne"
+   ],
+   "antwort": "Bioabfall (braun)",
+   "erklaerung": "Biotonne = braun.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welche Tonne gehört eine Konservendose?",
+   "optionen": [
+    "Metallverpackungen (blau)",
+    "Gelbe Tonne",
+    "Restmüll",
+    "Altpapier"
+   ],
+   "antwort": "Metallverpackungen (blau)",
+   "erklaerung": "Metallverpackungen = blau.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welche Tonne gehört eine Plastikflasche?",
+   "optionen": [
+    "Kunststoffverpackungen (gelb)",
+    "Bioabfall",
+    "Altpapier",
+    "Glas"
+   ],
+   "antwort": "Kunststoffverpackungen (gelb)",
+   "erklaerung": "Gelbe Tonne für Kunststoffverpackungen (z. B. Joghurtbecher, Zahnpastatube).",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gehören benutzte Taschentücher und stark verschmutzte Alufolie?",
+   "optionen": [
+    "Restmüll (schwarz)",
+    "Altpapier",
+    "Metall",
+    "Bioabfall"
+   ],
+   "antwort": "Restmüll (schwarz)",
+   "erklaerung": "Verschmutztes kann nicht recycelt werden → Restmüll.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gehört ein leeres Marmeladenglas?",
+   "optionen": [
+    "Glascontainer (Weißglas)",
+    "Restmüll",
+    "Metall",
+    "Gelbe Tonne"
+   ],
+   "antwort": "Glascontainer (Weißglas)",
+   "erklaerung": "Weißglas und Buntglas getrennt sammeln.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gehören alte Handys und kaputte Batterien?",
+   "optionen": [
+    "Zu speziellen Sammelstellen (Elektroschrott/Problemstoffe)",
+    "In den Restmüll",
+    "In die Biotonne",
+    "Ins Altpapier"
+   ],
+   "antwort": "Zu speziellen Sammelstellen (Elektroschrott/Problemstoffe)",
+   "erklaerung": "Sperrmüll, Problemstoffe und Elektroschrott dürfen nicht in den Müll.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was passiert in Österreich mit dem Restmüll?",
+   "optionen": [
+    "Er wird verbrannt – die Energie wird zu Strom oder Wärme",
+    "Er wird ins Meer geworfen",
+    "Er wird recycelt",
+    "Er wird nach Afrika gebracht"
+   ],
+   "antwort": "Er wird verbrannt – die Energie wird zu Strom oder Wärme",
+   "erklaerung": "Die schädlichen Abgase müssen gefiltert werden.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was kommt auf eine Mülldeponie?",
+   "optionen": [
+    "Abfälle, die weder verwertet noch verbrannt werden können, und Reste der Müllverbrennung",
+    "Biomüll",
+    "Altpapier",
+    "Glas"
+   ],
+   "antwort": "Abfälle, die weder verwertet noch verbrannt werden können, und Reste der Müllverbrennung",
+   "erklaerung": "Wichtig: Boden und Trinkwasser dürfen nicht verseucht werden.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist das Ziel der Kreislaufwirtschaft der EU bis 2050?",
+   "optionen": [
+    "Rohstoffe nach der Nutzung wiederverwenden statt wegwerfen",
+    "Mehr Müll verbrennen",
+    "Mehr neue Rohstoffe abbauen",
+    "Plastik verbieten"
+   ],
+   "antwort": "Rohstoffe nach der Nutzung wiederverwenden statt wegwerfen",
+   "erklaerung": "Kreislauf: Rohstoffe → Produktion → Konsum → Recycling (statt Abfall).",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet Recycling?",
+   "optionen": [
+    "Dinge werden nicht weggeworfen, sondern ihre Rohstoffe werden wiederverwendet",
+    "Dinge reparieren",
+    "Müll verbrennen",
+    "Neue Rohstoffe abbauen"
+   ],
+   "antwort": "Dinge werden nicht weggeworfen, sondern ihre Rohstoffe werden wiederverwendet",
+   "erklaerung": "Recycling = „wieder in den Kreislauf zurückbringen“.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist Recycling gut für die Umwelt?",
+   "optionen": [
+    "Es braucht weniger Energie und es entsteht weniger CO₂",
+    "Es macht mehr Müll",
+    "Es ist immer gratis",
+    "Es braucht mehr Rohstoffe"
+   ],
+   "antwort": "Es braucht weniger Energie und es entsteht weniger CO₂",
+   "erklaerung": "Beispiel Aluminium: neu 11 kg CO₂, recycelt 0,4 kg.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Problem hat Recycling?",
+   "optionen": [
+    "Die Qualität sinkt, je öfter man recycelt (Papier wird am Ende zu Klopapier)",
+    "Es spart zu viel Energie",
+    "Es gibt kein Problem",
+    "Recycling ist verboten"
+   ],
+   "antwort": "Die Qualität sinkt, je öfter man recycelt (Papier wird am Ende zu Klopapier)",
+   "erklaerung": "Außerdem braucht das Trennen der Rohstoffe Energie.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viel Plastikmüll wird in Österreich richtig entsorgt?",
+   "optionen": [
+    "Nur etwa ein Viertel",
+    "Fast alles",
+    "Die Hälfte",
+    "Gar nichts"
+   ],
+   "antwort": "Nur etwa ein Viertel",
+   "erklaerung": "Mehr als zwei Drittel werden verbrannt statt recycelt.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was führt Österreich ab 2025 ein, damit mehr recycelt wird?",
+   "optionen": [
+    "Pfand auf Plastikflaschen und Dosen",
+    "Ein Plastikverbot",
+    "Eine Müllsteuer für Kinder",
+    "Neue Müllverbrennungsanlagen"
+   ],
+   "antwort": "Pfand auf Plastikflaschen und Dosen",
+   "erklaerung": "Pfand ist ein Anreiz, Flaschen und Dosen zurückzubringen.",
+   "stoff": 6
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie viel Prozent des weltweit hergestellten Plastiks (1950–2015) wurde recycelt?",
+   "antwort": [
+    "9",
+    "9 %",
+    "9%",
+    "etwa 9"
+   ],
+   "erklaerung": "Von 8,3 Milliarden Tonnen wurden nur etwa 9 % recycelt.",
+   "zahl": true,
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist der beste Weg, die Natur zu schützen?",
+   "optionen": [
+    "Müll vermeiden",
+    "Mehr Müll verbrennen",
+    "Alles recyceln, egal wie viel man kauft",
+    "Mehr Plastik kaufen"
+   ],
+   "antwort": "Müll vermeiden",
+   "erklaerung": "Müll vermeiden ist besser als jedes Recycling.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Spider-Man macht aus einer alten LKW-Plane einen Rucksack. Wie nennt man das?",
+   "optionen": [
+    "Upcycling",
+    "Recycling",
+    "Fracking",
+    "Konsum"
+   ],
+   "antwort": "Upcycling",
+   "erklaerung": "Aus etwas Altem wird etwas Neues, Wertvolles.",
+   "stoff": 6
+  }
+ ],
+ "wissen": [
+  {
+   "titel": "Energieträger: erneuerbar und nicht erneuerbar",
+   "kurz": "Kohle, Erdöl, Erdgas, Uran – Wasser, Wind, Sonne, Erdwärme, Biomasse",
+   "problem": "Im Test musst du Energieträger nennen, beschreiben und ihre Vor- und Nachteile kennen (Schulbuch S. 8–18).",
+   "text": [
+    "Nicht erneuerbar (fossil): Kohle, Erdöl, Erdgas – beim Verbrennen entsteht klimaschädliches CO₂. Uran (Atomkraft) ist nicht klimaschädlich, aber gefährlich (Tschernobyl 1986, Fukushima 2011, Atommüll).",
+    "Erdöl wird in der Raffinerie (Österreich: Schwechat) zu Benzin, Diesel, Kerosin, Plastik usw. verarbeitet. Transport mit Tankschiffen (Gefahr Ölpest) oder Pipelines.",
+    "Erdgas: Österreich war von billigem Gas aus Russland abhängig. Alternative: LNG (auf −162 °C verflüssigt, z. B. aus Katar). Fracking presst Wasser, Sand und Chemikalien ins Gestein – Umweltbedenken.",
+    "Erneuerbar: Wasserkraft (Laufkraftwerk am Fluss, Speicherkraftwerk mit Stausee für Spitzenzeiten, Gezeitenkraftwerk am Meer), Windenergie (kein Wind = kein Strom), Photovoltaik (Solarzellen aus Silizium; Sonne scheint nicht immer → Speicher), Geothermie (Erdwärme + Wärmepumpe), Biomasse (Holz, Gülle, Biomüll – setzt CO₂ frei)."
+   ],
+   "schritte": [
+    "Frag dich: Wächst/kommt der Energieträger immer wieder? → erneuerbar.",
+    "Nenne je einen Vorteil und einen Nachteil.",
+    "Denk an Gefahren: CO₂, Ölpest, Radioaktivität, Eingriff in die Natur."
+   ],
+   "beispiel": "Speicherkraftwerk Kaprun: Wasser im Stausee → Rohre → Turbine → Generator → Strom in der Früh, wenn alle Licht und Frühstück machen.",
+   "fehler": [
+    "Uran zu den erneuerbaren zählen – falsch!",
+    "Lauf- und Speicherkraftwerk verwechseln."
+   ],
+   "merke": "Fossil = Kohle, Erdöl, Erdgas (+ Uran nicht erneuerbar). Erneuerbar = Wasser, Wind, Sonne, Erdwärme, Biomasse.",
+   "video": "erneuerbare und nicht erneuerbare Energie einfach erklärt",
+   "stichworte": [
+    "erneuerbar",
+    "fossil",
+    "Kraftwerk",
+    "Uran",
+    "Atom",
+    "Erdgas",
+    "Erdöl",
+    "LNG",
+    "Fracking",
+    "Wind",
+    "Solar",
+    "Photovoltaik",
+    "Geothermie",
+    "Biomasse",
+    "Ölpest",
+    "Raffinerie",
+    "Pipeline"
+   ]
+  },
+  {
+   "titel": "Stromnetz und Blackout",
+   "kurz": "Hochspannung, APG, Gleichgewicht, Blackout-Vorsorge",
+   "problem": "Du sollst erklären, wie Strom zu uns kommt, was ein Blackout ist und welche Auswirkungen er hat (S. 16/17).",
+   "text": [
+    "Strom fließt über Hochspannungsleitungen (110, 220, 380 kV) fast ohne Verluste über weite Strecken. Umspannwerke sind Knotenpunkte, Transformatoren ändern die Spannung.",
+    "Das Netz ist nur stabil, wenn Erzeugung und Verbrauch im Gleichgewicht sind. In Österreich sorgt die APG (Austrian Power Grid) dafür. Der 380-kV-Ring ist noch nicht geschlossen (Salzburgleitung).",
+    "Europas Netze sind verbunden: zu viel Strom wird exportiert, zu wenig importiert – so kommt auch Atomstrom nach Österreich.",
+    "Blackout = Strom fällt länger in weiten Teilen des Landes aus. Ursachen: Naturkatastrophen, Anschläge, Cyberangriffe, Störungen. Folgen: kein Licht, Kühlschrank, Ampeln, Kassen, Züge, Schule. Vorsorge: Wasser, haltbare Lebensmittel, Taschenlampe, Batterien, Radio."
+   ],
+   "schritte": [
+    "Weg des Stroms: Stausee → Druckleitung → Turbine → Generator → Umspannwerk → Hochspannungsleitung → Haushalt/Betrieb/Verkehrsmittel.",
+    "Blackout: Ursache – Auswirkung – Vorsorge nennen."
+   ],
+   "beispiel": "Fast-Blackout in Europa: Vorfall in einem Umspannwerk in Kroatien – Strom aus Osteuropa konnte nicht mehr nach Westeuropa.",
+   "fehler": [
+    "Kurzer Stromausfall im Haus ist noch kein Blackout."
+   ],
+   "merke": "Stabil nur im Gleichgewicht. Blackout = lang + großflächig.",
+   "video": "Blackout Stromausfall Vorsorge für Kinder erklärt",
+   "stichworte": [
+    "Blackout",
+    "Stromnetz",
+    "Hochspannung",
+    "APG",
+    "Umspannwerk",
+    "Gleichgewicht",
+    "Vorsorge"
+   ]
+  },
+  {
+   "titel": "Rohstoffe, Mülltrennung und Recycling",
+   "kurz": "Erneuerbare Rohstoffe, Metalle, Mülltonnen, Kreislaufwirtschaft",
+   "problem": "Du sollst Rohstoffe unterscheiden, Müll richtig trennen und Recycling mit Beispielen erklären (S. 20–27).",
+   "text": [
+    "Erneuerbare Rohstoffe wachsen nach: Holz, Baumwolle, Rapsöl, Leder. Nicht erneuerbar (Bodenschätze): Metalle, Erze, Kohle, Erdöl. Eisenerz: steirischer Erzberg. Lithium (Akkus) aus Bolivien, Argentinien, Chile, Australien; Kupfer (Kabel) aus Chile; Seltene Erden (17 Metalle) v. a. aus China – Abbau mit Giftstoffen und Kinderarbeit.",
+    "Mülltonnen: Bioabfall braun, Altpapier rot, Restmüll schwarz, Kunststoffverpackungen gelb, Metallverpackungen blau, Glas (Weiß/Bunt). Batterien, Elektroschrott, Sperrmüll → Sammelstelle. Restmüll wird in Österreich verbrannt, Reste auf die Deponie.",
+    "Kreislaufwirtschaft (EU-Ziel 2050): Rohstoffe → Produktion → Konsum → Recycling statt Abfall.",
+    "Recycling spart Energie und CO₂ (Aluminium: neu 11 kg, recycelt 0,4 kg CO₂). Aber: Qualität sinkt (Papier → Klopapier). Plastik: nur ¼ richtig entsorgt, ab 2025 Pfand. Upcycling = aus Altem etwas Neues. Am besten: Müll vermeiden."
+   ],
+   "schritte": [
+    "Material erkennen → passende Tonne wählen.",
+    "Ist es verschmutzt? → Restmüll.",
+    "Recycling: Beispiel + Vorteil + Problem nennen."
+   ],
+   "beispiel": "Joghurtbecher → gelb · Konservendose → blau · Zeitung → rot · Bananenschale → braun · Taschentuch → schwarz",
+   "fehler": [
+    "Glas in die gelbe Tonne werfen.",
+    "Recycling und Upcycling verwechseln."
+   ],
+   "merke": "Vermeiden vor Wiederverwenden vor Recyceln vor Verbrennen.",
+   "video": "Mülltrennung Österreich Recycling Kreislaufwirtschaft für Kinder",
+   "stichworte": [
+    "Rohstoff",
+    "Tonne",
+    "Müll",
+    "Recycling",
+    "Upcycling",
+    "Kreislauf",
+    "Lithium",
+    "Kupfer",
+    "Seltene Erden",
+    "Erzberg",
+    "Mikroplastik",
+    "Plastik",
+    "Pfand"
+   ]
+  }
+ ],
+ "test": {
+  "titel": "Probetest Geografie 27.11. – genau der Teststoff",
+  "fragen": [
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Welche Gruppe enthält nur nicht erneuerbare Energieträger?",
+    "optionen": [
+     "Kohle, Erdöl, Erdgas, Uran",
+     "Wind, Sonne, Wasser, Biomasse",
+     "Holz, Kohle, Wind, Uran",
+     "Geothermie, Erdgas, Sonne, Wasser"
+    ],
+    "antwort": "Kohle, Erdöl, Erdgas, Uran",
+    "erklaerung": "Fossile Energieträger + Uran sind nicht erneuerbar.",
+    "stoff": 2
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Laufkraftwerk oder Speicherkraftwerk: Welches liefert in Spitzenzeiten schnell viel Strom?",
+    "optionen": [
+     "Speicherkraftwerk",
+     "Laufkraftwerk",
+     "Beide gleich",
+     "Keines"
+    ],
+    "antwort": "Speicherkraftwerk",
+    "erklaerung": "Das gespeicherte Wasser im Stausee kann bei Bedarf schnell genutzt werden.",
+    "stoff": 2
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was ist LNG?",
+    "optionen": [
+     "Auf −162 °C abgekühltes, flüssiges Erdgas",
+     "Eine Stromleitung",
+     "Ein Kraftwerk",
+     "Recyceltes Plastik"
+    ],
+    "antwort": "Auf −162 °C abgekühltes, flüssiges Erdgas",
+    "erklaerung": "LNG wird mit Schiffen transportiert, z. B. aus Katar.",
+    "stoff": 0
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was ist ein Blackout?",
+    "optionen": [
+     "Ein langer, großflächiger Stromausfall",
+     "Ein kurzer Stromausfall im Haus",
+     "Ein dunkler Raum",
+     "Eine Sonnenfinsternis"
+    ],
+    "antwort": "Ein langer, großflächiger Stromausfall",
+    "erklaerung": "Ursachen: Naturkatastrophen, Cyberangriffe, Störungen im Netz.",
+    "stoff": 3
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Wann ist das Stromnetz stabil?",
+    "optionen": [
+     "Wenn Erzeugung und Verbrauch im Gleichgewicht sind",
+     "Wenn viel produziert wird",
+     "Wenn wenig verbraucht wird",
+     "Immer"
+    ],
+    "antwort": "Wenn Erzeugung und Verbrauch im Gleichgewicht sind",
+    "erklaerung": "Die APG sorgt für den Ausgleich.",
+    "stoff": 3
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Woher kommt in Österreich der meiste Strom?",
+    "optionen": [
+     "Wasserkraft",
+     "Atomkraft",
+     "Kohle",
+     "Erdöl"
+    ],
+    "antwort": "Wasserkraft",
+    "erklaerung": "Lauf- und Speicherkraftwerke zusammen fast 60 %.",
+    "stoff": 1
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Welcher Rohstoff ist erneuerbar?",
+    "optionen": [
+     "Baumwolle",
+     "Eisenerz",
+     "Lithium",
+     "Kupfer"
+    ],
+    "antwort": "Baumwolle",
+    "erklaerung": "Baumwolle wächst nach.",
+    "stoff": 4
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Wo wird in Österreich Eisenerz abgebaut?",
+    "optionen": [
+     "Steirischer Erzberg",
+     "Schwechat",
+     "Kaprun",
+     "Zwentendorf"
+    ],
+    "antwort": "Steirischer Erzberg",
+    "erklaerung": "Der Erzberg liegt in der Steiermark.",
+    "stoff": 4
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Wohin gehört ein Joghurtbecher?",
+    "optionen": [
+     "Gelbe Tonne (Kunststoffverpackungen)",
+     "Restmüll",
+     "Biotonne",
+     "Altpapier"
+    ],
+    "antwort": "Gelbe Tonne (Kunststoffverpackungen)",
+    "erklaerung": "Kunststoffverpackungen = gelb.",
+    "stoff": 5
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Wohin gehören Zeitungen und Prospekte?",
+    "optionen": [
+     "Altpapier (rot)",
+     "Restmüll",
+     "Gelbe Tonne",
+     "Biotonne"
+    ],
+    "antwort": "Altpapier (rot)",
+    "erklaerung": "Altpapier und Kartonagen = rot.",
+    "stoff": 5
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was bedeutet Recycling?",
+    "optionen": [
+     "Rohstoffe aus Abfall wiederverwenden",
+     "Abfall verbrennen",
+     "Abfall vergraben",
+     "Neu kaufen"
+    ],
+    "antwort": "Rohstoffe aus Abfall wiederverwenden",
+    "erklaerung": "Wieder in den Kreislauf zurückbringen.",
+    "stoff": 6
+   },
+   {
+    "typ": "eingabe",
+    "art": "Eintippen",
+    "frage": "Nenne ein Beispiel für Recycling-Material, bei dem viel CO₂ gespart wird (Grafik S. 26).",
+    "antwort": [
+     "Aluminium",
+     "Alu"
+    ],
+    "erklaerung": "Aluminium: 11 kg CO₂ neu, 0,4 kg recycelt.",
+    "zahl": false,
+    "stoff": 6
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was ist eine Ölpest?",
+    "optionen": [
+     "Erdöl gelangt ins Meer und verschmutzt die Umwelt",
+     "Ein teurer Ölpreis",
+     "Eine Pflanzenkrankheit",
+     "Eine Ölheizung"
+    ],
+    "antwort": "Erdöl gelangt ins Meer und verschmutzt die Umwelt",
+    "erklaerung": "Z. B. auf Mauritius 2020.",
+    "stoff": 0
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was ist ein Vorteil der Wasserkraft?",
+    "optionen": [
+     "Sauberer Strom und lange Nutzungsdauer",
+     "Sie verändert die Landschaft nicht",
+     "Sie ist gut für Fische",
+     "Sie braucht kein Wasser"
+    ],
+    "antwort": "Sauberer Strom und lange Nutzungsdauer",
+    "erklaerung": "Kontra: Eingriff in Natur, Fischbestand, Landschaftsbild.",
+    "stoff": 2
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was ist Mikroplastik?",
+    "optionen": [
+     "Kunststoffteile kleiner als ein halber Zentimeter",
+     "Ein kleines Plastikspielzeug",
+     "Recyceltes Papier",
+     "Ein Mikrochip"
+    ],
+    "antwort": "Kunststoffteile kleiner als ein halber Zentimeter",
+    "erklaerung": "Es sammelt sich in Meerestieren und gelangt über die Nahrung zu uns.",
+    "stoff": 0
+   }
+  ]
+ }
+}
