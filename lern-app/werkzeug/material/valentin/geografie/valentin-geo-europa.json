@@ -25,7 +25,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Island ist Reykjavík.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Island"
   },
   {
    "typ": "karte",
@@ -34,7 +35,8 @@
    "antwort": "Island",
    "erklaerung": "Island – Hauptstadt Reykjavík.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Island"
   },
   {
    "typ": "auswahl",
@@ -49,7 +51,8 @@
    "antwort": "Island",
    "erklaerung": "Das ist Island (Hauptstadt Reykjavík).",
    "stoff": 0,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Island"
   },
   {
    "typ": "auswahl",
@@ -63,7 +66,8 @@
    "antwort": "Island",
    "erklaerung": "Reykjavík ist die Hauptstadt von Island.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Island"
   },
   {
    "typ": "auswahl",
@@ -77,7 +81,8 @@
    "antwort": "Nordeuropa",
    "erklaerung": "Island gehört zu Nordeuropa.",
    "stoff": 0,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Island"
   },
   {
    "typ": "eingabe",
@@ -87,7 +92,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Norwegen ist Oslo.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Norwegen"
   },
   {
    "typ": "karte",
@@ -96,7 +102,8 @@
    "antwort": "Norwegen",
    "erklaerung": "Norwegen – Hauptstadt Oslo.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Norwegen"
   },
   {
    "typ": "auswahl",
@@ -111,7 +118,8 @@
    "antwort": "Norwegen",
    "erklaerung": "Das ist Norwegen (Hauptstadt Oslo).",
    "stoff": 0,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Norwegen"
   },
   {
    "typ": "auswahl",
@@ -125,7 +133,8 @@
    "antwort": "Norwegen",
    "erklaerung": "Oslo ist die Hauptstadt von Norwegen.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Norwegen"
   },
   {
    "typ": "auswahl",
@@ -139,7 +148,8 @@
    "antwort": "Nordeuropa",
    "erklaerung": "Norwegen gehört zu Nordeuropa.",
    "stoff": 0,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Norwegen"
   },
   {
    "typ": "eingabe",
@@ -149,7 +159,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Schweden ist Stockholm.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Schweden"
   },
   {
    "typ": "karte",
@@ -158,7 +169,8 @@
    "antwort": "Schweden",
    "erklaerung": "Schweden – Hauptstadt Stockholm.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Schweden"
   },
   {
    "typ": "auswahl",
@@ -173,7 +185,8 @@
    "antwort": "Schweden",
    "erklaerung": "Das ist Schweden (Hauptstadt Stockholm).",
    "stoff": 0,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Schweden"
   },
   {
    "typ": "auswahl",
@@ -187,7 +200,8 @@
    "antwort": "Schweden",
    "erklaerung": "Stockholm ist die Hauptstadt von Schweden.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Schweden"
   },
   {
    "typ": "auswahl",
@@ -201,7 +215,8 @@
    "antwort": "Nordeuropa",
    "erklaerung": "Schweden gehört zu Nordeuropa.",
    "stoff": 0,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Schweden"
   },
   {
    "typ": "eingabe",
@@ -211,7 +226,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Finnland ist Helsinki.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Finnland"
   },
   {
    "typ": "karte",
@@ -220,7 +236,8 @@
    "antwort": "Finnland",
    "erklaerung": "Finnland – Hauptstadt Helsinki.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Finnland"
   },
   {
    "typ": "auswahl",
@@ -235,7 +252,8 @@
    "antwort": "Finnland",
    "erklaerung": "Das ist Finnland (Hauptstadt Helsinki).",
    "stoff": 0,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Finnland"
   },
   {
    "typ": "auswahl",
@@ -249,7 +267,8 @@
    "antwort": "Finnland",
    "erklaerung": "Helsinki ist die Hauptstadt von Finnland.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Finnland"
   },
   {
    "typ": "auswahl",
@@ -263,7 +282,8 @@
    "antwort": "Nordeuropa",
    "erklaerung": "Finnland gehört zu Nordeuropa.",
    "stoff": 0,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Finnland"
   },
   {
    "typ": "eingabe",
@@ -275,7 +295,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Dänemark ist Kopenhagen.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Dänemark"
   },
   {
    "typ": "karte",
@@ -284,7 +305,8 @@
    "antwort": "Dänemark",
    "erklaerung": "Dänemark – Hauptstadt Kopenhagen.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Dänemark"
   },
   {
    "typ": "auswahl",
@@ -299,7 +321,8 @@
    "antwort": "Dänemark",
    "erklaerung": "Das ist Dänemark (Hauptstadt Kopenhagen).",
    "stoff": 0,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Dänemark"
   },
   {
    "typ": "auswahl",
@@ -313,7 +336,8 @@
    "antwort": "Dänemark",
    "erklaerung": "Kopenhagen ist die Hauptstadt von Dänemark.",
    "stoff": 0,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Dänemark"
   },
   {
    "typ": "auswahl",
@@ -327,7 +351,8 @@
    "antwort": "Nordeuropa",
    "erklaerung": "Dänemark gehört zu Nordeuropa.",
    "stoff": 0,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Dänemark"
   },
   {
    "typ": "eingabe",
@@ -337,7 +362,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Estland ist Tallinn.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Estland"
   },
   {
    "typ": "karte",
@@ -346,7 +372,8 @@
    "antwort": "Estland",
    "erklaerung": "Estland – Hauptstadt Tallinn.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Estland"
   },
   {
    "typ": "auswahl",
@@ -361,7 +388,8 @@
    "antwort": "Estland",
    "erklaerung": "Das ist Estland (Hauptstadt Tallinn).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Estland"
   },
   {
    "typ": "auswahl",
@@ -375,7 +403,8 @@
    "antwort": "Estland",
    "erklaerung": "Tallinn ist die Hauptstadt von Estland.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Estland"
   },
   {
    "typ": "eingabe",
@@ -385,7 +414,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Lettland ist Riga.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Lettland"
   },
   {
    "typ": "karte",
@@ -394,7 +424,8 @@
    "antwort": "Lettland",
    "erklaerung": "Lettland – Hauptstadt Riga.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Lettland"
   },
   {
    "typ": "auswahl",
@@ -409,7 +440,8 @@
    "antwort": "Lettland",
    "erklaerung": "Das ist Lettland (Hauptstadt Riga).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Lettland"
   },
   {
    "typ": "auswahl",
@@ -423,7 +455,8 @@
    "antwort": "Lettland",
    "erklaerung": "Riga ist die Hauptstadt von Lettland.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Lettland"
   },
   {
    "typ": "eingabe",
@@ -434,7 +467,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Litauen ist Vilnius.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Litauen"
   },
   {
    "typ": "karte",
@@ -443,7 +477,8 @@
    "antwort": "Litauen",
    "erklaerung": "Litauen – Hauptstadt Vilnius.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Litauen"
   },
   {
    "typ": "auswahl",
@@ -458,7 +493,8 @@
    "antwort": "Litauen",
    "erklaerung": "Das ist Litauen (Hauptstadt Vilnius).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Litauen"
   },
   {
    "typ": "auswahl",
@@ -472,7 +508,8 @@
    "antwort": "Litauen",
    "erklaerung": "Vilnius ist die Hauptstadt von Litauen.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Litauen"
   },
   {
    "typ": "eingabe",
@@ -483,7 +520,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Russland ist Moskau.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Russland"
   },
   {
    "typ": "karte",
@@ -492,7 +530,8 @@
    "antwort": "Russland",
    "erklaerung": "Russland – Hauptstadt Moskau.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Russland"
   },
   {
    "typ": "auswahl",
@@ -507,7 +546,8 @@
    "antwort": "Russland",
    "erklaerung": "Das ist Russland (Hauptstadt Moskau).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Russland"
   },
   {
    "typ": "auswahl",
@@ -521,7 +561,8 @@
    "antwort": "Russland",
    "erklaerung": "Moskau ist die Hauptstadt von Russland.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Russland"
   },
   {
    "typ": "auswahl",
@@ -535,7 +576,8 @@
    "antwort": "Osteuropa",
    "erklaerung": "Russland gehört zu Osteuropa.",
    "stoff": 1,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Russland"
   },
   {
    "typ": "eingabe",
@@ -547,7 +589,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Ukraine ist Kiew.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Ukraine"
   },
   {
    "typ": "karte",
@@ -556,7 +599,8 @@
    "antwort": "Ukraine",
    "erklaerung": "Ukraine – Hauptstadt Kiew.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Ukraine"
   },
   {
    "typ": "auswahl",
@@ -571,7 +615,8 @@
    "antwort": "Ukraine",
    "erklaerung": "Das ist Ukraine (Hauptstadt Kiew).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Ukraine"
   },
   {
    "typ": "auswahl",
@@ -585,7 +630,8 @@
    "antwort": "Ukraine",
    "erklaerung": "Kiew ist die Hauptstadt von Ukraine.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Ukraine"
   },
   {
    "typ": "auswahl",
@@ -599,7 +645,8 @@
    "antwort": "Osteuropa",
    "erklaerung": "Ukraine gehört zu Osteuropa.",
    "stoff": 1,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Ukraine"
   },
   {
    "typ": "eingabe",
@@ -609,7 +656,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Belarus ist Minsk.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Belarus"
   },
   {
    "typ": "karte",
@@ -618,7 +666,8 @@
    "antwort": "Belarus",
    "erklaerung": "Belarus – Hauptstadt Minsk.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Belarus"
   },
   {
    "typ": "auswahl",
@@ -633,7 +682,8 @@
    "antwort": "Belarus",
    "erklaerung": "Das ist Belarus (Hauptstadt Minsk).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Belarus"
   },
   {
    "typ": "auswahl",
@@ -647,7 +697,8 @@
    "antwort": "Belarus",
    "erklaerung": "Minsk ist die Hauptstadt von Belarus.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Belarus"
   },
   {
    "typ": "auswahl",
@@ -661,7 +712,8 @@
    "antwort": "Osteuropa",
    "erklaerung": "Belarus gehört zu Osteuropa.",
    "stoff": 1,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Belarus"
   },
   {
    "typ": "eingabe",
@@ -674,7 +726,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Moldau ist Chișinău.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Moldau"
   },
   {
    "typ": "karte",
@@ -683,7 +736,8 @@
    "antwort": "Moldau",
    "erklaerung": "Moldau – Hauptstadt Chișinău.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Moldau"
   },
   {
    "typ": "auswahl",
@@ -698,7 +752,8 @@
    "antwort": "Moldau",
    "erklaerung": "Das ist Moldau (Hauptstadt Chișinău).",
    "stoff": 1,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Moldau"
   },
   {
    "typ": "auswahl",
@@ -712,7 +767,8 @@
    "antwort": "Moldau",
    "erklaerung": "Chișinău ist die Hauptstadt von Moldau.",
    "stoff": 1,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Moldau"
   },
   {
    "typ": "auswahl",
@@ -726,7 +782,8 @@
    "antwort": "Osteuropa",
    "erklaerung": "Moldau gehört zu Osteuropa.",
    "stoff": 1,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Moldau"
   },
   {
    "typ": "eingabe",
@@ -736,7 +793,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Vereinigtes Königreich ist London.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Vereinigtes Königreich"
   },
   {
    "typ": "karte",
@@ -745,7 +803,8 @@
    "antwort": "Vereinigtes Königreich",
    "erklaerung": "Vereinigtes Königreich – Hauptstadt London.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Vereinigtes Königreich"
   },
   {
    "typ": "auswahl",
@@ -760,7 +819,8 @@
    "antwort": "Vereinigtes Königreich",
    "erklaerung": "Das ist Vereinigtes Königreich (Hauptstadt London).",
    "stoff": 2,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Vereinigtes Königreich"
   },
   {
    "typ": "auswahl",
@@ -774,7 +834,8 @@
    "antwort": "Vereinigtes Königreich",
    "erklaerung": "London ist die Hauptstadt von Vereinigtes Königreich.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Vereinigtes Königreich"
   },
   {
    "typ": "auswahl",
@@ -788,7 +849,8 @@
    "antwort": "Westeuropa",
    "erklaerung": "Vereinigtes Königreich gehört zu Westeuropa.",
    "stoff": 2,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Vereinigtes Königreich"
   },
   {
    "typ": "eingabe",
@@ -798,7 +860,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Irland ist Dublin.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Irland"
   },
   {
    "typ": "karte",
@@ -807,7 +870,8 @@
    "antwort": "Irland",
    "erklaerung": "Irland – Hauptstadt Dublin.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Irland"
   },
   {
    "typ": "auswahl",
@@ -822,7 +886,8 @@
    "antwort": "Irland",
    "erklaerung": "Das ist Irland (Hauptstadt Dublin).",
    "stoff": 2,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Irland"
   },
   {
    "typ": "auswahl",
@@ -836,7 +901,8 @@
    "antwort": "Irland",
    "erklaerung": "Dublin ist die Hauptstadt von Irland.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Irland"
   },
   {
    "typ": "auswahl",
@@ -850,7 +916,8 @@
    "antwort": "Westeuropa",
    "erklaerung": "Irland gehört zu Westeuropa.",
    "stoff": 2,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Irland"
   },
   {
    "typ": "eingabe",
@@ -860,7 +927,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Frankreich ist Paris.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Frankreich"
   },
   {
    "typ": "karte",
@@ -869,7 +937,8 @@
    "antwort": "Frankreich",
    "erklaerung": "Frankreich – Hauptstadt Paris.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Frankreich"
   },
   {
    "typ": "auswahl",
@@ -884,7 +953,8 @@
    "antwort": "Frankreich",
    "erklaerung": "Das ist Frankreich (Hauptstadt Paris).",
    "stoff": 2,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Frankreich"
   },
   {
    "typ": "auswahl",
@@ -898,7 +968,8 @@
    "antwort": "Frankreich",
    "erklaerung": "Paris ist die Hauptstadt von Frankreich.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Frankreich"
   },
   {
    "typ": "auswahl",
@@ -912,7 +983,8 @@
    "antwort": "Westeuropa",
    "erklaerung": "Frankreich gehört zu Westeuropa.",
    "stoff": 2,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Frankreich"
   },
   {
    "typ": "eingabe",
@@ -924,7 +996,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Belgien ist Brüssel.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Belgien"
   },
   {
    "typ": "karte",
@@ -933,7 +1006,8 @@
    "antwort": "Belgien",
    "erklaerung": "Belgien – Hauptstadt Brüssel.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Belgien"
   },
   {
    "typ": "auswahl",
@@ -948,7 +1022,8 @@
    "antwort": "Belgien",
    "erklaerung": "Das ist Belgien (Hauptstadt Brüssel).",
    "stoff": 2,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Belgien"
   },
   {
    "typ": "auswahl",
@@ -962,7 +1037,8 @@
    "antwort": "Belgien",
    "erklaerung": "Brüssel ist die Hauptstadt von Belgien.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Belgien"
   },
   {
    "typ": "auswahl",
@@ -976,7 +1052,8 @@
    "antwort": "Westeuropa",
    "erklaerung": "Belgien gehört zu Westeuropa.",
    "stoff": 2,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Belgien"
   },
   {
    "typ": "eingabe",
@@ -986,7 +1063,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Niederlande ist Amsterdam.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Niederlande"
   },
   {
    "typ": "karte",
@@ -995,7 +1073,8 @@
    "antwort": "Niederlande",
    "erklaerung": "Niederlande – Hauptstadt Amsterdam.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Niederlande"
   },
   {
    "typ": "auswahl",
@@ -1010,7 +1089,8 @@
    "antwort": "Niederlande",
    "erklaerung": "Das ist Niederlande (Hauptstadt Amsterdam).",
    "stoff": 2,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Niederlande"
   },
   {
    "typ": "auswahl",
@@ -1024,7 +1104,8 @@
    "antwort": "Niederlande",
    "erklaerung": "Amsterdam ist die Hauptstadt von Niederlande.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Niederlande"
   },
   {
    "typ": "auswahl",
@@ -1038,7 +1119,8 @@
    "antwort": "Westeuropa",
    "erklaerung": "Niederlande gehört zu Westeuropa.",
    "stoff": 2,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Niederlande"
   },
   {
    "typ": "eingabe",
@@ -1048,7 +1130,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Luxemburg ist Luxemburg.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Luxemburg"
   },
   {
    "typ": "karte",
@@ -1057,7 +1140,8 @@
    "antwort": "Luxemburg",
    "erklaerung": "Luxemburg – Hauptstadt Luxemburg.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Luxemburg"
   },
   {
    "typ": "auswahl",
@@ -1072,7 +1156,8 @@
    "antwort": "Luxemburg",
    "erklaerung": "Das ist Luxemburg (Hauptstadt Luxemburg).",
    "stoff": 2,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Luxemburg"
   },
   {
    "typ": "auswahl",
@@ -1086,7 +1171,8 @@
    "antwort": "Luxemburg",
    "erklaerung": "Luxemburg ist die Hauptstadt von Luxemburg.",
    "stoff": 2,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Luxemburg"
   },
   {
    "typ": "auswahl",
@@ -1100,7 +1186,8 @@
    "antwort": "Westeuropa",
    "erklaerung": "Luxemburg gehört zu Westeuropa.",
    "stoff": 2,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Luxemburg"
   },
   {
    "typ": "eingabe",
@@ -1110,7 +1197,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Deutschland ist Berlin.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Deutschland"
   },
   {
    "typ": "karte",
@@ -1119,7 +1207,8 @@
    "antwort": "Deutschland",
    "erklaerung": "Deutschland – Hauptstadt Berlin.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Deutschland"
   },
   {
    "typ": "auswahl",
@@ -1134,7 +1223,8 @@
    "antwort": "Deutschland",
    "erklaerung": "Das ist Deutschland (Hauptstadt Berlin).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Deutschland"
   },
   {
    "typ": "auswahl",
@@ -1148,7 +1238,8 @@
    "antwort": "Deutschland",
    "erklaerung": "Berlin ist die Hauptstadt von Deutschland.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Deutschland"
   },
   {
    "typ": "auswahl",
@@ -1162,7 +1253,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Deutschland gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Deutschland"
   },
   {
    "typ": "eingabe",
@@ -1172,7 +1264,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Österreich ist Wien.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Österreich"
   },
   {
    "typ": "karte",
@@ -1181,7 +1274,8 @@
    "antwort": "Österreich",
    "erklaerung": "Österreich – Hauptstadt Wien.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Österreich"
   },
   {
    "typ": "auswahl",
@@ -1196,7 +1290,8 @@
    "antwort": "Österreich",
    "erklaerung": "Das ist Österreich (Hauptstadt Wien).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Österreich"
   },
   {
    "typ": "auswahl",
@@ -1210,7 +1305,8 @@
    "antwort": "Österreich",
    "erklaerung": "Wien ist die Hauptstadt von Österreich.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Österreich"
   },
   {
    "typ": "auswahl",
@@ -1224,7 +1320,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Österreich gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Österreich"
   },
   {
    "typ": "eingabe",
@@ -1234,7 +1331,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Schweiz ist Bern.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Schweiz"
   },
   {
    "typ": "karte",
@@ -1243,7 +1341,8 @@
    "antwort": "Schweiz",
    "erklaerung": "Schweiz – Hauptstadt Bern.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Schweiz"
   },
   {
    "typ": "auswahl",
@@ -1258,7 +1357,8 @@
    "antwort": "Schweiz",
    "erklaerung": "Das ist Schweiz (Hauptstadt Bern).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Schweiz"
   },
   {
    "typ": "auswahl",
@@ -1272,7 +1372,8 @@
    "antwort": "Schweiz",
    "erklaerung": "Bern ist die Hauptstadt von Schweiz.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Schweiz"
   },
   {
    "typ": "auswahl",
@@ -1286,7 +1387,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Schweiz gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Schweiz"
   },
   {
    "typ": "eingabe",
@@ -1296,7 +1398,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Liechtenstein ist Vaduz.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Liechtenstein"
   },
   {
    "typ": "auswahl",
@@ -1310,7 +1413,8 @@
    "antwort": "Liechtenstein",
    "erklaerung": "Vaduz ist die Hauptstadt von Liechtenstein.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Liechtenstein"
   },
   {
    "typ": "auswahl",
@@ -1324,7 +1428,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Liechtenstein gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Liechtenstein"
   },
   {
    "typ": "eingabe",
@@ -1335,7 +1440,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Polen ist Warschau.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Polen"
   },
   {
    "typ": "karte",
@@ -1344,7 +1450,8 @@
    "antwort": "Polen",
    "erklaerung": "Polen – Hauptstadt Warschau.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Polen"
   },
   {
    "typ": "auswahl",
@@ -1359,7 +1466,8 @@
    "antwort": "Polen",
    "erklaerung": "Das ist Polen (Hauptstadt Warschau).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Polen"
   },
   {
    "typ": "auswahl",
@@ -1373,7 +1481,8 @@
    "antwort": "Polen",
    "erklaerung": "Warschau ist die Hauptstadt von Polen.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Polen"
   },
   {
    "typ": "auswahl",
@@ -1387,7 +1496,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Polen gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Polen"
   },
   {
    "typ": "eingabe",
@@ -1398,7 +1508,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Tschechien ist Prag.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Tschechien"
   },
   {
    "typ": "karte",
@@ -1407,7 +1518,8 @@
    "antwort": "Tschechien",
    "erklaerung": "Tschechien – Hauptstadt Prag.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Tschechien"
   },
   {
    "typ": "auswahl",
@@ -1422,7 +1534,8 @@
    "antwort": "Tschechien",
    "erklaerung": "Das ist Tschechien (Hauptstadt Prag).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Tschechien"
   },
   {
    "typ": "auswahl",
@@ -1436,7 +1549,8 @@
    "antwort": "Tschechien",
    "erklaerung": "Prag ist die Hauptstadt von Tschechien.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Tschechien"
   },
   {
    "typ": "auswahl",
@@ -1450,7 +1564,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Tschechien gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Tschechien"
   },
   {
    "typ": "eingabe",
@@ -1461,7 +1576,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Slowakei ist Bratislava.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Slowakei"
   },
   {
    "typ": "karte",
@@ -1470,7 +1586,8 @@
    "antwort": "Slowakei",
    "erklaerung": "Slowakei – Hauptstadt Bratislava.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Slowakei"
   },
   {
    "typ": "auswahl",
@@ -1485,7 +1602,8 @@
    "antwort": "Slowakei",
    "erklaerung": "Das ist Slowakei (Hauptstadt Bratislava).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Slowakei"
   },
   {
    "typ": "auswahl",
@@ -1499,7 +1617,8 @@
    "antwort": "Slowakei",
    "erklaerung": "Bratislava ist die Hauptstadt von Slowakei.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Slowakei"
   },
   {
    "typ": "auswahl",
@@ -1513,7 +1632,8 @@
    "antwort": "Mitteleuropa",
    "erklaerung": "Slowakei gehört zu Mitteleuropa.",
    "stoff": 3,
-   "art": "Region"
+   "art": "Region",
+   "thema": "Slowakei"
   },
   {
    "typ": "eingabe",
@@ -1523,7 +1643,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Ungarn ist Budapest.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Ungarn"
   },
   {
    "typ": "karte",
@@ -1532,7 +1653,8 @@
    "antwort": "Ungarn",
    "erklaerung": "Ungarn – Hauptstadt Budapest.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Ungarn"
   },
   {
    "typ": "auswahl",
@@ -1547,7 +1669,8 @@
    "antwort": "Ungarn",
    "erklaerung": "Das ist Ungarn (Hauptstadt Budapest).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Ungarn"
   },
   {
    "typ": "auswahl",
@@ -1561,7 +1684,8 @@
    "antwort": "Ungarn",
    "erklaerung": "Budapest ist die Hauptstadt von Ungarn.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Ungarn"
   },
   {
    "typ": "eingabe",
@@ -1572,7 +1696,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Slowenien ist Ljubljana.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Slowenien"
   },
   {
    "typ": "karte",
@@ -1581,7 +1706,8 @@
    "antwort": "Slowenien",
    "erklaerung": "Slowenien – Hauptstadt Ljubljana.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Slowenien"
   },
   {
    "typ": "auswahl",
@@ -1596,7 +1722,8 @@
    "antwort": "Slowenien",
    "erklaerung": "Das ist Slowenien (Hauptstadt Ljubljana).",
    "stoff": 3,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Slowenien"
   },
   {
    "typ": "auswahl",
@@ -1610,7 +1737,8 @@
    "antwort": "Slowenien",
    "erklaerung": "Ljubljana ist die Hauptstadt von Slowenien.",
    "stoff": 3,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Slowenien"
   },
   {
    "typ": "eingabe",
@@ -1621,7 +1749,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Portugal ist Lissabon.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Portugal"
   },
   {
    "typ": "karte",
@@ -1630,7 +1759,8 @@
    "antwort": "Portugal",
    "erklaerung": "Portugal – Hauptstadt Lissabon.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Portugal"
   },
   {
    "typ": "eingabe",
@@ -1640,7 +1770,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Spanien ist Madrid.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Spanien"
   },
   {
    "typ": "karte",
@@ -1649,7 +1780,8 @@
    "antwort": "Spanien",
    "erklaerung": "Spanien – Hauptstadt Madrid.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Spanien"
   },
   {
    "typ": "eingabe",
@@ -1660,7 +1792,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Italien ist Rom.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Italien"
   },
   {
    "typ": "karte",
@@ -1669,7 +1802,8 @@
    "antwort": "Italien",
    "erklaerung": "Italien – Hauptstadt Rom.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Italien"
   },
   {
    "typ": "eingabe",
@@ -1679,7 +1813,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Griechenland ist Athen.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Griechenland"
   },
   {
    "typ": "karte",
@@ -1688,7 +1823,8 @@
    "antwort": "Griechenland",
    "erklaerung": "Griechenland – Hauptstadt Athen.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Griechenland"
   },
   {
    "typ": "eingabe",
@@ -1698,7 +1834,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Malta ist Valletta.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Malta"
   },
   {
    "typ": "eingabe",
@@ -1709,7 +1846,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Zypern ist Nikosia.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Zypern"
   },
   {
    "typ": "eingabe",
@@ -1720,7 +1858,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Kroatien ist Zagreb.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Kroatien"
   },
   {
    "typ": "karte",
@@ -1729,7 +1868,8 @@
    "antwort": "Kroatien",
    "erklaerung": "Kroatien – Hauptstadt Zagreb.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Kroatien"
   },
   {
    "typ": "eingabe",
@@ -1739,7 +1879,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Bosnien und Herzegowina ist Sarajevo.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Bosnien und Herzegowina"
   },
   {
    "typ": "karte",
@@ -1748,7 +1889,8 @@
    "antwort": "Bosnien und Herzegowina",
    "erklaerung": "Bosnien und Herzegowina – Hauptstadt Sarajevo.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Bosnien und Herzegowina"
   },
   {
    "typ": "eingabe",
@@ -1759,7 +1901,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Serbien ist Belgrad.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Serbien"
   },
   {
    "typ": "karte",
@@ -1768,7 +1911,8 @@
    "antwort": "Serbien",
    "erklaerung": "Serbien – Hauptstadt Belgrad.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Serbien"
   },
   {
    "typ": "eingabe",
@@ -1778,7 +1922,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Montenegro ist Podgorica.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Montenegro"
   },
   {
    "typ": "karte",
@@ -1787,7 +1932,8 @@
    "antwort": "Montenegro",
    "erklaerung": "Montenegro – Hauptstadt Podgorica.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Montenegro"
   },
   {
    "typ": "eingabe",
@@ -1799,7 +1945,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Kosovo ist Priština.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Kosovo"
   },
   {
    "typ": "karte",
@@ -1808,7 +1955,8 @@
    "antwort": "Kosovo",
    "erklaerung": "Kosovo – Hauptstadt Priština.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Kosovo"
   },
   {
    "typ": "eingabe",
@@ -1818,7 +1966,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Nordmazedonien ist Skopje.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Nordmazedonien"
   },
   {
    "typ": "karte",
@@ -1827,7 +1976,8 @@
    "antwort": "Nordmazedonien",
    "erklaerung": "Nordmazedonien – Hauptstadt Skopje.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Nordmazedonien"
   },
   {
    "typ": "eingabe",
@@ -1837,7 +1987,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Albanien ist Tirana.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Albanien"
   },
   {
    "typ": "karte",
@@ -1846,7 +1997,8 @@
    "antwort": "Albanien",
    "erklaerung": "Albanien – Hauptstadt Tirana.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Albanien"
   },
   {
    "typ": "eingabe",
@@ -1857,7 +2009,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Rumänien ist Bukarest.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Rumänien"
   },
   {
    "typ": "karte",
@@ -1866,7 +2019,8 @@
    "antwort": "Rumänien",
    "erklaerung": "Rumänien – Hauptstadt Bukarest.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Rumänien"
   },
   {
    "typ": "eingabe",
@@ -1876,7 +2030,8 @@
    ],
    "erklaerung": "Die Hauptstadt von Bulgarien ist Sofia.",
    "stoff": 4,
-   "art": "Hauptstadt"
+   "art": "Hauptstadt",
+   "thema": "Bulgarien"
   },
   {
    "typ": "karte",
@@ -1885,7 +2040,8 @@
    "antwort": "Bulgarien",
    "erklaerung": "Bulgarien – Hauptstadt Sofia.",
    "stoff": 5,
-   "art": "Karte"
+   "art": "Karte",
+   "thema": "Bulgarien"
   },
   {
    "typ": "offen",
@@ -2217,7 +2373,8 @@
     "antwort": "Dänemark",
     "erklaerung": "Dänemark – Hauptstadt Kopenhagen.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Dänemark"
    },
    {
     "typ": "karte",
@@ -2226,7 +2383,8 @@
     "antwort": "Slowakei",
     "erklaerung": "Slowakei – Hauptstadt Bratislava.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Slowakei"
    },
    {
     "typ": "karte",
@@ -2235,7 +2393,8 @@
     "antwort": "Deutschland",
     "erklaerung": "Deutschland – Hauptstadt Berlin.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Deutschland"
    },
    {
     "typ": "karte",
@@ -2244,7 +2403,8 @@
     "antwort": "Finnland",
     "erklaerung": "Finnland – Hauptstadt Helsinki.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Finnland"
    },
    {
     "typ": "karte",
@@ -2253,7 +2413,8 @@
     "antwort": "Vereinigtes Königreich",
     "erklaerung": "Vereinigtes Königreich – Hauptstadt London.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Vereinigtes Königreich"
    },
    {
     "typ": "karte",
@@ -2262,7 +2423,8 @@
     "antwort": "Estland",
     "erklaerung": "Estland – Hauptstadt Tallinn.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Estland"
    },
    {
     "typ": "karte",
@@ -2271,7 +2433,8 @@
     "antwort": "Frankreich",
     "erklaerung": "Frankreich – Hauptstadt Paris.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Frankreich"
    },
    {
     "typ": "karte",
@@ -2280,7 +2443,8 @@
     "antwort": "Norwegen",
     "erklaerung": "Norwegen – Hauptstadt Oslo.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Norwegen"
    },
    {
     "typ": "karte",
@@ -2289,7 +2453,8 @@
     "antwort": "Portugal",
     "erklaerung": "Portugal – Hauptstadt Lissabon.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Portugal"
    },
    {
     "typ": "karte",
@@ -2298,7 +2463,8 @@
     "antwort": "Albanien",
     "erklaerung": "Albanien – Hauptstadt Tirana.",
     "stoff": 5,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Albanien"
    },
    {
     "typ": "eingabe",
@@ -2308,7 +2474,8 @@
     ],
     "erklaerung": "Die Hauptstadt von Irland ist Dublin.",
     "stoff": 2,
-    "art": "Hauptstadt"
+    "art": "Hauptstadt",
+    "thema": "Irland"
    },
    {
     "typ": "eingabe",
@@ -2318,7 +2485,8 @@
     ],
     "erklaerung": "Die Hauptstadt von Vereinigtes Königreich ist London.",
     "stoff": 2,
-    "art": "Hauptstadt"
+    "art": "Hauptstadt",
+    "thema": "Vereinigtes Königreich"
    },
    {
     "typ": "eingabe",
@@ -2329,7 +2497,8 @@
     ],
     "erklaerung": "Die Hauptstadt von Island ist Reykjavík.",
     "stoff": 0,
-    "art": "Hauptstadt"
+    "art": "Hauptstadt",
+    "thema": "Island"
    },
    {
     "typ": "eingabe",
@@ -2339,7 +2508,8 @@
     ],
     "erklaerung": "Die Hauptstadt von Estland ist Tallinn.",
     "stoff": 1,
-    "art": "Hauptstadt"
+    "art": "Hauptstadt",
+    "thema": "Estland"
    },
    {
     "typ": "eingabe",
@@ -2349,7 +2519,8 @@
     ],
     "erklaerung": "Die Hauptstadt von Ungarn ist Budapest.",
     "stoff": 3,
-    "art": "Hauptstadt"
+    "art": "Hauptstadt",
+    "thema": "Ungarn"
    },
    {
     "typ": "auswahl",
@@ -2364,7 +2535,8 @@
     "antwort": "Litauen",
     "erklaerung": "Das ist Litauen (Hauptstadt Vilnius).",
     "stoff": 1,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Litauen"
    },
    {
     "typ": "auswahl",
@@ -2379,7 +2551,8 @@
     "antwort": "Polen",
     "erklaerung": "Das ist Polen (Hauptstadt Warschau).",
     "stoff": 3,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Polen"
    },
    {
     "typ": "auswahl",
@@ -2394,7 +2567,8 @@
     "antwort": "Island",
     "erklaerung": "Das ist Island (Hauptstadt Reykjavík).",
     "stoff": 0,
-    "art": "Karte"
+    "art": "Karte",
+    "thema": "Island"
    },
    {
     "typ": "auswahl",
@@ -2408,7 +2582,8 @@
     "antwort": "Osteuropa",
     "erklaerung": "Belarus gehört zu Osteuropa.",
     "stoff": 1,
-    "art": "Region"
+    "art": "Region",
+    "thema": "Belarus"
    },
    {
     "typ": "auswahl",
@@ -2422,7 +2597,8 @@
     "antwort": "Nordeuropa",
     "erklaerung": "Norwegen gehört zu Nordeuropa.",
     "stoff": 0,
-    "art": "Region"
+    "art": "Region",
+    "thema": "Norwegen"
    },
    {
     "typ": "offen",

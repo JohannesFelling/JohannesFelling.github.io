@@ -559,9 +559,22 @@ function rundeStarten(nurTest) {
   let fokus = alle.filter(q => schwerpunktAktiv(q) && q.schwerpunkt === naechster);
   if (fokus.length < 5) fokus = alle.filter(schwerpunktAktiv);
   const pool = fokus.length >= 5 ? fokus : alle;
-  const rest = mischen(pool.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
+  let rest = mischen(pool.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
+  rest = themaGleichmaessig(rest, s, pool);
   runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null, mission: nurTest };
   frageZeigen();
+}
+// Fragen mit „thema“ (z. B. ein Land): Themen, die am seltensten dran waren, zuerst – und pro Runde jedes Thema nur einmal
+function themaGleichmaessig(liste, s, pool) {
+  if (!liste.some(q => q.thema)) return liste;
+  const zahl = {};
+  for (const q of pool) if (q.thema) zahl[q.thema] = (zahl[q.thema] || 0) + (s.gesehen[q.id] || 0);
+  const sortiert = liste.slice().sort((a, b) => (a.thema ? zahl[a.thema] : 1e9) - (b.thema ? zahl[b.thema] : 1e9) || (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
+  const drin = new Set(), erst = [], spaeter = [];
+  for (const q of sortiert) { if (q.thema && !drin.has(q.thema)) { drin.add(q.thema); erst.push(q); } else spaeter.push(q); }
+  // ein paar Fragen ohne Thema (z. B. offene) zwischendurch zulassen
+  const ohne = spaeter.filter(q => !q.thema).slice(0, 2);
+  return [...ohne, ...erst, ...spaeter.filter(q => !ohne.includes(q))];
 }
 // Test jedes Mal neu zusammenstellen: aus allen Fragen zum Stoff, über die Teststoff-Punkte verteilt,
 // zuletzt gestellte Testfragen werden gemieden
@@ -577,7 +590,8 @@ function testPool(t) {
 function testZiehen(t, s) {
   const pool = testPool(t), n = Math.min(t.fragen.length, pool.length);
   const zuletzt = new Set(((s.testZuletzt || {})[t.id] || []));
-  const frisch = q => !zuletzt.has(q.frage);
+  const frisch = q => !zuletzt.has(q.frage) && !(q.thema && zuletzt.has("thema:" + q.thema));
+  const themen = new Set();
   // nach Teststoff-Punkt (oder Frageart) gruppieren, frische Fragen zuerst
   const gruppen = {};
   for (const q of mischen(pool)) { const g = q.stoff ?? q.art ?? "x"; (gruppen[g] = gruppen[g] || []).push(q); }
@@ -590,9 +604,9 @@ function testZiehen(t, s) {
     let dazu = false;
     for (const g of schluessel) {
       if (wahl.length >= n) break;
-      const liste = gruppen[g], i = liste.findIndex(q => (q.typ !== "offen" || offen < offenMax) && (auchAlte || frisch(q)));
+      const liste = gruppen[g], i = liste.findIndex(q => (q.typ !== "offen" || offen < offenMax) && (auchAlte || frisch(q)) && !(q.thema && themen.has(q.thema)));
       if (i < 0) continue;
-      const [q] = liste.splice(i, 1); if (q.typ === "offen") offen++;
+      const [q] = liste.splice(i, 1); if (q.typ === "offen") offen++; if (q.thema) themen.add(q.thema);
       wahl.push(q); dazu = true;
     }
     if (!dazu) { if (auchAlte) break; auchAlte = true; }
@@ -605,7 +619,7 @@ function testStarten(t) {
   if (!confirm(`${t.titel}\n\n${fragen.length} Fragen – jedes Mal neu gemischt aus dem ganzen Stoff. Die Lösungen siehst du erst am Ende. Bereit?`)) return;
   s.testZuletzt = s.testZuletzt || {};
   // die letzten zwei Durchgänge merken (nur die Fragetexte)
-  s.testZuletzt[t.id] = [...fragen.map(q => q.frage), ...(s.testZuletzt[t.id] || [])].slice(0, fragen.length * 2);
+  s.testZuletzt[t.id] = [...fragen.flatMap(q => q.thema ? [q.frage, "thema:" + q.thema] : [q.frage]), ...(s.testZuletzt[t.id] || [])].slice(0, fragen.length * 4);
   speichern(person.id, fach.id, s);
   runde = { fragen, i: 0, richtig: 0, falsch: [], test: t };
   frageZeigen();
