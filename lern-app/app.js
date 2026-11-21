@@ -161,7 +161,16 @@ const el = (tag, attrs = {}, ...kids) => {
 const mischen = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const zufall = a => a[Math.floor(Math.random() * a.length)];
 const norm = t => String(t).toLowerCase().replace(/[’`´]/g, "'").replace(/[.!?;:]+$/g, "").replace(/\s+/g, " ").trim();
-function zahl(t) { const s = String(t).replace(/\s/g, "").replace(",", "."); return s !== "" && !isNaN(s) ? Number(s) : null; }
+function zahl(t) { const s = String(t).toLowerCase().replace(/[−–—]/g, "-").replace(/^\s*minus\s*/, "-").replace(/\s/g, "").replace(",", "."); return s !== "" && !isNaN(s) ? Number(s) : null; }
+// Minus-Taste: die Zahlentastatur am iPhone hat kein Minus
+function minusKnopf(inp) {
+  return el("button", { class: "minus-knopf", type: "button", "aria-label": "Minus", onmousedown: e => e.preventDefault(), onclick: () => {
+    if (inp.disabled) return;
+    const v = inp.value.trimStart();
+    inp.value = /^[-−]/.test(v) ? v.replace(/^[-−]\s*/, "") : "−" + v;
+    inp.focus();
+  } }, "−");
+}
 function stimmt(eingabe, antworten) {
   antworten = [].concat(antworten);
   const n = norm(eingabe), z = zahl(eingabe);
@@ -629,10 +638,10 @@ function frageZeigen() {
         else info.replaceChildren(el("div", { class: "feedback neutral" }, "Stimmt das so? Dann „Prüfen“ – sonst nochmal sprechen oder ausbessern."));
       }, info); } }, ic("mikro"));
       inp.placeholder = "Antwort sprechen (oder tippen) …";
-      teil = el("div", {}, mik, info, inp, pruefen);
+      teil = el("div", {}, mik, info, q.zahl ? el("div", { class: "zahl-zeile" }, minusKnopf(inp), inp) : inp, pruefen);
       setTimeout(() => { if (!fertig) mik.click(); }, 400);
     } else {
-      teil = el("div", {}, inp, pruefen);
+      teil = el("div", {}, q.zahl ? el("div", { class: "zahl-zeile" }, minusKnopf(inp), inp) : inp, pruefen);
       setTimeout(() => inp.focus(), 50);
     }
   }
