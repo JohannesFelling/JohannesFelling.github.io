@@ -173,7 +173,13 @@ function antwortSprache(q) {
   if (q.sprache) return q.sprache;
   const fs = FACH_SPRACHE[fach.id];
   if (!fs) return "de-AT";
-  return /auf deutsch|ins deutsche|deutsche[ns]? (wort|bedeutung|übersetzung)/i.test(q.frage) ? "de-AT" : fs;
+  // Mikrofon hört in der Sprache der ERWARTETEN Antwort
+  const f = q.frage;
+  if (/auf (englisch|spanisch|französisch|italienisch)|ins (englische|spanische|französische|italienische)|in english|en español|buchstabiere/i.test(f)) return fs;
+  if (/auf deutsch|ins deutsche|deutsche[ns]? (wort|bedeutung|übersetzung)|was hei(ß|ss)t das|was bedeutet/i.test(f)) return "de-AT";
+  const a = [].concat(q.antwort)[0] || "";
+  if (/[äöüß]/i.test(a) || /^(der|die|das|ein|eine|sein|ist|und|nicht)\b/i.test(a)) return "de-AT";
+  return fs;
 }
 function muendlich() { return !!SR && profil(person.id).modus === "muendlich"; }
 function zuhoeren(lang, knopf, fertig, info) {
@@ -548,7 +554,7 @@ function frageZeigen() {
   weiter.hidden = true;
   let fertig = false;
 
-  function auswerten(ok, gegeben) {
+  function auswerten(ok, gegeben, extra) {
     if (fertig) return; fertig = true;
     const s = laden(person.id, fach.id);
     if (!test) s.gesehen[q.id] = (s.gesehen[q.id] || 0) + 1;
@@ -559,7 +565,8 @@ function frageZeigen() {
     if (test) feedback.replaceChildren(el("div", { class: "feedback neutral pop" }, "Antwort gespeichert."));
     else feedback.replaceChildren(el("div", { class: `feedback pop ${ok ? "ok" : "nein"}` },
       el("b", {}, ok ? [`${zufall(person.lob)} +`, punkte(person.id, 1)] : "Knapp daneben."),
-      !ok ? el("div", {}, "Richtig ist: ", el("b", {}, [].concat(q.antwort)[0])) : null,
+      extra || null,
+      !ok && !extra ? el("div", {}, "Richtig ist: ", el("b", {}, [].concat(q.antwort)[0])) : null,
       q.erklaerung ? el("div", {}, "💡 ", q.erklaerung) : null));
     const w = !test && wissenFuer(q);
     if (w) feedback.append(el("details", { class: "erklaer-mehr" }, el("summary", {}, `📖 Ausführlich erklärt: ${w.titel}`), el("div", { class: "wissen-text" }, vorleseKnopf(w), ...wissenInhalt(w))));
@@ -567,7 +574,27 @@ function frageZeigen() {
   }
 
   let teil;
-  if (q.typ === "auswahl") {
+  if (q.typ === "offen") {
+    // Offene Frage: frei formulieren, geprüft wird, welche Kernpunkte vorkommen
+    const ta = el("textarea", { class: "eingabe offen-feld", rows: "4", placeholder: muendlich() ? "Antwort sprechen (oder schreiben) …" : "Schreib deine Antwort in ganzen Sätzen …" });
+    const kern = q.kern || [], mindest = q.mindest || Math.max(1, Math.ceil(kern.length / 2));
+    const abgeben = el("button", { class: "knopf", onclick: () => {
+      const t = ta.value.trim(); if (!t) return;
+      ta.disabled = true; abgeben.hidden = true;
+      const treffer = kern.map(k => (k.w || []).some(r => { try { return new RegExp(r, "i").test(t); } catch (e) { return false; } }));
+      const n = treffer.filter(Boolean).length, ok = n >= mindest;
+      const extra = el("div", { class: "offen-auswertung" },
+        el("div", { class: "klein" }, `${n} von ${kern.length} Kernpunkten erwähnt (nötig: ${mindest})`),
+        ...kern.map((k, i) => el("div", { class: `kern ${treffer[i] ? "drin" : ""}` }, el("span", {}, treffer[i] ? "✓" : "○"), k.t)),
+        el("div", { class: "muster" }, el("b", {}, "Musterlösung: "), q.muster || [].concat(q.antwort)[0]));
+      auswerten(ok, t, extra);
+    } }, test ? "Antwort abgeben" : "Prüfen ✔");
+    if (muendlich()) {
+      const info = el("div");
+      const mik = el("button", { class: "mikro klein-mikro", onclick: () => { if (!fertig) zuhoeren("de-AT", mik, alts => { ta.value = (ta.value ? ta.value + " " : "") + alts[0]; }, info); } }, ic("mikro"));
+      teil = el("div", {}, mik, el("p", { class: "klein mitte" }, "Tippe aufs Mikro und erzähl – du kannst mehrmals sprechen."), info, ta, abgeben);
+    } else { teil = el("div", {}, ta, abgeben); setTimeout(() => ta.focus(), 50); }
+  } else if (q.typ === "auswahl") {
     const opts = mischen(q.optionen);
     const knoepfe = opts.map((o, i) => el("button", { class: "opt", onclick: () => {
       const ok = stimmt(o, q.antwort);

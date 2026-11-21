@@ -5,7 +5,7 @@
  "teststoff": {
   "termin": "2026-11-27",
   "titel": "Geografie-Test am 27.11.",
-  "quelle": "Teststoff GW + GEOprofi 2 S. 8–26",
+  "quelle": "Teststoff GW + GEOprofi 2 S. 8–27",
   "punkte": [
    "Fachbegriffe nennen und erklären (unterstrichene Begriffe)",
    "Abbildungen, Diagramme und Karten beschreiben (S. 9, 11, 15, 16, 17, 21, 24, 26)",
@@ -1072,6 +1072,743 @@
    "antwort": "Upcycling",
    "erklaerung": "Aus etwas Altem wird etwas Neues, Wertvolles.",
    "stoff": 6
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre, was der Unterschied zwischen erneuerbaren und nicht erneuerbaren Energieträgern ist. Nenne je ein Beispiel.",
+   "kern": [
+    {
+     "t": "Erneuerbar = immer wieder verfügbar / wächst nach",
+     "w": [
+      "immer wieder",
+      "nachwachs",
+      "wächst nach",
+      "immer verfügbar",
+      "nicht aus",
+      "unendlich",
+      "erneuer"
+     ]
+    },
+    {
+     "t": "Nicht erneuerbar = begrenzt / geht irgendwann aus",
+     "w": [
+      "begrenzt",
+      "aus ?gehen",
+      "geht.*aus",
+      "irgendwann",
+      "endlich",
+      "verbraucht",
+      "nicht nach"
+     ]
+    },
+    {
+     "t": "Beispiel erneuerbar (Wasser, Wind, Sonne, Erdwärme, Biomasse)",
+     "w": [
+      "wasser",
+      "wind",
+      "sonne",
+      "solar",
+      "photovolt",
+      "geotherm",
+      "erdwärme",
+      "biomasse",
+      "holz"
+     ]
+    },
+    {
+     "t": "Beispiel nicht erneuerbar (Kohle, Erdöl, Erdgas, Uran)",
+     "w": [
+      "kohle",
+      "erdöl",
+      "öl",
+      "erdgas",
+      "gas",
+      "uran",
+      "atom"
+     ]
+    }
+   ],
+   "muster": "Erneuerbare Energieträger kommen aus einer immer verfügbaren Quelle, z. B. Wasser, Wind oder Sonne. Nicht erneuerbare (fossile) sind nur begrenzt vorhanden und gehen irgendwann aus, z. B. Kohle, Erdöl, Erdgas oder Uran.",
+   "antwort": "Erneuerbare Energieträger kommen aus einer immer verfügbaren Quelle, z. B. Wasser, Wind oder Sonne. Nicht erneuerbare (fossile) sind nur begrenzt vorhanden und gehen irgendwann aus, z. B. Kohle, Erdöl, Erdgas oder Uran.",
+   "erklaerung": "",
+   "stoff": 2,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne zwei Vorteile und zwei Nachteile von Wasserkraftwerken.",
+   "kern": [
+    {
+     "t": "Vorteil: sauberer Strom / kein CO₂",
+     "w": [
+      "sauber",
+      "kein co",
+      "klimafreundlich",
+      "umweltfreundlich",
+      "keine abgase"
+     ]
+    },
+    {
+     "t": "Vorteil: Hochwasserschutz oder lange Nutzungsdauer",
+     "w": [
+      "hochwasser",
+      "überschwemm",
+      "lange",
+      "nutzungsdauer",
+      "lange halt",
+      "rund um die uhr",
+      "24"
+     ]
+    },
+    {
+     "t": "Nachteil: Eingriff in die Natur / Landschaftsbild",
+     "w": [
+      "eingriff",
+      "natur",
+      "landschaft"
+     ]
+    },
+    {
+     "t": "Nachteil: Fischbestand / Tiere",
+     "w": [
+      "fisch",
+      "tiere"
+     ]
+    }
+   ],
+   "muster": "Vorteile: sauberer Strom ohne CO₂, Hochwasserschutz, lange Nutzungsdauer. Nachteile: großer Eingriff in die Natur, verändertes Landschaftsbild, Fischbestand wird gestört.",
+   "antwort": "Vorteile: sauberer Strom ohne CO₂, Hochwasserschutz, lange Nutzungsdauer. Nachteile: großer Eingriff in die Natur, verändertes Landschaftsbild, Fischbestand wird gestört.",
+   "erklaerung": "",
+   "stoff": 2,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre den Unterschied zwischen einem Laufkraftwerk und einem Speicherkraftwerk.",
+   "kern": [
+    {
+     "t": "Laufkraftwerk: Fluss wird gestaut, fließendes Wasser treibt Turbinen",
+     "w": [
+      "fluss",
+      "fließ",
+      "fliess"
+     ]
+    },
+    {
+     "t": "Speicherkraftwerk: Stausee im Gebirge, Wasser über Rohre zur Turbine",
+     "w": [
+      "stausee",
+      "speicher",
+      "gebirge",
+      "rohr",
+      "staumauer"
+     ]
+    },
+    {
+     "t": "Speicherkraftwerk liefert Strom bei Bedarf / in Spitzenzeiten",
+     "w": [
+      "spitzen",
+      "bedarf",
+      "wenn viele",
+      "in der früh",
+      "morgens",
+      "schnell"
+     ]
+    }
+   ],
+   "muster": "Beim Laufkraftwerk wird ein Fluss gestaut und das fließende Wasser treibt rund um die Uhr Turbinen an. Beim Speicherkraftwerk wird Wasser in einem Stausee im Gebirge gespeichert und bei Bedarf über Rohre zu den Turbinen geleitet – so liefert es in Spitzenzeiten schnell viel Strom.",
+   "antwort": "Beim Laufkraftwerk wird ein Fluss gestaut und das fließende Wasser treibt rund um die Uhr Turbinen an. Beim Speicherkraftwerk wird Wasser in einem Stausee im Gebirge gespeichert und bei Bedarf über Rohre zu den Turbinen geleitet – so liefert es in Spitzenzeiten schnell viel Strom.",
+   "erklaerung": "",
+   "stoff": 2,
+   "mindest": 2
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Warum ist das Verbrennen von Erdöl, Erdgas und Kohle schlecht für das Klima?",
+   "kern": [
+    {
+     "t": "Es entsteht CO₂ / Kohlenstoffdioxid",
+     "w": [
+      "co2",
+      "co₂",
+      "co 2",
+      "kohlenstoffdioxid",
+      "kohlendioxid"
+     ]
+    },
+    {
+     "t": "CO₂ ist klimaschädlich / Klimawandel / Erderwärmung",
+     "w": [
+      "klima",
+      "erwärm",
+      "treibhaus",
+      "schädlich"
+     ]
+    }
+   ],
+   "muster": "Beim Verbrennen entsteht Kohlenstoffdioxid (CO₂). Dieses Gas schadet dem Klima und verstärkt den Klimawandel.",
+   "antwort": "Beim Verbrennen entsteht Kohlenstoffdioxid (CO₂). Dieses Gas schadet dem Klima und verstärkt den Klimawandel.",
+   "erklaerung": "",
+   "stoff": 2,
+   "mindest": 1
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne Gefahren der Atomkraft.",
+   "kern": [
+    {
+     "t": "Radioaktivität / Strahlung bei Unfällen",
+     "w": [
+      "radioaktiv",
+      "strahl"
+     ]
+    },
+    {
+     "t": "Große Unfälle (Tschernobyl, Fukushima)",
+     "w": [
+      "unfall",
+      "unfäll",
+      "tschernobyl",
+      "fukushima"
+     ]
+    },
+    {
+     "t": "Atommüll – Endlager ungeklärt",
+     "w": [
+      "atommüll",
+      "müll",
+      "abfall",
+      "endlager",
+      "lager"
+     ]
+    }
+   ],
+   "muster": "Bei Störungen können radioaktive Stoffe frei werden (Tschernobyl 1986, Fukushima 2011). Außerdem ist nicht geklärt, wo der radioaktive Atommüll langfristig gelagert werden kann.",
+   "antwort": "Bei Störungen können radioaktive Stoffe frei werden (Tschernobyl 1986, Fukushima 2011). Außerdem ist nicht geklärt, wo der radioaktive Atommüll langfristig gelagert werden kann.",
+   "erklaerung": "",
+   "stoff": 2,
+   "mindest": 2
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre, was ein Blackout ist, und nenne mögliche Ursachen.",
+   "kern": [
+    {
+     "t": "Langer, großflächiger Stromausfall",
+     "w": [
+      "lang",
+      "großfläch",
+      "ganz österreich",
+      "weite teile",
+      "ganzen land",
+      "länger"
+     ]
+    },
+    {
+     "t": "Ursache Naturkatastrophe",
+     "w": [
+      "natur",
+      "unwetter",
+      "sturm",
+      "katastroph"
+     ]
+    },
+    {
+     "t": "Ursache Cyberangriff / Anschlag / Störung im Netz",
+     "w": [
+      "cyber",
+      "hacker",
+      "angriff",
+      "anschlag",
+      "terror",
+      "störung",
+      "umspann"
+     ]
+    }
+   ],
+   "muster": "Ein Blackout ist ein langer Stromausfall in weiten Teilen des Landes. Ursachen können Naturkatastrophen, Cyberangriffe, terroristische Anschläge oder Störungen im Stromnetz (z. B. in einem Umspannwerk) sein.",
+   "antwort": "Ein Blackout ist ein langer Stromausfall in weiten Teilen des Landes. Ursachen können Naturkatastrophen, Cyberangriffe, terroristische Anschläge oder Störungen im Stromnetz (z. B. in einem Umspannwerk) sein.",
+   "erklaerung": "",
+   "stoff": 3,
+   "mindest": 2
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Was würde bei einem Blackout nicht mehr funktionieren? Nenne Beispiele aus Haushalt, Verkehr, Einkauf und Schule.",
+   "kern": [
+    {
+     "t": "Haushalt: Licht, Kühlschrank, Herd, Heizung, Internet",
+     "w": [
+      "licht",
+      "kühlschrank",
+      "herd",
+      "heizung",
+      "internet",
+      "wlan",
+      "handy",
+      "fernseh",
+      "warmwasser"
+     ]
+    },
+    {
+     "t": "Verkehr: Ampeln, Züge, U-Bahn, Tankstellen",
+     "w": [
+      "ampel",
+      "zug",
+      "züge",
+      "bahn",
+      "tankstell",
+      "straßenbahn"
+     ]
+    },
+    {
+     "t": "Einkauf: Kassen, Kühlregale, Bankomat",
+     "w": [
+      "kasse",
+      "bankomat",
+      "kühl",
+      "geschäft",
+      "supermarkt",
+      "zahlen"
+     ]
+    },
+    {
+     "t": "Schule: Licht, Computer, Tafel, Heizung",
+     "w": [
+      "schule",
+      "computer",
+      "beamer",
+      "tafel",
+      "unterricht"
+     ]
+    }
+   ],
+   "muster": "Haushalt: kein Licht, Kühlschrank, Herd, Internet. Verkehr: Ampeln und Züge fallen aus, Tankstellen funktionieren nicht. Einkauf: Kassen und Bankomaten gehen nicht. Schule: kein Licht, keine Computer, keine Heizung.",
+   "antwort": "Haushalt: kein Licht, Kühlschrank, Herd, Internet. Verkehr: Ampeln und Züge fallen aus, Tankstellen funktionieren nicht. Einkauf: Kassen und Bankomaten gehen nicht. Schule: kein Licht, keine Computer, keine Heizung.",
+   "erklaerung": "",
+   "stoff": 3,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Was sollte eine Familie für einen Blackout zu Hause haben? Nenne mindestens drei Dinge.",
+   "kern": [
+    {
+     "t": "Trinkwasser",
+     "w": [
+      "wasser"
+     ]
+    },
+    {
+     "t": "Haltbare Lebensmittel / Konserven",
+     "w": [
+      "lebensmittel",
+      "essen",
+      "konserv",
+      "nudeln",
+      "vorrät",
+      "dosen"
+     ]
+    },
+    {
+     "t": "Taschenlampe / Kerzen",
+     "w": [
+      "taschenlampe",
+      "kerze",
+      "lampe"
+     ]
+    },
+    {
+     "t": "Batterien / Radio",
+     "w": [
+      "batter",
+      "radio"
+     ]
+    },
+    {
+     "t": "Medikamente / Erste Hilfe",
+     "w": [
+      "medikament",
+      "erste hilfe",
+      "verband"
+     ]
+    }
+   ],
+   "muster": "Trinkwasser, haltbare Lebensmittel (Konserven, Nudeln), Taschenlampe und Kerzen, Batterien, ein batteriebetriebenes Radio und wichtige Medikamente.",
+   "antwort": "Trinkwasser, haltbare Lebensmittel (Konserven, Nudeln), Taschenlampe und Kerzen, Batterien, ein batteriebetriebenes Radio und wichtige Medikamente.",
+   "erklaerung": "",
+   "stoff": 3,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre, warum das Stromnetz im Gleichgewicht sein muss und wer sich in Österreich darum kümmert.",
+   "kern": [
+    {
+     "t": "Erzeugung und Verbrauch müssen gleich sein",
+     "w": [
+      "gleich",
+      "gleichgewicht",
+      "erzeug",
+      "verbrauch"
+     ]
+    },
+    {
+     "t": "Sonst Engpässe/Überlastung → Ausfall",
+     "w": [
+      "überlast",
+      "engp",
+      "ausfall",
+      "blackout",
+      "zu viel",
+      "zu wenig"
+     ]
+    },
+    {
+     "t": "APG / Austrian Power Grid",
+     "w": [
+      "apg",
+      "austrian power grid",
+      "netzbetreiber"
+     ]
+    }
+   ],
+   "muster": "Die Stromversorgung ist nur stabil, wenn genauso viel Strom erzeugt wie verbraucht wird – sonst drohen Engpässe oder Überlastungen bis zum Ausfall. In Österreich sorgt die APG (Austrian Power Grid) als Netzbetreiber für den Ausgleich.",
+   "antwort": "Die Stromversorgung ist nur stabil, wenn genauso viel Strom erzeugt wie verbraucht wird – sonst drohen Engpässe oder Überlastungen bis zum Ausfall. In Österreich sorgt die APG (Austrian Power Grid) als Netzbetreiber für den Ausgleich.",
+   "erklaerung": "",
+   "stoff": 3,
+   "mindest": 2
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre den Unterschied zwischen erneuerbaren und nicht erneuerbaren Rohstoffen mit je zwei Beispielen.",
+   "kern": [
+    {
+     "t": "Erneuerbar = wächst nach (von Pflanzen/Tieren)",
+     "w": [
+      "wächst",
+      "nachwachs",
+      "pflanz",
+      "tier",
+      "erneuer"
+     ]
+    },
+    {
+     "t": "Nicht erneuerbar = begrenzt, Bodenschätze",
+     "w": [
+      "begrenzt",
+      "bodenschatz",
+      "bergwerk",
+      "bohr",
+      "geht aus",
+      "endlich"
+     ]
+    },
+    {
+     "t": "Beispiele erneuerbar: Holz, Baumwolle, Rapsöl, Leder",
+     "w": [
+      "holz",
+      "baumwolle",
+      "raps",
+      "leder",
+      "naturfaser"
+     ]
+    },
+    {
+     "t": "Beispiele nicht erneuerbar: Metalle, Erze, Kohle, Erdöl",
+     "w": [
+      "metall",
+      "erz",
+      "kohle",
+      "erdöl",
+      "kupfer",
+      "eisen",
+      "lithium",
+      "gold"
+     ]
+    }
+   ],
+   "muster": "Erneuerbare Rohstoffe kommen von Pflanzen oder Tieren und wachsen nach, z. B. Holz und Baumwolle. Nicht erneuerbare Rohstoffe sind nur begrenzt vorhanden (Bodenschätze), z. B. Metalle, Erze, Kohle oder Erdöl.",
+   "antwort": "Erneuerbare Rohstoffe kommen von Pflanzen oder Tieren und wachsen nach, z. B. Holz und Baumwolle. Nicht erneuerbare Rohstoffe sind nur begrenzt vorhanden (Bodenschätze), z. B. Metalle, Erze, Kohle oder Erdöl.",
+   "erklaerung": "",
+   "stoff": 4,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Welche Probleme gibt es beim Abbau von Seltenen Erden oder Lithium? Nenne mindestens zwei.",
+   "kern": [
+    {
+     "t": "Umweltschäden / giftige Stoffe in Wasser, Boden, Luft",
+     "w": [
+      "gift",
+      "umwelt",
+      "verschmutz",
+      "chemik",
+      "wasser",
+      "boden",
+      "luft",
+      "staub"
+     ]
+    },
+    {
+     "t": "Kinderarbeit / schlechte Arbeitsbedingungen",
+     "w": [
+      "kinder",
+      "arbeit",
+      "schutzkleidung",
+      "menschenunwürdig",
+      "gefährlich"
+     ]
+    },
+    {
+     "t": "Hoher Wasserverbrauch",
+     "w": [
+      "wasserverbrauch",
+      "viel wasser"
+     ]
+    },
+    {
+     "t": "Menschen werden umgesiedelt",
+     "w": [
+      "umgesiedelt",
+      "umsied",
+      "vertrieb"
+     ]
+    }
+   ],
+   "muster": "Beim Abbau gelangen giftige Chemikalien und Staub in Wasser, Boden und Luft, es wird sehr viel Wasser verbraucht, oft arbeiten Kinder ohne Schutzkleidung unter gefährlichen Bedingungen, und Menschen werden umgesiedelt.",
+   "antwort": "Beim Abbau gelangen giftige Chemikalien und Staub in Wasser, Boden und Luft, es wird sehr viel Wasser verbraucht, oft arbeiten Kinder ohne Schutzkleidung unter gefährlichen Bedingungen, und Menschen werden umgesiedelt.",
+   "erklaerung": "",
+   "stoff": 4,
+   "mindest": 2
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Ordne zu: Bananenschale, Zeitung, Joghurtbecher, Konservendose, Glasflasche, benutztes Taschentuch. Schreib zu jedem die Tonne.",
+   "kern": [
+    {
+     "t": "Bananenschale → Bio",
+     "w": [
+      "banan[^,.]*bio"
+     ]
+    },
+    {
+     "t": "Zeitung → Altpapier",
+     "w": [
+      "zeitung[^,.]*(papier|rot)"
+     ]
+    },
+    {
+     "t": "Joghurtbecher → gelb / Kunststoff",
+     "w": [
+      "joghurt[^,.]*(gelb|kunststoff|plastik)"
+     ]
+    },
+    {
+     "t": "Konservendose → Metall / blau",
+     "w": [
+      "dose[^,.]*(metall|blau)"
+     ]
+    },
+    {
+     "t": "Glasflasche → Glas",
+     "w": [
+      "glasflasche[^,.]*glas"
+     ]
+    },
+    {
+     "t": "Taschentuch → Restmüll",
+     "w": [
+      "taschent[^,.]*(rest|schwarz)"
+     ]
+    }
+   ],
+   "muster": "Bananenschale → Bioabfall (braun), Zeitung → Altpapier (rot), Joghurtbecher → Kunststoffverpackungen (gelb), Konservendose → Metallverpackungen (blau), Glasflasche → Glascontainer, benutztes Taschentuch → Restmüll (schwarz).",
+   "antwort": "Bananenschale → Bioabfall (braun), Zeitung → Altpapier (rot), Joghurtbecher → Kunststoffverpackungen (gelb), Konservendose → Metallverpackungen (blau), Glasflasche → Glascontainer, benutztes Taschentuch → Restmüll (schwarz).",
+   "erklaerung": "Schreib so: „Bananenschale – Bio, Zeitung – Altpapier, …“",
+   "stoff": 5,
+   "mindest": 5
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre die Kreislaufwirtschaft.",
+   "kern": [
+    {
+     "t": "Rohstoffe → Produktion → Konsum",
+     "w": [
+      "produktion",
+      "herstell",
+      "konsum",
+      "nutz",
+      "verwend"
+     ]
+    },
+    {
+     "t": "Nach der Nutzung werden Materialien wiederverwendet / recycelt",
+     "w": [
+      "wieder",
+      "recycl",
+      "zurück"
+     ]
+    },
+    {
+     "t": "Weniger Abfall / weniger CO₂ / weniger neue Rohstoffe",
+     "w": [
+      "weniger",
+      "abfall",
+      "müll",
+      "co",
+      "rohstoff"
+     ]
+    }
+   ],
+   "muster": "Bei der Kreislaufwirtschaft werden aus Rohstoffen Produkte hergestellt und genutzt. Danach werden die Materialien nicht weggeworfen, sondern recycelt und für neue Produkte verwendet. So entstehen weniger Abfall und CO₂, und es müssen weniger neue Rohstoffe aus der Natur genommen werden.",
+   "antwort": "Bei der Kreislaufwirtschaft werden aus Rohstoffen Produkte hergestellt und genutzt. Danach werden die Materialien nicht weggeworfen, sondern recycelt und für neue Produkte verwendet. So entstehen weniger Abfall und CO₂, und es müssen weniger neue Rohstoffe aus der Natur genommen werden.",
+   "erklaerung": "",
+   "stoff": 6,
+   "mindest": 2
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre, was Recycling ist, und nenne ein Beispiel. Warum ist es gut für die Umwelt?",
+   "kern": [
+    {
+     "t": "Rohstoffe aus Abfall werden wiederverwendet",
+     "w": [
+      "wieder",
+      "kreislauf",
+      "neu",
+      "zurück"
+     ]
+    },
+    {
+     "t": "Beispiel (Aluminium, Glas, Papier, Plastik, Jeans …)",
+     "w": [
+      "alu",
+      "glas",
+      "papier",
+      "plastik",
+      "kunststoff",
+      "jeans",
+      "dose",
+      "flasche"
+     ]
+    },
+    {
+     "t": "Spart Energie / weniger CO₂ / weniger Rohstoffe",
+     "w": [
+      "energie",
+      "co",
+      "rohstoff",
+      "weniger"
+     ]
+    }
+   ],
+   "muster": "Beim Recycling werden Dinge nicht weggeworfen, sondern ihre Rohstoffe wiederverwendet. Beispiel: Aluminiumdosen – recyceltes Aluminium erzeugt nur 0,4 kg statt 11 kg CO₂. Recycling spart Energie, CO₂ und neue Rohstoffe.",
+   "antwort": "Beim Recycling werden Dinge nicht weggeworfen, sondern ihre Rohstoffe wiederverwendet. Beispiel: Aluminiumdosen – recyceltes Aluminium erzeugt nur 0,4 kg statt 11 kg CO₂. Recycling spart Energie, CO₂ und neue Rohstoffe.",
+   "erklaerung": "",
+   "stoff": 6,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Was ist der Unterschied zwischen Recycling und Upcycling? Nenne ein Beispiel für Upcycling (z. B. aus der Schule).",
+   "kern": [
+    {
+     "t": "Recycling: Rohstoffe werden wiederverwendet",
+     "w": [
+      "recycl[^.]*(rohstoff|material|wieder)",
+      "rohstoff"
+     ]
+    },
+    {
+     "t": "Upcycling: aus Altem etwas Neues, Wertvolleres machen",
+     "w": [
+      "neu",
+      "schöner",
+      "wertvoll",
+      "verwandel",
+      "bastel"
+     ]
+    },
+    {
+     "t": "Beispiel: PET-Flaschen-Blumentopf, Reifen-Beet, Rucksack aus Plane, Tasche aus Jeans, Stiftebox",
+     "w": [
+      "flasche",
+      "reifen",
+      "plane",
+      "rucksack",
+      "jeans",
+      "tasche",
+      "stift",
+      "palette",
+      "bank",
+      "sofa",
+      "topf"
+     ]
+    }
+   ],
+   "muster": "Beim Recycling werden die Rohstoffe aus Abfall zurückgewonnen und neu verarbeitet. Beim Upcycling wird aus einem alten Gegenstand direkt etwas Neues gemacht – z. B. Blumentöpfe aus alten PET-Flaschen an der Klassenwand, ein Beet aus alten Reifen, eine Stiftebox aus Dosen oder ein Rucksack aus einer LKW-Plane.",
+   "antwort": "Beim Recycling werden die Rohstoffe aus Abfall zurückgewonnen und neu verarbeitet. Beim Upcycling wird aus einem alten Gegenstand direkt etwas Neues gemacht – z. B. Blumentöpfe aus alten PET-Flaschen an der Klassenwand, ein Beet aus alten Reifen, eine Stiftebox aus Dosen oder ein Rucksack aus einer LKW-Plane.",
+   "erklaerung": "",
+   "stoff": 6,
+   "mindest": 3
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe die Grafik zum Strommix: Wie unterscheidet sich Österreich von der Welt?",
+   "kern": [
+    {
+     "t": "Österreich: großteils Wasserkraft (Lauf- + Speicher ~58 %)",
+     "w": [
+      "wasser",
+      "lauf",
+      "speicher"
+     ]
+    },
+    {
+     "t": "Welt: großteils fossil (79 %)",
+     "w": [
+      "fossil",
+      "79",
+      "kohle",
+      "öl",
+      "gas"
+     ]
+    },
+    {
+     "t": "Österreich hat keine Atomkraft / ist Vorreiter",
+     "w": [
+      "atom",
+      "kern",
+      "vorreiter",
+      "erneuerbar",
+      "0"
+     ]
+    }
+   ],
+   "muster": "In Österreich kommt der meiste Strom aus Wasserkraft (Laufkraftwerke 42 %, Speicherkraftwerke 16 %), dazu 23 % Wind-Sonne-Biomasse und keine Atomkraft. Weltweit kommen 79 % aus fossilen Energieträgern. Deshalb ist Österreich ein Vorreiter bei erneuerbarem Strom.",
+   "antwort": "In Österreich kommt der meiste Strom aus Wasserkraft (Laufkraftwerke 42 %, Speicherkraftwerke 16 %), dazu 23 % Wind-Sonne-Biomasse und keine Atomkraft. Weltweit kommen 79 % aus fossilen Energieträgern. Deshalb ist Österreich ein Vorreiter bei erneuerbarem Strom.",
+   "erklaerung": "",
+   "stoff": 1,
+   "mindest": 2
   }
  ],
  "wissen": [
@@ -1396,6 +2133,155 @@
     "antwort": "Kunststoffteile kleiner als ein halber Zentimeter",
     "erklaerung": "Es sammelt sich in Meerestieren und gelangt über die Nahrung zu uns.",
     "stoff": 0
+   },
+   {
+    "typ": "offen",
+    "art": "Frei antworten",
+    "frage": "Erkläre, was der Unterschied zwischen erneuerbaren und nicht erneuerbaren Energieträgern ist. Nenne je ein Beispiel.",
+    "kern": [
+     {
+      "t": "Erneuerbar = immer wieder verfügbar / wächst nach",
+      "w": [
+       "immer wieder",
+       "nachwachs",
+       "wächst nach",
+       "immer verfügbar",
+       "nicht aus",
+       "unendlich",
+       "erneuer"
+      ]
+     },
+     {
+      "t": "Nicht erneuerbar = begrenzt / geht irgendwann aus",
+      "w": [
+       "begrenzt",
+       "aus ?gehen",
+       "geht.*aus",
+       "irgendwann",
+       "endlich",
+       "verbraucht",
+       "nicht nach"
+      ]
+     },
+     {
+      "t": "Beispiel erneuerbar (Wasser, Wind, Sonne, Erdwärme, Biomasse)",
+      "w": [
+       "wasser",
+       "wind",
+       "sonne",
+       "solar",
+       "photovolt",
+       "geotherm",
+       "erdwärme",
+       "biomasse",
+       "holz"
+      ]
+     },
+     {
+      "t": "Beispiel nicht erneuerbar (Kohle, Erdöl, Erdgas, Uran)",
+      "w": [
+       "kohle",
+       "erdöl",
+       "öl",
+       "erdgas",
+       "gas",
+       "uran",
+       "atom"
+      ]
+     }
+    ],
+    "muster": "Erneuerbare Energieträger kommen aus einer immer verfügbaren Quelle, z. B. Wasser, Wind oder Sonne. Nicht erneuerbare (fossile) sind nur begrenzt vorhanden und gehen irgendwann aus, z. B. Kohle, Erdöl, Erdgas oder Uran.",
+    "antwort": "Erneuerbare Energieträger kommen aus einer immer verfügbaren Quelle, z. B. Wasser, Wind oder Sonne. Nicht erneuerbare (fossile) sind nur begrenzt vorhanden und gehen irgendwann aus, z. B. Kohle, Erdöl, Erdgas oder Uran.",
+    "erklaerung": "",
+    "stoff": 2,
+    "mindest": 3
+   },
+   {
+    "typ": "offen",
+    "art": "Frei antworten",
+    "frage": "Erkläre, was ein Blackout ist, und nenne mögliche Ursachen.",
+    "kern": [
+     {
+      "t": "Langer, großflächiger Stromausfall",
+      "w": [
+       "lang",
+       "großfläch",
+       "ganz österreich",
+       "weite teile",
+       "ganzen land",
+       "länger"
+      ]
+     },
+     {
+      "t": "Ursache Naturkatastrophe",
+      "w": [
+       "natur",
+       "unwetter",
+       "sturm",
+       "katastroph"
+      ]
+     },
+     {
+      "t": "Ursache Cyberangriff / Anschlag / Störung im Netz",
+      "w": [
+       "cyber",
+       "hacker",
+       "angriff",
+       "anschlag",
+       "terror",
+       "störung",
+       "umspann"
+      ]
+     }
+    ],
+    "muster": "Ein Blackout ist ein langer Stromausfall in weiten Teilen des Landes. Ursachen können Naturkatastrophen, Cyberangriffe, terroristische Anschläge oder Störungen im Stromnetz (z. B. in einem Umspannwerk) sein.",
+    "antwort": "Ein Blackout ist ein langer Stromausfall in weiten Teilen des Landes. Ursachen können Naturkatastrophen, Cyberangriffe, terroristische Anschläge oder Störungen im Stromnetz (z. B. in einem Umspannwerk) sein.",
+    "erklaerung": "",
+    "stoff": 3,
+    "mindest": 2
+   },
+   {
+    "typ": "offen",
+    "art": "Frei antworten",
+    "frage": "Erkläre, was Recycling ist, und nenne ein Beispiel. Warum ist es gut für die Umwelt?",
+    "kern": [
+     {
+      "t": "Rohstoffe aus Abfall werden wiederverwendet",
+      "w": [
+       "wieder",
+       "kreislauf",
+       "neu",
+       "zurück"
+      ]
+     },
+     {
+      "t": "Beispiel (Aluminium, Glas, Papier, Plastik, Jeans …)",
+      "w": [
+       "alu",
+       "glas",
+       "papier",
+       "plastik",
+       "kunststoff",
+       "jeans",
+       "dose",
+       "flasche"
+      ]
+     },
+     {
+      "t": "Spart Energie / weniger CO₂ / weniger Rohstoffe",
+      "w": [
+       "energie",
+       "co",
+       "rohstoff",
+       "weniger"
+      ]
+     }
+    ],
+    "muster": "Beim Recycling werden Dinge nicht weggeworfen, sondern ihre Rohstoffe wiederverwendet. Beispiel: Aluminiumdosen – recyceltes Aluminium erzeugt nur 0,4 kg statt 11 kg CO₂. Recycling spart Energie, CO₂ und neue Rohstoffe.",
+    "antwort": "Beim Recycling werden Dinge nicht weggeworfen, sondern ihre Rohstoffe wiederverwendet. Beispiel: Aluminiumdosen – recyceltes Aluminium erzeugt nur 0,4 kg statt 11 kg CO₂. Recycling spart Energie, CO₂ und neue Rohstoffe.",
+    "erklaerung": "",
+    "stoff": 6,
+    "mindest": 3
    }
   ]
  }

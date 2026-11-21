@@ -20,3 +20,15 @@ Ist im Material eine konkrete Stoffabgrenzung für einen Test oder eine Schularb
 - Der Kapiteltest heißt „Probetest …“ und deckt jeden Punkt mindestens einmal ab.
 - Termin auch in `lern-app/daten/<kind>/termine.json` eintragen, falls er dort fehlt.
 - Bis zum Termin (max. 21 Tage vorher) üben die Runden in der App dann nur diese Fragen; die Fachseite zeigt eine Teststoff-Checkliste mit Lernstand pro Punkt.
+
+## Offene Fragen (frei formulieren) – immer einige mitliefern
+Neben Auswahl- und Eingabefragen pro Paket **5–15 offene Fragen** („Erkläre …“, „Nenne drei …“, „Beschreibe die Grafik …“), auch 2–3 im Test:
+```json
+{"typ": "offen", "art": "Frei antworten", "frage": "Erkläre …", "stoff": 2,
+ "kern": [{"t": "Kernpunkt in Worten", "w": ["regex1", "regex2"]}, …],
+ "mindest": 2, "muster": "Musterlösung in ganzen Sätzen", "antwort": "(gleich wie muster)", "erklaerung": "optional"}
+```
+Die App prüft, welche Kernpunkte (Regex, Groß/klein egal, Wortstämme großzügig) vorkommen; richtig ab `mindest`. Danach sieht das Kind, was gefehlt hat, und die Musterlösung.
+
+## Sprache beim Sprechen
+Das Mikrofon hört in der Sprache der erwarteten Antwort. In Sprachfächern die Richtung in der Frage klar machen („… auf Englisch?“ / „… was heißt das auf Deutsch?“) oder `"sprache": "de-AT" | "en-GB" | "es-ES"` setzen.
