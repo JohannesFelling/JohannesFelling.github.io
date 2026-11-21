@@ -242,3 +242,18 @@ textarea.offen-feld{resize:vertical;min-height:110px;line-height:1.45;font-size:
 textarea.offen-feld{display:block;width:100%;font-family:inherit;color:var(--text);background:var(--panel2);border:1px solid var(--linie);border-radius:12px;padding:12px 14px;outline:none}
 textarea.offen-feld:disabled{opacity:.85}
 textarea.offen-feld:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--glow)}
+/* Podcast */
+.podcast-kachel .pod-ic{font-size:1.6rem;line-height:1}
+.podcast-knopf{border-color:var(--akzent)}
+.pod-player{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0 8px}
+.pod-play{width:68px;height:68px;border-radius:50%;border:0;background:var(--akzent);color:#000;font-size:1.7rem;cursor:pointer;box-shadow:0 0 24px color-mix(in srgb,var(--akzent) 45%,transparent)}
+.pod-sprung,.pod-tempo{width:46px;height:46px;border-radius:50%;border:1px solid var(--linie);background:var(--panel2);color:var(--text);font-size:1.1rem;cursor:pointer;font-family:inherit;font-weight:700}
+.pod-tempo{font-size:.85rem}
+.pod-balken{height:5px;border-radius:5px;background:var(--panel2);overflow:hidden;margin:6px 0 14px}
+.pod-balken i{display:block;height:100%;width:0;background:var(--akzent);transition:width .4s}
+.pod-kap{margin:.2em 0 .4em;font-size:1.05rem}
+.pod-text{line-height:1.6;font-size:1rem;color:var(--leise);max-height:46vh;overflow:auto;padding-right:4px}
+.pod-satz{cursor:pointer;border-radius:4px;transition:background .2s,color .2s}
+.pod-satz.jetzt{color:var(--text);background:color-mix(in srgb,var(--akzent) 22%,transparent)}
+.pod-eintrag.aktiv{border-color:var(--akzent)}
+.pod-mini{color:var(--akzent);flex:none}

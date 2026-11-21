@@ -32,3 +32,12 @@ Die App prüft, welche Kernpunkte (Regex, Groß/klein egal, Wortstämme großzü
 
 ## Sprache beim Sprechen
 Das Mikrofon hört in der Sprache der erwarteten Antwort. In Sprachfächern die Richtung in der Frage klar machen („… auf Englisch?“ / „… was heißt das auf Deutsch?“) oder `"sprache": "de-AT" | "en-GB" | "es-ES"` setzen.
+
+## Podcast (immer mitliefern)
+Jedes Paket bekommt ein Feld `podcast` – frei erzählte Erklärung zum Anhören (Web Speech, de-AT), NICHT vorgelesener Buchtext:
+```json
+"podcast": {"titel": "…", "kurz": "ein Satz", "kapitel": [{"titel": "…", "text": "…"}]}
+```
+- 4–6 Kapitel, je ca. 250–400 Wörter, in Du-Form, locker wie ein Podcast: Kind mit Namen ansprechen, Alltagsbeispiele, Fragen an die Zuhörer, Merksätze, Test-Tipps und typische Fallen. Inhalt aus den Fotos (alle Teststoff-Punkte abdecken), aber in eigenen Worten.
+- Sprechbar schreiben: keine Abkürzungen mit Punkt (z. B., S. 16, ca.), keine Pfeile/Symbole, Hochzahlen und Formeln in Worten („zehn hoch minus drei“, „Meter pro Sekunde“). Zahlen wie „27. November“ sind ok.
+- Letztes Kapitel endet mit kurzer Zusammenfassung + Hinweis auf Probetest.

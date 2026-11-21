@@ -69,7 +69,7 @@ let BELOHNUNG = {
 };
 
 const app = document.getElementById("app");
-const zeige = (...kids) => { app.replaceChildren(...kids.filter(k => k != null)); window.scrollTo(0, 0); };
+const zeige = (...kids) => { if (typeof POD !== "undefined" && POD.an && !kids.includes(POD.karte)) podStopp(); app.replaceChildren(...kids.filter(k => k != null)); window.scrollTo(0, 0); };
 const titel = document.getElementById("titel");
 const zurueck = document.getElementById("zurueck");
 const sterneTop = document.getElementById("sterne-top");
@@ -491,8 +491,9 @@ function fachSeite() {
     el("div", { class: "raster zwei hochladen" },
       el("button", { class: "fach klein-fach material-knopf", onclick: materialSeite }, ic("plus"), el("div", {}, el("div", { class: "fach-name" }, "Lernmaterial"), el("small", {}, "Buch- oder Heftseiten → daraus werden Übungen, Erklärungen und ein Test"))),
       el("button", { class: "fach klein-fach aufsatz-knopf", onclick: aufsatzListe }, ic("kamera"), el("div", {}, el("div", { class: "fach-name" }, "Aufgabe zur Korrektur"), el("small", {}, fotoText().kurz)))),
-    (daten.wissen || []).length || (daten.sprechen || []).length ? el("div", { class: "raster zwei" },
+    (daten.wissen || []).length || (daten.sprechen || []).length || (daten.podcast || []).length ? el("div", { class: "raster zwei" },
       (daten.wissen || []).length ? el("button", { class: "fach klein-fach", onclick: wissenListe }, ic("wissen"), el("div", {}, el("div", { class: "fach-name" }, "Wissen"), el("small", {}, `${daten.wissen.length} Erklärungen + Videos`))) : null,
+      (daten.podcast || []).length ? el("button", { class: "fach klein-fach podcast-kachel", onclick: () => podcastSeite(0) }, el("span", { class: "pod-ic" }, "🎧"), el("div", {}, el("div", { class: "fach-name" }, "Podcast"), el("small", {}, `${daten.podcast.reduce((n, f) => n + f.kapitel.length, 0)} Folgen zum Anhören`))) : null,
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
     tests.length ? el("div", { class: "karte" },
       el("div", { class: "label" }, "Kapiteltests"),
@@ -736,7 +737,8 @@ function gutscheinListe() {
 function wissenListe() {
   setzeKopf("Wissen", fachSeite);
   zeige(el("div", { class: "label" }, fach.name), el("h2", {}, "Wissen"),
-    ...daten.wissen.map((w, i) => el("button", { class: "test-knopf", onclick: () => wissenZeigen(i) }, el("span", {}, w.titel, el("small", {}, w.kurz || "")), ic("wissen"))));
+    (daten.podcast || []).length ? el("button", { class: "test-knopf podcast-knopf", onclick: () => podcastSeite(0) }, el("span", {}, "🎧 Als Podcast anhören", el("small", {}, "Locker erklärt – einfach zuhören, z. B. am Weg zur Schule")), ic("play")) : null,
+    ...(daten.wissen || []).map((w, i) => el("button", { class: "test-knopf", onclick: () => wissenZeigen(i) }, el("span", {}, w.titel, el("small", {}, w.kurz || "")), ic("wissen"))));
 }
 function wissenZeigen(i) {
   const w = daten.wissen[i];
@@ -751,6 +753,92 @@ function wissenZeigen(i) {
       yt ? el("a", { class: "link-knopf", href: yt, target: "_blank", rel: "noopener" }, ic("play"), "Zusätzlich: Erklärvideos auf YouTube") : null),
     i + 1 < daten.wissen.length ? el("button", { class: "knopf zweit", onclick: () => wissenZeigen(i + 1) }, `Weiter: ${daten.wissen[i + 1].titel}`) : null,
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), "Jetzt üben"));
+}
+
+// ---------- Podcast: frei erzählte Erklärung, Satz für Satz gesprochen (Web Speech) ----------
+const POD = { an: false, f: 0, k: 0, s: 0, tempo: 1, saetze: [], u: null, karte: null };
+function podSaetze(text) {
+  const roh = (text.replace(/\s+/g, " ").match(/[^.!?…]+[.!?…]+["“”»«)]*|[^.!?…]+$/g) || []).map(t => t.trim()).filter(Boolean), aus = [];
+  for (const t of roh) { if (aus.length && /(^|\s)\d{1,2}\.$/.test(aus[aus.length - 1])) aus[aus.length - 1] += " " + t; else aus.push(t); }  // „27. November“ nicht trennen
+  return aus;
+}
+function podStopp() { POD.an = false; POD.u = null; try { speechSynthesis.cancel(); } catch (e) {} }
+function podcastSeite(fi, ki = 0) {
+  podStopp();
+  const folgen = daten.podcast, folge = folgen[fi];
+  POD.f = fi; POD.k = ki; POD.s = 0;
+  setzeKopf("Podcast", () => { podStopp(); fachSeite(); });
+  const kapListe = el("div", { class: "pod-liste" });
+  const textBox = el("div", { class: "pod-text" });
+  const kapTitel = el("h3", { class: "pod-kap" });
+  const playK = el("button", { class: "pod-play", "aria-label": "Abspielen" }, "▶");
+  const tempoK = el("button", { class: "pod-tempo" }, "1×");
+  const balken = el("div", { class: "pod-balken" }, el("i"));
+  const karte = el("div", { class: "karte podcast pop" },
+    el("div", { class: "label" }, `🎧 ${fach.name} · Podcast`),
+    el("h2", {}, folge.titel),
+    folge.kurz ? el("p", { class: "klein" }, folge.kurz) : null,
+    el("div", { class: "pod-player" },
+      el("button", { class: "pod-sprung", "aria-label": "Zurück", onclick: () => podSpringen(-1) }, "⏮"),
+      playK,
+      el("button", { class: "pod-sprung", "aria-label": "Weiter", onclick: () => podSpringen(1) }, "⏭"),
+      tempoK),
+    balken, kapTitel, textBox);
+  POD.karte = karte;
+  function kapitelZeigen() {
+    const kap = folge.kapitel[POD.k];
+    POD.saetze = podSaetze(kap.text);
+    kapTitel.textContent = `Folge ${POD.k + 1}: ${kap.titel}`;
+    textBox.replaceChildren(...POD.saetze.map((t, n) => el("span", { class: "pod-satz", onclick: () => { POD.s = n; if (POD.an) sprich(); else markieren(); } }, t + " ")));
+    kapListe.replaceChildren(...folge.kapitel.map((k, n) => el("button", { class: "test-knopf pod-eintrag" + (n === POD.k ? " aktiv" : ""), onclick: () => { POD.k = n; POD.s = 0; kapitelZeigen(); if (!POD.an) start(); else sprich(); } },
+      el("span", {}, `${n + 1}. ${k.titel}`, el("small", {}, `ca. ${Math.max(1, Math.round(k.text.split(/\s+/).length / 140))} Min.`)), el("span", { class: "pod-mini" }, n === POD.k && POD.an ? "🔊" : "▶"))));
+    markieren();
+  }
+  function markieren() {
+    [...textBox.children].forEach((c, n) => c.classList.toggle("jetzt", n === POD.s && POD.an));
+    const ges = folge.kapitel.reduce((a, k) => a + 1, 0);
+    balken.firstChild.style.width = `${Math.round(((POD.k + (POD.saetze.length ? POD.s / POD.saetze.length : 0)) / ges) * 100)}%`;
+    playK.textContent = POD.an ? "⏸" : "▶";
+    const akt = textBox.children[POD.s];
+    if (POD.an && akt && akt.scrollIntoView) { const r = akt.getBoundingClientRect(); if (r.top < 60 || r.bottom > innerHeight - 40) akt.scrollIntoView({ block: "center", behavior: "smooth" }); }
+    [...kapListe.children].forEach((b, n) => { b.classList.toggle("aktiv", n === POD.k); b.lastChild.textContent = n === POD.k && POD.an ? "🔊" : "▶"; });
+  }
+  function sprich() {
+    if (!document.body.contains(karte)) return podStopp();
+    try { speechSynthesis.cancel(); } catch (e) {}
+    if (POD.s >= POD.saetze.length) {
+      if (POD.k + 1 < folge.kapitel.length) { POD.k++; POD.s = 0; kapitelZeigen(); }
+      else { POD.an = false; POD.s = 0; markieren(); gehoert(); return; }
+    }
+    markieren();
+    const u = new SpeechSynthesisUtterance(POD.saetze[POD.s]);
+    u.lang = "de-AT"; u.rate = POD.tempo;
+    const st = speechSynthesis.getVoices(), v = st.find(v => /de[-_]AT/i.test(v.lang)) || st.find(v => /^de/i.test(v.lang));
+    if (v) u.voice = v;
+    const meins = u; POD.u = u;
+    u.onend = () => { if (POD.u !== meins || !POD.an) return; POD.s++; setTimeout(sprich, 120); };
+    u.onerror = e => { if (POD.u !== meins || !POD.an || e.error === "interrupted" || e.error === "canceled") return; POD.s++; setTimeout(sprich, 120); };
+    speechSynthesis.speak(u);
+  }
+  function start() { if (!window.speechSynthesis) { playK.textContent = "✕"; return; } POD.an = true; sprich(); }
+  function gehoert() {
+    const pr = profil(person.id), key = `${fach.id}/podcast/${folge.titel}`;
+    if (!pr.gelesen[key]) { pr.gelesen[key] = heute(); protokoll(pr, { f: fach.id, art: "Podcast", titel: folge.titel }); speichern(person.id, PROFIL, pr); }
+  }
+  window.podSpringen = d => {
+    const n = POD.k + d;
+    if (d < 0 && POD.s > 1) POD.s = 0;
+    else if (n >= 0 && n < folge.kapitel.length) { POD.k = n; POD.s = 0; kapitelZeigen(); }
+    else return;
+    if (POD.an) sprich(); else markieren();
+  };
+  playK.onclick = () => { if (POD.an) { podStopp(); markieren(); } else start(); };
+  tempoK.onclick = () => { POD.tempo = POD.tempo === 1 ? 1.2 : POD.tempo === 1.2 ? 0.85 : 1; tempoK.textContent = `${String(POD.tempo).replace(".", ",")}×`; if (POD.an) sprich(); };
+  kapitelZeigen();
+  zeige(karte,
+    el("div", { class: "label" }, "Folgen"), kapListe,
+    folgen.length > 1 ? el("div", {}, el("div", { class: "label" }, "Weitere Podcasts"), ...folgen.map((f, n) => n === fi ? null : el("button", { class: "test-knopf", onclick: () => podcastSeite(n) }, el("span", {}, f.titel, el("small", {}, `${f.kapitel.length} Folgen`)), el("span", {}, "🎧")))) : null,
+    el("button", { class: "knopf", onclick: () => { podStopp(); rundeStarten(); } }, ic("play"), "Jetzt üben"));
 }
 
 // ---------- Sprechen (Englisch, Vorlesen + Mikrofon) ----------
