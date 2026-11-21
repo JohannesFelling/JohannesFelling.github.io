@@ -287,3 +287,8 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 @media (prefers-reduced-motion:reduce){.ueber *{animation-duration:.01s!important;animation-delay:0s!important}.box-deckel{display:none}}
 .ueber{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:radial-gradient(circle at 50% 45%,#3a2608,#050403 70%)}
 .ueber-sport{background:radial-gradient(circle at 50% 45%,#12339a,#02061a 70%)}
+#aktualisieren{font-size:1.3rem;font-weight:800}
+#aktualisieren.dreht{animation:drehenKnopf .8s linear infinite}
+@keyframes drehenKnopf{to{transform:rotate(360deg)}}
+.thema-held #aktualisieren{background:#1b0f13;border-color:#ffcf6b44;color:var(--gold)}
+.thema-sport #aktualisieren{background:#0a1850;border-color:#cfe0ff33;color:#fff}

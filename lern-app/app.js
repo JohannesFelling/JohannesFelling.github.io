@@ -218,6 +218,13 @@ function setzeKopf(t, ziel) {
   } else sterneTop.textContent = "";
 }
 zurueck.addEventListener("click", () => zurueckZiel && zurueckZiel());
+// Aktualisieren: alles frisch vom Server holen (App, Fragen, Wissen, Termine) – Anmeldung bleibt
+document.getElementById("aktualisieren").addEventListener("click", async e => {
+  e.currentTarget.classList.add("dreht");
+  try { if (wolke) await wolkeDoc(); } catch (x) {}
+  try { if (window.caches) for (const k of await caches.keys()) await caches.delete(k); } catch (x) {}
+  location.replace(location.pathname + "?neu=" + Date.now());
+});
 const gastBanner = () => gast ? el("div", { class: "gast-banner" }, "Testkonto – nichts wird gespeichert") : null;
 
 // ---------- Online-Speicher (Firebase) ----------
