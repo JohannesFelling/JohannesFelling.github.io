@@ -293,8 +293,8 @@ function startseite() {
   person = null; fach = null; gast = false; thema(null);
   setzeKopf("VALIAS PRO", null);
   zeige(
-    el("div", { class: "start-kopf" }, el("div", { class: "marke" }, el("span", { class: "marke-v" }, "VALI"), el("span", { class: "marke-e" }, "AS"), el("span", { class: "marke-pro" }, "PRO")), el("div", { class: "label" }, "Vali & Elias · Wer ist dran?")),
-    el("div", { class: "start-raster" }, ...PERSONEN.map(p =>
+    el("div", { class: "start-kopf" }, el("div", { class: "marke" }, el("span", { class: "marke-v" }, "VALI"), el("span", { class: "marke-e" }, "AS"), el("span", { class: "marke-pro" }, "PRO")), el("div", { class: "label" }, PERSONEN.length > 2 ? "Wer ist dran?" : "Vali & Elias · Wer ist dran?")),
+    el("div", { class: `start-raster n${PERSONEN.length}` }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { if (CFG) anmeldeSeite(p); else { person = p; faecherSeite(); } } },
         window.KUNST ? KUNST.plakat(p.thema) : null,
         el("small", {}, p.slogan), el("span", { class: "start-name" }, p.name),
@@ -302,7 +302,7 @@ function startseite() {
         el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : punkte(p.id, sterneGesamt(p.id)))))),
     el("button", { class: "eltern-karte", onclick: gastWahl },
       el("span", { class: "eltern-bild" }, (() => { const b = el("img", { src: "papa.jpg", alt: "" }); b.onerror = () => b.replaceWith(el("span", { class: "eltern-init" }, "P")); return b; })()),
-      el("span", { class: "eltern-text" }, el("small", {}, "Papa"), el("b", {}, "Eltern-Bereich"), el("span", {}, "Statistik · Eingang · Testkonto")),
+      el("span", { class: "eltern-text" }, el("small", {}, "Papa & Mama"), el("b", {}, "Eltern-Bereich"), el("span", {}, "Statistik · Eingang · Testkonto")),
       el("span", { class: "eltern-pfeil" }, "›"))
   );
 }
@@ -313,9 +313,9 @@ function gastWahl() {
     el("h2", { class: "mitte" }, "Testkonto"),
     el("p", { class: "hinweis mitte" }, "Alles funktioniert wie echt, aber nichts wird gespeichert. Tests sind sofort freigeschaltet."),
     el("button", { class: "knopf", onclick: elternStart }, ic("auge"), "Eltern-Statistik"),
-    el("p", { class: "klein mitte" }, "Lernzeit, Kapitel, Tests und Gutscheine von beiden Burschen."),
+    el("p", { class: "klein mitte" }, PERSONEN.length > 2 ? "Lernzeit, Kapitel, Tests und Gutscheine aller Kinder." : "Lernzeit, Kapitel, Tests und Gutscheine von beiden Burschen."),
     el("div", { class: "label", style: "margin-top:22px" }, "App ansehen als"),
-    el("div", { class: "start-raster", style: "margin-top:10px" }, ...PERSONEN.map(p =>
+    el("div", { class: `start-raster n${PERSONEN.length}`, style: "margin-top:10px" }, ...PERSONEN.map(p =>
       el("button", { class: `start-karte start-${p.thema}`, onclick: () => { gast = true; gastStand = {}; person = p; faecherSeite(); } },
         window.KUNST ? KUNST.plakat(p.thema) : null,
         el("small", {}, "Ansicht von"), el("span", { class: "start-name" }, p.name)))));
@@ -1109,7 +1109,10 @@ function gespraech(g) {
 }
 
 // ---------- Eltern-Statistik ----------
-const PAPA = `papa@${MAIL_DOMAIN}`;
+const PAPA = `papa@${MAIL_DOMAIN}`, MAMA = `mama@${MAIL_DOMAIN}`;
+const ELTERN = [{ wer: "Papa", mail: PAPA }, { wer: "Mama", mail: MAMA }];
+// Mama-Konto: nur ansehen (kein Löschen, kein Korrektur-Eingang)
+const nurLesen = () => !!(fb && fb.auth.currentUser && fb.auth.currentUser.email === MAMA);
 function dauer(sek) {
   sek = Math.round(sek || 0); if (sek < 60) return sek ? "< 1 min" : "–";
   const m = Math.round(sek / 60), h = Math.floor(m / 60);
@@ -1122,16 +1125,18 @@ async function elternStart() {
   setzeKopf("Eltern", gastWahl);
   zeige(el("p", { class: "hinweis mitte" }, "Lade …"));
   try { await fbLaden(); } catch (e) { zeige(el("div", { class: "karte" }, "Keine Internetverbindung.")); return; }
-  if (fb.auth.currentUser && fb.auth.currentUser.email === PAPA) { elternLaden(); return; }
-  const pw = el("input", { class: "eingabe", type: "password", autocomplete: "current-password", placeholder: "Eltern-Passwort" });
+  if (fb.auth.currentUser && ELTERN.some(e => e.mail === fb.auth.currentUser.email)) { elternLaden(); return; }
+  const pw = el("input", { class: "eingabe", type: "password", autocomplete: "current-password", placeholder: "Passwort" });
+  let wer = ELTERN[0];
+  const werWahl = el("div", { class: "reiter eltern-wer" }, ...ELTERN.map(e => el("button", { class: e === wer ? "aktiv" : "", onclick: ev => { wer = e; [...werWahl.children].forEach(b => b.classList.toggle("aktiv", b === ev.currentTarget)); pw.focus(); } }, e.wer)));
   const fehler = el("div");
   const los = el("button", { class: "knopf", onclick: async () => {
     if (!pw.value) return; los.disabled = true; fehler.replaceChildren();
-    try { await fb.A.signInWithEmailAndPassword(fb.auth, PAPA, pw.value); wolke = null; elternLaden(); }
-    catch (e) { console.error(e); fehler.replaceChildren(el("div", { class: "feedback nein" }, /invalid|wrong|not-found/.test(e.code || "") ? "Passwort stimmt nicht (oder das Papa-Konto ist in Firebase noch nicht angelegt)." : "Anmelden hat nicht geklappt.")); los.disabled = false; }
+    try { await fb.A.signInWithEmailAndPassword(fb.auth, wer.mail, pw.value); wolke = null; elternLaden(); }
+    catch (e) { console.error(e); fehler.replaceChildren(el("div", { class: "feedback nein" }, /invalid|wrong|not-found/.test(e.code || "") ? `Passwort stimmt nicht (oder das ${wer.wer}-Konto ist in Firebase noch nicht angelegt).` : "Anmelden hat nicht geklappt.")); los.disabled = false; }
   } }, "Anmelden");
   pw.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); los.click(); } });
-  zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Eltern-Bereich"), el("h2", {}, "Statistik"), el("p", { class: "klein" }, "Nur für Papa. Melde dich mit dem Eltern-Passwort an."), pw, los, fehler));
+  zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Eltern-Bereich"), el("h2", {}, "Statistik"), el("p", { class: "klein" }, "Nur für Eltern. Wer bist du?"), werWahl, pw, los, fehler));
   setTimeout(() => pw.focus(), 50);
 }
 async function elternLaden() {
@@ -1144,7 +1149,7 @@ async function elternLaden() {
     elternSeite(alle, false);
   } catch (e) {
     console.error(e);
-    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Kein Zugriff"), el("p", {}, "Die Speicherregeln in Firebase erlauben dem Papa-Konto noch nicht, die Daten zu lesen. Bitte die neuen Regeln aus der Anleitung einfügen.")),
+    zeige(el("div", { class: "karte" }, el("div", { class: "label" }, "Kein Zugriff"), el("p", {}, "Die Speicherregeln in Firebase erlauben diesem Eltern-Konto noch nicht, die Daten zu lesen. Bitte die neuen Regeln aus der Anleitung einfügen.")),
       el("button", { class: "knopf zweit", onclick: elternAbmelden }, "Abmelden"));
   }
 }
@@ -1174,7 +1179,7 @@ async function elternSeite(alle, lokal) {
         el("div", { class: "klein" }, punkte(p.id, sterne), ` · ${rang(p, sterne).name} · Serie ${serie(pr)}`),
         el("div", { class: "klein" }, letzt ? `Zuletzt aktiv: ${datumDE(letzt.d)} ${letzt.t}` : "Noch nicht aktiv"));
     })),
-    lokal ? null : eingangKarte(),
+    lokal || nurLesen() ? null : eingangKarte(),
     reiter, tab,
     lokal ? null : el("button", { class: "reset", onclick: elternAbmelden }, "Eltern-Bereich abmelden"));
   zeigeKind(PERSONEN[0]);
@@ -1241,7 +1246,7 @@ function kindStatistik(p, st, dateien, lokal) {
   const fachName = id => (FAECHER.find(f => f.id === id) || { name: id }).name;
   const kt = kommend(p.id).slice(0, 5);
   return el("div", { class: "pop" },
-    loeschKarte(p, st, lokal),
+    nurLesen() ? null : loeschKarte(p, st, lokal),
     kt.length ? el("div", { class: "karte" }, el("div", { class: "label" }, "Nächste Tests & Schularbeiten"),
       ...kt.map(t => el("div", { class: `zeile ${tageBis(t.datum) <= 14 ? "bald" : ""}` }, el("span", {}, `${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} · ${t.titel}`), el("b", {}, wannText(tageBis(t.datum)))))) : null,
     el("div", { class: "karte" }, el("div", { class: "label" }, "Lernzeit"),
@@ -1264,7 +1269,7 @@ function kindStatistik(p, st, dateien, lokal) {
         el("div", { class: "fortschritt" }, el("div", { style: `width:${d.fragen.length ? Math.round(geuebt / d.fragen.length * 100) : 0}%` })),
         el("div", { class: "klein" }, `${geuebt} von ${d.fragen.length} Übungsfragen geübt · ${s.runden} Runden · `, punkte(p.id, s.sterne), ` · ${s.offen.length} Fragen offen`),
         ...zeilen,
-        (s.runden || s.sterne || s.offen.length || geuebt) ? el("button", { class: "reset", onclick: () => elternReset(p, f, st, lokal) }, `${f.name} für ${p.name} zurücksetzen`) : null);
+        !nurLesen() && (s.runden || s.sterne || s.offen.length || geuebt) ? el("button", { class: "reset", onclick: () => elternReset(p, f, st, lokal) }, `${f.name} für ${p.name} zurücksetzen`) : null);
     }),
     el("div", { class: "karte" }, el("div", { class: "label" }, `Gutscheine (${pr.gutscheine.length})`),
       pr.gutscheine.length ? null : el("p", { class: "klein" }, "Noch keine."),
@@ -1287,7 +1292,7 @@ async function starten() {
     console.error(e);
     zeige(el("div", { class: "karte" }, el("p", {}, "Die App braucht Internet zum Anmelden. Bitte später nochmal probieren. 📶")),
       el("button", { class: "knopf", onclick: () => location.reload() }, "Nochmal versuchen"),
-      el("button", { class: "reset", onclick: gastWahl }, "👀 Testkonto (Papa)"));
+      el("button", { class: "reset", onclick: gastWahl }, "👀 Testkonto (Eltern)"));
     return;
   }
   startseite();

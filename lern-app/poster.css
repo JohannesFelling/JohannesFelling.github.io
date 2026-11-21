@@ -294,3 +294,7 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 .thema-sport #aktualisieren{background:#0a1850;border-color:#cfe0ff33;color:#fff}
 .thema-held .pod-play{color:#fff;background:linear-gradient(180deg,#ff4a3d,#9e0b14);box-shadow:0 0 26px #ff3b3077,inset 0 1px 0 #ffffff55}
 .thema-sport .pod-play{color:#06122b;background:linear-gradient(180deg,#e8f4ff,#8fd0ff);box-shadow:0 0 26px #4f8dff77}
+/* ab 3 Kindern: kein Mittelstrich, drittes Plakat über die ganze Breite */
+.start-raster.n3::before,.start-raster.n3::after{display:none}
+.start-raster.n3>.start-karte:nth-child(3){grid-column:1/-1}
+.eltern-wer{margin:6px 0 12px}
