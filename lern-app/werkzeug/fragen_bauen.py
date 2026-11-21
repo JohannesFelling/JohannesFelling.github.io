@@ -32,6 +32,7 @@ def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=Non
         tests = list(tests or [])
         wissen = list(wissen or [])
         teststoff, podcast = [], []
+        karte_laender = None
         for p in pakete:
             ts = p.get("teststoff")  # Stoffabgrenzung für einen Test → Fragen dazu werden vor dem Termin bevorzugt geübt
             if ts: teststoff.append(dict(ts, id=p["paket"]))
@@ -41,11 +42,13 @@ def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=Non
                 fragen.append(q)
             wissen += p.get("wissen", [])
             if p.get("podcast", {}).get("kapitel"): podcast.append(p["podcast"])
+            if p.get("karte_laender"): karte_laender = p["karte_laender"]
             if p.get("test", {}).get("fragen"):
                 tests.append({"id": p["paket"], "titel": p["test"].get("titel") or f"Test {p.get('kapitel') or ''}".strip(), "fragen": p["test"]["fragen"]})
     d = {"titel": titel, "untertitel": untertitel, "platzhalter": platzhalter}
     if pakete and teststoff: d["teststoff"] = teststoff
     if pakete and podcast: d["podcast"] = podcast
+    if pakete and karte_laender: d["karte_laender"] = karte_laender
     if thema: d["thema"] = thema
     d["fragen"] = fragen
     if tests:

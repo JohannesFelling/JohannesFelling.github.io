@@ -2,6 +2,12 @@
  "hinweis": "Aus Valentins Terminliste (Screenshot vom 20.11.2026). fach = App-Fach oder null.",
  "termine": [
   {
+   "datum": "2026-11-23",
+   "fach": "geografie",
+   "titel": "Geografie-Wiederholung Europa",
+   "art": "Wiederholung"
+  },
+  {
    "datum": "2026-11-27",
    "fach": "geografie",
    "titel": "Geografie-Test",

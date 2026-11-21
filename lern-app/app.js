@@ -543,7 +543,10 @@ function rundeStarten() {
   const nachId = Object.fromEntries(alle.map(q => [q.id, q]));
   const wdh = mischen(s.offen.filter(id => nachId[id])).slice(0, 4).map(id => nachId[id]);
   // Vor einem Test: gezielt den abgegrenzten Teststoff üben
-  const fokus = alle.filter(schwerpunktAktiv);
+  // mehrere Tests in Sicht → zuerst den nächsten
+  const naechster = alle.filter(schwerpunktAktiv).map(q => q.schwerpunkt).sort()[0];
+  let fokus = alle.filter(q => schwerpunktAktiv(q) && q.schwerpunkt === naechster);
+  if (fokus.length < 5) fokus = alle.filter(schwerpunktAktiv);
   const pool = fokus.length >= 5 ? fokus : alle;
   const rest = mischen(pool.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
   runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null };
@@ -604,6 +607,17 @@ function frageZeigen() {
       const mik = el("button", { class: "mikro klein-mikro", onclick: () => { if (!fertig) zuhoeren("de-AT", mik, alts => { ta.value = (ta.value ? ta.value + " " : "") + alts[0]; }, info); } }, ic("mikro"));
       teil = el("div", {}, mik, el("p", { class: "klein mitte" }, "Tippe aufs Mikro und erzähl – du kannst mehrmals sprechen."), info, ta, abgeben);
     } else { teil = el("div", {}, ta, abgeben); setTimeout(() => ta.focus(), 50); }
+  } else if (q.typ === "karte") {
+    // Land auf der Karte antippen
+    const box = el("div", { class: "karte-platz" }, el("p", { class: "hinweis mitte" }, "Karte lädt …"));
+    karteBauen({ klick: (id, pfad, karte) => {
+      if (fertig) return;
+      const ok = id === q.land, name = KARTE_NAMEN[id] || (KARTE.laender[id] || {}).n || "ein anderes Land";
+      if (test) pfad.classList.add("gewaehlt");
+      else { pfad.classList.add(ok ? "richtig" : "falsch"); const r = karte.querySelector(`[data-id="${q.land}"]`); if (r) { r.classList.add("richtig"); karteRing(karte, r); } }
+      auswerten(ok, name, ok ? null : el("div", {}, "Du hast ", el("b", {}, name), " angetippt. Gesucht war ", el("b", {}, [].concat(q.antwort)[0]), " (grün)."));
+    } }).then(k => box.replaceChildren(k)).catch(() => box.replaceChildren(el("p", {}, "Karte konnte nicht geladen werden.")));
+    teil = box;
   } else if (q.typ === "auswahl") {
     const opts = mischen(q.optionen);
     const knoepfe = opts.map((o, i) => el("button", { class: "opt", onclick: () => {
@@ -650,7 +664,7 @@ function frageZeigen() {
     el("div", { class: "fortschritt" }, el("div", { style: `width:${(runde.i / runde.fragen.length) * 100}%` })),
     el("div", { class: "karte pop frage-karte" },
       el("div", { class: "frage-nr" }, el("span", { class: "label" }, `${test ? "Test" : "Frage"} ${runde.i + 1} / ${runde.fragen.length}`), el("span", { class: "label" }, q.art || "")),
-      el("p", { class: "frage" }, q.frage), teil, feedback, weiter));
+      el("p", { class: "frage" }, q.frage), q.karte && q.typ !== "karte" ? kartePlatz(q.karte) : null, teil, feedback, weiter));
 }
 
 function naechste() { runde.i++; if (runde.i < runde.fragen.length) frageZeigen(); else ergebnis(); }
@@ -757,6 +771,7 @@ function wissenZeigen(i) {
   zeige(
     el("div", { class: "karte wissen-text pop" },
       el("div", { class: "label" }, fach.name), el("h2", {}, w.titel),
+      w.karte ? karteErkunden() : null,
       vorleseKnopf(w),
       ...wissenInhalt(w),
       yt ? el("a", { class: "link-knopf", href: yt, target: "_blank", rel: "noopener" }, ic("play"), "Zusätzlich: Erklärvideos auf YouTube") : null),
@@ -872,6 +887,69 @@ function podcastSeite(fi, ki = 0) {
     el("div", { class: "label" }, "Folgen"), kapListe,
     folgen.length > 1 ? el("div", {}, el("div", { class: "label" }, "Weitere Podcasts"), ...folgen.map((f, n) => n === fi ? null : el("button", { class: "test-knopf", onclick: () => podcastSeite(n) }, el("span", {}, f.titel, el("small", {}, `${f.kapitel.length} Folgen`)), el("span", {}, "🎧")))) : null,
     el("button", { class: "knopf", onclick: () => { podStopp(); rundeStarten(); } }, ic("play"), "Jetzt üben"));
+}
+
+// ---------- Europakarte (eigene Grafik aus Natural-Earth-Daten, gemeinfrei) ----------
+let KARTE = null;
+const KARTE_NAMEN = {};
+async function karteLaden() {
+  if (!KARTE) { const r = await fetch("europa.json?v=1"); KARTE = await r.json(); }
+  if (!Object.keys(KARTE_NAMEN).length) (daten.karte_laender || []).forEach(l => { KARTE_NAMEN[l.id] = l.name; });
+  return KARTE;
+}
+const SVGNS = "http://www.w3.org/2000/svg";
+// opts: markiert (Land-ID), klick(id, pfad, svgHülle)
+async function karteBauen(opts = {}) {
+  const k = await karteLaden();
+  const huelle = el("div", { class: "europa" });
+  const svg = document.createElementNS(SVGNS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${k.w} ${k.h}`); svg.setAttribute("class", "europa-svg");
+  const meer = document.createElementNS(SVGNS, "rect"); meer.setAttribute("width", k.w); meer.setAttribute("height", k.h); meer.setAttribute("class", "meer"); svg.append(meer);
+  for (const [id, l] of Object.entries(k.laender)) {
+    const p = document.createElementNS(SVGNS, "path");
+    p.setAttribute("d", l.d); p.dataset.id = id;
+    const eu = !!KARTE_NAMEN[id];
+    p.setAttribute("class", eu ? "land" : "land aussen");
+    if (id === opts.markiert) p.classList.add("markiert");
+    if (eu && opts.klick) p.addEventListener("click", () => opts.klick(id, p, huelle));
+    svg.append(p);
+  }
+  const zoom = el("button", { class: "karte-zoom", type: "button", onclick: () => { huelle.classList.toggle("gross"); zoom.textContent = huelle.classList.contains("gross") ? "🔍 −" : "🔍 +"; const m = svg.querySelector(".markiert, .richtig"); if (m && huelle.classList.contains("gross")) setTimeout(() => zielen(huelle, m), 30); } }, "🔍 +");
+  const rahmen = el("div", { class: "europa-rahmen" }, svg);
+  huelle.append(rahmen, zoom);
+  if (opts.markiert) requestAnimationFrame(() => { const m = svg.querySelector(".markiert"); if (m) karteRing(huelle, m); });
+  return huelle;
+}
+function zielen(huelle, pfad) {
+  const r = huelle.querySelector(".europa-rahmen"), b = pfad.getBoundingClientRect(), rb = r.getBoundingClientRect();
+  r.scrollLeft += b.left + b.width / 2 - rb.left - rb.width / 2; r.scrollTop += b.top + b.height / 2 - rb.top - rb.height / 2;
+}
+// Ring um kleine Länder, damit man sie sieht
+function karteRing(huelle, pfad) {
+  try {
+    const b = pfad.getBBox(); if (b.width > 40 && b.height > 40) return;
+    const c = document.createElementNS(SVGNS, "circle");
+    c.setAttribute("cx", b.x + b.width / 2); c.setAttribute("cy", b.y + b.height / 2); c.setAttribute("r", Math.max(14, Math.max(b.width, b.height) / 2 + 8)); c.setAttribute("class", "ring");
+    pfad.ownerSVGElement.append(c);
+  } catch (e) {}
+}
+function kartePlatz(id) {
+  const box = el("div", { class: "karte-platz" }, el("p", { class: "hinweis mitte" }, "Karte lädt …"));
+  karteBauen({ markiert: id }).then(k => box.replaceChildren(k)).catch(() => box.replaceChildren());
+  return box;
+}
+// Wissen: Karte zum Erkunden (antippen → Name, Hauptstadt, Region)
+function karteErkunden() {
+  const info = el("div", { class: "karte-info" }, "Tippe ein Land an.");
+  const box = el("div", { class: "karte-platz" }, el("p", { class: "hinweis mitte" }, "Karte lädt …"));
+  karteBauen({ klick: (id, pfad, h) => {
+    h.querySelectorAll(".markiert").forEach(x => x.classList.remove("markiert")); h.querySelectorAll(".ring").forEach(x => x.remove());
+    pfad.classList.add("markiert"); karteRing(h, pfad);
+    const l = (daten.karte_laender || []).find(x => x.id === id) || { name: KARTE_NAMEN[id] };
+    info.replaceChildren(el("b", {}, l.name), l.hauptstadt ? ` · Hauptstadt ${l.hauptstadt}` : "", l.region ? el("small", {}, l.region) : null);
+    if (window.speechSynthesis) vorlesen(`${l.name}. ${l.hauptstadt ? "Hauptstadt " + l.hauptstadt : ""}`, "de-AT");
+  } }).then(k => box.replaceChildren(k)).catch(() => box.replaceChildren());
+  return el("div", {}, box, info);
 }
 
 // ---------- Sprechen (Englisch, Vorlesen + Mikrofon) ----------
