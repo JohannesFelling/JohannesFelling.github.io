@@ -275,7 +275,7 @@ def englisch_wissen(held):
 
 # ---------- Valentin Englisch: Tests + Sprechen ----------
 val_tests = [
- {"id": "unit3", "titel": "Test Unit 3 – Halloween & should", "fragen": [
+ {"id": "unit3", "titel": "Test Unit 3 – Halloween & should", "pool": ['ve001', 've002', 've003', 've004', 've005', 've006', 've007', 've008', 've009', 've010', 've011', 've012', 've013', 've014', 've015', 've016', 've017', 've034', 've035', 've036', 've037', 've038', 've039', 've040', 've041', 've042', 've043', 've044', 've045', 've046', 've047', 've048', 've070', 've071', 've072', 've075'], "fragen": [
    UE("Kürbis", "pumpkin"), UE("Friedhof", "graveyard"), UE("Kostüm", "costume"), UE("Süßigkeiten", "sweets"), UE("Gespenst", "ghost"),
    UE("scary", ["gruselig", "unheimlich"]), UE("Treppe", "stairs"),
    A("Spider-Man has a headache. He ___ see a doctor.", ["should", "shouldn't", "shoulds"], "should"),
@@ -283,7 +283,7 @@ val_tests = [
    A("Which sentence is correct?", ["Thor should take an umbrella.", "Thor should takes an umbrella.", "Thor should to take an umbrella."], "Thor should take an umbrella."),
    A("Wanda sees ___ old castle.", ["an", "a"], "an"), A("Hawkeye has ___ mask.", ["a", "an"], "a"),
  ]},
- {"id": "unit4", "titel": "Test Unit 4 – Animals & Vergleiche", "fragen": [
+ {"id": "unit4", "titel": "Test Unit 4 – Animals & Vergleiche", "pool": ['ve018', 've019', 've020', 've021', 've022', 've023', 've024', 've025', 've026', 've027', 've028', 've029', 've030', 've031', 've032', 've033', 've049', 've050', 've051', 've052', 've053', 've054', 've055', 've056', 've057', 've058', 've059', 've060', 've061', 've062', 've063', 've064', 've065', 've066', 've067', 've068', 've069', 've073', 've074', 've076', 've077'], "fragen": [
    UE("Nashorn", "rhino"), UE("Gepard", "cheetah"), UE("Fledermaus", "bat"), UE("giftig (Schlange)", "venomous"), UE("Säugetier", "mammal"),
    L("Hulk is ___ than Spider-Man. (heavy)", "heavier"), L("Black Panther is ___ than Hawkeye. (fast)", "faster"),
    L("Doctor Strange is ___ than Groot. (intelligent)", "more intelligent"),

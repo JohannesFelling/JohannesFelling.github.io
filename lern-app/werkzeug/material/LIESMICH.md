@@ -47,3 +47,6 @@ Jedes Paket bekommt ein Feld `podcast` – frei erzählte Erklärung zum Anhöre
 - Jedes Paket hat MINDESTENS 100 verschiedene Übungsfragen (ohne die Testfragen mitzuzählen) – wirklich weit ausholen: jeder Fachbegriff, jede Zahl, jede Abbildung, jede Tabelle aus den Fotos; dazu Richtig/Falsch-Aussagen, Zuordnungen, Rechenaufgaben mit verschiedenen Zahlen, Alltagsbeispiele, umgekehrte Fragen (Begriff → Erklärung und Erklärung → Begriff).
 - Fragetypen mischen: auswahl, eingabe, offen (5–15) und – wo es passt – Karte (typ "karte").
 - Keine Doppelungen mit nur anders formuliertem Text.
+
+## Kapiteltest wird jedes Mal neu gezogen (seit 21.11.2026)
+Die App stellt den Test bei jedem Start neu aus ALLEN Fragen des Pakets plus `test.fragen` zusammen – gleich viele Fragen wie `test.fragen`, verteilt über die Teststoff-Punkte (`stoff`), höchstens 3 offene, die Fragen der letzten zwei Durchgänge werden gemieden. `test.fragen` ist also nur ein Grundstock (10–20 Stück, legt die Testlänge fest); wichtig ist ein großer Fragenpool mit `stoff`-Angaben.

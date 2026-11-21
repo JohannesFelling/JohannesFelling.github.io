@@ -563,9 +563,51 @@ function rundeStarten(nurTest) {
   runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null, mission: nurTest };
   frageZeigen();
 }
+// Test jedes Mal neu zusammenstellen: aus allen Fragen zum Stoff, über die Teststoff-Punkte verteilt,
+// zuletzt gestellte Testfragen werden gemieden
+function testPool(t) {
+  const paket = daten.fragen.filter(q => q.id.startsWith(t.id + "-"));
+  let extra = paket;
+  if (!paket.length && t.pool) extra = daten.fragen.filter(q => t.pool.includes(q.id));
+  else if (!paket.length && (daten.tests || []).length === 1) extra = daten.fragen;
+  const gesehen = new Set(), pool = [];
+  for (const q of [...t.fragen, ...extra]) { const k = q.frage + "|" + (q.land || q.karte || ""); if (!gesehen.has(k)) { gesehen.add(k); pool.push(q); } }
+  return pool;
+}
+function testZiehen(t, s) {
+  const pool = testPool(t), n = Math.min(t.fragen.length, pool.length);
+  const zuletzt = new Set(((s.testZuletzt || {})[t.id] || []));
+  const frisch = q => !zuletzt.has(q.frage);
+  // nach Teststoff-Punkt (oder Frageart) gruppieren, frische Fragen zuerst
+  const gruppen = {};
+  for (const q of mischen(pool)) { const g = q.stoff ?? q.art ?? "x"; (gruppen[g] = gruppen[g] || []).push(q); }
+  Object.values(gruppen).forEach(g => g.sort((a, b) => frisch(b) - frisch(a)));
+  const offenMax = 3, wahl = [];
+  let offen = 0, runde_ = 0, auchAlte = false;
+  const schluessel = mischen(Object.keys(gruppen));
+  while (wahl.length < n && runde_ < 400) {
+    runde_++;
+    let dazu = false;
+    for (const g of schluessel) {
+      if (wahl.length >= n) break;
+      const liste = gruppen[g], i = liste.findIndex(q => (q.typ !== "offen" || offen < offenMax) && (auchAlte || frisch(q)));
+      if (i < 0) continue;
+      const [q] = liste.splice(i, 1); if (q.typ === "offen") offen++;
+      wahl.push(q); dazu = true;
+    }
+    if (!dazu) { if (auchAlte) break; auchAlte = true; }
+  }
+  return mischen(wahl);
+}
 function testStarten(t) {
-  if (!confirm(`${t.titel}\n\n${t.fragen.length} Fragen. Die Lösungen siehst du erst am Ende. Bereit?`)) return;
-  runde = { fragen: mischen(t.fragen), i: 0, richtig: 0, falsch: [], test: t };
+  const s = laden(person.id, fach.id);
+  const fragen = testZiehen(t, s);
+  if (!confirm(`${t.titel}\n\n${fragen.length} Fragen – jedes Mal neu gemischt aus dem ganzen Stoff. Die Lösungen siehst du erst am Ende. Bereit?`)) return;
+  s.testZuletzt = s.testZuletzt || {};
+  // die letzten zwei Durchgänge merken (nur die Fragetexte)
+  s.testZuletzt[t.id] = [...fragen.map(q => q.frage), ...(s.testZuletzt[t.id] || [])].slice(0, fragen.length * 2);
+  speichern(person.id, fach.id, s);
+  runde = { fragen, i: 0, richtig: 0, falsch: [], test: t };
   frageZeigen();
 }
 
