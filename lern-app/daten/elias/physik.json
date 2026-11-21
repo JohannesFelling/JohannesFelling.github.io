@@ -1209,32 +1209,29 @@
    ]
   },
   {
-   "titel": "Formeln umformen, einsetzen und die wissenschaftliche Methode",
-   "kurz": "Umformen, Einsetzen, Galilei, Mittelwert",
-   "problem": "Im Test musst du Formeln nach der gesuchten Größe umformen, Werte einsetzen, Galileis 5 Schritte kennen und aus Messwerten den Mittelwert berechnen.",
+   "titel": "Wissenschaftliche Methode nach Galilei",
+   "kurz": "5 Schritte, Hypothese, Mittelwert",
+   "problem": "Im Test musst du Galileis 5 Schritte kennen und aus Messwerten den Mittelwert berechnen.",
    "text": [
-    "Äquivalenzumformung: Was du auf einer Seite machst, machst du auch auf der anderen (plus/minus, mal/durch).",
-    "Bei v = s / t: nach s → s = v · t; nach t → t = s / v.",
     "Galileis wissenschaftliche Methode in 5 Schritten: 1. Beobachten/Frage stellen, 2. Hypothese (Vermutung) aufstellen, 3. Experiment planen, 4. Experiment durchführen und messen, 5. Auswerten und Schlussfolgerung ziehen (Hypothese bestätigt oder verworfen).",
+    "Wird die Hypothese nicht bestätigt, wird sie verworfen oder verbessert und neu geprüft – Messwerte werden nie „angepasst“.",
     "Mittelwert: alle Messwerte addieren und durch die Anzahl der Messungen teilen. Messwerte trägt man in eine Tabelle ein (Nr., Messwert, Einheit)."
    ],
    "schritte": [
-    "Formel nach der gesuchten Größe umformen.",
-    "Gegebene Größen in Grundeinheiten umrechnen.",
-    "Einsetzen, ausrechnen, Einheit dazuschreiben."
+    "Beobachten und Frage stellen.",
+    "Hypothese aufstellen.",
+    "Experiment planen.",
+    "Durchführen und messen.",
+    "Auswerten und Schluss ziehen."
    ],
-   "beispiel": "s = 30 m, t = 2 s → v = 30 m : 2 s = 15 m/s\nMesswerte 0,6 s; 0,8 s; 0,7 s → Mittelwert = 2,1 s : 3 = 0,7 s",
+   "beispiel": "Messwerte 0,6 s; 0,8 s; 0,7 s → Mittelwert = 2,1 s : 3 = 0,7 s",
    "fehler": [
-    "Beim Umformen nur auf einer Seite rechnen.",
+    "Hypothese und Beobachtung verwechseln.",
     "Beim Mittelwert durch die falsche Anzahl teilen."
    ],
-   "merke": "Beide Seiten gleich behandeln – und am Ende immer die Einheit dazuschreiben.",
-   "video": "Formeln umstellen Physik v=s/t einfach erklärt",
+   "merke": "Beobachten – Vermuten – Planen – Messen – Auswerten.",
+   "video": "wissenschaftliche Methode Galilei Hypothese Experiment",
    "stichworte": [
-    "Löse nach",
-    "umgeformt",
-    "Formel",
-    "v = s",
     "Galile",
     "Hypothese",
     "Methode",
