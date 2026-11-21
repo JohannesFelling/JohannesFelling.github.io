@@ -31,12 +31,19 @@ def schreiben(person, fach, titel, fragen, platzhalter, untertitel="", thema=Non
             untertitel = " · ".join(p.get("kapitel") or "" for p in pakete if p.get("kapitel"))[:120]
         tests = list(tests or [])
         wissen = list(wissen or [])
+        teststoff = []
         for p in pakete:
-            for i, q in enumerate(p.get("fragen", [])): fragen.append(dict(q, id=f"{p['paket']}-{i+1:02d}"))
+            ts = p.get("teststoff")  # Stoffabgrenzung für einen Test → Fragen dazu werden vor dem Termin bevorzugt geübt
+            if ts: teststoff.append(dict(ts, id=p["paket"]))
+            for i, q in enumerate(p.get("fragen", [])):
+                q = dict(q, id=f"{p['paket']}-{i+1:02d}")
+                if ts and ts.get("termin"): q["schwerpunkt"] = ts["termin"]
+                fragen.append(q)
             wissen += p.get("wissen", [])
             if p.get("test", {}).get("fragen"):
                 tests.append({"id": p["paket"], "titel": p["test"].get("titel") or f"Test {p.get('kapitel') or ''}".strip(), "fragen": p["test"]["fragen"]})
     d = {"titel": titel, "untertitel": untertitel, "platzhalter": platzhalter}
+    if pakete and teststoff: d["teststoff"] = teststoff
     if thema: d["thema"] = thema
     d["fragen"] = fragen
     if tests:

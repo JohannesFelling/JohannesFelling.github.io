@@ -473,6 +473,7 @@ function fachSeite() {
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
     modusWahl(),
     el("button", { class: "knopf", onclick: rundeStarten }, ic("play"), person.thema === "held" ? "Mission starten" : "Anpfiff"),
+    ...(teststoffKarte(s) || []),
     el("div", { class: "label hochladen-label" }, "Hochladen"),
     el("div", { class: "raster zwei hochladen" },
       el("button", { class: "fach klein-fach material-knopf", onclick: materialSeite }, ic("plus"), el("div", {}, el("div", { class: "fach-name" }, "Lernmaterial"), el("small", {}, "Buch- oder Heftseiten → daraus werden Übungen, Erklärungen und ein Test"))),
@@ -482,7 +483,7 @@ function fachSeite() {
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
     tests.length ? el("div", { class: "karte" },
       el("div", { class: "label" }, "Kapiteltests"),
-      el("p", { class: "klein" }, `Alles richtig = Gutschein: ${BELOHNUNG.test.belohnung}.` + (frei ? "" : " Erst eine Trainingsrunde spielen, dann ist der Test frei.")),
+      el("p", { class: "klein" }, "Alles richtig = 🎁 Überraschung." + (frei ? "" : " Erst eine Trainingsrunde spielen, dann ist der Test frei.")),
       ...tests.map(t => {
         const info = pr.tests[`${fach.id}/${t.id}`] || {};
         return el("button", { class: `test-knopf ${info.bestanden ? "ok" : ""}`, disabled: frei ? null : "disabled", onclick: () => testStarten(t) },
@@ -492,12 +493,36 @@ function fachSeite() {
   );
 }
 
+const schwerpunktAktiv = q => q.schwerpunkt && tageBis(q.schwerpunkt) >= 0 && tageBis(q.schwerpunkt) <= 21;
+function teststoffKarte(s) {
+  const ts = (daten.teststoff || []).filter(t => !t.termin || tageBis(t.termin) >= 0);
+  if (!ts.length) return null;
+  return ts.map(t => {
+    const fr = daten.fragen.filter(q => q.id.startsWith(t.id + "-"));
+    const n = t.termin ? tageBis(t.termin) : null;
+    return el("div", { class: "karte teststoff" },
+      el("div", { class: "label" }, "🎯 Teststoff"),
+      el("div", { class: "termin-titel" }, t.titel || "Test"),
+      el("div", { class: "klein" }, t.termin ? `${datumLang(t.termin)} – ${wannText(n)} · Übungsrunden fragen jetzt genau diesen Stoff ab` : "Übungsrunden fragen genau diesen Stoff ab"),
+      el("div", { class: "teststoff-liste" }, ...(t.punkte || []).map((p, i) => {
+        const qs = fr.filter(q => q.stoff === i), gesehen = qs.filter(q => s.gesehen[q.id]).length, offen = qs.filter(q => s.offen.includes(q.id)).length;
+        const sitzt = qs.length && gesehen === qs.length && !offen;
+        return el("div", { class: `ts-punkt ${sitzt ? "sitzt" : ""}` },
+          el("span", { class: "ts-haken" }, sitzt ? "✓" : String(i + 1)),
+          el("span", { class: "ts-text" }, p, qs.length ? el("small", {}, ` · ${gesehen}/${qs.length} geübt${offen ? ` · ${offen} wiederholen` : ""}`) : null));
+      })),
+      t.quelle ? el("div", { class: "klein" }, `Quelle: ${t.quelle}`) : null);
+  });
+}
 function rundeStarten() {
   const s = laden(person.id, fach.id);
   const alle = daten.fragen;
   const nachId = Object.fromEntries(alle.map(q => [q.id, q]));
   const wdh = mischen(s.offen.filter(id => nachId[id])).slice(0, 4).map(id => nachId[id]);
-  const rest = mischen(alle.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
+  // Vor einem Test: gezielt den abgegrenzten Teststoff üben
+  const fokus = alle.filter(schwerpunktAktiv);
+  const pool = fokus.length >= 5 ? fokus : alle;
+  const rest = mischen(pool.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
   runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null };
   frageZeigen();
 }
@@ -668,9 +693,9 @@ function gutscheinListe() {
     ...pr.gutscheine.slice().reverse().map(g => el("button", { class: "test-knopf", onclick: () => gutscheinZeigen(g) }, el("span", {}, g.was, el("small", {}, `${g.grund} · ${g.code}`)), ic("ticket"))),
     el("div", { class: "karte" }, el("div", { class: "label" }, "So bekommst du Gutscheine"),
       el("ul", {},
-        el("li", {}, `Kapiteltest fehlerfrei → ${BELOHNUNG.test.belohnung}`),
-        el("li", {}, `${BELOHNUNG.serie.tage} Tage hintereinander üben → ${BELOHNUNG.serie.belohnung}`),
-        ...BELOHNUNG.stufen.map(s => el("li", {}, punkte(person.id, s.sterne), ` → ${s.belohnung}`)))));
+        el("li", {}, "Kapiteltest fehlerfrei → 🎁 Überraschung"),
+        el("li", {}, `${BELOHNUNG.serie.tage} Tage hintereinander üben → 🎁 Überraschung`),
+        ...BELOHNUNG.stufen.map(s => el("li", {}, punkte(person.id, s.sterne), " → 🎁 Überraschung")))));
 }
 
 // ---------- Wissen ----------

@@ -12,3 +12,11 @@ Format:
  "wissen": [{"titel": "…", "kurz": "…", "problem": "…", "text": ["…"], "schritte": ["…"], "beispiel": "…", "fehler": ["…"], "merke": "…", "video": "Suchbegriff", "stichworte": ["regex"]}],
  "test": {"titel": "Test Unit 5 – Food", "fragen": [ … 8–12 Fragen … ]}}
 ```
+
+## Stoffabgrenzung / Teststoff (Schwerpunkt)
+Ist im Material eine konkrete Stoffabgrenzung für einen Test oder eine Schularbeit erkennbar (z. B. „Teststoff“, „Stoff für die Schularbeit“, Liste von Kompetenzen, Kapitel- oder Seitenangaben, Datum), dann:
+- Feld `"teststoff": {"termin": "JJJJ-MM-TT", "titel": "Physik-Test am 24.11.", "quelle": "…", "punkte": ["Punkt 1", "Punkt 2", …]}` ins Paket schreiben – die Punkte möglichst wörtlich aus der Abgrenzung.
+- Jede Frage bekommt `"stoff": <Index des passenden Punkts>`. **Jeder Punkt braucht mehrere Fragen** (mind. 3–4), Gewichtung so wie im Test zu erwarten; nichts abfragen, was nicht zur Abgrenzung gehört. Lieber 30–60 Fragen als zu wenige.
+- Der Kapiteltest heißt „Probetest …“ und deckt jeden Punkt mindestens einmal ab.
+- Termin auch in `lern-app/daten/<kind>/termine.json` eintragen, falls er dort fehlt.
+- Bis zum Termin (max. 21 Tage vorher) üben die Runden in der App dann nur diese Fragen; die Fachseite zeigt eine Teststoff-Checkliste mit Lernstand pro Punkt.
