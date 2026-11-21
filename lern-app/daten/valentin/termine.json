@@ -1,6 +1,33 @@
 {
- "hinweis": "Aus Valentins Terminliste (Screenshot vom 20.11.2026). fach = App-Fach oder null.",
+ "hinweis": "Aus Valentins Terminliste (20.11.) + Arbeitskalender 2A und Schuljahresplaner (Fotos 21.11.2026). fach = App-Fach oder null.",
  "termine": [
+  {
+   "datum": "2026-10-13",
+   "fach": "englisch",
+   "titel": "1. Englisch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2026-10-21",
+   "fach": "mathe",
+   "titel": "1. Mathe-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2026-11-06",
+   "fach": "deutsch",
+   "titel": "1. Deutsch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2026-11-18",
+   "fach": "biologie",
+   "titel": "Biologie-Test",
+   "art": "Test"
+  },
   {
    "datum": "2026-11-23",
    "fach": "geografie",
@@ -15,11 +42,74 @@
    "zeit": "08:55"
   },
   {
+   "datum": "2026-12-01",
+   "fach": "englisch",
+   "titel": "2. Englisch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2026-12-14",
+   "fach": "deutsch",
+   "titel": "2. Deutsch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2026-12-22",
+   "fach": "mathe",
+   "titel": "2. Mathe-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
    "datum": "2027-01-13",
    "fach": "physik",
    "titel": "Physik-Test",
    "art": "Test",
    "zeit": "10:00"
+  },
+  {
+   "datum": "2027-03-01",
+   "fach": "deutsch",
+   "titel": "3. Deutsch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2027-03-10",
+   "fach": "mathe",
+   "titel": "3. Mathe-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2027-03-16",
+   "fach": "englisch",
+   "titel": "3. Englisch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2027-04-30",
+   "fach": "deutsch",
+   "titel": "4. Deutsch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2027-05-05",
+   "fach": "mathe",
+   "titel": "4. Mathe-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
+  },
+  {
+   "datum": "2027-05-25",
+   "fach": "englisch",
+   "titel": "4. Englisch-Schularbeit",
+   "art": "Schularbeit",
+   "dauer": 50
   }
  ],
  "frei": [
@@ -37,6 +127,16 @@
    "von": "2027-01-30",
    "bis": "2027-02-07",
    "titel": "Semesterferien"
+  },
+  {
+   "von": "2027-03-20",
+   "bis": "2027-03-29",
+   "titel": "Osterferien"
+  },
+  {
+   "von": "2027-05-15",
+   "bis": "2027-05-17",
+   "titel": "Pfingstferien"
   }
  ]
 }
