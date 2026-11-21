@@ -42,3 +42,8 @@ Jedes Paket bekommt ein Feld `podcast` – frei erzählte Erklärung zum Anhöre
 - Klingt nur mit KURZEN Sätzen natürlich (meist 5–12 Wörter, ein Gedanke pro Satz), Umgangston, rhetorische Fragen („Denk mal mit.“, „Achtung, Falle!“). Neuer Absatz = neue Zeile (\n) → im Player kurze Pause.
 - Sprechbar schreiben: keine Abkürzungen mit Punkt (z. B., S. 16, ca.), keine Pfeile/Symbole, Hochzahlen und Formeln in Worten („zehn hoch minus drei“, „Meter pro Sekunde“). Zahlen wie „27. November“ sind ok.
 - Letztes Kapitel endet mit kurzer Zusammenfassung + Hinweis auf Probetest.
+
+## Menge und Abwechslung (Johannes 21.11.2026)
+- Jedes Paket hat MINDESTENS 100 verschiedene Übungsfragen (ohne die Testfragen mitzuzählen) – wirklich weit ausholen: jeder Fachbegriff, jede Zahl, jede Abbildung, jede Tabelle aus den Fotos; dazu Richtig/Falsch-Aussagen, Zuordnungen, Rechenaufgaben mit verschiedenen Zahlen, Alltagsbeispiele, umgekehrte Fragen (Begriff → Erklärung und Erklärung → Begriff).
+- Fragetypen mischen: auswahl, eingabe, offen (5–15) und – wo es passt – Karte (typ "karte").
+- Keine Doppelungen mit nur anders formuliertem Text.

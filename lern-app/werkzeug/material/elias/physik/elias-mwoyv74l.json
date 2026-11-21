@@ -676,6 +676,899 @@
    "antwort": "Nummer der Messung, Messwert und Einheit",
    "erklaerung": "Ordentliche Tabelle: jede Messung eine Zeile, Einheit im Tabellenkopf.",
    "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 3,5 t = ? kg",
+   "antwort": [
+    "3500"
+   ],
+   "zahl": true,
+   "erklaerung": "1 t = 1000 kg → 3,5 t = 3500 kg.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 720 g = ? kg",
+   "antwort": [
+    "0,72",
+    "0.72"
+   ],
+   "zahl": true,
+   "erklaerung": "1 g = 0,001 kg → 720 g = 0,72 kg.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 5 min = ? s",
+   "antwort": [
+    "300"
+   ],
+   "zahl": true,
+   "erklaerung": "1 min = 60 s → 5 min = 300 s.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 1,5 h = ? s",
+   "antwort": [
+    "5400"
+   ],
+   "zahl": true,
+   "erklaerung": "1 h = 3600 s → 1,5 h = 5400 s.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 0,25 h = ? s",
+   "antwort": [
+    "900"
+   ],
+   "zahl": true,
+   "erklaerung": "1 h = 3600 s → 0,25 h = 900 s.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 2,3 km = ? m",
+   "antwort": [
+    "2300"
+   ],
+   "zahl": true,
+   "erklaerung": "1 km = 1000 m → 2,3 km = 2300 m.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 85 cm = ? m",
+   "antwort": [
+    "0,85",
+    "0.85"
+   ],
+   "zahl": true,
+   "erklaerung": "1 cm = 0,01 m → 85 cm = 0,85 m.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 4 mm = ? m",
+   "antwort": [
+    "0,004",
+    "0.004"
+   ],
+   "zahl": true,
+   "erklaerung": "1 mm = 0,001 m → 4 mm = 0,004 m.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 2 d = ? s",
+   "antwort": [
+    "172800"
+   ],
+   "zahl": true,
+   "erklaerung": "1 d = 86 400 s → 2 d = 172800 s.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 50 g = ? kg",
+   "antwort": [
+    "0,05",
+    "0.05"
+   ],
+   "zahl": true,
+   "erklaerung": "1 g = 0,001 kg → 50 g = 0,05 kg.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 12 min = ? s",
+   "antwort": [
+    "720"
+   ],
+   "zahl": true,
+   "erklaerung": "1 min = 60 s → 12 min = 720 s.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Umrechnen",
+   "frage": "Rechne in die Grundeinheit um: 0,6 km = ? m",
+   "antwort": [
+    "600"
+   ],
+   "zahl": true,
+   "erklaerung": "1 km = 1000 m → 0,6 km = 600 m.",
+   "stoff": 2
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^2 · 10^4 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "6"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen addieren: 2 + (4) = 6.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^5 · 10^3 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "8"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen addieren: 5 + (3) = 8.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^6 · 10^-2 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "4"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen addieren: 6 + (-2) = 4.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^3 · 10^7 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "10"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen addieren: 3 + (7) = 10.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^9 : 10^4 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "5"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen subtrahieren: 9 − (4) = 5.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^5 : 10^8 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "-3"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen subtrahieren: 5 − (8) = -3.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: 10^2 : 10^-3 = 10^? (nur die Hochzahl)",
+   "antwort": [
+    "5"
+   ],
+   "zahl": true,
+   "erklaerung": "Hochzahlen subtrahieren: 2 − (-3) = 5.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Schreib 4 500 000 in der Form a · 10^n. Wie groß ist n?",
+   "antwort": [
+    "6",
+    "6"
+   ],
+   "zahl": true,
+   "erklaerung": "4 500 000 = 4,5 · 10⁶.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Schreib 0,00072 in der Form a · 10^n. Wie groß ist n?",
+   "antwort": [
+    "-4",
+    "−4"
+   ],
+   "zahl": true,
+   "erklaerung": "0,00072 = 7,2 · 10⁻⁴.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Schreib 380 000 in der Form a · 10^n. Wie groß ist n?",
+   "antwort": [
+    "5",
+    "5"
+   ],
+   "zahl": true,
+   "erklaerung": "380 000 = 3,8 · 10⁵.",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Schreib 0,05 in der Form a · 10^n. Wie groß ist n?",
+   "antwort": [
+    "-2",
+    "−2"
+   ],
+   "zahl": true,
+   "erklaerung": "0,05 = 5 · 10⁻².",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: (2 · 10³) · (3 · 10⁴) = 6 · 10^? – welche Hochzahl?",
+   "antwort": [
+    "7"
+   ],
+   "zahl": true,
+   "erklaerung": "Zahlen mal (2·3=6), Hochzahlen plus (3+4=7).",
+   "stoff": 0
+  },
+  {
+   "typ": "eingabe",
+   "art": "Rechnen",
+   "frage": "Rechne: (8 · 10⁶) : (2 · 10²) = 4 · 10^? – welche Hochzahl?",
+   "antwort": [
+    "4"
+   ],
+   "zahl": true,
+   "erklaerung": "Zahlen durch (8:2=4), Hochzahlen minus (6−2=4).",
+   "stoff": 0
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Kilo?",
+   "optionen": [
+    "10³",
+    "10⁻¹²",
+    "10¹²",
+    "10⁻³"
+   ],
+   "antwort": "10³",
+   "erklaerung": "Kilo = 10³.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Mega?",
+   "optionen": [
+    "10⁶",
+    "10¹²",
+    "10⁻³",
+    "10²"
+   ],
+   "antwort": "10⁶",
+   "erklaerung": "Mega = 10⁶.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Giga?",
+   "optionen": [
+    "10⁹",
+    "10⁶",
+    "10¹²",
+    "10⁻⁶"
+   ],
+   "antwort": "10⁹",
+   "erklaerung": "Giga = 10⁹.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Tera?",
+   "optionen": [
+    "10¹²",
+    "10³",
+    "10⁻²",
+    "10⁻¹"
+   ],
+   "antwort": "10¹²",
+   "erklaerung": "Tera = 10¹².",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Milli?",
+   "optionen": [
+    "10⁻³",
+    "10⁶",
+    "10³",
+    "10⁹"
+   ],
+   "antwort": "10⁻³",
+   "erklaerung": "Milli = 10⁻³.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Mikro?",
+   "optionen": [
+    "10⁻⁶",
+    "10⁻²",
+    "10²",
+    "10⁻³"
+   ],
+   "antwort": "10⁻⁶",
+   "erklaerung": "Mikro = 10⁻⁶.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Nano?",
+   "optionen": [
+    "10⁻⁹",
+    "10⁻²",
+    "10⁶",
+    "10⁻³"
+   ],
+   "antwort": "10⁻⁹",
+   "erklaerung": "Nano = 10⁻⁹.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Piko?",
+   "optionen": [
+    "10⁻¹²",
+    "10²",
+    "10⁹",
+    "10⁻⁶"
+   ],
+   "antwort": "10⁻¹²",
+   "erklaerung": "Piko = 10⁻¹².",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Zenti?",
+   "optionen": [
+    "10⁻²",
+    "10⁻³",
+    "10⁶",
+    "10⁻⁶"
+   ],
+   "antwort": "10⁻²",
+   "erklaerung": "Zenti = 10⁻².",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Dezi?",
+   "optionen": [
+    "10⁻¹",
+    "10³",
+    "10¹²",
+    "10⁻⁶"
+   ],
+   "antwort": "10⁻¹",
+   "erklaerung": "Dezi = 10⁻¹.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Vorsilbe",
+   "frage": "Für welche Zehnerpotenz steht die Vorsilbe Hekto?",
+   "optionen": [
+    "10²",
+    "10⁻⁶",
+    "10⁶",
+    "10⁻³"
+   ],
+   "antwort": "10²",
+   "erklaerung": "Hekto = 10².",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Vorsilbe",
+   "frage": "Wie viele Meter sind 5 km?",
+   "antwort": [
+    "5000"
+   ],
+   "zahl": true,
+   "erklaerung": "k = Kilo = 1000.",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Vorsilbe",
+   "frage": "Wie viele Gramm sind 3 mg? (als Kommazahl)",
+   "antwort": [
+    "0,003",
+    "0.003"
+   ],
+   "zahl": true,
+   "erklaerung": "m = Milli = 0,001.",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Vorsilbe",
+   "frage": "Wie viele Watt sind 2 MW?",
+   "antwort": [
+    "2000000"
+   ],
+   "zahl": true,
+   "erklaerung": "M = Mega = 1 000 000.",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Vorsilbe",
+   "frage": "Wie viele Meter sind 250 µm? (als Kommazahl)",
+   "antwort": [
+    "0,00025",
+    "0.00025"
+   ],
+   "zahl": true,
+   "erklaerung": "µ = Mikro = 0,000001.",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Vorsilbe",
+   "frage": "Wie viele Sekunden sind 400 ms? (als Kommazahl)",
+   "antwort": [
+    "0,4",
+    "0.4"
+   ],
+   "zahl": true,
+   "erklaerung": "ms = Millisekunde = 0,001 s.",
+   "stoff": 3
+  },
+  {
+   "typ": "eingabe",
+   "art": "Vorsilbe",
+   "frage": "Wie viele Byte sind 3 GB? Schreib als 3 · 10^? – welche Hochzahl?",
+   "antwort": [
+    "9"
+   ],
+   "zahl": true,
+   "erklaerung": "G = Giga = 10⁹.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet das Zeichen „M“ (groß) vor einer Einheit?",
+   "optionen": [
+    "Mega (10⁶)",
+    "Milli (10⁻³)",
+    "Mikro (10⁻⁶)",
+    "Meter"
+   ],
+   "antwort": "Mega (10⁶)",
+   "erklaerung": "Groß M = Mega, klein m = Milli.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet das Zeichen „m“ (klein) vor einer Einheit, z. B. in mA?",
+   "optionen": [
+    "Milli (10⁻³)",
+    "Mega (10⁶)",
+    "Meter",
+    "Mikro (10⁻⁶)"
+   ],
+   "antwort": "Milli (10⁻³)",
+   "erklaerung": "mA = Milliampere.",
+   "stoff": 3
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Höhe des Stephansdoms (ca. 137 m)?",
+   "optionen": [
+    "10² m",
+    "10¹ m",
+    "10³ m",
+    "10⁴ m"
+   ],
+   "antwort": "10² m",
+   "erklaerung": "137 m ≈ 1,37 · 10² m.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Länge einer Ameise (ca. 5 mm)?",
+   "optionen": [
+    "10⁻³ m",
+    "10⁻² m",
+    "10⁻⁶ m",
+    "10⁰ m"
+   ],
+   "antwort": "10⁻³ m",
+   "erklaerung": "5 mm = 5 · 10⁻³ m.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Entfernung Wien–Salzburg (ca. 300 km)?",
+   "optionen": [
+    "10⁵ m",
+    "10³ m",
+    "10⁴ m",
+    "10⁷ m"
+   ],
+   "antwort": "10⁵ m",
+   "erklaerung": "300 km = 3 · 10⁵ m.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Entfernung Erde–Mond (ca. 384 000 km)?",
+   "optionen": [
+    "10⁸ m",
+    "10⁶ m",
+    "10⁵ m",
+    "10¹⁰ m"
+   ],
+   "antwort": "10⁸ m",
+   "erklaerung": "384 000 km = 3,84 · 10⁸ m.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Masse eines Autos (ca. 1500 kg)?",
+   "optionen": [
+    "10³ kg",
+    "10² kg",
+    "10⁵ kg",
+    "10⁶ kg"
+   ],
+   "antwort": "10³ kg",
+   "erklaerung": "1500 kg = 1,5 · 10³ kg.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Dauer eines Schultags (ca. 6 h)?",
+   "optionen": [
+    "10⁴ s",
+    "10² s",
+    "10³ s",
+    "10⁶ s"
+   ],
+   "antwort": "10⁴ s",
+   "erklaerung": "6 h = 21 600 s ≈ 2 · 10⁴ s.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Größe einer Bakterie (ca. 2 µm)?",
+   "optionen": [
+    "10⁻⁶ m",
+    "10⁻³ m",
+    "10⁻⁹ m",
+    "10⁻² m"
+   ],
+   "antwort": "10⁻⁶ m",
+   "erklaerung": "2 µm = 2 · 10⁻⁶ m.",
+   "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Größenordnung",
+   "frage": "Welche Größenordnung hat: Masse einer Büroklammer (ca. 1 g)?",
+   "optionen": [
+    "10⁻³ kg",
+    "10⁰ kg",
+    "10⁻⁶ kg",
+    "10³ kg"
+   ],
+   "antwort": "10⁻³ kg",
+   "erklaerung": "1 g = 10⁻³ kg.",
+   "stoff": 4
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Radfahrer fährt s = 100 m in t = 20 s. v = s / t in m/s?",
+   "antwort": [
+    "5"
+   ],
+   "zahl": true,
+   "erklaerung": "v = 100 m : 20 s = 5 m/s.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Radfahrer fährt s = 240 m in t = 30 s. v = s / t in m/s?",
+   "antwort": [
+    "8"
+   ],
+   "zahl": true,
+   "erklaerung": "v = 240 m : 30 s = 8 m/s.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Radfahrer fährt s = 1500 m in t = 300 s. v = s / t in m/s?",
+   "antwort": [
+    "5"
+   ],
+   "zahl": true,
+   "erklaerung": "v = 1500 m : 300 s = 5 m/s.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Körper hat m = 2 kg und V = 0,001 m³. Dichte ρ = m / V in kg/m³?",
+   "antwort": [
+    "2000"
+   ],
+   "zahl": true,
+   "erklaerung": "ρ = 2 : 0,001 = 2000 kg/m³.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Körper hat m = 9 kg und V = 0,003 m³. Dichte ρ = m / V in kg/m³?",
+   "antwort": [
+    "3000"
+   ],
+   "zahl": true,
+   "erklaerung": "ρ = 9 : 0,003 = 3000 kg/m³.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "Ein Zug fährt 2 km in 100 s. v = s / t in m/s? (erst umrechnen!)",
+   "antwort": [
+    "20"
+   ],
+   "zahl": true,
+   "erklaerung": "2 km = 2000 m → 2000 : 100 = 20 m/s.",
+   "stoff": 1
+  },
+  {
+   "typ": "eingabe",
+   "art": "Einsetzen",
+   "frage": "F = m · a. m = 50 kg, a = 2 m/s². Wie groß ist F in Newton?",
+   "antwort": [
+    "100"
+   ],
+   "zahl": true,
+   "erklaerung": "F = 50 · 2 = 100 N.",
+   "stoff": 1
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„Ich vermute, dass ein Pendel mit längerer Schnur langsamer schwingt.“ Welcher Schritt ist das?",
+   "optionen": [
+    "Hypothese",
+    "Beobachtung",
+    "Auswertung",
+    "Experiment durchführen"
+   ],
+   "antwort": "Hypothese",
+   "erklaerung": "Eine überprüfbare Vermutung = Hypothese.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Elias misst mit der Stoppuhr fünfmal die Schwingungsdauer. Welcher Schritt ist das?",
+   "optionen": [
+    "Experiment durchführen und messen",
+    "Hypothese",
+    "Beobachtung",
+    "Schlussfolgerung"
+   ],
+   "antwort": "Experiment durchführen und messen",
+   "erklaerung": "Messen = Schritt 4.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "„Die Messwerte zeigen: Die Vermutung stimmt.“ Welcher Schritt ist das?",
+   "optionen": [
+    "Auswerten / Schlussfolgerung",
+    "Planen",
+    "Beobachten",
+    "Hypothese"
+   ],
+   "antwort": "Auswerten / Schlussfolgerung",
+   "erklaerung": "Schritt 5.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist der 3. Schritt nach Galilei?",
+   "optionen": [
+    "Experiment planen",
+    "Hypothese aufstellen",
+    "Messen",
+    "Beobachten"
+   ],
+   "antwort": "Experiment planen",
+   "erklaerung": "1 Beobachten, 2 Hypothese, 3 Planen, 4 Messen, 5 Auswerten.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer gilt als Begründer der naturwissenschaftlichen Methode mit Experimenten?",
+   "optionen": [
+    "Galileo Galilei",
+    "Isaac Newton",
+    "Albert Einstein",
+    "Archimedes"
+   ],
+   "antwort": "Galileo Galilei",
+   "erklaerung": "Er prüfte Vermutungen mit Experimenten.",
+   "stoff": 5
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Bei einem Pendel-Experiment ändert man die Schnurlänge. Was muss gleich bleiben?",
+   "optionen": [
+    "Masse und Auslenkung",
+    "Die Schnurlänge",
+    "Nichts",
+    "Nur die Uhr"
+   ],
+   "antwort": "Masse und Auslenkung",
+   "erklaerung": "Faires Experiment: nur eine Größe ändern.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Messfehler?",
+   "optionen": [
+    "Eine Abweichung vom wahren Wert, z. B. durch Reaktionszeit",
+    "Ein falsches Experiment",
+    "Eine Hypothese",
+    "Eine Einheit"
+   ],
+   "antwort": "Eine Abweichung vom wahren Wert, z. B. durch Reaktionszeit",
+   "erklaerung": "Deshalb misst man mehrmals.",
+   "stoff": 6
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum gehört in den Tabellenkopf die Einheit?",
+   "optionen": [
+    "Damit klar ist, in welcher Einheit alle Werte stehen",
+    "Weil es schöner aussieht",
+    "Damit man weniger messen muss",
+    "Das ist egal"
+   ],
+   "antwort": "Damit klar ist, in welcher Einheit alle Werte stehen",
+   "erklaerung": "Z. B. „Zeit in s“.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Mittelwert",
+   "frage": "Messwerte: 3,2 s; 3,4 s; 3 s. Mittelwert in s?",
+   "antwort": [
+    "3,2",
+    "3.2"
+   ],
+   "zahl": true,
+   "erklaerung": "Summe 9,6 : 3 = 3,2 s.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Mittelwert",
+   "frage": "Messwerte: 45 cm; 47 cm; 46 cm; 46 cm. Mittelwert in cm?",
+   "antwort": [
+    "46"
+   ],
+   "zahl": true,
+   "erklaerung": "Summe 184 : 4 = 46 cm.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Mittelwert",
+   "frage": "Messwerte: 1,25 s; 1,35 s; 1,3 s. Mittelwert in s?",
+   "antwort": [
+    "1,3",
+    "1.3"
+   ],
+   "zahl": true,
+   "erklaerung": "Summe 3,9 : 3 = 1,3 s.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Mittelwert",
+   "frage": "Messwerte: 200 g; 210 g; 190 g; 200 g. Mittelwert in g?",
+   "antwort": [
+    "200"
+   ],
+   "zahl": true,
+   "erklaerung": "Summe 800 : 4 = 200 g.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Mittelwert",
+   "frage": "Messwerte: 0,8 s; 0,9 s; 1 s. Mittelwert in s?",
+   "antwort": [
+    "0,9",
+    "0.9"
+   ],
+   "zahl": true,
+   "erklaerung": "Summe 2,7 : 3 = 0,9 s.",
+   "stoff": 7
   }
  ],
  "wissen": [

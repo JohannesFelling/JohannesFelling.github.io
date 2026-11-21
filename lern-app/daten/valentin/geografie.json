@@ -2320,6 +2320,483 @@
    "schwerpunkt": "2026-11-27"
   },
   {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Uran ist ein erneuerbarer Energieträger.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Uran ist nicht erneuerbar – der Vorrat geht irgendwann aus.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-93",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Biomasse ist erneuerbar, setzt beim Verbrennen aber CO₂ frei.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Pflanzen wachsen nach, beim Verbrennen entsteht trotzdem CO₂.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-94",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Laufkraftwerk braucht einen Stausee in den Bergen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Das ist das Speicherkraftwerk. Das Laufkraftwerk staut einen Fluss.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-95",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Österreich hat ein Atomkraftwerk am Netz.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Zwentendorf wurde gebaut, ging aber nie in Betrieb.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-96",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein kurzer Stromausfall in deinem Haus ist ein Blackout.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Blackout = lange und in weiten Teilen des Landes.",
+   "stoff": 3,
+   "id": "valentin-geo-energie-97",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Die europäischen Stromnetze sind miteinander verbunden.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Darum kann Strom importiert und exportiert werden.",
+   "stoff": 3,
+   "id": "valentin-geo-energie-98",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Recyceltes Papier wird mit jedem Mal besser.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Die Qualität sinkt – am Ende wird Klopapier daraus.",
+   "stoff": 6,
+   "id": "valentin-geo-energie-99",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Müll vermeiden ist besser als recyceln.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Was gar nicht entsteht, muss man nicht entsorgen.",
+   "stoff": 6,
+   "id": "valentin-geo-energie-100",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Holz ist ein nicht erneuerbarer Rohstoff.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Holz wächst nach – erneuerbar.",
+   "stoff": 4,
+   "id": "valentin-geo-energie-101",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Lithium braucht man für Akkus.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Handy, Laptop, E-Auto – alle haben Lithium-Akkus.",
+   "stoff": 4,
+   "id": "valentin-geo-energie-102",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Farbe hat die Tonne für Altpapier?",
+   "optionen": [
+    "Rot",
+    "Gelb",
+    "Blau",
+    "Braun"
+   ],
+   "antwort": "Rot",
+   "erklaerung": "Altpapier = rot.",
+   "stoff": 5,
+   "id": "valentin-geo-energie-103",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Farbe hat die Tonne für Bioabfall?",
+   "optionen": [
+    "Braun",
+    "Rot",
+    "Schwarz",
+    "Gelb"
+   ],
+   "antwort": "Braun",
+   "erklaerung": "Bio = braun.",
+   "stoff": 5,
+   "id": "valentin-geo-energie-104",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Farbe hat die Tonne für Metallverpackungen?",
+   "optionen": [
+    "Blau",
+    "Gelb",
+    "Rot",
+    "Braun"
+   ],
+   "antwort": "Blau",
+   "erklaerung": "Metall = blau.",
+   "stoff": 5,
+   "id": "valentin-geo-energie-105",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gehört ein Pizzakarton mit viel Käse und Fett?",
+   "optionen": [
+    "Restmüll",
+    "Altpapier",
+    "Gelbe Tonne",
+    "Biotonne"
+   ],
+   "antwort": "Restmüll",
+   "erklaerung": "Stark verschmutztes Papier kann nicht recycelt werden.",
+   "stoff": 5,
+   "id": "valentin-geo-energie-106",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gehört ein leerer Joghurtbecher?",
+   "optionen": [
+    "Gelbe Tonne (Kunststoff)",
+    "Altpapier",
+    "Glas",
+    "Restmüll"
+   ],
+   "antwort": "Gelbe Tonne (Kunststoff)",
+   "erklaerung": "Kunststoffverpackungen = gelb.",
+   "stoff": 5,
+   "id": "valentin-geo-energie-107",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gehört eine alte Glühbirne oder Energiesparlampe?",
+   "optionen": [
+    "Sammelstelle",
+    "Glascontainer",
+    "Gelbe Tonne",
+    "Biotonne"
+   ],
+   "antwort": "Sammelstelle",
+   "erklaerung": "Lampen sind Problemstoffe/Elektroschrott.",
+   "stoff": 5,
+   "id": "valentin-geo-energie-108",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Energieträger liefert in Österreich den meisten Strom?",
+   "optionen": [
+    "Wasserkraft",
+    "Atomkraft",
+    "Kohle",
+    "Wind"
+   ],
+   "antwort": "Wasserkraft",
+   "erklaerung": "Lauf- und Speicherkraftwerke zusammen 58 %.",
+   "stoff": 6,
+   "id": "valentin-geo-energie-109",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was passiert in einer Turbine im Kraftwerk?",
+   "optionen": [
+    "Sie wird gedreht und treibt den Generator an",
+    "Sie speichert Strom",
+    "Sie kühlt das Wasser",
+    "Sie verbrennt Gas"
+   ],
+   "antwort": "Sie wird gedreht und treibt den Generator an",
+   "erklaerung": "Turbine → Generator → Strom.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-110",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was macht ein Generator?",
+   "optionen": [
+    "Er wandelt Bewegung in Strom um",
+    "Er speichert Wasser",
+    "Er filtert Abgase",
+    "Er erhöht die Spannung"
+   ],
+   "antwort": "Er wandelt Bewegung in Strom um",
+   "erklaerung": "Wie ein Fahrrad-Dynamo, nur riesig.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-111",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was wandelt ein Transformator?",
+   "optionen": [
+    "Die Spannung des Stroms",
+    "Wasser in Strom",
+    "Gas in Öl",
+    "Wärme in Licht"
+   ],
+   "antwort": "Die Spannung des Stroms",
+   "erklaerung": "Transformatoren stehen in Umspannwerken.",
+   "stoff": 3,
+   "id": "valentin-geo-energie-112",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wofür braucht man bei Photovoltaik einen Speicher?",
+   "optionen": [
+    "Damit es auch abends und nachts Strom gibt",
+    "Damit die Paneele nicht schmelzen",
+    "Damit mehr Sonne scheint",
+    "Für das Silizium"
+   ],
+   "antwort": "Damit es auch abends und nachts Strom gibt",
+   "erklaerung": "Sonnenstrom kommt vor allem zu Mittag.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-113",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo stehen in Österreich die meisten Windräder?",
+   "optionen": [
+    "Burgenland und Niederösterreich",
+    "Tirol und Vorarlberg",
+    "Kärnten",
+    "Salzburg"
+   ],
+   "antwort": "Burgenland und Niederösterreich",
+   "erklaerung": "Flaches Land, viel Wind.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-114",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist eine Wärmepumpe?",
+   "optionen": [
+    "Ein Gerät, das Erdwärme oder Umgebungswärme zum Heizen nutzt",
+    "Eine Pumpe für Erdöl",
+    "Ein Teil des Windrads",
+    "Ein Kühlschrank für LNG"
+   ],
+   "antwort": "Ein Gerät, das Erdwärme oder Umgebungswärme zum Heizen nutzt",
+   "erklaerung": "Wird bei Geothermie verwendet.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-115",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Land hat die größten Erdölreserven (laut Buch)?",
+   "optionen": [
+    "Venezuela",
+    "USA",
+    "Russland",
+    "Österreich"
+   ],
+   "antwort": "Venezuela",
+   "erklaerung": "Förderung/Verbrauch: USA – Reserven: Venezuela.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-116",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Nachteil von Pipelines?",
+   "optionen": [
+    "Sie können lecken und machen abhängig vom Lieferland",
+    "Sie sind laut",
+    "Sie brauchen Sonne",
+    "Sie erzeugen Radioaktivität"
+   ],
+   "antwort": "Sie können lecken und machen abhängig vom Lieferland",
+   "erklaerung": "Gas aus Russland kam über Pipelines.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-117",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist bei einem Blackout bei der Wasserversorgung das Problem?",
+   "optionen": [
+    "Pumpen funktionieren ohne Strom nicht",
+    "Das Wasser gefriert",
+    "Das Wasser wird salzig",
+    "Nichts"
+   ],
+   "antwort": "Pumpen funktionieren ohne Strom nicht",
+   "erklaerung": "Darum Trinkwasser vorrätig haben.",
+   "stoff": 3,
+   "id": "valentin-geo-energie-118",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist das Ziel der Kreislaufwirtschaft?",
+   "optionen": [
+    "Möglichst wenig Abfall, Rohstoffe immer wieder nutzen",
+    "Mehr Müll verbrennen",
+    "Mehr Rohstoffe abbauen",
+    "Alles auf die Deponie"
+   ],
+   "antwort": "Möglichst wenig Abfall, Rohstoffe immer wieder nutzen",
+   "erklaerung": "EU-Ziel bis 2050.",
+   "stoff": 6,
+   "id": "valentin-geo-energie-119",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist Pfand auf Flaschen sinnvoll?",
+   "optionen": [
+    "Man bekommt Geld zurück und bringt Flaschen eher zurück",
+    "Flaschen werden billiger",
+    "Es gibt weniger Glas",
+    "Pfand ist ein Rohstoff"
+   ],
+   "antwort": "Man bekommt Geld zurück und bringt Flaschen eher zurück",
+   "erklaerung": "Seit 2025 in Österreich.",
+   "stoff": 6,
+   "id": "valentin-geo-energie-120",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie viele Metalle zählen zu den Seltenen Erden?",
+   "antwort": [
+    "17"
+   ],
+   "erklaerung": "17 Metalle – für Handy, Windrad, E-Auto.",
+   "stoff": 4,
+   "id": "valentin-geo-energie-121",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt der Berg in der Steiermark, wo Eisenerz abgebaut wird?",
+   "antwort": [
+    "Erzberg",
+    "steirischer Erzberg"
+   ],
+   "erklaerung": "Der Erzberg bei Eisenerz.",
+   "stoff": 4,
+   "id": "valentin-geo-energie-122",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt das Kraftwerk mit Stausee, das bei Spitzenbedarf Strom liefert? (…kraftwerk)",
+   "antwort": [
+    "Speicherkraftwerk"
+   ],
+   "erklaerung": "Speicherkraftwerk = Wasser-Akku in den Bergen.",
+   "stoff": 2,
+   "id": "valentin-geo-energie-123",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt der Fachbegriff für Erdwärme?",
+   "antwort": [
+    "Geothermie"
+   ],
+   "erklaerung": "Geo = Erde, Therme = Wärme.",
+   "stoff": 0,
+   "id": "valentin-geo-energie-124",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
    "typ": "eingabe",
    "frage": "Wie heißt die Hauptstadt von Island?",
    "antwort": [
