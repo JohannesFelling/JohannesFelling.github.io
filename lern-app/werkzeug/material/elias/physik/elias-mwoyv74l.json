@@ -5,45 +5,6 @@
  "fragen": [
   {
    "typ": "eingabe",
-   "art": "Umformen",
-   "frage": "Löse nach x auf: 3·x = 12. x =",
-   "antwort": [
-    "4"
-   ],
-   "erklaerung": "Beide Seiten durch 3 teilen: x = 12 : 3 = 4.",
-   "zahl": true,
-   "stoff": 0
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Die Formel lautet v = s / t. Wie lautet sie nach s umgeformt?",
-   "optionen": [
-    "s = v · t",
-    "s = v / t",
-    "s = t / v",
-    "s = v + t"
-   ],
-   "antwort": "s = v · t",
-   "erklaerung": "Beide Seiten mit t malnehmen – das t auf der rechten Seite fällt weg.",
-   "stoff": 0
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Die Formel lautet v = s / t. Wie lautet sie nach t umgeformt?",
-   "optionen": [
-    "t = s / v",
-    "t = v · s",
-    "t = v / s",
-    "t = s − v"
-   ],
-   "antwort": "t = s / v",
-   "erklaerung": "Erst mit t malnehmen (v·t = s), dann durch v teilen: t = s / v.",
-   "stoff": 0
-  },
-  {
-   "typ": "eingabe",
    "art": "Einsetzen",
    "frage": "Ein Ball fliegt s = 30 m in t = 2 s. Wie groß ist v = s / t in m/s?",
    "antwort": [
@@ -51,7 +12,7 @@
    ],
    "erklaerung": "Einsetzen: v = 30 m : 2 s = 15 m/s.",
    "zahl": true,
-   "stoff": 2
+   "stoff": 1
   },
   {
    "typ": "eingabe",
@@ -62,7 +23,7 @@
    ],
    "erklaerung": "s = 8 m/s · 5 s = 40 m.",
    "zahl": true,
-   "stoff": 2
+   "stoff": 1
   },
   {
    "typ": "eingabe",
@@ -73,7 +34,7 @@
    ],
    "erklaerung": "1 t = 1000 kg, also 2,5 · 1000 = 2500 kg.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -85,7 +46,7 @@
    ],
    "erklaerung": "1 g = 0,001 kg, also 450 : 1000 = 0,45 kg.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -96,7 +57,7 @@
    ],
    "erklaerung": "1 min = 60 s, also 3 · 60 = 180 s.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -107,7 +68,7 @@
    ],
    "erklaerung": "1 h = 60 min = 3600 s, also 2 · 3600 = 7200 s.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -118,7 +79,7 @@
    ],
    "erklaerung": "1 km = 1000 m, also 4,2 · 1000 = 4200 m.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -130,7 +91,7 @@
    ],
    "erklaerung": "1 cm = 0,01 m, also 35 : 100 = 0,35 m.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "auswahl",
@@ -144,7 +105,7 @@
    ],
    "antwort": "Kilogramm (kg)",
    "erklaerung": "Die SI-Grundeinheit der Masse ist das Kilogramm – nicht das Gramm!",
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "auswahl",
@@ -158,7 +119,7 @@
    ],
    "antwort": "Kilo (k)",
    "erklaerung": "Kilo = 10³ = 1000, z. B. 1 km = 1000 m.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -172,7 +133,7 @@
    ],
    "antwort": "Mega (M)",
    "erklaerung": "Mega = 10⁶ = eine Million.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -186,7 +147,7 @@
    ],
    "antwort": "Tera (T)",
    "erklaerung": "Tera = 10¹² = eine Billion.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -200,7 +161,7 @@
    ],
    "antwort": "Mikro (µ)",
    "erklaerung": "Mikro = 10⁻⁶ = ein Millionstel.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -214,7 +175,7 @@
    ],
    "antwort": "Zenti (c)",
    "erklaerung": "Zenti = 10⁻² = ein Hundertstel, z. B. 1 cm = 0,01 m.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "eingabe",
@@ -225,7 +186,7 @@
    ],
    "erklaerung": "60 000 = 6 · 10 000 = 6 · 10⁴.",
    "zahl": true,
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "eingabe",
@@ -236,7 +197,7 @@
    ],
    "erklaerung": "10³ = 1000, also 3 · 1000 = 3000.",
    "zahl": true,
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "eingabe",
@@ -247,7 +208,7 @@
    ],
    "erklaerung": "Beim Malnehmen werden die Hochzahlen addiert: 2 + 3 = 5.",
    "zahl": true,
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "auswahl",
@@ -261,7 +222,7 @@
    ],
    "antwort": "2.5 EXP −3 (bzw. ×10ˣ −3)",
    "erklaerung": "Zuerst die Zahl, dann die EXP- bzw. ×10ˣ-Taste, dann die Hochzahl (mit Minus-Vorzeichen-Taste).",
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "auswahl",
@@ -275,7 +236,7 @@
    ],
    "antwort": "5",
    "erklaerung": "Galilei arbeitete in 5 Schritten: Beobachten, Hypothese, Experiment planen, Experiment durchführen/messen, Auswerten/Schlussfolgern.",
-   "stoff": 6
+   "stoff": 5
   },
   {
    "typ": "auswahl",
@@ -289,7 +250,7 @@
    ],
    "antwort": "Eine Vermutung, die man mit einem Experiment überprüft",
    "erklaerung": "Hypothese = begründete Vermutung. Erst das Experiment zeigt, ob sie stimmt.",
-   "stoff": 6
+   "stoff": 5
   },
   {
    "typ": "auswahl",
@@ -303,7 +264,7 @@
    ],
    "antwort": "Eine Beobachtung bzw. Frage",
    "erklaerung": "Alles beginnt mit einer Beobachtung, aus der eine Frage entsteht.",
-   "stoff": 6
+   "stoff": 5
   },
   {
    "typ": "eingabe",
@@ -315,57 +276,7 @@
    ],
    "erklaerung": "Alle addieren: 0,6 + 0,8 + 0,7 = 2,1. Durch die Anzahl 3 teilen: 2,1 : 3 = 0,7 s.",
    "zahl": true,
-   "stoff": 8
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Löse nach x auf: x + 7 = 19. x =",
-   "antwort": [
-    "12"
-   ],
-   "erklaerung": "Auf beiden Seiten 7 abziehen: x = 19 − 7 = 12.",
-   "zahl": true,
-   "stoff": 0
-  },
-  {
-   "typ": "eingabe",
-   "art": "Rechnen",
-   "frage": "Löse nach x auf: x / 4 = 6. x =",
-   "antwort": [
-    "24"
-   ],
-   "erklaerung": "Beide Seiten mal 4: x = 6 · 4 = 24.",
-   "zahl": true,
-   "stoff": 0
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Die Formel lautet ρ = m / V (Dichte). Wie lautet sie nach m umgeformt?",
-   "optionen": [
-    "m = ρ · V",
-    "m = ρ / V",
-    "m = V / ρ",
-    "m = ρ + V"
-   ],
-   "antwort": "m = ρ · V",
-   "erklaerung": "Beide Seiten mal V – genau wie bei v = s / t.",
-   "stoff": 0
-  },
-  {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Die Formel lautet F = m · a. Wie lautet sie nach a umgeformt?",
-   "optionen": [
-    "a = F / m",
-    "a = F · m",
-    "a = m / F",
-    "a = F − m"
-   ],
-   "antwort": "a = F / m",
-   "erklaerung": "Beide Seiten durch m teilen.",
-   "stoff": 0
+   "stoff": 7
   },
   {
    "typ": "eingabe",
@@ -376,7 +287,7 @@
    ],
    "erklaerung": "Zahlen malnehmen (4·2 = 8), Hochzahlen addieren (3+2 = 5).",
    "zahl": true,
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "eingabe",
@@ -387,7 +298,7 @@
    ],
    "erklaerung": "Beim Dividieren werden die Hochzahlen subtrahiert: 8 − 3 = 5.",
    "zahl": true,
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "eingabe",
@@ -399,7 +310,7 @@
    ],
    "erklaerung": "Das Komma wandert 3 Stellen nach rechts → 10⁻³.",
    "zahl": true,
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "auswahl",
@@ -413,7 +324,7 @@
    ],
    "antwort": "EXP bzw. ×10ˣ",
    "erklaerung": "Mit EXP (×10ˣ) gibst du die Hochzahl direkt ein – nicht 10 extra eintippen.",
-   "stoff": 1
+   "stoff": 0
   },
   {
    "typ": "eingabe",
@@ -424,7 +335,7 @@
    ],
    "erklaerung": "s = 20 m/s · 30 s = 600 m.",
    "zahl": true,
-   "stoff": 2
+   "stoff": 1
   },
   {
    "typ": "eingabe",
@@ -435,7 +346,7 @@
    ],
    "erklaerung": "v = s / t = 400 m : 50 s = 8 m/s.",
    "zahl": true,
-   "stoff": 2
+   "stoff": 1
   },
   {
    "typ": "eingabe",
@@ -446,7 +357,7 @@
    ],
    "erklaerung": "6 : 0,002 = 3000 kg/m³.",
    "zahl": true,
-   "stoff": 2
+   "stoff": 1
   },
   {
    "typ": "eingabe",
@@ -457,7 +368,7 @@
    ],
    "erklaerung": "1,2 km = 1200 m, 1 min = 60 s → 1200 : 60 = 20 m/s.",
    "zahl": true,
-   "stoff": 2
+   "stoff": 1
   },
   {
    "typ": "eingabe",
@@ -469,7 +380,7 @@
    ],
    "erklaerung": "1 d = 24 h = 24 · 3600 s = 86 400 s.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -481,7 +392,7 @@
    ],
    "erklaerung": "1 mm = 0,001 m → 750 mm = 0,75 m.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -492,7 +403,7 @@
    ],
    "erklaerung": "1 t = 1000 kg → 0,8 t = 800 kg.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "eingabe",
@@ -504,7 +415,7 @@
    ],
    "erklaerung": "2,5 · 3600 s = 9000 s.",
    "zahl": true,
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "auswahl",
@@ -518,7 +429,7 @@
    ],
    "antwort": "Sekunde (s)",
    "erklaerung": "Im SI-System ist die Sekunde die Grundeinheit der Zeit.",
-   "stoff": 3
+   "stoff": 2
   },
   {
    "typ": "auswahl",
@@ -532,7 +443,7 @@
    ],
    "antwort": "Nano (n)",
    "erklaerung": "Milli 10⁻³, Mikro 10⁻⁶, Nano 10⁻⁹, Piko 10⁻¹².",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -546,7 +457,7 @@
    ],
    "antwort": "Piko (p)",
    "erklaerung": "Piko ist die kleinste Vorsilbe im Teststoff: 10⁻¹².",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -560,7 +471,7 @@
    ],
    "antwort": "Giga (G)",
    "erklaerung": "Kilo 10³, Mega 10⁶, Giga 10⁹, Tera 10¹².",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -574,7 +485,7 @@
    ],
    "antwort": "Milli (m)",
    "erklaerung": "1 mm = 10⁻³ m.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -588,7 +499,7 @@
    ],
    "antwort": "Hekto (h)",
    "erklaerung": "Hekto = 100, wie bei Hektoliter.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -602,7 +513,7 @@
    ],
    "antwort": "Dezi (d)",
    "erklaerung": "1 dm = 0,1 m = 10⁻¹ m.",
-   "stoff": 4
+   "stoff": 3
   },
   {
    "typ": "auswahl",
@@ -616,7 +527,7 @@
    ],
    "antwort": "10² m",
    "erklaerung": "100 = 10² – also Größenordnung 10² m.",
-   "stoff": 5
+   "stoff": 4
   },
   {
    "typ": "auswahl",
@@ -630,7 +541,7 @@
    ],
    "antwort": "10⁻⁴ m",
    "erklaerung": "0,1 mm = 0,0001 m = 10⁻⁴ m.",
-   "stoff": 5
+   "stoff": 4
   },
   {
    "typ": "auswahl",
@@ -644,7 +555,7 @@
    ],
    "antwort": "10⁷ m",
    "erklaerung": "12 700 km ≈ 1,27 · 10⁷ m.",
-   "stoff": 5
+   "stoff": 4
   },
   {
    "typ": "auswahl",
@@ -657,7 +568,7 @@
    ],
    "antwort": "3 · 10⁻³ m",
    "erklaerung": "−3 ist größer als −6: 3 mm sind mehr als 3 µm.",
-   "stoff": 5
+   "stoff": 4
   },
   {
    "typ": "auswahl",
@@ -671,7 +582,7 @@
    ],
    "antwort": "Beobachtung → Hypothese → Experiment planen → Experiment durchführen → Auswerten/Schluss",
    "erklaerung": "Zuerst beobachten und fragen, dann vermuten, dann prüfen und auswerten.",
-   "stoff": 6
+   "stoff": 5
   },
   {
    "typ": "auswahl",
@@ -685,7 +596,7 @@
    ],
    "antwort": "Die Hypothese wird verworfen oder verbessert und neu geprüft",
    "erklaerung": "Messwerte darf man nie „anpassen“ – die Hypothese muss sich nach dem Experiment richten.",
-   "stoff": 6
+   "stoff": 5
   },
   {
    "typ": "auswahl",
@@ -699,7 +610,7 @@
    ],
    "antwort": "Hypothese",
    "erklaerung": "Eine Vermutung, die man prüfen will, ist eine Hypothese.",
-   "stoff": 7
+   "stoff": 6
   },
   {
    "typ": "auswahl",
@@ -713,7 +624,7 @@
    ],
    "antwort": "Um Messfehler auszugleichen und einen Mittelwert zu bilden",
    "erklaerung": "Einzelmessungen schwanken – der Mittelwert ist genauer.",
-   "stoff": 7
+   "stoff": 6
   },
   {
    "typ": "auswahl",
@@ -727,7 +638,7 @@
    ],
    "antwort": "nur eine Größe, alles andere bleibt gleich",
    "erklaerung": "Nur so weiß man, welche Größe das Ergebnis beeinflusst.",
-   "stoff": 7
+   "stoff": 6
   },
   {
    "typ": "eingabe",
@@ -738,7 +649,7 @@
    ],
    "erklaerung": "(12 + 14 + 13 + 13) : 4 = 52 : 4 = 13 cm.",
    "zahl": true,
-   "stoff": 8
+   "stoff": 7
   },
   {
    "typ": "eingabe",
@@ -750,7 +661,7 @@
    ],
    "erklaerung": "(1,9 + 2,1 + 2,3) : 3 = 6,3 : 3 = 2,1 s.",
    "zahl": true,
-   "stoff": 8
+   "stoff": 7
   },
   {
    "typ": "auswahl",
@@ -764,7 +675,7 @@
    ],
    "antwort": "Nummer der Messung, Messwert und Einheit",
    "erklaerung": "Ordentliche Tabelle: jede Messung eine Zeile, Einheit im Tabellenkopf.",
-   "stoff": 8
+   "stoff": 7
   }
  ],
  "wissen": [
@@ -897,31 +808,6 @@
   "fragen": [
    {
     "typ": "eingabe",
-    "art": "Umformen",
-    "frage": "Löse nach x auf: 5·x = 35. x =",
-    "antwort": [
-     "7"
-    ],
-    "erklaerung": "35 : 5 = 7.",
-    "zahl": true,
-    "stoff": 0
-   },
-   {
-    "typ": "auswahl",
-    "art": "Auswählen",
-    "frage": "v = s / t nach t umgeformt:",
-    "optionen": [
-     "t = s / v",
-     "t = v · s",
-     "t = v / s",
-     "t = s · v"
-    ],
-    "antwort": "t = s / v",
-    "erklaerung": "Mit t malnehmen, dann durch v teilen.",
-    "stoff": 0
-   },
-   {
-    "typ": "eingabe",
     "art": "Einsetzen",
     "frage": "Ein Ball rollt s = 50 m in t = 10 s. v = s / t in m/s?",
     "antwort": [
@@ -929,7 +815,7 @@
     ],
     "erklaerung": "50 : 10 = 5 m/s.",
     "zahl": true,
-    "stoff": 2
+    "stoff": 1
    },
    {
     "typ": "eingabe",
@@ -974,7 +860,7 @@
     ],
     "antwort": "Nano (n)",
     "erklaerung": "Nano = 10⁻⁹.",
-    "stoff": 4
+    "stoff": 3
    },
    {
     "typ": "auswahl",
@@ -988,7 +874,7 @@
     ],
     "antwort": "Giga (G)",
     "erklaerung": "Giga = 10⁹.",
-    "stoff": 4
+    "stoff": 3
    },
    {
     "typ": "eingabe",
@@ -999,7 +885,7 @@
     ],
     "erklaerung": "4 + 3 = 7.",
     "zahl": true,
-    "stoff": 1
+    "stoff": 0
    },
    {
     "typ": "auswahl",
@@ -1013,7 +899,7 @@
     ],
     "antwort": "Eine Hypothese aufstellen",
     "erklaerung": "Nach der Beobachtung kommt die Vermutung (Hypothese).",
-    "stoff": 6
+    "stoff": 5
    },
    {
     "typ": "eingabe",
@@ -1025,18 +911,7 @@
     ],
     "erklaerung": "6,6 : 3 = 2,2 s.",
     "zahl": true,
-    "stoff": 8
-   },
-   {
-    "typ": "eingabe",
-    "art": "Rechnen",
-    "frage": "Löse nach x auf: x / 5 = 9. x =",
-    "antwort": [
-     "45"
-    ],
-    "erklaerung": "x = 9 · 5 = 45.",
-    "zahl": true,
-    "stoff": 0
+    "stoff": 7
    },
    {
     "typ": "auswahl",
@@ -1050,7 +925,7 @@
     ],
     "antwort": "10⁰ m",
     "erklaerung": "1,8 m liegt bei 10⁰ = 1 m.",
-    "stoff": 5
+    "stoff": 4
    },
    {
     "typ": "auswahl",
@@ -1064,7 +939,7 @@
     ],
     "antwort": "Beobachtung",
     "erklaerung": "Am Anfang steht das genaue Beobachten.",
-    "stoff": 6
+    "stoff": 5
    },
    {
     "typ": "eingabe",
@@ -1076,7 +951,43 @@
     ],
     "erklaerung": "24 · 60 · 60 = 86 400 s.",
     "zahl": true,
+    "stoff": 2
+   },
+   {
+    "typ": "auswahl",
+    "frage": "Welche Vorsilbe gehört zu 10⁻⁶?",
+    "optionen": [
+     "Mikro (µ)",
+     "Milli (m)",
+     "Nano (n)",
+     "Mega (M)"
+    ],
+    "antwort": "Mikro (µ)",
+    "erklaerung": "Mikro = 10⁻⁶ = ein Millionstel.",
     "stoff": 3
+   },
+   {
+    "typ": "auswahl",
+    "frage": "Welche Größenordnung hat die Dicke eines Blattes Papier (ca. 0,1 mm)?",
+    "optionen": [
+     "10⁻⁴ m",
+     "10⁻² m",
+     "10⁻⁶ m",
+     "10² m"
+    ],
+    "antwort": "10⁻⁴ m",
+    "erklaerung": "0,1 mm = 0,0001 m = 10⁻⁴ m.",
+    "stoff": 4
+   },
+   {
+    "typ": "eingabe",
+    "frage": "Messwerte: 15 cm, 17 cm, 16 cm, 16 cm. Mittelwert in cm?",
+    "antwort": [
+     "16"
+    ],
+    "zahl": true,
+    "erklaerung": "(15 + 17 + 16 + 16) : 4 = 64 : 4 = 16 cm.",
+    "stoff": 7
    }
   ]
  },
@@ -1085,7 +996,6 @@
   "titel": "Physik-Test am 24.11.",
   "quelle": "Teststoff 5B (Foto vom 20.11.)",
   "punkte": [
-   "Äquivalenzumformungen – Gleichungen umformen",
    "Rechnen mit 10er-Potenzen, auch im Taschenrechner",
    "Gegebene Größen in Formeln einsetzen, gesuchte Größe berechnen",
    "Einheiten in Grundeinheiten umwandeln (kg, s, m)",
@@ -1098,15 +1008,11 @@
  },
  "podcast": {
   "titel": "Physik-Test 24.11. – der Podcast",
-  "kurz": "Sechs Folgen zum Teststoff. Am besten mit Zettel und Taschenrechner daneben.",
+  "kurz": "Fünf Folgen zum Teststoff. Am besten mit Zettel und Taschenrechner daneben.",
   "kapitel": [
    {
     "titel": "Der Matchplan für Dienstag",
-    "text": "Servus Elias! Willkommen zum Physik-Podcast.\nAm Dienstag, den 24. November, ist dein Test. Schauen wir uns zuerst den Matchplan an.\nAuf dem Teststoff-Blatt stehen neun Punkte. Klingt viel. Eigentlich sind es aber nur vier Themen.\nErstens: Formeln umformen. Das ist wie in Mathe. Nur stehen die Buchstaben für echte Dinge.\nZweitens: Einheiten und Zehnerpotenzen. Also umrechnen in Kilogramm, Sekunden und Meter. Rechnen mit Zehnerpotenzen. Und die Vorsilben von Piko bis Tera.\nDrittens: Größenordnungen. Da schätzt du ab, wie groß etwas ist.\nUnd viertens: Galilei. Seine fünf Schritte. Dazu ein Experiment mit Tabelle und Mittelwert.\nDas Gute: Die Themen hängen zusammen. Bei einer Rechenaufgabe brauchst du fast alles auf einmal.\nUmrechnen. Umformen. Einsetzen. Ausrechnen. Wenn diese Kette sitzt, sind das sichere Punkte.\nMein Tipp: Hör eine Folge. Dann mach gleich ein paar Fragen in der App dazu. Nur zuhören reicht in Physik nicht. Es muss auch in die Finger.\nAlso, Anpfiff!"
-   },
-   {
-    "titel": "Formeln umformen",
-    "text": "Folge zwei. Formeln umformen.\nWenn du dir nur einen Satz merkst, dann diesen: Was du links machst, machst du auch rechts.\nEine Gleichung ist wie eine Waage. Nimmst du nur auf einer Seite was weg, kippt sie.\nFangen wir leicht an. Drei mal x ist zwölf.\nDu willst x allein haben. Das x wird mal drei genommen. Also machst du das Gegenteil. Beide Seiten durch drei. Und schon ist x gleich vier.\nNoch eins. x plus sieben ist neunzehn. Das Gegenteil von plus ist minus. Also auf beiden Seiten minus sieben. x ist zwölf.\nDas Muster ist immer gleich. Was passiert mit der gesuchten Größe? Dann mach auf beiden Seiten das Gegenteil.\nJetzt mit echter Physik. v ist gleich s durch t. Also Geschwindigkeit ist Strecke durch Zeit.\nDu willst die Strecke. Das s wird gerade durch t geteilt. Also nimmst du beide Seiten mal t.\nLinks steht dann v mal t. Rechts kürzt sich das t weg. Bleibt s. Also: s ist gleich v mal t.\nUnd wenn du die Zeit suchst? Zuerst mal t. Dann durch v. Ergebnis: t ist gleich s durch v.\nDas Beste daran: Jede Formel mit diesem Aufbau geht genauso. Dichte ist Masse durch Volumen. Kraft ist Masse mal Beschleunigung. Du musst nicht jede Formel extra lernen. Nur das Prinzip.\nEin Trick für den Test. Wenn du unsicher bist, probier's mit einfachen Zahlen. v ist zehn, t ist zwei. Dann muss s zwanzig sein. Passt deine Formel dazu? Dann stimmt sie.\nUnd der häufigste Fehler? Nur auf einer Seite rechnen. Passiert, wenn man zu schnell ist. Also lieber eine Zeile mehr hinschreiben."
+    "text": "Servus Elias! Willkommen zum Physik-Podcast.\nAm Dienstag, den 24. November, ist dein Test. Schauen wir uns zuerst den Matchplan an.\nAuf dem Teststoff-Blatt stehen neun Punkte. Klingt viel. Eigentlich sind es aber nur drei große Themen.\nErstens: Einheiten und Zehnerpotenzen. Also umrechnen in Kilogramm, Sekunden und Meter. Rechnen mit Zehnerpotenzen. Und die Vorsilben von Piko bis Tera.\nZweitens: Größenordnungen. Da schätzt du ab, wie groß etwas ist.\nUnd drittens: Galilei. Seine fünf Schritte. Dazu ein Experiment mit Tabelle und Mittelwert.\nDas Gute: Die Themen hängen zusammen. Bei einer Rechenaufgabe brauchst du fast alles auf einmal.\nUmrechnen. Einsetzen. Ausrechnen. Wenn diese Kette sitzt, sind das sichere Punkte.\nMein Tipp: Hör eine Folge. Dann mach gleich ein paar Fragen in der App dazu. Nur zuhören reicht in Physik nicht. Es muss auch in die Finger.\nAlso, Anpfiff!"
    },
    {
     "titel": "Zuerst in Grundeinheiten umrechnen",
