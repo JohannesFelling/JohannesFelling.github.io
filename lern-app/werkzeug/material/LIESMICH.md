@@ -39,5 +39,6 @@ Jedes Paket bekommt ein Feld `podcast` – frei erzählte Erklärung zum Anhöre
 "podcast": {"titel": "…", "kurz": "ein Satz", "kapitel": [{"titel": "…", "text": "…"}]}
 ```
 - 4–6 Kapitel, je ca. 250–400 Wörter, in Du-Form, locker wie ein Podcast: Kind mit Namen ansprechen, Alltagsbeispiele, Fragen an die Zuhörer, Merksätze, Test-Tipps und typische Fallen. Inhalt aus den Fotos (alle Teststoff-Punkte abdecken), aber in eigenen Worten.
+- Klingt nur mit KURZEN Sätzen natürlich (meist 5–12 Wörter, ein Gedanke pro Satz), Umgangston, rhetorische Fragen („Denk mal mit.“, „Achtung, Falle!“). Neuer Absatz = neue Zeile (\n) → im Player kurze Pause.
 - Sprechbar schreiben: keine Abkürzungen mit Punkt (z. B., S. 16, ca.), keine Pfeile/Symbole, Hochzahlen und Formeln in Worten („zehn hoch minus drei“, „Meter pro Sekunde“). Zahlen wie „27. November“ sind ok.
 - Letztes Kapitel endet mit kurzer Zusammenfassung + Hinweis auf Probetest.

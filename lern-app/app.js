@@ -756,13 +756,25 @@ function wissenZeigen(i) {
 }
 
 // ---------- Podcast: frei erzählte Erklärung, Satz für Satz gesprochen (Web Speech) ----------
-const POD = { an: false, f: 0, k: 0, s: 0, tempo: 1, saetze: [], u: null, karte: null };
+const POD = { an: false, f: 0, k: 0, s: 0, tempo: 1, saetze: [], u: null, karte: null, tick: 0 };
 function podSaetze(text) {
+  const teile = text.split(/\n+/).map(a => a.trim()).filter(Boolean);
+  if (teile.length > 1) return teile.flatMap(a => { const z = podSaetze(a); if (z.length) z[z.length - 1] += "\u2063"; return z; });
   const roh = (text.replace(/\s+/g, " ").match(/[^.!?…]+[.!?…]+["“”»«)]*|[^.!?…]+$/g) || []).map(t => t.trim()).filter(Boolean), aus = [];
   for (const t of roh) { if (aus.length && /(^|\s)\d{1,2}\.$/.test(aus[aus.length - 1])) aus[aus.length - 1] += " " + t; else aus.push(t); }  // „27. November“ nicht trennen
   return aus;
 }
-function podStopp() { POD.an = false; POD.u = null; try { speechSynthesis.cancel(); } catch (e) {} }
+// Stimmen: natürlichste deutsche Stimme zuerst (Online/Natural/Premium), de-AT bevorzugt; Auswahl wird gemerkt
+function deStimmen() {
+  const wert = v => (/natural|online|neural|premium|enhanced|erweitert|wavenet|siri/i.test(v.name) ? 20 : 0) + (/google/i.test(v.name) ? 8 : 0) + (/de[-_]AT/i.test(v.lang) ? 4 : 0) + (v.localService === false ? 2 : 0) - (/espeak|compact|kompakt/i.test(v.name) ? 30 : 0);
+  try { return speechSynthesis.getVoices().filter(v => /^de/i.test(v.lang)).sort((a, b) => wert(b) - wert(a)); } catch (e) { return []; }
+}
+function podStimme() {
+  const alle = deStimmen(); let gew = null;
+  try { gew = localStorage.getItem("pod-stimme"); } catch (e) {}
+  return alle.find(v => v.voiceURI === gew) || alle[0] || null;
+}
+function podStopp() { POD.tick = (POD.tick || 0) + 1; POD.an = false; POD.u = null; try { speechSynthesis.cancel(); } catch (e) {} }
 function podcastSeite(fi, ki = 0) {
   podStopp();
   const folgen = daten.podcast, folge = folgen[fi];
@@ -774,6 +786,14 @@ function podcastSeite(fi, ki = 0) {
   const playK = el("button", { class: "pod-play", "aria-label": "Abspielen" }, "▶");
   const tempoK = el("button", { class: "pod-tempo" }, "1×");
   const balken = el("div", { class: "pod-balken" }, el("i"));
+  const stimmWahl = el("select", { class: "pod-stimme", "aria-label": "Stimme" });
+  const stimmenFuellen = () => {
+    const alle = deStimmen(), akt = podStimme();
+    stimmWahl.replaceChildren(...(alle.length ? alle.map(v => { const o = el("option", { value: v.voiceURI }, v.name.replace(/^Microsoft |^Google /, "").replace(/ - .*$/, "") + (v.lang ? ` (${v.lang.replace("_", "-")})` : "")); if (akt && v.voiceURI === akt.voiceURI) o.selected = true; return o; }) : [el("option", {}, "Standardstimme")]));
+  };
+  stimmWahl.onchange = () => { try { localStorage.setItem("pod-stimme", stimmWahl.value); } catch (e) {} if (POD.an) sprich(); };
+  stimmenFuellen();
+  try { speechSynthesis.addEventListener("voiceschanged", stimmenFuellen); } catch (e) {}
   const karte = el("div", { class: "karte podcast pop" },
     el("div", { class: "label" }, `🎧 ${fach.name} · Podcast`),
     el("h2", {}, folge.titel),
@@ -783,13 +803,13 @@ function podcastSeite(fi, ki = 0) {
       playK,
       el("button", { class: "pod-sprung", "aria-label": "Weiter", onclick: () => podSpringen(1) }, "⏭"),
       tempoK),
-    balken, kapTitel, textBox);
+    balken, el("label", { class: "pod-stimm-zeile" }, "🎙 Stimme ", stimmWahl), kapTitel, textBox);
   POD.karte = karte;
   function kapitelZeigen() {
     const kap = folge.kapitel[POD.k];
     POD.saetze = podSaetze(kap.text);
     kapTitel.textContent = `Folge ${POD.k + 1}: ${kap.titel}`;
-    textBox.replaceChildren(...POD.saetze.map((t, n) => el("span", { class: "pod-satz", onclick: () => { POD.s = n; if (POD.an) sprich(); else markieren(); } }, t + " ")));
+    textBox.replaceChildren(...POD.saetze.map((t, n) => el("span", { class: "pod-satz" + (t.endsWith("\u2063") ? " absatz-ende" : ""), onclick: () => { POD.s = n; if (POD.an) sprich(); else markieren(); } }, t.replace(/\u2063/g, "") + " ")));
     kapListe.replaceChildren(...folge.kapitel.map((k, n) => el("button", { class: "test-knopf pod-eintrag" + (n === POD.k ? " aktiv" : ""), onclick: () => { POD.k = n; POD.s = 0; kapitelZeigen(); if (!POD.an) start(); else sprich(); } },
       el("span", {}, `${n + 1}. ${k.titel}`, el("small", {}, `ca. ${Math.max(1, Math.round(k.text.split(/\s+/).length / 140))} Min.`)), el("span", { class: "pod-mini" }, n === POD.k && POD.an ? "🔊" : "▶"))));
     markieren();
@@ -804,20 +824,24 @@ function podcastSeite(fi, ki = 0) {
     [...kapListe.children].forEach((b, n) => { b.classList.toggle("aktiv", n === POD.k); b.lastChild.textContent = n === POD.k && POD.an ? "🔊" : "▶"; });
   }
   function sprich() {
+    if (!POD.an) return;
     if (!document.body.contains(karte)) return podStopp();
+    const tick = ++POD.tick;
     try { speechSynthesis.cancel(); } catch (e) {}
     if (POD.s >= POD.saetze.length) {
       if (POD.k + 1 < folge.kapitel.length) { POD.k++; POD.s = 0; kapitelZeigen(); }
       else { POD.an = false; POD.s = 0; markieren(); gehoert(); return; }
     }
     markieren();
-    const u = new SpeechSynthesisUtterance(POD.saetze[POD.s]);
+    const satz = POD.saetze[POD.s], absatz = satz.endsWith("\u2063");
+    const u = new SpeechSynthesisUtterance(satz.replace(/\u2063/g, "").replace(/\s[–—]\s/g, ", "));
     u.lang = "de-AT"; u.rate = POD.tempo;
-    const st = speechSynthesis.getVoices(), v = st.find(v => /de[-_]AT/i.test(v.lang)) || st.find(v => /^de/i.test(v.lang));
-    if (v) u.voice = v;
+    const v = podStimme();
+    if (v) { u.voice = v; u.lang = v.lang; }
+    u.pitch = 1; u.volume = 1;
     const meins = u; POD.u = u;
-    u.onend = () => { if (POD.u !== meins || !POD.an) return; POD.s++; setTimeout(sprich, 120); };
-    u.onerror = e => { if (POD.u !== meins || !POD.an || e.error === "interrupted" || e.error === "canceled") return; POD.s++; setTimeout(sprich, 120); };
+    u.onend = () => { if (POD.u !== meins || !POD.an) return; POD.s++; setTimeout(() => tick === POD.tick && sprich(), absatz ? 650 : 60); };
+    u.onerror = e => { if (POD.u !== meins || !POD.an || e.error === "interrupted" || e.error === "canceled") return; POD.s++; setTimeout(() => tick === POD.tick && sprich(), 120); };
     speechSynthesis.speak(u);
   }
   function start() { if (!window.speechSynthesis) { playK.textContent = "✕"; return; } POD.an = true; sprich(); }
