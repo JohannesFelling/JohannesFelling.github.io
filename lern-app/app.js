@@ -495,7 +495,7 @@ function fachSeite() {
       el("p", { class: "klein" }, punkte(person.id, s.sterne), ` · ${s.runden} Runden · ${daten.fragen.length} Fragen` + (s.offen.length ? ` · ${s.offen.length} zum Wiederholen` : ""))),
     (() => { const t = naechsterTerminFuer(person.id, fach.id); return t ? el("div", { class: "termin-banner" }, ic("test"), `${t.titel} am ${datumLang(t.datum)}${t.zeit ? `, ${t.zeit} Uhr` : ""} – ${wannText(tageBis(t.datum))}`) : null; })(),
     daten.platzhalter ? el("div", { class: "platzhalter" }, "Übungsfragen zum Ausprobieren – die echten Fragen aus dem Schulstoff kommen bald.") : null,
-    modusWahl(),
+    null,
     ...startKnoepfe(),
     ...(teststoffKarte(s) || []),
     el("div", { class: "label hochladen-label" }, "Hochladen"),
