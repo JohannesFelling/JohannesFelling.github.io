@@ -322,7 +322,7 @@ function startseite() {
         el("span", { class: "start-info" }, CFG ? "Anmelden mit Passwort" : punkte(p.id, sterneGesamt(p.id)))))),
     el("button", { class: "eltern-karte", onclick: gastWahl },
       el("span", { class: "eltern-bild" }, (() => { const b = el("img", { src: "papa.jpg", alt: "" }); b.onerror = () => b.replaceWith(el("span", { class: "eltern-init" }, "P")); return b; })()),
-      el("span", { class: "eltern-text" }, el("small", {}, "Papa & Mama"), el("b", {}, "Eltern-Bereich"), el("span", {}, "Statistik · Eingang · Testkonto")),
+      el("span", { class: "eltern-text" }, el("small", {}, "Papa"), el("b", {}, "Eltern-Bereich"), el("span", {}, "Statistik · Eingang · Testkonto")),
       el("span", { class: "eltern-pfeil" }, "›"))
   );
 }
@@ -1287,7 +1287,8 @@ function gespraech(g) {
 
 // ---------- Eltern-Statistik ----------
 const PAPA = `papa@${MAIL_DOMAIN}`, MAMA = `mama@${MAIL_DOMAIN}`;
-const ELTERN = [{ wer: "Papa", mail: PAPA }, { wer: "Mama", mail: MAMA }];
+// Mama-Konto vorerst ausgeblendet (Johannes 22.11.) – wieder aktivieren: { wer: "Mama", mail: MAMA } ergänzen
+const ELTERN = [{ wer: "Papa", mail: PAPA }];
 // Mama-Konto: nur ansehen (kein Löschen, kein Korrektur-Eingang)
 const nurLesen = () => !!(fb && fb.auth.currentUser && fb.auth.currentUser.email === MAMA);
 function dauer(sek) {
@@ -1305,7 +1306,7 @@ async function elternStart() {
   if (fb.auth.currentUser && ELTERN.some(e => e.mail === fb.auth.currentUser.email)) { elternLaden(); return; }
   const pw = el("input", { class: "eingabe", type: "password", autocomplete: "current-password", placeholder: "Passwort" });
   let wer = ELTERN[0];
-  const werWahl = el("div", { class: "reiter eltern-wer" }, ...ELTERN.map(e => el("button", { class: e === wer ? "aktiv" : "", onclick: ev => { wer = e; [...werWahl.children].forEach(b => b.classList.toggle("aktiv", b === ev.currentTarget)); pw.focus(); } }, e.wer)));
+  const werWahl = el("div", { class: "reiter eltern-wer", hidden: ELTERN.length < 2 ? "hidden" : null }, ...ELTERN.map(e => el("button", { class: e === wer ? "aktiv" : "", onclick: ev => { wer = e; [...werWahl.children].forEach(b => b.classList.toggle("aktiv", b === ev.currentTarget)); pw.focus(); } }, e.wer)));
   const fehler = el("div");
   const los = el("button", { class: "knopf", onclick: async () => {
     if (!pw.value) return; los.disabled = true; fehler.replaceChildren();

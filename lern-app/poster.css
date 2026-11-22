@@ -305,3 +305,4 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 .start-raster.n3::before,.start-raster.n3::after{display:none}
 .start-raster.n3>.start-karte:nth-child(3){grid-column:1/-1}
 .eltern-wer{margin:6px 0 12px}
+.eltern-wer[hidden]{display:none}
