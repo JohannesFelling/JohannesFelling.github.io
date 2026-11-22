@@ -77,6 +77,7 @@ function braucheMich(d) {
 // ---------- Kachel auf der Startseite des Kindes ----------
 function duellKachel() {
   if (!duellAn()) return null;
+  duellWache();
   const zahl = el("span", { class: "duell-zahl", hidden: "hidden" });
   const k = el("button", { class: "fach klein-fach duell-kachel", onclick: duellSeite },
     el("span", { class: "duell-ic" }, "⚔️"), el("div", {}, el("div", { class: "fach-name" }, "Duelle"), el("small", {}, "Fordere jemanden heraus – auf Zeit oder live")), zahl);
@@ -93,7 +94,7 @@ function duellKachel() {
 function duellSeite() {
   setzeKopf("⚔️ Duelle", faecherSeite);
   const inhalt = el("div", {}, el("p", { class: "hinweis" }, "Lade Duelle …"));
-  zeige(el("button", { class: "knopf", onclick: duellNeu }, "⚔️ Neues Duell"), inhalt);
+  zeige(el("button", { class: "knopf", onclick: duellNeu }, "⚔️ Neues Duell"), inhalt, meldungKnopf());
   aboFuer(inhalt, DS.meine, l => {
     if (!l) { rc(inhalt, el("div", { class: "karte" }, el("p", {}, "Duelle sind gerade nicht erreichbar. Bitte später nochmal probieren."))); return; }
     l.sort((a, b) => (b.erstellt || 0) - (a.erstellt || 0));
@@ -284,4 +285,78 @@ function duellErgebnis(id, falsch) {
       box.firstChild.append(el("div", { class: "konfetti" }, ...Array.from({ length: 36 }, (_, i) => el("i", { style: `--x:${Math.round(Math.random() * 100)}%;--d:${(Math.random() * .8).toFixed(2)}s;--r:${Math.round(Math.random() * 720 - 360)}deg;--f:${["#ffd676", "#ffffff", "#8fd0ff", "#2ee59d"][i % 4]}` }))));
     }
   });
+}
+
+// ---------- Benachrichtigung bei neuer Einladung ----------
+// Solange die App offen ist (auch im Hintergrund): Banner oben + Ton + Vibration + Systembenachrichtigung.
+let WACHE = null;
+const gesehenKey = () => `duell-gemeldet-${person.id}`;
+const gemeldet = () => { try { return new Set(JSON.parse(localStorage.getItem(gesehenKey()) || "[]")); } catch (e) { return new Set(); } };
+const merken = s => { try { localStorage.setItem(gesehenKey(), JSON.stringify([...s].slice(-200))); } catch (e) {} };
+function duellWache() {
+  if (!duellAn() || !person) return;
+  if (WACHE && WACHE.pid === person.id) return;
+  if (WACHE) WACHE.ab();
+  const pid = person.id;
+  WACHE = { pid, ab: () => {} };
+  WACHE.ab = DS.meine(l => {
+    if (!person || person.id !== pid || gast) { WACHE.ab(); WACHE = null; return; }
+    if (!l) return;
+    const s = gemeldet(), neu = [];
+    for (const d of l) {
+      const k = `${d.id}:${d.art === "live" ? "live" : "zeit"}`;
+      if (braucheMich(d) && d.vonPid !== pid && !s.has(k) && Date.now() - (d.erstellt || 0) < 3 * 24 * 3600e3) { neu.push(d); s.add(k); }
+      const kf = `${d.id}:fertig`;
+      if (d.status === "fertig" && !s.has(kf)) { s.add(kf); if (Date.now() - (d.erstellt || 0) < 3 * 24 * 3600e3 && d.vonPid === pid && d.art !== "live" && !document.querySelector(".duell-erg")) neu.push(Object.assign({ _fertig: true }, d)); }
+    }
+    merken(s);
+    neu.forEach(einladungMelden);
+  });
+}
+function einladungMelden(d) {
+  const g = gegnerVon(d), live = d.art === "live";
+  const titel = d._fertig ? `⚔️ Duell gegen ${pName(g)} ist entschieden!` : live ? `⚡ ${pName(g)} wartet im Live-Duell!` : `⚔️ ${pName(g)} fordert dich heraus!`;
+  const text = `${d.fachName} · ${d.gebiet}`;
+  const oeffnen = () => { weg(); if (d._fertig) duellErgebnis(d.id); else if (live) duellLive(d.id); else duellSpielen(d); };
+  document.querySelectorAll(".duell-banner").forEach(b => b.remove());
+  const b = el("div", { class: "duell-banner pop" },
+    el("div", { class: "db-text" }, el("b", {}, titel), el("small", {}, text)),
+    el("div", { class: "db-knoepfe" },
+      el("button", { class: "mini-knopf", onclick: oeffnen }, d._fertig ? "Ansehen" : live ? "Beitreten" : "Annehmen"),
+      el("button", { class: "mini-knopf zweit", onclick: () => weg() }, "Später")));
+  function weg() { b.remove(); }
+  document.body.append(b);
+  if (!live) setTimeout(weg, 60000);
+  try { navigator.vibrate && navigator.vibrate([200, 100, 200]); } catch (e) {}
+  ton();
+  systemMeldung(titel, text);
+}
+function ton() {
+  try {
+    const A = window.AudioContext || window.webkitAudioContext; if (!A) return;
+    const c = ton.c = ton.c || new A();
+    [0, .18, .36].forEach((t, i) => {
+      const o = c.createOscillator(), v = c.createGain();
+      o.frequency.value = [660, 880, 1320][i]; o.type = "triangle";
+      v.gain.setValueAtTime(.0001, c.currentTime + t); v.gain.exponentialRampToValueAtTime(.25, c.currentTime + t + .02); v.gain.exponentialRampToValueAtTime(.0001, c.currentTime + t + .16);
+      o.connect(v).connect(c.destination); o.start(c.currentTime + t); o.stop(c.currentTime + t + .18);
+    });
+  } catch (e) {}
+}
+// Ton darf erst nach einer Berührung starten → beim ersten Tippen vorbereiten
+document.addEventListener("pointerdown", () => { try { const A = window.AudioContext || window.webkitAudioContext; if (A && !ton.c) ton.c = new A(); if (ton.c && ton.c.state === "suspended") ton.c.resume(); } catch (e) {} }, { once: false, passive: true });
+
+const meldungMoeglich = () => "Notification" in window && "serviceWorker" in navigator;
+async function swReg() { try { return await navigator.serviceWorker.register("sw.js"); } catch (e) { return null; } }
+async function systemMeldung(titel, text) {
+  if (!meldungMoeglich() || Notification.permission !== "granted") return;
+  const reg = await swReg();
+  try { if (reg) await reg.showNotification(titel, { body: text, icon: "icon-192.png", badge: "icon-192.png", tag: "duell", renotify: true, vibrate: [200, 100, 200] }); else new Notification(titel, { body: text, icon: "icon-192.png" }); } catch (e) {}
+}
+function meldungKnopf() {
+  if (!meldungMoeglich()) return el("p", { class: "klein" }, "🔔 Systembenachrichtigungen gehen in diesem Browser nicht. Am iPhone: App über „Zum Home-Bildschirm“ installieren und von dort öffnen.");
+  if (Notification.permission === "granted") return el("p", { class: "klein" }, "🔔 Benachrichtigungen sind an – solange die App offen ist (auch im Hintergrund).");
+  if (Notification.permission === "denied") return el("p", { class: "klein" }, "🔕 Benachrichtigungen sind blockiert. Erlauben in den Browser-Einstellungen für diese Seite.");
+  const k = el("button", { class: "knopf zweit", onclick: async () => { await swReg(); try { await Notification.requestPermission(); } catch (e) {} k.replaceWith(meldungKnopf()); } }, "🔔 Benachrichtigung bei Einladungen einschalten");
+  return k;
 }

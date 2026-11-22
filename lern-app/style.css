@@ -336,3 +336,9 @@ textarea.offen-feld:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--
 .erg-spalte small{color:var(--leise)}
 .fehler-zeile{padding:8px 0;border-top:1px solid var(--linie)}
 .fehler-zeile small{color:var(--leise)}
+.duell-banner{position:fixed;left:12px;right:12px;top:calc(env(safe-area-inset-top) + 10px);z-index:50;max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:10px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,var(--akzent2),var(--panel2));border:2px solid var(--akzent);box-shadow:0 16px 40px #000c,0 0 30px var(--glow);color:#fff;animation:ruft 1.2s ease-in-out 3}
+.db-text{display:flex;flex-direction:column}
+.db-text b{font-size:1.05rem}
+.db-text small{opacity:.85}
+.db-knoepfe{display:flex;gap:8px}
+.db-knoepfe .mini-knopf{flex:1;padding:11px}
