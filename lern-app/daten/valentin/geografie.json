@@ -487,13 +487,13 @@
    "art": "Auswählen",
    "frage": "Was bedeutet Upcycling?",
    "optionen": [
-    "Aus alten Dingen etwas Neues und Wertvolleres machen, z. B. Rucksack aus LKW-Plane",
+    "Aus Dingen, die man nicht mehr braucht, etwas Neues schaffen, z. B. einen Rucksack aus einer LKW-Plane",
     "Müll verbrennen",
     "Rohstoffe neu abbauen",
     "Etwas wegwerfen"
    ],
-   "antwort": "Aus alten Dingen etwas Neues und Wertvolleres machen, z. B. Rucksack aus LKW-Plane",
-   "erklaerung": "Upcycling: scheinbar nutzlose Gegenstände bekommen ein neues Leben.",
+   "antwort": "Aus Dingen, die man nicht mehr braucht, etwas Neues schaffen, z. B. einen Rucksack aus einer LKW-Plane",
+   "erklaerung": "Buch S. 26: Beim Upcycling wird scheinbar nutzlosen Gegenständen neues Leben eingehaucht (alte Jeans → Tasche, Holzpaletten → Gartenbank).",
    "stoff": 0,
    "id": "valentin-geo-energie-10",
    "schwerpunkt": "2026-11-27"
@@ -1059,13 +1059,13 @@
    "art": "Auswählen",
    "frage": "Was ist ein Umspannwerk?",
    "optionen": [
-    "Ein Knotenpunkt im Stromnetz, wo die Spannung geändert wird",
+    "Ein Knotenpunkt des Stromnetzes",
     "Ein Kraftwerk",
     "Ein Stausee",
     "Ein Strommast"
    ],
-   "antwort": "Ein Knotenpunkt im Stromnetz, wo die Spannung geändert wird",
-   "erklaerung": "Transformatoren erhöhen oder senken die Stärke des Stroms.",
+   "antwort": "Ein Knotenpunkt des Stromnetzes",
+   "erklaerung": "Abb. 16.2: Umspannwerke sind Knotenpunkte des Stromnetzes.",
    "stoff": 3,
    "id": "valentin-geo-energie-46",
    "schwerpunkt": "2026-11-27"
@@ -1123,13 +1123,13 @@
    "art": "Auswählen",
    "frage": "Was gehört zur Blackout-Vorsorge zu Hause?",
    "optionen": [
-    "Vorräte an Wasser und haltbaren Lebensmitteln, Taschenlampe, Batterien, Radio",
+    "Vorräte und Geräte wie bei einem „Campingurlaub“ für eine Woche in der eigenen Wohnung",
     "Möglichst viel Tiefkühlkost",
     "Nur ein Handy",
     "Nichts – Strom fällt nie aus"
    ],
-   "antwort": "Vorräte an Wasser und haltbaren Lebensmitteln, Taschenlampe, Batterien, Radio",
-   "erklaerung": "„Campingurlaub in der eigenen Wohnung“ für etwa eine Woche planen.",
+   "antwort": "Vorräte und Geräte wie bei einem „Campingurlaub“ für eine Woche in der eigenen Wohnung",
+   "erklaerung": "Buch S. 17: Stell dir einen „Campingurlaub“ für eine Woche in der eigenen Wohnung vor – was braucht deine Familie an Vorräten und Geräten?",
    "stoff": 3,
    "id": "valentin-geo-energie-50",
    "schwerpunkt": "2026-11-27"
@@ -2510,15 +2510,15 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Wohin gehört ein Pizzakarton mit viel Käse und Fett?",
+   "frage": "Wohin gehört eine Kartonverpackung?",
    "optionen": [
-    "Restmüll",
-    "Altpapier",
-    "Gelbe Tonne",
-    "Biotonne"
+    "Kunststoffverpackungen (gelb)",
+    "Restmüll (schwarz)",
+    "Altpapier und Kartonagen (rot)",
+    "Bioabfall (braun)"
    ],
-   "antwort": "Restmüll",
-   "erklaerung": "Stark verschmutztes Papier kann nicht recycelt werden.",
+   "antwort": "Altpapier und Kartonagen (rot)",
+   "erklaerung": "Buch S. 24/25: Kartonagen kommen in die rote Tonne.",
    "stoff": 5,
    "id": "valentin-geo-energie-106",
    "schwerpunkt": "2026-11-27"
@@ -2542,15 +2542,15 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Wohin gehört eine alte Glühbirne oder Energiesparlampe?",
+   "frage": "Wohin gehört eine kaputte Waschmaschine?",
    "optionen": [
-    "Sammelstelle",
-    "Glascontainer",
-    "Gelbe Tonne",
-    "Biotonne"
+    "Sperrmüll vor die Haustür",
+    "Restmüll",
+    "Metallverpackungen",
+    "Zu einer speziellen Sammelstelle (Elektroschrott)"
    ],
-   "antwort": "Sammelstelle",
-   "erklaerung": "Lampen sind Problemstoffe/Elektroschrott.",
+   "antwort": "Zu einer speziellen Sammelstelle (Elektroschrott)",
+   "erklaerung": "Buch S. 24: Elektroschrott (defekte Handys oder Waschmaschinen) darf nicht in den Müll, er kommt zu speziellen Sammelstellen.",
    "stoff": 5,
    "id": "valentin-geo-energie-108",
    "schwerpunkt": "2026-11-27"
@@ -2558,7 +2558,7 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welcher Energieträger liefert in Österreich den meisten Strom?",
+   "frage": "Laut Grafik S. 15: Welcher Energieträger liefert in Österreich den meisten Strom?",
    "optionen": [
     "Wasserkraft",
     "Atomkraft",
@@ -2567,7 +2567,7 @@
    ],
    "antwort": "Wasserkraft",
    "erklaerung": "Lauf- und Speicherkraftwerke zusammen 58 %.",
-   "stoff": 6,
+   "stoff": 1,
    "id": "valentin-geo-energie-109",
    "schwerpunkt": "2026-11-27"
   },
@@ -2606,15 +2606,15 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Was wandelt ein Transformator?",
+   "frage": "Was machen Transformatoren?",
    "optionen": [
-    "Die Spannung des Stroms",
-    "Wasser in Strom",
-    "Gas in Öl",
-    "Wärme in Licht"
+    "Sie verwandeln Wasser in Strom",
+    "Sie speichern Strom für die Nacht",
+    "Sie erzeugen Strom aus Wind",
+    "Sie erhöhen oder verringern die Stärke des Stroms"
    ],
-   "antwort": "Die Spannung des Stroms",
-   "erklaerung": "Transformatoren stehen in Umspannwerken.",
+   "antwort": "Sie erhöhen oder verringern die Stärke des Stroms",
+   "erklaerung": "Buch S. 12: Transformatoren sind Anlagen, in denen die Stärke des Stroms erhöht oder reduziert wird.",
    "stoff": 3,
    "id": "valentin-geo-energie-112",
    "schwerpunkt": "2026-11-27"
@@ -2670,48 +2670,41 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welches Land hat die größten Erdölreserven (laut Buch)?",
+   "frage": "Laut Tabelle (S. 9): Welches Land fördert am meisten Erdöl?",
    "optionen": [
-    "Venezuela",
     "USA",
     "Russland",
-    "Österreich"
+    "Saudi-Arabien",
+    "Venezuela"
    ],
-   "antwort": "Venezuela",
-   "erklaerung": "Förderung/Verbrauch: USA – Reserven: Venezuela.",
+   "antwort": "USA",
+   "erklaerung": "Tabelle 1 S. 9: USA 711 Mio. t, Russland 536, Saudi-Arabien 515.",
    "stoff": 1,
    "id": "valentin-geo-energie-116",
    "schwerpunkt": "2026-11-27"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Was ist ein Nachteil von Pipelines?",
-   "optionen": [
-    "Sie können lecken und machen abhängig vom Lieferland",
-    "Sie sind laut",
-    "Sie brauchen Sonne",
-    "Sie erzeugen Radioaktivität"
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Laut Abb. 11.1: Das AKW Temelín liegt 30 km nördlich von welcher Stadt?",
+   "antwort": [
+    "Budweis",
+    "České Budějovice"
    ],
-   "antwort": "Sie können lecken und machen abhängig vom Lieferland",
-   "erklaerung": "Gas aus Russland kam über Pipelines.",
-   "stoff": 2,
+   "erklaerung": "Buch S. 11: AKW Temelín (30 km N von Budweis).",
+   "stoff": 1,
    "id": "valentin-geo-energie-117",
    "schwerpunkt": "2026-11-27"
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Was ist bei einem Blackout bei der Wasserversorgung das Problem?",
-   "optionen": [
-    "Pumpen funktionieren ohne Strom nicht",
-    "Das Wasser gefriert",
-    "Das Wasser wird salzig",
-    "Nichts"
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Laut Abb. 11.1: Das AKW Krško liegt 40 km nordöstlich von welcher Stadt?",
+   "antwort": [
+    "Zagreb"
    ],
-   "antwort": "Pumpen funktionieren ohne Strom nicht",
-   "erklaerung": "Darum Trinkwasser vorrätig haben.",
-   "stoff": 3,
+   "erklaerung": "Buch S. 11: AKW Krško (40 km NÖ von Zagreb).",
+   "stoff": 1,
    "id": "valentin-geo-energie-118",
    "schwerpunkt": "2026-11-27"
   },
@@ -2734,15 +2727,15 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Warum ist Pfand auf Flaschen sinnvoll?",
+   "frage": "Warum führt Österreich ab 2025 Pfand auf Plastikflaschen und Dosen ein?",
    "optionen": [
-    "Man bekommt Geld zurück und bringt Flaschen eher zurück",
-    "Flaschen werden billiger",
-    "Es gibt weniger Glas",
-    "Pfand ist ein Rohstoff"
+    "Damit weniger Glas gebraucht wird",
+    "Weil Plastik ein erneuerbarer Rohstoff ist",
+    "Damit Flaschen billiger werden",
+    "Als Anreiz, damit mehr recycelt wird"
    ],
-   "antwort": "Man bekommt Geld zurück und bringt Flaschen eher zurück",
-   "erklaerung": "Seit 2025 in Österreich.",
+   "antwort": "Als Anreiz, damit mehr recycelt wird",
+   "erklaerung": "Buch S. 26: Als Anreiz für mehr Recycling führt Österreich ab 2025 Pfand auf Plastikflaschen und Dosen ein.",
    "stoff": 6,
    "id": "valentin-geo-energie-120",
    "schwerpunkt": "2026-11-27"
@@ -2794,6 +2787,196 @@
    "erklaerung": "Geo = Erde, Therme = Wärme.",
    "stoff": 0,
    "id": "valentin-geo-energie-124",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 15.2: Wie viel Prozent des Stroms in Europa kommen aus Kernenergie?",
+   "optionen": [
+    "0 %",
+    "79 %",
+    "5 %",
+    "28 %"
+   ],
+   "antwort": "28 %",
+   "erklaerung": "Strommix Europa 2019: fossil 35 %, Kernenergie 28 %, Wind/Sonne/Biomasse 24 %, Wasser 13 %.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-125",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Laut Abb. 15.1: Um wie viele TWh soll Photovoltaik in Österreich bis 2030 ausgebaut werden?",
+   "antwort": [
+    "11",
+    "11 TWh",
+    "+11"
+   ],
+   "erklaerung": "Ausbau bis 2030: PV +11, Wind +10, Wasser +5, biogene Brennstoffe +1 TWh.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-126",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 16.1: Welcher Ort liegt am 380-kV-Ring?",
+   "optionen": [
+    "Dürnrohr",
+    "Budweis",
+    "Schwechat",
+    "Zagreb"
+   ],
+   "antwort": "Dürnrohr",
+   "erklaerung": "Stationen u. a.: St. Peter, Ernsthofen, Dürnrohr, Wien Süd-Ost, Bisamberg, Kainachtal, Lienz, Tauern, Westtirol.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-127",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 16.1: Ist der 380-kV-Ring in Österreich schon geschlossen?",
+   "optionen": [
+    "Nein – es fehlt noch ein Stück (Salzburgleitung)",
+    "Ja, er wurde 1986 fertig",
+    "Es gibt gar keinen Ring",
+    "Ja, seit vielen Jahren"
+   ],
+   "antwort": "Nein – es fehlt noch ein Stück (Salzburgleitung)",
+   "erklaerung": "Buch S. 16: Der Ring ist noch nicht geschlossen; an der Salzburgleitung wird gebaut.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-128",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Abb. 17.1 „Der Weg des Stroms“: Was gehört NICHT zu den Nummern der Zeichnung?",
+   "optionen": [
+    "Generator",
+    "Raffinerie",
+    "Umspannwerk",
+    "Turbine"
+   ],
+   "antwort": "Raffinerie",
+   "erklaerung": "Nummern: 1 Hochspannungsleitung, 2 Betrieb, 3 Stausee, 4 Haushalt, 5 Turbine, 6 Verkehrsmittel, 7 Generator, 8 Druckleitung, 9 Umspannwerk.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-129",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Abb. 17.1: Durch welches Teil fließt das Wasser vom Stausee hinunter zur Turbine?",
+   "optionen": [
+    "Hochspannungsleitung",
+    "Umspannwerk",
+    "Druckleitung",
+    "Pipeline"
+   ],
+   "antwort": "Druckleitung",
+   "erklaerung": "Weg des Stroms: Stausee → Druckleitung → Turbine → Generator → Hochspannungsleitung → Umspannwerk → Haushalt, Betrieb, Verkehrsmittel.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-130",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Karte S. 21: In welchem Land wird Lithium abgebaut?",
+   "optionen": [
+    "Großbritannien",
+    "Bahamas",
+    "Liechtenstein",
+    "Australien"
+   ],
+   "antwort": "Australien",
+   "erklaerung": "Lithium laut Karte S. 21: z. B. Australien, Bolivien, Chile, Argentinien.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-131",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 26.2: In welchem Land bräuchte man bei diesem Lebensstil die meisten Erden?",
+   "optionen": [
+    "Indien (0,7)",
+    "Katar (8,7)",
+    "Russland (3,8)",
+    "Österreich (3,7)"
+   ],
+   "antwort": "Katar (8,7)",
+   "erklaerung": "Abb. 26.2: Katar 8,7 – USA 4,9 – Russland 3,8 – Österreich 3,7 – Indien 0,7.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-132",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 24.2: Welche Farbe hat die Tonne für Restmüll?",
+   "optionen": [
+    "Blau",
+    "Gelb",
+    "Rot",
+    "Schwarz"
+   ],
+   "antwort": "Schwarz",
+   "erklaerung": "Merkblatt S. 24: Bioabfall braun, Altpapier rot, Restmüll schwarz, Kunststoff gelb, Metall blau, Glas Weiß-/Buntglas.",
+   "stoff": 1,
+   "id": "valentin-geo-energie-133",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Abb. 24.1 Kreislaufwirtschaft: Was kommt nach dem Konsum?",
+   "optionen": [
+    "Abfall bzw. Recycling – die Rohstoffe gehen zurück in die Produktion",
+    "Ein neuer Bergbau",
+    "Gleich wieder Konsum",
+    "Die Rohstoffe werden für immer weggeworfen"
+   ],
+   "antwort": "Abfall bzw. Recycling – die Rohstoffe gehen zurück in die Produktion",
+   "erklaerung": "Abb. 24.1: Rohstoffe → Produktion → Konsum → Recycling (nur ein kleiner Rest wird Abfall).",
+   "stoff": 1,
+   "id": "valentin-geo-energie-134",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 23.1: Woher kommt das Lithium im Akku des Smartphones?",
+   "optionen": [
+    "Indonesien",
+    "Guinea",
+    "Australien",
+    "Chile"
+   ],
+   "antwort": "Australien",
+   "erklaerung": "Abb. 23.1: Lithium im Akku aus Australien, Kupfer aus Chile, Zinn aus Indonesien, Bauxit aus Guinea.",
+   "stoff": 4,
+   "id": "valentin-geo-energie-135",
+   "schwerpunkt": "2026-11-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laut Abb. 23.1: Wofür braucht man Zinn im Smartphone?",
+   "optionen": [
+    "Für das Display",
+    "Zum Löten der Bauteile",
+    "Für den Akku",
+    "Für das Gehäuse"
+   ],
+   "antwort": "Zum Löten der Bauteile",
+   "erklaerung": "Abb. 23.1: Zinn zum Löten der Bauteile; aus Indonesien.",
+   "stoff": 4,
+   "id": "valentin-geo-energie-136",
    "schwerpunkt": "2026-11-27"
   },
   {

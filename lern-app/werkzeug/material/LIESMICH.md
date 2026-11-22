@@ -13,6 +13,13 @@ Format:
  "test": {"titel": "Test Unit 5 – Food", "fragen": [ … 8–12 Fragen … ]}}
 ```
 
+# WICHTIGSTE REGEL: streng nur das hochgeladene Material (Johannes, 22.11.2026)
+- Jede Frage, jede Erklärung, jede Wissen-Karte und jede Podcast-Folge stützt sich **nur** auf das, was auf den hochgeladenen Fotos steht. Kein allgemeines Wissen dazu erfinden (keine eigenen Beispiele, Zahlen, Fakten oder Begriffe, die nicht im Material vorkommen).
+- Liegt ein Teststoff-Blatt dabei: **genau lesen, was es pro Seite als relevant nennt.** Steht dort z. B. „Abbildungen beschreiben: S. 14“ oder „S. 14: nur die Abbildungen links“, dann zu dieser Seite **nur diese Abbildungen** abfragen, nicht den übrigen Seitentext. Seiten außerhalb der genannten Bereiche nicht abfragen.
+- Jede Frage einem Teststoff-Punkt (`stoff`) zuordnen; in der `erklaerung` die Fundstelle nennen (z. B. „Buch S. 16“, „Abb. 24.2“).
+- Nennt das Teststoff-Blatt ein Arbeitsblatt oder eine Unterlage, die nicht hochgeladen wurde: nichts dazu erfinden, sondern im Bericht an Johannes ausdrücklich sagen, dass sie fehlt, und um Upload bitten.
+- Reichen die Seiten nicht für 100 Fragen: lieber dieselben Inhalte in anderer Form fragen (Auswahl, Eintippen, richtig/falsch, offen, Abbildung lesen) als Stoff von außen dazuholen.
+
 ## Stoffabgrenzung / Teststoff (Schwerpunkt)
 Ist im Material eine konkrete Stoffabgrenzung für einen Test oder eine Schularbeit erkennbar (z. B. „Teststoff“, „Stoff für die Schularbeit“, Liste von Kompetenzen, Kapitel- oder Seitenangaben, Datum), dann:
 - Feld `"teststoff": {"termin": "JJJJ-MM-TT", "titel": "Physik-Test am 24.11.", "quelle": "…", "punkte": ["Punkt 1", "Punkt 2", …]}` ins Paket schreiben – die Punkte möglichst wörtlich aus der Abgrenzung.

@@ -542,15 +542,19 @@ function teststoffKarte(s) {
         const sitzt = qs.length && gesehen === qs.length && !offen;
         return el("div", { class: `ts-punkt ${sitzt ? "sitzt" : ""}` },
           el("span", { class: "ts-haken" }, sitzt ? "✓" : String(i + 1)),
-          el("span", { class: "ts-text" }, p, qs.length ? el("small", {}, ` · ${gesehen}/${qs.length} geübt${offen ? ` · ${offen} wiederholen` : ""}`) : null));
+          el("span", { class: "ts-text" }, p, qs.length ? el("small", {}, ` · ${gesehen}/${qs.length} geübt${offen ? ` · ${offen} wiederholen` : ""}`) : null),
+          qs.length ? el("button", { class: "ts-play", title: "Nur dieses Gebiet üben", "aria-label": `Nur „${p}“ üben`, onclick: () => rundeStarten(t.id, i) }, ic("play")) : null);
       })),
       t.quelle ? el("div", { class: "klein" }, `Quelle: ${t.quelle}`) : null);
   });
 }
-function rundeStarten(nurTest) {
+function rundeStarten(nurTest, nurStoff) {
   if (typeof nurTest !== "string") nurTest = null;
+  if (!nurTest || typeof nurStoff !== "number") nurStoff = null;
   const s = laden(person.id, fach.id);
-  const alle = nurTest ? daten.fragen.filter(q => q.id.startsWith(nurTest + "-")) : daten.fragen;
+  let alle = nurTest ? daten.fragen.filter(q => q.id.startsWith(nurTest + "-")) : daten.fragen;
+  // Play-Knopf bei einem Teststoff-Punkt: nur Fragen genau zu diesem Gebiet
+  if (nurStoff !== null) alle = alle.filter(q => q.stoff === nurStoff);
   const nachId = Object.fromEntries(alle.map(q => [q.id, q]));
   const wdh = mischen(s.offen.filter(id => nachId[id])).slice(0, 4).map(id => nachId[id]);
   // Vor einem Test: gezielt den abgegrenzten Teststoff üben
@@ -561,7 +565,7 @@ function rundeStarten(nurTest) {
   const pool = fokus.length >= 5 ? fokus : alle;
   let rest = mischen(pool.filter(q => !wdh.includes(q))).sort((a, b) => (s.gesehen[a.id] || 0) - (s.gesehen[b.id] || 0));
   rest = themaGleichmaessig(rest, s, pool);
-  runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null, mission: nurTest };
+  runde = { fragen: mischen([...wdh, ...rest.slice(0, RUNDE - wdh.length)]), i: 0, richtig: 0, falsch: [], test: null, mission: nurTest, stoff: nurStoff };
   frageZeigen();
 }
 // Fragen mit „thema“ (z. B. ein Land): Themen, die am seltensten dran waren, zuerst – und pro Runde jedes Thema nur einmal
@@ -765,7 +769,7 @@ function ergebnis() {
     ...neu.map(g => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(g) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), g.was, el("small", {}, "Antippen zum Anzeigen")))),
     runde.falsch.length ? el("div", { class: "karte" }, el("div", { class: "label" }, test ? "Noch falsch" : "Kommt später nochmal"),
       el("ul", {}, ...runde.falsch.map(({ q }) => el("li", {}, q.frage, " → ", el("b", {}, [].concat(q.antwort)[0]))))) : null,
-    el("button", { class: "knopf", onclick: () => rundeStarten(runde.mission) }, "Nächste Runde"),
+    el("button", { class: "knopf", onclick: () => rundeStarten(runde.mission, runde.stoff) }, "Nächste Runde"),
     el("button", { class: "knopf zweit", onclick: fachSeite }, "Zurück zum Fach"),
     el("button", { class: "knopf zweit", onclick: faecherSeite }, "Anderes Fach")
   );

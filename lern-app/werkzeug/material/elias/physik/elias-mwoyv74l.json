@@ -1128,25 +1128,25 @@
   {
    "typ": "eingabe",
    "art": "Vorsilbe",
-   "frage": "Wie viele Gramm sind 3 mg? (als Kommazahl)",
+   "frage": "Wie viele Meter sind 7 nm? Schreib als 7 · 10^? – welche Hochzahl? (mit Minus)",
    "antwort": [
-    "0,003",
-    "0.003"
+    "-9",
+    "−9"
    ],
-   "zahl": true,
-   "erklaerung": "m = Milli = 0,001.",
-   "stoff": 3
+   "erklaerung": "Nano = 10⁻⁹ → 7 nm = 7 · 10⁻⁹ m.",
+   "stoff": 3,
+   "zahl": true
   },
   {
    "typ": "eingabe",
    "art": "Vorsilbe",
-   "frage": "Wie viele Watt sind 2 MW?",
+   "frage": "Wie viele Meter sind 3 Mm (Megameter)? Schreib als 3 · 10^? – welche Hochzahl?",
    "antwort": [
-    "2000000"
+    "6"
    ],
-   "zahl": true,
-   "erklaerung": "M = Mega = 1 000 000.",
-   "stoff": 3
+   "erklaerung": "Mega = 10⁶ → 3 Mm = 3 · 10⁶ m.",
+   "stoff": 3,
+   "zahl": true
   },
   {
    "typ": "eingabe",
@@ -1175,13 +1175,13 @@
   {
    "typ": "eingabe",
    "art": "Vorsilbe",
-   "frage": "Wie viele Byte sind 3 GB? Schreib als 3 · 10^? – welche Hochzahl?",
+   "frage": "Wie viele Meter sind 4 Gm (Gigameter)? Schreib als 4 · 10^? – welche Hochzahl?",
    "antwort": [
     "9"
    ],
-   "zahl": true,
-   "erklaerung": "G = Giga = 10⁹.",
-   "stoff": 3
+   "erklaerung": "Giga = 10⁹ → 4 Gm = 4 · 10⁹ m.",
+   "stoff": 3,
+   "zahl": true
   },
   {
    "typ": "auswahl",
@@ -1200,7 +1200,7 @@
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Was bedeutet das Zeichen „m“ (klein) vor einer Einheit, z. B. in mA?",
+   "frage": "Was bedeutet das Zeichen „m“ (klein) vor einer Einheit, z. B. in mm?",
    "optionen": [
     "Milli (10⁻³)",
     "Mega (10⁶)",
@@ -1208,7 +1208,7 @@
     "Mikro (10⁻⁶)"
    ],
    "antwort": "Milli (10⁻³)",
-   "erklaerung": "mA = Milliampere.",
+   "erklaerung": "mm = Millimeter = 10⁻³ m.",
    "stoff": 3
   },
   {
@@ -1391,14 +1391,14 @@
   },
   {
    "typ": "eingabe",
-   "art": "Einsetzen",
-   "frage": "F = m · a. m = 50 kg, a = 2 m/s². Wie groß ist F in Newton?",
+   "art": "Eintippen",
+   "frage": "Ein Läufer läuft mit v = 6 m/s für t = 2 min. Wie weit läuft er? s = v · t (in m, erst umrechnen!)",
    "antwort": [
-    "100"
+    "720"
    ],
-   "zahl": true,
-   "erklaerung": "F = 50 · 2 = 100 N.",
-   "stoff": 1
+   "erklaerung": "2 min = 120 s → s = 6 · 120 = 720 m.",
+   "stoff": 1,
+   "zahl": true
   },
   {
    "typ": "auswahl",
@@ -1471,32 +1471,28 @@
    "stoff": 5
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Bei einem Pendel-Experiment ändert man die Schnurlänge. Was muss gleich bleiben?",
-   "optionen": [
-    "Masse und Auslenkung",
-    "Die Schnurlänge",
-    "Nichts",
-    "Nur die Uhr"
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Messwerte: 4,1 s; 3,9 s; 4,0 s; 4,0 s. Mittelwert in s?",
+   "antwort": [
+    "4",
+    "4,0",
+    "4.0"
    ],
-   "antwort": "Masse und Auslenkung",
-   "erklaerung": "Faires Experiment: nur eine Größe ändern.",
-   "stoff": 6
+   "erklaerung": "Summe 16,0 s : 4 Messungen = 4,0 s.",
+   "stoff": 7,
+   "zahl": true
   },
   {
-   "typ": "auswahl",
-   "art": "Auswählen",
-   "frage": "Was ist ein Messfehler?",
-   "optionen": [
-    "Eine Abweichung vom wahren Wert, z. B. durch Reaktionszeit",
-    "Ein falsches Experiment",
-    "Eine Hypothese",
-    "Eine Einheit"
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Messwerte: 52 cm; 48 cm; 50 cm. Mittelwert in cm?",
+   "antwort": [
+    "50"
    ],
-   "antwort": "Eine Abweichung vom wahren Wert, z. B. durch Reaktionszeit",
-   "erklaerung": "Deshalb misst man mehrmals.",
-   "stoff": 6
+   "erklaerung": "Summe 150 cm : 3 Messungen = 50 cm.",
+   "stoff": 7,
+   "zahl": true
   },
   {
    "typ": "auswahl",
