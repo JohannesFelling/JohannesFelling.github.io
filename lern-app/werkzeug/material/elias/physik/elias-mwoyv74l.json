@@ -1569,25 +1569,83 @@
  ],
  "wissen": [
   {
-   "titel": "Einheiten in Grundeinheiten umwandeln",
-   "kurz": "Masse → kg, Zeit → s, Länge → m",
-   "problem": "Bei Physik-Aufgaben musst du fast immer zuerst alle Größen in die Grundeinheit umrechnen, bevor du in eine Formel einsetzt.",
+   "titel": "1 · Rechnen mit 10er-Potenzen",
+   "kurz": "Auch mit dem Taschenrechner",
+   "problem": "Teststoff: „Rechnen mit 10er Potenzen; Eingabe von 10er Potenzen in den Taschenrechner; Rechnen mit 10er Potenzen mit dem Taschenrechner.“",
    "text": [
-    "Masse (m): Grundeinheit Kilogramm. 1 t = 1000 kg, 1 g = 0,001 kg.",
-    "Zeit (t): Grundeinheit Sekunde. 1 min = 60 s, 1 h = 3600 s, 1 d = 86 400 s, 1 a (Jahr) ≈ 365 d.",
-    "Länge/Strecke (l, s, x): Grundeinheit Meter. 1 km = 1000 m, 1 cm = 0,01 m, 1 mm = 0,001 m."
+    "Positive Hochzahl = so viele Nullen: 10³ = 1000, 10⁶ = 1 000 000. Negative Hochzahl = Bruchteil: 10⁻³ = 0,001.",
+    "Zahl in die Form a · 10ⁿ bringen: Komma verschieben und die Stellen zählen. 60 000 = 6 · 10⁴, 0,003 = 3 · 10⁻³.",
+    "Malnehmen: Hochzahlen addieren (10² · 10³ = 10⁵). Dividieren: Hochzahlen subtrahieren (10⁸ : 10³ = 10⁵). Stehen Zahlen davor: Zahlen rechnen, Hochzahlen extra (4 · 10³ · 2 · 10² = 8 · 10⁵).",
+    "Taschenrechner: Zahl tippen → Taste EXP (oder ×10ˣ) → Hochzahl. Negative Hochzahl mit der (−)-Taste. Beispiel 2,5 · 10⁻³: 2.5 EXP (−) 3."
    ],
    "schritte": [
-    "Schau, welche Größe gefragt ist (Masse, Zeit, Länge).",
-    "Merk dir den Umrechnungsfaktor (z. B. 1000, 60, 3600).",
-    "Größere Einheit → kleinere: malnehmen. Kleinere → größere: dividieren."
+    "Zahl als a · 10ⁿ schreiben.",
+    "Rechenregel anwenden (mal → plus, durch → minus).",
+    "Im Taschenrechner mit EXP prüfen."
+   ],
+   "fehler": [
+    "„× 10 ^“ statt EXP tippen – dann rechnet der Taschenrechner oft falsch.",
+    "Bei negativen Hochzahlen das Minus vergessen."
+   ],
+   "merke": "Mal → Hochzahlen plus. Durch → Hochzahlen minus. Taschenrechner: EXP.",
+   "video": "Zehnerpotenzen Taschenrechner EXP Taste",
+   "stichworte": [
+    "10\\^",
+    "10[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]",
+    "EXP",
+    "Taschenrechner",
+    "Hochzahl"
+   ]
+  },
+  {
+   "titel": "2 · Größen in Formeln einsetzen",
+   "kurz": "Gegebene Größen einsetzen, gesuchte berechnen",
+   "problem": "Teststoff: „Gegebene Größen in Formeln einsetzen können und gesuchte Größen berechnen können.“",
+   "text": [
+    "Zuerst aufschreiben, was gegeben und was gesucht ist.",
+    "Alle Größen in die Grundeinheit umrechnen (kg, s, m) – siehe Punkt 3.",
+    "Werte mit Einheit in die Formel einsetzen und ausrechnen. Am Ende die Einheit dazuschreiben.",
+    "Die Formel steht in der Aufgabe. Beispiele aus den Übungen: v = s / t und s = v · t."
+   ],
+   "schritte": [
+    "Gegeben / gesucht notieren.",
+    "In Grundeinheiten umrechnen.",
+    "Einsetzen.",
+    "Ausrechnen, Einheit dazuschreiben."
+   ],
+   "beispiel": "s = 1,2 km, t = 1 min, gesucht v = s / t\n1,2 km = 1200 m, 1 min = 60 s\nv = 1200 m : 60 s = 20 m/s",
+   "fehler": [
+    "Ohne Umrechnen einsetzen (1,2 : 1 = 1,2 – falsch).",
+    "Die Einheit beim Ergebnis vergessen."
+   ],
+   "merke": "Umrechnen – einsetzen – ausrechnen – Einheit.",
+   "stichworte": [
+    "Formel",
+    "v = s",
+    "s = v",
+    "einsetzen"
+   ]
+  },
+  {
+   "titel": "3 · Einheiten in Grundeinheiten",
+   "kurz": "Masse → kg, Zeit → s, Länge → m",
+   "problem": "Teststoff: „Einheiten in ihre Grundformen umwandeln können: Masse [m] → Kilogramm (t, g in kg); Zeit [t] → Sekunde (a, d, h, min in s); Länge/Strecke [l, s, x] → Meter (cm, mm, km … in m).“",
+   "text": [
+    "Masse m – Grundeinheit Kilogramm (kg): 1 t = 1000 kg, 1 g = 0,001 kg.",
+    "Zeit t – Grundeinheit Sekunde (s): 1 min = 60 s, 1 h = 3600 s, 1 d = 86 400 s, 1 a (Jahr) = 365 d.",
+    "Länge/Strecke l, s, x – Grundeinheit Meter (m): 1 km = 1000 m, 1 cm = 0,01 m, 1 mm = 0,001 m."
+   ],
+   "schritte": [
+    "Welche Größe? (Masse, Zeit, Länge)",
+    "Umrechnungsfaktor suchen (1000, 60, 3600 …).",
+    "Große Einheit → kleine: mal. Kleine → große: durch."
    ],
    "beispiel": "2,5 h = 2,5 · 3600 s = 9000 s\n450 g = 450 : 1000 kg = 0,45 kg\n35 cm = 35 : 100 m = 0,35 m",
    "fehler": [
-    "Gramm für die Grundeinheit halten – richtig ist Kilogramm.",
-    "Bei Stunden mit 60 statt 3600 malnehmen."
+    "Gramm für die Grundeinheit halten – es ist Kilogramm.",
+    "Stunden nur mal 60 nehmen – das gibt Minuten, nicht Sekunden."
    ],
-   "merke": "Erst in kg, s und m umrechnen – dann einsetzen!",
+   "merke": "kg · s · m – erst umrechnen, dann rechnen.",
    "video": "Einheiten umrechnen Grundeinheit Physik",
    "stichworte": [
     "Grundeinheit",
@@ -1601,56 +1659,81 @@
    ]
   },
   {
-   "titel": "Zehnerpotenzen und Vorsilben",
-   "kurz": "Von Pico (10⁻¹²) bis Tera (10¹²)",
-   "problem": "Sehr große und sehr kleine Zahlen schreibt man mit Zehnerpotenzen oder Vorsilben, damit man nicht so viele Nullen braucht.",
+   "titel": "4 · 10er-Potenzen und Vorsilben",
+   "kurz": "Von Piko (10⁻¹²) bis Tera (10¹²)",
+   "problem": "Teststoff: „10er Potenzen von 10⁻¹² bis 10¹² den Präfixen/SI-Vorsilben zuordnen können.“",
    "text": [
-    "Positive Hochzahl = so viele Nullen: 10³ = 1000. Negative Hochzahl = Bruchteil: 10⁻³ = 0,001.",
-    "Vorsilben: Tera T 10¹², Giga G 10⁹, Mega M 10⁶, Kilo k 10³, Hekto h 10², Dezi d 10⁻¹, Zenti c 10⁻², Milli m 10⁻³, Mikro µ 10⁻⁶, Nano n 10⁻⁹, Pico p 10⁻¹².",
-    "Rechenregeln: 10ᵃ · 10ᵇ = 10ᵃ⁺ᵇ und 10ᵃ : 10ᵇ = 10ᵃ⁻ᵇ.",
-    "Taschenrechner: Zahl eintippen, dann EXP (oder ×10ˣ), dann die Hochzahl – negative mit der (−)-Taste."
+    "Tera T = 10¹², Giga G = 10⁹, Mega M = 10⁶, Kilo k = 10³, Hekto h = 10², Dezi d = 10⁻¹, Zenti c = 10⁻², Milli m = 10⁻³, Mikro µ = 10⁻⁶, Nano n = 10⁻⁹, Piko p = 10⁻¹².",
+    "Groß- und Kleinschreibung zählt: M (Mega, 10⁶) ist etwas ganz anderes als m (Milli, 10⁻³).",
+    "Umrechnen mit Vorsilben: 5 km = 5 · 10³ m = 5000 m; 7 nm = 7 · 10⁻⁹ m; 400 ms = 0,4 s."
    ],
    "schritte": [
-    "Hochzahl bestimmen (Nullen zählen bzw. Kommastellen verschieben).",
-    "Passende Vorsilbe aus der Tabelle suchen.",
-    "Im Taschenrechner die EXP-Taste verwenden, nicht „× 10 ^“ tippen."
+    "Vorsilbe erkennen.",
+    "Passende Zehnerpotenz einsetzen.",
+    "Bei Bedarf als Zahl ausschreiben."
    ],
-   "beispiel": "60 000 = 6 · 10⁴\n3 km = 3 · 10³ m\n10² · 10³ = 10⁵",
    "fehler": [
-    "m (Milli, 10⁻³) mit M (Mega, 10⁶) verwechseln – Groß-/Kleinschreibung zählt!",
-    "Bei negativen Hochzahlen das Minus vergessen."
+    "m und M verwechseln.",
+    "Mikro (10⁻⁶) und Milli (10⁻³) verwechseln."
    ],
-   "merke": "Ab Kilo aufwärts in 3er-Schritten: k, M, G, T. Abwärts: m, µ, n, p.",
-   "video": "Zehnerpotenzen Vorsilben Physik Kilo Mega Giga",
+   "merke": "Nach oben in 3er-Schritten: k, M, G, T. Nach unten: m, µ, n, p. Dazwischen h, d, c.",
+   "video": "SI Vorsilben Kilo Mega Giga Milli Mikro Nano",
    "stichworte": [
     "Vorsilbe",
-    "Zehnerpotenz",
-    "10\\^",
-    "10[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]",
-    "EXP",
-    "Taschenrechner"
+    "Kilo",
+    "Mega",
+    "Giga",
+    "Tera",
+    "Milli",
+    "Mikro",
+    "Nano",
+    "Piko",
+    "Zenti",
+    "Dezi",
+    "Hekto"
    ]
   },
   {
-   "titel": "Wissenschaftliche Methode nach Galilei",
-   "kurz": "5 Schritte, Hypothese, Mittelwert",
-   "problem": "Im Test musst du Galileis 5 Schritte kennen und aus Messwerten den Mittelwert berechnen.",
+   "titel": "5 · Größenordnungen",
+   "kurz": "Aufgaben wie auf dem Arbeitsblatt",
+   "problem": "Teststoff: „Aufgaben zu den Größenordnungen (Arbeitsblatt) auf ähnliche Aufgaben transferieren können.“ Hinweis: Das Arbeitsblatt dazu ist noch nicht hochgeladen. Bitte hochladen, dann wird diese Karte genau daran angepasst.",
    "text": [
-    "Galileis wissenschaftliche Methode in 5 Schritten: 1. Beobachten/Frage stellen, 2. Hypothese (Vermutung) aufstellen, 3. Experiment planen, 4. Experiment durchführen und messen, 5. Auswerten und Schlussfolgerung ziehen (Hypothese bestätigt oder verworfen).",
-    "Wird die Hypothese nicht bestätigt, wird sie verworfen oder verbessert und neu geprüft – Messwerte werden nie „angepasst“.",
-    "Mittelwert: alle Messwerte addieren und durch die Anzahl der Messungen teilen. Messwerte trägt man in eine Tabelle ein (Nr., Messwert, Einheit)."
+    "Die Größenordnung ist die passende Zehnerpotenz in der Grundeinheit.",
+    "Vorgehen: in die Grundeinheit umrechnen, dann als a · 10ⁿ schreiben – n ist die Größenordnung.",
+    "Vergleichen: Je größer die Hochzahl, desto größer die Größe. 3 · 10⁻³ m ist 1000-mal größer als 3 · 10⁻⁶ m."
    ],
    "schritte": [
-    "Beobachten und Frage stellen.",
-    "Hypothese aufstellen.",
-    "Experiment planen.",
-    "Durchführen und messen.",
-    "Auswerten und Schluss ziehen."
+    "In Grundeinheit umrechnen.",
+    "Als a · 10ⁿ schreiben.",
+    "Prüfen, ob das Ergebnis Sinn macht."
    ],
-   "beispiel": "Messwerte 0,6 s; 0,8 s; 0,7 s → Mittelwert = 2,1 s : 3 = 0,7 s",
+   "beispiel": "0,1 mm = 0,0001 m = 10⁻⁴ m\n100 m = 10² m",
    "fehler": [
-    "Hypothese und Beobachtung verwechseln.",
-    "Beim Mittelwert durch die falsche Anzahl teilen."
+    "Nicht zuerst in die Grundeinheit umrechnen."
+   ],
+   "merke": "Grundeinheit → Komma zählen → Hochzahl.",
+   "stichworte": [
+    "Größenordnung"
+   ]
+  },
+  {
+   "titel": "6 · Die 5 Schritte nach Galilei",
+   "kurz": "Wissenschaftliche Methode",
+   "problem": "Teststoff: „5 Schritte der wissenschaftlichen Methode von Galileo Galilei nennen und in Aufgaben anwenden können.“ Hinweis: Das Arbeitsblatt dazu ist noch nicht hochgeladen. Bitte hochladen, dann wird diese Karte genau daran angepasst.",
+   "text": [
+    "Die übliche Reihenfolge: 1. Beobachten und Frage stellen – 2. Hypothese (überprüfbare Vermutung) aufstellen – 3. Experiment planen – 4. Experiment durchführen und messen – 5. Auswerten und Schluss ziehen.",
+    "Bestätigt das Experiment die Hypothese nicht, wird sie verworfen oder verbessert und neu geprüft.",
+    "Vergleiche die Schritte unbedingt mit eurem Arbeitsblatt – im Test zählt die Formulierung eurer Lehrkraft."
+   ],
+   "schritte": [
+    "Beobachten / Frage",
+    "Hypothese",
+    "Planen",
+    "Durchführen und messen",
+    "Auswerten und Schluss"
+   ],
+   "fehler": [
+    "Hypothese und Beobachtung verwechseln."
    ],
    "merke": "Beobachten – Vermuten – Planen – Messen – Auswerten.",
    "video": "wissenschaftliche Methode Galilei Hypothese Experiment",
@@ -1658,37 +1741,57 @@
     "Galile",
     "Hypothese",
     "Methode",
-    "Mittelwert",
-    "Messwert"
+    "Schritt"
    ]
   },
   {
-   "titel": "Größenordnungen und Messen",
-   "kurz": "Größenordnungen, Experiment, Mittelwert",
-   "problem": "Im Test sollst du einschätzen, wie groß Dinge sind (in Zehnerpotenzen), und ein Experiment mit Messwerttabelle und Mittelwert auswerten.",
+   "titel": "7 · Aufgaben zur naturwissenschaftlichen Methode",
+   "kurz": "Die Schritte in Beispielen erkennen",
+   "problem": "Teststoff: „Aufgaben zur Naturwissenschaftlichen Methode (Arbeitsblatt) auf ähnliche Aufgaben anwenden können.“ Hinweis: Das Arbeitsblatt dazu ist noch nicht hochgeladen. Bitte hochladen, dann wird diese Karte genau daran angepasst.",
    "text": [
-    "Größenordnung = die passende Zehnerpotenz. 100 m → 10² m, 0,001 m → 10⁻³ m.",
-    "Zum Einschätzen: Zahl in Grundeinheit umrechnen, dann zählen, wie viele Stellen das Komma wandert.",
-    "Faires Experiment: nur eine Größe ändern, alles andere gleich lassen, mehrmals messen.",
-    "Messwerttabelle: Nr. | Messwert | Einheit. Mittelwert = Summe aller Messwerte : Anzahl."
+    "Bei solchen Aufgaben bekommst du eine kleine Geschichte und sollst sagen, welcher Schritt gerade passiert.",
+    "„Ich vermute, dass …“ → Hypothese. „Ich messe fünfmal mit der Stoppuhr …“ → durchführen und messen. „Die Messwerte zeigen, dass …“ → auswerten und Schluss ziehen.",
+    "Damit ein Experiment aussagekräftig ist, ändert man nur eine Größe und lässt alles andere gleich; man misst mehrmals."
    ],
    "schritte": [
-    "In Grundeinheit umrechnen (m, kg, s).",
-    "Als a · 10ⁿ schreiben – n ist die Größenordnung.",
-    "Beim Experiment mindestens 3 Messungen, dann Mittelwert bilden."
+    "Signalwörter suchen (vermute, messe, zeigt …).",
+    "Dem passenden Schritt zuordnen."
    ],
-   "beispiel": "Haar 0,1 mm = 0,0001 m = 10⁻⁴ m\nMesswerte 12, 14, 13, 13 cm → 52 : 4 = 13 cm",
-   "fehler": [
-    "Nicht zuerst in die Grundeinheit umrechnen.",
-    "Beim Mittelwert durch die falsche Anzahl teilen."
-   ],
-   "merke": "Erst Grundeinheit, dann Zehnerpotenz. Mehrmals messen, dann Mittelwert.",
-   "video": "Größenordnungen Zehnerpotenzen Physik einfach erklärt",
+   "merke": "Vermutung = Hypothese. Messen = Experiment. Ergebnis deuten = Auswertung.",
    "stichworte": [
-    "Größenordnung",
-    "Messwerttabelle",
+    "vermute",
+    "Schritt ist das",
     "fair",
-    "mehrmals"
+    "Experiment"
+   ]
+  },
+  {
+   "titel": "8 · Experiment, Messwerttabelle, Mittelwert",
+   "kurz": "Nach Anleitung messen und auswerten",
+   "problem": "Teststoff: „Experiment nach Anleitung durchführen können, Messwerttabelle erstellen können und den Mittelwert aus Messwerten bilden können.“",
+   "text": [
+    "Messwerttabelle: Spalten für die Nummer der Messung und den Messwert, die Einheit steht im Tabellenkopf.",
+    "Man misst mehrmals, weil einzelne Messungen schwanken.",
+    "Mittelwert = Summe aller Messwerte : Anzahl der Messungen."
+   ],
+   "schritte": [
+    "Messwerte in die Tabelle eintragen.",
+    "Alle Werte addieren.",
+    "Durch die Anzahl teilen.",
+    "Einheit dazuschreiben."
+   ],
+   "beispiel": "Nr. | Fallzeit in s\n1 | 0,6\n2 | 0,8\n3 | 0,7\nMittelwert = 2,1 s : 3 = 0,7 s",
+   "fehler": [
+    "Durch die falsche Anzahl teilen.",
+    "Die Einheit im Tabellenkopf vergessen."
+   ],
+   "merke": "Summe : Anzahl = Mittelwert.",
+   "video": "Mittelwert berechnen Messwerte Physik",
+   "stichworte": [
+    "Mittelwert",
+    "Messwert",
+    "Messwerttabelle",
+    "Tabellenkopf"
    ]
   }
  ],
@@ -1896,28 +1999,40 @@
   ]
  },
  "podcast": {
-  "titel": "Physik-Test 24.11. – der Podcast",
-  "kurz": "Fünf Folgen zum Teststoff. Am besten mit Zettel und Taschenrechner daneben.",
+  "titel": "Physik-Test 24.11. – Podcast zum Teststoff",
+  "kurz": "Acht kurze Folgen, genau nach den Punkten vom Teststoff-Blatt.",
   "kapitel": [
    {
-    "titel": "Der Matchplan für Dienstag",
-    "text": "Servus Elias! Willkommen zum Physik-Podcast.\nAm Dienstag, den 24. November, ist dein Test. Schauen wir uns zuerst den Matchplan an.\nAuf dem Teststoff-Blatt stehen neun Punkte. Klingt viel. Eigentlich sind es aber nur drei große Themen.\nErstens: Einheiten und Zehnerpotenzen. Also umrechnen in Kilogramm, Sekunden und Meter. Rechnen mit Zehnerpotenzen. Und die Vorsilben von Piko bis Tera.\nZweitens: Größenordnungen. Da schätzt du ab, wie groß etwas ist.\nUnd drittens: Galilei. Seine fünf Schritte. Dazu ein Experiment mit Tabelle und Mittelwert.\nDas Gute: Die Themen hängen zusammen. Bei einer Rechenaufgabe brauchst du fast alles auf einmal.\nUmrechnen. Einsetzen. Ausrechnen. Wenn diese Kette sitzt, sind das sichere Punkte.\nMein Tipp: Hör eine Folge. Dann mach gleich ein paar Fragen in der App dazu. Nur zuhören reicht in Physik nicht. Es muss auch in die Finger.\nAlso, Anpfiff!"
+    "titel": "Folge 1 · Rechnen mit Zehnerpotenzen",
+    "text": "Servus Elias! Willkommen zum Physik-Podcast für den Test am Dienstag, 24. November.\nIch gehe genau die Punkte von deinem Teststoff-Blatt durch, in derselben Reihenfolge. Die Äquivalenzumformungen lassen wir weg.\nPunkt eins: Rechnen mit Zehnerpotenzen, auch im Taschenrechner.\nZehn hoch drei ist eine Eins mit drei Nullen. Also tausend. Zehn hoch minus drei ist ein Tausendstel, null Komma null null eins.\nEine Zahl schreibst du als Zahl mal zehn hoch etwas. Sechzigtausend ist sechs mal zehn hoch vier. Null Komma null null drei ist drei mal zehn hoch minus drei.\nZwei Regeln. Beim Malnehmen addierst du die Hochzahlen. Zehn hoch zwei mal zehn hoch drei ist zehn hoch fünf.\nBeim Dividieren ziehst du sie ab. Zehn hoch acht durch zehn hoch drei ist auch zehn hoch fünf.\nUnd im Taschenrechner: Zahl eintippen, dann die Taste EXP, dann die Hochzahl. Bei einer negativen Hochzahl das Minus-Vorzeichen davor.\nNicht mal zehn hoch tippen. Das geht oft schief."
    },
    {
-    "titel": "Zuerst in Grundeinheiten umrechnen",
-    "text": "In dieser Folge geht's um etwas, das oft Punkte kostet. Obwohl es eigentlich leicht ist. Einheiten umrechnen.\nFür den Test brauchst du drei Grundeinheiten. Masse in Kilogramm. Zeit in Sekunden. Länge in Metern.\nAchtung bei der Masse! Die klassische Falle. Die Grundeinheit ist das Kilogramm. Nicht das Gramm.\nEine Tonne sind tausend Kilo. Zweieinhalb Tonnen sind also zweitausendfünfhundert Kilo.\nUnd ein Gramm ist ein Tausendstel Kilo. Vierhundertfünfzig Gramm sind also null Komma vier fünf Kilo.\nJetzt die Zeit. Eine Minute hat sechzig Sekunden. Eine Stunde hat dreitausendsechshundert. Und ein Tag hat sechsundachtzigtausendvierhundert Sekunden.\nTypischer Fehler: Stunden nur mal sechzig nehmen. Dann hast du Minuten. Nicht Sekunden.\nBei der Länge: Ein Kilometer sind tausend Meter. Ein Zentimeter ist ein Hundertstel Meter. Ein Millimeter ein Tausendstel.\nEs gibt eine einfache Regel. Von groß nach klein wird die Zahl größer. Also malnehmen. Von klein nach groß wird die Zahl kleiner. Also dividieren.\nDenk an ein Fußballfeld. Etwa hundert Meter lang. Das sind zehntausend Zentimeter. Aber nur null Komma eins Kilometer. Gleiche Länge, andere Zahl.\nWarum ist das so wichtig? Hör dir diese Aufgabe an.\nEin Ball fliegt eins Komma zwei Kilometer in einer Minute. Wie schnell ist er in Meter pro Sekunde?\nOhne Umrechnen kommt eins Komma zwei raus. Falsch!\nRichtig ist: Eins Komma zwei Kilometer sind tausendzweihundert Meter. Eine Minute sind sechzig Sekunden. Tausendzweihundert durch sechzig. Zwanzig Meter pro Sekunde.\nDarum die goldene Regel. Erst umrechnen. Dann einsetzen. Und am Ende immer die Einheit dazuschreiben."
+    "titel": "Folge 2 · In Formeln einsetzen",
+    "text": "Punkt zwei: gegebene Größen in Formeln einsetzen und die gesuchte Größe berechnen.\nSchreib zuerst auf: Was ist gegeben? Was ist gesucht?\nDann alles in die Grundeinheiten umrechnen. Das kommt gleich in Folge drei.\nDann einsetzen, ausrechnen, und die Einheit dazuschreiben.\nEin Beispiel. Ein Ball fliegt eins Komma zwei Kilometer in einer Minute. Gesucht ist die Geschwindigkeit, v gleich s durch t.\nEins Komma zwei Kilometer sind tausendzweihundert Meter. Eine Minute sind sechzig Sekunden.\nTausendzweihundert durch sechzig. Zwanzig Meter pro Sekunde.\nOhne Umrechnen hättest du eins Komma zwei bekommen. Falsch. Darum: erst umrechnen, dann einsetzen."
    },
    {
-    "titel": "Zehnerpotenzen und Vorsilben",
-    "text": "Folge vier. Zehnerpotenzen und Vorsilben.\nIn der Physik gibt es riesige und winzige Zahlen. Damit man nicht ständig zwölf Nullen schreibt, gibt es Zehnerpotenzen.\nZehn hoch drei heißt: eine Eins mit drei Nullen. Also tausend. Zehn hoch sechs ist eine Million.\nBei einer negativen Hochzahl wird's ein Bruchteil. Zehn hoch minus drei ist ein Tausendstel.\nEin Beispiel. Ein Stadion mit sechzigtausend Plätzen. Das sind sechs mal zehn hoch vier.\nZum Rechnen gibt's zwei Regeln. Beim Malnehmen addierst du die Hochzahlen. Zehn hoch zwei mal zehn hoch drei? Zehn hoch fünf.\nBeim Dividieren ziehst du sie ab. Zehn hoch acht durch zehn hoch drei? Auch zehn hoch fünf.\nStehen vorne noch Zahlen? Dann nimmst du die Zahlen mal und addierst die Hochzahlen. Vier mal zehn hoch drei, mal zwei mal zehn hoch zwei. Gibt acht mal zehn hoch fünf.\nIm Taschenrechner gibt's dafür eine Taste. Sie heißt EXP. Oder mal zehn hoch x. Zuerst die Zahl, dann diese Taste, dann die Hochzahl. Bei negativen Hochzahlen das Minus-Vorzeichen.\nJetzt die Vorsilben. Die musst du auswendig können.\nNach oben geht's in Dreierschritten. Kilo ist zehn hoch drei. Mega zehn hoch sechs. Giga zehn hoch neun. Tera zehn hoch zwölf.\nDenk an dein Handy. Kilobyte, Megabyte, Gigabyte, Terabyte. Genau die Reihenfolge.\nNach unten auch in Dreierschritten. Milli ist zehn hoch minus drei. Mikro minus sechs. Nano minus neun. Und Piko minus zwölf.\nDazwischen gibt's noch drei kleine. Hekto ist zehn hoch zwei, wie beim Hektoliter. Dezi ist minus eins, wie beim Dezimeter. Zenti ist minus zwei, wie beim Zentimeter.\nUnd ganz wichtig: Klein m ist Milli. Groß M ist Mega. Das ist ein Unterschied von einer Milliarde! Groß und klein zählt im Test."
+    "titel": "Folge 3 · Grundeinheiten",
+    "text": "Punkt drei: Einheiten in ihre Grundform umwandeln.\nMasse in Kilogramm. Zeit in Sekunden. Länge in Metern. Das sind die drei aus deinem Teststoff.\nAchtung bei der Masse: Die Grundeinheit ist das Kilogramm, nicht das Gramm. Eine Tonne sind tausend Kilo. Ein Gramm ist ein Tausendstel Kilo.\nZeit: Eine Minute hat sechzig Sekunden. Eine Stunde dreitausendsechshundert. Ein Tag sechsundachtzigtausendvierhundert.\nLänge: Ein Kilometer sind tausend Meter. Ein Zentimeter ist ein Hundertstel Meter. Ein Millimeter ein Tausendstel.\nDie Regel: Von der großen zur kleinen Einheit malnehmen. Von der kleinen zur großen dividieren.\nTypischer Fehler: Stunden nur mal sechzig. Dann hast du Minuten, nicht Sekunden."
    },
    {
-    "titel": "Größenordnungen einschätzen",
-    "text": "Folge fünf. Größenordnungen.\nKlingt kompliziert. Ist aber eigentlich ein Schätzspiel.\nDie Größenordnung ist einfach die passende Zehnerpotenz. Und zwar in der Grundeinheit.\nDas Rezept hat zwei Schritte. Erstens: in die Grundeinheit umrechnen. Zweitens: als Zahl mal zehn hoch irgendwas schreiben. Die Hochzahl ist die Größenordnung.\nProbieren wir's. Ein Fußballfeld ist etwa hundert Meter lang. Hundert ist zehn hoch zwei. Also Größenordnung zehn hoch zwei Meter.\nEin Haar ist etwa null Komma eins Millimeter dick. In Meter ist das null Komma null null null eins. Das Komma wandert vier Stellen. Also zehn hoch minus vier Meter.\nUnd die Erde? Durchmesser etwa zwölftausendsiebenhundert Kilometer. Das sind fast dreizehn Millionen Meter. Größenordnung zehn hoch sieben.\nBeim Vergleichen hilft das extrem. Was ist größer? Drei mal zehn hoch minus drei Meter. Oder drei mal zehn hoch minus sechs Meter?\nMinus drei ist größer als minus sechs. Also das erste. Das sind drei Millimeter gegen drei Mikrometer. Tausendmal mehr.\nIm Test kommen Aufgaben wie auf dem Arbeitsblatt. Lass dich von neuen Beispielen nicht verunsichern. Ameise, Flugzeug oder der Weg zum Mond. Es ist immer dasselbe Rezept. Umrechnen. Komma zählen. Hochzahl ablesen.\nUnd noch ein Profi-Tipp. Schau am Ende, ob das Ergebnis Sinn macht. Wenn dein Haar plötzlich einen Kilometer dick ist, ist irgendwo ein Minus verloren gegangen."
+    "titel": "Folge 4 · Vorsilben",
+    "text": "Punkt vier: Zehnerpotenzen von minus zwölf bis plus zwölf den Vorsilben zuordnen.\nNach oben in Dreierschritten. Kilo, zehn hoch drei. Mega, zehn hoch sechs. Giga, zehn hoch neun. Tera, zehn hoch zwölf.\nNach unten auch in Dreierschritten. Milli, minus drei. Mikro, minus sechs. Nano, minus neun. Piko, minus zwölf.\nDazwischen: Hekto ist zehn hoch zwei. Dezi minus eins. Zenti minus zwei.\nUnd ganz wichtig: Klein m ist Milli. Groß M ist Mega. Groß und klein zählt."
    },
    {
-    "titel": "Galilei, Experiment und Mittelwert",
-    "text": "Letzte Folge! Galilei und das Experiment.\nGalileo Galilei hat vor etwa vierhundert Jahren etwas Neues gemacht. Er hat nicht einfach geglaubt, was in alten Büchern stand. Er hat es selbst überprüft.\nDaraus ist eine Methode geworden. Mit der arbeitet die Wissenschaft bis heute. Und sie hat fünf Schritte.\nSchritt eins: beobachten und eine Frage stellen. Zum Beispiel: Fallen schwere Dinge schneller als leichte?\nSchritt zwei: eine Hypothese aufstellen. Das ist eine Vermutung, die man überprüfen kann. Ein schwerer Ball fällt schneller als ein leichter. Das ist eine Hypothese.\nSchritt drei: das Experiment planen. Was messe ich? Womit? Und wie oft?\nSchritt vier: das Experiment machen und messen.\nSchritt fünf: auswerten und einen Schluss ziehen. Stimmt die Hypothese? Oder nicht?\nUnd wenn sie nicht stimmt? Dann wird sie verworfen oder verbessert. Und neu getestet.\nWas man nie macht: die Messwerte hinbiegen, damit sie passen. Die Vermutung richtet sich nach dem Experiment. Nicht umgekehrt.\nÜbrigens hat Galilei genau das herausgefunden. Ohne Luftwiderstand fallen schwere und leichte Dinge gleich schnell.\nDamit ein Experiment fair ist, änderst du immer nur eine Sache. Alles andere bleibt gleich. Sonst weißt du nicht, was das Ergebnis beeinflusst hat.\nUnd du misst mehrmals. Weil einzelne Messungen schwanken. Mal drückst du die Stoppuhr zu früh, mal zu spät.\nDie Werte kommen in eine Messwerttabelle. Nummer der Messung, Messwert, und oben die Einheit.\nDann der Mittelwert. Alle Werte zusammenzählen. Und durch die Anzahl teilen.\nEin Beispiel. Ein Ball fällt dreimal. Die Zeiten sind null Komma sechs, null Komma acht und null Komma sieben Sekunden. Zusammen zwei Komma eins. Durch drei. Macht null Komma sieben Sekunden.\nHäufigster Fehler: durch die falsche Anzahl teilen. Also immer nachzählen.\nSo, das war's! Du hast den ganzen Teststoff gehört. Jetzt noch der Probetest in der App. Und am Dienstag holst du dir den Sieg. Viel Erfolg!"
+    "titel": "Folge 5 · Größenordnungen",
+    "text": "Punkt fünf: Größenordnungen. Auf deinem Blatt steht: Aufgaben wie auf dem Arbeitsblatt. Das Arbeitsblatt habe ich leider noch nicht. Darum hier nur das Rezept.\nDie Größenordnung ist die passende Zehnerpotenz, in der Grundeinheit.\nErstens: in die Grundeinheit umrechnen. Zweitens: als Zahl mal zehn hoch etwas schreiben. Die Hochzahl ist die Größenordnung.\nNull Komma eins Millimeter sind null Komma null null null eins Meter. Also zehn hoch minus vier Meter.\nBeim Vergleichen: Die größere Hochzahl gewinnt. Minus drei ist mehr als minus sechs.\nSchau dir die Aufgaben auf deinem Arbeitsblatt nochmal genau an. Im Test kommen ähnliche."
+   },
+   {
+    "titel": "Folge 6 · Galilei: die 5 Schritte",
+    "text": "Punkt sechs: die fünf Schritte der wissenschaftlichen Methode nach Galilei.\nDie übliche Reihenfolge ist: Beobachten und eine Frage stellen. Eine Hypothese aufstellen, also eine Vermutung, die man prüfen kann. Das Experiment planen. Das Experiment durchführen und messen. Und auswerten und einen Schluss ziehen.\nStimmt die Hypothese nicht, wird sie verworfen oder verbessert und neu geprüft.\nWichtig: Vergleich die Schritte mit deinem Arbeitsblatt. Im Test zählt, wie eure Lehrkraft sie formuliert hat."
+   },
+   {
+    "titel": "Folge 7 · Aufgaben zur Methode",
+    "text": "Punkt sieben: Aufgaben zur naturwissenschaftlichen Methode. Auch dazu gibt es ein Arbeitsblatt.\nMeistens bekommst du eine kleine Geschichte und sollst sagen, welcher Schritt das ist.\nAchte auf Signalwörter. Ich vermute: Hypothese. Ich messe fünfmal: durchführen und messen. Die Messwerte zeigen: auswerten.\nUnd bei einem fairen Experiment änderst du immer nur eine Sache. Alles andere bleibt gleich."
+   },
+   {
+    "titel": "Folge 8 · Messwerttabelle und Mittelwert",
+    "text": "Letzter Punkt: ein Experiment nach Anleitung durchführen, eine Messwerttabelle machen und den Mittelwert bilden.\nIn die Tabelle kommen die Nummer der Messung und der Messwert. Die Einheit steht oben im Tabellenkopf.\nMan misst mehrmals, weil einzelne Messungen schwanken.\nMittelwert: alle Werte zusammenzählen und durch die Anzahl teilen.\nNull Komma sechs, null Komma acht und null Komma sieben Sekunden. Zusammen zwei Komma eins. Durch drei. Null Komma sieben Sekunden.\nHäufigster Fehler: durch die falsche Anzahl teilen. Also immer nachzählen.\nDas war's! Jetzt noch der Probetest in der App. Viel Erfolg am Dienstag!"
    }
   ]
  }

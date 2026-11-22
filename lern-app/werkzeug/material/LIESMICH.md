@@ -18,6 +18,7 @@ Format:
 - Liegt ein Teststoff-Blatt dabei: **genau lesen, was es pro Seite als relevant nennt.** Steht dort z. B. „Abbildungen beschreiben: S. 14“ oder „S. 14: nur die Abbildungen links“, dann zu dieser Seite **nur diese Abbildungen** abfragen, nicht den übrigen Seitentext. Seiten außerhalb der genannten Bereiche nicht abfragen.
 - Jede Frage einem Teststoff-Punkt (`stoff`) zuordnen; in der `erklaerung` die Fundstelle nennen (z. B. „Buch S. 16“, „Abb. 24.2“).
 - Nennt das Teststoff-Blatt ein Arbeitsblatt oder eine Unterlage, die nicht hochgeladen wurde: nichts dazu erfinden, sondern im Bericht an Johannes ausdrücklich sagen, dass sie fehlt, und um Upload bitten.
+- **Wissen und Podcast genauso aufbauen wie das Teststoff-Blatt** (Johannes 22.11.): je Teststoff-Punkt eine Wissen-Karte, in derselben Reihenfolge, Titel „1 · …“, „2 · …“; im Feld `problem` den Punkt möglichst wörtlich zitieren und die Seiten nennen. Inhalt nur aus diesen Seiten/Abbildungen (bei „Abbildungen S. x“ jede genannte Abbildung einzeln beschreiben). Podcast: eine Folge pro Teststoff-Punkt, gleiche Reihenfolge, nur Buchinhalte, keine Namen der Kinder im Text außer beim eigenen Fach. Fehlt eine genannte Unterlage (Arbeitsblatt), in der Karte darauf hinweisen statt etwas zu erfinden.
 - Reichen die Seiten nicht für 100 Fragen: lieber dieselben Inhalte in anderer Form fragen (Auswahl, Eintippen, richtig/falsch, offen, Abbildung lesen) als Stoff von außen dazuholen.
 
 ## Stoffabgrenzung / Teststoff (Schwerpunkt)
