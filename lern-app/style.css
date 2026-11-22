@@ -288,3 +288,51 @@ textarea.offen-feld:focus{border-color:var(--akzent);box-shadow:0 0 0 3px var(--
 .missions-knopf small{font-weight:600;opacity:.8;font-size:.8em}
 .modus-wahl.klein-modus{margin:4px 0 6px;justify-content:flex-end}
 .modus-wahl.klein-modus button{padding:6px 12px;font-size:.85rem}
+
+/* Duelle */
+.duell-kachel{position:relative;width:100%;margin:0 0 16px}
+.duell-ic{font-size:1.6rem}
+.duell-zahl{position:absolute;top:10px;right:12px;min-width:24px;height:24px;padding:0 7px;border-radius:99px;background:var(--falsch);color:#fff;font-weight:800;font-size:.85rem;display:inline-flex;align-items:center;justify-content:center}
+.duell-zahl[hidden]{display:none}
+.duell-kachel.ruft{animation:ruft 1.2s ease-in-out infinite}
+@keyframes ruft{0%,100%{box-shadow:0 0 0 0 var(--glow)}50%{box-shadow:0 0 0 6px var(--glow)}}
+.duell-zeile{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 0;border-top:1px solid var(--linie)}
+.duell-zeile>div:first-child{display:flex;flex-direction:column;min-width:0}
+.duell-zeile small{color:var(--leise)}
+.duell-zeile.erg{cursor:pointer}
+.duell-zeile.sieg b{color:var(--ok)}
+.duell-zeile.niederlage b{color:var(--leise)}
+.duell-knoepfe{display:flex;gap:6px;flex:none}
+.duell-stand{font-family:var(--titel);font-weight:700;font-size:1.5rem;flex:none}
+.duell-karte.dran{border-color:var(--akzent);box-shadow:0 0 0 1px var(--akzent),0 10px 34px var(--glow)}
+.duell-bilanz{display:flex;flex-direction:column;padding:8px 0;border-top:1px solid var(--linie)}
+.duell-bilanz span{color:var(--leise);font-size:.9rem}
+.mini-knopf{border:0;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;background:linear-gradient(90deg,var(--akzent2),var(--akzent));color:#fff;font-size:.9rem}
+.mini-knopf.zweit{background:#ffffff10;border:1px solid var(--linie);color:var(--text)}
+.wahl-reihe{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.wahl-liste{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.wahl{border:1px solid var(--linie);background:var(--panel2);color:var(--text);border-radius:10px;padding:10px 14px;font-weight:700;font-size:.95rem;cursor:pointer;text-align:left}
+.wahl.an{border-color:var(--akzent);background:linear-gradient(90deg,var(--akzent2),var(--akzent));color:#fff}
+.wahl.klein-wahl{font-weight:600;font-size:.88rem;margin-left:14px}
+.live-raum{text-align:center}
+.live-spieler{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px 0}
+.live-name{flex:1;padding:14px 8px;border-radius:12px;border:1px solid var(--linie);font-weight:800;color:var(--leise)}
+.live-name.an{color:var(--text);border-color:var(--ok)}
+.vs{font-family:var(--titel);font-weight:700;font-size:1.6rem;color:var(--akzent)}
+.countdown{font-family:var(--titel);font-weight:700;font-size:6rem;text-align:center;color:var(--akzent);line-height:1.2}
+.duell-leiste{background:var(--panel);border:1px solid var(--linie);border-radius:12px;padding:10px 12px;margin-bottom:10px;display:flex;flex-direction:column;gap:6px}
+.dl-zeile{display:flex;align-items:center;gap:8px;font-size:.88rem}
+.dl-name{width:88px;flex:none;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dl-balken{flex:1;height:10px;border-radius:99px;background:#ffffff12;overflow:hidden}
+.dl-balken span{display:block;height:100%;background:var(--leise);transition:width .4s}
+.dl-zeile.ich .dl-balken span{background:linear-gradient(90deg,var(--akzent2),var(--akzent))}
+.dl-wert{width:42px;text-align:right;font-weight:800}
+.duell-leiste small{color:var(--ok);font-weight:700}
+.duell-erg{position:relative;overflow:hidden;text-align:center}
+.erg-reihe{display:flex;align-items:center;gap:10px;margin:10px 0}
+.erg-spalte{flex:1;padding:14px 6px;border-radius:12px;border:1px solid var(--linie)}
+.erg-spalte.gewinner{border-color:var(--ok);box-shadow:0 0 22px #2ee59d44}
+.erg-zahl{font-family:var(--titel);font-weight:700;font-size:3rem;line-height:1.1}
+.erg-spalte small{color:var(--leise)}
+.fehler-zeile{padding:8px 0;border-top:1px solid var(--linie)}
+.fehler-zeile small{color:var(--leise)}

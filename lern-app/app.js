@@ -462,6 +462,7 @@ function faecherSeite() {
     gastBanner(),
     termineKarte(),
     statusKarte(),
+    gast ? null : duellKachel(),
     el("h2", {}, person.thema === "held" ? "Missionen" : "Trainingseinheiten"),
     el("div", { class: "raster" }, ...faecherVon(person.id).map((f, i) => {
       const s = laden(person.id, f.id);
@@ -641,8 +642,10 @@ function testStarten(t) {
 
 function frageZeigen() {
   const q = runde.fragen[runde.i];
-  const test = !!runde.test;
-  setzeKopf(test ? "📝 Test" : fach.name, () => { if (confirm(test ? "Test abbrechen? Er zählt dann nicht." : "Runde abbrechen?")) fachSeite(); });
+  const test = !!runde.test, duell = runde.duell;
+  if (duell && !duell.t) duell.t = Date.now();
+  const kopf = duell ? "⚔️ Duell" : test ? "📝 Test" : fach.name;
+  setzeKopf(kopf, () => { if (duell) { duellAbbruch(); return; } if (confirm(test ? "Test abbrechen? Er zählt dann nicht." : "Runde abbrechen?")) fachSeite(); });
   const feedback = el("div");
   const weiter = el("button", { class: "knopf", onclick: naechste }, runde.i + 1 < runde.fragen.length ? "Weiter →" : (test ? "Test abgeben ✔" : "Ergebnis anzeigen"));
   weiter.hidden = true;
@@ -650,19 +653,22 @@ function frageZeigen() {
 
   function auswerten(ok, gegeben, extra) {
     if (fertig) return; fertig = true;
-    const s = laden(person.id, fach.id);
-    if (!test) s.gesehen[q.id] = (s.gesehen[q.id] || 0) + 1;
-    if (ok) { runde.richtig++; s.sterne++; s.offen = s.offen.filter(id => id !== q.id); }
-    else { runde.falsch.push({ q, gegeben }); if (!test && !s.offen.includes(q.id)) s.offen.push(q.id); }
-    speichern(person.id, fach.id, s);
-    setzeKopf(test ? "📝 Test" : fach.name, zurueckZiel);
+    if (duell) { if (ok) runde.richtig++; else runde.falsch.push({ q, gegeben }); duellAntwort(ok); }
+    else {
+      const s = laden(person.id, fach.id);
+      if (!test) s.gesehen[q.id] = (s.gesehen[q.id] || 0) + 1;
+      if (ok) { runde.richtig++; s.sterne++; s.offen = s.offen.filter(id => id !== q.id); }
+      else { runde.falsch.push({ q, gegeben }); if (!test && !s.offen.includes(q.id)) s.offen.push(q.id); }
+      speichern(person.id, fach.id, s);
+    }
+    setzeKopf(kopf, zurueckZiel);
     if (test) feedback.replaceChildren(el("div", { class: "feedback neutral pop" }, "Antwort gespeichert."));
     else feedback.replaceChildren(el("div", { class: `feedback pop ${ok ? "ok" : "nein"}` },
-      el("b", {}, ok ? [`${zufall(person.lob)} +`, punkte(person.id, 1)] : "Knapp daneben."),
+      el("b", {}, ok ? (duell ? zufall(person.lob) : [`${zufall(person.lob)} +`, punkte(person.id, 1)]) : "Knapp daneben."),
       extra || null,
       !ok && !extra ? el("div", {}, "Richtig ist: ", el("b", {}, [].concat(q.antwort)[0])) : null,
       q.erklaerung ? el("div", {}, "💡 ", q.erklaerung) : null));
-    const w = !test && wissenFuer(q);
+    const w = !test && !duell && wissenFuer(q);
     if (w) feedback.append(el("details", { class: "erklaer-mehr" }, el("summary", {}, `📖 Ausführlich erklärt: ${w.titel}`), el("div", { class: "wissen-text" }, vorleseKnopf(w), ...wissenInhalt(w))));
     weiter.hidden = false; setTimeout(() => weiter.focus(), 0);
   }
@@ -742,6 +748,7 @@ function frageZeigen() {
   }
   zeige(
     gastBanner(),
+    duell && duell.live ? duellLeiste() : null,
     el("div", { class: "fortschritt" }, el("div", { style: `width:${(runde.i / runde.fragen.length) * 100}%` })),
     el("div", { class: "karte pop frage-karte" },
       el("div", { class: "frage-nr" }, el("span", { class: "label" }, `${test ? "Test" : "Frage"} ${runde.i + 1} / ${runde.fragen.length}`), el("span", { class: "label" }, q.art || "")),
@@ -752,6 +759,7 @@ function frageZeigen() {
 function naechste() { runde.i++; if (runde.i < runde.fragen.length) frageZeigen(); else ergebnis(); }
 
 function ergebnis() {
+  if (runde.duell) return duellEnde();
   const n = runde.fragen.length, perfekt = runde.richtig === n, test = runde.test;
   const s = laden(person.id, fach.id);
   if (!test) { s.runden++; if (perfekt) { s.perfekt++; s.sterne += 3; } }
