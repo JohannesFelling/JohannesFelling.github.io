@@ -9,6 +9,11 @@ const PERSONEN = [
     lob: ["TOOOR!", "Back of the net!", "Weltklasse-Pass.", "Hattrick-reif.", "Was für ein Volley!", "Man of the Match.", "Top-Corner."],
     raenge: ["Nachwuchs", "Stammspieler", "Kapitän", "Nationalspieler", "Weltstar", "GOAT"],
     punkt: { zeichen: "⚽", icon: "ball" } },
+  // drittes Konto: übt genau Valentins Stoff (Klasse 2A), aber ohne Geschenke/Gutscheine
+  { id: "nutzer", name: "2. Klasse", emo: "⭐", thema: "neutral", slogan: "Learning Lab", daten: "valentin", ohneGeschenke: true,
+    lob: ["Stark!", "Richtig gut.", "Sauber gelöst.", "Genau so.", "Top!", "Weiter so."],
+    raenge: ["Einsteiger", "Lernender", "Fortgeschritten", "Profi", "Experte", "Meister"],
+    punkt: { zeichen: "⭐", icon: "stern" } },
 ];
 const FAECHER = [
   { id: "deutsch", name: "Deutsch" }, { id: "englisch", name: "Englisch" }, { id: "spanisch", name: "Spanisch" },
@@ -23,6 +28,10 @@ const FAECHER_VON = {
   valentin: ["englisch", "mathe", "deutsch", "biologie", "geografie", "geschichte", "physik", "digital", "musik", "kunst", "technik"],
   elias: ["englisch", "spanisch", "mathe", "deutsch", "biologie", "physik", "chemie", "geografie", "geschichte", "informatik", "dg", "musik", "kunst"],
 };
+FAECHER_VON.nutzer = FAECHER_VON.valentin;
+// Ordner unter daten/, aus dem eine Person Fragen und Termine bekommt
+const dq = pid => (PERSONEN.find(p => p.id === pid) || {}).daten || pid;
+const ohneGeschenke = () => !!(person && person.ohneGeschenke);
 const faecherVon = pid => (FAECHER_VON[pid] || []).map(id => FAECHER.find(f => f.id === id));
 const ICONS = {
   englisch: '<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"/><path d="M13 21l4-10 4 10M14.5 17h5"/>',
@@ -58,7 +67,7 @@ const ic = (n) => { const w = document.createElement("span"); w.innerHTML = `<sv
 const RUNDE = 10;
 const PUNKT_STD = { zeichen: "⭐", icon: "stern" };
 const pk = pid => (PERSONEN.find(p => p.id === pid) || {}).punkt || PUNKT_STD;
-const pIcon = (pid, cls) => window.KUNST ? (pk(pid).icon === "hammer" ? KUNST.hammer(cls) : KUNST.ball(cls)) : ic(pk(pid).icon);
+const pIcon = (pid, cls) => window.KUNST ? (pk(pid).icon === "hammer" ? KUNST.hammer(cls) : pk(pid).icon === "stern" ? KUNST.stern(cls) : KUNST.ball(cls)) : ic(pk(pid).icon);
 const punkte = (pid, n) => el("span", { class: "pkt" }, String(n), pIcon(pid));
 const pktIc = pid => el("span", { class: "pkt" }, pIcon(pid));
 const PROFIL = "_profil";
@@ -125,6 +134,7 @@ function rang(p, sterne) {
 }
 function code() { const z = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; let c = ""; for (let i = 0; i < 6; i++) c += z[Math.floor(Math.random() * z.length)]; return `${person.id[0].toUpperCase()}-${c}`; }
 function gutscheinGeben(pr, was, grund) {
+  if (ohneGeschenke()) return null;
   const g = { code: code(), was, grund, datum: heute() };
   pr.gutscheine.push(g);
   return g;
@@ -145,7 +155,7 @@ function belohnungenPruefen(extra) {
   }
   if (extra) extra(pr, neu);
   speichern(person.id, PROFIL, pr);
-  return neu;
+  return neu.filter(Boolean);
 }
 
 // ---------- Hilfen ----------
@@ -388,14 +398,14 @@ function statusKarte() {
       el("div", { class: "status-sterne" }, el("div", { class: "label" }, "Gesammelt"), el("div", { class: "wert" }, pIcon(person.id), String(st)))),
     el("div", { class: "fortschritt" }, el("div", { style: `width:${Math.round(anteil * 100)}%` })),
     el("div", { class: "klein" }, r.naechste ? ["Noch ", punkte(person.id, r.naechste - st), ` bis zum Rang ${r.naechsterName}`] : "Höchster Rang erreicht."),
-    geschenkBlock(),
-    el("button", { class: "knopf zweit", onclick: gutscheinListe }, ic("ticket"), `Gutscheine (${pr.gutscheine.length})`));
+    ohneGeschenke() ? null : geschenkBlock(),
+    ohneGeschenke() ? null : el("button", { class: "knopf zweit", onclick: gutscheinListe }, ic("ticket"), `Gutscheine (${pr.gutscheine.length})`));
 }
 
 // ---------- Termine (Tests / Schularbeiten) ----------
 const TERMINE = {};
 async function termineLaden(pid) {
-  try { const r = await fetch(`daten/${pid}/termine.json?v=${Date.now()}`); TERMINE[pid] = r.ok ? await r.json() : { termine: [] }; }
+  try { const r = await fetch(`daten/${dq(pid)}/termine.json?v=${Date.now()}`); TERMINE[pid] = r.ok ? await r.json() : { termine: [] }; }
   catch (e) { TERMINE[pid] = TERMINE[pid] || { termine: [] }; }
 }
 const WT = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
@@ -438,7 +448,7 @@ function stoffPlatz(pid, fid) {
   if (STOFF[pid]) setzen();
   else {
     STOFF[pid + "_laden"] = STOFF[pid + "_laden"] || Promise.all(faecherVon(pid).map(async f => {
-      try { const r = await fetch(`daten/${pid}/${f.id}.json?v=${Date.now()}`); if (!r.ok) return [f.id, null]; const d = await r.json(); return [f.id, d.fragen && d.fragen.length ? !d.platzhalter : null]; } catch (e) { return [f.id, null]; }
+      try { const r = await fetch(`daten/${dq(pid)}/${f.id}.json?v=${Date.now()}`); if (!r.ok) return [f.id, null]; const d = await r.json(); return [f.id, d.fragen && d.fragen.length ? !d.platzhalter : null]; } catch (e) { return [f.id, null]; }
     })).then(l => { STOFF[pid] = Object.fromEntries(l); });
     STOFF[pid + "_laden"].then(setzen);
   }
@@ -469,7 +479,7 @@ async function fachLaden(f) {
   setzeKopf(f.name, faecherSeite);
   zeige(el("p", { class: "hinweis" }, "Lade Fragen …"));
   try {
-    const r = await fetch(`daten/${person.id}/${f.id}.json?v=${Date.now()}`);
+    const r = await fetch(`daten/${dq(person.id)}/${f.id}.json?v=${Date.now()}`);
     if (!r.ok) throw new Error(r.status);
     daten = await r.json();
   } catch (e) {
@@ -507,11 +517,11 @@ function fachSeite() {
       (daten.sprechen || []).length ? el("button", { class: "fach klein-fach", onclick: sprechListe }, ic("mikro"), el("div", {}, el("div", { class: "fach-name" }, "Sprechen"), el("small", {}, `${daten.sprechen.length} Gespräche`))) : null) : null,
     tests.length ? el("div", { class: "karte" },
       el("div", { class: "label" }, "Kapiteltests"),
-      el("p", { class: "klein" }, "Alles richtig = 🎁 Überraschung." + (frei ? "" : " Erst eine Trainingsrunde spielen, dann ist der Test frei.")),
+      el("p", { class: "klein" }, (ohneGeschenke() ? "Teste dein Wissen." : "Alles richtig = 🎁 Überraschung.") + (frei ? "" : " Erst eine Trainingsrunde spielen, dann ist der Test frei.")),
       ...tests.map(t => {
         const info = pr.tests[`${fach.id}/${t.id}`] || {};
         return el("button", { class: `test-knopf ${info.bestanden ? "ok" : ""}`, disabled: frei ? null : "disabled", onclick: () => testStarten(t) },
-          el("span", {}, t.titel, el("small", {}, info.bestanden ? "Bestanden – Gutschein erhalten" : info.versuche ? `Bester Versuch: ${info.beste} von ${t.fragen.length}` : `${t.fragen.length} Fragen`)),
+          el("span", {}, t.titel, el("small", {}, info.bestanden ? (ohneGeschenke() ? "Fehlerfrei bestanden" : "Bestanden – Gutschein erhalten") : info.versuche ? `Bester Versuch: ${info.beste} von ${t.fragen.length}` : `${t.fragen.length} Fragen`)),
           ic(info.bestanden ? "haken" : frei ? "test" : "schloss"));
       })) : null,
   );
@@ -764,8 +774,8 @@ function ergebnis() {
       el("div", { class: "label" }, test ? "Testergebnis" : (held ? "Missionsbericht" : "Spielbericht")),
       el("h2", {}, `${runde.richtig} / ${n} richtig`),
       el("p", {}, text),
-      test && !perfekt ? el("p", { class: "klein" }, "Für den Gutschein muss alles richtig sein. Übe die Fehler und probier den Test nochmal.") : null),
-    gast ? null : el("div", { class: "karte" }, geschenkBlock(true)),
+      test && !perfekt && !ohneGeschenke() ? el("p", { class: "klein" }, "Für den Gutschein muss alles richtig sein. Übe die Fehler und probier den Test nochmal.") : null),
+    gast || ohneGeschenke() ? null : el("div", { class: "karte" }, geschenkBlock(true)),
     ...neu.map(g => el("button", { class: "gutschein-neu pop", onclick: () => gutscheinZeigen(g) }, ic("ticket"), el("span", {}, el("b", {}, "Neuer Gutschein: "), g.was, el("small", {}, "Antippen zum Anzeigen")))),
     runde.falsch.length ? el("div", { class: "karte" }, el("div", { class: "label" }, test ? "Noch falsch" : "Kommt später nochmal"),
       el("ul", {}, ...runde.falsch.map(({ q }) => el("li", {}, q.frage, " → ", el("b", {}, [].concat(q.antwort)[0]))))) : null,
@@ -1317,7 +1327,7 @@ async function elternSeite(alle, lokal) {
   setzeKopf("Eltern", gastWahl);
   const dateien = {};
   await Promise.all(PERSONEN.flatMap(p => faecherVon(p.id).map(async f => {
-    try { const r = await fetch(`daten/${p.id}/${f.id}.json?v=${Date.now()}`); if (r.ok) dateien[`${p.id}/${f.id}`] = await r.json(); } catch (e) {}
+    try { const r = await fetch(`daten/${dq(p.id)}/${f.id}.json?v=${Date.now()}`); if (r.ok) dateien[`${p.id}/${f.id}`] = await r.json(); } catch (e) {}
   })));
   const tab = el("div");
   const zeigeKind = p => {

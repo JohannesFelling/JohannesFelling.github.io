@@ -52,6 +52,13 @@ svg.kunst-ic{width:1.2em;height:1.2em;vertical-align:-.25em;flex:none;filter:dro
 .start-sport small{color:#9fd3ff}
 .start-sport .start-termin{color:#9fd3ff}
 
+/* Anderer Nutzer – neutral (Graphit / Violett) */
+.start-neutral{background:radial-gradient(ellipse 85% 60% at 50% 40%,#3b3b9a,transparent 70%),linear-gradient(180deg,#0d0d1c,#08080f 75%)}
+.start-neutral:hover{box-shadow:0 24px 60px #000c,0 0 0 1px #c9c7ff88,0 0 50px #5b5bd655}
+.plakat-neutral svg.plakat-motiv{width:min(44%,150px);top:12%;filter:drop-shadow(0 0 18px #8b8bffaa)}
+.start-neutral .start-name{font-family:var(--titel);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f2f2f5;filter:drop-shadow(0 6px 16px #000)}
+.start-neutral small{color:#c9c7ff}
+
 .gast-link{background:#ffffff0a;border-color:#ffffff1f}
 
 /* ================================================================

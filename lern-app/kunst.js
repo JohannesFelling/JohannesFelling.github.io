@@ -65,9 +65,29 @@
 </svg>`, cls);
   }
 
+  // Stern (neutrales Thema „Anderer Nutzer“)
+  function stern(cls = "kunst-ic") {
+    const i = ++n;
+    return svgEl(`<svg viewBox="0 0 64 64" aria-hidden="true">
+  <defs><linearGradient id="sg${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6e4ff"/><stop offset=".5" stop-color="#a5a3ff"/><stop offset="1" stop-color="#5b5bd6"/></linearGradient></defs>
+  <path d="M32 4l8.2 17.6L59 24l-14 13.2L48.6 56 32 46.8 15.4 56 19 37.2 5 24l18.8-2.4z" fill="url(#sg${i})" stroke="#2b2a6e" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M32 10l6 13 14 1.8" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+</svg>`, cls);
+  }
+
   // Große Plakat-Grafiken für Startkarten und Statuskarte
   function plakat(thema) {
     const i = ++n;
+    if (thema === "neutral") {
+      const s = svgEl(`<svg viewBox="0 0 200 200" aria-hidden="true">
+  <defs><radialGradient id="pn${i}" cx=".5" cy=".45" r=".55"><stop offset="0" stop-color="#a5a3ff" stop-opacity=".75"/><stop offset="1" stop-color="#5b5bd6" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="100" cy="90" r="95" fill="url(#pn${i})"/>
+  <g fill="none" stroke="#c9c7ff" stroke-opacity=".35">${[40,62,84].map(r => `<circle cx="100" cy="90" r="${r}"/>`).join("")}</g>
+</svg>`, "plakat-licht");
+      const box = document.createElement("span"); box.className = "plakat plakat-neutral";
+      box.append(s, stern("plakat-motiv"));
+      return box;
+    }
     if (thema === "held") {
       const s = svgEl(`<svg viewBox="0 0 200 200" aria-hidden="true">
   <defs>
@@ -96,5 +116,5 @@
     return box;
   }
 
-  window.KUNST = { hammer, ball, plakat };
+  window.KUNST = { hammer, ball, stern, plakat };
 })();
