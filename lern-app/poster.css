@@ -306,3 +306,7 @@ body.thema-sport::after{content:"";position:fixed;inset:0;z-index:0;pointer-even
 .start-raster.n3>.start-karte:nth-child(3){grid-column:1/-1}
 .eltern-wer{margin:6px 0 12px}
 .eltern-wer[hidden]{display:none}
+/* drittes Plakat „2. Klasse“: klare Kontur, damit man sieht, wo man tippt */
+.start-karte.start-neutral{box-shadow:0 24px 60px #000c,0 0 0 2px #b9b7ff,0 0 28px #8b8bff66;min-height:300px}
+.start-karte.start-neutral:hover{box-shadow:0 24px 60px #000c,0 0 0 3px #d8d6ff,0 0 40px #8b8bff88}
+.start-raster.n3>.start-karte:nth-child(3){margin-top:10px}
