@@ -1,144 +1,3799 @@
 {
  "titel": "Biologie",
- "untertitel": "",
- "platzhalter": true,
+ "untertitel": "Zelle, Membran, Osmose, Euglena (vorläufig – nur Teststoff-Blatt, Buchseiten fehlen noch)",
+ "platzhalter": false,
+ "teststoff": [
+  {
+   "titel": "Bio: Zelle & Membran (1. Bio-Test)",
+   "quelle": "Teststoff-Blatt 1. Bio-Test 20.10. – VORLÄUFIG: Buch S. 20–25, Mitschrift, Arbeitsblätter und Euglena-Arbeitsauftrag fehlen noch",
+   "punkte": [
+    "Merkmale des Lebens kennen",
+    "Wissen, wer zu den Lebewesen gehört",
+    "Unterschied zwischen tierischen und pflanzlichen Zellen kennen und erkennen",
+    "Funktionen der Zellorganellen",
+    "Wo Zellatmung und Fotosynthese stattfinden und wo die Erbinformation (DNA) ist",
+    "Aufbau der Biomembran/Zellmembran beschreiben und beschriften",
+    "Aufgaben der Membran und Membranproteine",
+    "Diffusion und Osmose erklären, den Unterschied erkennen",
+    "Experiment: Plasmolyse und Osmose bei einer Zwiebelzelle",
+    "Fachbegriffe erklären (semipermeabel, Osmose, Plasmolyse, hydrophil, hypertonisch …)",
+    "Euglena: Ernährung, Fortbewegung, Vermehrung, autotroph und heterotroph"
+   ],
+   "id": "elias-mwuuduy0"
+  }
+ ],
+ "podcast": [
+  {
+   "titel": "Bio: Die Zelle – Podcast zum Teststoff (vorläufig)",
+   "kurz": "Elf kurze Folgen, genau nach den Punkten vom Teststoff-Blatt.",
+   "kapitel": [
+    {
+     "titel": "Folge 1 · Merkmale des Lebens",
+     "text": "Servus Elias! Willkommen zum Bio-Podcast über die Zelle.\nAchtung, diese Folgen sind vorläufig. Dein Buch und deine Mitschrift fehlen noch. Wir gehen dein Teststoff-Blatt Punkt für Punkt durch.\nPunkt eins: die Merkmale des Lebens.\nWoran erkennst du, dass etwas lebt? Denk mal mit.\nLebewesen haben einen Stoffwechsel. Sie nehmen Stoffe auf, wandeln sie um und geben Abfall ab. Du isst, du atmest. Das ist Stoffwechsel.\nLebewesen wachsen und entwickeln sich. Sie pflanzen sich fort. Sie reagieren auf Reize, zum Beispiel auf Licht. Sie bewegen sich. Und sie bestehen aus Zellen.\nJetzt kommt die Falle.\nEin Kristall wächst auch. Ein Feuer frisst Holz. Leben die?\nNein! Ein Merkmal allein reicht nicht. Ein Lebewesen zeigt alle Merkmale.\nMerksatz: Lebendig ist nur, wer alle Merkmale zeigt."
+    },
+    {
+     "titel": "Folge 2 · Wer gehört zu den Lebewesen?",
+     "text": "Punkt zwei: Wer gehört zu den Lebewesen?\nTiere natürlich. Du auch. Pflanzen auch.\nAber es gibt mehr. Pilze sind eigene Lebewesen, weder Pflanze noch Tier.\nBakterien sind winzige Einzeller. Auch sie leben.\nUnd Einzeller wie die Euglena, zu der kommen wir am Schluss.\nUnd Viren? Achtung, Falle!\nViren haben keine Zelle. Sie haben keinen eigenen Stoffwechsel. Sie vermehren sich nur in fremden Zellen.\nDarum zählen Viren nicht zu den Lebewesen.\nMerksatz: Keine Zelle, kein Lebewesen."
+    },
+    {
+     "titel": "Folge 3 · Tierzelle und Pflanzenzelle",
+     "text": "Punkt drei: Tierzelle und Pflanzenzelle.\nBeide haben einen Zellkern. Beide haben eine Zellmembran, Zellplasma, Mitochondrien und Ribosomen.\nDie Pflanzenzelle hat drei Extras. Merk dir: Wand, Grün, Vakuole.\nWand heißt Zellwand. Sie ist aus Cellulose und macht die Zelle eckig und fest.\nGrün heißt Chloroplasten. Dort passiert die Fotosynthese.\nVakuole heißt: eine große Blase mit Zellsaft in der Mitte.\nUnter dem Mikroskop: Eckig mit dicker Wand? Pflanzenzelle. Rund und weich ohne Wand? Tierzelle.\nKleine Falle: Die Zwiebel ist eine Pflanze. Aber ihre Zellen sind nicht grün. Sie wachsen unter der Erde, also keine Chloroplasten."
+    },
+    {
+     "titel": "Folge 4 · Funktionen der Zellorganellen",
+     "text": "Punkt vier: die Zellorganellen. Stell dir die Zelle wie eine kleine Stadt vor.\nDer Zellkern ist das Rathaus. Dort liegt der Bauplan, die DNA. Von dort wird alles gesteuert.\nDie Mitochondrien sind die Kraftwerke. Sie gewinnen Energie.\nDie Chloroplasten sind Solaranlagen. Sie machen aus Licht Zucker. Nur bei Pflanzen.\nDie Ribosomen sind kleine Fabriken. Sie bauen Eiweiße.\nDas endoplasmatische Retikulum ist ein Netz aus Kanälen. Eine Art Straßennetz.\nDer Golgi-Apparat ist die Post. Er verpackt Stoffe in Bläschen und verschickt sie.\nDie Lysosomen sind die Müllabfuhr. Sie verdauen und bauen ab.\nDie Vakuole ist der Speicher.\nDie Zellmembran ist die Stadtmauer mit Toren.\nUnd alles schwimmt im Zellplasma."
+    },
+    {
+     "titel": "Folge 5 · Zellatmung, Fotosynthese und DNA",
+     "text": "Punkt fünf: Wo passiert was?\nDie Zellatmung passiert in den Mitochondrien. Zucker und Sauerstoff werden abgebaut. Dabei wird Energie frei. Übrig bleiben Kohlenstoffdioxid und Wasser.\nDie Fotosynthese passiert in den Chloroplasten. Mit Licht werden Kohlenstoffdioxid und Wasser zu Zucker und Sauerstoff.\nDer grüne Farbstoff dort heißt Chlorophyll.\nUnd die DNA, die Erbinformation, liegt im Zellkern.\nAchtung, Lieblingsfalle im Test!\nMachen Pflanzen Zellatmung? Ja! Pflanzen haben auch Mitochondrien. Sie machen beides.\nMerksatz: Mitochondrium Atmung, Chloroplast Fotosynthese, Kern DNA."
+    },
+    {
+     "titel": "Folge 6 · Aufbau der Biomembran",
+     "text": "Punkt sechs: der Aufbau der Biomembran.\nDie Membran ist eine Doppelschicht. Sie besteht aus Phospholipiden.\nSo ein Phospholipid sieht aus wie ein Streichholz mit zwei Beinen.\nDer Kopf ist hydrophil. Das heißt wasserliebend.\nDie zwei Schwänze sind hydrophob. Das heißt wassermeidend.\nWas machen die also? Die Köpfe schauen zum Wasser, nach außen und nach innen. Die Schwänze verstecken sich in der Mitte, Rücken an Rücken.\nIn dieser Schicht stecken Eiweiße, die Membranproteine. Manche gehen ganz durch, wie ein Tunnel.\nDas Ganze ist beweglich, wie ein Mosaik, das schwimmt. Darum heißt es Flüssig-Mosaik-Modell.\nTipp für den Test: Beim Beschriften immer Kopf, Schwanz, Doppelschicht und Protein einzeichnen."
+    },
+    {
+     "titel": "Folge 7 · Aufgaben der Membran",
+     "text": "Punkt sieben: Was macht die Membran?\nSie ist die Grenze der Zelle.\nUnd sie ist ein Türsteher. Nicht jeder darf rein. Das nennt man selektiv durchlässig.\nDie Membranproteine helfen dabei.\nTunnelproteine oder Kanalproteine sind wie Türen. Sie lassen bestimmte Stoffe durch.\nRezeptoren sind wie Antennen. Sie empfangen Signale von außen.\nUnd Proteine mit Zuckerketten außen sind wie Namensschilder. Damit erkennen sich Zellen.\nMerksatz: Membran ist Grenze und Türsteher. Proteine sind Türen, Antennen und Namensschilder."
+    },
+    {
+     "titel": "Folge 8 · Diffusion und Osmose",
+     "text": "Punkt acht: Diffusion und Osmose.\nTropf mal Tinte in ein Glas Wasser. Nicht umrühren. Was passiert?\nDie Farbe verteilt sich ganz von selbst. Das ist Diffusion.\nTeilchen wandern von dort, wo viele sind, dorthin, wo wenige sind. Bis alles gleich verteilt ist. Mit Wärme geht es schneller.\nUnd Osmose?\nOsmose ist eine besondere Diffusion. Nur Wasser wandert. Und zwar durch eine halbdurchlässige Membran, semipermeabel.\nDas Wasser wandert zur Seite, wo mehr Salz oder Zucker gelöst ist.\nAchtung, Falle! Bei der Osmose wandert nicht das Salz. Das Salz kommt gar nicht durch. Es wandert das Wasser.\nMerksatz: Osmose ist Wasser durch eine halbdurchlässige Membran."
+    },
+    {
+     "titel": "Folge 9 · Das Zwiebel-Experiment",
+     "text": "Punkt neun: das Experiment mit der Zwiebelzelle.\nMan nimmt ein hauchdünnes Häutchen von einer roten Zwiebel. Rot, weil man den Zellsaft dann gut sieht.\nUnter dem Mikroskop: eckige Zellen, große rote Vakuolen.\nJetzt kommt starke Salzlösung dazu. Die ist hypertonisch, also mehr Salz als in der Zelle.\nWas macht das Wasser? Genau, es wandert dorthin, wo mehr Salz ist. Also hinaus.\nDie Vakuole schrumpft. Der Zellinhalt löst sich von der Zellwand. Das heißt Plasmolyse.\nDie Zellwand bleibt aber stehen. Sie ist fest.\nDann gibt man reines Wasser dazu. Jetzt strömt Wasser wieder hinein. Die Vakuole wird wieder groß. Das heißt Deplasmolyse.\nMerksatz: Salz zieht Wasser raus. Reines Wasser bringt es zurück."
+    },
+    {
+     "titel": "Folge 10 · Fachbegriffe",
+     "text": "Punkt zehn: die Fachbegriffe. Schnell und knackig.\nSemipermeabel heißt halbdurchlässig.\nHydrophil heißt wasserliebend. Hydrophob heißt wassermeidend.\nHypertonisch: draußen sind mehr gelöste Stoffe als in der Zelle. Wasser geht raus.\nHypotonisch: draußen weniger. Wasser geht rein.\nIsotonisch: gleich viel. Nichts passiert.\nMerk dir: hyper heißt mehr, hypo heißt weniger, iso heißt gleich.\nProkaryotisch: Zelle ohne echten Zellkern. Zum Beispiel Bakterien.\nEukaryotisch: Zelle mit echtem Zellkern. Tiere, Pflanzen, Pilze.\nUnd ein Zellorganell ist ein Teil der Zelle mit einer bestimmten Aufgabe."
+    },
+    {
+     "titel": "Folge 11 · Euglena",
+     "text": "Punkt elf, der letzte: die Euglena, auch Augentierchen genannt.\nSie ist ein Einzeller und lebt im Süßwasser.\nSie bewegt sich mit einer Geißel. Die schlägt wie ein Propeller.\nVorne hat sie einen roten Augenfleck. Damit findet sie das Licht.\nUnd jetzt das Besondere: die Ernährung.\nIm Licht macht sie Fotosynthese mit ihren Chloroplasten. Sie stellt ihre Nahrung selbst her. Das heißt autotroph.\nIm Dunkeln nimmt sie Nährstoffe aus dem Wasser auf. Wie ein Tier. Das heißt heterotroph.\nVermehren tut sie sich durch Teilung. Sie teilt sich der Länge nach in zwei.\nZum Schluss kurz zusammengefasst: Merkmale des Lebens, Zellen von Tier und Pflanze, Organellen, Membran, Osmose, Zwiebel-Experiment, Fachbegriffe und Euglena.\nJetzt ab zum Probetest! Viel Erfolg, Elias."
+    }
+   ]
+  }
+ ],
  "fragen": [
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welches Zellorganell ist das „Kraftwerk“ der Zelle?",
+   "frage": "Welches ist ein Merkmal des Lebens?",
+   "optionen": [
+    "Stoffwechsel",
+    "Farbe",
+    "Härte",
+    "Glanz"
+   ],
+   "antwort": "Stoffwechsel",
+   "erklaerung": "Lebewesen nehmen Stoffe auf, wandeln sie um und geben Stoffe ab – das ist Stoffwechsel.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-01"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches ist KEIN Merkmal des Lebens?",
+   "optionen": [
+    "Schwimmen können",
+    "Wachstum",
+    "Fortpflanzung",
+    "Reizbarkeit"
+   ],
+   "antwort": "Schwimmen können",
+   "erklaerung": "Viele Lebewesen können nicht schwimmen. Wachstum, Fortpflanzung und Reizbarkeit gelten für alle Lebewesen.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-02"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Eine Pflanze dreht ihre Blätter zum Fenster. Welches Merkmal des Lebens zeigt sie?",
+   "optionen": [
+    "Reizbarkeit (Reaktion auf Reize)",
+    "Fortpflanzung",
+    "Aufbau aus Zellen",
+    "Wachstum"
+   ],
+   "antwort": "Reizbarkeit (Reaktion auf Reize)",
+   "erklaerung": "Licht ist ein Reiz, die Pflanze reagiert darauf.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-03"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Eine Katze bekommt Junge. Welches Merkmal des Lebens ist das?",
+   "optionen": [
+    "Fortpflanzung",
+    "Stoffwechsel",
+    "Reizbarkeit",
+    "Bewegung"
+   ],
+   "antwort": "Fortpflanzung",
+   "erklaerung": "Lebewesen bringen Nachkommen hervor.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-04"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Du isst ein Brot und atmest. Welches Merkmal des Lebens steckt dahinter?",
+   "optionen": [
+    "Stoffwechsel",
+    "Fortpflanzung",
+    "Wachstum",
+    "Reizbarkeit"
+   ],
+   "antwort": "Stoffwechsel",
+   "erklaerung": "Nahrung und Sauerstoff aufnehmen, umwandeln, Abfall abgeben = Stoffwechsel.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-05"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woraus sind alle Lebewesen aufgebaut?",
+   "optionen": [
+    "Aus Zellen",
+    "Aus Kristallen",
+    "Aus Metall",
+    "Nur aus Wasser"
+   ],
+   "antwort": "Aus Zellen",
+   "erklaerung": "Die Zelle ist die kleinste Einheit des Lebens.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-06"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Kristall wird in einer Salzlösung größer. Ist er deshalb ein Lebewesen?",
+   "optionen": [
+    "Nein – er hat z. B. keinen Stoffwechsel und keine Zellen",
+    "Ja, weil er wächst",
+    "Ja, weil er glänzt",
+    "Nur wenn er warm ist"
+   ],
+   "antwort": "Nein – er hat z. B. keinen Stoffwechsel und keine Zellen",
+   "erklaerung": "Ein Merkmal allein reicht nicht. Lebewesen zeigen ALLE Merkmale des Lebens.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-07"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Feuer „frisst“ Holz und „wächst“. Warum ist es kein Lebewesen?",
+   "optionen": [
+    "Es besteht nicht aus Zellen und kann sich nicht fortpflanzen",
+    "Weil es heiß ist",
+    "Weil es orange ist",
+    "Es ist doch ein Lebewesen"
+   ],
+   "antwort": "Es besteht nicht aus Zellen und kann sich nicht fortpflanzen",
+   "erklaerung": "Nur wer alle Merkmale des Lebens erfüllt, lebt.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-08"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Lebewesen muss ALLE Merkmale des Lebens zeigen, nicht nur eines.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Ein Merkmal allein (z. B. Wachstum beim Kristall) reicht nicht.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-09"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Pflanzen haben keinen Stoffwechsel.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Auch Pflanzen nehmen Stoffe auf und wandeln sie um – zum Beispiel bei der Fotosynthese.",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-10"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Auch Pflanzen reagieren auf Reize, zum Beispiel auf Licht.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 0,
+   "id": "elias-mwuuduy0-11"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt die kleinste Einheit des Lebens?",
+   "antwort": [
+    "Zelle",
+    "die Zelle"
+   ],
+   "erklaerung": "Alle Lebewesen bestehen aus einer oder vielen Zellen.",
+   "zahl": false,
+   "stoff": 0,
+   "id": "elias-mwuuduy0-12"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Ein Lebewesen nimmt Stoffe auf, wandelt sie um und gibt Stoffe ab. Wie heißt dieses Merkmal?",
+   "antwort": [
+    "Stoffwechsel",
+    "der Stoffwechsel"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 0,
+   "id": "elias-mwuuduy0-13"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne vier Merkmale des Lebens.",
+   "stoff": 0,
+   "kern": [
+    {
+     "t": "Stoffwechsel",
+     "w": [
+      "stoffwechsel"
+     ]
+    },
+    {
+     "t": "Wachstum / Entwicklung",
+     "w": [
+      "wachs",
+      "entwickl"
+     ]
+    },
+    {
+     "t": "Fortpflanzung / Vermehrung",
+     "w": [
+      "fortpflanz",
+      "vermehr"
+     ]
+    },
+    {
+     "t": "Reizbarkeit",
+     "w": [
+      "reiz"
+     ]
+    },
+    {
+     "t": "Bewegung",
+     "w": [
+      "beweg"
+     ]
+    },
+    {
+     "t": "Aufbau aus Zellen",
+     "w": [
+      "zelle"
+     ]
+    }
+   ],
+   "mindest": 4,
+   "muster": "Merkmale des Lebens sind zum Beispiel: Stoffwechsel, Wachstum und Entwicklung, Fortpflanzung, Reizbarkeit, Bewegung und der Aufbau aus Zellen.",
+   "antwort": "Merkmale des Lebens sind zum Beispiel: Stoffwechsel, Wachstum und Entwicklung, Fortpflanzung, Reizbarkeit, Bewegung und der Aufbau aus Zellen.",
+   "id": "elias-mwuuduy0-14"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Eine Buche ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-15"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Pilz (Fliegenpilz) ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Pilze sind eigene Lebewesen – weder Pflanze noch Tier.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-16"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Bakterium ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Bakterien sind Einzeller (prokaryotische Zellen) und Lebewesen.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-17"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Stein ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-18"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Eine Euglena (Augentierchen) ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-19"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Eine Wolke ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Eine Wolke wächst und bewegt sich, aber nur durch Wind und Wasser – keine Zellen, kein Stoffwechsel.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-20"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Virus ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Viren bestehen nicht aus Zellen und haben keinen eigenen Stoffwechsel – sie zählen nicht zu den Lebewesen.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-21"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Regenwurm ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-22"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Moos ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-23"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Roboter ist ein Lebewesen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Ein Roboter bewegt sich zwar, hat aber keine Zellen, keinen Stoffwechsel und pflanzt sich nicht fort.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-24"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Gruppe gehört NICHT zu den Lebewesen?",
+   "optionen": [
+    "Viren",
+    "Bakterien",
+    "Pilze",
+    "Einzeller"
+   ],
+   "antwort": "Viren",
+   "erklaerung": "Viren haben keine Zellen und keinen eigenen Stoffwechsel.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-25"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Gruppen von Lebewesen gibt es?",
+   "optionen": [
+    "Bakterien, Pilze, Pflanzen, Tiere (und Einzeller wie Euglena)",
+    "Nur Tiere und Pflanzen",
+    "Tiere, Pflanzen und Steine",
+    "Nur Tiere"
+   ],
+   "antwort": "Bakterien, Pilze, Pflanzen, Tiere (und Einzeller wie Euglena)",
+   "erklaerung": "Auch Bakterien, Pilze und Einzeller sind Lebewesen.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-26"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ist der Mensch ein Lebewesen?",
+   "optionen": [
+    "Ja – er zeigt alle Merkmale des Lebens",
+    "Nein, nur Tiere sind Lebewesen",
+    "Nur als Baby",
+    "Nur wenn er sich bewegt"
+   ],
+   "antwort": "Ja – er zeigt alle Merkmale des Lebens",
+   "erklaerung": "",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-27"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Lebewesen besteht nur aus EINER Zelle. Wie nennt man es?",
+   "optionen": [
+    "Einzeller",
+    "Vielzeller",
+    "Organ",
+    "Gewebe"
+   ],
+   "antwort": "Einzeller",
+   "erklaerung": "Beispiele: Bakterien, Euglena.",
+   "stoff": 1,
+   "id": "elias-mwuuduy0-28"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie nennt man Lebewesen, die aus nur einer Zelle bestehen?",
+   "antwort": [
+    "Einzeller",
+    "die Einzeller",
+    "einzellig"
+   ],
+   "erklaerung": "Zum Beispiel Bakterien oder Euglena.",
+   "zahl": false,
+   "stoff": 1,
+   "id": "elias-mwuuduy0-29"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Ist ein Virus ein Lebewesen? Begründe.",
+   "stoff": 1,
+   "kern": [
+    {
+     "t": "Nein, kein Lebewesen",
+     "w": [
+      "nein",
+      "kein lebewesen",
+      "nicht leb"
+     ]
+    },
+    {
+     "t": "keine Zelle",
+     "w": [
+      "zelle"
+     ]
+    },
+    {
+     "t": "kein eigener Stoffwechsel / vermehrt sich nur in fremden Zellen",
+     "w": [
+      "stoffwechsel",
+      "fremd",
+      "wirt",
+      "andere zell"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Nein. Ein Virus besteht nicht aus einer Zelle und hat keinen eigenen Stoffwechsel. Es kann sich nur in den Zellen anderer Lebewesen vermehren.",
+   "antwort": "Nein. Ein Virus besteht nicht aus einer Zelle und hat keinen eigenen Stoffwechsel. Es kann sich nur in den Zellen anderer Lebewesen vermehren.",
+   "id": "elias-mwuuduy0-30"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du Zellwand?",
+   "optionen": [
+    "nur in der Pflanzenzelle",
+    "in beiden",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "nur in der Pflanzenzelle",
+   "erklaerung": "Die feste Zellwand (aus Cellulose) gibt nur die Pflanzenzelle Form und Halt.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-31"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du Chloroplasten?",
+   "optionen": [
+    "nur in der Pflanzenzelle",
+    "in beiden",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "nur in der Pflanzenzelle",
+   "erklaerung": "Chloroplasten machen Fotosynthese – das kann nur die Pflanzenzelle.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-32"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du große Zentralvakuole?",
+   "optionen": [
+    "nur in der Pflanzenzelle",
+    "in beiden",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "nur in der Pflanzenzelle",
+   "erklaerung": "Pflanzenzellen haben eine große Vakuole mit Zellsaft. Tierzellen haben höchstens kleine Vakuolen.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-33"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du Zellkern?",
+   "optionen": [
+    "in beiden",
+    "nur in der Pflanzenzelle",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "in beiden",
+   "erklaerung": "Beide sind eukaryotische Zellen – beide haben einen Zellkern.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-34"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du Mitochondrien?",
+   "optionen": [
+    "in beiden",
+    "nur in der Pflanzenzelle",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "in beiden",
+   "erklaerung": "Zellatmung brauchen Tier- UND Pflanzenzellen.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-35"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du Zellmembran?",
+   "optionen": [
+    "in beiden",
+    "nur in der Pflanzenzelle",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "in beiden",
+   "erklaerung": "Jede Zelle ist von einer Zellmembran umgeben.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-36"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findest du Ribosomen?",
+   "optionen": [
+    "in beiden",
+    "nur in der Pflanzenzelle",
+    "nur in der Tierzelle",
+    "in keiner"
+   ],
+   "antwort": "in beiden",
+   "erklaerung": "Ribosomen gibt es in allen Zellen.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-37"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche drei Bestandteile hat NUR die Pflanzenzelle?",
+   "optionen": [
+    "Zellwand, Chloroplasten, große Vakuole",
+    "Zellkern, Mitochondrien, Zellmembran",
+    "Ribosomen, Zellplasma, Zellkern",
+    "Zellmembran, Zellwand, Zellkern"
+   ],
+   "antwort": "Zellwand, Chloroplasten, große Vakuole",
+   "erklaerung": "Merke: Wand – Grün – Vakuole.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-38"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Unter dem Mikroskop siehst du eckige Zellen mit grünen Körnchen. Was ist es?",
+   "optionen": [
+    "Eine Pflanzenzelle",
+    "Eine Tierzelle",
+    "Ein Bakterium",
+    "Ein Virus"
+   ],
+   "antwort": "Eine Pflanzenzelle",
+   "erklaerung": "Eckig wegen der Zellwand, grün wegen der Chloroplasten.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-39"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Unter dem Mikroskop siehst du runde, unregelmäßige Zellen ohne Zellwand und ohne grüne Körnchen (z. B. Mundschleimhaut). Was ist es?",
+   "optionen": [
+    "Eine Tierzelle",
+    "Eine Pflanzenzelle",
+    "Ein Chloroplast",
+    "Eine Zwiebelzelle"
+   ],
+   "antwort": "Eine Tierzelle",
+   "erklaerung": "",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-40"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist eine Pflanzenzelle meist eckig und fest?",
+   "optionen": [
+    "Wegen der Zellwand",
+    "Wegen des Zellkerns",
+    "Wegen der Mitochondrien",
+    "Wegen der Ribosomen"
+   ],
+   "antwort": "Wegen der Zellwand",
+   "erklaerung": "",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-41"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Tierzellen haben eine Zellwand.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Tierzellen haben nur eine Zellmembran, keine Zellwand.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-42"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Pflanzenzellen haben eine Zellwand UND eine Zellmembran.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Die Zellmembran liegt innen an der Zellwand an.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-43"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Auch Pflanzenzellen haben Mitochondrien.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Falle! Pflanzen machen Fotosynthese UND Zellatmung.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-44"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Eine Zwiebelzelle hat Chloroplasten.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Die Zwiebel wächst unter der Erde und ist nicht grün – ihre Zellen haben keine Chloroplasten, aber eine Zellwand und eine Vakuole.",
+   "stoff": 2,
+   "id": "elias-mwuuduy0-45"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Aus welchem Stoff besteht die Zellwand der Pflanzenzelle?",
+   "antwort": [
+    "Cellulose",
+    "Zellulose"
+   ],
+   "erklaerung": "Die Zellwand besteht hauptsächlich aus Cellulose.",
+   "zahl": false,
+   "stoff": 2,
+   "id": "elias-mwuuduy0-46"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne die Unterschiede zwischen einer Tierzelle und einer Pflanzenzelle.",
+   "stoff": 2,
+   "kern": [
+    {
+     "t": "Zellwand nur bei Pflanzen",
+     "w": [
+      "zellwand"
+     ]
+    },
+    {
+     "t": "Chloroplasten nur bei Pflanzen",
+     "w": [
+      "chloroplast",
+      "blattgr"
+     ]
+    },
+    {
+     "t": "große Vakuole bei Pflanzen",
+     "w": [
+      "vakuole"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Die Pflanzenzelle hat zusätzlich eine Zellwand, Chloroplasten und eine große Zentralvakuole. Die Tierzelle hat nur eine Zellmembran, keine Chloroplasten und höchstens kleine Vakuolen.",
+   "antwort": "Die Pflanzenzelle hat zusätzlich eine Zellwand, Chloroplasten und eine große Zentralvakuole. Die Tierzelle hat nur eine Zellmembran, keine Chloroplasten und höchstens kleine Vakuolen.",
+   "id": "elias-mwuuduy0-47"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Zellkern?",
+   "optionen": [
+    "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)",
+    "Herstellung von Eiweißen (Proteinen)",
+    "Verpacken und Versenden von Stoffen in Bläschen",
+    "Gibt der Pflanzenzelle Form und Festigkeit"
+   ],
+   "antwort": "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-48"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Steuerzentrale der Zelle, enthält die Erbinformation (DNA)“",
+   "optionen": [
+    "Zellkern",
+    "Chloroplast",
+    "Endoplasmatisches Retikulum (ER)",
+    "Vakuole"
+   ],
+   "antwort": "Zellkern",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-49"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Mitochondrium?",
+   "optionen": [
+    "Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen",
+    "Kanalsystem für Transport in der Zelle",
+    "Verdauung und Abbau von Stoffen in der Zelle",
+    "Grenze der Zelle, regelt, was hinein und hinaus darf"
+   ],
+   "antwort": "Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-50"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen“",
    "optionen": [
     "Mitochondrium",
-    "Zellkern",
     "Ribosom",
-    "Vakuole"
+    "Golgi-Apparat",
+    "Zellwand"
    ],
    "antwort": "Mitochondrium",
    "erklaerung": "",
-   "id": "bi001"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-51"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Was haben Pflanzenzellen, Tierzellen aber nicht?",
+   "frage": "Welche Aufgabe hat: Chloroplast?",
    "optionen": [
-    "Zellwand und Chloroplasten",
-    "Zellkern",
+    "Fotosynthese – aus Licht wird Zucker hergestellt",
+    "Verpacken und Versenden von Stoffen in Bläschen",
+    "Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall",
+    "Flüssigkeit, in der die Organellen schwimmen"
+   ],
+   "antwort": "Fotosynthese – aus Licht wird Zucker hergestellt",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-52"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Fotosynthese – aus Licht wird Zucker hergestellt“",
+   "optionen": [
+    "Chloroplast",
+    "Endoplasmatisches Retikulum (ER)",
+    "Lysosom",
+    "Zellmembran"
+   ],
+   "antwort": "Chloroplast",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-53"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Ribosom?",
+   "optionen": [
+    "Herstellung von Eiweißen (Proteinen)",
+    "Verdauung und Abbau von Stoffen in der Zelle",
+    "Gibt der Pflanzenzelle Form und Festigkeit",
+    "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)"
+   ],
+   "antwort": "Herstellung von Eiweißen (Proteinen)",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-54"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Herstellung von Eiweißen (Proteinen)“",
+   "optionen": [
+    "Ribosom",
+    "Golgi-Apparat",
+    "Vakuole",
+    "Zellplasma (Cytoplasma)"
+   ],
+   "antwort": "Ribosom",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-55"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Endoplasmatisches Retikulum (ER)?",
+   "optionen": [
+    "Kanalsystem für Transport in der Zelle",
+    "Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall",
+    "Grenze der Zelle, regelt, was hinein und hinaus darf",
+    "Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen"
+   ],
+   "antwort": "Kanalsystem für Transport in der Zelle",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-56"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Kanalsystem für Transport in der Zelle“",
+   "optionen": [
+    "Endoplasmatisches Retikulum (ER)",
+    "Lysosom",
+    "Zellwand",
+    "Zellkern"
+   ],
+   "antwort": "Endoplasmatisches Retikulum (ER)",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-57"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Golgi-Apparat?",
+   "optionen": [
+    "Verpacken und Versenden von Stoffen in Bläschen",
+    "Gibt der Pflanzenzelle Form und Festigkeit",
+    "Flüssigkeit, in der die Organellen schwimmen",
+    "Fotosynthese – aus Licht wird Zucker hergestellt"
+   ],
+   "antwort": "Verpacken und Versenden von Stoffen in Bläschen",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-58"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Verpacken und Versenden von Stoffen in Bläschen“",
+   "optionen": [
+    "Golgi-Apparat",
+    "Vakuole",
     "Zellmembran",
-    "Mitochondrien"
+    "Mitochondrium"
    ],
-   "antwort": "Zellwand und Chloroplasten",
+   "antwort": "Golgi-Apparat",
    "erklaerung": "",
-   "id": "bi002"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-59"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Wo liegt die Erbinformation (DNA) hauptsächlich?",
+   "frage": "Welche Aufgabe hat: Lysosom?",
    "optionen": [
-    "im Zellkern",
-    "in der Zellwand",
-    "in der Vakuole",
-    "im Zytoplasma"
+    "Verdauung und Abbau von Stoffen in der Zelle",
+    "Grenze der Zelle, regelt, was hinein und hinaus darf",
+    "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)",
+    "Herstellung von Eiweißen (Proteinen)"
    ],
-   "antwort": "im Zellkern",
+   "antwort": "Verdauung und Abbau von Stoffen in der Zelle",
    "erklaerung": "",
-   "id": "bi003"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-60"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Was sind Prokaryoten?",
+   "frage": "Welches Zellorganell ist gemeint? „Verdauung und Abbau von Stoffen in der Zelle“",
    "optionen": [
-    "Lebewesen ohne Zellkern (z. B. Bakterien)",
-    "Pflanzen",
-    "Pilze",
-    "Tiere mit Wirbelsäule"
+    "Lysosom",
+    "Zellwand",
+    "Zellplasma (Cytoplasma)",
+    "Chloroplast"
    ],
-   "antwort": "Lebewesen ohne Zellkern (z. B. Bakterien)",
+   "antwort": "Lysosom",
    "erklaerung": "",
-   "id": "bi004"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-61"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Welche Formel beschreibt die Fotosynthese grob?",
+   "frage": "Welche Aufgabe hat: Vakuole?",
    "optionen": [
-    "CO₂ + H₂O + Licht → Glucose + O₂",
-    "O₂ + Glucose → CO₂ + H₂O",
-    "H₂O → H₂ + O₂",
-    "CO₂ → C + O₂"
+    "Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall",
+    "Flüssigkeit, in der die Organellen schwimmen",
+    "Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen",
+    "Kanalsystem für Transport in der Zelle"
    ],
-   "antwort": "CO₂ + H₂O + Licht → Glucose + O₂",
+   "antwort": "Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall",
    "erklaerung": "",
-   "id": "bi005"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-62"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Was ist ein Ökosystem?",
+   "frage": "Welches Zellorganell ist gemeint? „Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall“",
    "optionen": [
-    "Lebensraum + Lebensgemeinschaft",
-    "Nur die Pflanzen",
-    "Eine Zelle",
-    "Ein Organ"
+    "Vakuole",
+    "Zellmembran",
+    "Zellkern",
+    "Ribosom"
    ],
-   "antwort": "Lebensraum + Lebensgemeinschaft",
+   "antwort": "Vakuole",
    "erklaerung": "",
-   "id": "bi006"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-63"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Wie heißen Lebewesen, die organische Stoffe selbst herstellen?",
+   "frage": "Welche Aufgabe hat: Zellwand?",
    "optionen": [
-    "Produzenten",
-    "Konsumenten",
-    "Destruenten",
-    "Parasiten"
+    "Gibt der Pflanzenzelle Form und Festigkeit",
+    "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)",
+    "Fotosynthese – aus Licht wird Zucker hergestellt",
+    "Verpacken und Versenden von Stoffen in Bläschen"
    ],
-   "antwort": "Produzenten",
+   "antwort": "Gibt der Pflanzenzelle Form und Festigkeit",
    "erklaerung": "",
-   "id": "bi007"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-64"
   },
   {
    "typ": "auswahl",
    "art": "Auswählen",
-   "frage": "Was macht ein Lichtmikroskop sichtbar?",
+   "frage": "Welches Zellorganell ist gemeint? „Gibt der Pflanzenzelle Form und Festigkeit“",
    "optionen": [
-    "z. B. Zellen und Zellkern",
-    "einzelne Atome",
-    "Viren im Detail",
-    "Elektronen"
+    "Zellwand",
+    "Zellplasma (Cytoplasma)",
+    "Mitochondrium",
+    "Endoplasmatisches Retikulum (ER)"
    ],
-   "antwort": "z. B. Zellen und Zellkern",
+   "antwort": "Zellwand",
    "erklaerung": "",
-   "id": "bi008"
+   "stoff": 3,
+   "id": "elias-mwuuduy0-65"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Zellmembran?",
+   "optionen": [
+    "Grenze der Zelle, regelt, was hinein und hinaus darf",
+    "Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen",
+    "Herstellung von Eiweißen (Proteinen)",
+    "Verdauung und Abbau von Stoffen in der Zelle"
+   ],
+   "antwort": "Grenze der Zelle, regelt, was hinein und hinaus darf",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-66"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Grenze der Zelle, regelt, was hinein und hinaus darf“",
+   "optionen": [
+    "Zellmembran",
+    "Zellkern",
+    "Chloroplast",
+    "Golgi-Apparat"
+   ],
+   "antwort": "Zellmembran",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-67"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat: Zellplasma (Cytoplasma)?",
+   "optionen": [
+    "Flüssigkeit, in der die Organellen schwimmen",
+    "Fotosynthese – aus Licht wird Zucker hergestellt",
+    "Kanalsystem für Transport in der Zelle",
+    "Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall"
+   ],
+   "antwort": "Flüssigkeit, in der die Organellen schwimmen",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-68"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Zellorganell ist gemeint? „Flüssigkeit, in der die Organellen schwimmen“",
+   "optionen": [
+    "Zellplasma (Cytoplasma)",
+    "Mitochondrium",
+    "Ribosom",
+    "Lysosom"
+   ],
+   "antwort": "Zellplasma (Cytoplasma)",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-69"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welches Zellorganell nennt man das „Kraftwerk der Zelle“?",
+   "antwort": [
+    "Mitochondrium",
+    "Mitochondrien",
+    "Mitochondrion"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 3,
+   "id": "elias-mwuuduy0-70"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welches Zellorganell ist die „Steuerzentrale“ der Zelle?",
+   "antwort": [
+    "Zellkern",
+    "Kern",
+    "der Zellkern",
+    "Nucleus",
+    "Nukleus"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 3,
+   "id": "elias-mwuuduy0-71"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welche winzigen Organellen stellen Eiweiße (Proteine) her?",
+   "antwort": [
+    "Ribosomen",
+    "Ribosom"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 3,
+   "id": "elias-mwuuduy0-72"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt die Flüssigkeit, in der die Zellorganellen liegen?",
+   "antwort": [
+    "Zellplasma",
+    "Cytoplasma",
+    "Zytoplasma",
+    "Plasma"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 3,
+   "id": "elias-mwuuduy0-73"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ribosomen stellen Eiweiße (Proteine) her.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-74"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Der Golgi-Apparat macht die Fotosynthese.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Fotosynthese passiert in den Chloroplasten. Der Golgi-Apparat verpackt und versendet Stoffe.",
+   "stoff": 3,
+   "id": "elias-mwuuduy0-75"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe die Aufgaben von drei Zellorganellen deiner Wahl.",
+   "stoff": 3,
+   "kern": [
+    {
+     "t": "Zellkern: Steuerung/DNA",
+     "w": [
+      "kern.*(steuer|dna|erb)",
+      "(steuer|dna|erb).*kern"
+     ]
+    },
+    {
+     "t": "Mitochondrium: Zellatmung/Energie",
+     "w": [
+      "mitochond"
+     ]
+    },
+    {
+     "t": "Chloroplast: Fotosynthese",
+     "w": [
+      "chloroplast"
+     ]
+    },
+    {
+     "t": "Ribosom: Eiweiße",
+     "w": [
+      "ribosom"
+     ]
+    },
+    {
+     "t": "Vakuole: Speicher",
+     "w": [
+      "vakuole"
+     ]
+    },
+    {
+     "t": "Zellmembran/Zellwand",
+     "w": [
+      "membran",
+      "zellwand"
+     ]
+    },
+    {
+     "t": "ER/Golgi/Lysosom",
+     "w": [
+      "retikulum",
+      "golgi",
+      "lysosom",
+      "\\ber\\b"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Zum Beispiel: Der Zellkern steuert die Zelle und enthält die DNA. Mitochondrien gewinnen durch Zellatmung Energie. Chloroplasten machen Fotosynthese. Ribosomen stellen Eiweiße her. Die Vakuole speichert Zellsaft.",
+   "antwort": "Zum Beispiel: Der Zellkern steuert die Zelle und enthält die DNA. Mitochondrien gewinnen durch Zellatmung Energie. Chloroplasten machen Fotosynthese. Ribosomen stellen Eiweiße her. Die Vakuole speichert Zellsaft.",
+   "id": "elias-mwuuduy0-76"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welchem Zellorganell findet die Zellatmung statt?",
+   "optionen": [
+    "In den Mitochondrien",
+    "In den Chloroplasten",
+    "Im Zellkern",
+    "In der Vakuole"
+   ],
+   "antwort": "In den Mitochondrien",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-77"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welchem Zellorganell findet die Fotosynthese statt?",
+   "optionen": [
+    "In den Chloroplasten",
+    "In den Mitochondrien",
+    "Im Zellkern",
+    "In den Ribosomen"
+   ],
+   "antwort": "In den Chloroplasten",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-78"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo ist die Erbinformation (DNA) einer Tier- oder Pflanzenzelle gespeichert?",
+   "optionen": [
+    "Im Zellkern",
+    "In der Vakuole",
+    "In der Zellwand",
+    "Im Golgi-Apparat"
+   ],
+   "antwort": "Im Zellkern",
+   "erklaerung": "Ein bisschen DNA haben auch Mitochondrien und Chloroplasten – der Hauptteil liegt aber im Zellkern.",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-79"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was entsteht bei der Fotosynthese?",
+   "optionen": [
+    "Zucker (Traubenzucker) und Sauerstoff",
+    "Kohlenstoffdioxid und Wasser",
+    "Nur Wasser",
+    "DNA"
+   ],
+   "antwort": "Zucker (Traubenzucker) und Sauerstoff",
+   "erklaerung": "Aus Kohlenstoffdioxid und Wasser wird mit Lichtenergie Zucker und Sauerstoff.",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-80"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was braucht die Zellatmung?",
+   "optionen": [
+    "Zucker und Sauerstoff",
+    "Licht und Kohlenstoffdioxid",
+    "Nur Wasser",
+    "Nur Licht"
+   ],
+   "antwort": "Zucker und Sauerstoff",
+   "erklaerung": "Bei der Zellatmung wird Zucker mit Sauerstoff abgebaut – Energie wird frei.",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-81"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was wird bei der Zellatmung frei?",
+   "optionen": [
+    "Energie (dazu Kohlenstoffdioxid und Wasser)",
+    "Sauerstoff",
+    "Licht",
+    "DNA"
+   ],
+   "antwort": "Energie (dazu Kohlenstoffdioxid und Wasser)",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-82"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welchen grünen Farbstoff enthalten die Chloroplasten?",
+   "optionen": [
+    "Chlorophyll (Blattgrün)",
+    "Hämoglobin",
+    "Cellulose",
+    "Melanin"
+   ],
+   "antwort": "Chlorophyll (Blattgrün)",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-83"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was braucht die Fotosynthese als Energiequelle?",
+   "optionen": [
+    "Licht",
+    "Wärme aus dem Boden",
+    "Zucker",
+    "Sauerstoff"
+   ],
+   "antwort": "Licht",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-84"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Pflanzen machen nur Fotosynthese und keine Zellatmung.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Falle! Pflanzen machen beides: Fotosynthese in den Chloroplasten, Zellatmung in den Mitochondrien.",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-85"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Tierzellen machen Zellatmung in ihren Mitochondrien.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-86"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Die DNA ist im Zellkern gespeichert.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 4,
+   "id": "elias-mwuuduy0-87"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt der Vorgang in den Chloroplasten, bei dem mit Licht Zucker hergestellt wird?",
+   "antwort": [
+    "Fotosynthese",
+    "Photosynthese"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 4,
+   "id": "elias-mwuuduy0-88"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt der Vorgang in den Mitochondrien, bei dem Zucker mit Sauerstoff abgebaut wird?",
+   "antwort": [
+    "Zellatmung",
+    "Atmung",
+    "innere Atmung"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 4,
+   "id": "elias-mwuuduy0-89"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wofür steht die Abkürzung für die Erbinformation? (drei Buchstaben)",
+   "antwort": [
+    "DNA",
+    "DNS"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 4,
+   "id": "elias-mwuuduy0-90"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre, in welchen Zellorganellen Zellatmung und Fotosynthese stattfinden und wo die DNA liegt.",
+   "stoff": 4,
+   "kern": [
+    {
+     "t": "Zellatmung in den Mitochondrien",
+     "w": [
+      "mitochond"
+     ]
+    },
+    {
+     "t": "Fotosynthese in den Chloroplasten",
+     "w": [
+      "chloroplast"
+     ]
+    },
+    {
+     "t": "DNA im Zellkern",
+     "w": [
+      "kern"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Die Zellatmung findet in den Mitochondrien statt. Die Fotosynthese findet in den Chloroplasten statt (nur bei Pflanzen). Die Erbinformation (DNA) liegt im Zellkern.",
+   "antwort": "Die Zellatmung findet in den Mitochondrien statt. Die Fotosynthese findet in den Chloroplasten statt (nur bei Pflanzen). Die Erbinformation (DNA) liegt im Zellkern.",
+   "id": "elias-mwuuduy0-91"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woraus besteht die Grundstruktur der Biomembran?",
+   "optionen": [
+    "Aus einer Doppelschicht aus Phospholipiden",
+    "Aus Cellulose",
+    "Aus einer einzigen Eiweißschicht",
+    "Aus Zucker"
+   ],
+   "antwort": "Aus einer Doppelschicht aus Phospholipiden",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-92"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Phospholipid hat einen Kopf und zwei Schwänze. Wie verhält sich der Kopf zu Wasser?",
+   "optionen": [
+    "Er ist hydrophil (wasserliebend)",
+    "Er ist hydrophob (wassermeidend)",
+    "Er löst sich auf",
+    "Er hat mit Wasser nichts zu tun"
+   ],
+   "antwort": "Er ist hydrophil (wasserliebend)",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-93"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie verhalten sich die Fettsäure-Schwänze eines Phospholipids zu Wasser?",
+   "optionen": [
+    "Sie sind hydrophob (wassermeidend)",
+    "Sie sind hydrophil",
+    "Sie saugen Wasser auf",
+    "Sie sind aus Wasser"
+   ],
+   "antwort": "Sie sind hydrophob (wassermeidend)",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-94"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin zeigen die hydrophoben Schwänze in der Doppelschicht?",
+   "optionen": [
+    "Nach innen, zueinander",
+    "Nach außen zum Wasser",
+    "Ins Zellplasma",
+    "Zum Zellkern"
+   ],
+   "antwort": "Nach innen, zueinander",
+   "erklaerung": "Die Schwänze meiden Wasser und verstecken sich in der Mitte der Membran.",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-95"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin zeigen die hydrophilen Köpfe in der Doppelschicht?",
+   "optionen": [
+    "Nach außen zur wässrigen Umgebung und nach innen zum Zellplasma",
+    "Zueinander in die Mitte",
+    "Nur zum Zellkern",
+    "Nirgendwohin"
+   ],
+   "antwort": "Nach außen zur wässrigen Umgebung und nach innen zum Zellplasma",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-96"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was steckt außer Phospholipiden noch in der Membran?",
+   "optionen": [
+    "Membranproteine (Eiweiße)",
+    "Chloroplasten",
+    "DNA",
+    "Zellwände"
+   ],
+   "antwort": "Membranproteine (Eiweiße)",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-97"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt das Modell, das die Membran als bewegliche Schicht mit eingebauten Proteinen beschreibt?",
+   "optionen": [
+    "Flüssig-Mosaik-Modell",
+    "Schlüssel-Schloss-Modell",
+    "Atommodell",
+    "Kugelmodell"
+   ],
+   "antwort": "Flüssig-Mosaik-Modell",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-98"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Die Zellmembran ist eine starre Wand.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Sie ist flexibel und beweglich – die Bausteine können sich darin verschieben.",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-99"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Die Biomembran besteht aus zwei Schichten von Phospholipiden.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-100"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Proteine können ganz durch die Membran hindurchreichen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Solche Tunnel- oder Kanalproteine verbinden außen und innen.",
+   "stoff": 5,
+   "id": "elias-mwuuduy0-101"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißen die Bausteine der Membran mit wasserliebendem Kopf und zwei wassermeidenden Schwänzen?",
+   "antwort": [
+    "Phospholipide",
+    "Phospholipid",
+    "Phospholipiden"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 5,
+   "id": "elias-mwuuduy0-102"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Die Membran besteht aus einer ...schicht aus Phospholipiden. Ergänze.",
+   "antwort": [
+    "Doppelschicht",
+    "Doppel",
+    "doppelten"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 5,
+   "id": "elias-mwuuduy0-103"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe den Aufbau der Biomembran.",
+   "stoff": 5,
+   "kern": [
+    {
+     "t": "Doppelschicht",
+     "w": [
+      "doppel",
+      "zwei schicht"
+     ]
+    },
+    {
+     "t": "Phospholipide",
+     "w": [
+      "phospholipid",
+      "lipid"
+     ]
+    },
+    {
+     "t": "Köpfe hydrophil außen",
+     "w": [
+      "hydrophil",
+      "kopf",
+      "köpf"
+     ]
+    },
+    {
+     "t": "Schwänze hydrophob innen",
+     "w": [
+      "hydrophob",
+      "schw[äa]nz"
+     ]
+    },
+    {
+     "t": "Membranproteine eingelagert",
+     "w": [
+      "protein",
+      "eiwei"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Die Biomembran ist eine Doppelschicht aus Phospholipiden. Die wasserliebenden (hydrophilen) Köpfe zeigen nach außen und innen zum Wasser, die wassermeidenden (hydrophoben) Schwänze zeigen zueinander in die Mitte. In die Doppelschicht sind Membranproteine eingebaut.",
+   "antwort": "Die Biomembran ist eine Doppelschicht aus Phospholipiden. Die wasserliebenden (hydrophilen) Köpfe zeigen nach außen und innen zum Wasser, die wassermeidenden (hydrophoben) Schwänze zeigen zueinander in die Mitte. In die Doppelschicht sind Membranproteine eingebaut.",
+   "id": "elias-mwuuduy0-104"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe hat die Zellmembran?",
+   "optionen": [
+    "Sie grenzt die Zelle ab und regelt den Stoffaustausch",
+    "Sie macht Fotosynthese",
+    "Sie speichert die DNA",
+    "Sie stellt Zucker her"
+   ],
+   "antwort": "Sie grenzt die Zelle ab und regelt den Stoffaustausch",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-105"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet: Die Membran ist „selektiv durchlässig“?",
+   "optionen": [
+    "Sie lässt nur bestimmte Stoffe durch",
+    "Sie lässt alles durch",
+    "Sie lässt nichts durch",
+    "Sie lässt nur Licht durch"
+   ],
+   "antwort": "Sie lässt nur bestimmte Stoffe durch",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-106"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe haben Tunnel- bzw. Kanalproteine?",
+   "optionen": [
+    "Sie lassen bestimmte Stoffe durch die Membran hindurch",
+    "Sie machen Zellatmung",
+    "Sie speichern Wasser",
+    "Sie teilen die Zelle"
+   ],
+   "antwort": "Sie lassen bestimmte Stoffe durch die Membran hindurch",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-107"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Aufgabe haben Rezeptorproteine?",
+   "optionen": [
+    "Sie empfangen Signale (Botenstoffe) von außen",
+    "Sie verdauen Stoffe",
+    "Sie machen Fotosynthese",
+    "Sie bilden die Zellwand"
+   ],
+   "antwort": "Sie empfangen Signale (Botenstoffe) von außen",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-108"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wozu dienen Proteine mit Zuckerketten an der Außenseite der Membran?",
+   "optionen": [
+    "Zum Erkennen von Zellen (Zellerkennung)",
+    "Zur Fotosynthese",
+    "Als Energiespeicher der DNA",
+    "Als Zellwand"
+   ],
+   "antwort": "Zum Erkennen von Zellen (Zellerkennung)",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-109"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum kommen große oder geladene Teilchen nicht einfach durch die Fett-Doppelschicht?",
+   "optionen": [
+    "Die hydrophobe Mitte lässt sie nicht durch – sie brauchen Transportproteine",
+    "Die Membran hat keine Löcher, also kommt gar nichts durch",
+    "Sie sind zu leicht",
+    "Weil die Zellwand sie aufhält"
+   ],
+   "antwort": "Die hydrophobe Mitte lässt sie nicht durch – sie brauchen Transportproteine",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-110"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Membranproteine helfen beim Transport von Stoffen in die Zelle.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-111"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Die Zellmembran lässt alle Stoffe ungehindert durch.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Sie ist selektiv durchlässig.",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-112"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Über Rezeptoren in der Membran kann die Zelle Signale empfangen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 6,
+   "id": "elias-mwuuduy0-113"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie nennt man Membranproteine, die Signale/Botenstoffe von außen empfangen?",
+   "antwort": [
+    "Rezeptoren",
+    "Rezeptor",
+    "Rezeptorproteine",
+    "Rezeptorprotein"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 6,
+   "id": "elias-mwuuduy0-114"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne Aufgaben der Zellmembran und der Membranproteine.",
+   "stoff": 6,
+   "kern": [
+    {
+     "t": "Abgrenzung / Schutz",
+     "w": [
+      "grenz",
+      "schütz",
+      "schutz",
+      "hülle"
+     ]
+    },
+    {
+     "t": "Stoffaustausch regeln / selektiv durchlässig",
+     "w": [
+      "stoff",
+      "durchläss",
+      "aufnahm",
+      "transport"
+     ]
+    },
+    {
+     "t": "Transport durch Tunnel-/Kanalproteine",
+     "w": [
+      "tunnel",
+      "kanal",
+      "transport",
+      "carrier"
+     ]
+    },
+    {
+     "t": "Signale empfangen (Rezeptoren)",
+     "w": [
+      "signal",
+      "rezeptor",
+      "botenstoff"
+     ]
+    },
+    {
+     "t": "Zellerkennung",
+     "w": [
+      "erkenn"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Die Zellmembran grenzt die Zelle nach außen ab und regelt, welche Stoffe hinein und hinaus dürfen (selektiv durchlässig). Membranproteine transportieren Stoffe als Tunnel- oder Kanalproteine, empfangen als Rezeptoren Signale und helfen beim Erkennen von Zellen.",
+   "antwort": "Die Zellmembran grenzt die Zelle nach außen ab und regelt, welche Stoffe hinein und hinaus dürfen (selektiv durchlässig). Membranproteine transportieren Stoffe als Tunnel- oder Kanalproteine, empfangen als Rezeptoren Signale und helfen beim Erkennen von Zellen.",
+   "id": "elias-mwuuduy0-115"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Diffusion?",
+   "optionen": [
+    "Teilchen verteilen sich durch Eigenbewegung von selbst gleichmäßig – von hoher zu niedriger Konzentration",
+    "Wasser wandert durch eine Zellwand nach oben",
+    "Die Zelle teilt sich",
+    "Zucker wird mit Sauerstoff abgebaut"
+   ],
+   "antwort": "Teilchen verteilen sich durch Eigenbewegung von selbst gleichmäßig – von hoher zu niedriger Konzentration",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-116"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Osmose?",
+   "optionen": [
+    "Die Diffusion von Wasser durch eine semipermeable Membran",
+    "Die Bewegung einer Geißel",
+    "Das Wachsen einer Zelle",
+    "Die Diffusion von Gasen in der Luft"
+   ],
+   "antwort": "Die Diffusion von Wasser durch eine semipermeable Membran",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-117"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist der wichtigste Unterschied zwischen Osmose und Diffusion?",
+   "optionen": [
+    "Bei der Osmose wandert Wasser durch eine halbdurchlässige Membran",
+    "Osmose geht nur im Licht",
+    "Diffusion braucht eine Membran, Osmose nicht",
+    "Es gibt keinen Unterschied"
+   ],
+   "antwort": "Bei der Osmose wandert Wasser durch eine halbdurchlässige Membran",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-118"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Tropfen Tinte verteilt sich ohne Umrühren im ganzen Wasserglas. Wie heißt das?",
+   "optionen": [
+    "Diffusion",
+    "Osmose",
+    "Plasmolyse",
+    "Fotosynthese"
+   ],
+   "antwort": "Diffusion",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-119"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Der Duft von Parfum breitet sich im ganzen Zimmer aus. Wie heißt das?",
+   "optionen": [
+    "Diffusion",
+    "Osmose",
+    "Deplasmolyse",
+    "Zellatmung"
+   ],
+   "antwort": "Diffusion",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-120"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In welche Richtung wandert Wasser bei der Osmose?",
+   "optionen": [
+    "Zur Seite mit der höheren Konzentration gelöster Stoffe (z. B. mehr Salz)",
+    "Zur Seite mit weniger Salz",
+    "Immer nach oben",
+    "Gar nicht"
+   ],
+   "antwort": "Zur Seite mit der höheren Konzentration gelöster Stoffe (z. B. mehr Salz)",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-121"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wann hört die Diffusion auf (sieht man nichts mehr)?",
+   "optionen": [
+    "Wenn die Teilchen gleichmäßig verteilt sind",
+    "Nach genau einer Minute",
+    "Wenn es dunkel wird",
+    "Nie"
+   ],
+   "antwort": "Wenn die Teilchen gleichmäßig verteilt sind",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-122"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wann läuft Diffusion schneller?",
+   "optionen": [
+    "Bei höherer Temperatur",
+    "Bei Kälte",
+    "Im Dunkeln",
+    "Wenn man nicht hinschaut"
+   ],
+   "antwort": "Bei höherer Temperatur",
+   "erklaerung": "Wärmere Teilchen bewegen sich schneller.",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-123"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Diffusion braucht keine zusätzliche Energie – die Teilchen bewegen sich von selbst.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-124"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Osmose ist ein Sonderfall der Diffusion.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Osmose = Diffusion von Wasser durch eine semipermeable Membran.",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-125"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Bei der Osmose wandern die gelösten Salzteilchen durch die Membran.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Nur das Wasser kommt durch die semipermeable Membran – die gelösten Teilchen nicht.",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-126"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Bei der Diffusion wandern Teilchen von der niedrigen zur hohen Konzentration.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Umgekehrt: von hoher zu niedriger Konzentration.",
+   "stoff": 7,
+   "id": "elias-mwuuduy0-127"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt die Diffusion von Wasser durch eine semipermeable Membran?",
+   "antwort": [
+    "Osmose",
+    "die Osmose"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 7,
+   "id": "elias-mwuuduy0-128"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt die selbstständige, gleichmäßige Verteilung von Teilchen?",
+   "antwort": [
+    "Diffusion",
+    "die Diffusion"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 7,
+   "id": "elias-mwuuduy0-129"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre Diffusion und Osmose und nenne den Unterschied.",
+   "stoff": 7,
+   "kern": [
+    {
+     "t": "Diffusion: Teilchen verteilen sich gleichmäßig",
+     "w": [
+      "verteil",
+      "ausbreit"
+     ]
+    },
+    {
+     "t": "von hoher zu niedriger Konzentration",
+     "w": [
+      "konzentration",
+      "hoch.*nied",
+      "viel.*wenig"
+     ]
+    },
+    {
+     "t": "Osmose: Wasser wandert",
+     "w": [
+      "wasser"
+     ]
+    },
+    {
+     "t": "durch semipermeable Membran",
+     "w": [
+      "semipermeab",
+      "halbdurchl",
+      "membran"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Diffusion: Teilchen bewegen sich von selbst und verteilen sich gleichmäßig, von der hohen zur niedrigen Konzentration. Osmose ist die Diffusion von Wasser durch eine semipermeable (halbdurchlässige) Membran. Der Unterschied: Bei der Osmose braucht es eine Membran und nur das Wasser wandert.",
+   "antwort": "Diffusion: Teilchen bewegen sich von selbst und verteilen sich gleichmäßig, von der hohen zur niedrigen Konzentration. Osmose ist die Diffusion von Wasser durch eine semipermeable (halbdurchlässige) Membran. Der Unterschied: Bei der Osmose braucht es eine Membran und nur das Wasser wandert.",
+   "id": "elias-mwuuduy0-130"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was passiert, wenn man Zwiebelzellen in eine starke Salzlösung legt?",
+   "optionen": [
+    "Wasser strömt aus der Vakuole, der Zellinhalt löst sich von der Zellwand (Plasmolyse)",
+    "Die Zellen platzen",
+    "Die Zellen werden grün",
+    "Nichts"
+   ],
+   "antwort": "Wasser strömt aus der Vakuole, der Zellinhalt löst sich von der Zellwand (Plasmolyse)",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-131"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was passiert, wenn man die plasmolysierten Zellen danach in reines (destilliertes) Wasser legt?",
+   "optionen": [
+    "Wasser strömt wieder ein, der Zellinhalt legt sich wieder an die Zellwand (Deplasmolyse)",
+    "Die Zellen bleiben geschrumpft",
+    "Die Zellwand löst sich auf",
+    "Die Zellen bekommen Chloroplasten"
+   ],
+   "antwort": "Wasser strömt wieder ein, der Zellinhalt legt sich wieder an die Zellwand (Deplasmolyse)",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-132"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum verwendet man für das Experiment gern eine ROTE Zwiebel?",
+   "optionen": [
+    "Der rote Zellsaft in der Vakuole macht das Schrumpfen gut sichtbar",
+    "Weil rote Zwiebeln mehr Chloroplasten haben",
+    "Weil sie schärfer sind",
+    "Weil weiße Zwiebeln keine Zellen haben"
+   ],
+   "antwort": "Der rote Zellsaft in der Vakuole macht das Schrumpfen gut sichtbar",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-133"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Teil der Zwiebelzelle behält bei der Plasmolyse seine Form?",
+   "optionen": [
+    "Die Zellwand",
+    "Die Vakuole",
+    "Die Zellmembran",
+    "Das Zellplasma"
+   ],
+   "antwort": "Die Zellwand",
+   "erklaerung": "Die feste Zellwand bleibt stehen – der Inhalt zieht sich zurück.",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-134"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Teil der Zwiebelzelle schrumpft bei der Plasmolyse am deutlichsten?",
+   "optionen": [
+    "Die Vakuole",
+    "Die Zellwand",
+    "Der Objektträger",
+    "Das Mikroskop"
+   ],
+   "antwort": "Die Vakuole",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-135"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Womit beobachtet man die Zwiebelzellen?",
+   "optionen": [
+    "Mit dem Mikroskop",
+    "Mit der Lupe allein reicht es genau",
+    "Mit dem Fernrohr",
+    "Mit freiem Auge"
+   ],
+   "antwort": "Mit dem Mikroskop",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-136"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche Schicht der Zwiebel legt man auf den Objektträger?",
+   "optionen": [
+    "Ein dünnes Häutchen (Oberhaut) einer Zwiebelschuppe",
+    "Die ganze Zwiebel",
+    "Die Zwiebelwurzel",
+    "Ein dickes Stück Zwiebel"
+   ],
+   "antwort": "Ein dünnes Häutchen (Oberhaut) einer Zwiebelschuppe",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-137"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt eine Lösung, die MEHR gelöste Stoffe enthält als der Zellsaft (z. B. starke Salzlösung)?",
+   "optionen": [
+    "hypertonisch",
+    "hypotonisch",
+    "isotonisch",
+    "hydrophob"
+   ],
+   "antwort": "hypertonisch",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-138"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Bei der Plasmolyse platzt die Zwiebelzelle.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Sie verliert Wasser und der Inhalt löst sich von der Zellwand – sie platzt nicht.",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-139"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Die Plasmolyse ist umkehrbar: In reinem Wasser kommt es zur Deplasmolyse.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-140"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Bei der Plasmolyse strömt Wasser aus der Zelle in die Salzlösung.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Wasser wandert durch Osmose zur Seite mit mehr Salz – also hinaus.",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-141"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Bei der Plasmolyse löst sich die Zellwand von der Zellmembran ab.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Umgekehrt formuliert: Die Zellmembran mit dem Zellinhalt löst sich von der festen Zellwand.",
+   "stoff": 8,
+   "id": "elias-mwuuduy0-142"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt das Ablösen des Zellinhalts von der Zellwand, wenn die Zelle in Salzlösung Wasser verliert?",
+   "antwort": [
+    "Plasmolyse",
+    "die Plasmolyse"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 8,
+   "id": "elias-mwuuduy0-143"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt der umgekehrte Vorgang, wenn die Zelle in reinem Wasser wieder Wasser aufnimmt?",
+   "antwort": [
+    "Deplasmolyse",
+    "die Deplasmolyse"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 8,
+   "id": "elias-mwuuduy0-144"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe das Experiment mit der Zwiebelzelle: Was passiert in Salzlösung und was in reinem Wasser? Warum?",
+   "stoff": 8,
+   "kern": [
+    {
+     "t": "Salzlösung: Wasser strömt aus",
+     "w": [
+      "(strömt|fließt|geht|wandert).*(aus|hinaus|raus)",
+      "verliert wasser",
+      "wasser.*(aus|hinaus|raus)"
+     ]
+    },
+    {
+     "t": "Vakuole schrumpft / Plasma löst sich von der Zellwand = Plasmolyse",
+     "w": [
+      "plasmolyse",
+      "schrumpf",
+      "löst sich",
+      "ablös"
+     ]
+    },
+    {
+     "t": "Wasser: strömt wieder ein = Deplasmolyse",
+     "w": [
+      "deplasmolyse",
+      "(strömt|fließt|geht).*(ein|hinein|rein)",
+      "nimmt.*wasser"
+     ]
+    },
+    {
+     "t": "Grund: Osmose",
+     "w": [
+      "osmose",
+      "konzentration"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "In der Salzlösung (hypertonisch) strömt durch Osmose Wasser aus der Vakuole hinaus. Die Vakuole schrumpft und der Zellinhalt löst sich von der Zellwand – das ist die Plasmolyse. In reinem Wasser (hypotonisch) strömt Wasser wieder hinein, der Zellinhalt legt sich wieder an die Zellwand – das ist die Deplasmolyse.",
+   "antwort": "In der Salzlösung (hypertonisch) strömt durch Osmose Wasser aus der Vakuole hinaus. Die Vakuole schrumpft und der Zellinhalt löst sich von der Zellwand – das ist die Plasmolyse. In reinem Wasser (hypotonisch) strömt Wasser wieder hinein, der Zellinhalt legt sich wieder an die Zellwand – das ist die Deplasmolyse.",
+   "id": "elias-mwuuduy0-145"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „semipermeable Membran“?",
+   "optionen": [
+    "halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht",
+    "wasserliebend",
+    "Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle",
+    "Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)"
+   ],
+   "antwort": "halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-146"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht“",
+   "optionen": [
+    "semipermeable Membran",
+    "hydrophob",
+    "isotonisch",
+    "Plasmolyse"
+   ],
+   "antwort": "semipermeable Membran",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-147"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „hydrophil“?",
+   "optionen": [
+    "wasserliebend",
+    "wassermeidend (wasserabstoßend)",
+    "Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle",
+    "abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe"
+   ],
+   "antwort": "wasserliebend",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-148"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „wasserliebend“",
+   "optionen": [
+    "hydrophil",
+    "hypertonisch",
+    "prokaryotische Zelle",
+    "Deplasmolyse"
+   ],
+   "antwort": "hydrophil",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-149"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „hydrophob“?",
+   "optionen": [
+    "wassermeidend (wasserabstoßend)",
+    "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle",
+    "Zelle OHNE echten Zellkern (z. B. Bakterien)",
+    "Zellinhalt löst sich durch Wasserverlust von der Zellwand"
+   ],
+   "antwort": "wassermeidend (wasserabstoßend)",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-150"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „wassermeidend (wasserabstoßend)“",
+   "optionen": [
+    "hydrophob",
+    "hypotonisch",
+    "eukaryotische Zelle",
+    "Diffusion"
+   ],
+   "antwort": "hydrophob",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-151"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „hypertonisch“?",
+   "optionen": [
+    "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle",
+    "Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle",
+    "Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)",
+    "Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand"
+   ],
+   "antwort": "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-152"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle“",
+   "optionen": [
+    "hypertonisch",
+    "isotonisch",
+    "Zellorganell",
+    "Osmose"
+   ],
+   "antwort": "hypertonisch",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-153"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „hypotonisch“?",
+   "optionen": [
+    "Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle",
+    "Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle",
+    "abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe",
+    "gleichmäßige Verteilung von Teilchen durch Eigenbewegung"
+   ],
+   "antwort": "Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-154"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle“",
+   "optionen": [
+    "hypotonisch",
+    "prokaryotische Zelle",
+    "Plasmolyse",
+    "semipermeable Membran"
+   ],
+   "antwort": "hypotonisch",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-155"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „isotonisch“?",
+   "optionen": [
+    "Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle",
+    "Zelle OHNE echten Zellkern (z. B. Bakterien)",
+    "Zellinhalt löst sich durch Wasserverlust von der Zellwand",
+    "Diffusion von Wasser durch eine semipermeable Membran"
+   ],
+   "antwort": "Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-156"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle“",
+   "optionen": [
+    "isotonisch",
+    "eukaryotische Zelle",
+    "Deplasmolyse",
+    "hydrophil"
+   ],
+   "antwort": "isotonisch",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-157"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „prokaryotische Zelle“?",
+   "optionen": [
+    "Zelle OHNE echten Zellkern (z. B. Bakterien)",
+    "Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)",
+    "Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand",
+    "halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht"
+   ],
+   "antwort": "Zelle OHNE echten Zellkern (z. B. Bakterien)",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-158"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Zelle OHNE echten Zellkern (z. B. Bakterien)“",
+   "optionen": [
+    "prokaryotische Zelle",
+    "Zellorganell",
+    "Diffusion",
+    "hydrophob"
+   ],
+   "antwort": "prokaryotische Zelle",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-159"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „eukaryotische Zelle“?",
+   "optionen": [
+    "Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)",
+    "abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe",
+    "gleichmäßige Verteilung von Teilchen durch Eigenbewegung",
+    "wasserliebend"
+   ],
+   "antwort": "Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-160"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)“",
+   "optionen": [
+    "eukaryotische Zelle",
+    "Plasmolyse",
+    "Osmose",
+    "hypertonisch"
+   ],
+   "antwort": "eukaryotische Zelle",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-161"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Zellorganell“?",
+   "optionen": [
+    "abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe",
+    "Zellinhalt löst sich durch Wasserverlust von der Zellwand",
+    "Diffusion von Wasser durch eine semipermeable Membran",
+    "wassermeidend (wasserabstoßend)"
+   ],
+   "antwort": "abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-162"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe“",
+   "optionen": [
+    "Zellorganell",
+    "Deplasmolyse",
+    "semipermeable Membran",
+    "hypotonisch"
+   ],
+   "antwort": "Zellorganell",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-163"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Plasmolyse“?",
+   "optionen": [
+    "Zellinhalt löst sich durch Wasserverlust von der Zellwand",
+    "Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand",
+    "halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht",
+    "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle"
+   ],
+   "antwort": "Zellinhalt löst sich durch Wasserverlust von der Zellwand",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-164"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Zellinhalt löst sich durch Wasserverlust von der Zellwand“",
+   "optionen": [
+    "Plasmolyse",
+    "Diffusion",
+    "hydrophil",
+    "isotonisch"
+   ],
+   "antwort": "Plasmolyse",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-165"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Deplasmolyse“?",
+   "optionen": [
+    "Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand",
+    "gleichmäßige Verteilung von Teilchen durch Eigenbewegung",
+    "wasserliebend",
+    "Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle"
+   ],
+   "antwort": "Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-166"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand“",
+   "optionen": [
+    "Deplasmolyse",
+    "Osmose",
+    "hydrophob",
+    "prokaryotische Zelle"
+   ],
+   "antwort": "Deplasmolyse",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-167"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Diffusion“?",
+   "optionen": [
+    "gleichmäßige Verteilung von Teilchen durch Eigenbewegung",
+    "Diffusion von Wasser durch eine semipermeable Membran",
+    "wassermeidend (wasserabstoßend)",
+    "Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle"
+   ],
+   "antwort": "gleichmäßige Verteilung von Teilchen durch Eigenbewegung",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-168"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „gleichmäßige Verteilung von Teilchen durch Eigenbewegung“",
+   "optionen": [
+    "Diffusion",
+    "semipermeable Membran",
+    "hypertonisch",
+    "eukaryotische Zelle"
+   ],
+   "antwort": "Diffusion",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-169"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet „Osmose“?",
+   "optionen": [
+    "Diffusion von Wasser durch eine semipermeable Membran",
+    "halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht",
+    "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle",
+    "Zelle OHNE echten Zellkern (z. B. Bakterien)"
+   ],
+   "antwort": "Diffusion von Wasser durch eine semipermeable Membran",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-170"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Fachbegriff passt? „Diffusion von Wasser durch eine semipermeable Membran“",
+   "optionen": [
+    "Osmose",
+    "hydrophil",
+    "hypotonisch",
+    "Zellorganell"
+   ],
+   "antwort": "Osmose",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-171"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Bakterium hat keinen echten Zellkern. Welche Zellart ist das?",
+   "optionen": [
+    "prokaryotisch",
+    "eukaryotisch",
+    "hypertonisch",
+    "isotonisch"
+   ],
+   "antwort": "prokaryotisch",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-172"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Rote Blutkörperchen liegen in reinem Wasser und platzen. Welche Lösung ist reines Wasser für sie?",
+   "optionen": [
+    "hypotonisch",
+    "hypertonisch",
+    "isotonisch",
+    "hydrophob"
+   ],
+   "antwort": "hypotonisch",
+   "erklaerung": "Wasser strömt in die Zellen ein – Tierzellen haben keine Zellwand, die sie schützt.",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-173"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Eine Zelle liegt in einer Lösung, und es strömt insgesamt kein Wasser hinein oder hinaus. Wie ist die Lösung?",
+   "optionen": [
+    "isotonisch",
+    "hypertonisch",
+    "hypotonisch",
+    "semipermeabel"
+   ],
+   "antwort": "isotonisch",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-174"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo liegt die DNA bei einer prokaryotischen Zelle?",
+   "optionen": [
+    "Frei im Zellplasma (kein Zellkern)",
+    "In einem Zellkern",
+    "In den Chloroplasten",
+    "In der Zellwand"
+   ],
+   "antwort": "Frei im Zellplasma (kein Zellkern)",
+   "erklaerung": "",
+   "stoff": 9,
+   "id": "elias-mwuuduy0-175"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie nennt man Zellen MIT echtem Zellkern?",
+   "antwort": [
+    "eukaryotisch",
+    "eukaryotische Zellen",
+    "Eukaryoten",
+    "eukaryotische Zelle",
+    "Eukaryot"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 9,
+   "id": "elias-mwuuduy0-176"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie nennt man Zellen OHNE echten Zellkern?",
+   "antwort": [
+    "prokaryotisch",
+    "prokaryotische Zellen",
+    "Prokaryoten",
+    "prokaryotische Zelle",
+    "Prokaryot"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 9,
+   "id": "elias-mwuuduy0-177"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welches Fachwort bedeutet „wasserliebend“?",
+   "antwort": [
+    "hydrophil"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 9,
+   "id": "elias-mwuuduy0-178"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welches Fachwort bedeutet „wassermeidend“?",
+   "antwort": [
+    "hydrophob"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 9,
+   "id": "elias-mwuuduy0-179"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre die Begriffe hypertonisch, hypotonisch und isotonisch.",
+   "stoff": 9,
+   "kern": [
+    {
+     "t": "hypertonisch = höhere Konzentration",
+     "w": [
+      "hyperton.*(höher|mehr|stärker)"
+     ]
+    },
+    {
+     "t": "hypotonisch = niedrigere Konzentration",
+     "w": [
+      "hypoton.*(niedrig|weniger|schwächer|gering)"
+     ]
+    },
+    {
+     "t": "isotonisch = gleiche Konzentration",
+     "w": [
+      "isoton.*(gleich)"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Hypertonisch: Die Lösung hat eine höhere Konzentration gelöster Stoffe als die Zelle, Wasser strömt aus der Zelle. Hypotonisch: niedrigere Konzentration, Wasser strömt in die Zelle. Isotonisch: gleiche Konzentration, insgesamt strömt kein Wasser.",
+   "antwort": "Hypertonisch: Die Lösung hat eine höhere Konzentration gelöster Stoffe als die Zelle, Wasser strömt aus der Zelle. Hypotonisch: niedrigere Konzentration, Wasser strömt in die Zelle. Isotonisch: gleiche Konzentration, insgesamt strömt kein Wasser.",
+   "id": "elias-mwuuduy0-180"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre den Unterschied zwischen einer prokaryotischen und einer eukaryotischen Zelle.",
+   "stoff": 9,
+   "kern": [
+    {
+     "t": "Prokaryot: kein Zellkern",
+     "w": [
+      "prokaryot.*(kein|ohne)",
+      "(kein|ohne).*kern"
+     ]
+    },
+    {
+     "t": "Eukaryot: echter Zellkern",
+     "w": [
+      "eukaryot.*(kern|mit)",
+      "mit.*kern"
+     ]
+    },
+    {
+     "t": "Beispiele: Bakterien / Tier-, Pflanzenzellen",
+     "w": [
+      "bakter",
+      "tier",
+      "pflanz",
+      "pilz"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Prokaryotische Zellen (zum Beispiel Bakterien) haben keinen echten Zellkern, ihre DNA liegt frei im Zellplasma. Eukaryotische Zellen (Tiere, Pflanzen, Pilze) haben einen echten Zellkern und Zellorganellen mit Membranen.",
+   "antwort": "Prokaryotische Zellen (zum Beispiel Bakterien) haben keinen echten Zellkern, ihre DNA liegt frei im Zellplasma. Eukaryotische Zellen (Tiere, Pflanzen, Pilze) haben einen echten Zellkern und Zellorganellen mit Membranen.",
+   "id": "elias-mwuuduy0-181"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie bewegt sich Euglena fort?",
+   "optionen": [
+    "Mit einer Geißel",
+    "Mit Beinen",
+    "Mit Flossen",
+    "Gar nicht"
+   ],
+   "antwort": "Mit einer Geißel",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-182"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wozu dient der rote Augenfleck der Euglena?",
+   "optionen": [
+    "Er hilft, Licht wahrzunehmen, damit sie zum Licht schwimmt",
+    "Zum Sehen von Farben wie ein Auge",
+    "Zur Verdauung",
+    "Zur Vermehrung"
+   ],
+   "antwort": "Er hilft, Licht wahrzunehmen, damit sie zum Licht schwimmt",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-183"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie ernährt sich Euglena im Licht?",
+   "optionen": [
+    "Autotroph – durch Fotosynthese in ihren Chloroplasten",
+    "Sie frisst andere Tiere",
+    "Gar nicht",
+    "Nur von Salz"
+   ],
+   "antwort": "Autotroph – durch Fotosynthese in ihren Chloroplasten",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-184"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie ernährt sich Euglena im Dunkeln?",
+   "optionen": [
+    "Heterotroph – sie nimmt Nährstoffe aus der Umgebung auf",
+    "Autotroph durch Fotosynthese",
+    "Sie stirbt sofort",
+    "Durch Zellteilung"
+   ],
+   "antwort": "Heterotroph – sie nimmt Nährstoffe aus der Umgebung auf",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-185"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie vermehrt sich Euglena?",
+   "optionen": [
+    "Durch Längsteilung (Zweiteilung)",
+    "Durch Eier",
+    "Durch Samen",
+    "Durch Blüten"
+   ],
+   "antwort": "Durch Längsteilung (Zweiteilung)",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-186"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet autotroph?",
+   "optionen": [
+    "Sich selbst ernähren – Nährstoffe selbst herstellen (z. B. durch Fotosynthese)",
+    "Sich von anderen Lebewesen ernähren",
+    "Sich mit einer Geißel bewegen",
+    "Sich teilen"
+   ],
+   "antwort": "Sich selbst ernähren – Nährstoffe selbst herstellen (z. B. durch Fotosynthese)",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-187"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was bedeutet heterotroph?",
+   "optionen": [
+    "Sich von fremden (organischen) Stoffen ernähren, die andere Lebewesen hergestellt haben",
+    "Nährstoffe selbst durch Fotosynthese herstellen",
+    "Ohne Nahrung leben",
+    "Nur Wasser trinken"
+   ],
+   "antwort": "Sich von fremden (organischen) Stoffen ernähren, die andere Lebewesen hergestellt haben",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-188"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist Euglena etwas Besonderes?",
+   "optionen": [
+    "Sie kann sich wie eine Pflanze UND wie ein Tier ernähren",
+    "Sie hat keine Zelle",
+    "Sie ist ein Virus",
+    "Sie lebt nur im Meer in der Tiefe"
+   ],
+   "antwort": "Sie kann sich wie eine Pflanze UND wie ein Tier ernähren",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-189"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie viele Zellen hat Euglena?",
+   "optionen": [
+    "Eine – sie ist ein Einzeller",
+    "Zwei",
+    "Tausende",
+    "Gar keine"
+   ],
+   "antwort": "Eine – sie ist ein Einzeller",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-190"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was macht die pulsierende Vakuole der Euglena?",
+   "optionen": [
+    "Sie pumpt überschüssiges Wasser aus der Zelle",
+    "Sie macht Fotosynthese",
+    "Sie ist die Geißel",
+    "Sie speichert die DNA"
+   ],
+   "antwort": "Sie pumpt überschüssiges Wasser aus der Zelle",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-191"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Euglena hat Chloroplasten.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-192"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Euglena ist immer nur heterotroph.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Im Licht ist sie autotroph (Fotosynthese), im Dunkeln heterotroph.",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-193"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Ein Mensch ernährt sich heterotroph.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Wir müssen Nahrung essen, die andere Lebewesen hergestellt haben.",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-194"
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch",
+   "frage": "Richtig oder falsch? Eine Pflanze ernährt sich autotroph.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "",
+   "stoff": 10,
+   "id": "elias-mwuuduy0-195"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Mit welchem Teil bewegt sich Euglena fort?",
+   "antwort": [
+    "Geißel",
+    "der Geißel",
+    "einer Geißel",
+    "Geissel"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 10,
+   "id": "elias-mwuuduy0-196"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt die Ernährungsweise, bei der ein Lebewesen seine Nährstoffe selbst herstellt?",
+   "antwort": [
+    "autotroph",
+    "Autotrophie"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 10,
+   "id": "elias-mwuuduy0-197"
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie heißt die Ernährungsweise, bei der ein Lebewesen fremde Nährstoffe aufnimmt?",
+   "antwort": [
+    "heterotroph",
+    "Heterotrophie"
+   ],
+   "erklaerung": "",
+   "zahl": false,
+   "stoff": 10,
+   "id": "elias-mwuuduy0-198"
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe Euglena: Ernährung, Fortbewegung und Vermehrung.",
+   "stoff": 10,
+   "kern": [
+    {
+     "t": "Fortbewegung mit Geißel",
+     "w": [
+      "geißel",
+      "geissel"
+     ]
+    },
+    {
+     "t": "im Licht autotroph / Fotosynthese",
+     "w": [
+      "autotroph",
+      "fotosynth",
+      "photosynth",
+      "chloroplast"
+     ]
+    },
+    {
+     "t": "im Dunkeln heterotroph",
+     "w": [
+      "heterotroph",
+      "dunkel",
+      "aus der umgebung"
+     ]
+    },
+    {
+     "t": "Vermehrung durch Längsteilung",
+     "w": [
+      "teil"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Euglena ist ein Einzeller im Süßwasser. Sie bewegt sich mit einer Geißel fort und findet mit dem Augenfleck das Licht. Im Licht ernährt sie sich autotroph durch Fotosynthese in ihren Chloroplasten, im Dunkeln heterotroph, indem sie Nährstoffe aus dem Wasser aufnimmt. Sie vermehrt sich durch Längsteilung.",
+   "antwort": "Euglena ist ein Einzeller im Süßwasser. Sie bewegt sich mit einer Geißel fort und findet mit dem Augenfleck das Licht. Im Licht ernährt sie sich autotroph durch Fotosynthese in ihren Chloroplasten, im Dunkeln heterotroph, indem sie Nährstoffe aus dem Wasser aufnimmt. Sie vermehrt sich durch Längsteilung.",
+   "id": "elias-mwuuduy0-199"
+  }
+ ],
+ "tests": [
+  {
+   "id": "elias-mwuuduy0",
+   "titel": "Probetest Bio – Zelle & Membran",
+   "fragen": [
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welches ist ein Merkmal des Lebens?",
+     "optionen": [
+      "Stoffwechsel",
+      "Farbe",
+      "Härte",
+      "Glanz"
+     ],
+     "antwort": "Stoffwechsel",
+     "erklaerung": "Lebewesen nehmen Stoffe auf, wandeln sie um und geben Stoffe ab – das ist Stoffwechsel.",
+     "stoff": 0,
+     "id": "elias-mwuuduy0-01"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welche Gruppe gehört NICHT zu den Lebewesen?",
+     "optionen": [
+      "Viren",
+      "Bakterien",
+      "Pilze",
+      "Einzeller"
+     ],
+     "antwort": "Viren",
+     "erklaerung": "Viren haben keine Zellen und keinen eigenen Stoffwechsel.",
+     "stoff": 1,
+     "id": "elias-mwuuduy0-02"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welche drei Bestandteile hat NUR die Pflanzenzelle?",
+     "optionen": [
+      "Zellwand, Chloroplasten, große Vakuole",
+      "Zellkern, Mitochondrien, Zellmembran",
+      "Ribosomen, Zellplasma, Zellkern",
+      "Zellmembran, Zellwand, Zellkern"
+     ],
+     "antwort": "Zellwand, Chloroplasten, große Vakuole",
+     "erklaerung": "Merke: Wand – Grün – Vakuole.",
+     "stoff": 2,
+     "id": "elias-mwuuduy0-03"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welche Aufgabe hat: Zellkern?",
+     "optionen": [
+      "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)",
+      "Herstellung von Eiweißen (Proteinen)",
+      "Verpacken und Versenden von Stoffen in Bläschen",
+      "Gibt der Pflanzenzelle Form und Festigkeit"
+     ],
+     "antwort": "Steuerzentrale der Zelle, enthält die Erbinformation (DNA)",
+     "erklaerung": "",
+     "stoff": 3,
+     "id": "elias-mwuuduy0-04"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Welches Zellorganell ist gemeint? „Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen“",
+     "optionen": [
+      "Mitochondrium",
+      "Ribosom",
+      "Golgi-Apparat",
+      "Zellwand"
+     ],
+     "antwort": "Mitochondrium",
+     "erklaerung": "",
+     "stoff": 3,
+     "id": "elias-mwuuduy0-05"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "In welchem Zellorganell findet die Zellatmung statt?",
+     "optionen": [
+      "In den Mitochondrien",
+      "In den Chloroplasten",
+      "Im Zellkern",
+      "In der Vakuole"
+     ],
+     "antwort": "In den Mitochondrien",
+     "erklaerung": "",
+     "stoff": 4,
+     "id": "elias-mwuuduy0-06"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "In welchem Zellorganell findet die Fotosynthese statt?",
+     "optionen": [
+      "In den Chloroplasten",
+      "In den Mitochondrien",
+      "Im Zellkern",
+      "In den Ribosomen"
+     ],
+     "antwort": "In den Chloroplasten",
+     "erklaerung": "",
+     "stoff": 4,
+     "id": "elias-mwuuduy0-07"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Woraus besteht die Grundstruktur der Biomembran?",
+     "optionen": [
+      "Aus einer Doppelschicht aus Phospholipiden",
+      "Aus Cellulose",
+      "Aus einer einzigen Eiweißschicht",
+      "Aus Zucker"
+     ],
+     "antwort": "Aus einer Doppelschicht aus Phospholipiden",
+     "erklaerung": "",
+     "stoff": 5,
+     "id": "elias-mwuuduy0-08"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Was bedeutet: Die Membran ist „selektiv durchlässig“?",
+     "optionen": [
+      "Sie lässt nur bestimmte Stoffe durch",
+      "Sie lässt alles durch",
+      "Sie lässt nichts durch",
+      "Sie lässt nur Licht durch"
+     ],
+     "antwort": "Sie lässt nur bestimmte Stoffe durch",
+     "erklaerung": "",
+     "stoff": 6,
+     "id": "elias-mwuuduy0-09"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Was ist der wichtigste Unterschied zwischen Osmose und Diffusion?",
+     "optionen": [
+      "Bei der Osmose wandert Wasser durch eine halbdurchlässige Membran",
+      "Osmose geht nur im Licht",
+      "Diffusion braucht eine Membran, Osmose nicht",
+      "Es gibt keinen Unterschied"
+     ],
+     "antwort": "Bei der Osmose wandert Wasser durch eine halbdurchlässige Membran",
+     "erklaerung": "",
+     "stoff": 7,
+     "id": "elias-mwuuduy0-10"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Was passiert, wenn man Zwiebelzellen in eine starke Salzlösung legt?",
+     "optionen": [
+      "Wasser strömt aus der Vakuole, der Zellinhalt löst sich von der Zellwand (Plasmolyse)",
+      "Die Zellen platzen",
+      "Die Zellen werden grün",
+      "Nichts"
+     ],
+     "antwort": "Wasser strömt aus der Vakuole, der Zellinhalt löst sich von der Zellwand (Plasmolyse)",
+     "erklaerung": "",
+     "stoff": 8,
+     "id": "elias-mwuuduy0-11"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Was bedeutet „hypertonisch“?",
+     "optionen": [
+      "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle",
+      "Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle",
+      "Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen)",
+      "Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand"
+     ],
+     "antwort": "Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle",
+     "erklaerung": "",
+     "stoff": 9,
+     "id": "elias-mwuuduy0-12"
+    },
+    {
+     "typ": "auswahl",
+     "art": "Auswählen",
+     "frage": "Wie ernährt sich Euglena im Dunkeln?",
+     "optionen": [
+      "Heterotroph – sie nimmt Nährstoffe aus der Umgebung auf",
+      "Autotroph durch Fotosynthese",
+      "Sie stirbt sofort",
+      "Durch Zellteilung"
+     ],
+     "antwort": "Heterotroph – sie nimmt Nährstoffe aus der Umgebung auf",
+     "erklaerung": "",
+     "stoff": 10,
+     "id": "elias-mwuuduy0-13"
+    },
+    {
+     "typ": "offen",
+     "art": "Frei antworten",
+     "frage": "Nenne vier Merkmale des Lebens.",
+     "stoff": 0,
+     "kern": [
+      {
+       "t": "Stoffwechsel",
+       "w": [
+        "stoffwechsel"
+       ]
+      },
+      {
+       "t": "Wachstum / Entwicklung",
+       "w": [
+        "wachs",
+        "entwickl"
+       ]
+      },
+      {
+       "t": "Fortpflanzung / Vermehrung",
+       "w": [
+        "fortpflanz",
+        "vermehr"
+       ]
+      },
+      {
+       "t": "Reizbarkeit",
+       "w": [
+        "reiz"
+       ]
+      },
+      {
+       "t": "Bewegung",
+       "w": [
+        "beweg"
+       ]
+      },
+      {
+       "t": "Aufbau aus Zellen",
+       "w": [
+        "zelle"
+       ]
+      }
+     ],
+     "mindest": 4,
+     "muster": "Merkmale des Lebens sind zum Beispiel: Stoffwechsel, Wachstum und Entwicklung, Fortpflanzung, Reizbarkeit, Bewegung und der Aufbau aus Zellen.",
+     "antwort": "Merkmale des Lebens sind zum Beispiel: Stoffwechsel, Wachstum und Entwicklung, Fortpflanzung, Reizbarkeit, Bewegung und der Aufbau aus Zellen.",
+     "id": "elias-mwuuduy0-14"
+    },
+    {
+     "typ": "offen",
+     "art": "Frei antworten",
+     "frage": "Beschreibe das Experiment mit der Zwiebelzelle: Was passiert in Salzlösung und was in reinem Wasser? Warum?",
+     "stoff": 8,
+     "kern": [
+      {
+       "t": "Salzlösung: Wasser strömt aus",
+       "w": [
+        "(strömt|fließt|geht|wandert).*(aus|hinaus|raus)",
+        "verliert wasser",
+        "wasser.*(aus|hinaus|raus)"
+       ]
+      },
+      {
+       "t": "Vakuole schrumpft / Plasma löst sich von der Zellwand = Plasmolyse",
+       "w": [
+        "plasmolyse",
+        "schrumpf",
+        "löst sich",
+        "ablös"
+       ]
+      },
+      {
+       "t": "Wasser: strömt wieder ein = Deplasmolyse",
+       "w": [
+        "deplasmolyse",
+        "(strömt|fließt|geht).*(ein|hinein|rein)",
+        "nimmt.*wasser"
+       ]
+      },
+      {
+       "t": "Grund: Osmose",
+       "w": [
+        "osmose",
+        "konzentration"
+       ]
+      }
+     ],
+     "mindest": 3,
+     "muster": "In der Salzlösung (hypertonisch) strömt durch Osmose Wasser aus der Vakuole hinaus. Die Vakuole schrumpft und der Zellinhalt löst sich von der Zellwand – das ist die Plasmolyse. In reinem Wasser (hypotonisch) strömt Wasser wieder hinein, der Zellinhalt legt sich wieder an die Zellwand – das ist die Deplasmolyse.",
+     "antwort": "In der Salzlösung (hypertonisch) strömt durch Osmose Wasser aus der Vakuole hinaus. Die Vakuole schrumpft und der Zellinhalt löst sich von der Zellwand – das ist die Plasmolyse. In reinem Wasser (hypotonisch) strömt Wasser wieder hinein, der Zellinhalt legt sich wieder an die Zellwand – das ist die Deplasmolyse.",
+     "id": "elias-mwuuduy0-15"
+    }
+   ]
   }
  ],
  "wissen": [
   {
-   "titel": "Die Zelle",
-   "kurz": "Bausteine des Lebens",
-   "problem": "Alle Lebewesen bestehen aus Zellen. Für die Schularbeit musst du die Teile einer Zelle kennen, wissen, was sie tun, und Pflanzen- von Tierzellen unterscheiden.",
+   "titel": "1 · Merkmale des Lebens",
+   "kurz": "Woran man erkennt, dass etwas lebt",
    "text": [
-    "Jede Zelle ist von einer Zellmembran umgeben, die bestimmt, was hinein- und hinausdarf. Innen ist das Zytoplasma.",
-    "Der Zellkern enthält die Erbinformation (DNA) und steuert die Zelle.",
-    "Mitochondrien sind die Kraftwerke: Sie gewinnen durch die Zellatmung Energie aus Glucose.",
-    "Ribosomen stellen Proteine her.",
-    "Nur Pflanzenzellen haben zusätzlich eine feste Zellwand, Chloroplasten (für die Fotosynthese) und eine große Vakuole.",
-    "Fotosynthese: Kohlenstoffdioxid + Wasser + Licht → Glucose + Sauerstoff. Pflanzen sind darum Produzenten, Tiere Konsumenten, Pilze und Bakterien im Boden Destruenten.",
-    "Prokaryoten (z. B. Bakterien) haben keinen Zellkern, Eukaryoten (Pflanzen, Tiere, Pilze) schon."
+    "Lebewesen zeigen alle diese Merkmale: Stoffwechsel, Wachstum und Entwicklung, Fortpflanzung, Reizbarkeit (Reaktion auf Reize), Bewegung und Aufbau aus Zellen.",
+    "Ein einzelnes Merkmal reicht nicht: Ein Kristall wächst, ein Feuer „frisst“ – trotzdem leben sie nicht."
+   ],
+   "merke": "Lebendig ist nur, wer ALLE Merkmale zeigt.",
+   "video": "Kennzeichen des Lebens Biologie",
+   "stichworte": [
+    "Merkmal",
+    "Kennzeichen des Lebens",
+    "Stoffwechsel",
+    "Reizbarkeit"
+   ],
+   "problem": "Teststoff: „Merkmale des Lebens kennen“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "2 · Wer gehört zu den Lebewesen?",
+   "kurz": "Bakterien, Pilze, Pflanzen, Tiere, Einzeller",
+   "text": [
+    "Zu den Lebewesen gehören Bakterien, Pilze, Pflanzen, Tiere (auch der Mensch) und Einzeller wie Euglena.",
+    "Viren zählen nicht dazu: Sie haben keine Zelle und keinen eigenen Stoffwechsel und vermehren sich nur in fremden Zellen."
+   ],
+   "merke": "Keine Zelle = kein Lebewesen.",
+   "video": "Was ist ein Lebewesen Viren lebendig",
+   "stichworte": [
+    "Lebewesen",
+    "Virus",
+    "Viren",
+    "Einzeller"
+   ],
+   "problem": "Teststoff: „Wissen, wer zu den Lebewesen gehört“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "3 · Tierzelle und Pflanzenzelle",
+   "kurz": "Wand – Grün – Vakuole",
+   "text": [
+    "Beide haben Zellkern, Zellmembran, Zellplasma, Mitochondrien und Ribosomen.",
+    "Nur die Pflanzenzelle hat: Zellwand (aus Cellulose, macht sie eckig und fest), Chloroplasten (grün, Fotosynthese) und eine große Zentralvakuole.",
+    "Erkennen unter dem Mikroskop: eckig mit dicker Wand = Pflanzenzelle; rund/unregelmäßig ohne Wand = Tierzelle."
    ],
    "fehler": [
-    "Zellwand und Zellmembran verwechseln – jede Zelle hat eine Membran, nur Pflanzen eine Wand.",
-    "Mitochondrien gibt es auch in Pflanzenzellen."
+    "Zwiebelzellen sind Pflanzenzellen, haben aber KEINE Chloroplasten (unter der Erde, nicht grün).",
+    "Pflanzenzellen haben auch Mitochondrien."
    ],
-   "merke": "Pflanzenzelle = Tierzelle + Zellwand + Chloroplasten + Vakuole.",
-   "video": "Pflanzenzelle Tierzelle Unterschied erklärt",
+   "merke": "Pflanzenzelle = Tierzelle + Wand + Grün + Vakuole.",
+   "video": "Tierzelle Pflanzenzelle Unterschied",
    "stichworte": [
-    "zell|mitochond|dna|prokaryot|fotosynthese|ökosystem|produzent|mikroskop"
-   ]
+    "Tierzelle",
+    "Pflanzenzelle",
+    "Zellwand",
+    "Vakuole"
+   ],
+   "problem": "Teststoff: „Unterschied zwischen tierischen und pflanzlichen Zellen kennen und erkennen“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "4 · Funktionen der Zellorganellen",
+   "kurz": "Wer macht was in der Zelle?",
+   "text": [
+    "Zellkern: Steuerzentrale der Zelle, enthält die Erbinformation (DNA).",
+    "Mitochondrium: Kraftwerk der Zelle – Zellatmung, Energie wird gewonnen.",
+    "Chloroplast: Fotosynthese – aus Licht wird Zucker hergestellt.",
+    "Ribosom: Herstellung von Eiweißen (Proteinen).",
+    "Endoplasmatisches Retikulum (ER): Kanalsystem für Transport in der Zelle.",
+    "Golgi-Apparat: Verpacken und Versenden von Stoffen in Bläschen.",
+    "Lysosom: Verdauung und Abbau von Stoffen in der Zelle.",
+    "Vakuole: Speicher für Zellsaft, Wasser und Stoffe; hält die Pflanzenzelle prall.",
+    "Zellwand: Gibt der Pflanzenzelle Form und Festigkeit.",
+    "Zellmembran: Grenze der Zelle, regelt, was hinein und hinaus darf.",
+    "Zellplasma (Cytoplasma): Flüssigkeit, in der die Organellen schwimmen."
+   ],
+   "merke": "Kern = Chef, Mitochondrium = Kraftwerk, Chloroplast = Solarzelle, Ribosom = Eiweiß-Fabrik.",
+   "video": "Zellorganellen Funktionen einfach erklärt",
+   "stichworte": [
+    "Organell",
+    "Ribosom",
+    "Golgi",
+    "Lysosom",
+    "Retikulum"
+   ],
+   "problem": "Teststoff: „Funktionen der Zellorganellen“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "5 · Zellatmung, Fotosynthese, DNA",
+   "kurz": "Wo passiert was?",
+   "text": [
+    "Zellatmung in den Mitochondrien: Zucker + Sauerstoff → Kohlenstoffdioxid + Wasser + Energie. Machen Tier- UND Pflanzenzellen.",
+    "Fotosynthese in den Chloroplasten (grüner Farbstoff Chlorophyll): Kohlenstoffdioxid + Wasser + Licht → Zucker + Sauerstoff. Nur Pflanzen (und z. B. Euglena).",
+    "Die Erbinformation (DNA) liegt im Zellkern."
+   ],
+   "fehler": [
+    "„Pflanzen atmen nicht“ – falsch, sie haben auch Mitochondrien."
+   ],
+   "merke": "Mitochondrium = Atmung, Chloroplast = Fotosynthese, Kern = DNA.",
+   "video": "Zellatmung Fotosynthese Mitochondrien Chloroplasten",
+   "stichworte": [
+    "Zellatmung",
+    "Fotosynthese",
+    "Photosynthese",
+    "DNA",
+    "Mitochond",
+    "Chloroplast"
+   ],
+   "problem": "Teststoff: „Wo Zellatmung und Fotosynthese stattfinden und wo die Erbinformation (DNA) ist“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "6 · Aufbau der Biomembran",
+   "kurz": "Doppelschicht aus Phospholipiden",
+   "text": [
+    "Die Membran ist eine Doppelschicht aus Phospholipiden (Flüssig-Mosaik-Modell).",
+    "Ein Phospholipid hat einen hydrophilen (wasserliebenden) Kopf und zwei hydrophobe (wassermeidende) Fettsäure-Schwänze.",
+    "Köpfe zeigen nach außen und innen zum Wasser, Schwänze zueinander in die Mitte. Darin stecken Membranproteine, manche reichen ganz hindurch.",
+    "Zum Beschriften: Phospholipid-Doppelschicht, hydrophiler Kopf, hydrophober Schwanz, Membranprotein (Tunnel-/Kanalprotein), Rezeptor, Zuckerketten außen."
+   ],
+   "merke": "Köpfe ans Wasser, Schwänze verstecken sich innen.",
+   "video": "Biomembran Aufbau Phospholipid Doppelschicht",
+   "stichworte": [
+    "Biomembran",
+    "Phospholipid",
+    "Doppelschicht",
+    "hydrophil",
+    "hydrophob"
+   ],
+   "problem": "Teststoff: „Aufbau der Biomembran/Zellmembran beschreiben und beschriften“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "7 · Aufgaben der Membran und Membranproteine",
+   "kurz": "Türsteher der Zelle",
+   "text": [
+    "Die Membran grenzt die Zelle ab und ist selektiv durchlässig: Sie bestimmt, was hinein und hinaus darf.",
+    "Membranproteine: Tunnel-/Kanalproteine lassen bestimmte Stoffe durch, Rezeptoren empfangen Signale, Proteine mit Zuckerketten dienen der Zellerkennung."
+   ],
+   "merke": "Membran = Grenze + Türsteher, Proteine = Türen, Antennen, Namensschilder.",
+   "video": "Membranproteine Aufgaben",
+   "stichworte": [
+    "Membranprotein",
+    "Rezeptor",
+    "Tunnelprotein",
+    "Kanalprotein",
+    "selektiv"
+   ],
+   "problem": "Teststoff: „Aufgaben der Membran und Membranproteine“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "8 · Diffusion und Osmose",
+   "kurz": "Teilchen wandern von selbst",
+   "text": [
+    "Diffusion: Teilchen bewegen sich von selbst und verteilen sich gleichmäßig – von hoher zu niedriger Konzentration (Tinte im Wasser, Duft im Raum). Wärme macht sie schneller.",
+    "Osmose: Diffusion von WASSER durch eine semipermeable Membran. Das Wasser wandert zur Seite mit mehr gelösten Stoffen (mehr Salz/Zucker)."
+   ],
+   "fehler": [
+    "Bei der Osmose wandert nicht das Salz, sondern das Wasser."
+   ],
+   "merke": "Osmose = Wasser + halbdurchlässige Membran.",
+   "video": "Diffusion Osmose Unterschied einfach",
+   "stichworte": [
+    "Diffusion",
+    "Osmose",
+    "Konzentration"
+   ],
+   "problem": "Teststoff: „Diffusion und Osmose erklären, den Unterschied erkennen“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "9 · Experiment: Plasmolyse bei der Zwiebelzelle",
+   "kurz": "Rote Zwiebel unterm Mikroskop",
+   "text": [
+    "Dünnes Häutchen einer (roten) Zwiebelschuppe auf den Objektträger, unter dem Mikroskop anschauen: eckige Zellen, große rote Vakuole.",
+    "Starke Salzlösung dazu (hypertonisch): Wasser strömt durch Osmose aus der Vakuole, sie schrumpft, der Zellinhalt löst sich von der Zellwand = Plasmolyse. Die Zellwand bleibt in Form.",
+    "Danach reines Wasser (hypotonisch): Wasser strömt wieder ein, die Vakuole wird groß, der Inhalt liegt wieder an der Wand = Deplasmolyse."
+   ],
+   "merke": "Salz zieht Wasser raus (Plasmolyse), reines Wasser bringt es zurück (Deplasmolyse).",
+   "video": "Plasmolyse Zwiebelzelle Mikroskop",
+   "stichworte": [
+    "Plasmolyse",
+    "Deplasmolyse",
+    "Zwiebel"
+   ],
+   "problem": "Teststoff: „Experiment: Plasmolyse und Osmose bei einer Zwiebelzelle“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "10 · Fachbegriffe",
+   "kurz": "Kurz und knapp",
+   "text": [
+    "semipermeable Membran: halbdurchlässige Membran – lässt Wasser durch, gelöste Stoffe aber nicht.",
+    "hydrophil: wasserliebend.",
+    "hydrophob: wassermeidend (wasserabstoßend).",
+    "hypertonisch: Lösung mit HÖHERER Konzentration gelöster Stoffe als die Zelle.",
+    "hypotonisch: Lösung mit NIEDRIGERER Konzentration gelöster Stoffe als die Zelle.",
+    "isotonisch: Lösung mit GLEICHER Konzentration gelöster Stoffe wie die Zelle.",
+    "prokaryotische Zelle: Zelle OHNE echten Zellkern (z. B. Bakterien).",
+    "eukaryotische Zelle: Zelle MIT echtem Zellkern (z. B. Tier-, Pflanzen-, Pilzzellen).",
+    "Zellorganell: abgegrenzter Teil der Zelle mit einer bestimmten Aufgabe.",
+    "Plasmolyse: Zellinhalt löst sich durch Wasserverlust von der Zellwand.",
+    "Deplasmolyse: Zellinhalt legt sich durch Wasseraufnahme wieder an die Zellwand.",
+    "Diffusion: gleichmäßige Verteilung von Teilchen durch Eigenbewegung.",
+    "Osmose: Diffusion von Wasser durch eine semipermeable Membran."
+   ],
+   "merke": "hyper = mehr, hypo = weniger, iso = gleich. Pro = ohne Kern, Eu = echter Kern.",
+   "video": "hypertonisch hypotonisch isotonisch",
+   "stichworte": [
+    "semipermeab",
+    "hyperton",
+    "hypoton",
+    "isoton",
+    "prokaryot",
+    "eukaryot"
+   ],
+   "problem": "Teststoff: „Fachbegriffe erklären (semipermeabel, Osmose, Plasmolyse, hydrophil, hypertonisch …)“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
+  },
+  {
+   "titel": "11 · Euglena",
+   "kurz": "Halb Pflanze, halb Tier",
+   "text": [
+    "Euglena (Augentierchen) ist ein Einzeller im Süßwasser.",
+    "Fortbewegung: mit einer Geißel; der rote Augenfleck hilft, das Licht zu finden.",
+    "Ernährung: im Licht autotroph (Fotosynthese in Chloroplasten), im Dunkeln heterotroph (nimmt Nährstoffe aus dem Wasser auf).",
+    "Vermehrung: durch Längsteilung (Zweiteilung). Die pulsierende Vakuole pumpt überschüssiges Wasser hinaus."
+   ],
+   "merke": "autotroph = selbst herstellen, heterotroph = von anderen nehmen.",
+   "video": "Euglena Augentierchen autotroph heterotroph",
+   "stichworte": [
+    "Euglena",
+    "Augentierchen",
+    "autotroph",
+    "heterotroph",
+    "Geißel"
+   ],
+   "problem": "Teststoff: „Euglena: Ernährung, Fortbewegung, Vermehrung, autotroph und heterotroph“ – vorläufig ohne Buchseiten (S. 20–25), Mitschrift und Arbeitsblätter erklärt."
   }
  ]
 }
