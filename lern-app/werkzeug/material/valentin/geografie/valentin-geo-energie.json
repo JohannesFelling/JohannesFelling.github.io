@@ -5,7 +5,7 @@
  "teststoff": {
   "termin": "2026-11-27",
   "titel": "Geografie-Test am 27.11.",
-  "quelle": "Teststoff GW + GEOprofi 2 S. 8–27 + Arbeitsblätter Fracking / Energie und Rohstoffe",
+  "quelle": "Teststoff GW + GEOprofi 2 S. 8–27 + Arbeitsblätter Fracking / Energie und Rohstoffe / Versorgung und Entsorgung Wien",
   "punkte": [
    "Fachbegriffe nennen und erklären (unterstrichene Begriffe)",
    "Abbildungen, Diagramme und Karten beschreiben (S. 9, 11, 15, 16, 17, 21, 24, 26)",
@@ -14,7 +14,8 @@
    "Erneuerbare und nicht erneuerbare Rohstoffe unterscheiden (S. 20–23)",
    "Entsorgung: Abfall richtig trennen (S. 24/25)",
    "Recycling erklären, Beispiele nennen (S. 26/27)",
-   "Arbeitsblätter: „Fracking im Weinviertel“ und „Energie und Rohstoffe“ (Sätze verbinden)"
+   "Arbeitsblätter: „Fracking im Weinviertel“ und „Energie und Rohstoffe“ (Sätze verbinden)",
+   "Arbeitsblatt: „Versorgung und Entsorgung in der Millionenstadt Wien“ (Wasser, Abwasser, Müll, Fernwärme, Recycling)"
   ]
  },
  "fragen": [
@@ -3479,6 +3480,762 @@
    "antwort": "Laufkraftwerke findet man an Flüssen, während Speicherkraftwerke das Wasser aus Stauseen beziehen.",
    "erklaerung": "",
    "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer versorgt die Wiener Bevölkerung mit Strom, Wasser, Gas …?",
+   "optionen": [
+    "die Stadt Wien",
+    "die OMV",
+    "Südafrika",
+    "die Bundesländer Tirol und Vorarlberg"
+   ],
+   "antwort": "die Stadt Wien",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 1 – die Stadt Wien kümmert sich um die Versorgung.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wer versorgt die Wiener Bevölkerung mit Strom, Wasser und Gas?",
+   "antwort": [
+    "Stadt Wien",
+    "die Stadt Wien",
+    "Wien",
+    "Gemeinde Wien",
+    "die Gemeinde Wien"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 1 – die Stadt Wien.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Mit welchem Wasser wird die Stadt Wien versorgt?",
+   "optionen": [
+    "mit Alpenquellwasser (Quellwasser aus den Bergen)",
+    "mit Meerwasser",
+    "mit Wasser aus der Kläranlage",
+    "mit Regenwasser vom Dach"
+   ],
+   "antwort": "mit Alpenquellwasser (Quellwasser aus den Bergen)",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 2 – Wien bekommt Quellwasser aus den Alpen.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Mit welchem Wasser wird Wien versorgt? (ein Wort)",
+   "antwort": [
+    "Alpenquellwasser",
+    "Quellwasser",
+    "Hochquellwasser",
+    "Bergquellwasser",
+    "Alpenwasser"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 2 – Alpenquellwasser.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woher stammt das Wiener Wasser?",
+   "optionen": [
+    "aus den Alpen",
+    "aus dem Meer",
+    "aus der Donau-Kläranlage",
+    "aus Südafrika"
+   ],
+   "antwort": "aus den Alpen",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 3 – das Wasser kommt aus den Bergen, den Alpen.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Woher stammt das Wiener Trinkwasser? Aus den …",
+   "antwort": [
+    "Alpen",
+    "den Alpen",
+    "Bergen",
+    "den Bergen"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 3 – aus den Alpen.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie kommt das Wasser von den Bergen nach Wien?",
+   "optionen": [
+    "über eine lange Wasserleitung",
+    "mit Tankschiffen auf der Donau",
+    "mit Lastwagen",
+    "durch Fracking"
+   ],
+   "antwort": "über eine lange Wasserleitung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 4 – durch Leitungen von den Bergen bis in die Stadt.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie kommt das Wasser von den Bergen nach Wien? Durch eine …",
+   "antwort": [
+    "Leitung",
+    "Wasserleitung",
+    "Leitungen",
+    "Wasserleitungen",
+    "Hochquellenleitung",
+    "Rohrleitung"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 4 – durch eine Wasserleitung.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie nennt man Wasserleitungen, die über Brücken führen?",
+   "optionen": [
+    "Aquädukt",
+    "Pipeline",
+    "Raffinerie",
+    "Stausee"
+   ],
+   "antwort": "Aquädukt",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 5 – eine Wasserleitung über eine Brücke heißt Aquädukt.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wie nennt man eine Wasserleitung, die über eine Brücke führt?",
+   "antwort": [
+    "Aquädukt",
+    "Aquadukt",
+    "Aquaedukt",
+    "Aquädukte",
+    "ein Aquädukt"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 5 – Aquädukt.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist ein Aquädukt?",
+   "optionen": [
+    "eine Wasserleitung, die über eine Brücke führt",
+    "ein Kraftwerk an einem Fluss",
+    "eine Anlage, die schmutziges Wasser reinigt",
+    "ein Behälter für Müll"
+   ],
+   "antwort": "eine Wasserleitung, die über eine Brücke führt",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 5.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo wird das Wasser in Wien gesammelt (laut Arbeitsblatt)?",
+   "optionen": [
+    "am Schafberg",
+    "im Weinviertel",
+    "in der Kläranlage",
+    "in Südafrika"
+   ],
+   "antwort": "am Schafberg",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 6 – auf dem Blatt steht Schafberg (dort sind Wasserbehälter).",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wo wird das Wasser in Wien gesammelt? (Name eines Bergs in Wien)",
+   "antwort": [
+    "Schafberg",
+    "am Schafberg",
+    "Schafberg Wien"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 6 – Schafberg.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Für wie viele Tage würde der Wasservorrat in Wien reichen (laut Arbeitsblatt)?",
+   "antwort": [
+    "4",
+    "vier"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 7 – auf dem Blatt steht: 4 Tage.",
+   "zahl": true,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Für wie viele Tage würde der Wasservorrat in Wien reichen?",
+   "optionen": [
+    "4 Tage",
+    "4 Stunden",
+    "40 Tage",
+    "1 Jahr"
+   ],
+   "antwort": "4 Tage",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 7 – 4 Tage.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wohin gelangt das schmutzige Wasser?",
+   "optionen": [
+    "in die Kläranlage",
+    "zurück in die Alpen",
+    "direkt in die Wasserleitung",
+    "in den Gastank"
+   ],
+   "antwort": "in die Kläranlage",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 9 – schmutziges Wasser (Abwasser) kommt in die Kläranlage.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wohin gelangt das schmutzige Wasser? In die …",
+   "antwort": [
+    "Kläranlage",
+    "die Kläranlage",
+    "Klaeranlage",
+    "Kläranlagen"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 9 – Kläranlage.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was kann beim Verbrennen von Müll entstehen (laut Arbeitsblatt)?",
+   "optionen": [
+    "CO₂ – und Wärme für die Fernwärme",
+    "Alpenquellwasser",
+    "Uran",
+    "Pfandflaschen"
+   ],
+   "antwort": "CO₂ – und Wärme für die Fernwärme",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 10 und 11 – beim Verbrennen von Müll entsteht CO₂; die Wärme wird als Fernwärme genutzt.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Was kann beim Verbrennen von Müll produziert werden? (ein Begriff)",
+   "antwort": [
+    "CO2",
+    "CO₂",
+    "Kohlendioxid",
+    "Kohlenstoffdioxid",
+    "Fernwärme",
+    "Wärme",
+    "Energie",
+    "Strom"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 10 – auf dem Blatt steht CO₂. Die Wärme vom Müllverbrennen wird außerdem als Fernwärme genutzt (Frage 11).",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wofür wird die Fernwärme genutzt?",
+   "optionen": [
+    "zum Heizen",
+    "zum Kühlen von Lebensmitteln",
+    "zum Antreiben von Autos",
+    "zum Fracking"
+   ],
+   "antwort": "zum Heizen",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 11 – Fernwärme wird zum Heizen genutzt.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Wofür wird die Fernwärme genutzt? Zum …",
+   "antwort": [
+    "Heizen",
+    "heizen",
+    "zum Heizen",
+    "Heizung",
+    "Wohnungen heizen",
+    "Warmwasser"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 11 – zum Heizen.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woher kommt in Wien die Fernwärme (Arbeitsblatt Fragen 10 und 11)?",
+   "optionen": [
+    "vom Verbrennen von Müll",
+    "von Solarzellen am Dach",
+    "aus dem Alpenquellwasser",
+    "aus Pfandflaschen"
+   ],
+   "antwort": "vom Verbrennen von Müll",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Fragen 10 und 11 – Müll wird verbrannt, die Wärme wird als Fernwärme zum Heizen genutzt.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Abfall kann wiederverwendet oder wiederverwertet werden. Wie nennt man diesen Vorgang?",
+   "optionen": [
+    "Recycling",
+    "Fracking",
+    "Aquädukt",
+    "Kläranlage"
+   ],
+   "antwort": "Recycling",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Recycling ist der Oberbegriff: Abfall wird wiederverwendet oder wiederverwertet.",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Abfall kann wiederverwendet oder wiederverwertet werden. Diesen Vorgang nennt man …",
+   "antwort": [
+    "Recycling",
+    "Recyceln",
+    "Recyclen"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Recycling ist der Oberbegriff: Abfall wird wiederverwendet oder wiederverwertet.",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Ein Produkt wird in gleicher Form nochmals verwendet (z. B. Pfandflaschen). Wie heißt das?",
+   "optionen": [
+    "Wiederverwendung",
+    "Wiederverwertung",
+    "Müllverbrennung",
+    "Fernwärme"
+   ],
+   "antwort": "Wiederverwendung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwendung: ein Produkt wird in gleicher Form nochmals verwendet (Pfandflaschen).",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Ein Produkt wird in gleicher Form nochmals verwendet, z. B. Pfandflaschen. Das nennt man …",
+   "antwort": [
+    "Wiederverwendung",
+    "Wiederverwenden"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwendung: ein Produkt wird in gleicher Form nochmals verwendet (Pfandflaschen).",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle). Wie heißt das?",
+   "optionen": [
+    "Wiederverwertung",
+    "Wiederverwendung",
+    "Aquädukt",
+    "Kläranlage"
+   ],
+   "antwort": "Wiederverwertung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+   "stoff": 8
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Bestandteile eines Produktes werden neuerlich verwendet, z. B. Altpapier wird zu Küchenrolle. Das nennt man …",
+   "antwort": [
+    "Wiederverwertung",
+    "Wiederverwerten"
+   ],
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+   "zahl": false,
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Eine Pfandflasche wird gewaschen und wieder befüllt. Was ist das?",
+   "optionen": [
+    "Wiederverwendung",
+    "Wiederverwertung",
+    "Müllverbrennung"
+   ],
+   "antwort": "Wiederverwendung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwendung: ein Produkt wird in gleicher Form nochmals verwendet (Pfandflaschen).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Altpapier wird zu Küchenrolle verarbeitet. Was ist das?",
+   "optionen": [
+    "Wiederverwertung",
+    "Wiederverwendung",
+    "Fernwärme"
+   ],
+   "antwort": "Wiederverwertung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Beispiel nennt das Arbeitsblatt für Wiederverwendung?",
+   "optionen": [
+    "Pfandflaschen",
+    "Altpapier wird zu Küchenrolle",
+    "Müll wird verbrannt",
+    "Wasser kommt in die Kläranlage"
+   ],
+   "antwort": "Pfandflaschen",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwendung: ein Produkt wird in gleicher Form nochmals verwendet (Pfandflaschen).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Beispiel nennt das Arbeitsblatt für Wiederverwertung?",
+   "optionen": [
+    "Altpapier wird zu Küchenrolle verarbeitet",
+    "Pfandflaschen",
+    "Wasser fließt über ein Aquädukt",
+    "Fernwärme zum Heizen"
+   ],
+   "antwort": "Altpapier wird zu Küchenrolle verarbeitet",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Begriff ist der Oberbegriff für Wiederverwendung und Wiederverwertung?",
+   "optionen": [
+    "Recycling",
+    "Entsorgung",
+    "Versorgung",
+    "Fernwärme"
+   ],
+   "antwort": "Recycling",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Recycling ist der Oberbegriff: Abfall wird wiederverwendet oder wiederverwertet.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Bei der Wiederverwendung wird ein Produkt in gleicher Form nochmals verwendet.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwendung: ein Produkt wird in gleicher Form nochmals verwendet (Pfandflaschen).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Bei der Wiederverwertung wird ein Produkt in gleicher Form nochmals verwendet.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Das ist die Wiederverwendung. Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Pfandflaschen sind ein Beispiel für Wiederverwertung.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Pfandflaschen = Wiederverwendung (gleiche Form).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Wien wird mit Alpenquellwasser versorgt.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 2 und 3.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Das Wiener Trinkwasser kommt aus der Donau-Kläranlage.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Das Wasser kommt aus den Alpen; schmutziges Wasser geht in die Kläranlage.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Eine Wasserleitung, die über eine Brücke führt, heißt Aquädukt.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 5.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Der Wasservorrat in Wien würde laut Arbeitsblatt etwa 4 Tage reichen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 7.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Schmutziges Wasser gelangt in die Kläranlage.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 9.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Fernwärme wird zum Kühlen genutzt.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 11 – Fernwärme wird zum Heizen genutzt.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Richtig oder falsch?",
+   "frage": "Richtig oder falsch? Beim Verbrennen von Müll entsteht CO₂.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 10.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Bring den Weg des Wiener Wassers in die richtige Reihenfolge.",
+   "optionen": [
+    "Alpen → Leitung/Aquädukt → Sammeln am Schafberg → Haushalte → Kläranlage",
+    "Kläranlage → Alpen → Haushalte → Schafberg",
+    "Schafberg → Kläranlage → Alpen → Haushalte",
+    "Haushalte → Alpen → Kläranlage → Schafberg"
+   ],
+   "antwort": "Alpen → Leitung/Aquädukt → Sammeln am Schafberg → Haushalte → Kläranlage",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Fragen 3–9 zusammen: Quelle in den Alpen, Leitung, Sammeln, Verbrauch, Kläranlage.",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was gehört zur ENTSORGUNG der Stadt?",
+   "optionen": [
+    "Kläranlage und Müllverbrennung",
+    "Alpenquellwasser und Wasserleitung",
+    "Aquädukt",
+    "Wasservorrat am Schafberg"
+   ],
+   "antwort": "Kläranlage und Müllverbrennung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Entsorgung = schmutziges Wasser und Müll loswerden (Fragen 9 und 10).",
+   "stoff": 8
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was gehört zur VERSORGUNG der Stadt?",
+   "optionen": [
+    "Strom, Wasser und Gas für die Bevölkerung",
+    "Kläranlage",
+    "Müllverbrennung",
+    "Altpapier"
+   ],
+   "antwort": "Strom, Wasser und Gas für die Bevölkerung",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 1 – Versorgung mit Strom, Wasser, Gas …",
+   "stoff": 8
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe den Weg des Wiener Trinkwassers von der Quelle bis zur Kläranlage.",
+   "kern": [
+    {
+     "t": "Quellwasser aus den Alpen/Bergen",
+     "w": [
+      "alpen",
+      "berg",
+      "quell"
+     ]
+    },
+    {
+     "t": "Leitung bzw. Aquädukt",
+     "w": [
+      "leitung",
+      "aquäd",
+      "aquad",
+      "rohr"
+     ]
+    },
+    {
+     "t": "gesammelt am Schafberg",
+     "w": [
+      "schafberg",
+      "gesammelt",
+      "speicher",
+      "behälter"
+     ]
+    },
+    {
+     "t": "schmutziges Wasser in die Kläranlage",
+     "w": [
+      "kläranlage",
+      "klaeranlage",
+      "klär"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Wien bekommt Alpenquellwasser aus den Bergen. Es fließt durch lange Leitungen, über Brücken in Aquädukten, nach Wien und wird zum Beispiel am Schafberg gesammelt. Das schmutzige Wasser kommt dann in die Kläranlage.",
+   "antwort": "Wien bekommt Alpenquellwasser aus den Bergen. Es fließt durch lange Leitungen, über Brücken in Aquädukten, nach Wien und wird zum Beispiel am Schafberg gesammelt. Das schmutzige Wasser kommt dann in die Kläranlage.",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“.",
+   "stoff": 8
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre den Unterschied zwischen Wiederverwendung und Wiederverwertung und nenne je ein Beispiel.",
+   "kern": [
+    {
+     "t": "Wiederverwendung = gleiche Form nochmals verwendet",
+     "w": [
+      "gleiche.*form",
+      "gleichen form",
+      "nochmal",
+      "noch einmal",
+      "wieder befüll"
+     ]
+    },
+    {
+     "t": "Beispiel Pfandflasche",
+     "w": [
+      "pfand",
+      "flasche"
+     ]
+    },
+    {
+     "t": "Wiederverwertung = Bestandteile neu verwendet",
+     "w": [
+      "bestandteil",
+      "teile",
+      "material",
+      "verarbeit"
+     ]
+    },
+    {
+     "t": "Beispiel Altpapier → Küchenrolle",
+     "w": [
+      "altpapier",
+      "küchenrolle",
+      "kuechenrolle",
+      "papier"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Bei der Wiederverwendung wird ein Produkt in gleicher Form nochmals verwendet, zum Beispiel Pfandflaschen. Bei der Wiederverwertung werden die Bestandteile eines Produktes neu verwendet, zum Beispiel wird Altpapier zu Küchenrolle verarbeitet. Beides zusammen heißt Recycling.",
+   "antwort": "Bei der Wiederverwendung wird ein Produkt in gleicher Form nochmals verwendet, zum Beispiel Pfandflaschen. Bei der Wiederverwertung werden die Bestandteile eines Produktes neu verwendet, zum Beispiel wird Altpapier zu Küchenrolle verarbeitet. Beides zusammen heißt Recycling.",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“.",
+   "stoff": 8
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Was passiert mit dem Müll in Wien, und wie wird das genutzt?",
+   "kern": [
+    {
+     "t": "Müll wird verbrannt",
+     "w": [
+      "verbrenn",
+      "verbrannt"
+     ]
+    },
+    {
+     "t": "es entsteht CO₂ bzw. Wärme",
+     "w": [
+      "co2",
+      "co₂",
+      "kohlendioxid",
+      "wärme",
+      "waerme",
+      "energie"
+     ]
+    },
+    {
+     "t": "Fernwärme zum Heizen",
+     "w": [
+      "fernwärme",
+      "fernwaerme",
+      "heiz"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Ein Teil des Mülls wird verbrannt. Dabei entsteht CO₂, aber auch Wärme. Diese Wärme wird als Fernwärme zum Heizen genutzt.",
+   "antwort": "Ein Teil des Mülls wird verbrannt. Dabei entsteht CO₂, aber auch Wärme. Diese Wärme wird als Fernwärme zum Heizen genutzt.",
+   "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“.",
+   "stoff": 8
   }
  ],
  "wissen": [
@@ -3811,6 +4568,42 @@
     "sonnenkollektor",
     "solarzelle",
     "schwarze gold"
+   ]
+  },
+  {
+   "titel": "9 · Arbeitsblatt: Versorgung und Entsorgung in Wien",
+   "kurz": "Wasser aus den Alpen, Kläranlage, Müll, Fernwärme, Recycling",
+   "problem": "Teststoff: Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“ (11 Fragen + Begriffe zuordnen).",
+   "text": [
+    "Versorgung: Die Stadt Wien versorgt die Bevölkerung mit Strom, Wasser, Gas und mehr.",
+    "Wasser: Wien bekommt Alpenquellwasser – es stammt aus den Alpen. Es kommt durch eine lange Leitung von den Bergen nach Wien. Wasserleitungen, die über Brücken führen, heißen Aquädukt. Gesammelt wird das Wasser zum Beispiel am Schafberg. Laut Arbeitsblatt würde der Wasservorrat in Wien für 4 Tage reichen.",
+    "Entsorgung: Das schmutzige Wasser gelangt in die Kläranlage. Müll wird verbrannt – dabei entsteht CO₂. Die Wärme wird als Fernwärme genutzt, und zwar zum Heizen.",
+    "Begriffe: Abfall kann wiederverwendet oder wiederverwertet werden – diesen Vorgang nennt man Recycling. Wiederverwendung: ein Produkt wird in gleicher Form nochmals verwendet (Pfandflaschen). Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+    "Hinweis: Frage 8 („Womit wird Trinkwasser in vielen Städten aufbereitet?“) ist auf dem Foto nicht lesbar und wird darum nicht abgefragt."
+   ],
+   "schritte": [
+    "Weg des Wassers: Alpen → Leitung/Aquädukt → Schafberg → Haushalte → Kläranlage.",
+    "Müll verbrennen → CO₂ und Wärme → Fernwärme zum Heizen.",
+    "Recycling = Oberbegriff; Wiederverwendung = gleiche Form; Wiederverwertung = Bestandteile."
+   ],
+   "beispiel": "Pfandflasche zurückbringen = Wiederverwendung. Altpapier wird Küchenrolle = Wiederverwertung.",
+   "fehler": [
+    "Wiederverwendung und Wiederverwertung nicht verwechseln: gleiche Form = Wiederverwendung.",
+    "Kläranlage ist für schmutziges Wasser – das Trinkwasser kommt aus den Alpen."
+   ],
+   "merke": "Wasser aus den Alpen, Abwasser in die Kläranlage, Müll wird zu Fernwärme. Recycling = Wiederverwendung + Wiederverwertung.",
+   "video": "Wiener Wasser Hochquellenleitung einfach erklärt",
+   "stichworte": [
+    "aquäd",
+    "schafberg",
+    "kläranlage",
+    "alpenquell",
+    "fernwärme",
+    "wiederverwend",
+    "wiederverwert",
+    "recycling",
+    "pfandflasche",
+    "küchenrolle"
    ]
   }
  ],
@@ -4187,12 +4980,39 @@
     "antwort": "Ein Gemisch aus Wasser, Sand und Chemikalien wird in die Erde gepresst, es entstehen Risse im Gestein und Gas entweicht",
     "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“.",
     "stoff": 7
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Wie nennt man Wasserleitungen, die über Brücken führen?",
+    "optionen": [
+     "Aquädukt",
+     "Pipeline",
+     "Raffinerie",
+     "Kläranlage"
+    ],
+    "antwort": "Aquädukt",
+    "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Frage 5.",
+    "stoff": 8
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Altpapier wird zu Küchenrolle verarbeitet. Das ist …",
+    "optionen": [
+     "Wiederverwertung",
+     "Wiederverwendung",
+     "Müllverbrennung"
+    ],
+    "antwort": "Wiederverwertung",
+    "erklaerung": "Arbeitsblatt „Versorgung und Entsorgung in der Millionenstadt Wien“: Wiederverwertung: Bestandteile eines Produktes werden neuerlich verwendet (Altpapier wird zu Küchenrolle verarbeitet).",
+    "stoff": 8
    }
   ]
  },
  "podcast": {
   "titel": "Energie & Ressourcen – Podcast zum Teststoff",
-  "kurz": "Acht Folgen: die sieben Punkte vom Teststoff-Blatt plus die zwei Arbeitsblätter – nur Stoff aus dem Buch.",
+  "kurz": "Neun Folgen: die sieben Punkte vom Teststoff-Blatt plus die drei Arbeitsblätter – nur Stoff aus dem Buch.",
   "kapitel": [
    {
     "titel": "Folge 1 · Fachbegriffe",
@@ -4225,6 +5045,10 @@
    {
     "titel": "Folge 8 · Die Arbeitsblätter",
     "text": "Letzte Folge. Jetzt kommen die zwei Arbeitsblätter dran.\nErstes Blatt: Fracking im Weinviertel.\nWas ist Fracking? Eine Methode, um Gas aus tiefen Gesteinsschichten zu holen.\nMan presst ein Gemisch unter die Erde. Wasser, Sand und Chemikalien.\nDabei entstehen Risse im Gestein. Durch diese Risse kann das Gas entweichen. Und oben wird es aufgefangen.\nSchau dir die Grafik an. Sie heißt Schiefergasförderung. Sie hat vier Nummern.\nNummer eins: Die Flüssigkeit wird mit hohem Druck in die Schieferschicht gepresst.\nNummer zwei: Der Druck zerreißt das Gestein. Genau das ist das Fracking.\nNummer drei: Das Gas strömt aus dem Gestein und wird gefördert.\nNummer vier: Die Flüssigkeit wird abgepumpt und wieder aufbereitet.\nDas Gas kommt in einen Gastank und dann ins Gasnetz. Und die Rohre haben extra Stahlzement. Wozu? Zum Schutz vom Grundwasser.\nDie Gasschicht im Weinviertel liegt übrigens ungefähr sechstausend Meter tief.\nWarum redet man in Österreich überhaupt darüber? Seit 2003 produziert Österreich immer weniger eigenes Gas. Viel wird gekauft, vor allem aus Russland.\nWegen der Energiekrise sucht Europa neue Gasquellen. Und Österreich will unabhängiger von russischem Gas werden.\nAber Achtung: Fracking ist umstritten. Es könnte das Grundwasser verschmutzen. Es braucht viel Wasser. Und Frackinggas ist fossil. Also schlecht fürs Klima.\nManche Fachleute sagen sogar: Fracking ist genauso schädlich wie Kohle verbrennen.\nIn den USA wird viel gefrackt. Dadurch sind sie der größte Erdgasproduzent der Welt.\nUnd bei uns? 2012 wollte die OMV im Weinviertel fracken. Die Menschen dort waren dagegen.\nHeute gibt es keine konkreten Pläne. Die OMV will bis 2050 gar kein Öl und Gas mehr fördern.\nDie Idee auf dem Blatt: Das Geld lieber in Windräder und Wärmepumpen stecken.\nZweites Blatt: Energie und Rohstoffe. Da musst du Sätze verbinden. Ich sag dir die richtigen Paare.\nAus Erdöl macht man Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt und Klebstoffe.\nDas schwarze Gold, also Erdöl, holt man auch unter Wasser. Mit Ölbohrinseln. Verarbeitet wird es in der Raffinerie.\nLäuft Öl aus einem Tankschiff aus, gibt es eine Ölpest. Meere und Küsten werden verschmutzt, Tiere und Pflanzen sterben.\nViel Gold und viele Diamanten gibt es in Südafrika. Der Abbau ist sehr schwierig.\nSpaltet man Atomkerne von Uran, entsteht Strom. Kernkraftwerke sind sehr leistungsstark, aber auch gefährlich.\nIn Österreich kommt mehr als die Hälfte vom Strom aus Wasserkraft. Und die ist erneuerbar.\nLaufkraftwerke stehen an Flüssen. Speicherkraftwerke holen ihr Wasser aus Stauseen.\nAchtung, Falle! Solarzellen machen direkt Strom. Sonnenkollektoren machen Wärme, zum Beispiel warmes Wasser.\nUnd beim Wind treiben hohe Windräder Turbinen an. So entsteht Strom.\nDas war's. Du kennst jetzt alle Punkte vom Teststoff und die zwei Arbeitsblätter. Mach noch einmal den Probetest. Viel Erfolg am 27. November!"
+   },
+   {
+    "titel": "Folge 9 · Versorgung und Entsorgung in Wien",
+    "text": "Noch eine Bonus-Folge. Das Arbeitsblatt über Wien.\nZuerst die Versorgung. Wer bringt Strom, Wasser und Gas zu den Menschen? Die Stadt Wien.\nJetzt das Wasser. Wien trinkt Alpenquellwasser. Es kommt aus den Alpen. Also aus den Bergen.\nWie kommt es nach Wien? Durch eine lange Leitung.\nManchmal führt die Leitung über eine Brücke. Das nennt man Aquädukt. Merk dir das Wort gut.\nGesammelt wird das Wasser zum Beispiel am Schafberg.\nUnd wie lange reicht der Vorrat? Laut Arbeitsblatt ungefähr vier Tage.\nJetzt die Entsorgung. Was passiert mit dem schmutzigen Wasser? Es kommt in die Kläranlage.\nUnd der Müll? Ein Teil wird verbrannt. Dabei entsteht CO zwei.\nAber die Wärme geht nicht verloren. Sie wird als Fernwärme genutzt. Wofür? Zum Heizen.\nZum Schluss drei Begriffe. Achtung, Falle!\nRecycling ist der Oberbegriff. Abfall wird wiederverwendet oder wiederverwertet.\nWiederverwendung heißt: gleiche Form, nochmal benutzen. Wie eine Pfandflasche.\nWiederverwertung heißt: die Bestandteile werden neu verwendet. Altpapier wird zur Küchenrolle.\nTrick: Verwenden, wie es ist. Verwerten, was drin ist.\nDas war's. Jetzt ab zum Probetest. Viel Glück morgen!"
    }
   ]
  }
