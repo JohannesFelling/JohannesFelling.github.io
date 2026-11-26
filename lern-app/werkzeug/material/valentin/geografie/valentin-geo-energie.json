@@ -5,7 +5,7 @@
  "teststoff": {
   "termin": "2026-11-27",
   "titel": "Geografie-Test am 27.11.",
-  "quelle": "Teststoff GW + GEOprofi 2 S. 8–27",
+  "quelle": "Teststoff GW + GEOprofi 2 S. 8–27 + Arbeitsblätter Fracking / Energie und Rohstoffe",
   "punkte": [
    "Fachbegriffe nennen und erklären (unterstrichene Begriffe)",
    "Abbildungen, Diagramme und Karten beschreiben (S. 9, 11, 15, 16, 17, 21, 24, 26)",
@@ -13,7 +13,8 @@
    "Stromnetz, Blackout erklären, Auswirkungen (S. 16/17)",
    "Erneuerbare und nicht erneuerbare Rohstoffe unterscheiden (S. 20–23)",
    "Entsorgung: Abfall richtig trennen (S. 24/25)",
-   "Recycling erklären, Beispiele nennen (S. 26/27)"
+   "Recycling erklären, Beispiele nennen (S. 26/27)",
+   "Arbeitsblätter: „Fracking im Weinviertel“ und „Energie und Rohstoffe“ (Sätze verbinden)"
   ]
  },
  "fragen": [
@@ -2381,6 +2382,1103 @@
    "antwort": "Zum Löten der Bauteile",
    "erklaerung": "Abb. 23.1: Zinn zum Löten der Bauteile; aus Indonesien.",
    "stoff": 4
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist Fracking?",
+   "optionen": [
+    "Eine Methode, um Gas aus tiefen Gesteinsschichten zu holen",
+    "Eine Methode, um Strom aus Wind zu gewinnen",
+    "Eine Art, Erdöl in der Raffinerie zu verarbeiten",
+    "Das Trennen von Müll"
+   ],
+   "antwort": "Eine Methode, um Gas aus tiefen Gesteinsschichten zu holen",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Fracking ist eine Methode, um Gas aus tiefen Gesteinsschichten zu holen.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Gemisch wird beim Fracking unter die Erde gepresst?",
+   "optionen": [
+    "Wasser, Sand und Chemikalien",
+    "Erdöl, Kohle und Gas",
+    "Nur reines Wasser",
+    "Luft und Sand"
+   ],
+   "antwort": "Wasser, Sand und Chemikalien",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Ein Gemisch aus Wasser, Sand und Chemikalien wird unter die Erde gepresst.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wozu presst man beim Fracking das Gemisch unter die Erde?",
+   "optionen": [
+    "Um Risse im Gestein zu erzeugen, damit das Gas entweichen kann",
+    "Um das Grundwasser zu reinigen",
+    "Um ein Loch für einen Stausee zu machen",
+    "Um Erdbeben zu verhindern"
+   ],
+   "antwort": "Um Risse im Gestein zu erzeugen, damit das Gas entweichen kann",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Es entstehen Risse im Gestein. So kann das Gas entweichen und aufgefangen werden.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Fracking holt Gas aus tiefen …schichten. Ergänze das Wort.",
+   "antwort": [
+    "Gesteinsschichten",
+    "Gesteins",
+    "Gestein",
+    "Gesteinsschicht"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Gas aus tiefen Gesteinsschichten.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Seit welchem Jahr produziert Österreich immer weniger eigenes Gas?",
+   "antwort": [
+    "2003"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: seit 2003 immer weniger eigenes Gas.",
+   "zahl": true,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Aus welchem Land kauft Österreich laut Arbeitsblatt vor allem Gas?",
+   "optionen": [
+    "Russland",
+    "USA",
+    "Katar",
+    "Norwegen"
+   ],
+   "antwort": "Russland",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Österreich kauft viel Gas aus anderen Ländern, vor allem aus Russland.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum wird in Österreich über Fracking nachgedacht?",
+   "optionen": [
+    "Wegen der Energiekrise sucht Europa nach neuen Gasquellen",
+    "Weil Österreich zu viel eigenes Gas hat",
+    "Weil Fracking gut für das Klima ist",
+    "Weil die Windräder nicht mehr funktionieren"
+   ],
+   "antwort": "Wegen der Energiekrise sucht Europa nach neuen Gasquellen",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Wegen der Energiekrise sucht Europa nach neuen Gasquellen, auch in Österreich.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum ist Fracking umstritten? Wähle die Antwort vom Arbeitsblatt.",
+   "optionen": [
+    "Es könnte das Grundwasser verschmutzen und viel Wasser verbrauchen",
+    "Es macht zu viel Lärm in der Stadt",
+    "Es braucht zu viel Sonne",
+    "Es ist zu billig"
+   ],
+   "antwort": "Es könnte das Grundwasser verschmutzen und viel Wasser verbrauchen",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Fracking könnte das Grundwasser verschmutzen und viel Wasser verbrauchen.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was für ein Brennstoff ist Frackinggas?",
+   "optionen": [
+    "Ein fossiler Brennstoff, der schlecht für das Klima ist",
+    "Ein erneuerbarer Energieträger",
+    "Ein Brennstoff ohne CO₂",
+    "Biomasse"
+   ],
+   "antwort": "Ein fossiler Brennstoff, der schlecht für das Klima ist",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Frackinggas ist ein fossiler Brennstoff, der schlecht für das Klima ist.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Womit vergleichen manche Expertinnen und Experten die Schädlichkeit von Fracking?",
+   "optionen": [
+    "Mit der Kohleverbrennung",
+    "Mit Windrädern",
+    "Mit Solarzellen",
+    "Mit Recycling"
+   ],
+   "antwort": "Mit der Kohleverbrennung",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Manche sagen, Fracking ist genauso schädlich wie Kohleverbrennung.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Fracking ist laut manchen Fachleuten genauso schädlich wie die Verbrennung von …?",
+   "antwort": [
+    "Kohle",
+    "Kohleverbrennung"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: genauso schädlich wie Kohleverbrennung.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welches Land ist durch Fracking zum größten Erdgasproduzenten der Welt geworden?",
+   "optionen": [
+    "USA",
+    "Österreich",
+    "Russland",
+    "Südafrika"
+   ],
+   "antwort": "USA",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: In den USA wird viel gefrackt – das Land wurde zum größten Erdgasproduzenten der Welt.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welches Land ist durch viel Fracking zum größten Erdgasproduzenten der Welt geworden?",
+   "antwort": [
+    "USA",
+    "die USA",
+    "Vereinigte Staaten",
+    "Amerika",
+    "US"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: die USA.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was hat Fracking für die USA bewirkt?",
+   "optionen": [
+    "Sie brauchen keine Energie mehr aus anderen Ländern",
+    "Sie müssen jetzt mehr Gas aus Russland kaufen",
+    "Sie haben das Fracking verboten",
+    "Sie haben keine Gasquellen mehr"
+   ],
+   "antwort": "Sie brauchen keine Energie mehr aus anderen Ländern",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Die USA brauchen keine Energie mehr aus anderen Ländern.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "In welchem Jahr wollte die OMV im Weinviertel fracken?",
+   "antwort": [
+    "2012"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: 2012 wollte die OMV im Weinviertel fracken.",
+   "zahl": true,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wer wollte 2012 im Weinviertel fracken?",
+   "optionen": [
+    "die OMV",
+    "die USA",
+    "die EU",
+    "die Stadt Wien"
+   ],
+   "antwort": "die OMV",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: 2012 wollte die OMV im Weinviertel fracken.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was passierte 2012, als im Weinviertel gefrackt werden sollte?",
+   "optionen": [
+    "Die Menschen dort waren dagegen",
+    "Es wurde sofort mit dem Fracking begonnen",
+    "Man fand dort Gold und Diamanten",
+    "Es wurde ein Kernkraftwerk gebaut"
+   ],
+   "antwort": "Die Menschen dort waren dagegen",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: 2012 wollte die OMV fracken, aber die Menschen dort waren dagegen.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "In welcher Region Österreichs wollte die OMV fracken? (Name der Region)",
+   "antwort": [
+    "Weinviertel",
+    "im Weinviertel"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Fracking im Weinviertel.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Warum wird jetzt wieder über Fracking in Österreich nachgedacht?",
+   "optionen": [
+    "Österreich will unabhängiger von russischem Gas werden",
+    "Österreich will mehr Gas aus Russland kaufen",
+    "Das Weinviertel will mehr Wein anbauen",
+    "Die OMV will mehr Kohle fördern"
+   ],
+   "antwort": "Österreich will unabhängiger von russischem Gas werden",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Österreich will unabhängiger von russischem Gas werden.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Alle Politiker und Experten in Österreich sind für Fracking.",
+   "optionen": [
+    "falsch",
+    "richtig"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Einige sind dafür, andere dagegen.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Es gibt in Österreich derzeit keine konkreten Pläne für Fracking.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“ (Zukunft von Fracking): keine konkreten Pläne.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Bis zu welchem Jahr will die OMV kein Öl und Gas mehr fördern?",
+   "antwort": [
+    "2050"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Die OMV will bis 2050 kein Öl und Gas mehr fördern.",
+   "zahl": true,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was will die OMV laut Arbeitsblatt bis 2050?",
+   "optionen": [
+    "Kein Öl und Gas mehr fördern und sich auf andere Bereiche konzentrieren",
+    "Im ganzen Weinviertel fracken",
+    "Die größte Ölbohrinsel der Welt bauen",
+    "Mehr Gas aus Russland kaufen"
+   ],
+   "antwort": "Kein Öl und Gas mehr fördern und sich auf andere Bereiche konzentrieren",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“ (Zukunft von Fracking).",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Die Menschen im Weinviertel sind besorgt, dass Fracking wieder ein Thema werden könnte.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“ (Zukunft von Fracking).",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche alternative Idee nennt das Arbeitsblatt statt Frackinganlagen?",
+   "optionen": [
+    "Die Milliarden in erneuerbare Energien wie Windräder und Wärmepumpen stecken",
+    "Mehr Kohlekraftwerke bauen",
+    "Mehr Öl aus Südafrika kaufen",
+    "Das Grundwasser abpumpen"
+   ],
+   "antwort": "Die Milliarden in erneuerbare Energien wie Windräder und Wärmepumpen stecken",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“ (Alternative Ideen): Geld besser in Windräder und Wärmepumpen.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welche zwei Beispiele für erneuerbare Energien nennt das Fracking-Arbeitsblatt?",
+   "optionen": [
+    "Windräder und Wärmepumpen",
+    "Kohle und Erdgas",
+    "Kernkraft und Erdöl",
+    "Ölbohrinseln und Raffinerien"
+   ],
+   "antwort": "Windräder und Wärmepumpen",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“ (Alternative Ideen).",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Laut Arbeitsblatt würde Geld für erneuerbare Energien auch den Menschen vor Ort helfen.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“ (Alternative Ideen).",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Frackinggas ist ein erneuerbarer Energieträger.",
+   "optionen": [
+    "falsch",
+    "richtig"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Frackinggas ist ein fossiler Brennstoff.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie heißt die Grafik auf dem Fracking-Arbeitsblatt?",
+   "optionen": [
+    "Schiefergasförderung",
+    "Erdölraffinerie",
+    "Speicherkraftwerk",
+    "Stromnetz"
+   ],
+   "antwort": "Schiefergasförderung",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“: Grafik „Schiefergasförderung“.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung: In welche Schicht wird die Flüssigkeit mit hohem Druck gepresst?",
+   "optionen": [
+    "in die Schieferschicht",
+    "in den Stausee",
+    "ins Grundwasser",
+    "in den Gastank"
+   ],
+   "antwort": "in die Schieferschicht",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik Schritt 1.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung, Schritt 2: Was macht der hohe Druck?",
+   "optionen": [
+    "Er „zerreißt“ das Gestein – das ist das Fracking",
+    "Er treibt eine Turbine an",
+    "Er reinigt das Gas",
+    "Er kühlt das Gestein"
+   ],
+   "antwort": "Er „zerreißt“ das Gestein – das ist das Fracking",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik Schritt 2.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung, Schritt 3: Was passiert?",
+   "optionen": [
+    "Das Gas strömt aus dem Gestein und wird gefördert",
+    "Das Gas wird verbrannt",
+    "Das Wasser verdunstet",
+    "Das Gestein wird abgebaut"
+   ],
+   "antwort": "Das Gas strömt aus dem Gestein und wird gefördert",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik Schritt 3.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung, Schritt 4: Was passiert mit der Flüssigkeit?",
+   "optionen": [
+    "Sie wird abgepumpt und zur Wiederverwendung aufbereitet",
+    "Sie bleibt für immer im Boden",
+    "Sie wird ins Gasnetz eingespeist",
+    "Sie wird ins Meer geleitet"
+   ],
+   "antwort": "Sie wird abgepumpt und zur Wiederverwendung aufbereitet",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik Schritt 4.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung: Was ist im Flüssigkeitstank?",
+   "optionen": [
+    "Wasser, Sand, chemische Zusätze oder Stärke",
+    "Erdöl und Benzin",
+    "Uran",
+    "Nur Gas"
+   ],
+   "antwort": "Wasser, Sand, chemische Zusätze oder Stärke",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik: Flüssigkeitstank.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung: Wozu dienen die Mehrfachrohre mit Stahlzement?",
+   "optionen": [
+    "Zum Grundwasserschutz",
+    "Damit das Gas schneller strömt",
+    "Zum Stromtransport",
+    "Damit das Rohr leichter ist"
+   ],
+   "antwort": "Zum Grundwasserschutz",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik: Mehrfachrohre mit Stahlzement zum Grundwasserschutz.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Grafik Schiefergasförderung: In welcher Tiefe liegt die gasführende Schicht im Weinviertel ungefähr? (in Metern)",
+   "antwort": [
+    "6000",
+    "6.000",
+    "6000 m",
+    "6.000 m"
+   ],
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik: gasführende Schicht im Weinviertel, ca. 6.000 m Tiefe.",
+   "zahl": true,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Grafik Schiefergasförderung: Wohin kommt das geförderte Gas am Ende?",
+   "optionen": [
+    "Es wird ins Gasnetz eingespeist",
+    "Es wird ins Grundwasser geleitet",
+    "Es bleibt in der Schieferschicht",
+    "Es wird in einer Raffinerie zu Benzin"
+   ],
+   "antwort": "Es wird ins Gasnetz eingespeist",
+   "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“, Grafik: Gastank → Gas wird ins Gasnetz eingespeist.",
+   "stoff": 7
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre in eigenen Worten, wie Fracking funktioniert.",
+   "kern": [
+    {
+     "t": "Gemisch aus Wasser, Sand und Chemikalien",
+     "w": [
+      "wasser",
+      "sand",
+      "chemi"
+     ]
+    },
+    {
+     "t": "wird mit hohem Druck unter die Erde / ins Gestein gepresst",
+     "w": [
+      "press",
+      "druck",
+      "unter die erde",
+      "in die erde",
+      "boden"
+     ]
+    },
+    {
+     "t": "es entstehen Risse im Gestein",
+     "w": [
+      "riss",
+      "zerrei",
+      "aufbrech",
+      "bricht"
+     ]
+    },
+    {
+     "t": "das Gas kann entweichen und wird aufgefangen / gefördert",
+     "w": [
+      "entweich",
+      "aufgefang",
+      "gefördert",
+      "strömt",
+      "herauskommt",
+      "raus"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Beim Fracking wird ein Gemisch aus Wasser, Sand und Chemikalien mit hohem Druck tief unter die Erde gepresst. Dadurch entstehen Risse im Gestein. So kann das Gas entweichen und wird aufgefangen.",
+   "antwort": "Beim Fracking wird ein Gemisch aus Wasser, Sand und Chemikalien mit hohem Druck tief unter die Erde gepresst. Dadurch entstehen Risse im Gestein. So kann das Gas entweichen und wird aufgefangen.",
+   "erklaerung": "",
+   "stoff": 7
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne zwei Gründe, warum Fracking umstritten ist.",
+   "kern": [
+    {
+     "t": "Grundwasser könnte verschmutzt werden",
+     "w": [
+      "grundwasser",
+      "verschmutz",
+      "wasser.*schmutz"
+     ]
+    },
+    {
+     "t": "verbraucht viel Wasser",
+     "w": [
+      "viel wasser",
+      "wasser.*verbrauch",
+      "verbrauch.*wasser"
+     ]
+    },
+    {
+     "t": "fossiler Brennstoff, schlecht für das Klima",
+     "w": [
+      "fossil",
+      "klima",
+      "co2",
+      "co₂"
+     ]
+    },
+    {
+     "t": "so schädlich wie Kohleverbrennung",
+     "w": [
+      "kohle"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Fracking könnte das Grundwasser verschmutzen und braucht viel Wasser. Außerdem ist Frackinggas ein fossiler Brennstoff, der schlecht für das Klima ist – manche sagen, so schädlich wie Kohleverbrennung.",
+   "antwort": "Fracking könnte das Grundwasser verschmutzen und braucht viel Wasser. Außerdem ist Frackinggas ein fossiler Brennstoff, der schlecht für das Klima ist – manche sagen, so schädlich wie Kohleverbrennung.",
+   "erklaerung": "",
+   "stoff": 7
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Warum wird in Österreich überhaupt über Fracking nachgedacht? Erkläre.",
+   "kern": [
+    {
+     "t": "Österreich produziert immer weniger eigenes Gas",
+     "w": [
+      "weniger.*gas",
+      "eigen",
+      "seit 2003"
+     ]
+    },
+    {
+     "t": "kauft viel Gas, vor allem aus Russland",
+     "w": [
+      "russ",
+      "kauf",
+      "ander.*länder",
+      "ausland"
+     ]
+    },
+    {
+     "t": "Energiekrise / neue Gasquellen / unabhängiger werden",
+     "w": [
+      "energiekrise",
+      "krise",
+      "neue.*quell",
+      "unabhängig"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Österreich produziert seit 2003 immer weniger eigenes Gas und kauft viel aus anderen Ländern, vor allem aus Russland. Wegen der Energiekrise sucht Europa nach neuen Gasquellen, und Österreich will unabhängiger von russischem Gas werden.",
+   "antwort": "Österreich produziert seit 2003 immer weniger eigenes Gas und kauft viel aus anderen Ländern, vor allem aus Russland. Wegen der Energiekrise sucht Europa nach neuen Gasquellen, und Österreich will unabhängiger von russischem Gas werden.",
+   "erklaerung": "",
+   "stoff": 7
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Beschreibe die Grafik „Schiefergasförderung“ in vier Schritten.",
+   "kern": [
+    {
+     "t": "1: Flüssigkeit wird mit hohem Druck in die Schieferschicht gepresst",
+     "w": [
+      "press",
+      "druck",
+      "schiefer"
+     ]
+    },
+    {
+     "t": "2: Der Druck zerreißt das Gestein (Fracking)",
+     "w": [
+      "zerrei",
+      "riss",
+      "bricht",
+      "aufbrech"
+     ]
+    },
+    {
+     "t": "3: Gas strömt aus dem Gestein und wird gefördert",
+     "w": [
+      "gas.*ström",
+      "strömt",
+      "gefördert",
+      "gas.*raus",
+      "entweich"
+     ]
+    },
+    {
+     "t": "4: Flüssigkeit wird abgepumpt und wiederverwendet / Gas ins Gasnetz",
+     "w": [
+      "abgepumpt",
+      "abpump",
+      "wieder",
+      "aufbereit",
+      "gasnetz",
+      "eingespeist"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "1. Eine Flüssigkeit aus Wasser, Sand und Zusätzen wird mit hohem Druck in die Schieferschicht gepresst. 2. Der Druck zerreißt das Gestein – das ist das Fracking. 3. Das Gas strömt aus dem Gestein und wird gefördert. 4. Die Flüssigkeit wird abgepumpt und zur Wiederverwendung aufbereitet; das Gas kommt über den Gastank ins Gasnetz.",
+   "antwort": "1. Eine Flüssigkeit aus Wasser, Sand und Zusätzen wird mit hohem Druck in die Schieferschicht gepresst. 2. Der Druck zerreißt das Gestein – das ist das Fracking. 3. Das Gas strömt aus dem Gestein und wird gefördert. 4. Die Flüssigkeit wird abgepumpt und zur Wiederverwendung aufbereitet; das Gas kommt über den Gastank ins Gasnetz.",
+   "erklaerung": "",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Erdöl ist einer der wichtigsten Rohstoffe, denn daraus werden zum Beispiel …",
+   "optionen": [
+    "Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt und Klebstoffe hergestellt",
+    "Windräder und Turbinen gebaut",
+    "Gold und Diamanten gewonnen",
+    "Solarzellen aus Silizium gemacht"
+   ],
+   "antwort": "Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt und Klebstoffe hergestellt",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 1.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Das „schwarze Gold“ wird am Land und unter Wasser gefördert. Das gelingt durch sogenannte …",
+   "optionen": [
+    "Ölbohrinseln",
+    "Laufkraftwerke",
+    "Sonnenkollektoren",
+    "Windräder"
+   ],
+   "antwort": "Ölbohrinseln",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Ölbohrinseln. Das Öl wird in einer Raffinerie verarbeitet.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Das „schwarze Gold“ wird auch unter Wasser gefördert – mit sogenannten …?",
+   "antwort": [
+    "Ölbohrinseln",
+    "Ölbohrinsel",
+    "Bohrinseln",
+    "Bohrinsel"
+   ],
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Ölbohrinseln.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Welcher Rohstoff wird „das schwarze Gold“ genannt?",
+   "optionen": [
+    "Erdöl",
+    "Kohle",
+    "Uran",
+    "Gold"
+   ],
+   "antwort": "Erdöl",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Das „schwarze Gold“ ist das Erdöl.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo wird das Öl nach der Förderung verarbeitet?",
+   "optionen": [
+    "in einer Raffinerie",
+    "in einem Laufkraftwerk",
+    "in einem Stausee",
+    "in einem Windrad"
+   ],
+   "antwort": "in einer Raffinerie",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Das Öl wird in einer Raffinerie verarbeitet.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Tritt Öl durch ein Leck in einem Tankschiff oder einer Pipeline aus, so kommt es oft zu einer …",
+   "optionen": [
+    "Ölpest: Meere und Küsten werden verschmutzt, Tiere und Pflanzen sterben",
+    "Stromausfall in der ganzen Stadt",
+    "Erdbeben",
+    "Überschwemmung durch einen Stausee"
+   ],
+   "antwort": "Ölpest: Meere und Küsten werden verschmutzt, Tiere und Pflanzen sterben",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 3.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Öl tritt aus einem Leck im Tankschiff aus. Wie heißt die Folge?",
+   "antwort": [
+    "Ölpest",
+    "eine Ölpest"
+   ],
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Ölpest – Meere und Küsten verschmutzt, Tiere und Pflanzen sterben.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Einen großen Teil der Goldreserven und der Diamantvorkommen findet man in …",
+   "optionen": [
+    "Südafrika",
+    "Österreich",
+    "den USA",
+    "Dänemark"
+   ],
+   "antwort": "Südafrika",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Südafrika. Der Abbau ist sehr schwierig.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "In welchem Land findet man einen großen Teil der Goldreserven und Diamantvorkommen?",
+   "antwort": [
+    "Südafrika"
+   ],
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Südafrika – der Abbau ist sehr schwierig.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Der Abbau von Gold und Diamanten in Südafrika ist sehr einfach.",
+   "optionen": [
+    "falsch",
+    "richtig"
+   ],
+   "antwort": "falsch",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Der Abbau ist sehr schwierig.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Durch die Spaltung von Atomkernen des Elements Uran kann Strom erzeugt werden. Diese …",
+   "optionen": [
+    "Kernkraftwerke sind sehr leistungsstark, aber auch gefährlich",
+    "Solarzellen wandeln Sonne in Strom um",
+    "Laufkraftwerke stehen an Flüssen",
+    "Windräder treiben Turbinen an"
+   ],
+   "antwort": "Kernkraftwerke sind sehr leistungsstark, aber auch gefährlich",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 5.",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Welches Element wird in Kernkraftwerken gespalten?",
+   "antwort": [
+    "Uran"
+   ],
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Spaltung von Atomkernen des Elements Uran.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wie beschreibt das Arbeitsblatt Kernkraftwerke?",
+   "optionen": [
+    "sehr leistungsstark, aber auch gefährlich",
+    "schwach, aber ungefährlich",
+    "erneuerbar und klimafreundlich",
+    "nur für Wärme, nicht für Strom"
+   ],
+   "antwort": "sehr leistungsstark, aber auch gefährlich",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Kernkraftwerke sind sehr leistungsstark, aber auch gefährlich.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "In Österreich wird mehr als die Hälfte des benötigten Stroms gewonnen aus …",
+   "optionen": [
+    "der Kraft des Wassers",
+    "der Kraft des Windes",
+    "Kohle",
+    "Uran"
+   ],
+   "antwort": "der Kraft des Wassers",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: aus der Kraft des Wassers – Wasserkraft zählt zu den erneuerbaren Energien.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woher kommt laut Arbeitsblatt mehr als die Hälfte des Stroms in Österreich?",
+   "optionen": [
+    "aus Wasserkraft",
+    "aus Erdgas",
+    "aus Kernkraft",
+    "aus Sonnenkollektoren"
+   ],
+   "antwort": "aus Wasserkraft",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: mehr als die Hälfte aus der Kraft des Wassers.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Richtig oder falsch? Strom aus Wasserkraft zählt zu den erneuerbaren Energien.",
+   "optionen": [
+    "richtig",
+    "falsch"
+   ],
+   "antwort": "richtig",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 6.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Laufkraftwerke findet man an Flüssen, während …",
+   "optionen": [
+    "Speicherkraftwerke das Wasser aus Stauseen beziehen",
+    "Kernkraftwerke Uran spalten",
+    "Windräder im Meer stehen",
+    "Ölbohrinseln Öl fördern"
+   ],
+   "antwort": "Speicherkraftwerke das Wasser aus Stauseen beziehen",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 7.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Woher beziehen Speicherkraftwerke ihr Wasser?",
+   "optionen": [
+    "aus Stauseen",
+    "aus Flüssen ohne Staumauer",
+    "aus dem Grundwasser",
+    "aus dem Meer"
+   ],
+   "antwort": "aus Stauseen",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Speicherkraftwerke beziehen das Wasser aus Stauseen.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Wo findet man Laufkraftwerke?",
+   "optionen": [
+    "an Flüssen",
+    "an Stauseen hoch in den Bergen",
+    "im Meer",
+    "in der Wüste"
+   ],
+   "antwort": "an Flüssen",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Laufkraftwerke findet man an Flüssen.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Solarzellen wandeln die Energie der Sonne direkt in Strom um, während …",
+   "optionen": [
+    "Sonnenkollektoren die Energie in Wärme umwandeln, z. B. um Wasser aufzuheizen",
+    "Windräder Turbinen antreiben",
+    "Speicherkraftwerke Wasser aus Stauseen beziehen",
+    "Kernkraftwerke Uran spalten"
+   ],
+   "antwort": "Sonnenkollektoren die Energie in Wärme umwandeln, z. B. um Wasser aufzuheizen",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 8.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was ist der Unterschied zwischen Solarzellen und Sonnenkollektoren?",
+   "optionen": [
+    "Solarzellen machen Strom, Sonnenkollektoren machen Wärme",
+    "Solarzellen machen Wärme, Sonnenkollektoren machen Strom",
+    "Beide machen nur Wärme",
+    "Es gibt keinen Unterschied"
+   ],
+   "antwort": "Solarzellen machen Strom, Sonnenkollektoren machen Wärme",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Solarzellen → direkt Strom; Sonnenkollektoren → Wärme (z. B. Wasser aufheizen).",
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Was erzeugen Sonnenkollektoren aus der Sonnenenergie? (ein Wort)",
+   "antwort": [
+    "Wärme",
+    "Waerme",
+    "warmes Wasser",
+    "Hitze"
+   ],
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Sonnenkollektoren wandeln die Energie in Wärme um.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "eingabe",
+   "art": "Eintippen",
+   "frage": "Was erzeugen Solarzellen direkt aus der Energie der Sonne? (ein Wort)",
+   "antwort": [
+    "Strom",
+    "Elektrizität",
+    "elektrischen Strom"
+   ],
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Solarzellen wandeln die Energie der Sonne direkt in Strom um.",
+   "zahl": false,
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Eine andere erneuerbare Energieform nutzt die Kraft des Windes, indem …",
+   "optionen": [
+    "hohe Windräder Turbinen antreiben und Strom erzeugen",
+    "Sonnenkollektoren Wasser aufheizen",
+    "Öl in der Raffinerie verarbeitet wird",
+    "Uran gespalten wird"
+   ],
+   "antwort": "hohe Windräder Turbinen antreiben und Strom erzeugen",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“, Satz 9.",
+   "stoff": 7
+  },
+  {
+   "typ": "auswahl",
+   "art": "Auswählen",
+   "frage": "Was treiben Windräder an, um Strom zu erzeugen?",
+   "optionen": [
+    "Turbinen",
+    "Ölbohrinseln",
+    "Pipelines",
+    "Sonnenkollektoren"
+   ],
+   "antwort": "Turbinen",
+   "erklaerung": "Arbeitsblatt „Energie und Rohstoffe“: Hohe Windräder treiben Turbinen an und erzeugen Strom.",
+   "stoff": 7
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Nenne drei Produkte, die laut Arbeitsblatt aus Erdöl hergestellt werden.",
+   "kern": [
+    {
+     "t": "Benzin",
+     "w": [
+      "benzin"
+     ]
+    },
+    {
+     "t": "Diesel",
+     "w": [
+      "diesel"
+     ]
+    },
+    {
+     "t": "Kerosin",
+     "w": [
+      "kerosin"
+     ]
+    },
+    {
+     "t": "Medikamente",
+     "w": [
+      "medikament"
+     ]
+    },
+    {
+     "t": "Heizöl",
+     "w": [
+      "heizöl",
+      "heizoel"
+     ]
+    },
+    {
+     "t": "Asphalt",
+     "w": [
+      "asphalt"
+     ]
+    },
+    {
+     "t": "Klebstoffe",
+     "w": [
+      "klebstoff",
+      "kleber"
+     ]
+    }
+   ],
+   "mindest": 3,
+   "muster": "Aus Erdöl werden zum Beispiel Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt und Klebstoffe hergestellt.",
+   "antwort": "Aus Erdöl werden zum Beispiel Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt und Klebstoffe hergestellt.",
+   "erklaerung": "",
+   "stoff": 7
+  },
+  {
+   "typ": "offen",
+   "art": "Frei antworten",
+   "frage": "Erkläre den Unterschied zwischen Laufkraftwerk und Speicherkraftwerk.",
+   "kern": [
+    {
+     "t": "Laufkraftwerk steht an einem Fluss",
+     "w": [
+      "fluss",
+      "flüss"
+     ]
+    },
+    {
+     "t": "Speicherkraftwerk bezieht das Wasser aus einem Stausee",
+     "w": [
+      "stausee",
+      "speicher.*see",
+      "see"
+     ]
+    }
+   ],
+   "mindest": 2,
+   "muster": "Laufkraftwerke findet man an Flüssen, während Speicherkraftwerke das Wasser aus Stauseen beziehen.",
+   "antwort": "Laufkraftwerke findet man an Flüssen, während Speicherkraftwerke das Wasser aus Stauseen beziehen.",
+   "erklaerung": "",
+   "stoff": 7
   }
  ],
  "wissen": [
@@ -2673,6 +3771,46 @@
     "Upcycling",
     "Müll vermeiden",
     "CO₂"
+   ]
+  },
+  {
+   "titel": "8 · Arbeitsblätter: Fracking und Energie und Rohstoffe",
+   "kurz": "Fracking im Weinviertel + Sätze verbinden „Energie und Rohstoffe“",
+   "problem": "Teststoff-Punkt 8: die zwei Arbeitsblätter „Fracking im Weinviertel“ (mit Grafik Schiefergasförderung) und „Energie und Rohstoffe“ (Sätze verbinden).",
+   "text": [
+    "Fracking ist eine Methode, um Gas aus tiefen Gesteinsschichten zu holen. Ein Gemisch aus Wasser, Sand und Chemikalien wird unter die Erde gepresst. Es entstehen Risse im Gestein, das Gas kann entweichen und wird aufgefangen.",
+    "Warum Fracking? Österreich produziert seit 2003 immer weniger eigenes Gas und kauft viel aus anderen Ländern, vor allem aus Russland. Wegen der Energiekrise sucht Europa nach neuen Gasquellen – auch in Österreich.",
+    "Probleme: Fracking könnte das Grundwasser verschmutzen und braucht viel Wasser. Frackinggas ist ein fossiler Brennstoff, schlecht für das Klima. Manche Fachleute sagen: so schädlich wie Kohleverbrennung.",
+    "USA: Dort wird viel gefrackt – sie sind der größte Erdgasproduzent der Welt und brauchen keine Energie mehr aus anderen Ländern.",
+    "Österreich: 2012 wollte die OMV im Weinviertel fracken, die Menschen dort waren dagegen. Jetzt wird wieder nachgedacht, weil Österreich unabhängiger von russischem Gas werden will. Einige Politiker und Experten sind dafür, andere dagegen. Es gibt keine konkreten Pläne; die OMV will bis 2050 kein Öl und Gas mehr fördern. Alternative: das Geld besser in erneuerbare Energien wie Windräder und Wärmepumpen stecken.",
+    "Grafik Schiefergasförderung: Flüssigkeitstank (Wasser, Sand, chemische Zusätze oder Stärke); Mehrfachrohre mit Stahlzement zum Grundwasserschutz. 1 Flüssigkeit wird mit hohem Druck in die Schieferschicht gepresst. 2 Der Druck „zerreißt“ das Gestein („Fracking“). 3 Gas strömt aus dem Gestein und wird gefördert. 4 Flüssigkeit wird abgepumpt und zur Wiederverwendung aufbereitet. Das Gas kommt in den Gastank und wird ins Gasnetz eingespeist. Die gasführende Schicht im Weinviertel liegt ca. 6.000 m tief.",
+    "Arbeitsblatt „Energie und Rohstoffe“ – die richtigen Paare: Erdöl → daraus werden Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt, Klebstoffe hergestellt. Das „schwarze Gold“ wird am Land und unter Wasser gefördert → durch Ölbohrinseln; verarbeitet in einer Raffinerie. Öl tritt aus einem Leck aus → Ölpest: Meere und Küsten verschmutzt, Tiere und Pflanzen sterben. Gold und Diamanten → Südafrika, der Abbau ist sehr schwierig. Spaltung von Uran-Atomkernen → Kernkraftwerke: sehr leistungsstark, aber gefährlich. Mehr als die Hälfte des Stroms in Österreich → aus der Kraft des Wassers (erneuerbar). Laufkraftwerke an Flüssen → Speicherkraftwerke beziehen Wasser aus Stauseen. Solarzellen machen direkt Strom → Sonnenkollektoren machen Wärme (z. B. Wasser aufheizen). Wind → hohe Windräder treiben Turbinen an und erzeugen Strom."
+   ],
+   "schritte": [
+    "Fracking in 3 Schritten erklären können: Gemisch hineinpressen – Risse im Gestein – Gas entweicht.",
+    "Die 4 Nummern der Grafik Schiefergasförderung beschreiben können.",
+    "Je zwei Gründe dafür (Gas, Unabhängigkeit von Russland) und dagegen (Grundwasser, Wasserverbrauch, Klima) nennen.",
+    "Die 9 Satzpaare von „Energie und Rohstoffe“ auswendig verbinden können."
+   ],
+   "beispiel": "Solarzelle oder Sonnenkollektor? Die Solarzelle macht Strom, der Sonnenkollektor macht warmes Wasser.",
+   "fehler": [
+    "Frackinggas ist NICHT erneuerbar – es ist ein fossiler Brennstoff.",
+    "Solarzellen (Strom) und Sonnenkollektoren (Wärme) nicht verwechseln.",
+    "Laufkraftwerk = Fluss, Speicherkraftwerk = Stausee – nicht umgekehrt.",
+    "2012 = OMV wollte fracken; 2003 = seitdem weniger eigenes Gas; 2050 = OMV will kein Öl und Gas mehr fördern."
+   ],
+   "merke": "Fracking: Wasser + Sand + Chemikalien ins Gestein pressen → Risse → Gas. Umstritten wegen Grundwasser, Wasserverbrauch und Klima.",
+   "video": "Fracking einfach erklärt",
+   "stichworte": [
+    "frack",
+    "schiefer",
+    "weinviertel",
+    "omv",
+    "ölbohrinsel",
+    "südafrika",
+    "sonnenkollektor",
+    "solarzelle",
+    "schwarze gold"
    ]
   }
  ],
@@ -3035,12 +4173,26 @@
     "erklaerung": "",
     "stoff": 6,
     "mindest": 3
+   },
+   {
+    "typ": "auswahl",
+    "art": "Auswählen",
+    "frage": "Was passiert beim Fracking?",
+    "optionen": [
+     "Ein Gemisch aus Wasser, Sand und Chemikalien wird in die Erde gepresst, es entstehen Risse im Gestein und Gas entweicht",
+     "Wasser aus einem Stausee treibt eine Turbine an",
+     "Uran-Atomkerne werden gespalten",
+     "Erdöl wird in einer Raffinerie verarbeitet"
+    ],
+    "antwort": "Ein Gemisch aus Wasser, Sand und Chemikalien wird in die Erde gepresst, es entstehen Risse im Gestein und Gas entweicht",
+    "erklaerung": "Arbeitsblatt „Fracking im Weinviertel“.",
+    "stoff": 7
    }
   ]
  },
  "podcast": {
   "titel": "Energie & Ressourcen – Podcast zum Teststoff",
-  "kurz": "Sieben Folgen, genau nach den sieben Punkten vom Teststoff-Blatt – nur Stoff aus dem Buch.",
+  "kurz": "Acht Folgen: die sieben Punkte vom Teststoff-Blatt plus die zwei Arbeitsblätter – nur Stoff aus dem Buch.",
   "kapitel": [
    {
     "titel": "Folge 1 · Fachbegriffe",
@@ -3068,7 +4220,11 @@
    },
    {
     "titel": "Folge 7 · Recycling",
-    "text": "Letzter Punkt: Recycling erklären und Beispiele nennen. Seite 26 und 27.\nRecycling heißt: Die Rohstoffe aus dem Abfall werden wieder verwendet. Das braucht viel weniger Energie, und es entsteht weniger CO2.\nDas beste Beispiel ist Aluminium. Neu hergestellt: 11 Kilo CO2. Recycelt: nur 0,4 Kilo.\nAber Achtung. Bei Beton und Ziegeln ist neu machen günstiger, weil das Trennen so kompliziert ist.\nJetzt zum Plastik. Zwischen 1950 und 2015 wurden 8,3 Milliarden Tonnen hergestellt. Nur etwa 9 Prozent wurden recycelt.\nViel Plastik landet im Meer und zerfällt zu Mikroplastik. Das sammelt sich in Muscheln und Fischen, und über die Nahrung sogar in unserem Körper.\nIn Österreich wird nur etwa ein Viertel vom Plastik richtig entsorgt. Mehr als zwei Drittel werden verbrannt. Darum gibt es seit 2025 Pfand auf Plastikflaschen und Dosen.\nRecycling hat aber Grenzen. Das Trennen braucht auch Energie. Und die Qualität wird schlechter. Papier, das oft recycelt wurde, reicht am Ende nur noch für Klopapier.\nUpcycling ist etwas anderes. Da macht man aus Altem etwas Neues. Ein Rucksack aus einer LKW-Plane. Oder, wie auf Seite 27, Blumen in alten Plastikflaschen.\nAm allerbesten ist aber: Müll vermeiden. Würden alle so leben wie wir in Österreich, bräuchten wir fast vier Erden.\nFür den Test: Was ist Recycling? Warum ist es gut? Ein Beispiel. Und eine Grenze.\nDas war's. Du kennst jetzt alle sieben Punkte vom Teststoff. Viel Erfolg am 27. November!"
+    "text": "Letzter Punkt: Recycling erklären und Beispiele nennen. Seite 26 und 27.\nRecycling heißt: Die Rohstoffe aus dem Abfall werden wieder verwendet. Das braucht viel weniger Energie, und es entsteht weniger CO2.\nDas beste Beispiel ist Aluminium. Neu hergestellt: 11 Kilo CO2. Recycelt: nur 0,4 Kilo.\nAber Achtung. Bei Beton und Ziegeln ist neu machen günstiger, weil das Trennen so kompliziert ist.\nJetzt zum Plastik. Zwischen 1950 und 2015 wurden 8,3 Milliarden Tonnen hergestellt. Nur etwa 9 Prozent wurden recycelt.\nViel Plastik landet im Meer und zerfällt zu Mikroplastik. Das sammelt sich in Muscheln und Fischen, und über die Nahrung sogar in unserem Körper.\nIn Österreich wird nur etwa ein Viertel vom Plastik richtig entsorgt. Mehr als zwei Drittel werden verbrannt. Darum gibt es seit 2025 Pfand auf Plastikflaschen und Dosen.\nRecycling hat aber Grenzen. Das Trennen braucht auch Energie. Und die Qualität wird schlechter. Papier, das oft recycelt wurde, reicht am Ende nur noch für Klopapier.\nUpcycling ist etwas anderes. Da macht man aus Altem etwas Neues. Ein Rucksack aus einer LKW-Plane. Oder, wie auf Seite 27, Blumen in alten Plastikflaschen.\nAm allerbesten ist aber: Müll vermeiden. Würden alle so leben wie wir in Österreich, bräuchten wir fast vier Erden.\nFür den Test: Was ist Recycling? Warum ist es gut? Ein Beispiel. Und eine Grenze.\nDas war's. Eine Folge kommt noch. Darin geht es um die zwei Arbeitsblätter."
+   },
+   {
+    "titel": "Folge 8 · Die Arbeitsblätter",
+    "text": "Letzte Folge. Jetzt kommen die zwei Arbeitsblätter dran.\nErstes Blatt: Fracking im Weinviertel.\nWas ist Fracking? Eine Methode, um Gas aus tiefen Gesteinsschichten zu holen.\nMan presst ein Gemisch unter die Erde. Wasser, Sand und Chemikalien.\nDabei entstehen Risse im Gestein. Durch diese Risse kann das Gas entweichen. Und oben wird es aufgefangen.\nSchau dir die Grafik an. Sie heißt Schiefergasförderung. Sie hat vier Nummern.\nNummer eins: Die Flüssigkeit wird mit hohem Druck in die Schieferschicht gepresst.\nNummer zwei: Der Druck zerreißt das Gestein. Genau das ist das Fracking.\nNummer drei: Das Gas strömt aus dem Gestein und wird gefördert.\nNummer vier: Die Flüssigkeit wird abgepumpt und wieder aufbereitet.\nDas Gas kommt in einen Gastank und dann ins Gasnetz. Und die Rohre haben extra Stahlzement. Wozu? Zum Schutz vom Grundwasser.\nDie Gasschicht im Weinviertel liegt übrigens ungefähr sechstausend Meter tief.\nWarum redet man in Österreich überhaupt darüber? Seit 2003 produziert Österreich immer weniger eigenes Gas. Viel wird gekauft, vor allem aus Russland.\nWegen der Energiekrise sucht Europa neue Gasquellen. Und Österreich will unabhängiger von russischem Gas werden.\nAber Achtung: Fracking ist umstritten. Es könnte das Grundwasser verschmutzen. Es braucht viel Wasser. Und Frackinggas ist fossil. Also schlecht fürs Klima.\nManche Fachleute sagen sogar: Fracking ist genauso schädlich wie Kohle verbrennen.\nIn den USA wird viel gefrackt. Dadurch sind sie der größte Erdgasproduzent der Welt.\nUnd bei uns? 2012 wollte die OMV im Weinviertel fracken. Die Menschen dort waren dagegen.\nHeute gibt es keine konkreten Pläne. Die OMV will bis 2050 gar kein Öl und Gas mehr fördern.\nDie Idee auf dem Blatt: Das Geld lieber in Windräder und Wärmepumpen stecken.\nZweites Blatt: Energie und Rohstoffe. Da musst du Sätze verbinden. Ich sag dir die richtigen Paare.\nAus Erdöl macht man Benzin, Diesel, Kerosin, Medikamente, Heizöl, Asphalt und Klebstoffe.\nDas schwarze Gold, also Erdöl, holt man auch unter Wasser. Mit Ölbohrinseln. Verarbeitet wird es in der Raffinerie.\nLäuft Öl aus einem Tankschiff aus, gibt es eine Ölpest. Meere und Küsten werden verschmutzt, Tiere und Pflanzen sterben.\nViel Gold und viele Diamanten gibt es in Südafrika. Der Abbau ist sehr schwierig.\nSpaltet man Atomkerne von Uran, entsteht Strom. Kernkraftwerke sind sehr leistungsstark, aber auch gefährlich.\nIn Österreich kommt mehr als die Hälfte vom Strom aus Wasserkraft. Und die ist erneuerbar.\nLaufkraftwerke stehen an Flüssen. Speicherkraftwerke holen ihr Wasser aus Stauseen.\nAchtung, Falle! Solarzellen machen direkt Strom. Sonnenkollektoren machen Wärme, zum Beispiel warmes Wasser.\nUnd beim Wind treiben hohe Windräder Turbinen an. So entsteht Strom.\nDas war's. Du kennst jetzt alle Punkte vom Teststoff und die zwei Arbeitsblätter. Mach noch einmal den Probetest. Viel Erfolg am 27. November!"
    }
   ]
  }
